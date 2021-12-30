@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59dd3c44-2852-4d48-9d03-1b0e2a62f809" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1zQngcooS6vx8wj5zKyBGQYUR9W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Image_Home2" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> e7d8633be6f5d598bb3d953e7964ed4146d16f02
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\Nhom7_WebFurniture\Image_Home2" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\Nhom7_WebFurniture\stylesheets" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\Nhom7_WebFurniture\Image" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59dd3c44-2852-4d48-9d03-1b0e2a62f809" name="Changes" comment="" />
+      <created>1634089295607</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634089295607</updated>
+      <workItem from="1634103235672" duration="902000" />
+      <workItem from="1634104389917" duration="39000" />
+      <workItem from="1634111274323" duration="9216000" />
+      <workItem from="1634120795496" duration="56000" />
+      <workItem from="1634124164923" duration="15725000" />
+      <workItem from="1634168826984" duration="1949000" />
+      <workItem from="1634171759654" duration="4174000" />
+      <workItem from="1634178070493" duration="1503000" />
+<<<<<<< HEAD
+      <workItem from="1634197375735" duration="130000" />
+      <workItem from="1634221060669" duration="458000" />
+      <workItem from="1634352564461" duration="8135000" />
+=======
+      <workItem from="1634302148055" duration="44000" />
+>>>>>>> e7d8633be6f5d598bb3d953e7964ed4146d16f02
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="0" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1634113768755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="466" y="0" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1634113768755" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1634221519713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1634221519713" />
+    <state x="277" y="55" key="SettingsEditor" timestamp="1634111329776">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634111329776" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1634197377286">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1634197377286" />
+  </component>
+</project>
