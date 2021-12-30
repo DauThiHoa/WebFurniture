@@ -45,7 +45,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">
+                        <a class="nav-link" href="dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -57,45 +57,45 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="InterfaceManagement.html">
+                        <a class="nav-link active" href="InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="InterfaceManagement.html">
+                        <a class="nav-link active" href="InterfaceManagement.jsp">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_23.png"/>
                             <span class="nav-link-text">Image</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Information.html">
+                        <a class="nav-link active" href="Information.jsp">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Order.html">
+                        <a class="nav-link active" href="Order.jsp">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">
+                        <a class="nav-link" href="profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">
+                        <a class="nav-link" href="login.jsp">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">
+                        <a class="nav-link" href="register.jsp">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text">Register</span>
                         </a>

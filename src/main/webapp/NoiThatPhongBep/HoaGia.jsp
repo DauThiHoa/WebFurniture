@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="taiKhoanCuaToi">
-        <a href="../Nhom7_WebFurniture/Quản%20trị/Admin/examples/dashboard.html">
+        <a href="../Quản%20trị/Admin/examples/dashboard.html">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
@@ -74,27 +74,27 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
-        <a href="../Nhom7_WebFurniture/Products/AllProducts.html?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="../Products/AllProducts.html?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="../Nhom7_WebFurniture/Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Nhom7_WebFurniture/Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../Nhom7_WebFurniture/Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Nhom7_WebFurniture/Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
@@ -117,7 +117,7 @@
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="../Nhom7_WebFurniture/TinTuc/TinTuc.html?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="../TinTuc/TinTuc.html?_ijt=iv6smvovu312mhdpg2551fpkq2">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
@@ -142,22 +142,22 @@
                 <h2 class="ten"> Danh Mục Sản Phẩm </h2>
             </div>
             <div class="noiDung">
-                <a href="../Nhom7_WebFurniture/Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Khách</p>
                     </div>
                 </a>
-                <a href="../Nhom7_WebFurniture/Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Ngủ </p>
                     </div>
                 </a>
-                <a href="../Nhom7_WebFurniture/Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Bếp</p>
                     </div>
                 </a>
-                <a href="../Nhom7_WebFurniture/Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
@@ -332,7 +332,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -359,7 +359,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -386,7 +386,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -412,7 +412,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -439,7 +439,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -465,7 +465,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -491,7 +491,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                            <a href="../ThanhToan/ThanhToan.html">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -516,7 +516,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -543,7 +543,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -569,7 +569,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -595,7 +595,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -621,7 +621,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -648,7 +648,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -674,7 +674,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -700,7 +700,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -726,7 +726,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -752,7 +752,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -778,7 +778,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -804,7 +804,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -830,7 +830,7 @@
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="../Nhom7_WebFurniture/ThanhToan/ThanhToan.html">
+                                <a href="../ThanhToan/ThanhToan.html">
                                     <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
@@ -918,7 +918,7 @@
                     <a href=" ../Product/AllProducts.html?_ijt=lb79ipc726t04q7dgtat16sn83">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="../Nhom7_WebFurniture/TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="../TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">
                         <p>Tin tức</p></a>
                     <a href="../LienHe/LienHe.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>

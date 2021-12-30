@@ -47,7 +47,7 @@
             <div class="overlay-panel overlay-left">
                 <h1>Welcome Back!</h1>
                 <p>To keep connected with us please login with your personal info</p>
-                <a href="../Home/HomePage.html?_ijt=1nanvfsjks7j72jihpigr59tn0&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../Home/HomePage.jsp?_ijt=1nanvfsjks7j72jihpigr59tn0&_ij_reload=RELOAD_ON_SAVE">
                     <button class="ghost" id="signIn">Sign In</button>
                 </a>
             </div>

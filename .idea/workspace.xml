@@ -41,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nhom7_WebFurniture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/Quản trị/Admin/examples" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -168,6 +168,7 @@
       <updated>1640830535202</updated>
       <workItem from="1640830535904" duration="4633000" />
       <workItem from="1640866901827" duration="2258000" />
+      <workItem from="1640890344391" duration="4097000" />
     </task>
     <servers />
   </component>

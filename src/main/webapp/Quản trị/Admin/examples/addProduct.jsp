@@ -13,7 +13,7 @@
     <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
+    <!-- Icons --> 
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="addProduct.css">
     <link rel="stylesheet" href="InterfaceManagement.css">
     <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
 
 </head>
 
@@ -56,7 +57,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="DirectoryManagement.jsp">
-                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
                             <span class="nav-link-text">Product Type</span>
                         </a>
                     </li>
@@ -68,12 +69,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="Posts.jsp">
-                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
                             <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="InterfaceManagement.jsp">
+                        <a class="nav-link " href="InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
@@ -379,7 +380,7 @@
         <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Image </h2>
-            <img src="../../../../ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>
+            <img src="../../../ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>
         </div>
         <div class="information2">
             <h2 class="Image"> Image </h2>
@@ -482,7 +483,6 @@ Action "><br>
     </footer>
 </div>
 
-<!-- Argon Scripts --> 
 </body>
 
 </html>

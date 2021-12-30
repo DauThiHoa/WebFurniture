@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </form>
-            <a href="../ThanhToan/ThanhToanThanhCong.html?_ijt=jg0jfsqhfaqhlu5r8iq786h97r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../ThanhToan/ThanhToanThanhCong.jsp?_ijt=jg0jfsqhfaqhlu5r8iq786h97r&_ij_reload=RELOAD_ON_SAVE">
                 <input type="submit" value="Continue to checkout" class="checkout"/>
             </a>
         </div>

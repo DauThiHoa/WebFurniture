@@ -52,7 +52,7 @@
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
-            <a href="../Nhom7_WebFurniture/DangNhap/DangNhap.html">
+            <a href="../DangNhap/DangNhap.jsp">
                 <button class="btn">SIGN UP</button>
             </a>
         </div>
@@ -61,7 +61,7 @@
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="../Nhom7_WebFurniture/DangNhap/DangNhap.html">
+            <a href="../DangNhap/DangNhap.jsp">
                 <button class="btn2">SIGN IN</button>
             </a>
         </div>
