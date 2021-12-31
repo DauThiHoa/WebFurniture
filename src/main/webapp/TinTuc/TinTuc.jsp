@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <link rel="icon" href="img_1.png" type="image/png" class="icon">
+    <link rel="icon" href="" type="image/png" class="icon">
     <title> NHOM 7 WEB FURNITURE - TIN TỨC </title>
     <link rel="stylesheet" href="TinTuc.css">
 
@@ -54,7 +54,7 @@
     </div>
 
     <div class="taiKhoanCuaToi">
-        <a href="../Nhom7_WebFurniture/Quản%20trị/Admin/examples/dashboard.html">
+        <a href="../Quản trị/Admin/examples/dashboard.html">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
@@ -78,22 +78,22 @@
         <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
 
         <div id="top">
-            <a href="../Nhom7_WebFurniture/Products/PhongKhach.html">
+            <a href="../Products/PhongKhach.html">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Nhom7_WebFurniture/Products/PhongNgu.html">
+            <a href="../Products/PhongNgu.html">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../Nhom7_WebFurniture/Products/PhongBep.html">
+            <a href="../Products/PhongBep.html">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Nhom7_WebFurniture/Products/VanPhong.html">
+            <a href="../Products/VanPhong.html">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
@@ -218,7 +218,7 @@
                 <p class="noiDungBaiVietMoi">5 cách trang trí nhà cho mùa đông ấm áp</p>
             </div>
         </a>
-        <a href="../TinTuc/BanAnHanQuoc.html?_ijt=110vlfdfs9igji86v4rdofg5ue">
+        <a href="">
             <div class="baiViet">
                 <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi5.PNG"/>
                 <p class="noiDungBaiVietMoi">Những mẫu bàn ăn Hàn Quốc đẹp “đốn tim” người nhìn</p>
@@ -359,7 +359,7 @@
                     <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href="../Nhom7_WebFurniture/Products/AllProducts.html">
+                    <a href=" ../Products/AllProducts.html">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="../TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">

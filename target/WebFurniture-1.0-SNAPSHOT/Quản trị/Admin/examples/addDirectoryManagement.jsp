@@ -44,7 +44,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">
+                        <a class="nav-link" href="dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -62,37 +62,37 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Product.html">
+                        <a class="nav-link active" href="Product.jsp">
                             <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
                             <span class="nav-link-text">Product </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Posts.html">
+                        <a class="nav-link active" href="Posts.jsp">
                             <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
                             <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="InterfaceManagement.html">
+                        <a class="nav-link" href="InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">
+                        <a class="nav-link" href="profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">
+                        <a class="nav-link" href="login.jsp">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">
+                        <a class="nav-link" href="register.jsp">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text">Register</span>
                         </a>
@@ -325,7 +325,7 @@
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome!</h6>
                             </div>
-                            <a href="profile.html" class="dropdown-item">
+                            <a href="profile.jsp" class="dropdown-item">
                                 <i class="ni ni-single-02"></i>
                                 <span>My profile</span>
                             </a>
@@ -338,7 +338,7 @@
                                 <span>Activity</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="login.html" class="dropdown-item">
+                            <a href="login.jsp" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
                             </a>

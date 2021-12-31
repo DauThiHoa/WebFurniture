@@ -34,7 +34,7 @@
     <div class="thongtin">
         <h2 class="ten"> Mã giao dịch : 0123456789ABCD</h2>
     </div>
-    <a href="../Home/HomePage.html">
+    <a href="../Home/HomePage.jsp">
         <button class="tieptuc"> TIẾP TỤC MUA SẮM</button>
     </a>
 </div>

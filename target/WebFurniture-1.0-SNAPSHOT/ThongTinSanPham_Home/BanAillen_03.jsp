@@ -25,7 +25,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
-        <a href="../LienHe/LienHe.html?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
+        <a href="../LienHe/LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
             <div>
                 <i class="fa fa-phone-square" aria-hidden="true"></i>
             </div>
@@ -37,30 +37,30 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="../DangNhap/Login.html?_ijt=ub6fnn290t0r87knge44glhgdr">
+        <a href="../DangNhap/Login.jsp?_ijt=ub6fnn290t0r87knge44glhgdr">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="../DangNhap/Login.html?_ijt=ub6fnn290t0r87knge44glhgdr">Đăng
+                    href="../DangNhap/Login.jsp?_ijt=ub6fnn290t0r87knge44glhgdr">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="../DangKy/Register.html?_ijt=ub6fnn290t0r87knge44glhgdr"><p
+                href="../DangKy/Register.jsp?_ijt=ub6fnn290t0r87knge44glhgdr"><p
                 class="dangKi">Đăng ký</p></a>  </p>
         </div>
 
     </div>
 
     <div class="taiKhoanCuaToi">
-        <a href="../Nhom7_WebFurniture/Quản%20trị/Admin/examples/dashboard.html">
+        <a href="../Nhom7_WebFurniture/Quản%20trị/Admin/examples/dashboard.jsp">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.html?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -75,32 +75,32 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
-        <a href="../Products/AllProducts.html?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="../Products/AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="../Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -108,22 +108,22 @@
         </div>
 
     </div>
-    <a href="../Home/HomePage.html?_ijt=dvcgr4eqabqa191pdiriackdbe">
+    <a href="../Home/HomePage.jsp?_ijt=dvcgr4eqabqa191pdiriackdbe">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
     </a>
-    <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=tbj9541mbers5cne53u03tmg0j">
+    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=tbj9541mbers5cne53u03tmg0j">
         <div id="heThongCuaHang">
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="../TinTuc/TinTuc.html?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="../TinTuc/TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
     </a>
-    <a href="../LienHe/LienHe.html?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
+    <a href="../LienHe/LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
         <div id="lienHe">
             <h3 class="ten"> LIÊN HỆ </h3>
         </div>
@@ -216,13 +216,13 @@
             <div class="cong" onclick="cong(this)" alt="tangSoLuong">
                 <h3 class="dauCong"> + </h3>
             </div>
-            <a href="../GioHang/GioHang.html">
+            <a href="../GioHang/GioHang.jsp">
                 <div class="gioHang">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
             </a>
-            <a href="../ThanhToan/ThanhToan.html">
+            <a href="../ThanhToan/ThanhToan.jsp">
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
@@ -254,7 +254,7 @@
             <p class="thongTinChiTiet">750.000đ</p>
         </div>
     </div>
-    <a href="../ThongTinSanPham_Home/DonghoMiso.html?_ijt=7q3ovei7snfo4cbs535mffetqh">
+    <a href="../ThongTinSanPham_Home/DonghoMiso.jsp?_ijt=7q3ovei7snfo4cbs535mffetqh">
         <div class="giaoHang">
             <img class="anh" src="Image_ThongTinSanPham_Home/lq4.PNG"/>
             <div class="thongTin">
@@ -263,7 +263,7 @@
             </div>
         </div>
     </a>
-    <a href="../ThongTinSanPham_Home/DongHoTabu.html?_ijt=oadff4p4r067mbmq1774jfj5hi">
+    <a href="../ThongTinSanPham_Home/DongHoTabu.jsp?_ijt=oadff4p4r067mbmq1774jfj5hi">
         <div class="giaoHang">
             <img class="anh" src="Image_ThongTinSanPham_Home/lq5.PNG"/>
             <div class="thongTin">
@@ -439,7 +439,7 @@
             <p class="kinhNghiem">Với kinh nghiệm hơn 10 năm trong ngành nội thất, nội thất WEB FURNITURE tự hào là cung
                 cấp những mẫu sản phẩm nội thất tốt nhất . </p>
             <div class="hotline">
-                <a href="../LienHe/LienHe.html?_ijt=q9t21vli8l1t46l15aaa24a1ig">
+                <a href="../LienHe/LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
                     <i class="fa fa-phone-square" aria-hidden="true"></i></a>
                 <p class="line">1900.363.079</p>
             </div>
@@ -470,17 +470,17 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../Home/HomePage.html?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="../Home/HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
                         <p>Trang chủ</p></a>
-                    <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Product/AllProducts.html?_ijt=lb79ipc726t04q7dgtat16sn83">
+                    <a href=" ../Product/AllProducts.jsp?_ijt=lb79ipc726t04q7dgtat16sn83">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="../TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="../TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
                         <p>Tin tức</p></a>
-                    <a href="../LienHe/LienHe.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="../LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>
                 </div>
                 <div class="chucNang">
