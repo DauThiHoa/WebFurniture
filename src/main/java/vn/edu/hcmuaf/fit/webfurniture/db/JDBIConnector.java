@@ -12,11 +12,11 @@ public class JDBIConnector {
 
     private static void makeConnect() {
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setURL("jdbc:mysql//" + getDbHost() + ":" + getDbPort() + "/" + getUsername() + "/" + getPassword() + "/"
-                + getDbName());
+       // dataSource.setURL("jdbc:mysql//" + getDbHost() + ":" + getDbPort() + "/" + getUsername() + "/" + getPassword() + "/"
+       //         + getDbName());
 
-        dataSource.setUser(getUsername());
-        dataSource.setPassword(getPassword());
+     //   dataSource.setUser(getUsername());
+     //   dataSource.setPassword(getPassword());
         try {
             dataSource.setUseCompression(true);
             dataSource.setAutoReconnect(true);

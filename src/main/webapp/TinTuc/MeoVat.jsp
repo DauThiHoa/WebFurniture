@@ -1,4 +1,3 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +26,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
-        <a href="../LienHe/LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
+        <a href="../LienHe/LienHe.html?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
             <div>
                 <i class="fa fa-phone-square" aria-hidden="true"></i>
             </div>
@@ -39,30 +38,30 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="../DangNhap/DangNhap.jsp?_ijt=ub6fnn290t0r87knge44glhgdr">
+        <a href="../DangNhap/DangNhap.html?_ijt=ub6fnn290t0r87knge44glhgdr">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="../DangNhap/DangNhap.jsp?_ijt=ub6fnn290t0r87knge44glhgdr">Đăng
+                    href="../DangNhap/DangNhap.html?_ijt=ub6fnn290t0r87knge44glhgdr">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="../DangKy/DangKy.jsp?_ijt=ub6fnn290t0r87knge44glhgdr"><p
+                href="../DangKy/DangKy.html?_ijt=ub6fnn290t0r87knge44glhgdr"><p
                 class="dangKi">Đăng ký</p></a>  </p>
         </div>
 
     </div>
 
     <div class="taiKhoanCuaToi">
-        <a href="../Quản trị/Admin/examples/dashboard.jsp">
+        <a href="../Quản trị/Admin/examples/dashboard.html">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang/GioHang.html?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -80,49 +79,49 @@
         <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
 
         <div id="top">
-            <a href="../Products/PhongKhach.jsp">
+            <a href="../Products/PhongKhach.html">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Products/PhongNgu.jsp">
+            <a href="../Products/PhongNgu.html">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../Products/PhongBep.jsp">
+            <a href="../Products/PhongBep.html">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Products/VanPhong.jsp">
+            <a href="../Products/VanPhong.html">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a  href="../NoiThatDoTrangTri/NoiThatDoTrangTri.jsp">
+            <a  href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
             </a>
         </div>
     </div>
-    <a href="../Home/HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
+    <a href="../Home/HomePage.html?_ijt=pae316ajrmdat5oebu7viiupon">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
     </a>
-    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=tbj9541mbers5cne53u03tmg0j">
+    <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=tbj9541mbers5cne53u03tmg0j">
         <div id="heThongCuaHang">
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="../TinTuc/TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="../TinTuc/TinTuc.html?_ijt=iv6smvovu312mhdpg2551fpkq2">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
     </a>
-    <a href="../LienHe/LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
+    <a href="../LienHe/LienHe.html?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
         <div id="lienHe">
             <h3 class="ten"> LIÊN HỆ </h3>
         </div>
@@ -170,27 +169,27 @@
             <div class="khung">
                 <h3 class="SanPham"> Danh Mục Sản Phẩm</h3>
             </div>
-            <a href="../Products/PhongKhach.jsp">
+            <a href="../Products/PhongKhach.html">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Nội Thất Phòng Khách</p>
                 </div>
             </a>
-            <a href="../Products/PhongNgu.jsp">
+            <a href="../Products/PhongNgu.html">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Nội Thất Phòng Ngủ</p>
                 </div>
             </a>
-            <a href="../Products/PhongBep.jsp">
+            <a href="../Products/PhongBep.html">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Nội Thất Phòng Bếp</p>
                 </div>
             </a>
-            <a href="../Products/VanPhong.jsp">
+            <a href="../Products/VanPhong.html">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Nội Thất Văn Phòng</p>
                 </div>
             </a>
-            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=j9fds7kg1o3rrcntjt89jj675o">
+            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html?_ijt=j9fds7kg1o3rrcntjt89jj675o">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Đồ Trang Trí</p>
                 </div>
@@ -251,7 +250,7 @@
             <p class="noiDung"> Đối với nội thất bằng kim loại - khi xủ lý các vết bẩn thông thường bạn chỉ cần ..</p>
         </div>
         <div class="meoVat">
-            <a href="../TinTuc/MeoVat.jsp?_ijt=42n7g22303aucjlb03u168175o">
+            <a href="../TinTuc/MeoVat.html?_ijt=42n7g22303aucjlb03u168175o">
                 <img class="anh" src="../Home/Image_Home2/meoVat_2.PNG" height="447" width="785"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -284,7 +283,7 @@
             <p class="kinhNghiem">Với kinh nghiệm hơn 10 năm trong ngành nội thất, nội thất WEB FURNITURE tự hào là cung
                 cấp những mẫu sản phẩm nội thất tốt nhất . </p>
             <div class="hotline">
-                <a href="../LienHe/LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
+                <a href="../LienHe/LienHe.html?_ijt=q9t21vli8l1t46l15aaa24a1ig">
                     <i class="fa fa-phone-square" aria-hidden="true"></i></a>
                 <p class="line">1900.363.079</p>
             </div>
@@ -315,17 +314,17 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../Home/HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="../Home/HomePage.html?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
                         <p>Trang chủ</p></a>
-                    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Products/AllProducts.jsp">
+                    <a href=" ../Products/AllProducts.html">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="../TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="../TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">
                         <p>Tin tức</p></a>
-                    <a href="../LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="../LienHe/LienHe.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>
                 </div>
                 <div class="chucNang">
