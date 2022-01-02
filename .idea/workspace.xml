@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nhom7_WebFurniture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -70,18 +70,29 @@
       <recent name="vn.edu.hcmuaf.fit.webfurniture.services" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
+    <configuration name="All in WebFurniture (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebFurniture" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in WebFurniture" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebFurniture" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="WebFurniture:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/WebFurniture_war_exploded" />
-          </settings>
-        </artifact>
-        <artifact name="WebFurniture:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/WebFurniture_war" />
           </settings>
         </artifact>
       </deployment>
@@ -159,13 +170,21 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="WebFurniture:war" />
-        </option>
-        <option name="BuildArtifacts" enabled="true">
           <artifact name="WebFurniture:war exploded" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in WebFurniture" />
+      <item itemvalue="JUnit.All in WebFurniture (1)" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in WebFurniture (1)" />
+        <item itemvalue="JUnit.All in WebFurniture" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,6 +206,7 @@
       <workItem from="1641096254470" duration="121000" />
       <workItem from="1641108759997" duration="153000" />
       <workItem from="1641108978717" duration="6414000" />
+      <workItem from="1641116209230" duration="2819000" />
     </task>
     <servers />
   </component>
