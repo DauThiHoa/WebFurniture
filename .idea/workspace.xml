@@ -19,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nhom7_WebFurniture" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -184,6 +185,8 @@
       <workItem from="1641087727822" duration="2893000" />
       <workItem from="1641090733606" duration="5277000" />
       <workItem from="1641096254470" duration="121000" />
+      <workItem from="1641108759997" duration="153000" />
+      <workItem from="1641108978717" duration="6414000" />
     </task>
     <servers />
   </component>
