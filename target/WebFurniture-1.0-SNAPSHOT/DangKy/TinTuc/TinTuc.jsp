@@ -1,5 +1,3 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +8,8 @@
     <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <link rel="icon" href="" type="image/png" class="icon">
-    <title> NHOM 7 WEB FURNITURE - MẸO VẶT - XUA TAN NẮNG NÓNG </title>
-    <link rel="stylesheet" href="MeoVat.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-   
+    <title> NHOM 7 WEB FURNITURE - TIN TỨC </title>
+    <link rel="stylesheet" href="TinTuc.css">
 
 </head>
 <body>
@@ -107,6 +103,7 @@
                 </div>
             </a>
         </div>
+
     </div>
     <a href="../Home/HomePage.html?_ijt=pae316ajrmdat5oebu7viiupon">
         <div id="trangchu">
@@ -131,152 +128,192 @@
 </div>
 
 <div id="khungTinTuc">
+    <img id="anh_khungTinTuc" src="Image_TinTuc/anhKhungTinTuc.PNG"/>
     <div id="tenTinTuc">
-        <h2 id="trangChu_TinTuc"> Trang Chủ / Mẹo vặt / Xua tan nắng nóng với nội thất màu xanh ngọc </h2>
+        <h1 id="ten"> TIN TỨC </h1>
+        <h2 id="trangChu_TinTuc"> Trang Chủ / Tin Tức</h2>
     </div>
 </div>
 
 <div id="tinTuc_2">
     <div id="left">
-        <h3>Xua tan nắng nóng với nội thất màu xanh ngọc</h3>
-        <div class="thoiGian">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <p class="noiDungThoiGian">13:45 - 20/10/2021</p>
-        </div>
-        <h2>Điểm xuyết nội thất màu xanh ngọc sẽ giúp các thành viên cảm thấy thoải mái mỗi khi trở về, bỏ quên cái nắng
-            như đổ lửa sau cánh cửa.</h2>
-        <p>Ghế sofa khung gỗ khiến bạn cảm giác như đang gần chạm tay vào màu nước biển của khu vực nhiệt đới.</p>
-        <img class="anh" src="Image_TinTuc/xanhNgoc1.PNG"/>
-        <p>Về mặt phong thủy nội thất màu xanh ngọc giúp bạn lấy lại sự điềm tĩnh, cân bằng và sự hạnh phúc.</p>
-        <p>Tivi treo tường, bàn tam giác lồng vào nhau giúp tiết kiệm diện tích.</p>
-        <img class="anh" src="Image_TinTuc/xanhNgoc3.PNG"/>
-        <p>Ghế ăn điểm nhẹ màu xanh ngọc xen lẫn với màu trắng.</p>
-        <p>Gạch lát sàn có hoa văn đánh dấu khu vực lối vào.</p>
-        <img class="anh" src="Image_TinTuc/xanhNgoc5.PNG"/>
-        <p>Bếp mang phong cách scandinavian càng hoàn hảo hơn khi có sự góp mặt của tủ tường màu xanh ngọc lam.</p>
-        <p>Sàn và tường màu trắng khiến nội thất màu xanh ngọc càng trở nên trong trẻo, đẹp mắt.</p>
-        <img class="anh" src="Image_TinTuc/xanhNgoc7.PNG"/>
-        <p>Đệm sofa màu xanh làm điểm nhấn trong phòng ngủ.</p>
-        <p>Phòng làm việc nhẹ nhàng, yên tĩnh với bàn gỗ đặt gần cửa sổ, ghế sofa màu xám đen đặt dưới bức tường màu
-            xanh.</p>
-        <img class="anh" src="Image_TinTuc/xanhNgoc9.PNG"/>
-        <p>Giá sách độc đáo với với hình thân cây</p>
-        <p>Bàn đặt gần cửa sổ nên căn phòng rất ít khi phải dùng đèn, xe đạp treo tường trở thành tác phẩm trang
-            trí.</p>
-    </div>
 
+        <div class="anh_TinTuc">
+            <a href="">
+                <img class="anh" src="Image_TinTuc/anhTinTuc1.PNG"/>
+                <h3 class="ten"> Ngôi Nhà Mang Hình Dáng Lạ Kỳ Xuất Hiện Ấn Tượng</h3>
+                <div class="thoiGian">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p class="noiDungThoiGian">15:00 - 18/10/2021</p>
+                </div>
+                <p class="noiDungTinTuc">Tọa lạc tại quận Otsuka, Tokyo (Nhật Bản), Tree-ness house là một ngôi nhà đa
+                    tầng với thiết kế vô cùng độc đáo vừa...</p>
+            </a>
+        </div>
+
+        <div class="anh_TinTuc">
+            <a href="">
+                <img class="anh" src="Image_TinTuc/anhTinTuc2.PNG"/>
+                <h3 class="ten"> Học Cách Thiết Kế Không Gian Siêu Tiện Nghi Cho Gia Đình </h3>
+                <div class="thoiGian">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p class="noiDungThoiGian">7:00 - 19/10/2021</p>
+                </div>
+                <p class="noiDungTinTuc">Lối thiết kế hoàn toàn mở, thông thoáng, hạn chế tối đa tất cả những bức tường
+                    thô cứng trong nhà khiến cho căn hộ...</p>
+            </a>
+        </div>
+
+        <div class="anh_TinTuc">
+            <a href="">
+                <img class="anh" src="Image_TinTuc/anhTinTuc3.PNG"/>
+                <h3 class="ten"> Những Ý Tưởng Thiết Kế Nội Thất Nhà Ống Đẹp </h3>
+                <div class="thoiGian">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p class="noiDungThoiGian">13:45 - 19/10/2021</p>
+                </div>
+                <p class="noiDungTinTuc">Thiết kế nội thất nhà ống đẹp là nhu cầu phổ biến của mọi người trong cuộc sống
+                    hiện đại ngày nay. Vì vậy, bạn muốn...</p>
+            </a>
+        </div>
+
+        <div class="anh_TinTuc">
+            <a href="">
+                <img class="anh" src="Image_TinTuc/anhTinTuc4.PNG"/>
+                <h3 class="ten"> Bố Trí Nội Thất Phòng Khách Căn Hộ Đúng Phong Thủy </h3>
+                <div class="thoiGian">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p class="noiDungThoiGian">13:45 - 20/10/2021</p>
+                </div>
+                <p class="noiDungTinTuc">Thuyết phong thủy có những tác động trực tiếp đến sức khỏe, tinh thần của các
+                    thành viên trong nhà. Vì thế, để...</p>
+            </a>
+        </div>
+    </div>
 
     <div id="right">
-        <div id="topDanhMuc">
-            <div class="khung">
-                <h3 class="SanPham"> Danh Mục Sản Phẩm</h3>
+        <h2 class="baiVietMoi"> Bài Viết Mới</h2>
+        <a href="">
+            <div class="baiViet">
+                <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi1.PNG"/>
+                <p class="noiDungBaiVietMoi">Dáng hình nghệ thuật trong những tấm Laminate nội thất gỗ công nghiệp</p>
             </div>
-            <a href="../Products/PhongKhach.html">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Nội Thất Phòng Khách</p>
-                </div>
-            </a>
-            <a href="../Products/PhongNgu.html">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Nội Thất Phòng Ngủ</p>
-                </div>
-            </a>
-            <a href="../Products/PhongBep.html">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Nội Thất Phòng Bếp</p>
-                </div>
-            </a>
-            <a href="../Products/VanPhong.html">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Nội Thất Văn Phòng</p>
-                </div>
-            </a>
-            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html?_ijt=j9fds7kg1o3rrcntjt89jj675o">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Đồ Trang Trí</p>
-                </div>
-            </a>
+        </a>
+        <a href="">
+            <div class="baiViet">
+                <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi2.PNG"/>
+                <p class="noiDungBaiVietMoi">Kệ để đồ nhà bếp – Giải pháp thông minh để lưu trữ đồ đạc khoa học</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="baiViet">
+                <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi3.PNG"/>
+                <p class="noiDungBaiVietMoi">4 ý tưởng thiết kế giường tầng đẹp cho gia đình sáng tạo</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="baiViet">
+                <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi4.PNG"/>
+                <p class="noiDungBaiVietMoi">5 cách trang trí nhà cho mùa đông ấm áp</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="baiViet">
+                <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi5.PNG"/>
+                <p class="noiDungBaiVietMoi">Những mẫu bàn ăn Hàn Quốc đẹp “đốn tim” người nhìn</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="baiViet">
+                <img class="anhBaiVietMoi" src="Image_TinTuc/baiVietMoi6.PNG"/>
+                <p class="noiDungBaiVietMoi">5 loại cây trồng trong nhà mang may mắn, tài lộc cho gia chủ</p>
+            </div>
+        </a>
+    </div>
+</div>
 
+<div id="khungBinhLuan">
+    <h3 class="tieuDeBinhLuan"> Viết bình luận của bạn : </h3>
+    <div class="hoTen_Email">
+        <div class="hoten">
+            <input class="ten" placeholder="Họ tên :"> </input>
         </div>
+        <div class="Email">
+            <input class="email" placeholder="Email :"> </input>
+        </div>
+    </div>
+    <div class="noiDungBinhLuan">
+        <input class="thongTinNoiDung" placeholder="Nội dung : "> </input>
+    </div>
+    <div class="guiBinhLuan">
+        <h4 class="gui"> Gửi bình luận </h4>
+    </div>
+    <h3 class="soBinhLuan"> Bình luận ( 2 bình luận )</h3>
 
-
-        <div id="bottom">
-            <div class="khung">
-                <h3 class="SanPham"> Mẹo vặt hay</h3>
+    <div class="binhLuan">
+        <div class="noiDungBinhLuan">
+            <div class="anh">
+                <img class="anhBinhLuan" src="Image_TinTuc/anhDaiDien1.PNG"/>
             </div>
-            <a href="">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Xu hướng nội thất mây</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Thư thái trong chính căn hộ của bạn</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham">Mẹo bảo quản và vệ sinh các đồ nội thất</p>
-                </div>
-            </a>
-            <a href="">
-                <div class="danhMuc">
-                    <p class="noiDungSanPham"> Bảo quản đồ gỗ khi độ ẩm không khí cao</p>
-                </div>
-            </a>
+            <div class="thongTinBinhLuan">
+                <h4 class="tenNguoiBinhLuan"> Nguyễn Huyền</h4>
+                <p class="ngayDang">20/10/2021</p>
+                <p class="noiDung">Nội dung hay</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="binhLuan">
+        <div class="noiDungBinhLuan">
+            <div class="anh">
+                <img class="anhBinhLuan" src="Image_TinTuc/anhDaiDien2.PNG"/>
+            </div>
+            <div class="thongTinBinhLuan">
+                <h4 class="tenNguoiBinhLuan"> Thanh Nhi</h4>
+                <p class="ngayDang">19/10/2021</p>
+                <p class="noiDung">Sản phẩm đẹp </p>
+            </div>
         </div>
     </div>
 </div>
 
 
-<div id="layout6">
-
-    <div class="TieuDe">
-        <h2 class="ten"> Mẹo vặt hay</h2>
-        <div class="right">
-            <img src="../Home/Image/sangTrai.PNG"/>
-            <img src="../Home/Image/sangPhai.PNG"/>
-        </div>
-
+<div id="tinTuc_3">
+    <hr class="thanhKe"></hr>
+    <div id="chu_TinTuc">
+        <h2 class="chu"> Tin Tức</h2>
+        <p class="nd"> Cập nhật tin tức liên quan </p>
     </div>
-    <div class="meoVatHay">
-        <div class="meoVat">
+    <hr class="thanhKe1"></hr>
+    <div id="khung">
+        <div class="tinTucMoiNhat">
             <a href="">
-                <img class="anh" src="../Home/Image_Home2/baoQuanVaVeSinh_Layout7.PNG"/>
-                <div class="lich">
-                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                    <p class="ngay"> 16/10/2021 Đăng bởi : Sea Team</p>
-                </div>
-                <h2 class="ten"> Mẹo vặt bảo quản và vệ sinh các đồ nội thất </h2>
+                <img class="anhTinTucMoiNhat" src="Image_TinTuc/anhTinTuc5.PNG"/>
+                <h3 class="noiDungTinTuc">Mua sofa giường mang cả thiên đường đến những căn hộ nhỏ</h3>
+                <p class="nd">Sử dụng nội thất thông minh và tận dụng không gian để lưu trữ đồ đạc Với một không
+                    gian..</p>
+                <p class="xemThem">Xem Thêm</p>
             </a>
-            <p class="noiDung"> Đối với nội thất bằng kim loại - khi xủ lý các vết bẩn thông thường bạn chỉ cần ..</p>
         </div>
-        <div class="meoVat">
-            <a href="../TinTuc/MeoVat.html?_ijt=42n7g22303aucjlb03u168175o">
-                <img class="anh" src="../Home/Image_Home2/meoVat_2.PNG" height="447" width="785"/>
-                <div class="lich">
-                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                    <p class="ngay"> 17/10/2021 Đăng bởi : Sea </p>
-                </div>
-                <h2 class="ten"> Xua tan nắng nóng với nội thất màu xanh ngọc </h2>
+        <div class="tinTucMoiNhat">
+            <a href=" ">
+                <img class="anhTinTucMoiNhat" src="Image_TinTuc/anhTinTuc6.PNG"/>
+                <h3 class="noiDungTinTuc">Những điều cần biết để lựa chọn bộ bàn ăn phù hợp với ngôi nhà bạn</h3>
+                <p class="nd">Sự tương phản về màu sắc giữa hai không gian phòng...</p>
+                <p class="xemThem">Xem Thêm</p>
             </a>
-            <p class="noiDung"> Điểm xuyến nội thất màu xanh ngọc sẽ giúp các thành viên cảm thấy thoải mái ...</p>
         </div>
-        <div class="meoVat">
-            <a href="">
-                <img class="anh" src="../Home/Image_Home2/baoQuanDoGo_layout7.PNG"/>
-                <div class="lich">
-                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                    <p class="ngay"> 18/10/2021 Đăng bởi : Team </p>
-                </div>
-                <h2 class="ten"> Bảo quản đồ gỗ khi độ ẩm không khí cao </h2>
+        <div class="tinTucMoiNhat">
+            <a href=" ">
+                <img class="anhTinTucMoiNhat" src="Image_TinTuc/anhTinTuc7.PNG"/>
+                <h3 class="noiDungTinTuc">Thiết kế nội thất chung cư đẹp cho đôi vợ chồng trẻ</h3>
+                <p class="nd">Sử dụng các bức tường bằng kính, cửa kính trong suốt...</p>
+                <p class="xemThem">Xem Thêm</p>
             </a>
-            <p class="noiDung"> Đồ nội thất bằng gỗ chất lượng cao là một sự đầu tư tuyệt vời để trang trí ngôi nhà
-                ...</p>
         </div>
     </div>
-
 </div>
+
 
 <div id="layout7">
     <div class="thanhDuoi">
@@ -384,7 +421,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 </html>

@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -55,10 +55,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\java\vn\edu\hcmuaf\fit\webfurniture" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\DangKy" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\resources" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\java\vn\edu\hcmuaf\fit\webfurniture" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -207,6 +207,7 @@
       <workItem from="1641108759997" duration="153000" />
       <workItem from="1641108978717" duration="6414000" />
       <workItem from="1641116209230" duration="2819000" />
+      <workItem from="1641119961202" duration="6868000" />
     </task>
     <servers />
   </component>
