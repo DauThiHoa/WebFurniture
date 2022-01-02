@@ -106,7 +106,7 @@
         </div>
 
     </div>
-    <a href="../Home/HomePage.jsp">
+    <a href="../HomePage.jsp">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
@@ -294,7 +294,7 @@
 </div>
 
 <div class="MuaHang">
-    <a href="../Home/HomePage.jsp">
+    <a href="../HomePage.jsp">
         <div class="tiepTuc">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
             <h2 class="ten"> Tiếp tục mua hàng</h2>
@@ -411,7 +411,7 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../Home/HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="../HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
                         <p>Trang chủ</p></a>
                     <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>

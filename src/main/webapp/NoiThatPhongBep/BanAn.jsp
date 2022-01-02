@@ -107,7 +107,7 @@
         </div>
 
     </div>
-    <a href="../Home/HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
+    <a href="../HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
@@ -651,7 +651,7 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../Home/HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="../HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
                         <p>Trang chủ</p></a>
                     <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>

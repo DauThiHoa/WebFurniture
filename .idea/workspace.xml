@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -208,6 +208,9 @@
       <workItem from="1641108978717" duration="6414000" />
       <workItem from="1641116209230" duration="2819000" />
       <workItem from="1641119961202" duration="6868000" />
+      <workItem from="1641133694934" duration="520000" />
+      <workItem from="1641134286615" duration="17000" />
+      <workItem from="1641134787231" duration="7207000" />
     </task>
     <servers />
   </component>
@@ -256,6 +259,12 @@
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/db/JDBIConnector.java</url>
           <line>18</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/Home.js</url>
+          <line>8</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

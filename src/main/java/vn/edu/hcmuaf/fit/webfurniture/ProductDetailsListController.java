@@ -11,8 +11,8 @@ import java.io.IOException;
 public class ProductDetailsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-           request.setAttribute("ProductDetails" , ProductDetailsService.getInstance().getAll());
-           request.getRequestDispatcher("Home/HomePage.jsp").forward(request , response);
+           request.setAttribute("productDetails" , ProductDetailsService.getInstance().getAll());
+           request.getRequestDispatcher("HomePage.jsp").forward(request , response);
     }
 
     @Override

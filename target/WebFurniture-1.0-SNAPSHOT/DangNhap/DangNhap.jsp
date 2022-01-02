@@ -48,7 +48,7 @@
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
-            <a href="../Home/HomePage.jsp">
+            <a href="../HomePage.jsp">
                 <button class="btn">SIGN IN</button>
             </a>
         </div>
