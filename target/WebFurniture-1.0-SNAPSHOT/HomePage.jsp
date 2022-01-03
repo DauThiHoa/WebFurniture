@@ -220,11 +220,9 @@
     </div>
 
     <div id="tenCacSanPhamNoiBat">
-        <jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
-        <c:forEach var="p" items="${productDetails}">
         <div class="tensanpham" id="khungsanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+                <img class="anhSanPham" src="Image/TuHabu.PNG"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -241,8 +239,6 @@
                 </a>
             </div>
         </div>
-        </c:forEach>
-
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                 <img class="anhSanPham" src="Image/SofaBangBella.PNG"/>

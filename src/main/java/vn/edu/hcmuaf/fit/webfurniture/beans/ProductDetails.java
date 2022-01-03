@@ -11,6 +11,7 @@ public class ProductDetails implements Serializable  {
     private String production  ;
     private float priceOld   ;
     private int quantity ;
+    private int quantitySold ;
     private String linkImage  ;
     private float priceNew  ;
     private String dateSubmitted  ;
@@ -149,6 +150,18 @@ public class ProductDetails implements Serializable  {
 
     public void setViewProductDetails(String viewProductDetails) {
         this.viewProductDetails = viewProductDetails;
+    }
+
+    public int getQuantitySold() {
+        return quantitySold;
+    }
+
+    public void setQuantitySold(int quantitySold) {
+        this.quantitySold = quantitySold;
+    }
+// get total money
+    public double getTotalMoney (){
+        return quantitySold * priceNew ;
     }
 
 }
