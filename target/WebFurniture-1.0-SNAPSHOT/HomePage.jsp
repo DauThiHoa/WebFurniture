@@ -1,3 +1,5 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
@@ -179,12 +181,10 @@
     <img id="hinh4" src="Image/hinh4.PNG"/>
 </div>
 
-<jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${productDetails}">
 <div id="SanPhamNoiBat">
     <div id="BanLamViec">
         <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-            <img id="anh_BanLamViec" src="${p.linkImage}"/>
+            <img id="anh_BanLamViec" src="Image/img_1.png"/>
         </a>
         <div id="blv">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -218,7 +218,10 @@
         <img id="right" src="Image/sangPhai.PNG" onclick="right(this)" alt="right"/>
 
     </div>
+
     <div id="tenCacSanPhamNoiBat">
+        <jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetails}">
         <div class="tensanpham" id="khungsanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                 <img class="anhSanPham" src="${p.linkImage}"/>
@@ -238,11 +241,11 @@
                 </a>
             </div>
         </div>
-
+        </c:forEach>
 
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+                <img class="anhSanPham" src="Image/SofaBangBella.PNG"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -263,7 +266,7 @@
 
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+                <img class="anhSanPham" src="Image/keTuHobu.PNG"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -284,7 +287,7 @@
 
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+                <img class="anhSanPham" src="Image/KeTreoPoplar.PNG"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -305,7 +308,7 @@
 
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+                <img class="anhSanPham" src="Image/KeTiViHoBu.PNG"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -325,7 +328,7 @@
 
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+                <img class="anhSanPham" src="Image/gheEuro.PNG"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -349,7 +352,7 @@
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="${p.linkImage}"/>
+                         src="ImageProduct/Goi-tua-lung-van-phong.webp"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -370,7 +373,7 @@
             <!-- San Pham Bam nut chuyen -->
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <img class="anhSanPham" src="${p.linkImage}"/>
+                    <img class="anhSanPham" src="ImageProduct/Sofapk.jpg"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -392,7 +395,7 @@
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="${p.linkImage}"/>
+                         src="ImageProduct/ban-tra-chong-tham-nuoc.jpg"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -414,7 +417,7 @@
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="${p.linkImage}"/>
+                         src="ImageProduct/Goi-tua-lung-sofa-phong-cach-hien-dai.webp"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -436,7 +439,7 @@
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="${p.linkImage}"/>
+                         src="ImageProduct/Dem-ngoi-hinh-vuong-phong-cach.webp"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -458,7 +461,7 @@
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="${p.linkImage}"/>
+                         src="ImageProduct/ban-tra-phong-khach.webp"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -480,7 +483,6 @@
         </div>
     </div>
 </div>
-</c:forEach>
 
 <div id="SanPhamHot">
     <div id="chu_SanPhamHot">
