@@ -67,7 +67,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -182,13 +182,15 @@
 </div>
 
 <div id="SanPhamNoiBat">
+    <jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetails}">
     <div id="BanLamViec">
         <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
             <img id="anh_BanLamViec" src="Image/img_1.png"/>
         </a>
         <div id="blv">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <h1 class="chuBanLamViec"> Tủ bếp đơn giản </h1>
+                <h1 class="chuBanLamViec">${p.name}</h1>
             </a>
             <div class="sao3">
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -200,7 +202,7 @@
             <p id="luxury">LUXURY</p>
             <h2 id="giaBLV">1.000.000đ</h2>
             <div class="gioHang">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -209,6 +211,7 @@
             </div>
         </div>
     </div>
+    </c:forEach>
 
     <div id="chu_SanPhamNoiBat">
         <h2 class="tenSanPhamNoBat">SẢN PHẨM NỔI BẬT</h2>
@@ -231,7 +234,7 @@
                 <h3 class="giasanpham">500.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -250,7 +253,7 @@
                 <h3 class="giasanpham">3.000.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -271,7 +274,7 @@
                 <h3 class="giasanpham">5.000.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -292,7 +295,7 @@
                 <h3 class="giasanpham">500.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -313,7 +316,7 @@
                 <h3 class="giasanpham">900.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -333,7 +336,7 @@
                 <h3 class="giasanpham">200.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -357,7 +360,7 @@
                     <h3 class="giasanpham">110.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -378,7 +381,7 @@
                     <h3 class="giasanpham">2.280.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -400,7 +403,7 @@
                     <h3 class="giasanpham">1.529.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -422,7 +425,7 @@
                     <h3 class="giasanpham">160.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -444,7 +447,7 @@
                     <h3 class="giasanpham">120.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -466,7 +469,7 @@
                     <h3 class="giasanpham">1.280.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -506,7 +509,7 @@
                     </div>
                     <h3 class="giaIconic">700.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -534,7 +537,7 @@
                     </div>
                     <h3 class="giaIconic">400.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -564,7 +567,7 @@
                     </div>
                     <h3 class="giaIconic">270.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -594,7 +597,7 @@
                     </div>
                     <h3 class="giaIconic">3.100.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -628,7 +631,7 @@
                     </div>
                     <h3 class="giaIconic">990.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -656,7 +659,7 @@
                     </div>
                     <h3 class="giaIconic">1.500.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -686,7 +689,7 @@
                     </div>
                     <h3 class="giaIconic">150.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -716,7 +719,7 @@
                     </div>
                     <h3 class="giaIconic">2.080.000đ</h3>
                     <div class="gioHang4">
-                        <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -746,7 +749,7 @@
             </div>
             <h3 id="giaIconic">700.000đ</h3>
             <div class="gioHang4">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -772,7 +775,7 @@
             </a>
             <h3 id="giaArctander">1.000.000đ</h3>
             <div class="gioHang4">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -798,7 +801,7 @@
             </div>
             <h3 id="giaAillen03">1.400.000đ</h3>
             <div class="gioHang4">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -824,7 +827,7 @@
             </div>
             <h3 id="giaBinas">900.000đ</h3>
             <div class="gioHang4">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -859,7 +862,7 @@
             </div>
             <h3 id="giaKozoka">900.000đ</h3>
             <div class="gioHang">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -888,7 +891,7 @@
                 <h3 class="giasanpham">1.500.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -907,7 +910,7 @@
                 <h3 class="giasanpham">3.050.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -926,7 +929,7 @@
                 <h3 class="giasanpham">400.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -945,7 +948,7 @@
                 <h3 class="giasanpham">5.500.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -965,7 +968,7 @@
                 <h3 class="giasanpham">15.000.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -984,7 +987,7 @@
                 <h3 class="giasanpham">95.000đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1007,7 +1010,7 @@
                     <h3 class="giasanpham">1.700.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1029,7 +1032,7 @@
                     <h3 class="giasanpham">2.700.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1051,7 +1054,7 @@
                     <h3 class="giasanpham">1.750.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1073,7 +1076,7 @@
                     <h3 class="giasanpham">4.700.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1095,7 +1098,7 @@
                     <h3 class="giasanpham">1.400.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1117,7 +1120,7 @@
                     <h3 class="giasanpham">250.000đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1215,7 +1218,7 @@
                 </div>
 
                 <div class="gioHang">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1243,7 +1246,7 @@
                     <p><strike CLASS="giaCu">10.000.000đ</strike></p>
                 </div>
                 <div class="gioHang2">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1269,7 +1272,7 @@
                     <h3 class="gia"> 15.500.000đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1296,7 +1299,7 @@
                     <p><strike CLASS="giaCu">15.000.000đ</strike></p>
                 </div>
                 <div class="gioHang1">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1327,7 +1330,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1355,7 +1358,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1384,7 +1387,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1414,7 +1417,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1459,7 +1462,7 @@
                     <h3 class="gia"> 500.000đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1486,7 +1489,7 @@
                     <p><strike CLASS="giaCu">3.000.000đ</strike></p>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1512,7 +1515,7 @@
                     <h3 class="gia1"> 350.000đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1538,7 +1541,7 @@
                     <h3 class="gia" style="margin-left: -190px "> 560.000đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1570,7 +1573,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1599,7 +1602,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1629,7 +1632,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1660,7 +1663,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1697,7 +1700,7 @@
         </div>
         <h3 class="gia"> 165.000 đ </h3>
         <div class="gioHang3">
-            <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1718,7 +1721,7 @@
         </div>
         <h3 class="gia"> 200.000 đ </h3>
         <div class="gioHang3">
-            <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1739,7 +1742,7 @@
         </div>
         <h3 class="gia"> 100.000 đ </h3>
         <div class="gioHang3">
-            <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1761,7 +1764,7 @@
         </div>
         <h3 class="gia"> 300.000 đ </h3>
         <div class="gioHang3">
-            <a href="GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>

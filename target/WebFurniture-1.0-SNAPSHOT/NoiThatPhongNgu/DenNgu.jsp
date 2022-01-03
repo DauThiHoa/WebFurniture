@@ -59,7 +59,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -323,7 +323,7 @@
                         <h4 class="ten"> Đèn ngủ trang trí phòng khách cổ điển GHO-2147</h4>
                         <h4 class="gia"> 1.390.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -349,7 +349,7 @@
                         <h4 class="ten"> Đèn ngủ để bàn phong cách tân cổ điển GHO-2146</h4>
                         <h4 class="gia"> 1.550.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -375,7 +375,7 @@
                         <h4 class="ten"> Đèn ngủ để bàn phòng khách thanh lịch GHO-2145 </h4>
                         <h4 class="gia"> 1.250.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -400,7 +400,7 @@
                         <h4 class="ten"> Đèn ngủ trang trí đẹp cho gia đình GHO-2144 </h4>
                         <h4 class="gia"> 998.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -426,7 +426,7 @@
                         <h4 class="ten"> Đèn trang trí phòng ngủ thiết kế đẹp GHO-2143 </h4>
                         <h4 class="gia"> 910.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -451,7 +451,7 @@
                         <h4 class="ten"> Đèn ngủ để bàn kiểu dáng nhỏ gọn GHO-2142 </h4>
                         <h4 class="gia"> 998.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -476,7 +476,7 @@
                         <h4 class="ten"> Đèn ngủ cao cấp thiết kế đẹp GHO-2141 </h4>
                         <h4 class="gia">1.590.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -500,7 +500,7 @@
                             <h4 class="ten"> Đèn trang trí nội thất gia đình đẹp GHO-2139 </h4>
                             <h4 class="gia"> 1.300.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -526,7 +526,7 @@
                             <h4 class="ten"> Đèn cần câu hiện đại cho phòng khách GHO-2138</h4>
                             <h4 class="gia"> 1.350.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -551,7 +551,7 @@
                             <h4 class="ten">Đèn cây đứng đẹp phong cách hiện đại GHO-2137</h4>
                             <h4 class="gia"> 1.000.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -576,7 +576,7 @@
                             <h4 class="ten"> Đèn để bàn trang trí thiết kế đẹp GHO-2136</h4>
                             <h4 class="gia"> 1.250.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -601,7 +601,7 @@
                             <h4 class="ten"> Đèn bàn gia đình cho phòng ngủ GHO-2135</h4>
                             <h4 class="gia"> 720.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -627,7 +627,7 @@
                             <h4 class="ten">Đèn đứng trang trí phong cách hiện đại GHO-2134</h4>
                             <h4 class="gia"> 1.700.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -652,7 +652,7 @@
                             <h4 class="ten"> Đèn đứng trang trí thiết kế sáng tạo GHO-2133 </h4>
                             <h4 class="gia"> 1.800.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -677,7 +677,7 @@
                             <h4 class="ten">Đèn cây hiện đại trang trí gia đình GHO-2132 </h4>
                             <h4 class="gia"> 930.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -702,7 +702,7 @@
                             <h4 class="ten">Đèn cây trang trí gia đình cao cấp GHO-2131 </h4>
                             <h4 class="gia"> 790.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -727,7 +727,7 @@
                             <h4 class="ten"> Đèn kẹp bàn hiện đại sơn tĩnh điện GHO-2130-2 </h4>
                             <h4 class="gia">380.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -752,7 +752,7 @@
                             <h4 class="ten"> Đèn kẹp bàn làm việc Pixar hiện đại GHO-2131-1</h4>
                             <h4 class="gia"> 360.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -777,7 +777,7 @@
                             <h4 class="ten"> Đèn trang trí đẹp cho không gian gia đình GHO-2129 </h4>
                             <h4 class="gia"> 900.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -802,7 +802,7 @@
                             <h4 class="ten"> Đèn trang trí phòng khách để bàn đẹp GHO-2119 </h4>
                             <h4 class="gia">1.300.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -827,7 +827,7 @@
                             <h4 class="ten"> Đèn để bàn chất lượng cao cho gia đình GHO-2117 </h4>
                             <h4 class="gia"> 380.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -852,7 +852,7 @@
                             <h4 class="ten"> Đèn trang trí gia đình để bàn đẹp GHO-2116</h4>
                             <h4 class="gia"> 830.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -877,7 +877,7 @@
                             <h4 class="ten"> đèn để bàn cho gia đình kiểu dáng thanh lịch GHO-2115</h4>
                             <h4 class="gia"> 1.100.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -902,7 +902,7 @@
                             <h4 class="ten"> Đèn trang trí để bàn cao cấp GHO-2108 </h4>
                             <h4 class="gia"> 2.500.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>

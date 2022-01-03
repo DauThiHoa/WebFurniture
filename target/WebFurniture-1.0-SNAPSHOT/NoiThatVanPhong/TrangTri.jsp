@@ -59,7 +59,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -330,7 +330,7 @@
                         <h4 class="ten"> Cây vạn tuế </h4>
                         <h4 class="gia"> 580.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -356,7 +356,7 @@
                         <h4 class="ten"> Đồng hồ treo tường </h4>
                         <h4 class="gia"> 470.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -383,7 +383,7 @@
                         <h4 class="ten"> Khung tranh để bàn</h4>
                         <h4 class="gia"> 150.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -410,7 +410,7 @@
                         <h4 class="ten"> Cây trang trí góc nhà </h4>
                         <h4 class="gia"> 580.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -437,7 +437,7 @@
                         <h4 class="ten">Bó hoa trang trí chất lượng</h4>
                         <h4 class="gia"> 200.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -463,7 +463,7 @@
                         <h4 class="ten"> Bó hoa bằng lụa</h4>
                         <h4 class="gia"> 230.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -489,7 +489,7 @@
                         <h4 class="ten"> Tranh trang trí gắn tường</h4>
                         <h4 class="gia"> 100.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -515,7 +515,7 @@
                         <h4 class="ten"> Khung tranh để bàn </h4>
                         <h4 class="gia"> 160.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -541,7 +541,7 @@
                         <h4 class="ten"> Tranh tường nghệ thuật</h4>
                         <h4 class="gia"> 130.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>

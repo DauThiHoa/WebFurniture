@@ -59,7 +59,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -325,7 +325,7 @@
                         <h4 class="ten"> Rèm sáo gỗ cao cấp GHO-618</h4>
                         <h4 class="gia"> 650.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -352,7 +352,7 @@
                         <h4 class="ten"> Rèm lá dọc chất lượng cao GHO-622</h4>
                         <h4 class="gia"> 300.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -379,7 +379,7 @@
                         <h4 class="ten"> Rèm cuốn cao cấp đẹp GHO-628 </h4>
                         <h4 class="gia"> 400.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -405,7 +405,7 @@
                         <h4 class="ten"> Rèm cuốn cao cấp thời trang GHO-620 </h4>
                         <h4 class="gia"> 400.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -432,7 +432,7 @@
                         <h4 class="ten"> Rèm vải khách sạn cao cấp GHO-619 </h4>
                         <h4 class="gia"> 800.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -458,7 +458,7 @@
                         <h4 class="ten"> Rèm Roman cao cấp GHO-717 </h4>
                         <h4 class="gia"> 600.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -484,7 +484,7 @@
                         <h4 class="ten"> Rèm cửa hoa văn cao cấp GHO-614 </h4>
                         <h4 class="gia"> 800.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -509,7 +509,7 @@
                             <h4 class="ten"> Rèm nhà tắm nhập khẩu GHO-613 </h4>
                             <h4 class="gia"> 800.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -536,7 +536,7 @@
                             <h4 class="ten"> Rèm sân nhập khẩu GHO-621</h4>
                             <h4 class="gia"> 1.200.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -562,7 +562,7 @@
                             <h4 class="ten">Rèm sáo nhôm nhập khẩu GHO-611</h4>
                             <h4 class="gia"> 400.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -588,7 +588,7 @@
                             <h4 class="ten"> Rèm sáo gỗ nhập khẩu cao cấp GHO_610</h4>
                             <h4 class="gia"> 650.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -614,7 +614,7 @@
                             <h4 class="ten"> Rèm cửa giá rẻ chất lựơng cao GHO-609</h4>
                             <h4 class="gia"> 320.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -641,7 +641,7 @@
                             <h4 class="ten"> Rèm vải hai lớp cao cấp GHO-608</h4>
                             <h4 class="gia"> 700.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -667,7 +667,7 @@
                             <h4 class="ten"> Rèm cuốn tranh cao cấp GHO-607 </h4>
                             <h4 class="gia"> 600.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -693,7 +693,7 @@
                             <h4 class="ten"> Rèm cửa văn phòng cao cấp GHP-606</h4>
                             <h4 class="gia"> 430.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -719,7 +719,7 @@
                             <h4 class="ten"> Rèm lá dọc chất lượng cao GHO-703 </h4>
                             <h4 class="gia"> 290.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -745,7 +745,7 @@
                             <h4 class="ten"> Rèm cuốn đẹp chất lượng cao GHO-704 </h4>
                             <h4 class="gia">380.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -771,7 +771,7 @@
                             <h4 class="ten"> Rèm vải Roma chất lượng cao GHO-704</h4>
                             <h4 class="gia"> 60.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -797,7 +797,7 @@
                             <h4 class="ten"> Rèm cửa cao cấp phong cách hiện đại GHO-705 </h4>
                             <h4 class="gia"> 900.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -823,7 +823,7 @@
                             <h4 class="ten"> Rèm cửa tránh ánh sáng tốt GHO-708 </h4>
                             <h4 class="gia">800.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -849,7 +849,7 @@
                             <h4 class="ten"> Rèm cửa nhập khẩu vải cao cấp GHO-811 </h4>
                             <h4 class="gia"> 880.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -875,7 +875,7 @@
                             <h4 class="ten"> Rèm cửa cao cấp phong cách cổ điển GHO-812</h4>
                             <h4 class="gia"> 830.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -901,7 +901,7 @@
                             <h4 class="ten"> Rèm cửa họa tiết hoa hồng cao cấp GHO-813</h4>
                             <h4 class="gia"> 900.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -927,7 +927,7 @@
                             <h4 class="ten"> Rèm cửa hình doremon siêu đáng yêu GHO-814</h4>
                             <h4 class="gia"> 700.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>

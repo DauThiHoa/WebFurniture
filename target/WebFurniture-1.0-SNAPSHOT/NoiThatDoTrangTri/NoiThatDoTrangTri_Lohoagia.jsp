@@ -59,7 +59,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -322,7 +322,7 @@
                         <h4 class="ten"> Bó hoa trang trí không gian gia đình GHS-6702</h4>
                         <h4 class="gia"> 80.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -348,7 +348,7 @@
                         <h4 class="ten"> Lọ hoa bằng sứ thiết kế sáng tạo GHS-6699</h4>
                         <h4 class="gia"> 249.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -374,7 +374,7 @@
                         <h4 class="ten"> Hoa hướng lụa thiết kế cho gia đình GHS-6697 </h4>
                         <h4 class="gia"> 150.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -399,7 +399,7 @@
                         <h4 class="ten"> Lọ hoa bằng sứ chất lượng cao GHS-6696 </h4>
                         <h4 class="gia"> 369.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -425,7 +425,7 @@
                         <h4 class="ten"> Hoa lan vũ nữ bằng lụa cao cấp GHS-6693</h4>
                         <h4 class="gia"> 60.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -450,7 +450,7 @@
                         <h4 class="ten"> Hoa hồng lụa chất lượng cao dùng trang trí GHS-6692</h4>
                         <h4 class="gia"> 60.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -475,7 +475,7 @@
                         <h4 class="ten"> Lọ hoa để bàn cao cấp phong cách hiện đại GHS-6691 </h4>
                         <h4 class="gia">490.000đ </h4>
                         <div class="nutgiohang" style="margin-left: 0%">
-                            <a href="../GioHang/GioHang.jsp">
+                            <a href="../GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -499,7 +499,7 @@
                             <h4 class="ten"> Lọ hoa trang trí để bàn cho gia đình GHS-6690 </h4>
                             <h4 class="gia"> 300.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -525,7 +525,7 @@
                             <h4 class="ten"> Lọ hoa bằng sứ thiết kế đẹp ấn tượng GHS-6684</h4>
                             <h4 class="gia"> 600.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -550,7 +550,7 @@
                             <h4 class="ten">Bình hoa sứ trang trí gia đình cao cấp GHS-6683 </h4>
                             <h4 class="gia"> 230.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -575,7 +575,7 @@
                             <h4 class="ten"> Cành cherry đỏ giả chất lượng cao GHS-6607</h4>
                             <h4 class="gia"> 250.000đ</h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -600,7 +600,7 @@
                             <h4 class="ten"> Cành cherry đỏ giả chất lượng cao GHS-6607 </h4>
                             <h4 class="gia"> 270.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -626,7 +626,7 @@
                             <h4 class="ten"> Bộ lọ hoa trang trí gia đình GHS-6562 </h4>
                             <h4 class="gia"> 1.400.000đ </h4>
                             <div class="nutgiohang" style="margin-left: 0%">
-                                <a href="../GioHang/GioHang.jsp">
+                                <a href="../GioHang.jsp">
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
@@ -650,7 +650,7 @@
                                 <h4 class="ten"> Mẹt hoa trang trí kèm đèn Led đẹp hiện đại GHS-6556 </h4>
                                 <h4 class="gia"> 330.000đ </h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>
@@ -676,7 +676,7 @@
                                 <h4 class="ten"> Bình hoa sứ cao cấp thanh lịch GHS-6257-1 </h4>
                                 <h4 class="gia"> 270.000đ </h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>
@@ -702,7 +702,7 @@
                                 <h4 class="ten"> Lọ hoa gốm cao cấp tạo điểm nhấn không gian GHS-6257-5 </h4>
                                 <h4 class="gia">880.000đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>
@@ -728,7 +728,7 @@
                                 <h4 class="ten"> Lọ hoa gốm trang trí đẹp GHS-6256-2</h4>
                                 <h4 class="gia"> 560.000đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>
@@ -754,7 +754,7 @@
                                 <h4 class="ten"> Lọ hoa thủy tinh trong sắc màu đẹp GHS-6221-2 </h4>
                                 <h4 class="gia"> 900.000đ </h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>
@@ -780,7 +780,7 @@
                                 <h4 class="ten"> Chậu hoa để bàn bằng sứ tráng men GHS-6540 </h4>
                                 <h4 class="gia"> 90.000đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>
@@ -806,7 +806,7 @@
                                 <h4 class="ten"> Lồng sắt trang trí nội thất GHS-6219</h4>
                                 <h4 class="gia"> 980.000đ </h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="../GioHang/GioHang.jsp">
+                                    <a href="../GioHang.jsp">
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
                                                                         aria-hidden="true"></i><span> </span></button>

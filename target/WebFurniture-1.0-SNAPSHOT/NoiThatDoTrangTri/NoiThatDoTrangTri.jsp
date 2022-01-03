@@ -60,7 +60,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -326,7 +326,7 @@
                         <h4 class="gia"> 1.390.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -353,7 +353,7 @@
                         <h4 class="gia"> 720.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -380,7 +380,7 @@
                         <h4 class="gia"> 1.400.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -406,7 +406,7 @@
                         <h4 class="gia"> 1.250.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -433,7 +433,7 @@
                         <h4 class="gia"> 6.600.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -459,7 +459,7 @@
                         <h4 class="gia"> 980.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -485,7 +485,7 @@
                         <h4 class="gia"> 1.320.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -511,7 +511,7 @@
                         <h4 class="gia"> 980.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -538,7 +538,7 @@
                         <h4 class="gia"> 329.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -564,7 +564,7 @@
                         <h4 class="gia"> 229.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -590,7 +590,7 @@
                         <h4 class="gia"> 80.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -616,7 +616,7 @@
                         <h4 class="gia"> 60.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -643,7 +643,7 @@
                         <h4 class="gia"> 160.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -669,7 +669,7 @@
                         <h4 class="gia"> 180.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -695,7 +695,7 @@
                         <h4 class="gia"> 170.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -721,7 +721,7 @@
                         <h4 class="gia"> 170.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -747,7 +747,7 @@
                         <h4 class="gia"> 400.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -773,7 +773,7 @@
                         <h4 class="gia"> 600.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -799,7 +799,7 @@
                         <h4 class="gia"> 400.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -825,7 +825,7 @@
                         <h4 class="gia"> 600.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -851,7 +851,7 @@
                         <h4 class="gia"> 6.700.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -877,7 +877,7 @@
                         <h4 class="gia"> 5.000.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -903,7 +903,7 @@
                         <h4 class="gia"> 1.800.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -929,7 +929,7 @@
                         <h4 class="gia"> 4.500.000đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="../GioHang/GioHang.jsp">
+                        <a href="../GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>

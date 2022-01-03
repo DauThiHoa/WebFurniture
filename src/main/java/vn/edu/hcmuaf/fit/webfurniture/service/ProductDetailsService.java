@@ -20,7 +20,7 @@ public class ProductDetailsService {
     }
     public List <ProductDetails> getAll () {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails ").mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+            return handle.createQuery("select * from productdetail ").mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
 }

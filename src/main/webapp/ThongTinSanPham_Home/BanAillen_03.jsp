@@ -60,7 +60,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang/GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -216,7 +216,7 @@
             <div class="cong" onclick="cong(this)" alt="tangSoLuong">
                 <h3 class="dauCong"> + </h3>
             </div>
-            <a href="../GioHang/GioHang.jsp">
+            <a href="../GioHang.jsp">
                 <div class="gioHang">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
