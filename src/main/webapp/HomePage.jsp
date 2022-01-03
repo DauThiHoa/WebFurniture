@@ -181,12 +181,12 @@
     <img id="hinh4" src="Image/hinh4.PNG"/>
 </div>
 
+<jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${productDetails}">
 <div id="SanPhamNoiBat">
-    <jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
-    <c:forEach var="p" items="${productDetails}">
     <div id="BanLamViec">
         <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-            <img id="anh_BanLamViec" src="Image/img_1.png"/>
+            <img id="anh_BanLamViec" src="${p.linkImage}"/>
         </a>
         <div id="blv">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
@@ -199,8 +199,8 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
             </div>
-            <p id="luxury">LUXURY</p>
-            <h2 id="giaBLV">1.000.000đ</h2>
+            <p id="luxury">${p.trademark}</p>
+            <h2 id="giaBLV">${p.priceNew}đ</h2>
             <div class="gioHang">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
                     <div>
@@ -211,7 +211,6 @@
             </div>
         </div>
     </div>
-    </c:forEach>
 
     <div id="chu_SanPhamNoiBat">
         <h2 class="tenSanPhamNoBat">SẢN PHẨM NỔI BẬT</h2>
@@ -229,7 +228,7 @@
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Tủ HaBu </h2>
+                    <h2 class="ten">Tủ HaBu</h2>
                 </a>
                 <h3 class="giasanpham">500.000đ</h3>
             </div>
@@ -242,6 +241,7 @@
                 </a>
             </div>
         </div>
+
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                 <img class="anhSanPham" src="Image/SofaBangBella.PNG"/>
@@ -482,6 +482,7 @@
         </div>
     </div>
 </div>
+</c:forEach>
 
 <div id="SanPhamHot">
     <div id="chu_SanPhamHot">

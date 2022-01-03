@@ -26,9 +26,7 @@ public class ProductService {
     }
 
     public List<Product> getAll() {
-        return (List<Product>) JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails ").mapToBean(Product.class).stream().collect(Collectors.toList());
-        });
+        return null ;
     }
 
 }

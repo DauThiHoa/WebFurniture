@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DBConnect {
     private static DBConnect instance;
     private Connection connection;
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/test";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/webfurniture";
     private static final String USER = "root";
     private static final String PASS = "";
 
@@ -25,8 +25,7 @@ public class DBConnect {
     private void connect() throws SQLException, ClassNotFoundException {
         if (connection == null || connection.isClosed()) {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL, USER, PASS);
-           System.out.println(connection.getCatalog());
+            connection = DriverManager.getConnection(DB_URL, USER , PASS);
         }
     }
 

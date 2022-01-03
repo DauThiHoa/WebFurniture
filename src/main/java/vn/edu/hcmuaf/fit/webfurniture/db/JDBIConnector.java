@@ -12,8 +12,7 @@ public class JDBIConnector {
 
     private static void makeConnect() {
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setURL("jdbc:mysql://" + getDbHost() + ":" + getDbPort() + "/" + getUsername() + "/" + getPassword() + "/"
-                + getDbName());
+        dataSource.setURL("jdbc:mysql://" + getDbHost() + ":" + getDbPort() + "/" + getDbName());
 
         dataSource.setUser(getUsername());
         dataSource.setPassword(getPassword());
@@ -24,7 +23,6 @@ public class JDBIConnector {
             throwables.printStackTrace();
             throw new RuntimeException(throwables);
         }
-
 
         jdbi = Jdbi.create(dataSource);
     }
