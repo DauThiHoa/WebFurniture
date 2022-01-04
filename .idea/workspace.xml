@@ -48,7 +48,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3862069" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
@@ -191,6 +191,8 @@
       <workItem from="1641256870393" duration="12902000" />
       <workItem from="1641281431748" duration="13263000" />
       <workItem from="1641301305588" duration="17561000" />
+      <workItem from="1641322355332" duration="2356000" />
+      <workItem from="1641325341724" duration="4961000" />
     </task>
     <servers />
   </component>

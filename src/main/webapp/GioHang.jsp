@@ -18,6 +18,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img_GioHang.png" type="image/png">
     <title>GIỎ HÀNG</title>
+    <style type='text/css'>table {
+        counter-reset: rowNumber ;
+    }
+    table tr {
+        counter-increment: rowNumber ;
+    }
+
+    table tr td:nth-child(2)::before {
+        content: counter(rowNumber);
+        min-width: 2em;
+        margin-right: 0.5em;
+    }
+    </style>
 </head>
 <body>
 <div id="Thanh_cong_cu">
@@ -152,7 +165,7 @@
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
-            <th class="TieuDeBangSanPham ">MSSP</th>
+            <th class="TieuDeBangSanPham ">STT</th>
             <th class="TieuDeBangSanPham">SẢN PHẨM</th>
             <th class="TieuDeBangSanPham">TÊN SẢN PHẨM</th>
             <th class="TieuDeBangSanPham">GIÁ</th>
@@ -167,8 +180,8 @@
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
-            <td align="center" scope="row"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="${productDetails.id}"><br></td>
+            <td align="center" scope="row"><input style="font-weight: bold ; width: 50px ; text-align: center" type="1"
+                                      name="fname" value=""><br></td>
             <td align="center"><img style="text-align: center ; margin-top: 5px " src="${productDetails.linkImage}"
                                     class="imageGioHang" width="150px" height="150px"/></td>
             <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham">${productDetails.name}</h4></td>
