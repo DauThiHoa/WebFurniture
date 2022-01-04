@@ -24,85 +24,17 @@ public class ProductDetailsService {
             return handle.createQuery("select * from productdetails").mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
-    public List <ProductDetails> getId () {
+
+    public ProductDetails getProductDetails ( String id ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp1' ").mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp2 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp2' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp3 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp3' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp4 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp4' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp5 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp5' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp6 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp6' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp7 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp7' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp8 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp8' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp9 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp9' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp10 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp10' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp11 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp11' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp12 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp12' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
-        });
-    }
-    public List <ProductDetails> getIdSp13 () {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = 'sp13' ")
-                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+            return handle.createQuery("select * from productdetails where id = ? ")
+                    .bind (0 , id)
+                    .mapToBean(ProductDetails.class).first();
         });
     }
 
     public ProductDetails getById(String id ) {
+
         return ProductDetailsDao.getInstance ().getById (id);
     }
 }

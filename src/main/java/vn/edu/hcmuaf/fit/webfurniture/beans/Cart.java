@@ -66,6 +66,7 @@ public class Cart implements Serializable {
     }
     // get list of productDetails
     public Collection<ProductDetails> getProductDetailsList (){
+
         return productDetailsList.values();
     }
 
