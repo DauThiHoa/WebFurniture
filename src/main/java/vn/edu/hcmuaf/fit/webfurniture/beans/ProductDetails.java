@@ -23,6 +23,24 @@ public class ProductDetails implements Serializable  {
     public ProductDetails() {
     }
 
+    public ProductDetails(String id, String name, String description, String trademark, String production, float priceOld, int quantity, int quantitySold, String linkImage, float priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.trademark = trademark;
+        this.production = production;
+        this.priceOld = priceOld;
+        this.quantity = quantity;
+        this.quantitySold = quantitySold;
+        this.linkImage = linkImage;
+        this.priceNew = priceNew;
+        this.dateSubmitted = dateSubmitted;
+        this.status = status;
+        this.idProductGroups = idProductGroups;
+        this.idCategory = idCategory;
+        this.viewProductDetails = viewProductDetails;
+    }
+
     public ProductDetails(String id, String name, String description, String trademark, String production, float priceOld, int quantity, String linkImage, float priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
         this.id = id;
         this.name = name;
@@ -161,6 +179,7 @@ public class ProductDetails implements Serializable  {
     }
 // get total money
     public double getTotalMoney (){
+
         return quantitySold * priceNew ;
     }
 

@@ -181,11 +181,12 @@
     <img id="hinh4" src="Image/hinh4.PNG"/>
 </div>
 
-<jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${productDetails}">
 <div id="SanPhamNoiBat">
+    <jsp:useBean id="productDetails" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetails}">
     <div id="BanLamViec">
         <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
+
             <img id="anh_BanLamViec" src="${p.linkImage}"/>
         </a>
         <div id="blv">
@@ -202,7 +203,7 @@
             <p id="luxury">${p.trademark}</p>
             <h2 id="giaBLV">${p.priceNew}đ</h2>
             <div class="gioHang">
-                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="cart-add?id=${p.id}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -211,6 +212,7 @@
             </div>
         </div>
     </div>
+    </c:forEach>
 
     <div id="chu_SanPhamNoiBat">
         <h2 class="tenSanPhamNoBat">SẢN PHẨM NỔI BẬT</h2>
@@ -222,15 +224,17 @@
     </div>
 
     <div id="tenCacSanPhamNoiBat">
+        <jsp:useBean id="productDetailsSanPhamNoiBat2" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsSanPhamNoiBat2}">
         <div class="tensanpham" id="khungsanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="Image/TuHabu.PNG"/>
+                <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Tủ HaBu</h2>
+                    <h2 class="ten">${p.name}</h2>
                 </a>
-                <h3 class="giasanpham">500.000đ</h3>
+                <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -241,16 +245,19 @@
                 </a>
             </div>
         </div>
+        </c:forEach>
 
+        <jsp:useBean id="productDetailsSanPhamNoiBat3" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsSanPhamNoiBat3}">
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="Image/SofaBangBella.PNG"/>
+                <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Sofa Bảng Bella </h2>
+                    <h2 class="ten">${p.name}</h2>
                 </a>
-                <h3 class="giasanpham">3.000.000đ</h3>
+                <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -261,17 +268,19 @@
                 </a>
             </div>
         </div>
+        </c:forEach>
 
-
+        <jsp:useBean id="productDetailsSanPhamNoiBat4" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsSanPhamNoiBat4}">
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="Image/keTuHobu.PNG"/>
+                <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Kệ Tủ HoBu </h2>
+                    <h2 class="ten">${p.name}</h2>
                 </a>
-                <h3 class="giasanpham">5.000.000đ</h3>
+                <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -282,17 +291,19 @@
                 </a>
             </div>
         </div>
+        </c:forEach>
 
-
+        <jsp:useBean id="productDetailsSanPhamNoiBat5" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsSanPhamNoiBat5}">
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="Image/KeTreoPoplar.PNG"/>
+                <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Kệ Treo Poplar </h2>
+                    <h2 class="ten">${p.name}</h2>
                 </a>
-                <h3 class="giasanpham">500.000đ</h3>
+                <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -303,17 +314,19 @@
                 </a>
             </div>
         </div>
+        </c:forEach>
 
-
+        <jsp:useBean id="productDetailsSanPhamNoiBat6" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsSanPhamNoiBat6}">
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="Image/KeTiViHoBu.PNG"/>
+                <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Kệ Ti Vi HoBu</h2>
+                    <h2 class="ten">${p.name}</h2>
                 </a>
-                <h3 class="giasanpham">900.000đ</h3>
+                <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -324,16 +337,19 @@
                 </a>
             </div>
         </div>
+        </c:forEach>
 
+        <jsp:useBean id="productDetailsSanPhamNoiBat7" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsSanPhamNoiBat7}">
         <div class="tensanpham">
             <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                <img class="anhSanPham" src="Image/gheEuro.PNG"/>
+                <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <h2 class="ten">Ghế Euro</h2>
+                    <h2 class="ten">${p.name}</h2>
                 </a>
-                <h3 class="giasanpham">200.000đ</h3>
+                <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
                 <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -344,20 +360,22 @@
                 </a>
             </div>
         </div>
-
+        </c:forEach>
 
         <div class="tenCacSanPhamNoiBat1">
             <!-- San Pham Bam nut chuyen -->
+            <jsp:useBean id="productDetailsSanPhamNoiBat8" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamNoiBat8}">
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="ImageProduct/Goi-tua-lung-van-phong.webp"/>
+                         src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                        <h2 class="ten">Gối tựa lưng</h2>
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="giasanpham">110.000đ</h3>
+                    <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
                     <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -368,17 +386,20 @@
                     </a>
                 </div>
             </div>
+            </c:forEach>
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
+            <jsp:useBean id="productDetailsSanPhamNoiBat9" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamNoiBat9}">
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <img class="anhSanPham" src="ImageProduct/Sofapk.jpg"/>
+                    <img class="anhSanPham" src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                        <h2 class="ten">Sofa phòng khách </h2>
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="giasanpham">2.280.000đ</h3>
+                    <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
                     <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -389,40 +410,21 @@
                     </a>
                 </div>
             </div>
+            </c:forEach>
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
-            <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                    <img class="anhSanPham"
-                         src="ImageProduct/ban-tra-chong-tham-nuoc.jpg"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                        <h2 class="ten">Bàn trà</h2>
-                    </a>
-                    <h3 class="giasanpham">1.529.000đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
+            <jsp:useBean id="productDetailsSanPhamNoiBat10" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamNoiBat10}">
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="ImageProduct/Goi-tua-lung-sofa-phong-cach-hien-dai.webp"/>
+                         src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                        <h2 class="ten">Gối Sofa hiện đại</h2>
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="giasanpham">160.000đ</h3>
+                    <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
                     <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -433,18 +435,21 @@
                     </a>
                 </div>
             </div>
+            </c:forEach>
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
+            <jsp:useBean id="productDetailsSanPhamNoiBat11" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamNoiBat11}">
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="ImageProduct/Dem-ngoi-hinh-vuong-phong-cach.webp"/>
+                         src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                        <h2 class="ten">Đệm ngồi</h2>
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="giasanpham">120.000đ</h3>
+                    <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
                     <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -455,18 +460,21 @@
                     </a>
                 </div>
             </div>
+            </c:forEach>
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
+            <jsp:useBean id="productDetailsSanPhamNoiBat12" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamNoiBat12}">
             <div class="tensanpham1">
                 <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
                     <img class="anhSanPham"
-                         src="ImageProduct/ban-tra-phong-khach.webp"/>
+                         src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
                     <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
-                        <h2 class="ten">Bàn trà phòng khách</h2>
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="giasanpham">1.280.000đ</h3>
+                    <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
                     <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
@@ -477,12 +485,37 @@
                     </a>
                 </div>
             </div>
+            </c:forEach>
+            <!-- San Pham Bam nut chuyen -->
+            <!-- San Pham Bam nut chuyen -->
+            <jsp:useBean id="productDetailsSanPhamNoiBat13" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamNoiBat13}">
+            <div class="tensanpham1">
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
+                    <img class="anhSanPham"
+                         src="${p.linkImage}"/>
+                </a>
+                <div class="sanpham">
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=92qor4v097kkqak40toroe3gu2">
+                        <h2 class="ten">${p.name}</h2>
+                    </a>
+                    <h3 class="giasanpham">${p.priceNew}đ</h3>
+                </div>
+                <div class="gioHang5">
+                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                        <div>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            </c:forEach>
             <!-- San Pham Bam nut chuyen -->
 
         </div>
     </div>
 </div>
-</c:forEach>
 
 <div id="SanPhamHot">
     <div id="chu_SanPhamHot">

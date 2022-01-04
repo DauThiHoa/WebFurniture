@@ -15,6 +15,7 @@ public class Cart implements Serializable {
     private Cart (){
          productDetailsList = new HashMap<>( );
     }
+
     public static Cart getInstance(){
         if ( instance == null ){
             instance = new Cart() ;
@@ -23,12 +24,21 @@ public class Cart implements Serializable {
     }
     // put productDetails to cart
     public void put ( ProductDetails productDetails){
-        productDetailsList.put(productDetails.getId() , productDetails);
+        if (productDetailsList.containsKey ( productDetails.getId()) ){
+               upQuantity(productDetails.getId());
+        }else {
+            productDetails.setQuantitySold(1);
+            productDetailsList.put(productDetails.getId(), productDetails);
+        }
+    }
+    private void upQuantity ( String id ){
+        ProductDetails productDetails = productDetailsList.get(id);
+        productDetails.setQuantitySold(productDetails.getQuantitySold() + 1 );
     }
     // update quantity of productDetails by id
     public void updateQuantity ( String id , int quantity ){
         ProductDetails productDetails = productDetailsList.get(id);
-        productDetails.setQuantity(quantity);
+        productDetails.setQuantitySold(quantity);
     }
     // get productDetails from cart by id
     public ProductDetails get ( String id ){
@@ -39,7 +49,7 @@ public class Cart implements Serializable {
         return productDetailsList.remove(id);
     }
     // get total price of cart
-    public double getTotalPrice (){
+    public double getTotal (){
         double totalPrice = 0 ;
         for ( ProductDetails productDetails : productDetailsList.values()){
             totalPrice += productDetails .getTotalMoney();
@@ -50,13 +60,13 @@ public class Cart implements Serializable {
     public int getTotalQuantity (){
         int totalQuantity = 0 ;
         for ( ProductDetails productDetails : productDetailsList .values()){
-            totalQuantity += productDetails.getQuantity() ;
+            totalQuantity += productDetails.getQuantitySold() ;
         }
         return totalQuantity ;
     }
     // get list of productDetails
-    public Collection<ProductDetails> getList (){
-           return productDetailsList.values();
+    public Collection<ProductDetails> getProductDetailsList (){
+        return productDetailsList.values();
     }
 
 }

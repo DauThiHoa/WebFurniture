@@ -1,4 +1,11 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+
+<jsp:useBean id="cart" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Cart"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +14,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="GioHang.css">
-    <link rel="icon" href="img_1.png" type="image/png">
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="img_GioHang.png" type="image/png">
     <title>GIỎ HÀNG</title>
 </head>
 <body>
@@ -156,22 +162,24 @@
             <th class="TieuDeBangSanPham">XÓA</th>
         </tr>
 
+        <c:set var ="ProductDetails" value="${cart.productDetailsList}" />
+        <c:forEach items="${ProductDetails}" var="productDetails" >
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
             <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
                                       name="fname" value="1"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px " src="Image/TuHabu.PNG"
+            <td align="center"><img style="text-align: center ; margin-top: 5px " src="${productDetails.linkImage}"
                                     class="imageGioHang" width="150px" height="150px"/></td>
-            <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham"> Tủ
-                HABU </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold">1.000.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="1" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 1.000.000 đ</td>
+            <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham">${productDetails.name}</h4></td>
+            <td align="center" style="font-size: 20px ; font-weight: bold">${productDetails.priceNew} đ</td>
+            <td align="center"><input class="form-control text-center" value="${productDetails.quantitySold}" type="number"></td>
+            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
             <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
+            <td align="center"><a href="/cart-remove" > <i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i> </a></td>
         </tr>
+        </c:forEach>
+        <!--
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
@@ -286,12 +294,13 @@
             <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
             </td>
         </tr>
+        -->
 
     </table>
 </div>
 
 <div class="TT">
-    <h2 class="tongTienThanhToan" style="margin-left: 1070px ; color: red"> Tổng tiền : 1.080.000 đ </h2>
+    <h2 class="tongTienThanhToan" style="margin-left: 1070px ; color: red"> Tổng tiền : ${cart.total}đ </h2>
 </div>
 
 <div class="MuaHang">
