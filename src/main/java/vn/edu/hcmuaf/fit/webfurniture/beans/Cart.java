@@ -1,10 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.beans;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Cart implements Serializable {
     private static final long serialVersionUID = 1L ;
@@ -70,6 +67,13 @@ public class Cart implements Serializable {
         return productDetailsList.values();
     }
 
+    public int getSoThuTu (){
+        int  stt  = 0 ;
+        for (int i = 0 ; i < productDetailsList.size() ; i ++ ){
+            stt = i + 1 ;
+        }
+        return stt ;
+    }
 }
 
 

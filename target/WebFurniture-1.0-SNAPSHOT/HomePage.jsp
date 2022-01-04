@@ -923,13 +923,13 @@
         <jsp:useBean id="productDetailsSanPhamMoiMiNi" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsSanPhamMoiMiNi}">
         <c:if test="${p.id == 'sp26'}" >
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=8sf9mppof2dfli4ovrjo3ujdpo">
+        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
             <img id="anh_Kozoka_trysil"
-                 src="NoiThatPhongNgu/Image_NTTTPhongngu/tu-quan-ao-mini-nhua-4.jpg"/>
+                 src="${p.linkImage}"/>
         </a>
         <div id="Kozoka">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=8sf9mppof2dfli4ovrjo3ujdpo">
-                <h2 class="ten">Tủ quần áo nhựa mini</h2>
+            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <h2 class="ten">${p.name}</h2>
             </a>
             <div class="sao3">
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -938,9 +938,9 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
             </div>
-            <h3 id="giaKozoka">900.000đ</h3>
+            <h3 id="giaKozoka">${p.priceNew}đ</h3>
             <div class="gioHang">
-                <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                <a href="cart-add?id=${p.id}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1358,12 +1358,12 @@
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
-                    <p><strike CLASS="giaCu">${p.priceOld}đ</strike></p>
+                    <p><strike CLASS="giaCu" style="margin-left: -88px">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang2">
                     <a href="cart-add?id=${p.id}">
                         <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -80px"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
                         </div>
                     </a>
@@ -1415,12 +1415,12 @@
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
-                    <p><strike CLASS="giaCu" style="margin-left: -90px">${p.priceOld}đ</strike></p>
+                    <p><strike CLASS="giaCu" style="margin-left: -78px">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang1">
                     <a href="cart-add?id=${p.id}">
                         <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -80px"></i>
+                            <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -70px"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
                         </div>
                     </a>
@@ -1439,19 +1439,23 @@
 
         <!-- SanPham Khi Nhan Nut -->
         <div class="tenCacSanPham2">
+
+<jsp:useBean id="productDetailsBoSuuTap2" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${productDetailsBoSuuTap2}">
+    <c:if test="${p.id == 'sp43'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_6.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Bộ giường tủ phòng</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia"> 5.000.000đ</h3>
+                    <h3 class="gia">${p.priceNew}đ</h3>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1467,19 +1471,21 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp44'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_7.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Bộ bàn ghế gỗ NT01</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia"> 3.350.000đ</h3>
+                    <h3 class="gia">${p.priceNew}đ</h3>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1495,20 +1501,22 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp45'}" >
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_8.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Bộ Sofa đẹp NT02</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia"> 3.350.000đ</h3>
+                    <h3 class="gia" style="margin-top: 100px ; margin-left: -190px">${p.priceNew}đ</h3>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1524,21 +1532,23 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp46'}" >
             <!-- SAN PHAM NHO -->
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_9.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Bộ phòng khách NT03</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia"> 5.350.000đ</h3>
+                    <h3 class="gia">${p.priceNew}đ</h3>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1554,6 +1564,8 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+</c:forEach>
             <!-- SAN PHAM NHO -->
         </div>
     </div>
@@ -1572,18 +1584,21 @@
             </div>
         </div>
         <div class="tenCacSanPham">
+<jsp:useBean id="productDetailsSanPhamKhuyenMai1" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${productDetailsSanPhamKhuyenMai1}">
+    <c:if test="${p.id == 'sp47'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=hlihs0b485htgtbbd307bkt282">
-                    <img class="anh5" src="Image_Home2/banAnBangGo_layout6.PNG"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=hlihs0b485htgtbbd307bkt282">
-                        <h2 class="ten"> Bàn ăn bằng gỗ</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia"> 500.000đ</h3>
+                    <h3 class="gia">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1598,19 +1613,21 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp48'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=hlihs0b485htgtbbd307bkt282">
-                    <img class="anh5" src="Image_Home2/banTrangDiem_layout6.PNG"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=hlihs0b485htgtbbd307bkt282">
-                        <h2 class="ten"> Bàn trang điểm </h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia"> 2.400.000đ</h3>
-                    <p><strike CLASS="giaCu">3.000.000đ</strike></p>
+                    <h3 class="gia">${p.priceNew}đ</h3>
+                    <p><strike CLASS="giaCu">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1625,18 +1642,20 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp49'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=nobhive33c5ajromf12im2gkp4">
-                    <img class="anh5" src="Image_Home2/gheSofaNau_layout6.PNG"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=nobhive33c5ajromf12im2gkp4">
-                        <h2 class="ten"> Ghế sofa nâu </h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia1"> 350.000đ</h3>
+                    <h3 class="gia1">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1651,18 +1670,20 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp50'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=r0j52v3t961e70g5gf3iv15a9d">
-                    <img class="anh5" src="Image_Home2/sofaPhongKhach_layout6.PNG"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=r0j52v3t961e70g5gf3iv15a9d">
-                        <h2 class="ten"> Sofa phòng khách</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia" style="margin-left: -190px "> 560.000đ</h3>
+                    <h3 class="gia" style="margin-left: -190px ">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1677,24 +1698,29 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+</c:forEach>
         </div>
 
         <!-- SanPham Khi Nhan Nut -->
         <div class="tenCacSanPham4">
+<jsp:useBean id="productDetailsSanPhamKhuyenMai2" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${productDetailsSanPhamKhuyenMai2}">
+    <c:if test="${p.id == 'sp51'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_14.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Sofa cam LOCO6</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia" style="margin-left: -175px ; margin-top: 100px"> 5.000.000đ</h3>
-                    <p><strike style="margin-left: -175px " CLASS="giaCu">7.000.000đ</strike></p>
+                    <h3 class="gia" style="margin-left: -175px ; margin-top: 100px">${p.priceNew}đ</h3>
+                    <p><strike style="margin-left: -175px " CLASS="giaCu">${p.priceOld}đ</strike></p>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1710,20 +1736,22 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp52'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_15.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Sofa xanh PHAT08</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia" style="margin-left: -200px ; margin-top: 100px"> 3.350.000đ</h3>
-                    <p><strike style="margin-left: -200px  " CLASS="giaCu">5.000.000đ</strike></p>
+                    <h3 class="gia" style="margin-left: -200px ; margin-top: 100px">${p.priceNew}đ</h3>
+                    <p><strike style="margin-left: -200px  " CLASS="giaCu">${p.priceOld}đ</strike></p>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1739,21 +1767,23 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp53'}" >
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_16.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Bộ Sofa đẹp NT04</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia" style="margin-left: -190px ; margin-top: 100px"> 5.000.000đ</h3>
-                    <p><strike style="margin-left: -190px " CLASS="giaCu">10.000.000đ</strike></p>
+                    <h3 class="gia" style="margin-left: -190px ; margin-top: 100px">${p.priceNew}đ</h3>
+                    <p><strike style="margin-left: -190px " CLASS="giaCu">${p.priceOld}đ</strike></p>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1769,22 +1799,24 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+    <c:if test="${p.id == 'sp54'}" >
             <!-- SAN PHAM NHO -->
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                    <img class="anh5" src="Image/img_13.png"/>
+                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=dpiakvsoh8s9mqkrn77uifguvb">
-                        <h2 class="ten">Giường gỗ đèn LED</h2>
+                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                        <h2 class="ten">${p.name}</h2>
                     </a>
-                    <h3 class="gia" style="margin-left: -205px ; margin-top: 100px"> 4.350.000đ</h3>
-                    <p><strike style="margin-left: -205px " CLASS="giaCu">8.500.000đ</strike></p>
+                    <h3 class="gia" style="margin-left: -205px ; margin-top: 100px">${p.priceNew}đ</h3>
+                    <p><strike style="margin-left: -205px " CLASS="giaCu">${p.priceOld}đ</strike></p>
                 </div>
 
                 <div class="gioHang6">
-                    <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+                    <a href="cart-add?id=${p.id}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1800,6 +1832,8 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
+    </c:if>
+</c:forEach>
             <!-- SAN PHAM NHO -->
         </div>
     </div>
@@ -1809,9 +1843,12 @@
 </div>
 <div class="DiemDen">
     <h1 class="chuDiemDenMoi"> Sản Phẩm Đặc Trưng </h1>
+<jsp:useBean id="productDetailsDacTrung" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${productDetailsDacTrung}">
+    <c:if test="${p.id == 'sp55'}" >
     <div class="SanPhamDiemDenMoi">
-        <img class="anh" src="SanPhamDacTrung/img.png">
-        <h2 class="ten"> Ghế Sofa được thiết kế </h2>
+        <img class="anh" src="${p.linkImage}">
+        <h2 class="ten">${p.name}</h2>
         <div class="sao1">
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -1819,9 +1856,9 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </div>
-        <h3 class="gia"> 165.000 đ </h3>
+        <h3 class="gia">${p.priceNew}đ </h3>
         <div class="gioHang3">
-            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="cart-add?id=${p.id}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1829,10 +1866,12 @@
             </a>
         </div>
     </div>
+    </c:if>
+    <c:if test="${p.id == 'sp56'}" >
 
     <div class="SanPhamDiemDenMoi">
-        <img class="anh" src="SanPhamDacTrung/img_1.png">
-        <h2 class="ten"> Bàn ăn tối </h2>
+        <img class="anh" src="${p.linkImage}">
+        <h2 class="ten">${p.name}</h2>
         <div class="sao1">
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -1840,9 +1879,9 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </div>
-        <h3 class="gia"> 200.000 đ </h3>
+        <h3 class="gia">${p.priceNew} đ </h3>
         <div class="gioHang3">
-            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="cart-add?id=${p.id}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1850,10 +1889,11 @@
             </a>
         </div>
     </div>
-
+    </c:if>
+    <c:if test="${p.id == 'sp57'}" >
     <div class="SanPhamDiemDenMoi">
-        <img class="anh" src="SanPhamDacTrung/img_2.png">
-        <h2 class="ten"> Ghế và bàn </h2>
+        <img class="anh" src="${p.linkImage}">
+        <h2 class="ten">${p.name}</h2>
         <div class="sao1">
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -1861,9 +1901,9 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </div>
-        <h3 class="gia"> 100.000 đ </h3>
+        <h3 class="gia"> ${p.priceNew}đ </h3>
         <div class="gioHang3">
-            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="cart-add?id=${p.id}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1871,11 +1911,12 @@
             </a>
         </div>
     </div>
-
+    </c:if>
+    <c:if test="${p.id == 'sp58'}" >
 
     <div class="SanPhamDiemDenMoi">
-        <img class="anh" src="SanPhamDacTrung/img_3.png">
-        <h2 class="ten"> Ghế bành hiện đại </h2>
+        <img class="anh" src="${p.linkImage}">
+        <h2 class="ten">${p.name}</h2>
         <div class="sao1">
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -1883,9 +1924,9 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </div>
-        <h3 class="gia"> 300.000 đ </h3>
+        <h3 class="gia">${p.priceNew}đ </h3>
         <div class="gioHang3">
-            <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+            <a href="cart-add?id=${p.id}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1893,7 +1934,8 @@
             </a>
         </div>
     </div>
-
+    </c:if>
+</c:forEach>
 </div>
 
 

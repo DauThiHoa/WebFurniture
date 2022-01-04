@@ -9,11 +9,11 @@ public class ProductDetails implements Serializable  {
     private String description  ;
     private String trademark  ;
     private String production  ;
-    private float priceOld   ;
+    private int priceOld   ;
     private int quantity ;
     private int quantitySold ;
     private String linkImage  ;
-    private float priceNew  ;
+    private int priceNew  ;
     private String dateSubmitted  ;
     private String status  ;
     private String idProductGroups  ;
@@ -23,7 +23,7 @@ public class ProductDetails implements Serializable  {
     public ProductDetails() {
     }
 
-    public ProductDetails(String id, String name, String description, String trademark, String production, float priceOld, int quantity, int quantitySold, String linkImage, float priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
+    public ProductDetails(String id, String name, String description, String trademark, String production, int priceOld, int quantity, int quantitySold, String linkImage, int priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -41,7 +41,7 @@ public class ProductDetails implements Serializable  {
         this.viewProductDetails = viewProductDetails;
     }
 
-    public ProductDetails(String id, String name, String description, String trademark, String production, float priceOld, int quantity, String linkImage, float priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
+    public ProductDetails(String id, String name, String description, String trademark, String production, int priceOld, int quantity, String linkImage, int priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -98,11 +98,11 @@ public class ProductDetails implements Serializable  {
         this.production = production;
     }
 
-    public float getPriceOld() {
+    public int getPriceOld() {
         return priceOld;
     }
 
-    public void setPriceOld(float priceOld) {
+    public void setPriceOld(int priceOld) {
         this.priceOld = priceOld;
     }
 
@@ -122,11 +122,11 @@ public class ProductDetails implements Serializable  {
         this.linkImage = linkImage;
     }
 
-    public float getPriceNew() {
+    public int getPriceNew() {
         return priceNew;
     }
 
-    public void setPriceNew(float priceNew) {
+    public void setPriceNew(int priceNew) {
         this.priceNew = priceNew;
     }
 
@@ -178,10 +178,10 @@ public class ProductDetails implements Serializable  {
         this.quantitySold = quantitySold;
     }
 // get total money
-    public double getTotalMoney (){
-
+    public int getTotalMoney (){
         return quantitySold * priceNew ;
     }
+
 
 }
 

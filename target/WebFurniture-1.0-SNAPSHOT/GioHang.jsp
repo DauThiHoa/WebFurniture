@@ -152,7 +152,7 @@
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
-            <th class="TieuDeBangSanPham ">STT</th>
+            <th class="TieuDeBangSanPham ">MSSP</th>
             <th class="TieuDeBangSanPham">SẢN PHẨM</th>
             <th class="TieuDeBangSanPham">TÊN SẢN PHẨM</th>
             <th class="TieuDeBangSanPham">GIÁ</th>
@@ -167,134 +167,18 @@
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="1"><br></td>
+            <td align="center" scope="row"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
+                                      name="fname" value="${productDetails.id}"><br></td>
             <td align="center"><img style="text-align: center ; margin-top: 5px " src="${productDetails.linkImage}"
                                     class="imageGioHang" width="150px" height="150px"/></td>
             <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham">${productDetails.name}</h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold">${productDetails.priceNew} đ</td>
+            <td align="center" style="font-size: 20px ; font-weight: bold">${productDetails.priceNew}đ</td>
             <td align="center"><input class="form-control text-center" value="${productDetails.quantitySold}" type="number"></td>
             <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
             <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
             <td align="center"><a href="/cart-remove" > <i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i> </a></td>
         </tr>
         </c:forEach>
-        <!--
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="2"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px " src="Image/SofaBangBella.PNG"
-                                    class="imageGioHang" width="150px" height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Sofa Bang Bella </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold"> 2.000.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="2" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 4.000.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="3"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px "
-                                    src="ImageProduct/Ghe-sofa-boc-ni-dang-chan-cao.webp" class="imageGioHang"
-                                    width="150px" height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Ghế sofa bọc nỉ chân cao </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold"> 320.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="1" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 320.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="4"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px "
-                                    src="ImageProduct/ban-tra-phong-khach.webp" class="imageGioHang" width="150px"
-                                    height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Bàn trà phòng khách </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold"> 280.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="3" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 840.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="5"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px " src="Image/gheEuro.PNG"
-                                    class="imageGioHang" width="150px" height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Ghế Euro </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold"> 200.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="4" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 800.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="6"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px " src="Image/KeTreoPoplar.PNG"
-                                    class="imageGioHang" width="150px" height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Kệ Treo Poplar </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold">250.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="1" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 250.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="7"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px " src="Image/KeTiViHoBu.PNG"
-                                    class="imageGioHang" width="150px" height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Kệ TiVi HoBu </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold"> 130.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="2" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 260.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center"><input style="font-weight: bold ; width: 50px ; text-align: center" type="text"
-                                      name="fname" value="8"><br></td>
-            <td align="center"><img style="text-align: center ; margin-top: 5px " src="ImageProduct/Den_de_ban.jpg"
-                                    class="imageGioHang" width="150px" height="150px"/></td>
-            <td class="tenSanPham" align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4
-                    class="tenSanPham"> Đèn để bàn học tập </h4></td>
-            <td align="center" style="font-size: 20px ; font-weight: bold"> 500.000 đ</td>
-            <td align="center"><input class="form-control text-center" value="2" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange"> 1.000.000 đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        -->
 
     </table>
 </div>
