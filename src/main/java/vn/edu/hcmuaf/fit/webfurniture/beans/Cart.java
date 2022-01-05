@@ -50,8 +50,8 @@ public class Cart implements Serializable {
             }
         }
     }
-    public int getMoneyById ( String id ){
-        int money = 0 ;
+    public double getMoneyById ( String id ){
+        double money = 0 ;
         for ( ProductDetails productDetails : productDetailsList.values()) {
             if ( productDetails.getId().equals(id)) {
                money = productDetails.getTotalMoney();
@@ -68,6 +68,8 @@ public class Cart implements Serializable {
         }
         return totalPrice ;
     }
+
+
     // get total money of cart
     public int getTotalQuantity (){
         int totalQuantity = 0 ;

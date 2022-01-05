@@ -398,25 +398,20 @@
 
 <script>
     var cart;
+    var dt;
     $(document).ready(function () {
         <% String data = session.getAttribute("cart") == null?"{}":new Gson().toJson(session.getAttribute("cart"));%>
         cart = JSON.parse('<%=data %>');
-        $('#cart').DataTable({
+         dt = $('.tab table#cart').DataTable({
                 paging: false,
                 searching: false,
             }
         );
-        // loadCart(cart);
-        // function loadCart(cart) {
-        //     sum = 0 ;
-        //     for ( const  x in cart.productDetailsList){
-        //         sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
-        //     }
-        // }
     } );
     $('.tab table#cart tbody tr.trSanPham td.productDetails-remove a.link .fa-trash').on('click', function (){
         // send ajax to remove product in cart
         var id = $(this).attr('pid');
+        thisRow = $(this);
         $.ajax ({
             url: '/WebFurniture_war_exploded/cart-del',
             type: 'POST',
@@ -424,17 +419,24 @@
                 id: id
             },
             success: function (data){
+                alert(thisRow.innerText);
+                var dat = $('.tab table#cart').DataTable();
+                dat.row(thisRow.parent('tr')).remove();
                 delete cart.productDetailsList[id];
                 //loadCart(cart);
-                $(".total-cart").html("Tổng tiền : " + ${cart.total} - cart.productDetailsList[id].getMoneyById()+"đ");
+                // sum = 0 ;
+                // for ( const  x in cart.productDetailsList){
+                //     sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
+                //  }
+                //     $(".total-cart").html("Tổng tiền : " + sum +"đ");
+
             },
             error: function (data){
-                alert("Sản phẩm không còn trong giỏ hàng");
+               alert("Sản phẩm không còn trong giỏ hàng");
             }
         });
     });
-
-    $(".total-cart").html("Tổng tiền : " + ${cart.total}+"đ");
+    $(".total-cart").html("Tổng tiền : " + ${cart.total} +"đ");
 
 </script>
 </body>

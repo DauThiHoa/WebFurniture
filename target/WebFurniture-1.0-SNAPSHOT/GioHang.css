@@ -1959,7 +1959,7 @@ table tr:hover {
     .TieuDeBangSanPham {
         color: black;
         font-weight: bold;
-        border: 2px solid #dd4b39;
+        border: 1px solid #1fb5d4;
     }
 
     .imageGioHang {
@@ -1969,12 +1969,12 @@ table tr:hover {
 
     .table {
         width: 100%;
-        border: 2px solid #dd4b39;
+        border: 1px solid #1fb5d4;
     }
 
     .khungTieuDe {
         width: 100%;
-        border: 2px solid #dd4b39;
+        border: 1px solid #1fb5d4;
         background: #2dce89;
     }
 
