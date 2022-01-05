@@ -393,11 +393,12 @@
 </div>
 
 <script>
+    var  cart;
     $(document).ready( function () {
         <%
         String data = session.getAttribute("cart") == null?"{}":new Gson().toJson(session.getAttribute("cart"));
         %>
-        var  cart = JSON.parse(<%= data %>);
+        cart = JSON.parse(<%= data %>);
         $('#cart').DataTable({
             paging: false,
             searching: false,
