@@ -23,6 +23,7 @@ public class AddController extends HttpServlet {
                cart = Cart.getInstance();
            }
            cart.put(productDetails);
+           session.setAttribute("cart" , cart); // add session cart
        }
 
        response.sendRedirect("/WebFurniture_war_exploded/cart");

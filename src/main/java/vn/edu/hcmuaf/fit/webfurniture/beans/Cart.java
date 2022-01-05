@@ -14,10 +14,7 @@ public class Cart implements Serializable {
     }
 
     public static Cart getInstance(){
-        if ( instance == null ){
-            instance = new Cart() ;
-        }
-        return instance ;
+        return new Cart() ;
     }
     // put productDetails to cart
     public void put ( ProductDetails productDetails){

@@ -1,5 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
@@ -18,8 +19,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img_GioHang.png" type="image/png">
     <title>GIỎ HÀNG</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+    <link rel="stylesheet" href="vendor/dt/datatables.min.css">
     <style type='text/css'>table {
-        counter-reset: rowNumber ;
+        counter-reset: rowNumber -1;
     }
     table tr {
         counter-increment: rowNumber ;
@@ -29,6 +34,7 @@
         content: counter(rowNumber);
         min-width: 2em;
         margin-right: 0.5em;
+        font-size: 25px;
     }
     </style>
 </head>
@@ -150,7 +156,7 @@
 <h1 class="gioHang">GIỎ HÀNG</h1>
 
 <div class="tab">
-    <table class="table" border="1">
+    <table class="table" border="1" id="cart">
         <colgroup>
             <col width="5%" span="1">
             <col width="8%" span="1">
@@ -180,8 +186,7 @@
         <tr>
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
-            <td align="center" scope="row"><input style="font-weight: bold ; width: 50px ; text-align: center" type="1"
-                                      name="fname" value=""><br></td>
+            <td align="center" scope="row"> <br></td>
             <td align="center"><img style="text-align: center ; margin-top: 5px " src="${productDetails.linkImage}"
                                     class="imageGioHang" width="150px" height="150px"/></td>
             <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham">${productDetails.name}</h4></td>
@@ -201,7 +206,7 @@
 </div>
 
 <div class="MuaHang">
-    <a href="HomePage.jsp">
+    <a href="../WebFurniture_war_exploded/ProductDetailsList" >
         <div class="tiepTuc">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
             <h2 class="ten"> Tiếp tục mua hàng</h2>
@@ -386,5 +391,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready( function () {
+        <%
+        String data = session.getAttribute("cart") == null?"{}":new Gson().toJson(session.getAttribute("cart"));
+        %>
+        var  cart = JSON.parse(<%= data %>);
+        $('#cart').DataTable({
+            paging: false,
+            searching: false,
+        });
+    } );
+</script>
+<script type="text/javascript" src="vendor/dt/datatables.min.js"></script>
+<script type="text/javascript" href="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" href="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>
