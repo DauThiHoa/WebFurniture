@@ -43,6 +43,24 @@ public class Cart implements Serializable {
         return productDetailsList.remove(id);
     }
     // get total price of cart
+    public void removeById ( String id ){
+        for ( ProductDetails productDetails : productDetailsList.values()) {
+            if ( productDetails.getId().equals(id)) {
+                productDetailsList.remove(id);
+            }
+        }
+    }
+    public int getMoneyById ( String id ){
+        int money = 0 ;
+        for ( ProductDetails productDetails : productDetailsList.values()) {
+            if ( productDetails.getId().equals(id)) {
+               money = productDetails.getTotalMoney();
+            }
+        }
+        return money;
+    }
+
+    // get total price of cart
     public double getTotal (){
         double totalPrice = 0 ;
         for ( ProductDetails productDetails : productDetailsList.values()){

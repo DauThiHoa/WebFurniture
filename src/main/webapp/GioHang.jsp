@@ -168,7 +168,7 @@
             <col width="5%" span="1">
             <col width="5%" span="1">
         </colgroup>
-        <tr>
+        <tr class="thanhBang">
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
             <th class="TieuDeBangSanPham ">STT</th>
@@ -183,7 +183,7 @@
 
         <c:set var ="ProductDetails" value="${cart.productDetailsList}" />
         <c:forEach items="${ProductDetails}" var="productDetails" >
-        <tr>
+        <tr class="trSanPham">
             <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
             </td>
             <td align="center" scope="row"> <br></td>
@@ -194,7 +194,7 @@
             <td align="center"><input class="form-control text-center" value="${productDetails.quantitySold}" type="number"></td>
             <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
             <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
-            <td align="center"><a href="/cart-remove" > <i style="font-size: 35px ; color: red ; " class="fa fa-trash" aria-hidden="true"></i> </a></td>
+            <td align="center" class="productDetails-remove"><a class="link"> <i style="font-size: 35px ; color: red" class="fa fa-trash" aria-hidden="true" pid="${productDetails.id}"></i> </a></td>
         </tr>
         </c:forEach>
 
@@ -202,7 +202,7 @@
 </div>
 
 <div class="TT">
-    <h2 class="tongTienThanhToan" style="margin-left: 1070px ; color: red"> Tổng tiền : ${cart.total}đ </h2>
+    <h2 class="tongTienThanhToan total-cart" style="margin-left: 1070px ; color: red" ></h2>
 </div>
 
 <div class="MuaHang">
@@ -392,22 +392,50 @@
     </div>
 </div>
 
-<script>
-    var  cart;
-    $(document).ready( function () {
-        <%
-        String data = session.getAttribute("cart") == null?"{}":new Gson().toJson(session.getAttribute("cart"));
-        %>
-        cart = JSON.parse(<%= data %>);
-        $('#cart').DataTable({
-            paging: false,
-            searching: false,
-        });
-    } );
-</script>
 <script type="text/javascript" src="vendor/dt/datatables.min.js"></script>
 <script type="text/javascript" href="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" href="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<script>
+    var cart;
+    $(document).ready(function () {
+        <% String data = session.getAttribute("cart") == null?"{}":new Gson().toJson(session.getAttribute("cart"));%>
+        cart = JSON.parse('<%=data %>');
+        $('#cart').DataTable({
+                paging: false,
+                searching: false,
+            }
+        );
+        // loadCart(cart);
+        // function loadCart(cart) {
+        //     sum = 0 ;
+        //     for ( const  x in cart.productDetailsList){
+        //         sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
+        //     }
+        // }
+    } );
+    $('.tab table#cart tbody tr.trSanPham td.productDetails-remove a.link .fa-trash').on('click', function (){
+        // send ajax to remove product in cart
+        var id = $(this).attr('pid');
+        $.ajax ({
+            url: '/WebFurniture_war_exploded/cart-del',
+            type: 'POST',
+            data: {
+                id: id
+            },
+            success: function (data){
+                delete cart.productDetailsList[id];
+                //loadCart(cart);
+                $(".total-cart").html("Tổng tiền : " + ${cart.total} - cart.productDetailsList[id].getMoneyById()+"đ");
+            },
+            error: function (data){
+                alert("Sản phẩm không còn trong giỏ hàng");
+            }
+        });
+    });
+
+    $(".total-cart").html("Tổng tiền : " + ${cart.total}+"đ");
+
+</script>
 </body>
 </html>

@@ -1238,7 +1238,9 @@ table tr:hover {
     margin-left: 15px;
 }
 
-
+.tab table#cart tbody tr.trSanPham td.productDetails-remove a.link .fa-trash {
+    color: red;
+}
 /* Responsive Mobile */
 @media only screen and ( min-width: 0px) and ( max-width: 736px) {
 
