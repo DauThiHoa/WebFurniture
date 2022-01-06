@@ -408,7 +408,7 @@
             }
         );
     } );
-    $('.tab table#cart tbody tr.trSanPham td.productDetails-remove a.link .fa-trash').on('click', function (){
+    $('.tab table#cart tbody tr.trSanPham td.productDetails-remove a.link .fa-trash').on('click',  function (){
         // send ajax to remove product in cart
         var id = $(this).attr('pid');
         thisRow = $(this);
@@ -419,17 +419,16 @@
                 id: id
             },
             success: function (data){
-                alert(thisRow.innerText);
-                var dat = $('.tab table#cart').DataTable();
-                dat.row(thisRow.parent('tr')).remove();
                 delete cart.productDetailsList[id];
                 //loadCart(cart);
-                // sum = 0 ;
-                // for ( const  x in cart.productDetailsList){
-                //     sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
-                //  }
-                //     $(".total-cart").html("Tổng tiền : " + sum +"đ");
 
+                sum = 0 ;
+                for ( const  x in cart.productDetailsList){
+                    sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
+                 }
+                    $(".total-cart").html("Tổng tiền : " + sum +"đ");
+                // alert(thisRow.parents('tr').remove());
+                   thisRow.parents('tr').remove();
             },
             error: function (data){
                alert("Sản phẩm không còn trong giỏ hàng");
