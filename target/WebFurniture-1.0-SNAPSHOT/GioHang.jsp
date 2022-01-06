@@ -191,8 +191,10 @@
                                     class="imageGioHang" width="150px" height="150px"/></td>
             <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham">${productDetails.name}</h4></td>
             <td align="center" style="font-size: 20px ; font-weight: bold">${productDetails.priceNew}đ</td>
-            <td align="center"><input class="form-control text-center" value="${productDetails.quantitySold}" type="number"></td>
-            <td align="center" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
+            <td align="center" class="quantitySold">
+                <input pid="${productDetails.id}" class="form-control text-center changeQuantity" value="${productDetails.quantitySold}" type="number">
+            </td>
+            <td align="center" class="totalMoney" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
             <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
             <td align="center" class="productDetails-remove"><a class="link"> <i style="font-size: 35px ; color: red" class="fa fa-trash" aria-hidden="true" pid="${productDetails.id}"></i> </a></td>
         </tr>
@@ -328,7 +330,7 @@
                     <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Products/AllProducts.jsp">
+                    <a href="/ProductDetailsListAllProduct">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
@@ -427,15 +429,49 @@
                     sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
                  }
                     $(".total-cart").html("Tổng tiền : " + sum +"đ");
-                   thisRow.parents('tr').remove();
+                   thisRow.parents('tr').remove() ;
             },
             error: function (data){
                alert("Sản phẩm không còn trong giỏ hàng");
             }
         });
     });
+    $('.tab table#cart tbody tr.trSanPham td.quantitySold .changeQuantity').on('blur',  function (){
+        // send ajax to remove product in cart
+        var id = $(this).attr('pid');
+        var quantity = $(this).val();
+        thisRow = $(this);
+        $.ajax ({
+            url: '/WebFurniture_war_exploded/cart-updateQuantity',
+            type: 'POST',
+            data: {
+                id: id,
+                quantity: quantity
+            },
+            success: function (data){
+                JSQuantity = JSON.parse(data);
+                thisRow.val(JSQuantity.quantity);
+                // ham update
+                updateQuantity(cart, id , JSQuantity.quantity);
+
+                sum = 0 ;
+                for ( const  x in cart.productDetailsList){
+                    sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
+                }
+                $(".total-cart").html("Tổng tiền : " + sum +"đ");
+                thisRow.parents(($(".totalMoney").html(cart.productDetailsList[id].priceNew * JSQuantity.quantity+ "đ")));
+                // thisRow.parents('tr').remove();
+            },
+            error: function (data){
+                alert("Sản phẩm không còn trong giỏ hàng");
+            }
+        });
+    });
     $(".total-cart").html("Tổng tiền : " + ${cart.total} +"đ");
 
+    function  updateQuantity(cart, id ,quantity){
+        cart.productDetailsList[id].quantitySold = quantity ;
+    }
 </script>
 </body>
 </html>

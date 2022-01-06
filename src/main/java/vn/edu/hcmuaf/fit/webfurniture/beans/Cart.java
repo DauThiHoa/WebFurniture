@@ -91,6 +91,15 @@ public class Cart implements Serializable {
         }
         return stt ;
     }
+
+    public int updateQuantitySold(String id, int quantity) {
+        ProductDetails productDetails = productDetailsList.get(id);
+        if ( quantity < 1 || quantity > productDetails.getQuantity()){
+            return productDetails.getQuantitySold();
+        }
+        productDetails.setQuantitySold(quantity);
+        return productDetails.getQuantitySold();
+    }
 }
 
 
