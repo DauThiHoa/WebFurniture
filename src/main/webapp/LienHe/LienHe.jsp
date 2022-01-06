@@ -77,7 +77,7 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
-        <a href="../Products/AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="../AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 

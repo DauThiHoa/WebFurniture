@@ -13,6 +13,7 @@ public class ProductDetailsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
            request.setAttribute("productDetailsAll" , ProductDetailsService.getInstance().getAll());
+
            request.setAttribute("productDetailsSanPhamNoiBat1" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsSanPhamNoiBat2" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsSanPhamHotBanGheThuGian" , ProductDetailsService.getInstance().getAll());

@@ -98,7 +98,7 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
-        <a href="Products/AllProducts.jsp">
+        <a href="AllProducts.jsp">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 

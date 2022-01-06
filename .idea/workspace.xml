@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gson-2.8.6.jar/gson-2.8.6.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -65,6 +65,7 @@
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.edu.hcmuaf.fit.webfurniture" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.service" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.beans" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.services" />
@@ -198,6 +199,8 @@
       <workItem from="1641362544956" duration="14639000" />
       <workItem from="1641385637371" duration="15214000" />
       <workItem from="1641428520407" duration="4593000" />
+      <workItem from="1641475173920" duration="231000" />
+      <workItem from="1641476073222" duration="2035000" />
     </task>
     <servers />
   </component>

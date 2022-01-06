@@ -80,7 +80,7 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
-        <a href="Products/AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
@@ -189,7 +189,6 @@
         <c:forEach var="p" items="${productDetailsAll}">
         <c:if test="${p.id == 'sp1'}" >
         <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-
             <img id="anh_BanLamViec" src="${p.linkImage}"/>
         </a>
         <div id="blv">

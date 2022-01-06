@@ -74,7 +74,7 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
-        <a href="../Products/AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="../AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
@@ -813,7 +813,7 @@
                     <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Products/AllProducts.jsp">
+                    <a href="../AllProducts.jsp">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="../TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">

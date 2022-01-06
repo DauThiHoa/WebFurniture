@@ -74,7 +74,7 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
-        <a href="../Products/AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="../AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
@@ -969,12 +969,12 @@
         </div>
 
         <div id="themTrangMoi">
-            <a href="../Products/AllProducts.jsp?_ijt=vr4d2hs4v4ons63to8okodjutn&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../AllProducts.jsp?_ijt=vr4d2hs4v4ons63to8okodjutn&_ij_reload=RELOAD_ON_SAVE">
                 <div class="khung1">
                     <i class="fa fa-angle-double-left" aria-hidden="true"></i>
                 </div>
             </a>
-            <a href="../Products/AllProducts.jsp?_ijt=vr4d2hs4v4ons63to8okodjutn&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../AllProducts.jsp?_ijt=vr4d2hs4v4ons63to8okodjutn&_ij_reload=RELOAD_ON_SAVE">
                 <div class="khung">
                     <h3 class="fa"> 1 </h3>
                 </div>
