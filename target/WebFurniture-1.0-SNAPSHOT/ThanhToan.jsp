@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>THANH TOÁN</title>
     <link rel="stylesheet" href="ThanhToan.css">
-    <link rel="icon" href="img.png" type="image/png" class="icon">
+    <link rel="icon" href="ThanhToan/img.png" type="image/png" class="icon">
 </head>
 <body>
 <h1 class="tieuDe" style="text-align: center;">WEB FURNITURE</h1>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </form>
-            <a href="../ThanhToan/ThanhToanThanhCong.jsp?_ijt=jg0jfsqhfaqhlu5r8iq786h97r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ThanhToan/ThanhToanThanhCong.jsp?_ijt=jg0jfsqhfaqhlu5r8iq786h97r&_ij_reload=RELOAD_ON_SAVE">
                 <input type="submit" value="Continue to checkout" class="checkout"/>
             </a>
         </div>
@@ -56,21 +56,21 @@
             <div class="shopping-cart">
                 <ul class="shopping-cart-items">
                     <li class="clearfix">
-                        <img src="../ImageProduct/tu-ao-cho-be.webp" height="70"
+                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"
                              width="70" alt="item1"/>
                         <span class="item-name">Tủ để áo cho bé</span>
                         <span class="item-price">1.100.000đ</span>
                         <span class="item-quantity">Số Lượng: 01</span>
                     </li>
                     <li class="clearfix">
-                        <img src="../NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-mini-ngoi.jpg"
+                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-mini-ngoi.jpg"
                              height="70" width="70" alt="item1"/>
                         <span class="item-name">Bàn trang điểm mini</span>
                         <span class="item-price">650.000đ</span>
                         <span class="item-quantity">Số Lượng: 02</span>
                     </li>
                     <li class="clearfix">
-                        <img src="../NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-ngoi-bet-dep-5.jpg"
+                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-ngoi-bet-dep-5.jpg"
                              height="70" width="70" alt="item1"/>
                         <span class="item-name">Bàn trang điểm dáng thấp</span>
                         <span class="item-price">700.000đ</span>

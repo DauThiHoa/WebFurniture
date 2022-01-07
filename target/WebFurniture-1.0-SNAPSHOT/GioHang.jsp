@@ -214,9 +214,10 @@
             <h2 class="ten"> Tiếp tục mua hàng</h2>
         </div>
     </a>
-    <a href="ThanhToan/ThanhToan.jsp">
+    <!-- ThanhToan/ThanhToan.jsp -->
+    <a href="/WebFurniture_war_exploded/cart-checkOut">
         <div class="tiepTheo" style="margin-left: 1280px ; margin-top: -45px">
-            <h2 class="ten"> Thanh toán </h2>
+            <h2 class="ten" > Thanh toán </h2>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
     </a>
@@ -459,7 +460,7 @@
                     sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
                 }
                 $(".total-cart").html("Tổng tiền : " + sum +"đ");
-                thisRow.parents(($(".totalMoney").html(cart.productDetailsList[id].priceNew * JSQuantity.quantity+ "đ")));
+                // thisRow.parents(($(".totalMoney").html(cart.productDetailsList[id].priceNew * JSQuantity.quantity+ "đ")));
                 // thisRow.parents('tr').remove();
             },
             error: function (data){

@@ -4,13 +4,14 @@ import java.io.Serializable;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
+    private String id ;
     private String username;
     private String password;
     private String fullname;
     private String email;
     private String phone;
     private String address;
-    private String rale;
+    private String role;
 
     // none constructor
 
@@ -18,14 +19,26 @@ public class User implements Serializable {
     }
     // full constructor
 
-    public User(String username, String password, String fullname, String email, String phone, String address, String rale) {
+
+    public User(String id, String username, String password, String fullname, String email, String phone, String address, String role) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.fullname = fullname;
         this.email = email;
         this.phone = phone;
         this.address = address;
-        this.rale = rale;
+        this.role = role;
+    }
+
+    public User(String username, String password, String fullname, String email, String phone, String address, String role) {
+        this.username = username;
+        this.password = password;
+        this.fullname = fullname;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.role = role;
     }
     // getter setter
 
@@ -77,12 +90,19 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public String getRale() {
-        return rale;
+    public String getRole() {
+        return role;
     }
 
-    public void setRale(String rale) {
-        this.rale = rale;
+    public void setRole(String role) {
+        this.role = role;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

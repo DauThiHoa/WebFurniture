@@ -334,7 +334,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -362,7 +362,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -389,7 +389,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -415,7 +415,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -442,7 +442,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -469,7 +469,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -496,7 +496,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan/ThanhToan.jsp">
+                        <a href="../ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -522,7 +522,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -550,7 +550,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -577,7 +577,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -604,7 +604,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -631,7 +631,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -659,7 +659,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -686,7 +686,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -713,7 +713,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -739,7 +739,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -765,7 +765,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -791,7 +791,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -818,7 +818,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -844,7 +844,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -870,7 +870,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -896,7 +896,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -922,7 +922,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -948,7 +948,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan/ThanhToan.jsp">
+                            <a href="../ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>

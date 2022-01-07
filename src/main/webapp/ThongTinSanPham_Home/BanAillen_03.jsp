@@ -222,7 +222,7 @@
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
             </a>
-            <a href="../ThanhToan/ThanhToan.jsp">
+            <a href="../ThanhToan.jsp">
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
