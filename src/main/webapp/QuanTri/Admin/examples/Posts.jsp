@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN </title>
+    <title> ADMIN - POSTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
     <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
@@ -20,8 +20,11 @@
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
     <link rel="stylesheet" href="DirectoryManagement.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="InterfaceManagement.css">
     <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -30,7 +33,7 @@
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="javascript:void(0)">
                 <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
@@ -40,15 +43,33 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="dashboard.jsp">
+                        <a class="nav-link" href="../../../dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="DirectoryManagement.jsp">
+                        <a class="nav-link active" href="DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product Type</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Product.jsp">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Posts.jsp">
+                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
+                            <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -63,6 +84,7 @@
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="login.jsp">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
@@ -129,7 +151,7 @@
                             <!-- Dropdown header -->
                             <div class="px-3 py-3">
                                 <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong>
-                                    notifications</h6>
+                                    notifications.</h6>
                             </div>
                             <!-- List group -->
                             <div class="list-group list-group-flush">
@@ -169,7 +191,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for Web Furniture.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -229,7 +251,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -337,12 +359,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Posts</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Default</li>
+                                <li class="breadcrumb-item"><a href="#">Directory Management / Posts</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -351,344 +372,177 @@
                         <a href="#" class="btn btn-sm btn-neutral">Filters</a>
                     </div>
                 </div>
-                <!-- Card stats -->
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
-                                        <span class="h2 font-weight-bold mb-0">350,897</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                            <i class="ni ni-active-40"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
-                                        <span class="h2 font-weight-bold mb-0">2,356</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                            <i class="ni ni-chart-pie-35"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
-                                        <span class="h2 font-weight-bold mb-0">924</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                                            <i class="ni ni-money-coins"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
-                                        <span class="h2 font-weight-bold mb-0">49,65%</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                            <i class="ni ni-chart-bar-32"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <!-- Page content -->
-    <div class="container-fluid mt--6">
 
-        <div class="row">
-            <div class="col-xl-8">
-                <div class="card">
-                    <div class="card-header border-0">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h3 class="mb-0">Page visits</h3>
-                            </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">Page name</th>
-                                <th scope="col">Visitors</th>
-                                <th scope="col">Unique users</th>
-                                <th scope="col">Bounce rate</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Home
-                                </th>
-                                <td>
-                                    4,569
-                                </td>
-                                <td>
-                                    340
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    login
-                                </th>
-                                <td>
-                                    3,985
-                                </td>
-                                <td>
-                                    319
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Register
-                                </th>
-                                <td>
-                                    3,513
-                                </td>
-                                <td>
-                                    294
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Product
-                                </th>
-                                <td>
-                                    2,050
-                                </td>
-                                <td>
-                                    147
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Contact
-                                </th>
-                                <td>
-                                    1,795
-                                </td>
-                                <td>
-                                    190
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="card">
-                    <div class="card-header border-0">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h3 class="mb-0">Social traffic</h3>
-                            </div>
-                            <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">Referral</th>
-                                <th scope="col">Visitors</th>
-                                <th scope="col"></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Facebook
-                                </th>
-                                <td>
-                                    1,480
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">60%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-danger" role="progressbar"
-                                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 60%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Facebook
-                                </th>
-                                <td>
-                                    5,480
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">70%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 70%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Google
-                                </th>
-                                <td>
-                                    4,807
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">80%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-primary" role="progressbar"
-                                                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 80%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Instagram
-                                </th>
-                                <td>
-                                    3,678
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">75%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-info" role="progressbar"
-                                                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 75%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    twitter
-                                </th>
-                                <td>
-                                    2,645
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">30%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-warning" role="progressbar"
-                                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 30%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+
+    <div class="container">
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                Action <span class="caret"></span>
+
+            </button>
+
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
+
+            </ul>
         </div>
-        <!-- Footer -->
-        <footer class="footer pt-0">
-            <div class="row align-items-center justify-content-lg-between">
-                <div class="col-lg-6">
-                    <div class="copyright text-center  text-lg-left  text-muted">
-                        &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
-                                       target="_blank">Web Furniture</a>
-                    </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                Search by <span class="caret"></span>
+
+            </button>
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                Display number <span class="caret"></span>
+
+            </button>
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> One </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <a class="nav-link active" href="addDirectoryManagement.jsp">
+        <button class="add">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            Add
+        </button>
+    </a>
+
+    <table class="table">
+        <tr>
+            <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
+            <th class="TieuDe">Numerical order</th>
+            <th class="TieuDe">Category</th>
+            <th class="TieuDe">Image</th>
+            <th class="TieuDe">Modules</th>
+            <th class="TieuDe">Home page</th>
+            <th class="TieuDe">Category</th>
+            <th class="TieuDe">Display</th>
+            <th class="TieuDe">Change</th>
+            <th class="TieuDe">Erase</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="text" name="fname" value="                    1"><br></td>
+            <td> News</td>
+            <td><img src="../assets/img/Admin/img_17.png" class="image"/></td>
+            <td>Posts</td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="text" name="fname" value="                    2"><br></td>
+            <td> Introduce</td>
+            <td><img src="../assets/img/Admin/img_18.png" class="image"/></td>
+            <td>Posts</td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="text" name="fname" value="                    3"><br></td>
+            <td>Payment Guide</td>
+            <td><img src="../assets/img/Admin/img_19.png" class="image"/></td>
+            <td>Posts</td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="text" name="fname" value="                    4"><br></td>
+            <td>Delivery policy</td>
+            <td><img src="../assets/img/Admin/img_20.png" class="image"/></td>
+            <td>Posts</td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="text" name="fname" value="                    5"><br></td>
+            <td>Warranty Policy</td>
+            <td><img src="../assets/img/Admin/img_21.png" class="image"/></td>
+            <td>Posts</td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><input type="checkbox" name="sport" value="check"></td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+
+    </table>
+
+
+    <!-- Footer -->
+    <footer class="footer pt-0">
+        <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6">
+                <div class="copyright text-center  text-lg-left  text-muted">
+                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
+                    Web Furniture</a>
                 </div>
             </div>
-        </footer>
-    </div>
+
+        </div>
+    </footer>
+</div>
 </div>
 <!-- Argon Scripts -->
 <!-- Core -->
@@ -698,8 +552,7 @@
 <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
 <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
 <!-- Optional JS -->
-<script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
-<script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
+<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
 <!-- Argon JS -->
 <script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>

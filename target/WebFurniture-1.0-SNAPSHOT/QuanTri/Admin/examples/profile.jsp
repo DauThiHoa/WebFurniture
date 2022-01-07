@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN - INTERFACE MANAGEMENT</title>
+    <title> ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
     <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
@@ -16,16 +16,12 @@
     <!-- Icons -->
     <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
     <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-    <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
     <link rel="stylesheet" href="DirectoryManagement.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Product.css">
     <link rel="stylesheet" href="InterfaceManagement.css">
+    <link rel="stylesheet" href="ListOfPermissions.css">
     <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -34,7 +30,7 @@
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="javascript:void(0)">
                 <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
@@ -44,49 +40,35 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.jsp">
+                        <a class="nav-link" href="../../../dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="DirectoryManagement.jsp">
+                        <a class="nav-link" href="DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" href="InterfaceManagement.jsp">
+                    <li class="nav-item">
+                        <a class="nav-link" href="InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="InterfaceManagement.jsp">
-                            <img class="fa fa-picture-o" src="icon/picture.png"/>
-                            <span class="nav-link-text">Image</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Information.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
-                            <span class="nav-link-text">Information</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="Order.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
-                            <span class="nav-link-text">Order</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link active " href="profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link active " href="ListOfPermissions.jsp">
+                            <img class="anh" src="icon/article.png"/>
+                            <span class="nav-link-text">List Of Permissions</span>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.jsp">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
@@ -108,7 +90,7 @@
 <!-- Main content -->
 <div class="main-content" id="panel">
     <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Search form -->
@@ -193,7 +175,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -241,7 +223,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="icon/img_4.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -253,7 +235,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -356,272 +338,191 @@
     </nav>
     <!-- Header -->
     <!-- Header -->
-    <div class="header bg-primary pb-6">
-        <div class="container-fluid">
-            <div class="header-body">
-                <div class="row align-items-center py-4">
-                    <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Image</h6>
-                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#"> Interface Management / Image</a></li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <div class="col-lg-6 col-5 text-right">
-                        <a href="#" class="btn btn-sm btn-neutral">New</a>
-                        <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                    </div>
+    <div class="header pb-6 d-flex align-items-center"
+         style="min-height: 500px; background-image: url(../assets/img/Admin/img_27.png); background-size: cover; background-position: center top;">
+        <!-- Mask -->
+        <span class="mask bg-gradient-default opacity-8"></span>
+        <!-- Header container -->
+        <div class="container-fluid d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-7 col-md-10">
+                    <h1 class="display-2 text-white">Hello John Snow</h1>
+                    <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with
+                        your work and manage your projects or assigned tasks</p>
+                    <a href="#!" class="btn btn-neutral">Edit profile</a>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Action <span class="caret"></span>
-
-            </button>
-
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown1">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                View all products <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Living room products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Kitchen products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Office products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Bedroom products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Interior decoration </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Hot products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Featured products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> New product </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="button">
-        <a class="nav-link active" href="addProduct.jsp">
-            <button class="add">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Add
-            </button>
-        </a>
-    </div>
-
-    <div class="tab">
-        <table class="table">
-            <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
-                <th class="TieuDe">Numerical order</th>
-                <th class="TieuDe">Category</th>
-                <th class="TieuDe">Image</th>
-                <th class="TieuDe">Title</th>
-                <th class="TieuDe">Price</th>
-                <th class="TieuDe">Display</th>
-                <th class="TieuDe">Change</th>
-                <th class="TieuDe">Erase</th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    1"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/TuHabu.PNG" class="image"/></td>
-                <td>Tủ HABU</td>
-                <td> 1.000.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    2"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/SofaBangBella.PNG" class="image"/></td>
-                <td>Sofa Bang Bella</td>
-                <td> 2.000.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    3"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/keTuHobu.PNG" class="image"/></td>
-                <td>Kệ tủ HOBU</td>
-                <td> 200.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    4"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/KeTreoPoplar.PNG" class="image"/></td>
-                <td>Kệ Treo Poplar</td>
-                <td> 250.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    5"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/KeTiViHoBu.PNG" class="image"/></td>
-                <td>Kệ TiVi HoBu</td>
-                <td> 130.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    6"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/Ghe_Bong_Bong.jpg" class="image"/></td>
-                <td>Ghe Bong Bong</td>
-                <td> 1.000.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    7"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/ghe_Daw_Fabric.jpg" class="image"/></td>
-                <td>Ghế Daw Fabric</td>
-                <td> 100.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    8"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/Den_de_ban.jpg" class="image"/></td>
-                <td>Đèn để bàn học tập</td>
-                <td> 500.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    9"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/ghe_Sofa.jpg" class="image"/></td>
-                <td>Ghế Sofa</td>
-                <td> 55.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    10"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/Ghe_Diamond.jpg" class="image"/></td>
-                <td>Ghế Diamond</td>
-                <td> 170.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-
-        </table>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6">
-                <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
-                    Web Furniture</a>
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col-xl-4 order-xl-2">
+                <div class="card card-profile">
+                    <img src="../assets/img/Admin/img_28.png" alt="Image placeholder" class="card-img-top">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 order-lg-2">
+                            <div class="card-profile-image">
+                                <a href="#">
+                                    <img src="../assets/img/theme/team-4.jpg" class="rounded-circle">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-info  mr-4 ">Connect</a>
+                            <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <span class="heading">22</span>
+                                        <span class="description">Friends</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">10</span>
+                                        <span class="description">Photos</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">89</span>
+                                        <span class="description">Comments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="h3">
+                                John Snow<span class="font-weight-light">, 27</span>
+                            </h5>
+                            <div class="h5 font-weight-300">
+                                <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                            </div>
+                            <div class="h5 mt-4">
+                                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                            </div>
+                            <div>
+                                <i class="ni education_hat mr-2"></i>University of Computer Science
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            <div class="col-xl-8 order-xl-1">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Edit profile </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4">User information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-username">Username</label>
+                                            <input type="text" id="input-username" class="form-control"
+                                                   placeholder="Username" value="JohnSnow.jesse">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email">Email address</label>
+                                            <input type="email" id="input-email" class="form-control"
+                                                   placeholder="JohnSnow@gmail.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-first-name">First name</label>
+                                            <input type="text" id="input-first-name" class="form-control"
+                                                   placeholder="First name" value="John">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-last-name">Last name</label>
+                                            <input type="text" id="input-last-name" class="form-control"
+                                                   placeholder="Last name" value="Snow">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4"/>
+                            <!-- Address -->
+                            <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-address">Address</label>
+                                            <input id="input-address" class="form-control" placeholder="Home Address"
+                                                   value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-city">City</label>
+                                            <input type="text" id="input-city" class="form-control" placeholder="City"
+                                                   value="New York">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-country">Country</label>
+                                            <input type="text" id="input-country" class="form-control"
+                                                   placeholder="Country" value="United States">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-country">Postal code</label>
+                                            <input type="number" id="input-postal-code" class="form-control"
+                                                   placeholder="Postal code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4"/>
+                            <!-- Description -->
+                            <h6 class="heading-small text-muted mb-4">About me</h6>
+                            <div class="pl-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label">About Me</label>
+                                    <textarea rows="4" class="form-control" placeholder="A few words about you ...">A beautiful Dashboard .</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-</div>
+        <!-- Footer -->
+        <footer class="footer pt-0">
+            <div class="row align-items-center justify-content-lg-between">
+                <div class="col-lg-6">
+                    <div class="copyright text-center  text-lg-left  text-muted">
+                        &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
+                                       target="_blank"> WebFurniture</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
 <!-- Argon Scripts -->
 <!-- Core -->
@@ -630,8 +531,6 @@
 <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
 <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
 <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Optional JS -->
-<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
 <!-- Argon JS -->
 <script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>

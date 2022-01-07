@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN </title>
+    <title> ADMIN - DIRECTORY MANAGEMENT - ADD NEWS </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
     <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
@@ -16,12 +16,16 @@
     <!-- Icons -->
     <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
     <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
     <link rel="stylesheet" href="DirectoryManagement.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="addDirectoryManagement.css">
     <link rel="stylesheet" href="InterfaceManagement.css">
-    <link rel="stylesheet" href="ListOfPermissions.css">
     <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -40,15 +44,33 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.jsp">
+                        <a class="nav-link" href="../../../dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="DirectoryManagement.jsp">
+                        <a class="nav-link active" href="DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product Type</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Product.jsp">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Posts.jsp">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -58,15 +80,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="profile.jsp">
+                        <a class="nav-link" href="profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="ListOfPermissions.jsp">
-                            <img class="anh" src="icon/article.png"/>
-                            <span class="nav-link-text">List Of Permissions</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -90,7 +106,7 @@
 <!-- Main content -->
 <div class="main-content" id="panel">
     <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Search form -->
@@ -175,7 +191,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -235,7 +251,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -309,7 +325,7 @@
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome!</h6>
                             </div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="profile.jsp" class="dropdown-item">
                                 <i class="ni ni-single-02"></i>
                                 <span>My profile</span>
                             </a>
@@ -321,12 +337,8 @@
                                 <i class="ni ni-calendar-grid-58"></i>
                                 <span>Activity</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ni ni-support-16"></i>
-                                <span>Support</span>
-                            </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="login.jsp" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
                             </a>
@@ -336,18 +348,18 @@
             </div>
         </div>
     </nav>
-
+    <!-- Header -->
     <!-- Header -->
     <div class="header bg-primary pb-6">
         <div class="container-fluid">
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">List Of Permissions</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Directory Management</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Profile / List Of Permissions</a></li>
+                                <li class="breadcrumb-item"><a href="#">Directory Management</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -360,219 +372,84 @@
         </div>
     </div>
 
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Action <span class="caret"></span>
-
+    <div class="infor">
+        <h1 class="information"> GENERAL INFORMATION</h1>
+        <div class="information1">
+            <h2 class="Image"> Image </h2>
+            <input class="type" type="text" name="fname" value="No files selected"><br>
+            <button class="Select">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Select file
             </button>
-
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
-
-            </ul>
         </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
+        <div class="information2">
+            <h2 class="Category"> Category </h2>
+            <input class="type1" type="text" name="fname" value="Enter category"><br>
         </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
+        <div class="information3">
+            <h2 class="Modules"> Modules </h2>
+            <input class="type2" type="text" name="fname" value="Product or article"><br>
         </div>
-
     </div>
 
-    <a class="nav-link active" href="UserConfiguration.jsp">
-        <button class="add">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            Add
-        </button>
-    </a>
-
-    <div class="tab">
-        <table class="table">
-            <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
-                <th class="TieuDe">ID</th>
-                <th class="TieuDe">Full name</th>
-                <th class="TieuDe">Avatar</th>
-                <th class="TieuDe">Power</th>
-                <th class="TieuDe">Display</th>
-                <th class="TieuDe">Change</th>
-                <th class="TieuDe">Erase</th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    1"><br></td>
-                <td> Join</td>
-                <td><img src="icon/img.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    2"><br></td>
-                <td>Doue</td>
-                <td><img src="icon/img_1.png" class="image"/></td>
-                <td class="full">Full User Rights</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    3"><br></td>
-                <td>Tom Hiddleston</td>
-                <td><img src="icon/img_2.png" class="image"/></td>
-                <td class="full">Full User Rights</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    4"><br></td>
-                <td>Christopher</td>
-                <td><img src="icon/img_3.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    5"><br></td>
-                <td>Elizabeth</td>
-                <td><img src="icon/img_4.png" class="image"/></td>
-                <td class="Restricted">Restricted users</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    6"><br></td>
-                <td>David</td>
-                <td><img src="icon/img_5.png" class="image"/></td>
-                <td class="full">Full User Rights</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    7"><br></td>
-                <td>Matthew</td>
-                <td><img src="icon/img_6.png" class="image"/></td>
-                <td class="Restricted">Restricted users</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    8"><br></td>
-                <td>Jennifer</td>
-                <td><img src="icon/img_7.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    9"><br></td>
-                <td>Linda</td>
-                <td><img src="icon/img_8.png" class="image"/></td>
-                <td class="Restricted">Restricted users</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    10"><br></td>
-                <td>Jessica</td>
-                <td><img src="icon/img_9.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-
-        </table>
+    <div class="infor2">
+        <h1 class="information"> VIETNAMESE</h1>
+        <div class="information2">
+            <h2 class="Category"> Title </h2>
+            <input class="type1" type="text" name="fname" value="Product"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Path </h2>
+            <input class="type2" type="text" name="fname" value="Product Path"><br>
+        </div>
+        <div class="information4">
+            <h2 class="Category"> Numerical order </h2>
+            <input class="type3" type="text" name="fname" value="   2"><br>
+        </div>
+        <div class="information5">
+            <h2 class="Modules"> Action </h2>
+            <div class="">
+                <input class="checkin" type="checkbox" name="sport" value="check">
+                <h3>Display</h3>
+            </div>
+        </div>
+        <div class="information6">
+            <a class="nav-link active" href="DirectoryManagement.jsp">
+                <button class="Select">
+                    <img class="fa fa-floppy-o" src="../assets/img/Admin/img_16.png"/>
+                    Save
+                </button>
+                <button class="Select">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    Exit
+                </button>
+            </a>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
                     &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
-                    WebFurniture</a>
+                    Web Furniture</a>
                 </div>
             </div>
+
         </div>
     </footer>
 </div>
 </div>
 <!-- Argon Scripts -->
-
 <!-- Core -->
 <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
 <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
 <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+<!-- Optional JS -->
+<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
 <!-- Argon JS -->
 <script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>

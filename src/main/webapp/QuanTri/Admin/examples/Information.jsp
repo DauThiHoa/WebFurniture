@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN - DIRECTORY MANAGEMENT</title>
+    <title> ADMIN - INTERFACE MANAGEMENT - INFORMATION</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
     <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
@@ -24,6 +24,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Product.css">
     <link rel="stylesheet" href="InterfaceManagement.css">
+    <link rel="stylesheet" href="Information.css">
+    <link rel="stylesheet" href="addDirectoryManagement.css">
     <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -44,39 +46,40 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.jsp">
+                        <a class="nav-link" href="../../../dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                        <a class="nav-link " href="DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement.jsp">
-                            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
-                            <span class="nav-link-text">Product Type</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Product.jsp">
-                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
-                            <span class="nav-link-text">Product </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Posts.jsp">
-                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
-                            <span class="nav-link-text">Posts </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="InterfaceManagement.jsp">
+                        <a class="nav-link active " href="InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active " href="InterfaceManagement.jsp">
+                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_23.png"/>
+                            <span class="nav-link-text">Image</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " href="Information.jsp">
+                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
+                            <span class="nav-link-text">Information</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Order.jsp">
+                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
+                            <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -360,11 +363,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Product</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Information</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Directory Management / Product</a></li>
+                                <li class="breadcrumb-item"><a href="#"> Interface Management / Information</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -377,281 +380,79 @@
         </div>
     </div>
 
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Action <span class="caret"></span>
-
-            </button>
-
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
-
-            </ul>
+    <div class="infor3">
+        <h1 class="information"> VIETNAMESE</h1>
+        <div class="information2">
+            <h2 class="Category"> Company name </h2>
+            <input class="type1" type="text" name="fname" value="Web Furniture Co., Ltd"><br>
         </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
+        <div class="information3">
+            <h2 class="Modules"> Address </h2>
+            <input class="Address" type="text" name="fname" value="Ward 26, Binh Thanh District, Ho Chi Minh City"><br>
         </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown1">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                View all products <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Living room products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Kitchen products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Office products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Bedroom products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Interior decoration </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Hot products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Featured products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> New product </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="button">
-        <a class="nav-link active" href="addProduct.jsp">
-            <button class="add">
+        <div class="information4">
+            <h2 class="Category"> Share icon </h2>
+            <input class="order" type="text" name="fname" value="No files selected"><br>
+            <button class="Select_File">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Add
+                Select file
             </button>
-        </a>
+        </div>
+        <div class="information5">
+            <h2 class="Modules"> Browser Icons </h2>
+            <input class="Browser" type="text" name="fname" value="No files selected"><br>
+            <button class="Select_File2">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Select file
+            </button>
+        </div>
+
     </div>
 
-    <div class="tab">
-        <table class="table">
-            <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
-                <th class="TieuDe">Numerical order</th>
-                <th class="TieuDe">Category</th>
-                <th class="TieuDe">Image</th>
-                <th class="TieuDe">Title</th>
-                <th class="TieuDe">Price</th>
-                <th class="TieuDe">Highlights</th>
-                <th class="TieuDe">New</th>
-                <th class="TieuDe">Featured</th>
-                <th class="TieuDe">Hot</th>
-                <th class="TieuDe">Display</th>
-                <th class="TieuDe">Change</th>
-                <th class="TieuDe">Erase</th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    1"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/TuHabu.PNG" class="image"/></td>
-                <td>Tủ HABU</td>
-                <td> 1.000.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    2"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/SofaBangBella.PNG" class="image"/></td>
-                <td>Sofa Bang Bella</td>
-                <td> 2.000.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    3"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/keTuHobu.PNG" class="image"/></td>
-                <td>Kệ tủ HOBU</td>
-                <td> 200.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    4"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/KeTreoPoplar.PNG" class="image"/></td>
-                <td>Kệ Treo Poplar</td>
-                <td> 250.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    5"><br></td>
-                <td>Home page</td>
-                <td><img src="../../../Home/Image/KeTiViHoBu.PNG" class="image"/></td>
-                <td>Kệ TiVi HoBu</td>
-                <td> 130.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    6"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/Ghe_Bong_Bong.jpg" class="image"/></td>
-                <td>Ghe Bong Bong</td>
-                <td> 1.000.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    7"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/ghe_Daw_Fabric.jpg" class="image"/></td>
-                <td>Ghế Daw Fabric</td>
-                <td> 100.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    8"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/Den_de_ban.jpg" class="image"/></td>
-                <td>Đèn để bàn học tập</td>
-                <td> 500.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    9"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/ghe_Sofa.jpg" class="image"/></td>
-                <td>Ghế Sofa</td>
-                <td> 55.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    10"><br></td>
-                <td>Product</td>
-                <td><img src="../../../ImageProduct/Ghe_Diamond.jpg" class="image"/></td>
-                <td>Ghế Diamond</td>
-                <td> 170.000 đ</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
 
-        </table>
+    <div class="infor4">
+        <h1 class="information"> GENERAL INFORMATION</h1>
+        <div class="information1">
+            <h2 class="Image"> Hotline </h2>
+            <input class="type" type="text" name="fname" value="0123456789"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Email </h2>
+            <input class="JhonDoue" type="text" name="fname" value="JhonDoue@gmail.com"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Copyright </h2>
+            <input class="type2" type="text" name="fname" value="Copyright 2021 - Web Furniture"><br>
+        </div>
+        <div class="information4">
+            <h2 class="Modules"> Facebook </h2>
+            <input class="type2" type="text" name="fname" value="https://www.facebook.com"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Twitter </h2>
+            <input class="Twitter" type="text" name="fname" value="https://www.twitter.com"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Youtube </h2>
+            <input class="Youtube" type="text" name="fname" value="https://www.youtube.com"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Instagram </h2>
+            <input class="Instagram" type="text" name="fname" value="Web Furniture"><br>
+        </div>
+        <div class="information6">
+            <a class="nav-link active" href="InterfaceManagement.jsp">
+                <button class="Select">
+                    <img class="fa fa-floppy-o" src="../assets/img/Admin/img_16.png"/>
+                    Save
+                </button>
+                <button class="Select">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    Exit
+                </button>
+            </a>
+        </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="footer pt-0">
