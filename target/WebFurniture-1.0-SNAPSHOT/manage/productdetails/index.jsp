@@ -5,7 +5,9 @@
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<jsp:useBean id="list" scope="request" type="java.util.List"/>
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -472,9 +474,11 @@
         </a>
     </div>
 
-    <div class="tab" id="productdetails-table">
-        <table class="table">
+    <div class="tab" >
+        <table class="table table-hover table-responsive table-bordered" id="productdetails-table">
             <tr>
+                /!-- San pham khong ban bi ly do gi -->
+
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
                 <th class="TieuDe">Numerical order</th>
                 <th class="TieuDe">Category</th>
@@ -489,6 +493,9 @@
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
+          <c:set var="i" value="1"/>
+            <c:forEach items="${list}" var="item" >
+
             <tr>
                 <td><input type="checkbox" name="sport" value="check"></td>
                 <td><input type="text" name="fname" value="                    1"><br></td>
@@ -504,6 +511,7 @@
                 <td><i class="fa fa-edit"></i></td>
                 <td><i class="fa fa-trash" aria-hidden="true"></i></td>
             </tr>
+            </c:forEach>
 <%--            <tr>--%>
 <%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
 <%--                <td><input type="text" name="fname" value="                    2"><br></td>--%>
