@@ -1,9 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="java.util.List" %>
-<%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
@@ -22,15 +17,9 @@
     <link rel="icon" href="../QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
-    <!-- Argon CSS -->
-    <link rel="stylesheet" href="../QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="../QuanTri/Admin/examples/DirectoryManagement.css">
-    <link rel="stylesheet" href="../QuanTri/Admin/examples/InterfaceManagement.css">
-    <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <jsp:include page="layout/css.jsp"></jsp:include>
+
 </head>
 
 <body>
@@ -41,7 +30,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="../QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -50,7 +39,7 @@
                 <!-- Nav items -->
 <%--                <ul class="navbar-nav">--%>
 
-<%--                <jsp:include page="layout/nav.jsp"></jsp:include>--%>
+                <jsp:include page="layout/nav.jsp"></jsp:include>
 <%--                    <!-- lINK VE TRANG CHU-->--%>
 <%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
 <%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
@@ -153,7 +142,7 @@
                             </div>
                             <!-- List group -->
                             <div class="list-group list-group-flush">
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -173,7 +162,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -193,7 +182,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -213,7 +202,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -233,7 +222,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -255,7 +244,7 @@
                                 </a>
                             </div>
                             <!-- View all -->
-                            <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View
+                            <a href="#" class="dropdown-item text-center text-primary font-weight-bold py-3">View
                                 all</a>
                         </div>
                     </li>
@@ -266,37 +255,37 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
                             <div class="row shortcuts px-4">
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                       <i class="ni ni-calendar-grid-58"></i>
                     </span>
                                     <small>Calendar</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
                       <i class="ni ni-email-83"></i>
                     </span>
                                     <small>Email</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                       <i class="ni ni-credit-card"></i>
                     </span>
                                     <small>Payments</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-green">
                       <i class="ni ni-books"></i>
                     </span>
                                     <small>Reports</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
                       <i class="ni ni-pin-3"></i>
                     </span>
                                     <small>Maps</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
                       <i class="ni ni-basket"></i>
                     </span>
@@ -323,24 +312,24 @@
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome!</h6>
                             </div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-single-02"></i>
                                 <span>My profile</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Settings</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-calendar-grid-58"></i>
                                 <span>Activity</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-support-16"></i>
                                 <span>Support</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
                             </a>
@@ -477,7 +466,7 @@
                                 <h3 class="mb-0">Page visits</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <a href="#" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
@@ -576,7 +565,7 @@
                                 <h3 class="mb-0">Social traffic</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <a href="#" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>

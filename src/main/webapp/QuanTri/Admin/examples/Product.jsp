@@ -14,8 +14,6 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
@@ -44,7 +42,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../dashboard.jsp">
+                        <a class="nav-link" href="../../../manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -115,7 +113,7 @@
                     <div class="form-group mb-0">
                         <div class="input-group input-group-alternative input-group-merge">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
                             </div>
                             <input class="form-control" placeholder="Search" type="text">
                         </div>
@@ -156,7 +154,7 @@
                             </div>
                             <!-- List group -->
                             <div class="list-group list-group-flush">
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -176,7 +174,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -196,7 +194,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -216,7 +214,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -236,7 +234,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
@@ -258,7 +256,7 @@
                                 </a>
                             </div>
                             <!-- View all -->
-                            <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View
+                            <a href="#" class="dropdown-item text-center text-primary font-weight-bold py-3">View
                                 all</a>
                         </div>
                     </li>
@@ -269,37 +267,37 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
                             <div class="row shortcuts px-4">
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                       <i class="ni ni-calendar-grid-58"></i>
                     </span>
                                     <small>Calendar</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
                       <i class="ni ni-email-83"></i>
                     </span>
                                     <small>Email</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                       <i class="ni ni-credit-card"></i>
                     </span>
                                     <small>Payments</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-green">
                       <i class="ni ni-books"></i>
                     </span>
                                     <small>Reports</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
                       <i class="ni ni-pin-3"></i>
                     </span>
                                     <small>Maps</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
                       <i class="ni ni-basket"></i>
                     </span>
@@ -326,24 +324,24 @@
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome!</h6>
                             </div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-single-02"></i>
                                 <span>My profile</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Settings</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-calendar-grid-58"></i>
                                 <span>Activity</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-support-16"></i>
                                 <span>Support</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
                             </a>
@@ -363,7 +361,7 @@
                         <h6 class="h2 text-white d-inline-block mb-0">Product</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
                                 <li class="breadcrumb-item"><a href="#">Directory Management / Product</a></li>
                             </ol>
                         </nav>
@@ -502,7 +500,7 @@
                 <td><input type="checkbox" name="sport" value="check"></td>
                 <td><input type="text" name="fname" value="                    1"><br></td>
                 <td>Home page</td>
-                <td><img src="../../../Home/Image/TuHabu.PNG" class="image"/></td>
+                <td><img src="../../../Image/TuHabu.PNG" class="image"/></td>
                 <td>Tủ HABU</td>
                 <td> 1.000.000 đ</td>
                 <td><input type="checkbox" name="sport" value="check"></td>
@@ -517,7 +515,7 @@
                 <td><input type="checkbox" name="sport" value="check"></td>
                 <td><input type="text" name="fname" value="                    2"><br></td>
                 <td>Home page</td>
-                <td><img src="../../../Home/Image/SofaBangBella.PNG" class="image"/></td>
+                <td><img src="../../../Image/SofaBangBella.PNG" class="image"/></td>
                 <td>Sofa Bang Bella</td>
                 <td> 2.000.000 đ</td>
                 <td><input type="checkbox" name="sport" value="check"></td>
@@ -532,7 +530,7 @@
                 <td><input type="checkbox" name="sport" value="check"></td>
                 <td><input type="text" name="fname" value="                    3"><br></td>
                 <td>Home page</td>
-                <td><img src="../../../Home/Image/keTuHobu.PNG" class="image"/></td>
+                <td><img src="../../../Image/keTuHobu.PNG" class="image"/></td>
                 <td>Kệ tủ HOBU</td>
                 <td> 200.000 đ</td>
                 <td><input type="checkbox" name="sport" value="check"></td>
@@ -547,7 +545,7 @@
                 <td><input type="checkbox" name="sport" value="check"></td>
                 <td><input type="text" name="fname" value="                    4"><br></td>
                 <td>Home page</td>
-                <td><img src="../../../Home/Image/KeTreoPoplar.PNG" class="image"/></td>
+                <td><img src="../../../Image/KeTreoPoplar.PNG" class="image"/></td>
                 <td>Kệ Treo Poplar</td>
                 <td> 250.000 đ</td>
                 <td><input type="checkbox" name="sport" value="check"></td>
@@ -562,7 +560,7 @@
                 <td><input type="checkbox" name="sport" value="check"></td>
                 <td><input type="text" name="fname" value="                    5"><br></td>
                 <td>Home page</td>
-                <td><img src="../../../Home/Image/KeTiViHoBu.PNG" class="image"/></td>
+                <td><img src="../../../Image/KeTiViHoBu.PNG" class="image"/></td>
                 <td>Kệ TiVi HoBu</td>
                 <td> 130.000 đ</td>
                 <td><input type="checkbox" name="sport" value="check"></td>
@@ -667,17 +665,6 @@
     </footer>
 </div>
 </div>
-<!-- Argon Scripts -->
-<!-- Core -->
-<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Optional JS -->
-<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
-<!-- Argon JS -->
-<script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>
 
 </html>

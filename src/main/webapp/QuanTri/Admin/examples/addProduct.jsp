@@ -44,7 +44,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../dashboard.jsp">
+                        <a class="nav-link" href="../../../manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -114,7 +114,7 @@
                     <div class="form-group mb-0">
                         <div class="input-group input-group-alternative input-group-merge">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
                             </div>
                             <input class="form-control" placeholder="Search" type="text">
                         </div>
@@ -362,7 +362,7 @@
                         <h6 class="h2 text-white d-inline-block mb-0">Directory Management</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
                                 <li class="breadcrumb-item"><a href="#">Directory Management</a></li>
                             </ol>
                         </nav>

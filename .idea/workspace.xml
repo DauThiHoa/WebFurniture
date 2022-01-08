@@ -20,6 +20,7 @@
       <list>
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -42,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/manage/layout/productdetails" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -55,20 +56,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\vendor" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage\layout\productdetails" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\resources" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\java\vn\edu\hcmuaf\fit\webfurniture" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\DangKy" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\vendor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage\layout" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.edu.hcmuaf.fit.webfurniture.cart.manage.productdetails" />
+      <recent name="vn.edu.hcmuaf.fit.webfurniture.properties" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.service" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.beans" />
-      <recent name="vn.edu.hcmuaf.fit.webfurniture.services" />
     </key>
   </component>
   <component name="RunManager">
@@ -207,6 +211,7 @@
       <workItem from="1641567483914" duration="1938000" />
       <workItem from="1641572663220" duration="67000" />
       <workItem from="1641572998000" duration="491000" />
+      <workItem from="1641629289555" duration="12078000" />
     </task>
     <servers />
   </component>
