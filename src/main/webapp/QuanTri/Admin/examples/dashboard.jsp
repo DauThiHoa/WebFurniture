@@ -1,3 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
@@ -15,19 +19,18 @@
     <title> ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <link rel="stylesheet" href="<%= Asset.url("assets/vendor/nucleo/css/nucleo.css")%>" type="text/css">
+    <link rel="stylesheet" href="<%= Asset.url("assets/vendor/@fortawesome/fontawesome-free/css/all.min.css")%>" type="text/css">
     <!-- Page plugins -->
-    <link rel="stylesheet" href="<%= Asset.url("vendor/dt/datatables.min.css")%>">
-    <!-- CSS DASHBOARD.JSP-->
+    <!-- Argon CSS -->
     <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/assets/css/argon.css?v=1.2.0")%>" type="text/css">
     <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/DirectoryManagement.css")%>">
     <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/InterfaceManagement.css")%>">
     <link rel="stylesheet" href="<%= Asset.url("stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css")%>">
-
-    <jsp:include page="layout/css.jsp"></jsp:include>
-
 </head>
 
 <body>
@@ -38,7 +41,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="../QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -47,53 +50,53 @@
                 <!-- Nav items -->
 <%--                <ul class="navbar-nav">--%>
 
-                <jsp:include page="layout/nav.jsp"></jsp:include>
-<%--                    <!-- lINK VE TRANG CHU-->--%>
-<%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <img src="img.png">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <span class="nav-link-text">HomePage</span>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        </a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
-
+<%--                <jsp:include page="layout/nav.jsp"></jsp:include>--%>
+                    <!-- lINK VE TRANG CHU-->
 <%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link active" href="dashboard.jsp">--%>
-<%--                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Dashboard</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/DirectoryManagement.jsp">--%>
-<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Directory Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/InterfaceManagement.jsp">--%>
-<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Interface Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">--%>
-<%--                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Profile</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/login.jsp">--%>
-<%--                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Login</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/register.jsp">--%>
-<%--                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Register</span>--%>
+<%--                        <a class="nav-link active" href="<%= Asset.url("../../../manage/dashboard.jsp")%>">--%>
+<%--                            <img src="img.png">--%>
+<%--                            <span class="nav-link-text">HomePage</span>--%>
 <%--                        </a>--%>
 <%--                    </li>--%>
 
-<%--                </ul>--%>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../../../manage/dashboard.jsp">
+                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DirectoryManagement.jsp">
+                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
+                            <span class="nav-link-text">Directory Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="InterfaceManagement.jsp">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                            <span class="nav-link-text">Interface Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.jsp">
+                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
+                            <span class="nav-link-text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.jsp">
+                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
+                            <span class="nav-link-text">Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.jsp">
+                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
+                            <span class="nav-link-text">Register</span>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </div>
@@ -154,7 +157,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_1.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_1.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -174,7 +177,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_2.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_2.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -194,7 +197,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_3.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_3.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -214,7 +217,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -234,7 +237,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_5.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_5.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -309,7 +312,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../QuanTri/Admin/assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -515,7 +518,7 @@
                                     319
                                 </td>
                                 <td>
-                                   <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i></i> 46,53%
+                                   <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i> 46,53%
                                 </td>
                             </tr>
                             <tr>

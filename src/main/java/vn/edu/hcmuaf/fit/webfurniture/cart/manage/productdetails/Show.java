@@ -1,11 +1,15 @@
 package vn.edu.hcmuaf.fit.webfurniture.cart.manage.productdetails;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "Show", value = "/productdetails")
+@WebServlet(name = "Show", value = "/manage/productdetails")
 public class Show extends HttpServlet {
     /**
      *
@@ -17,7 +21,9 @@ public class Show extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
+                request.setAttribute("list" , list );
+                request.getRequestDispatcher("productdetails/index.jsp").forward(request, response);
     }
 
     /**

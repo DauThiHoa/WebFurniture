@@ -19,18 +19,18 @@
     <title> ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="<%= Asset.url("assets/vendor/nucleo/css/nucleo.css")%>" type="text/css">
+    <link rel="stylesheet" href="<%= Asset.url("assets/vendor/@fortawesome/fontawesome-free/css/all.min.css")%>" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="../QuanTri/Admin/examples/DirectoryManagement.css">
-    <link rel="stylesheet" href="../QuanTri/Admin/examples/InterfaceManagement.css">
-    <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/assets/css/argon.css?v=1.2.0")%>" type="text/css">
+    <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/DirectoryManagement.css")%>">
+    <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/InterfaceManagement.css")%>">
+    <link rel="stylesheet" href="<%= Asset.url("stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css")%>">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -51,52 +51,52 @@
 <%--                <ul class="navbar-nav">--%>
 
 <%--                <jsp:include page="layout/nav.jsp"></jsp:include>--%>
-<%--                    <!-- lINK VE TRANG CHU-->--%>
-<%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <img src="img.png">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <span class="nav-link-text">HomePage</span>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        </a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
-
+                    <!-- lINK VE TRANG CHU-->
 <%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link active" href="dashboard.jsp">--%>
-<%--                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Dashboard</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/DirectoryManagement.jsp">--%>
-<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Directory Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/InterfaceManagement.jsp">--%>
-<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Interface Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">--%>
-<%--                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Profile</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/login.jsp">--%>
-<%--                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Login</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/register.jsp">--%>
-<%--                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Register</span>--%>
+<%--                        <a class="nav-link active" href="<%= Asset.url("../../../manage/dashboard.jsp")%>">--%>
+<%--                            <img src="img.png">--%>
+<%--                            <span class="nav-link-text">HomePage</span>--%>
 <%--                        </a>--%>
 <%--                    </li>--%>
 
-<%--                </ul>--%>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../../../manage/dashboard.jsp">
+                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DirectoryManagement.jsp">
+                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
+                            <span class="nav-link-text">Directory Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="InterfaceManagement.jsp">
+                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                            <span class="nav-link-text">Interface Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.jsp">
+                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
+                            <span class="nav-link-text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.jsp">
+                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
+                            <span class="nav-link-text">Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.jsp">
+                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
+                            <span class="nav-link-text">Register</span>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </div>
@@ -153,11 +153,11 @@
                             </div>
                             <!-- List group -->
                             <div class="list-group list-group-flush">
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_1.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_1.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -173,11 +173,11 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_2.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_2.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -193,11 +193,11 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_3.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_3.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -213,11 +213,11 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -233,11 +233,11 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
+                                <a href="#" class="list-group-item list-group-item-action">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_5.png"
+                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_5.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -255,7 +255,7 @@
                                 </a>
                             </div>
                             <!-- View all -->
-                            <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View
+                            <a href="#" class="dropdown-item text-center text-primary font-weight-bold py-3">View
                                 all</a>
                         </div>
                     </li>
@@ -266,37 +266,37 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
                             <div class="row shortcuts px-4">
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                       <i class="ni ni-calendar-grid-58"></i>
                     </span>
                                     <small>Calendar</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
                       <i class="ni ni-email-83"></i>
                     </span>
                                     <small>Email</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                       <i class="ni ni-credit-card"></i>
                     </span>
                                     <small>Payments</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-green">
                       <i class="ni ni-books"></i>
                     </span>
                                     <small>Reports</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
                       <i class="ni ni-pin-3"></i>
                     </span>
                                     <small>Maps</small>
                                 </a>
-                                <a href="#!" class="col-4 shortcut-item">
+                                <a href="#" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
                       <i class="ni ni-basket"></i>
                     </span>
@@ -312,7 +312,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../QuanTri/Admin/assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -323,24 +323,24 @@
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome!</h6>
                             </div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-single-02"></i>
                                 <span>My profile</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Settings</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-calendar-grid-58"></i>
                                 <span>Activity</span>
                             </a>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-support-16"></i>
                                 <span>Support</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="#" class="dropdown-item">
                                 <i class="ni ni-user-run"></i>
                                 <span>Logout</span>
                             </a>
@@ -477,7 +477,7 @@
                                 <h3 class="mb-0">Page visits</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <a href="#" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
@@ -518,7 +518,7 @@
                                     319
                                 </td>
                                 <td>
-                                   <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i></i> 46,53%
+                                   <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i> 46,53%
                                 </td>
                             </tr>
                             <tr>
@@ -576,7 +576,7 @@
                                 <h3 class="mb-0">Social traffic</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                                <a href="#" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>

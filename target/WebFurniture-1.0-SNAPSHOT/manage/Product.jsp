@@ -1,10 +1,5 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
-<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
-<%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
 <!DOCTYPE html>
 <html>
 
@@ -22,8 +17,8 @@
     <!-- Icons -->
     <!-- Page plugins -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Page plugins -->
-    <jsp:include page="../layout/css.jsp"></jsp:include>
+    <!-- Argon CSS -->
+    <jsp:include page="layout/css.jsp"></jsp:include>
 
 </head>
 
@@ -42,55 +37,55 @@
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <!-- Nav items -->
-<%--                <ul class="navbar-nav">--%>
+                <%--                <ul class="navbar-nav">--%>
 
-                <jsp:include page="../layout/nav.jsp"></jsp:include>
-<%--                    <!-- lINK VE TRANG CHU-->--%>
-<%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <img src="img.png">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <span class="nav-link-text">HomePage</span>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        </a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
+                <jsp:include page="layout/nav.jsp"></jsp:include>
+                <%--                    <!-- lINK VE TRANG CHU-->--%>
+                <%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;                            <img src="img.png">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;                            <span class="nav-link-text">HomePage</span>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;                        </a>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
 
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link active" href="dashboard.jsp">--%>
-<%--                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Dashboard</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/DirectoryManagement.jsp">--%>
-<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Directory Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/InterfaceManagement.jsp">--%>
-<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Interface Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">--%>
-<%--                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Profile</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/login.jsp">--%>
-<%--                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Login</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/register.jsp">--%>
-<%--                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Register</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
+                <%--                    <li class="nav-item">--%>
+                <%--                        <a class="nav-link active" href="dashboard.jsp">--%>
+                <%--                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>--%>
+                <%--                            <span class="nav-link-text">Dashboard</span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
+                <%--                    <li class="nav-item">--%>
+                <%--                        <a class="nav-link" href="QuanTri/Admin/examples/DirectoryManagement.jsp">--%>
+                <%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
+                <%--                            <span class="nav-link-text">Directory Management</span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
+                <%--                    <li class="nav-item">--%>
+                <%--                        <a class="nav-link" href="QuanTri/Admin/examples/InterfaceManagement.jsp">--%>
+                <%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
+                <%--                            <span class="nav-link-text">Interface Management</span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
+                <%--                    <li class="nav-item">--%>
+                <%--                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">--%>
+                <%--                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>--%>
+                <%--                            <span class="nav-link-text">Profile</span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
+                <%--                    <li class="nav-item">--%>
+                <%--                        <a class="nav-link" href="QuanTri/Admin/examples/login.jsp">--%>
+                <%--                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>--%>
+                <%--                            <span class="nav-link-text">Login</span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
+                <%--                    <li class="nav-item">--%>
+                <%--                        <a class="nav-link" href="QuanTri/Admin/examples/register.jsp">--%>
+                <%--                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>--%>
+                <%--                            <span class="nav-link-text">Register</span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
 
-<%--                </ul>--%>
+                <%--                </ul>--%>
             </div>
         </div>
     </div>
@@ -151,7 +146,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_1.png")%>"
+                                            <img alt="Image placeholder" src="<%= Asset.url("icon/img_1.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -171,7 +166,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_2.png")%>"
+                                            <img alt="Image placeholder" src="<%= Asset.url("icon/img_2.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -191,7 +186,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_3.png")%>"
+                                            <img alt="Image placeholder" src="<%= Asset.url("icon/img_3.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -211,7 +206,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>"
+                                            <img alt="Image placeholder" src="<%= Asset.url("assets/img/theme/team-4.jpg")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -231,7 +226,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/examples/icon/img_5.png")%>"
+                                            <img alt="Image placeholder" src="<%= Asset.url("icon/img_5.png")%>"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -306,7 +301,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>">
+                    <img alt="Image placeholder" src="<%= Asset.url("assets/img/theme/team-4.jpg")%>">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -464,7 +459,7 @@
     </div>
 
     <div class="button">
-        <a class="nav-link active" href="<%= Asset.url("QuanTri/Admin/examples/addProduct.jsp")%>">
+        <a class="nav-link active" href="<%= Asset.url("addProduct.jsp")%>">
             <button class="add">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Add
@@ -472,7 +467,7 @@
         </a>
     </div>
 
-    <div class="tab" id="productdetails-table">
+    <div class="tab">
         <table class="table">
             <tr>
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
@@ -504,141 +499,141 @@
                 <td><i class="fa fa-edit"></i></td>
                 <td><i class="fa fa-trash" aria-hidden="true"></i></td>
             </tr>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    2"><br></td>--%>
-<%--                <td>Home page</td>--%>
-<%--                <td><img src="<%= Asset.url("Image/SofaBangBella.PNG")%>" class="image"/></td>--%>
-<%--                <td>Sofa Bang Bella</td>--%>
-<%--                <td> 2.000.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    3"><br></td>--%>
-<%--                <td>Home page</td>--%>
-<%--                <td><img src="<%= Asset.url("Image/keTuHobu.PNG")%>" class="image"/></td>--%>
-<%--                <td>Kệ tủ HOBU</td>--%>
-<%--                <td> 200.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    4"><br></td>--%>
-<%--                <td>Home page</td>--%>
-<%--                <td><img src="<%= Asset.url("Image/KeTreoPoplar.PNG")%>" class="image"/></td>--%>
-<%--                <td>Kệ Treo Poplar</td>--%>
-<%--                <td> 250.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    5"><br></td>--%>
-<%--                <td>Home page</td>--%>
-<%--                <td><img src="<%= Asset.url("Image/KeTiViHoBu.PNG")%>" class="image"/></td>--%>
-<%--                <td>Kệ TiVi HoBu</td>--%>
-<%--                <td> 130.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    6"><br></td>--%>
-<%--                <td>Product</td>--%>
-<%--                <td><img src="<%= Asset.url("ImageProduct/Ghe_Bong_Bong.jpg")%>" class="image"/></td>--%>
-<%--                <td>Ghe Bong Bong</td>--%>
-<%--                <td> 1.000.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    7"><br></td>--%>
-<%--                <td>Product</td>--%>
-<%--                <td><img src="<%= Asset.url("ImageProduct/ghe_Daw_Fabric.jpg")%>" class="image"/></td>--%>
-<%--                <td>Ghế Daw Fabric</td>--%>
-<%--                <td> 100.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    8"><br></td>--%>
-<%--                <td>Product</td>--%>
-<%--                <td><img src="<%= Asset.url("ImageProduct/Den_de_ban.jpg")%>" class="image"/></td>--%>
-<%--                <td>Đèn để bàn học tập</td>--%>
-<%--                <td> 500.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    9"><br></td>--%>
-<%--                <td>Product</td>--%>
-<%--                <td><img src="<%= Asset.url("ImageProduct/ghe_Sofa.jpg")%>" class="image"/></td>--%>
-<%--                <td>Ghế Sofa</td>--%>
-<%--                <td> 55.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr>--%>
-<%--            <tr>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="text" name="fname" value="                    10"><br></td>--%>
-<%--                <td>Product</td>--%>
-<%--                <td><img src="<%= Asset.url("ImageProduct/Ghe_Diamond.jpg")%>" class="image"/></td>--%>
-<%--                <td>Ghế Diamond</td>--%>
-<%--                <td> 170.000 đ</td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
-<%--            </tr> --%>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    2"><br></td>
+                <td>Home page</td>
+                <td><img src="<%= Asset.url("Image/SofaBangBella.PNG")%>" class="image"/></td>
+                <td>Sofa Bang Bella</td>
+                <td> 2.000.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    3"><br></td>
+                <td>Home page</td>
+                <td><img src="<%= Asset.url("Image/keTuHobu.PNG")%>" class="image"/></td>
+                <td>Kệ tủ HOBU</td>
+                <td> 200.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    4"><br></td>
+                <td>Home page</td>
+                <td><img src="<%= Asset.url("Image/KeTreoPoplar.PNG")%>" class="image"/></td>
+                <td>Kệ Treo Poplar</td>
+                <td> 250.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    5"><br></td>
+                <td>Home page</td>
+                <td><img src="<%= Asset.url("Image/KeTiViHoBu.PNG")%>" class="image"/></td>
+                <td>Kệ TiVi HoBu</td>
+                <td> 130.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    6"><br></td>
+                <td>Product</td>
+                <td><img src="<%= Asset.url("ImageProduct/Ghe_Bong_Bong.jpg")%>" class="image"/></td>
+                <td>Ghe Bong Bong</td>
+                <td> 1.000.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    7"><br></td>
+                <td>Product</td>
+                <td><img src="<%= Asset.url("ImageProduct/ghe_Daw_Fabric.jpg")%>" class="image"/></td>
+                <td>Ghế Daw Fabric</td>
+                <td> 100.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    8"><br></td>
+                <td>Product</td>
+                <td><img src="<%= Asset.url("ImageProduct/Den_de_ban.jpg")%>" class="image"/></td>
+                <td>Đèn để bàn học tập</td>
+                <td> 500.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    9"><br></td>
+                <td>Product</td>
+                <td><img src="<%= Asset.url("ImageProduct/ghe_Sofa.jpg")%>" class="image"/></td>
+                <td>Ghế Sofa</td>
+                <td> 55.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    10"><br></td>
+                <td>Product</td>
+                <td><img src="<%= Asset.url("ImageProduct/Ghe_Diamond.jpg")%>" class="image"/></td>
+                <td>Ghế Diamond</td>
+                <td> 170.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
 
         </table>
     </div>
@@ -656,20 +651,10 @@
 
         </div>
     </footer>
+
 </div>
 
 </body>
-
 <script type="text/javascript" src="<%= Asset.url("../layout/script.jsp")%>"></script>
-<script>
-    var dt;
-    $(document).ready(function () {
-        dt = $('#productdetails-table').DataTable({
-               language:{
-                   "url": "<%= Asset.url("vendor/dt/lang/vi.json")%>"
-               },
-            }
-        );
-    } );
-</script>
+
 </html>

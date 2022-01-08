@@ -1,3 +1,4 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
@@ -18,6 +19,13 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Page plugins -->
+    <link rel="stylesheet" href="<%= Asset.url("vendor/dt/datatables.min.css")%>">
+    <!-- CSS DASHBOARD.JSP-->
+    <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/assets/css/argon.css?v=1.2.0")%>" type="text/css">
+    <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/DirectoryManagement.css")%>">
+    <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/InterfaceManagement.css")%>">
+    <link rel="stylesheet" href="<%= Asset.url("stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css")%>">
+
     <jsp:include page="layout/css.jsp"></jsp:include>
 
 </head>

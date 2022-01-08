@@ -1,10 +1,13 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<jsp:useBean id="list" scope="request" type="java.util.List"/>
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -12,12 +15,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN </title>
+    <title> ADMIN - DIRECTORY MANAGEMENT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
     <link rel="icon" href="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <!-- Page plugins -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Page plugins -->
     <jsp:include page="../layout/css.jsp"></jsp:include>
 
@@ -139,7 +145,7 @@
                             <!-- Dropdown header -->
                             <div class="px-3 py-3">
                                 <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong>
-                                    notifications</h6>
+                                    notifications.</h6>
                             </div>
                             <!-- List group -->
                             <div class="list-group list-group-flush">
@@ -179,7 +185,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for Web Furniture.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -239,7 +245,7 @@
                                                     <small>3 hrs ago</small>
                                                 </div>
                                             </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
+                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
                                         </div>
                                     </div>
                                 </a>
@@ -347,12 +353,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Product</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"> <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Default</li>
+                                <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">Directory Management / Product</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -361,345 +366,318 @@
                         <a href="#" class="btn btn-sm btn-neutral">Filters</a>
                     </div>
                 </div>
-                <!-- Card stats -->
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
-                                        <span class="h2 font-weight-bold mb-0">350,897</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
-                                        <span class="h2 font-weight-bold mb-0">2,356</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                            <i class="fa fa-pie-chart" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
-                                        <span class="h2 font-weight-bold mb-0">924</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                                            <i class="fa fa-money" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card card-stats">
-                            <!-- Card body -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
-                                        <span class="h2 font-weight-bold mb-0">49,65%</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                    <span class="text-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <!-- Page content -->
-    <div class="container-fluid mt--6">
 
-        <div class="row">
-            <div class="col-xl-8">
-                <div class="card">
-                    <div class="card-header border-0">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h3 class="mb-0">Page visits</h3>
-                            </div>
-                            <div class="col text-right">
-                                <a href="#" class="btn btn-sm btn-primary">See all</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">Page name</th>
-                                <th scope="col">Visitors</th>
-                                <th scope="col">Unique users</th>
-                                <th scope="col">Bounce rate</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Home
-                                </th>
-                                <td>
-                                    4,569
-                                </td>
-                                <td>
-                                    340
-                                </td>
-                                <td>
-                                    <i class="fa fa-arrow-up text-success mr-3" aria-hidden="true" style="font-size: 15px"></i> 46,53%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    login
-                                </th>
-                                <td>
-                                    3,985
-                                </td>
-                                <td>
-                                    319
-                                </td>
-                                <td>
-                                   <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i>46,53%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Register
-                                </th>
-                                <td>
-                                    3,513
-                                </td>
-                                <td>
-                                    294
-                                </td>
-                                <td>
-                                   <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i> 36,49%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Product
-                                </th>
-                                <td>
-                                    2,050
-                                </td>
-                                <td>
-                                    147
-                                </td>
-                                <td>
-                                    <i class="fa fa-arrow-up text-success mr-3" aria-hidden="true" style="font-size: 15px"></i> 50,87%
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Contact
-                                </th>
-                                <td>
-                                    1,795
-                                </td>
-                                <td>
-                                    190
-                                </td>
-                                <td>
-                                    <i class="fa fa-arrow-down text-danger mr-3" aria-hidden="true" style="font-size: 15px"></i> 46,53%
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="card">
-                    <div class="card-header border-0">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h3 class="mb-0">Social traffic</h3>
-                            </div>
-                            <div class="col text-right">
-                                <a href="#" class="btn btn-sm btn-primary">See all</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">Referral</th>
-                                <th scope="col">Visitors</th>
-                                <th scope="col"></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Facebook
-                                </th>
-                                <td>
-                                    1,480
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">60%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-danger" role="progressbar"
-                                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 60%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Facebook
-                                </th>
-                                <td>
-                                    5,480
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">70%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 70%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Google
-                                </th>
-                                <td>
-                                    4,807
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">80%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-primary" role="progressbar"
-                                                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 80%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    Instagram
-                                </th>
-                                <td>
-                                    3,678
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">75%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-info" role="progressbar"
-                                                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 75%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="TieuDe" scope="row">
-                                    twitter
-                                </th>
-                                <td>
-                                    2,645
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="mr-2">30%</span>
-                                        <div>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-gradient-warning" role="progressbar"
-                                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
-                                                     style="width: 30%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+
+    <div class="container">
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                Action <span class="caret"></span>
+
+            </button>
+
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
+
+            </ul>
         </div>
-        <!-- Footer -->
-        <footer class="footer pt-0">
-            <div class="row align-items-center justify-content-lg-between">
-                <div class="col-lg-6">
-                    <div class="copyright text-center  text-lg-left  text-muted">
-                        &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
-                                       target="_blank">Web Furniture</a>
-                    </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                Search by <span class="caret"></span>
+
+            </button>
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="dropdown">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                Display number <span class="caret"></span>
+
+            </button>
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> One </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="dropdown1">
+
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+
+                View all products <span class="caret"></span>
+
+            </button>
+            <ul class="dropdown-menu">
+
+                <li class="dropdown-menuLi"><a href="#"> Living room products </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Kitchen products </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Office products </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Bedroom products </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Interior decoration </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Hot products </a></li>
+                <li class="dropdown-menuLi"><a href="#"> Featured products </a></li>
+                <li class="dropdown-menuLi"><a href="#"> New product </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="button">
+        <a class="nav-link active" href="<%= Asset.url("QuanTri/Admin/examples/addProduct.jsp")%>">
+            <button class="add">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Add
+            </button>
+        </a>
+    </div>
+
+    <div class="tab" >
+        <table class="table table-hover table-responsive table-bordered" id="productdetails-table">
+            <tr>
+                /!-- San pham khong ban bi ly do gi -->
+
+                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
+                <th class="TieuDe">Numerical order</th>
+                <th class="TieuDe">Category</th>
+                <th class="TieuDe">Image</th>
+                <th class="TieuDe">Title</th>
+                <th class="TieuDe">Price</th>
+                <th class="TieuDe">Highlights</th>
+                <th class="TieuDe">New</th>
+                <th class="TieuDe">Featured</th>
+                <th class="TieuDe">Hot</th>
+                <th class="TieuDe">Display</th>
+                <th class="TieuDe">Change</th>
+                <th class="TieuDe">Erase</th>
+            </tr>
+          <c:set var="i" value="1"/>
+            <c:forEach items="${list}" var="item" >
+
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="text" name="fname" value="                    1"><br></td>
+                <td>Home page</td>
+                <td><img src="<%= Asset.url("Image/TuHabu.PNG")%>" class="image"/></td>
+                <td>Tủ HABU</td>
+                <td> 1.000.000 đ</td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            </c:forEach>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    2"><br></td>--%>
+<%--                <td>Home page</td>--%>
+<%--                <td><img src="<%= Asset.url("Image/SofaBangBella.PNG")%>" class="image"/></td>--%>
+<%--                <td>Sofa Bang Bella</td>--%>
+<%--                <td> 2.000.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    3"><br></td>--%>
+<%--                <td>Home page</td>--%>
+<%--                <td><img src="<%= Asset.url("Image/keTuHobu.PNG")%>" class="image"/></td>--%>
+<%--                <td>Kệ tủ HOBU</td>--%>
+<%--                <td> 200.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    4"><br></td>--%>
+<%--                <td>Home page</td>--%>
+<%--                <td><img src="<%= Asset.url("Image/KeTreoPoplar.PNG")%>" class="image"/></td>--%>
+<%--                <td>Kệ Treo Poplar</td>--%>
+<%--                <td> 250.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    5"><br></td>--%>
+<%--                <td>Home page</td>--%>
+<%--                <td><img src="<%= Asset.url("Image/KeTiViHoBu.PNG")%>" class="image"/></td>--%>
+<%--                <td>Kệ TiVi HoBu</td>--%>
+<%--                <td> 130.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    6"><br></td>--%>
+<%--                <td>Product</td>--%>
+<%--                <td><img src="<%= Asset.url("ImageProduct/Ghe_Bong_Bong.jpg")%>" class="image"/></td>--%>
+<%--                <td>Ghe Bong Bong</td>--%>
+<%--                <td> 1.000.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    7"><br></td>--%>
+<%--                <td>Product</td>--%>
+<%--                <td><img src="<%= Asset.url("ImageProduct/ghe_Daw_Fabric.jpg")%>" class="image"/></td>--%>
+<%--                <td>Ghế Daw Fabric</td>--%>
+<%--                <td> 100.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    8"><br></td>--%>
+<%--                <td>Product</td>--%>
+<%--                <td><img src="<%= Asset.url("ImageProduct/Den_de_ban.jpg")%>" class="image"/></td>--%>
+<%--                <td>Đèn để bàn học tập</td>--%>
+<%--                <td> 500.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    9"><br></td>--%>
+<%--                <td>Product</td>--%>
+<%--                <td><img src="<%= Asset.url("ImageProduct/ghe_Sofa.jpg")%>" class="image"/></td>--%>
+<%--                <td>Ghế Sofa</td>--%>
+<%--                <td> 55.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="text" name="fname" value="                    10"><br></td>--%>
+<%--                <td>Product</td>--%>
+<%--                <td><img src="<%= Asset.url("ImageProduct/Ghe_Diamond.jpg")%>" class="image"/></td>--%>
+<%--                <td>Ghế Diamond</td>--%>
+<%--                <td> 170.000 đ</td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><input type="checkbox" name="sport" value="check"></td>--%>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+<%--            </tr> --%>
+
+        </table>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer pt-0">
+        <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6">
+                <div class="copyright text-center  text-lg-left  text-muted">
+                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
+                    Web Furniture</a>
                 </div>
             </div>
-        </footer>
-    </div>
+
+        </div>
+    </footer>
 </div>
+
 </body>
 
+<script type="text/javascript" src="<%= Asset.url("../layout/script.jsp")%>"></script>
+<script>
+    var dt;
+    $(document).ready(function () {
+        dt = $('#productdetails-table').DataTable({
+               language:{
+                   "url": "<%= Asset.url("vendor/dt/lang/vi.json")%>"
+               },
+            }
+        );
+    } );
+</script>
 </html>
