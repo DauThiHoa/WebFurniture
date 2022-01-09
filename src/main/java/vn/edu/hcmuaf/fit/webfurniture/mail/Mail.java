@@ -1,15 +1,14 @@
-package vn.edu.hcmuaf.fit.webfurniture.mail;
+/*package vn.edu.hcmuaf.fit.webfurniture.mail;
 
 import com.google.protobuf.*;
 import com.mysql.cj.Session;
 import com.sun.jdi.connect.Transport;
 
+import javax.mail.*;
 import java.io.UnsupportedEncodingException;
 import java.net.PasswordAuthentication;
 import javax.mail.Message;
 import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
