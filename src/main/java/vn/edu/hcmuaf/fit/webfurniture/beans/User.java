@@ -11,7 +11,7 @@ public class User implements Serializable {
     private String email;
     private String phone;
     private String address;
-    private String role;
+    private int role;
 
     // none constructor
 
@@ -20,7 +20,7 @@ public class User implements Serializable {
     // full constructor
 
 
-    public User(String id, String username, String password, String fullname, String email, String phone, String address, String role) {
+    public User(String id, String username, String password, String fullname, String email, String phone, String address, int role) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -31,7 +31,7 @@ public class User implements Serializable {
         this.role = role;
     }
 
-    public User(String username, String password, String fullname, String email, String phone, String address, String role) {
+    public User(String username, String password, String fullname, String email, String phone, String address, int role) {
         this.username = username;
         this.password = password;
         this.fullname = fullname;
@@ -90,11 +90,11 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public String getRole() {
+    public int getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(int role) {
         this.role = role;
     }
 

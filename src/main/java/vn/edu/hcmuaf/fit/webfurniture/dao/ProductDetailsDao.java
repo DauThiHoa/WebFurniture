@@ -32,4 +32,10 @@ public class ProductDetailsDao {
                     .mapToBean(ProductDetails.class).first();
         });
     }
+
+    public int delete(String id) {
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("delete from productdetails where id = ? ")
+                        .bind(0 , id ).execute());
+    }
 }

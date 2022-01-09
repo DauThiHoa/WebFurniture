@@ -37,4 +37,8 @@ public class ProductDetailsService {
 
         return ProductDetailsDao.getInstance ().getById (id);
     }
+
+    public int delete(String id) {
+        return ProductDetailsDao.getInstance().delete(id);
+    }
 }
