@@ -13,7 +13,7 @@ import java.io.IOException;
 public class ProductDetailsListControllerAllProducts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-           request.setAttribute("productDetailsAll" , ProductDetailsService.getInstance().getAll());
+           request.setAttribute("productDetailsAllProduct" , ProductDetailsService.getInstance().getAll());
            request.getRequestDispatcher("AllProducts.jsp").forward(request , response);
 
     }
