@@ -181,6 +181,13 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Product.jsp" />
+      <item itemvalue="JavaScript Debug.Product.jsp (1)" />
+      <item itemvalue="JavaScript Debug.css.jsp" />
+      <item itemvalue="JavaScript Debug.index.jsp" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.jsp" />
@@ -241,7 +248,6 @@
       <workItem from="1641644143825" duration="12126000" />
       <workItem from="1641678434994" duration="963000" />
       <workItem from="1641690497817" duration="12609000" />
-<<<<<<< Updated upstream
       <workItem from="1641745821316" duration="8132000" />
       <workItem from="1641796485990" duration="4580000" />
       <workItem from="1641879859063" duration="1478000" />
@@ -251,7 +257,6 @@
       <workItem from="1641962107754" duration="2660000" />
       <workItem from="1641965604777" duration="10257000" />
       <workItem from="1641982754137" duration="4279000" />
-=======
       <workItem from="1641779633901" duration="190000" />
       <workItem from="1641869624966" duration="27000" />
       <workItem from="1641872116086" duration="130000" />
@@ -260,7 +265,6 @@
       <workItem from="1641905128631" duration="10000" />
       <workItem from="1641906675238" duration="308000" />
       <workItem from="1641910182783" duration="40000" />
->>>>>>> Stashed changes
     </task>
     <servers />
   </component>
