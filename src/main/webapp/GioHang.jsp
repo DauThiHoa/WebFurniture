@@ -470,6 +470,7 @@
     });
     $(".total-cart").html("Tổng tiền : " + ${cart.total} +"đ");
 
+
     function  updateQuantity(cart, id ,quantity){
         cart.productDetailsList[id].quantitySold = quantity ;
     }

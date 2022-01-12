@@ -475,7 +475,7 @@
     </div>
 
     <div class="tab" >
-        <table class="table table-hover table-responsive table-bordered" id="productdetails-table">
+        <table class="table table-hover table-responsive table-bordered" id="productdetails-table" style="table-layout: fixed ; width: 100%">
             <tr>
                 <!-- San pham khong ban bi ly do gi -->
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
@@ -483,7 +483,7 @@
                 <th class="TieuDe">Category</th>
                 <th class="TieuDe">Image</th>
                 <th class="TieuDe">Title</th>
-                <th style="width: 5%" class="TieuDe">Description</th>
+                <th width = "5%" style=" overflow: hidden " class="TieuDe">Description</th>
                 <th class="TieuDe">Price</th>
                 <th class="TieuDe">PriceSell</th>
                 <th class="TieuDe">Quantity</th>
@@ -495,16 +495,16 @@
             <% int i = 1 ;%>
             <c:forEach items="${list}" var="item" >
             <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
+                <td ><input type="checkbox" name="sport" value="check"></td>
                 <td style="text-align: center"><%= i++ %></td>
-                <td>Home page</td>
-                <td><img src="../${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
-                <td>${item.name}</td>
-                <td style="width: 5px">${item.description}</td>
-                <td>${item.priceNew}đ</td>
-                <td>${item.priceOld}đ</td>
+                <td >Home page</td>
+                <td ><img src="../${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
+                <td >${item.name}</td>
+                <td style=" width : 5% ; overflow : hidden ">${item.description}</td>
+                <td >${item.priceNew}đ</td>
+                <td >${item.priceOld}đ</td>
                 <td style="text-align: center">${item.quantity}</td>
-                <td>${item.status}</td>
+                <td >${item.status}</td>
                 <td><i class="fa fa-edit"></i></td>
                 <td><i class="fa fa-trash" aria-hidden="true"></i></td>
 <%--                <td> <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i></a></td>--%>
