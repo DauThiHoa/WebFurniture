@@ -55,7 +55,7 @@
                 nhập </a>
             <p class="cheo">/</p> <a
                 href="DangKy/DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
-            <p class="dangKi">Đăng ký</p></a>  </p>
+            <p class="dangKi">Đăng ký</p></a> </p>
         </div>
     </div>
     <div class="taiKhoanCuaToi">
@@ -325,8 +325,7 @@
 
             <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
-
-            <c:if test="${p.id == 'sp59'}" >
+                <c:if test="${p.id == 'sp59'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -353,7 +352,7 @@
                     </div>
                 </div>
             </div>
-            </c:if>
+                </c:if>
 
             <c:if test="${p.id == 'sp60'}" >
             <div class="sanPham">
@@ -391,7 +390,7 @@
                         <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> ${P.name}</h4>
+                        <h4 class="ten"> ${p.name}</h4>
                         <h4 class="gia"> ${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
@@ -537,7 +536,7 @@
                         </div>
                         <div class="noiDungDoTrangTri">
                             <h4 class="ten">${p.name}</h4>
-                            <h4 class="gia">${p.priceNew}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
                             <a href="cart-add?id=${p.id}">
