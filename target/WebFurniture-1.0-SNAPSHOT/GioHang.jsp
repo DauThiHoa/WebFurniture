@@ -113,7 +113,7 @@
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="Products/PhongBep.jsp">
+            <a href="PhongBep.jsp">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
@@ -469,6 +469,7 @@
         });
     });
     $(".total-cart").html("Tổng tiền : " + ${cart.total} +"đ");
+
 
     function  updateQuantity(cart, id ,quantity){
         cart.productDetailsList[id].quantitySold = quantity ;

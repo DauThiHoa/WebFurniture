@@ -95,7 +95,7 @@
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="Products/PhongBep.jsp">
+            <a href="PhongBep.jsp">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
@@ -1257,7 +1257,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="Products/PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+        <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_12.png"/>
                 <div class="noiThat">
