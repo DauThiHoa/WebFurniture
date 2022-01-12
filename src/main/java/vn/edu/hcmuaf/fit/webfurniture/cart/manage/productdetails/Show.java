@@ -23,7 +23,7 @@ public class Show extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
                 request.setAttribute("list" , list );
-                request.getRequestDispatcher("productdetails/index.jsp").forward(request, response);
+                request.getRequestDispatcher("./productdetails/index.jsp").forward(request, response);
     }
 
     /**
@@ -36,6 +36,6 @@ public class Show extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+            doGet(request , response);
     }
 }

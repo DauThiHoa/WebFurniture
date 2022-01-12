@@ -28,17 +28,17 @@ class Action extends HttpServlet {
 //        // Di chuyen den list
 //        request.setAttribute("list" , list);
 
-//        String id = request.getParameter("id");
-//        String action = request.getParameter("action");
-//        System.out.println(action);
-//        if ( action.equals("delete")){
-//        request.setAttribute("id" , id);
+        String id = request.getParameter("id");
+        String action = request.getParameter("action");
+        System.out.println(action);
+        if ( action.equals("delete")){
+        request.setAttribute("id" , id);
 //            request.getRequestDispatcher("/WEB-INF/view/productdetails/delete.jsp").forward(request, response);
 //        request.getRequestDispatcher("http://localhost:8080/WebFurniture_war_exploded/manage/productdetails").forward(request, response);
-//        }else if ( action.equals("edit")){
-//            request.setAttribute("id" , id );
+        }else if ( action.equals("edit")){
+            request.setAttribute("id" , id );
 //            request.getRequestDispatcher("/WEB-INF/view/productdetails/edit.jsp").forward(request, response);
-//        }
+        }
 
     }
 
@@ -53,13 +53,13 @@ class Action extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//     String id = request.getParameter("id");
-//     int productDetails =  ProductDetailsService.getInstance().delete(id);
-//     if ( productDetails == 1 ) {
-//         response.getWriter().write("success");
-//     }else{
-//         response.getWriter().write("fail");
-//     }
+     String id = request.getParameter("id");
+     int productDetails =  ProductDetailsService.getInstance().delete(id);
+     if ( productDetails == 1 ) {
+         response.getWriter().write("success");
+     }else{
+         response.getWriter().write("fail");
+     }
 
     }
 

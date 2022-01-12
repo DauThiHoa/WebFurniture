@@ -5,7 +5,7 @@
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
-<jsp:useBean id="list" scope="request" type="java.util.List"/>
+
 <!DOCTYPE html>
 
 <html>
@@ -476,28 +476,14 @@
 
     <div class="tab" >
         <table class="table table-hover table-responsive table-bordered" id="productdetails-table">
-            <colgroup>
-                <col style="width : 5px " span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-                <col style="width : 5px "  span="1">
-            </colgroup>
             <tr>
                 <!-- San pham khong ban bi ly do gi -->
-
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
                 <th class="TieuDe">Numerical order</th>
                 <th class="TieuDe">Category</th>
                 <th class="TieuDe">Image</th>
                 <th class="TieuDe">Title</th>
-                <th style="width: 5px" class="TieuDe">Description</th>
+                <th style="width: 5%" class="TieuDe">Description</th>
                 <th class="TieuDe">Price</th>
                 <th class="TieuDe">PriceSell</th>
                 <th class="TieuDe">Quantity</th>
@@ -505,6 +491,7 @@
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
+            <jsp:useBean id="list" scope="request" type="java.util.List"/>
             <% int i = 1 ;%>
             <c:forEach items="${list}" var="item" >
             <tr>
@@ -518,15 +505,15 @@
                 <td>${item.priceOld}đ</td>
                 <td style="text-align: center">${item.quantity}</td>
                 <td>${item.status}</td>
-<%--                    <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i>Change</a>--%>
-<%--                    <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-trash" aria-hidden="true"></i>Change</a> --%>
-                <td> <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i></a></td>
-                <td>
-                    <fron action = "<%=Asset.url("/productdetails/action")%>" method = "post" >
-                        <input type="hidden" name ="id" value="${item.id}">
-                        <button type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true"></button>
-                    </fron>
-                </td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+<%--                <td> <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i></a></td>--%>
+<%--                <td>--%>
+<%--                    <fron action = "<%=Asset.url("/productdetails/action")%>" method = "post" >--%>
+<%--                        <input type="hidden" name ="id" value="${item.id}">--%>
+<%--                        <button type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true"></button>--%>
+<%--                    </fron>--%>
+<%--                </td>--%>
             </tr>
             </c:forEach>
 <%--            <tr>--%>
@@ -686,7 +673,7 @@
 </body>
 
 <script type="text/javascript" src="<%= Asset.url("../layout/script.jsp")%>"></script>
-<script>
+<%--<script>--%>
     <%--var dt;--%>
     <%--$(document).ready(function () {--%>
     <%--    dt = $('table#productdetails-table').DataTable({--%>
@@ -696,5 +683,5 @@
     <%--        }--%>
     <%--    );--%>
     <%--} );--%>
-</script>
+<%--</script>--%>
 </html>
