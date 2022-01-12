@@ -1028,7 +1028,7 @@
             <div class="khung2">
                 <h3 class="fa2"> 1 </h3>
             </div>
-            <a href="Products/AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">
+            <a href="AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">
                 <div class="khung">
                     <h3 class="fa"> 2 </h3>
                 </div>
@@ -1042,7 +1042,7 @@
             <div class="khung">
                 <h3 class="fa"> 5 </h3>
             </div>
-            <a href="Products/AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">
+            <a href="AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">
                 <div class="khung3">
                     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                 </div>
