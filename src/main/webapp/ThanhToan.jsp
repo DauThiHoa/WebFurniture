@@ -1,5 +1,13 @@
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="com.google.gson.Gson" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+
+<jsp:useBean id="cart" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Cart"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,27 +63,39 @@
         <div class="formContainer">
             <div class="shopping-cart">
                 <ul class="shopping-cart-items">
-                    <li class="clearfix">
-                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"
-                             width="70" alt="item1"/>
-                        <span class="item-name">Tủ để áo cho bé</span>
-                        <span class="item-price">1.100.000đ</span>
-                        <span class="item-quantity">Số Lượng: 01</span>
-                    </li>
-                    <li class="clearfix">
-                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-mini-ngoi.jpg"
-                             height="70" width="70" alt="item1"/>
-                        <span class="item-name">Bàn trang điểm mini</span>
-                        <span class="item-price">650.000đ</span>
-                        <span class="item-quantity">Số Lượng: 02</span>
-                    </li>
-                    <li class="clearfix">
-                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-ngoi-bet-dep-5.jpg"
-                             height="70" width="70" alt="item1"/>
-                        <span class="item-name">Bàn trang điểm dáng thấp</span>
-                        <span class="item-price">700.000đ</span>
-                        <span class="item-quantity">Số Lượng: 02</span>
-                    </li>
+
+                    <c:set var ="ProductDetails" value="${cart.productDetailsList}" />
+                    <% int i = 1 ;%>
+                    <c:forEach items="${ProductDetails}" var="productDetails" >
+                        <li class="clearfix">
+                            <img src="${productDetails.linkImage}" height="70"
+                                 width="70" alt="item1"/>
+                            <span class="item-name">${productDetails.name}</span>
+                            <span class="item-price">${productDetails.priceNew}đ</span>
+                            <span class="item-quantity">Số Lượng:${productDetails.quantitySold}</span>
+                        </li>
+<%--                    <li class="clearfix">--%>
+<%--                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"--%>
+<%--                             width="70" alt="item1"/>--%>
+<%--                        <span class="item-name">Tủ để áo cho bé</span>--%>
+<%--                        <span class="item-price">1.100.000đ</span>--%>
+<%--                        <span class="item-quantity">Số Lượng: 01</span>--%>
+<%--                    </li>--%>
+<%--                    <li class="clearfix">--%>
+<%--                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-mini-ngoi.jpg"--%>
+<%--                             height="70" width="70" alt="item1"/>--%>
+<%--                        <span class="item-name">Bàn trang điểm mini</span>--%>
+<%--                        <span class="item-price">650.000đ</span>--%>
+<%--                        <span class="item-quantity">Số Lượng: 02</span>--%>
+<%--                    </li>--%>
+<%--                    <li class="clearfix">--%>
+<%--                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-ngoi-bet-dep-5.jpg"--%>
+<%--                             height="70" width="70" alt="item1"/>--%>
+<%--                        <span class="item-name">Bàn trang điểm dáng thấp</span>--%>
+<%--                        <span class="item-price">700.000đ</span>--%>
+<%--                        <span class="item-quantity">Số Lượng: 02</span>--%>
+<%--                    </li>--%>
+                    </c:forEach>
                 </ul>
 
             </div>

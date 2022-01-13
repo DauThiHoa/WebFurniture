@@ -33,7 +33,7 @@ public class CheckOutController extends HttpServlet {
         session.removeAttribute("cart");
         if (result) {
 //            response.sendRedirect("/WebFurniture_war_exploded/ProductDetailsList");
-            response.sendRedirect("/WebFurniture_war_exploded/ThanhToan.jsp");
+            response.sendRedirect("/WebFurniture_war_exploded/payment");
         } else {
 //            response.sendRedirect("/WebFurniture_war_exploded/ThanhToan.jsp");
             response.sendRedirect("/WebFurniture_war_exploded/ProductDetailsList");
