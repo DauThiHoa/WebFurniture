@@ -23,20 +23,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 
     <link rel="stylesheet" href="vendor/dt/datatables.min.css">
-    <style type='text/css'>table {
-        counter-reset: rowNumber -1;
-    }
-    table tr {
-        counter-increment: rowNumber ;
-    }
 
-    table tr td:nth-child(2)::before {
-        content: counter(rowNumber);
-        min-width: 2em;
-        margin-right: 0.5em;
-        font-size: 25px;
-    }
-    </style>
 </head>
 <body>
 <div id="Thanh_cong_cu">
@@ -156,37 +143,31 @@
 <h1 class="gioHang">GIỎ HÀNG</h1>
 
 <div class="tab">
-    <table class="table" border="1" id="cart">
+    <table class="table" border="1" id="cart" style="width: 100% ">
         <colgroup>
-            <col width="5%" span="1">
-            <col width="8%" span="1">
-            <col width="20%" span="1">
+            <col width="7%" span="1">
+            <col width="25%" span="1">
             <col width="20%" span="1">
             <col width="15%" span="1">
             <col width="10%" span="1">
             <col width="15%" span="1">
-            <col width="5%" span="1">
-            <col width="5%" span="1">
+            <col width="7%" span="1">
         </colgroup>
-        <tr class="thanhBang">
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
+        <tr class="thanhBang" style="height: 40px">
             <th class="TieuDeBangSanPham ">STT</th>
             <th class="TieuDeBangSanPham">SẢN PHẨM</th>
             <th class="TieuDeBangSanPham">TÊN SẢN PHẨM</th>
             <th class="TieuDeBangSanPham">GIÁ</th>
             <th class="TieuDeBangSanPham">SỐ LƯỢNG</th>
             <th class="TieuDeBangSanPham">THÀNH TIỀN</th>
-            <th class="TieuDeBangSanPham">SỬA</th>
             <th class="TieuDeBangSanPham">XÓA</th>
         </tr>
 
         <c:set var ="ProductDetails" value="${cart.productDetailsList}" />
+        <% int i = 1 ;%>
         <c:forEach items="${ProductDetails}" var="productDetails" >
         <tr class="trSanPham">
-            <td align="center"><input style=" width: 25px ; height: 25px" type="checkbox" name="sport" value="check">
-            </td>
-            <td align="center" scope="row"> <br></td>
+            <td align="center" scope="row" style=" font-size: 20px"><%= i++ %></td>
             <td align="center"><img style="text-align: center ; margin-top: 5px " src="${productDetails.linkImage}"
                                     class="imageGioHang" width="150px" height="150px"/></td>
             <td align="center" style="font-size: 20px ; color: #1fb5d4 ; font-weight: bold"><h4 class="tenSanPham">${productDetails.name}</h4></td>
@@ -195,7 +176,6 @@
                 <input pid="${productDetails.id}" class="form-control text-center changeQuantity" value="${productDetails.quantitySold}" type="number">
             </td>
             <td align="center" class="totalMoney" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
-            <td align="center"><i style="font-size: 35px ; color: #1fb5d4 ; " class="fa fa-edit"></i></td>
             <td align="center" class="productDetails-remove"><a class="link"> <i style="font-size: 35px ; color: red" class="fa fa-trash" aria-hidden="true" pid="${productDetails.id}"></i> </a></td>
         </tr>
         </c:forEach>
