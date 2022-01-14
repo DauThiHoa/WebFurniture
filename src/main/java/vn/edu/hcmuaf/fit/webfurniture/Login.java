@@ -20,10 +20,10 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         if (UserServices.getInstance().checkLogin(email, password)) {
 //            response.getWriter().println("12");
-            response.sendRedirect("http://localhost:8080/WebFurniture_war_exploded/ProductDetailsList");
+            response.sendRedirect("/ProductDetailsList");
         }else {
             request.setAttribute("error", "email or password is correct");
-            response.sendRedirect("http://localhost:8080/WebFurniture_war_exploded/DangNhap/DangNhap.jsp");
+            response.sendRedirect("/DangNhap/DangNhap.jsp");
         }
     }
 }
