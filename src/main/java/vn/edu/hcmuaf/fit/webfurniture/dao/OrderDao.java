@@ -20,7 +20,8 @@ public class OrderDao {
 
     public boolean create(User user, Cart cart) {
         int orderId = JDBIConnector.get().withHandle(h -> {
-            ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ?)")
+            int i = 0 ;
+            ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
 //                  .bind(0 , user.getId())
                     .bind (0, "idCustomer(User)")
                     .bind(1, cart.getTotal())
@@ -32,13 +33,13 @@ public class OrderDao {
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
             for (ProductDetails productDetails : cart.getProductDetailsList()){
-                sum += h.createUpdate("INSERT INTO orderdetails ( idOrder , idProductDetails , quantity , price , discount , totalMoney  ) VALUES (?,?,?,?,?,?)")
+                sum += h.createUpdate("INSERT INTO orderdetails ( idOrder , idProductDetails , quantitySold , price , discount , totalMoney  ) VALUES (?,?,?,?,?,?)")
                         .bind(0 , orderId )
                         .bind(1 , productDetails.getId())
                         .bind(2 , productDetails.getQuantitySold())
                         .bind(3 , productDetails.getPriceNew())
-                        .bind(4 ,  (productDetails.getPriceNew()) - productDetails.getPriceNew() * 10 / 100 )
-                        .bind(5 , ( productDetails.getTotalMoney())).execute();
+                        .bind(4 ,   productDetails.getPriceNew() * 90 / 100 )
+                        .bind(5 , ( productDetails.getPriceNew()) * (productDetails.getQuantitySold()) ).execute();
 //                        .bind(4 ,  productDetails.getPriceNew() * 10 / 100 )
 //                        .bind(5 , ( productDetails.getTotalMoney()) - (productDetails.getPriceNew() * 10 / 100)).execute();
             }

@@ -7,7 +7,6 @@
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 
-<jsp:useBean id="cart" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Cart"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,15 +63,15 @@
             <div class="shopping-cart">
                 <ul class="shopping-cart-items">
 
-                    <c:set var ="ProductDetails" value="${cart.productDetailsList}" />
+                    <jsp:useBean id="OrderDetailsAll" scope="request" type="java.util.List"/>
                     <% int i = 1 ;%>
-                    <c:forEach items="${ProductDetails}" var="productDetails" >
+                    <c:forEach items="${OrderDetailsAll}" var="order" >
                         <li class="clearfix">
-                            <img src="${productDetails.linkImage}" height="70"
+                            <img src="${order.linkImage}" height="70"
                                  width="70" alt="item1"/>
-                            <span class="item-name">${productDetails.name}</span>
-                            <span class="item-price">${productDetails.priceNew}đ</span>
-                            <span class="item-quantity">Số Lượng:${productDetails.quantitySold}</span>
+                            <span class="item-name">${order.name}</span>
+                            <span class="item-price">${order.price}đ</span>
+                            <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
                         </li>
 <%--                    <li class="clearfix">--%>
 <%--                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"--%>

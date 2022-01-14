@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.payment;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Details;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
@@ -19,26 +20,24 @@ public class OrderDetailsService {
     public OrderDetailsService(){
 
     }
-    public List <ProductDetails> getAll () {
+    public List <Details> getAll () {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails").mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+            return handle.createQuery("select * from orderdetails").mapToBean(Details.class).stream().collect(Collectors.toList());
         });
     }
 
-    public ProductDetails getProductDetails ( String id ){
+    public Details getOrderDetails (){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where id = ? ")
-                    .bind (0 , id)
-                    .mapToBean(ProductDetails.class).first();
+            return handle.createQuery(" SELECT * FROM productdetails pd JOIN orderdetails od WHERE pd.id = od.idProductDetails")
+                    .mapToBean(Details.class).first();
         });
     }
 
-    public ProductDetails getById(String id ) {
+//    public Details getById(String id ) {
+//        return ProductDetailsDao.getInstance ().getById (id);
+//    }
 
-        return ProductDetailsDao.getInstance ().getById (id);
-    }
-
-    public int delete(String id) {
-        return ProductDetailsDao.getInstance().delete(id);
-    }
+//    public int delete(String id) {
+//        return ProductDetailsDao.getInstance().delete(id);
+//    }
 }

@@ -1,10 +1,10 @@
 package vn.edu.hcmuaf.fit.webfurniture.beans;
 
 public class Details {
-     private String id ;
+     private String idOrderDetails ;
      private String idOrder ;
      ProductDetails productDetails ;
-     private int quantity ;
+     private int quantitySold ;
      private int price ;
      private int discount ;
      private int totalMoney ;
@@ -12,22 +12,22 @@ public class Details {
      public Details( ) {
      }
 
-     public Details(String id, String idOrder, ProductDetails productDetails, int quantity, int price, int discount, int totalMoney) {
-          this.id = id;
+     public Details(String idOrderDetails, String idOrder, ProductDetails productDetails, int quantitySold, int price, int discount, int totalMoney) {
+          this.idOrderDetails = idOrderDetails;
           this.idOrder = idOrder;
           this.productDetails = productDetails;
-          this.quantity = quantity;
+          this.quantitySold = quantitySold;
           this.price = price;
           this.discount = discount;
           this.totalMoney = totalMoney;
      }
 
-     public String getId() {
-          return id;
+     public String getIdOrderDetails() {
+          return idOrderDetails;
      }
 
-     public void setId(String id) {
-          this.id = id;
+     public void setIdOrderDetails(String idOrderDetails) {
+          this.idOrderDetails = idOrderDetails;
      }
 
      public String getIdOrder() {
@@ -46,12 +46,12 @@ public class Details {
           this.productDetails = productDetails;
      }
 
-     public int getQuantity() {
-          return quantity;
+     public int getQuantitySold() {
+          return quantitySold;
      }
 
-     public void setQuantity(int quantity) {
-          this.quantity = quantity;
+     public void setQuantitySold(int quantitySold) {
+          this.quantitySold = quantitySold;
      }
 
      public int getPrice() {
