@@ -336,7 +336,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -364,7 +364,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -392,7 +392,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -420,7 +420,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -449,7 +449,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -477,7 +477,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -505,7 +505,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -533,7 +533,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -562,7 +562,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -590,7 +590,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -618,7 +618,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -646,7 +646,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -675,7 +675,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -703,7 +703,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -731,7 +731,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -759,7 +759,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -787,7 +787,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -815,7 +815,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -843,7 +843,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -871,7 +871,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -899,7 +899,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -927,7 +927,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -955,7 +955,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -983,7 +983,7 @@
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
