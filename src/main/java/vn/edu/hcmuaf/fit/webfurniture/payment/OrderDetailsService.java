@@ -18,20 +18,36 @@ public class OrderDetailsService {
         return instance;
     }
     public OrderDetailsService(){
-
     }
+
     public List <Details> getAll () {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from orderdetails").mapToBean(Details.class).stream().collect(Collectors.toList());
         });
     }
 
-    public Details getOrderDetails (){
+    public List <ProductDetails> getProductDetailsAll (){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" SELECT * FROM productdetails pd JOIN orderdetails od WHERE pd.id = od.idProductDetails")
-                    .mapToBean(Details.class).first();
+            return handle.createQuery(" SELECT * FROM productdetails ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
+    public ProductDetails getProductDetailsID (String idProductDetails){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery(" SELECT * FROM productdetails where id in ( select idProductDetails from orderdetails where idProductDetails = ?)")
+                    .bind(0,idProductDetails )
+                    .mapToBean(ProductDetails.class).first();
+//            .mapToBean(Details.class).stream().collect(Collectors.toList());
+        });
+    }
+    public String getProductDetails (String idProductDetails){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select linkImage from productdetails where id in ( select idProductDetails from orderdetails where idProductDetails = ?)")
+                    .bind(0,idProductDetails ).toString();
+//                    .execute();
+        });
+    }
+
 
 //    public Details getById(String id ) {
 //        return ProductDetailsDao.getInstance ().getById (id);

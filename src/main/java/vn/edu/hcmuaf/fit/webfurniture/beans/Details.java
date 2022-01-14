@@ -3,7 +3,7 @@ package vn.edu.hcmuaf.fit.webfurniture.beans;
 public class Details {
      private String idOrderDetails ;
      private String idOrder ;
-     ProductDetails productDetails ;
+     private String idProductDetails ;
      private int quantitySold ;
      private int price ;
      private int discount ;
@@ -12,10 +12,10 @@ public class Details {
      public Details( ) {
      }
 
-     public Details(String idOrderDetails, String idOrder, ProductDetails productDetails, int quantitySold, int price, int discount, int totalMoney) {
+     public Details(String idOrderDetails, String idOrder, String idProductDetails, int quantitySold, int price, int discount, int totalMoney) {
           this.idOrderDetails = idOrderDetails;
           this.idOrder = idOrder;
-          this.productDetails = productDetails;
+          this.idProductDetails = idProductDetails;
           this.quantitySold = quantitySold;
           this.price = price;
           this.discount = discount;
@@ -38,12 +38,12 @@ public class Details {
           this.idOrder = idOrder;
      }
 
-     public ProductDetails getProductDetails() {
-          return productDetails;
+     public String getIdProductDetails() {
+          return idProductDetails;
      }
 
-     public void setProductDetails(ProductDetails productDetails) {
-          this.productDetails = productDetails;
+     public void setIdProductDetails(String idProductDetails) {
+          this.idProductDetails = idProductDetails;
      }
 
      public int getQuantitySold() {

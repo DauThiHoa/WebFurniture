@@ -64,12 +64,14 @@
                 <ul class="shopping-cart-items">
 
                     <jsp:useBean id="OrderDetailsAll" scope="request" type="java.util.List"/>
-                    <% int i = 1 ;%>
                     <c:forEach items="${OrderDetailsAll}" var="order" >
+                          <jsp:useBean id="getProductDetailsAll" scope="request" type="java.util.List"/>
+                          <c:forEach items="${getProductDetailsAll}" var="p">
+                              <c:if test="${p.id == order.idProductDetails}" >
                         <li class="clearfix">
-                            <img src="${order.linkImage}" height="70"
+                            <img src="${p.linkImage}" height="70"
                                  width="70" alt="item1"/>
-                            <span class="item-name">${order.name}</span>
+                            <span class="item-name">${p.name}</span>
                             <span class="item-price">${order.price}đ</span>
                             <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
                         </li>
@@ -94,6 +96,8 @@
 <%--                        <span class="item-price">700.000đ</span>--%>
 <%--                        <span class="item-quantity">Số Lượng: 02</span>--%>
 <%--                    </li>--%>
+                                  </c:if >
+                          </c:forEach>
                     </c:forEach>
                 </ul>
 

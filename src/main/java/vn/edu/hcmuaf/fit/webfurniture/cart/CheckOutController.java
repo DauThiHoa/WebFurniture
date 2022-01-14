@@ -39,6 +39,4 @@ public class CheckOutController extends HttpServlet {
             response.sendRedirect("/WebFurniture_war_exploded/ProductDetailsList");
         }
     }
-
-
 }

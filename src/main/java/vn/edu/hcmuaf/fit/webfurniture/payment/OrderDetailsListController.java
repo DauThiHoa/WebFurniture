@@ -13,8 +13,11 @@ import java.io.IOException;
 public class OrderDetailsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-           String idProductDetails =  request.getParameter("idProductDetails");
-           request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getOrderDetails());
+//           String idProductDetails =  request.getParameter("idProductDetails");
+//           request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
+           request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
+//           request.setAttribute("ProductDetailsID" , OrderDetailsService.getInstance().getProductDetailsID("sp2"));
+           request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
            request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
 
     }

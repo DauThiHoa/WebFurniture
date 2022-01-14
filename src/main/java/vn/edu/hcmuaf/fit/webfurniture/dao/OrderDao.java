@@ -38,7 +38,7 @@ public class OrderDao {
                         .bind(1 , productDetails.getId())
                         .bind(2 , productDetails.getQuantitySold())
                         .bind(3 , productDetails.getPriceNew())
-                        .bind(4 ,   productDetails.getPriceNew() * 90 / 100 )
+                        .bind(4 ,   productDetails.getPriceNew() * 0.5 / 100 )
                         .bind(5 , ( productDetails.getPriceNew()) * (productDetails.getQuantitySold()) ).execute();
 //                        .bind(4 ,  productDetails.getPriceNew() * 10 / 100 )
 //                        .bind(5 , ( productDetails.getTotalMoney()) - (productDetails.getPriceNew() * 10 / 100)).execute();
