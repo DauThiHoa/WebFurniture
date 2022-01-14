@@ -6,6 +6,7 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,14 +68,19 @@
                     <c:forEach items="${OrderDetailsAll}" var="order" >
                           <jsp:useBean id="getProductDetailsAll" scope="request" type="java.util.List"/>
                           <c:forEach items="${getProductDetailsAll}" var="p">
+                              <c:if test="${OrderDetailsAll.get(OrderDetailsAll.size() - 1).idOrder == order.idOrder}" >
                               <c:if test="${p.id == order.idProductDetails}" >
+                                  <% int i = 0 ;%>
+                                  <c:set var="i" value="${order.discount}">
                         <li class="clearfix">
                             <img src="${p.linkImage}" height="70"
                                  width="70" alt="item1"/>
                             <span class="item-name">${p.name}</span>
                             <span class="item-price">${order.price}đ</span>
                             <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
+                            <span class="item-quantity"><%= i %></span>
                         </li>
+                                  </c:set>
 <%--                    <li class="clearfix">--%>
 <%--                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"--%>
 <%--                             width="70" alt="item1"/>--%>
@@ -82,21 +88,8 @@
 <%--                        <span class="item-price">1.100.000đ</span>--%>
 <%--                        <span class="item-quantity">Số Lượng: 01</span>--%>
 <%--                    </li>--%>
-<%--                    <li class="clearfix">--%>
-<%--                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-mini-ngoi.jpg"--%>
-<%--                             height="70" width="70" alt="item1"/>--%>
-<%--                        <span class="item-name">Bàn trang điểm mini</span>--%>
-<%--                        <span class="item-price">650.000đ</span>--%>
-<%--                        <span class="item-quantity">Số Lượng: 02</span>--%>
-<%--                    </li>--%>
-<%--                    <li class="clearfix">--%>
-<%--                        <img src="NoiThatPhongNgu/Image_NTTTPhongngu/ban-trang-diem-ngoi-bet-dep-5.jpg"--%>
-<%--                             height="70" width="70" alt="item1"/>--%>
-<%--                        <span class="item-name">Bàn trang điểm dáng thấp</span>--%>
-<%--                        <span class="item-price">700.000đ</span>--%>
-<%--                        <span class="item-quantity">Số Lượng: 02</span>--%>
-<%--                    </li>--%>
                                   </c:if >
+                              </c:if >
                           </c:forEach>
                     </c:forEach>
                 </ul>
