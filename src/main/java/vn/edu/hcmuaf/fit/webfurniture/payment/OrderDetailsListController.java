@@ -16,8 +16,8 @@ public class OrderDetailsListController extends HttpServlet {
 //           String idProductDetails =  request.getParameter("idProductDetails");
 //           request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
            request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
-//           request.setAttribute("ProductDetailsID" , OrderDetailsService.getInstance().getProductDetailsID("sp2"));
            request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
+           request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
            request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
 
     }

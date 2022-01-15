@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.payment;
 
+import org.apache.catalina.filters.ExpiresFilter;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Details;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
@@ -33,25 +34,11 @@ public class OrderDetailsService {
         });
     }
     // SUM DISCOUNT ( KHUYEN MAI )
-    public int sumDiscount (){
+    public int sumDiscount(){
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails )")
-                    .hashCode();
-        });
-    }
-    public ProductDetails getProductDetailsID (String idProductDetails){
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" SELECT * FROM productdetails where id in ( select idProductDetails from orderdetails where idProductDetails = ?)")
-                    .bind(0,idProductDetails )
-                    .mapToBean(ProductDetails.class).first();
-//            .mapToBean(Details.class).stream().collect(Collectors.toList());
-        });
-    }
-    public String getProductDetails (String idProductDetails){
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select linkImage from productdetails where id in ( select idProductDetails from orderdetails where idProductDetails = ?)")
-                    .bind(0,idProductDetails ).toString();
-//                    .execute();
+                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails )")
+                    .mapTo(Integer.class).findFirst().get();
         });
     }
 
@@ -63,4 +50,5 @@ public class OrderDetailsService {
 //    public int delete(String id) {
 //        return ProductDetailsDao.getInstance().delete(id);
 //    }
+
 }

@@ -18,7 +18,9 @@
 </head>
 <body>
 <h1 class="tieuDe" style="text-align: center;">WEB FURNITURE</h1>
-<p class="duongDan from" style="text-align: left; margin-left: 160px; font-family: Tahoma">Giỏ hàng > Thanh toán</p>
+<p class="duongDan from" style="text-align: left; margin-left: 160px; font-family: Tahoma">
+    <a href="./cart" style="text-decoration: none ; color: black">
+        Giỏ hàng </a> > Thanh toán</p>
 <div class="Fields">
     <div>
         <div class="formContainer">
@@ -101,12 +103,13 @@
             </h3>
 
             <p class="from" style="color: #555555">
-                Tạm Tính
-                <span class="price from" style="margin-left: 240px; color: #555555">50.000đ</span>
+                Giảm giá
+                <span class="price from" style="margin-left: 240px; color: #555555"></span>
             </p>
             <p class="from" style="color: #555555">
                 Phí Ship
-                <span class="price from" style="margin-left: 240px; color: #555555">100.000đ</span>
+                <jsp:useBean id="sumDiscount" scope="request" type="java.lang.Integer"/>
+                <span class="price from" style="margin-left: 240px; color: #555555">${sumDiscount}đ</span>
             </p>
             <div>
                 <p class="from" style="color: #555555">
@@ -118,4 +121,10 @@
     </div>
 </div>
 </body>
+<script>
+    const input_1 = document.querySelector('.noiDung_2 .input_1');
+    const price = document.querySelector('.from .price');
+    price.innerHTML = input_1.nodeValue + "đ";
+
+</script>
 </html>
