@@ -32,6 +32,13 @@ public class OrderDetailsService {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
+    // SUM DISCOUNT ( KHUYEN MAI )
+    public int sumDiscount (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails )")
+                    .hashCode();
+        });
+    }
     public ProductDetails getProductDetailsID (String idProductDetails){
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery(" SELECT * FROM productdetails where id in ( select idProductDetails from orderdetails where idProductDetails = ?)")

@@ -49,17 +49,17 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap/DangNhap.jsp">
+        <a href="DangNhap.jsp">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="DangNhap/DangNhap.jsp">Đăng
+                    href="DangNhap.jsp">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="DangKy/DangKy.jsp">
+                href="DangKy.jsp">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>

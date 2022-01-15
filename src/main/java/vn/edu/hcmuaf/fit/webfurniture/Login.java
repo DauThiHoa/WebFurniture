@@ -18,12 +18,13 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        request.getRequestDispatcher("DangNhap.jsp").forward(request, response);
         if (UserServices.getInstance().checkLogin(email, password)) {
 //            response.getWriter().println("12");
             response.sendRedirect("/ProductDetailsList");
         }else {
             request.setAttribute("error", "email or password is correct");
-            response.sendRedirect("/DangNhap/DangNhap.jsp");
+            response.sendRedirect("DangNhap.jsp");
         }
     }
 }

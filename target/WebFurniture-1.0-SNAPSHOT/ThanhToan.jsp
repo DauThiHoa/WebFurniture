@@ -70,17 +70,13 @@
                           <c:forEach items="${getProductDetailsAll}" var="p">
                               <c:if test="${OrderDetailsAll.get(OrderDetailsAll.size() - 1).idOrder == order.idOrder}" >
                               <c:if test="${p.id == order.idProductDetails}" >
-                                  <% int i = 0 ;%>
-                                  <c:set var="i" value="${order.discount}">
                         <li class="clearfix">
                             <img src="${p.linkImage}" height="70"
                                  width="70" alt="item1"/>
                             <span class="item-name">${p.name}</span>
                             <span class="item-price">${order.price}đ</span>
                             <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
-                            <span class="item-quantity"><%= i %></span>
                         </li>
-                                  </c:set>
 <%--                    <li class="clearfix">--%>
 <%--                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"--%>
 <%--                             width="70" alt="item1"/>--%>

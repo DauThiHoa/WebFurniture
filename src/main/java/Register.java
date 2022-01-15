@@ -19,11 +19,12 @@ public class Register extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
+        request.getRequestDispatcher("DangKy.jsp").forward(request, response);
         if (UserServices.getInstance().register(name, password, email)) {
-            response.sendRedirect("http://localhost:8080/WebFurniture_war_exploded/DangNhap/DangNhap.jsp");
+            response.sendRedirect("DangNhap.jsp");
         } else {
             request.setAttribute("error", "Username exits");
-            request.getRequestDispatcher("http://localhost:8080/WebFurniture_war_exploded/DangKy/DangKy.jsp").forward(request, response);
+            request.getRequestDispatcher("DangKy.jsp").forward(request, response);
         }
     }
 }
