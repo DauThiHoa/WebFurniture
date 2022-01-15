@@ -1,8 +1,10 @@
 package vn.edu.hcmuaf.fit.webfurniture.payment;
 
 //import org.apache.catalina.filters.ExpiresFilter;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Details;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
+import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
@@ -49,6 +51,22 @@ public class OrderDetailsService {
         });
     }
 
+    public boolean insert(String name, String email, String phone, String address, String bank, String cardNumber) {
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+                sum += h.createUpdate("insert into customer (name , address ,phone, email ,bank, cardNumber ) values(?,?,?,?,?,?)")
+                        .bind(0 , name )
+                        .bind(1 , address)
+                        .bind(2 , phone)
+                        .bind(3 , email)
+                        .bind(4 ,   bank)
+                        .bind(5 , cardNumber )
+                        .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        return true;
+    }
 
 //    public Details getById(String id ) {
 //        return ProductDetailsDao.getInstance ().getById (id);

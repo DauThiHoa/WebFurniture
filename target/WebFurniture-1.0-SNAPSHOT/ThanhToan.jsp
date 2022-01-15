@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <title>THANH TOÁN</title>
     <link rel="stylesheet" href="ThanhToan.css">
@@ -24,40 +25,40 @@
 <div class="Fields">
     <div>
         <div class="formContainer">
-            <form>
+            <form action="payment" method="POST">
                 <div class="Fields">
                     <div>
                         <h3>Thông Tin Khách hàng</h3>
-                        <label class="from" for="fname">Họ Và Tên</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Bùi Hoàng Tuấn Anh"/>
+                        <label class="from" for="fname" >Họ Và Tên</label>
+                        <input type="text" id="fname" name="firstname" value="kk" placeholder="Bùi Hoàng Tuấn Anh"/>
                         <label class="from" for="email"> Email</label>
-                        <input type="text" id="email" name="email" placeholder="19130006@st.hcmuaf.edu.vn"/>
+                        <input type="text" id="email" name="email" value="lll" placeholder="19130006@st.hcmuaf.edu.vn"/>
                         <label class="from" for="adr"> Số Điện Thoại </label>
-                        <input type="text" id="address" name="address" placeholder="0123456789"/>
+                        <input type="text" id="address" name="phone" value="ppp" placeholder="0123456789"/>
                         <label class="from" for="adr"> Địa Chỉ </label>
-                        <input type="text" id="adr" name="address"
+                        <input type="text" id="adr" name="address" value="kkk"
                                placeholder="Xã Phúc Tân - huyện Lâm Hà - tỉnh Lâm Đồng"/>
                     </div>
                     <div>
                         <h3>Thanh Toán</h3>
                         <label class="from" for="cname">Ngân hàng </label>
-                        <input type="text" id="cardname" name="cardname" placeholder="BIDV, ACB, Vietcombank,...  "/>
+                        <input type="text" id="cardname" name="cardname" value="" placeholder="BIDV, ACB, Vietcombank,...  "/>
                         <label class="from" for="ccnum">Số Thẻ</label>
-                        <input type="text" id="cardnumber" name="cardnumber" placeholder="4129 7501 2345 6789"/>
+                        <input type="text" id="cardnumber" name="cardnumber" value="" placeholder="4129 7501 2345 6789"/>
                     </div>
                     <div>
                         <h3 style="margin-left: 20px">Phương Thức Nhận Hàng</h3>
                         <label class="from" for="cname">Giao Hàng</label>
-                        <input type="checkbox" id="cname" name="cardname"
+                        <input type="checkbox" id="cname" name="delivery" value=""
                                style="margin-left: 20px ; width: 10% ; height: 10%"/>
                         <label class="from" for="ccnum" style="margin-top: 55px">Nhận Tại Cửa Hàng</label>
-                        <input style="margin-left: 20px ; width: 10% ; height: 10%" type="checkbox" id="ccnum"
-                               name="cardnumber"/>
+                        <input style="margin-left: 20px ; width: 10% ; height: 10%" type="checkbox" id="ccnum" value=""
+                               name="store"/>
                     </div>
                 </div>
             </form>
-            <a href="../WebFurniture_war_exploded/payment-success">
-                <input type="submit" value="Continue to checkout" class="checkout"/>
+            <a href="../WebFurniture_war_exploded/PaymentSuccess">
+                <input type="submit" value="Continue to checkout" class="checkout" />
             </a>
         </div>
     </div>
@@ -104,7 +105,7 @@
 
             <p class="from" style="color: #555555">
                 Giảm giá
-                <span class="price from" style="margin-left: 240px; color: #555555" ></span>
+                <span class="price from"  style="margin-left: 240px; color: #555555" ></span>
             </p>
             <p class="from" style="color: #555555">
                 Phí Ship
@@ -127,5 +128,6 @@
         document.querySelector(".from .price").innerHTML =
             document.querySelector(".input_1").value +"đ";
     }
+    Custom
 </script>
 </html>
