@@ -195,12 +195,12 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.OrderDetailsService" />
       <item itemvalue="JavaScript Debug.Product.jsp" />
       <item itemvalue="JavaScript Debug.Product.jsp (1)" />
       <item itemvalue="JavaScript Debug.css.jsp" />
       <item itemvalue="JavaScript Debug.index.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
-      <item itemvalue="Application.OrderDetailsService" />
     </list>
     <recent_temporary>
       <list>
@@ -292,6 +292,7 @@
       <workItem from="1642201477788" duration="3401000" />
       <workItem from="1642207099148" duration="2382000" />
       <workItem from="1642201477788" duration="4989000" />
+      <workItem from="1642229493603" duration="647000" />
     </task>
     <servers />
   </component>

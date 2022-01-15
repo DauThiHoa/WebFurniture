@@ -122,9 +122,9 @@
 </div>
 </body>
 <script>
-    const input_1 = document.querySelector('.noiDung_2 .input_1');
+    const input_1 = document.querySelector('.input_1');
     const price = document.querySelector('.from .price');
-    price.innerHTML = input_1.nodeValue + "đ";
-
+    price.innerHTML = input_1.value + "đ";
+    price.setAttributeNode(input_1.value + "đ");
 </script>
 </html>
