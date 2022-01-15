@@ -34,7 +34,7 @@ public class UserServices {
         }
     }
 
-    public boolean register(String username, String password, String confirm, String email, String phone, String address) {
+    public boolean register(String username, String password, String confirm) {
         if (users.containsKey(username)) {
             return false;
         } else {

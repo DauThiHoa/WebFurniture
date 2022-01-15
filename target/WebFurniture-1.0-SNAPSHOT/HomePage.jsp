@@ -85,7 +85,7 @@
         </a>
 
         <div id="top">
-            <a href="Products/PhongKhach.jsp">
+            <a href="PhongKhach.jsp">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
@@ -1268,7 +1268,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="Products/PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+        <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_5.png"/>
                 <div class="noiThat">

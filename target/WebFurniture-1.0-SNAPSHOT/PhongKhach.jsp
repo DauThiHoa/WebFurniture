@@ -1,4 +1,10 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +12,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img.png" type="image/png" class="icon">
+    <link rel="icon" href="Products/img.png" type="image/png" class="icon">
     <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM - NỘI THẤT PHÒNG KHÁCH </title>
     <link rel="stylesheet" href="PhongKhach.css">
 
@@ -26,7 +32,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
-        <a href="../LienHe/LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
+        <a href="LienHe/LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
             <div>
                 <i class="fa fa-phone-square" aria-hidden="true"></i>
             </div>
@@ -38,17 +44,17 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="../DangNhap/DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="DangNhap/DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="../DangNhap/DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">Đăng
+                    href="DangNhap/DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="../DangKy/DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+                href="DangKy/DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
@@ -59,7 +65,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="../GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -73,33 +79,33 @@
 
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
-        <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
-        <a href="../AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
+        <a href="AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="../Products/PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Products/PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="Products/PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.jsp">
+            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -107,22 +113,22 @@
         </div>
 
     </div>
-    <a href="../HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
+    <a href="HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
     </a>
-    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=tbj9541mbers5cne53u03tmg0j">
+    <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=tbj9541mbers5cne53u03tmg0j">
         <div id="heThongCuaHang">
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="../TinTuc/TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="TinTuc/TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
     </a>
-    <a href="../LienHe/LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
+    <a href="LienHe/LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
         <div id="lienHe">
             <h3 class="ten"> LIÊN HỆ </h3>
         </div>
@@ -143,27 +149,27 @@
                 <h2 class="ten"> Danh Mục Sản Phẩm </h2>
             </div>
             <div class="noiDung">
-                <a href="../Products/PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+                <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Khách</p>
                     </div>
                 </a>
-                <a href="../Products/PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="Products/PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Ngủ </p>
                     </div>
                 </a>
-                <a href="../PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Bếp</p>
                     </div>
                 </a>
-                <a href="../Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
                 </a>
-                <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội thất Đồ Trang Trí</p>
                     </div>
@@ -249,31 +255,31 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai">
-                <a href="../NoiThatPhongKhach/BanTra.jsp?_ijt=fk2t0r4e54mbcbqcu89nrkltgm&_ij_reload=RELOAD_ON_SAVE">
-                    <img class="anh" src="../ImageProduct/ban-tra-phong-khach.webp"/>
+                <a href="NoiThatPhongKhach/BanTra.jsp?_ijt=fk2t0r4e54mbcbqcu89nrkltgm&_ij_reload=RELOAD_ON_SAVE">
+                    <img class="anh" src="ImageProduct/ban-tra-phong-khach.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn trà</h3>
                 </a>
 
             </div>
             <div class="loai">
-                <a href="../NoiThatPhongKhach/GheSofa.jsp?_ijt=fk2t0r4e54mbcbqcu89nrkltgm&_ij_reload=RELOAD_ON_SAVE">
-                    <img class="anh" src="../ImageProduct/Sofa_nau_co_dien.jpg"/>
+                <a href="NoiThatPhongKhach/GheSofa.jsp?_ijt=fk2t0r4e54mbcbqcu89nrkltgm&_ij_reload=RELOAD_ON_SAVE">
+                    <img class="anh" src="ImageProduct/Sofa_nau_co_dien.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế Sofa</h3>
                 </a>
             </div>
             <div class="loai">
-                <img class="anh" src="../ImageProduct/ke-tivi.jpg"/>
+                <img class="anh" src="ImageProduct/ke-tivi.jpg"/>
                 <h3 class="tenLoaiDoTrangTri">Kệ tivi</h3>
             </div>
             <div class="loai">
-                <a href="../NoiThatPhongKhach/GoiSofa.jsp?_ijt=5a9ujc352almkagjduojj3h8io&_ij_reload=RELOAD_ON_SAVE">
-                    <img class="anh" src="../NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri4.PNG"/>
+                <a href="NoiThatPhongKhach/GoiSofa.jsp?_ijt=5a9ujc352almkagjduojj3h8io&_ij_reload=RELOAD_ON_SAVE">
+                    <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri4.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Gối sofa</h3>
                 </a>
             </div>
             <div class="loai1">
-                <a href="../NoiThatPhongKhach/RemCua.jsp?_ijt=5a9ujc352almkagjduojj3h8io&_ij_reload=RELOAD_ON_SAVE">
-                    <img class="anh" src="../NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri5.PNG"/>
+                <a href="NoiThatPhongKhach/RemCua.jsp?_ijt=5a9ujc352almkagjduojj3h8io&_ij_reload=RELOAD_ON_SAVE">
+                    <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri5.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Rèm cửa </h3>
                 </a>
             </div>
@@ -313,19 +319,27 @@
         </div>
 
         <div id="CacSanPham">
-
+            <jsp:useBean id="productDetailsLivingRoom" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsLivingRoom}">
+            <c:if test="${p.id == 'sp59'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="../ImageProduct/Ban_Eames_tron.webp"/>
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                       <!-- <img class="anh" src="ImageProduct/Ban_Eames_tron.webp"/>
 
                     </div>
                     <div class="noiDungDoTrangTri">
                         <h4 class="ten"> Bàn Eames tròn</h4>
                         <h4 class="gia"> 590.000đ</h4>
-                    </div>
+                    </div>-->
                     <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
+                        <a href="GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -333,7 +347,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
+                        <a href="ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -341,18 +355,26 @@
                     </div>
                 </div>
             </div>
+            </c:if>
+            <c:if test="${p.id == 'sp60'}">
 
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="../ImageProduct/Ban_lam_viec_go.jpg"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bàn làm việc đẹp</h4>
-                        <h4 class="gia"> 720.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
+                    <!--<img class="anh" src="ImageProduct/Ban_lam_viec_go.jpg"/>
+            </div>
+            <div class="noiDungDoTrangTri">
+                <h4 class="ten"> Bàn làm việc đẹp</h4>
+                <h4 class="gia"> 720.000đ</h4>
+            </div>-->
                     <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
+                        <a href="GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -360,7 +382,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
+                        <a href="ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -368,18 +390,94 @@
                     </div>
                 </div>
             </div>
+            </c:if>
+            <c:if test="${p.id == 's25'}">
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <!--<img class="anh" src="ImageProduct/bo-ban-khach.webp"/>
+            </div>
+            <div class="noiDungDoTrangTri">
+                <h4 class="ten"> Bộ bàn khách hiện đại</h4>
+                <h4 class="gia"> 3.400.000đ</h4>
+            </div>-->
+                    <div class="nutgiohang">
+                        <a href="GioHang.jsp">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </c:if>
+            <c:if test="${p.id == 's26'}">
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <!--<img class="anh" src="ImageProduct/ghe-sofa-phong-khach-gia-dinh.webp"/>
+            </div>
+            <div class="noiDungDoTrangTri">
+                <h4 class="ten"> Ghế sofa phòng khách gia đình</h4>
+                <h4 class="gia"> 3.150.000đ</h4>
+            </div>-->
+                    <div class="nutgiohang">
+                        <a href="GioHang.jsp">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </c:if>
+            <c:if test="${p.id == 's27'}">
 
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="../ImageProduct/bo-ban-khach.webp"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bộ bàn khách hiện đại</h4>
-                        <h4 class="gia"> 3.400.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
+                    <!--<img class="anh" src="ImageProduct/Dong-ho-treo-tuong-thiet-ke.webp"/>
+            </div>
+            <div class="noiDungDoTrangTri">
+                <h4 class="ten"> Đồng hồ treo tường phòng khách</h4>
+                <h4 class="gia"> 300.000đ</h4>
+            </div>-->
                     <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
+                        <a href="GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -387,7 +485,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
+                        <a href="ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -395,18 +493,25 @@
                     </div>
                 </div>
             </div>
+            </c:if>
+            <c:if test="${p.id == 's28'}">
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-
-                        <img class="anh" src="../ImageProduct/ghe-sofa-phong-khach-gia-dinh.webp"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Ghế sofa phòng khách gia đình</h4>
-                        <h4 class="gia"> 3.150.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
+                    <!--<img class="anh" src="ImageProduct/Ghe-don-boc-da-cao-cap-cho-phong-khach.webp"/>
+            </div>
+            <div class="noiDungDoTrangTri">
+                <h4 class="ten"> Ghế đôn bọc da cao cấp </h4>
+                <h4 class="gia"> 280.000đ</h4>
+            </div>-->
                     <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
+                        <a href="GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -414,7 +519,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
+                        <a href="ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -422,18 +527,25 @@
                     </div>
                 </div>
             </div>
-
+            </c:if>
+            <c:if test="${p.id == 's29'}">
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="../ImageProduct/Dong-ho-treo-tuong-thiet-ke.webp"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đồng hồ treo tường phòng khách</h4>
-                        <h4 class="gia"> 300.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
+                    <!--<img class="anh" src="ImageProduct/Ghe-sofa-boc-ni-dang-chan-cao.webp"/>
+            </div>
+            <div class="noiDungDoTrangTri">
+                <h4 class="ten"> Ghế sofa bọc nỉ chân cao</h4>
+                <h4 class="gia"> 320.000đ</h4>
+            </div>-->
                     <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
+                        <a href="GioHang.jsp">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -441,7 +553,7 @@
                         <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                 data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                               aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
+                        <a href="ThanhToan.jsp">
                             <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span></span></button>
@@ -449,68 +561,305 @@
                     </div>
                 </div>
             </div>
+            </c:if>
+            <c:if test="${p.id == 's30'}">
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh" src="ImageProduct/ban-tra-phong-khach.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Bàn trà phòng khách</h4>
+                        <h4 class="gia"> 1.280.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 's31'}">
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh" src="ImageProduct/Khan-trai-ban-an-gia-dinh-hinh-tron.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Khăn trải bàn gia đình hình tròn</h4>
+                        <h4 class="gia"> 350.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 's32'}">
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh" src="ImageProduct/ban-tra-chong-tham-nuoc.jpg"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Bàn trà </h4>
+                        <h4 class="gia"> 1.529.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 's33'}">
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Sofapk.jpg"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Sofa phòng khách họa tiết</h4>
+                        <h4 class="gia"> 2.280.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 's34'}">
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Goi-tua-lung-van-phong.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Gối tựa lưng văn phòng</h4>
+                        <h4 class="gia"> 110.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 's35'}">
+
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Goi-tua-lung-sofa-phong-cach-hien-dai.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Gối tựa lưng Sofa hiện đại</h4>
+                        <h4 class="gia"> 160.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp72'}">
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Ghe_Bong_Bong.jpg"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Ghế bong bóng</h4>
+                        <h4 class="gia"> 580.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp73'}">
             <div class="sanPham">
-                <div class="sanPhamNoiThat">
-                    <div class="anhDoTrangTri">
-                        <img class="anh" src="../ImageProduct/Ghe-don-boc-da-cao-cap-cho-phong-khach.webp"/>
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                              src="ImageProduct/ghe_Daw_Fabric.jpg"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Ghế đôn bọc da cao cấp </h4>
-                        <h4 class="gia"> 280.000đ</h4>
-                    </div>
-                    <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
-                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                    data-id="1050379730"><i class="fa fa-cart-plus"
-                                                            aria-hidden="true"></i><span> </span></button>
-                        </a>
-                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                              aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
-                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                <span></span></button>
-                        </a>
+                        <h4 class="ten"> Ghế Daw Fabric</h4>
+                        <h4 class="gia"> 370.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </c:if>
+            <c:if test="${p.id == 'sp74'}">
+
             <div class="sanPham">
-                <div class="sanPhamNoiThat">
-                    <div class="anhDoTrangTri">
-                        <img class="anh" src="../ImageProduct/Ghe-sofa-boc-ni-dang-chan-cao.webp"/>
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/ghe_Sofa.jpg"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Ghế sofa bọc nỉ chân cao</h4>
-                        <h4 class="gia"> 320.000đ</h4>
-                    </div>
-                    <div class="nutgiohang">
-                        <a href="../GioHang.jsp">
-                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                    data-id="1050379730"><i class="fa fa-cart-plus"
-                                                            aria-hidden="true"></i><span> </span></button>
-                        </a>
-                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                              aria-hidden="true"></i></button>
-                        <a href="../ThanhToan.jsp">
-                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                <span></span></button>
-                        </a>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh" src="../ImageProduct/ban-tra-phong-khach.webp"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Bàn trà phòng khách</h4>
-                            <h4 class="gia"> 1.280.000đ</h4>
-                        </div>
+                        <h4 class="ten"> Sofa </h4>
+                        <h4 class="gia"> 2.070.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -518,7 +867,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -526,18 +875,27 @@
                         </div>
                     </div>
                 </div>
+            </c:if>
+            <c:if test="${p.id == 'sp75'}">
 
-                <div class="sanPham">
+            <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh" src="../ImageProduct/Khan-trai-ban-an-gia-dinh-hinh-tron.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Khăn trải bàn gia đình hình tròn</h4>
-                            <h4 class="gia"> 350.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Ghe_Diamond.jpg"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">Ghế Diamond</h4>
+                        <h4 class="gia"> 400.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -545,7 +903,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -553,99 +911,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh" src="../ImageProduct/ban-tra-chong-tham-nuoc.jpg"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Bàn trà </h4>
-                            <h4 class="gia"> 1.529.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Sofapk.jpg"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Sofa phòng khách họa tiết</h4>
-                            <h4 class="gia"> 2.280.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Goi-tua-lung-van-phong.webp"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Gối tựa lưng văn phòng</h4>
-                            <h4 class="gia"> 110.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp76'}">
 
-                <div class="sanPham">
+            <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Goi-tua-lung-sofa-phong-cach-hien-dai.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Gối tựa lưng Sofa hiện đại</h4>
-                            <h4 class="gia"> 160.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Ghe_Sofa_giuong_keo.jpg"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Ghế Sofa giường kéo</h4>
+                        <h4 class="gia"> 2.600.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -653,7 +939,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -661,18 +947,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
+            </c:if>
+            <c:if test="${p.id == 's36'}">
+            <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Ghe_Bong_Bong.jpg"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Ghế bong bóng</h4>
-                            <h4 class="gia"> 580.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Goi-tua-lung-hoa-tiet-Bohemian.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Gối tựa lưng họa tiết Bohemian</h4>
+                        <h4 class="gia"> 80.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -680,7 +974,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -688,18 +982,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
+            </c:if>
+            <c:if test="${p.id == 's37'}">
+            <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <<img class="anh"
-                                  src="../ImageProduct/ghe_Daw_Fabric.jpg"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Ghế Daw Fabric</h4>
-                            <h4 class="gia"> 370.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Goi_sofa.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Gối Sofa</h4>
+                        <h4 class="gia"> 100.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -707,7 +1009,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -715,100 +1017,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/ghe_Sofa.jpg"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Sofa </h4>
-                            <h4 class="gia"> 2.070.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Ghe_Diamond.jpg"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten">Ghế Diamond</h4>
-                            <h4 class="gia"> 400.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Ghe_Sofa_giuong_keo.jpg"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Ghế Sofa giường kéo</h4>
-                            <h4 class="gia"> 2.600.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
+            </c:if>
+            <c:if test="${p.id == 's38'}">
 
-                            <img class="anh"
-                                 src="../ImageProduct/Goi-tua-lung-hoa-tiet-Bohemian.webp"/>
+            <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Gối tựa lưng họa tiết Bohemian</h4>
-                            <h4 class="gia"> 80.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Dem-ngoi-gia-dinh-hoa-tiet-dep.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Đệm ngồi gia đình họa tiết kiwi</h4>
+                        <h4 class="gia"> 95.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -816,7 +1045,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -824,46 +1053,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
+            </c:if>
+            <c:if test="${p.id == 's39'}">
 
-                            <img class="anh"
-                                 src="../ImageProduct/Goi_sofa.webp"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Gối Sofa</h4>
-                            <h4 class="gia"> 100.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
+            <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Dem-ngoi-gia-dinh-hoa-tiet-dep.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Đệm ngồi gia đình họa tiết kiwi</h4>
-                            <h4 class="gia"> 95.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/goi_tua_lung.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">Gối tựa lưng</h4>
+                        <h4 class="gia"> 100.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -871,7 +1081,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -879,18 +1089,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
+            </c:if>
+            <c:if test="${p.id == 's40'}">
+            <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/goi_tua_lung.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten">Gối tựa lưng</h4>
-                            <h4 class="gia"> 100.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Dem-ngoi-ghe-van-phong.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">Đệm ngồi ghế văn phòng</h4>
+                        <h4 class="gia"> 110.000đ</h4>
+                    </div>-->
                         <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
+                            <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -898,7 +1116,7 @@
                             <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                     data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                   aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
+                            <a href="ThanhToan.jsp">
                                 <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                     <span></span></button>
@@ -906,64 +1124,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Dem-ngoi-ghe-van-phong.webp"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten">Đệm ngồi ghế văn phòng</h4>
-                            <h4 class="gia"> 110.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sanPham">
-                    <div class="sanPhamNoiThat">
-                        <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="../ImageProduct/Dem-ngoi-hinh-vuong-phong-cach.webp"/>
-                        </div>
-                        <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Đệm ngồi hình vuông phong cách</h4>
-                            <h4 class="gia"> 120.000đ</h4>
-                        </div>
-                        <div class="nutgiohang">
-                            <a href="../GioHang.jsp">
-                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                aria-hidden="true"></i><span> </span></button>
-                            </a>
-                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                                  aria-hidden="true"></i></button>
-                            <a href="../ThanhToan.jsp">
-                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                    <span></span></button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            </c:if>
+            <c:if test="${p.id == 's41'}">
 
+            <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <!--<img class="anh"
+                             src="ImageProduct/Dem-ngoi-hinh-vuong-phong-cach.webp"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Đệm ngồi hình vuông phong cách</h4>
+                        <h4 class="gia"> 120.000đ</h4>
+                    </div>-->
+                        <div class="nutgiohang">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            </c:forEach>
 
             </div>
-        </div>
 
         <div id="themTrangMoi">
             <div class="khung1">
@@ -989,9 +1189,8 @@
             </div>
         </div>
     </div>
-
-
 </div>
+
 
 
 <div id="layout7">
@@ -1001,7 +1200,7 @@
             <p class="kinhNghiem">Với kinh nghiệm hơn 10 năm trong ngành nội thất, nội thất WEB FURNITURE tự hào là cung
                 cấp những mẫu sản phẩm nội thất tốt nhất . </p>
             <div class="hotline">
-                <a href="../LienHe/LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
+                <a href="LienHe/LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
                     <i class="fa fa-phone-square" aria-hidden="true"></i></a>
                 <p class="line">1900.363.079</p>
             </div>
@@ -1032,17 +1231,17 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
                         <p>Trang chủ</p></a>
-                    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Product/AllProducts.jsp?_ijt=lb79ipc726t04q7dgtat16sn83">
+                    <a href="AllProducts.jsp">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="../TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
                         <p>Tin tức</p></a>
-                    <a href="../LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>
                 </div>
                 <div class="chucNang">
@@ -1067,24 +1266,24 @@
                     <div class="left">
                         <h3>Theo dõi mạng xã hội</h3>
                         <a href="https://www.google.com/search?q=fb&oq=fb&aqs=chrome..69i57j46i131i199i433i465i512j69i59j0i512j46i199i291i433i512j69i60l3.1291j0j7&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/fb_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/fb_left.PNG"/></a>
                         <a href="https://www.google.com/search?q=google&oq=goo&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j69i57j69i60l3j69i65.1245j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/g_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/g_left.PNG"/></a>
                         <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyDMsS05XYDRgdGDwYi8pzywpSS0CAFnOB00&q=twitter&oq=tw&aqs=chrome.1.69i57j46i131i199i433i465i512j0i433i512j46i131i433i512j0i131i433i512j46i433i512j0i131i433i512j69i60.3261j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/tw_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/tw_left.PNG"/></a>
                         <a href="https://www.google.com/search?q=pinterest&oq=p&aqs=chrome.3.69i59l2j69i57j0i131i433i512j69i60l4.10676j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/p_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/p_left.PNG"/></a>
                     </div>
                     <div class="right">
                         <h3>Thanh Toán</h3>
                         <a href="https://www.google.com/search?q=visa&oq=visa&aqs=chrome..69i57j0i433i512l2j0i512l2j0i131i433i512j0i512l2j0i10i512j0i512.2103j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
-                        <img class="mang" src="../Home/Image_Home2/thanhToan2.PNG" height="44" width="65"/>
+                            <img class="mang" src="Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan2.PNG" height="44" width="65"/>
                         <a href="https://www.google.com/search?q=paypal&oq=paypal&aqs=chrome..69i57j46i199i433i465i512j0i433i512j0i512l6.3397j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
+                            <img class="mang" src="Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
                         <a href="https://www.google.com/search?q=jcb&oq=jcb&aqs=chrome..69i57j46i199i433i465i512j0i512l6j0i10i512j0i512.1389j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
-                        <img class="mang" src="../Home/Image_Home2/thanhToan5.PNG" height="40" width="57"/>
+                            <img class="mang" src="Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
                 <div class="lienLac_right">

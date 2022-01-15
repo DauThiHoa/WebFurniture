@@ -90,7 +90,7 @@
         </a>
 
         <div id="top">
-            <a href="Products/PhongKhach.jsp">
+            <a href="PhongKhach.jsp">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
