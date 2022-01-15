@@ -6,7 +6,7 @@
     <title>THANH TOÁN THÀNH CÔNG</title>
     <link rel="icon" href="img.png" type="image/png" class="icon">
     <link rel="stylesheet" href="ThanhToanThanhCong.css">
-    <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -34,7 +34,7 @@
     <div class="thongtin">
         <h2 class="ten"> Mã giao dịch : 0123456789ABCD</h2>
     </div>
-    <a href="../HomePage.jsp">
+    <a href="HomePage.jsp">
         <button class="tieptuc"> TIẾP TỤC MUA SẮM</button>
     </a>
 </div>

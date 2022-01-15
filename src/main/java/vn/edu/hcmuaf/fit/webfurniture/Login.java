@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
-import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
+
+import vn.edu.hcmuaf.fit.webfurniture.service.UserService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -18,13 +19,12 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        request.getRequestDispatcher("DangNhap.jsp").forward(request, response);
-        if (UserServices.getInstance().checkLogin(email, password)) {
+        if (UserService.getInstance().checkLogin(email, password)) {
 //            response.getWriter().println("12");
-            response.sendRedirect("/ProductDetailsList");
+            response.sendRedirect("../WebFurniture_war_exploded/ProductDetailsList");
         }else {
             request.setAttribute("error", "email or password is correct");
-            response.sendRedirect("DangNhap.jsp");
+            response.sendRedirect("../WebFurniture_war_explodedDangNhap.jsp");
         }
     }
 }

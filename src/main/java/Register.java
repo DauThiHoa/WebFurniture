@@ -21,10 +21,10 @@ public class Register extends HttpServlet {
         String email = request.getParameter("email");
         request.getRequestDispatcher("DangKy.jsp").forward(request, response);
         if (UserServices.getInstance().register(name, password, email)) {
-            response.sendRedirect("DangNhap.jsp");
+            response.sendRedirect("../WebFurniture_war_exploded/DangNhap.jsp");
         } else {
             request.setAttribute("error", "Username exits");
-            request.getRequestDispatcher("DangKy.jsp").forward(request, response);
+            request.getRequestDispatcher("../WebFurniture_war_exploded/DangKy.jsp").forward(request, response);
         }
     }
 }

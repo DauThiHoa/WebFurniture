@@ -195,7 +195,7 @@
         </div>
     </a>
     <!-- ThanhToan/ThanhToan.jsp -->
-    <a href="/WebFurniture_war_exploded/cart-checkOut">
+    <a href="../WebFurniture_war_exploded/cart-checkOut">
         <div class="tiepTheo" style="margin-left: 1280px ; margin-top: -45px">
             <h2 class="ten" > Thanh toán </h2>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>

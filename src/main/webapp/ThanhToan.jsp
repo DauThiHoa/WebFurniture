@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <title>THANH TOÁN</title>
     <link rel="stylesheet" href="ThanhToan.css">
-    <link rel="icon" href="ThanhToan/img.png" type="image/png" class="icon">
+    <link rel="icon" href="img.png" type="image/png" class="icon">
 </head>
 <body>
 <h1 class="tieuDe" style="text-align: center;">WEB FURNITURE</h1>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </form>
-            <a href="ThanhToan/ThanhToanThanhCong.jsp?_ijt=jg0jfsqhfaqhlu5r8iq786h97r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../WebFurniture_war_exploded/payment-success">
                 <input type="submit" value="Continue to checkout" class="checkout"/>
             </a>
         </div>
@@ -96,7 +96,7 @@
 
 
             <div class="noiDung_2">
-                <input class="input_1" type="text" placeholder="Mã giảm giá"/>
+                <input class="input_1" type="text" onchange="displayname()" placeholder="Mã giảm giá"/>
             </div>
             <h3>
 
@@ -104,7 +104,7 @@
 
             <p class="from" style="color: #555555">
                 Giảm giá
-                <span class="price from" style="margin-left: 240px; color: #555555"></span>
+                <span class="price from" style="margin-left: 240px; color: #555555" ></span>
             </p>
             <p class="from" style="color: #555555">
                 Phí Ship
@@ -114,7 +114,8 @@
             <div>
                 <p class="from" style="color: #555555">
                     Tổng Tiền
-                    <span class="price from" style="margin-left: 220px; color: #555555"> 3.950.000đ</span>
+                    <jsp:useBean id="sumTotalMoney" scope="request" type="java.lang.Integer"/>
+                    <span class="price from thanhtoan" style="margin-left: 220px; color: #555555">${sumTotalMoney}đ</span>
                 </p>
             </div>
         </div>
@@ -122,9 +123,9 @@
 </div>
 </body>
 <script>
-    const input_1 = document.querySelector('.input_1');
-    const price = document.querySelector('.from .price');
-    price.innerHTML = input_1.value + "đ";
-    price.setAttributeNode(input_1.value + "đ");
+    function displayname() {
+        document.querySelector(".from .price").innerHTML =
+            document.querySelector(".input_1").value +"đ";
+    }
 </script>
 </html>

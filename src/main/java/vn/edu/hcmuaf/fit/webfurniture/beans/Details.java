@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.webfurniture.beans;
 
-public class Details {
+import java.io.Serializable;
+
+public class Details implements Serializable {
      private String idOrderDetails ;
      private String idOrder ;
      private String idProductDetails ;

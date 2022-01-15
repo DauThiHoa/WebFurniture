@@ -41,6 +41,13 @@ public class OrderDetailsService {
                     .mapTo(Integer.class).findFirst().get();
         });
     }
+    // SUM TOTALMONEY ( TONG TIEN SAN PHAM )
+    public int sumTotalMoney(){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT SUM( totalMoney ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails ) ")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+    }
 
 
 //    public Details getById(String id ) {

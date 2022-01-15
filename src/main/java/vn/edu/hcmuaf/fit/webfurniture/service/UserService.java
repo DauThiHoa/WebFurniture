@@ -1,25 +1,27 @@
+package vn.edu.hcmuaf.fit.webfurniture.service;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserServices {
-    private static UserServices instance;
+public class UserService {
+    private static UserService instance;
 
     private static Map<String, String> users = new HashMap<>();
     private static Map<String, String> contact = new HashMap<>();
 
     static {
-        users.put("admin", "admin");
-        users.put("daudiep@gmail.com", "12345");
-        users.put("tuandat@gmail.com", "users");
+        users.put("admin@gmail.com", "12345");
+        users.put("admin123@gmail.com", "12345");
+        users.put("admin12345@gmail.com", "12345");
     }
 
-    private UserServices() {
+    private UserService() {
 
     }
 
-    public static UserServices getInstance() {
+    public static UserService getInstance() {
         if (instance == null) {
-            instance = new UserServices();
+            instance = new UserService();
         }
         return instance;
     }
