@@ -11,9 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a65df523-51b2-464b-ab5e-7f328a97c43a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +297,7 @@
       <workItem from="1642201477788" duration="4989000" />
       <workItem from="1642229493603" duration="647000" />
       <workItem from="1642234355442" duration="114000" />
-      <workItem from="1642234865423" duration="809000" />
+      <workItem from="1642234865423" duration="2327000" />
     </task>
     <servers />
   </component>

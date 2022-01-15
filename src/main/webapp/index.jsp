@@ -24,7 +24,7 @@
             padding: 0px;
             font-family: sans-serif;
             box-sizing: border-box;
-            background-image: url(imageName.jpg);
+            <!--background-image: url(imageName.jpg);-->
             background-size: cover;
             background-attachment: fixed;
         }
@@ -63,7 +63,7 @@
         .welcomeDiv {
             width: 50%;
             padding: 10px;
-            <!--background-image: url(image1.jpg);>
+        <!-- background-image: url(image1.jpg);-->
             background-size: cover;
             text-align: center;
             color: white;
@@ -207,7 +207,7 @@
             <div class="socialBtn">
                 <div class="facebook icon"><i class="fab fa-facebook-f"></i></div>
                 <div class="twitter icon"><i class="fab fa-twitter"></i></div>
-                <div class="instagram icon"><i class="fab fa-instagram"></i></i></div>
+                <div class="instagram icon"><i class="fab fa-instagram"></i></div>
             </div>
 
             <!--Horizontal Line-->
