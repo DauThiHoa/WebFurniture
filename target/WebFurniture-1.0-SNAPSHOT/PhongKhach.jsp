@@ -331,15 +331,9 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                       <!-- <img class="anh" src="ImageProduct/Ban_Eames_tron.webp"/>
 
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bàn Eames tròn</h4>
-                        <h4 class="gia"> 590.000đ</h4>
-                    </div>-->
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -367,14 +361,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    <!--<img class="anh" src="ImageProduct/Ban_lam_viec_go.jpg"/>
-            </div>
-            <div class="noiDungDoTrangTri">
-                <h4 class="ten"> Bàn làm việc đẹp</h4>
-                <h4 class="gia"> 720.000đ</h4>
-            </div>-->
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -401,14 +389,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    <!--<img class="anh" src="ImageProduct/bo-ban-khach.webp"/>
-            </div>
-            <div class="noiDungDoTrangTri">
-                <h4 class="ten"> Bộ bàn khách hiện đại</h4>
-                <h4 class="gia"> 3.400.000đ</h4>
-            </div>-->
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -435,14 +417,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    <!--<img class="anh" src="ImageProduct/ghe-sofa-phong-khach-gia-dinh.webp"/>
-            </div>
-            <div class="noiDungDoTrangTri">
-                <h4 class="ten"> Ghế sofa phòng khách gia đình</h4>
-                <h4 class="gia"> 3.150.000đ</h4>
-            </div>-->
-                    <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                     <div class="nutgiohang">
+                         <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -470,14 +446,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    <!--<img class="anh" src="ImageProduct/Dong-ho-treo-tuong-thiet-ke.webp"/>
-            </div>
-            <div class="noiDungDoTrangTri">
-                <h4 class="ten"> Đồng hồ treo tường phòng khách</h4>
-                <h4 class="gia"> 300.000đ</h4>
-            </div>-->
-                    <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                     <div class="nutgiohang">
+                         <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -504,14 +474,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    <!--<img class="anh" src="ImageProduct/Ghe-don-boc-da-cao-cap-cho-phong-khach.webp"/>
-            </div>
-            <div class="noiDungDoTrangTri">
-                <h4 class="ten"> Ghế đôn bọc da cao cấp </h4>
-                <h4 class="gia"> 280.000đ</h4>
-            </div>-->
-                    <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                   <div class="nutgiohang">
+                       <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -538,14 +502,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    <!--<img class="anh" src="ImageProduct/Ghe-sofa-boc-ni-dang-chan-cao.webp"/>
-            </div>
-            <div class="noiDungDoTrangTri">
-                <h4 class="ten"> Ghế sofa bọc nỉ chân cao</h4>
-                <h4 class="gia"> 320.000đ</h4>
-            </div>-->
-                    <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                     <div class="nutgiohang">
+                         <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -572,14 +530,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh" src="ImageProduct/ban-tra-phong-khach.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bàn trà phòng khách</h4>
-                        <h4 class="gia"> 1.280.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                          <div class="nutgiohang">
+                              <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -606,14 +558,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh" src="ImageProduct/Khan-trai-ban-an-gia-dinh-hinh-tron.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Khăn trải bàn gia đình hình tròn</h4>
-                        <h4 class="gia"> 350.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                         <div class="nutgiohang">
+                             <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -640,14 +586,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh" src="ImageProduct/ban-tra-chong-tham-nuoc.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bàn trà </h4>
-                        <h4 class="gia"> 1.529.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                         <div class="nutgiohang">
+                             <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -674,15 +614,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Sofapk.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Sofa phòng khách họa tiết</h4>
-                        <h4 class="gia"> 2.280.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                         <div class="nutgiohang">
+                             <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -709,15 +642,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Goi-tua-lung-van-phong.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng văn phòng</h4>
-                        <h4 class="gia"> 110.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                         <div class="nutgiohang">
+                             <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -745,15 +671,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Goi-tua-lung-sofa-phong-cach-hien-dai.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng Sofa hiện đại</h4>
-                        <h4 class="gia"> 160.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                          <div class="nutgiohang">
+                              <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -780,15 +699,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Ghe_Bong_Bong.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Ghế bong bóng</h4>
-                        <h4 class="gia"> 580.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -815,15 +727,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                              src="ImageProduct/ghe_Daw_Fabric.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Ghế Daw Fabric</h4>
-                        <h4 class="gia"> 370.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                         <div class="nutgiohang">
+                             <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -851,15 +756,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/ghe_Sofa.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Sofa </h4>
-                        <h4 class="gia"> 2.070.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                         <div class="nutgiohang">
+                             <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -887,15 +785,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Ghe_Diamond.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten">Ghế Diamond</h4>
-                        <h4 class="gia"> 400.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -923,15 +814,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Ghe_Sofa_giuong_keo.jpg"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Ghế Sofa giường kéo</h4>
-                        <h4 class="gia"> 2.600.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -958,15 +842,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Goi-tua-lung-hoa-tiet-Bohemian.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng họa tiết Bohemian</h4>
-                        <h4 class="gia"> 80.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -993,15 +870,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Goi_sofa.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối Sofa</h4>
-                        <h4 class="gia"> 100.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -1029,15 +899,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Dem-ngoi-gia-dinh-hoa-tiet-dep.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đệm ngồi gia đình họa tiết kiwi</h4>
-                        <h4 class="gia"> 95.000đ</h4>
-                    </div>-->
-                        <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                       <div class="nutgiohang">
+                           <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -1065,15 +928,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/goi_tua_lung.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten">Gối tựa lưng</h4>
-                        <h4 class="gia"> 100.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -1100,15 +956,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Dem-ngoi-ghe-van-phong.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten">Đệm ngồi ghế văn phòng</h4>
-                        <h4 class="gia"> 110.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -1136,15 +985,8 @@
                             <h4 class="ten">${p.name}</h4>
                             <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
-                        <!--<img class="anh"
-                             src="ImageProduct/Dem-ngoi-hinh-vuong-phong-cach.webp"/>
-                    </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đệm ngồi hình vuông phong cách</h4>
-                        <h4 class="gia"> 120.000đ</h4>
-                    </div>-->
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
