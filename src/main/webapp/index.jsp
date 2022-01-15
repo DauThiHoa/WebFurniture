@@ -63,7 +63,7 @@
         .welcomeDiv {
             width: 50%;
             padding: 10px;
-            background-image: url(image1.jpg);
+            <!--background-image: url(image1.jpg);>
             background-size: cover;
             text-align: center;
             color: white;
