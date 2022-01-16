@@ -113,7 +113,7 @@
         </div>
 
     </div>
-    <a href="/ProductDetailsList">
+    <a href="">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
@@ -296,32 +296,32 @@
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" checked onclick="changeProductList('')">
+                <input class="SapXep" type="radio" name="Chonradio" checked onclick="changeProductList('macDinh', this)">
                 <p class="noiDungSapXep"> Mặc định</p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('XepA', this)">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('XepZ', this)">
                 <p class="noiDungSapXep"> Tên Z -> A </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('Hangmoi', this)">
                 <p class="noiDungSapXep"> Hàng mới </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('Giathap', this)">
                 <p class="noiDungSapXep"> Giá thấp đến cao </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('Giacao',this)">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </div>
         </div>
 
-        <div id="CacSanPham">
+        <div id="macDinh" class="CacSanPham">
 
             <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
@@ -1017,11 +1017,3469 @@
             </c:if>
             </c:forEach>
             </div>
+        <!-- Từ Z ĐẾN A-->
+       <!-- <div id="XepZ" class="CacSanPham">
+
+            <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsAllProduct}">
+            <c:if test="${p.id == 'sp59'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp60'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp61'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp62'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp63'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp64'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name} </h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp65'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp66'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+
+            <c:if test="${p.id == 'sp67'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp68'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp69'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh"
+                                 src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp70'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh"
+                                 src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp71'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten"> ${p.name}</h4>
+                            <h4 class="gia"> ${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp72'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh"
+                                 src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp73'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp74'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp75'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp76'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp77'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp78'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp79'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp80'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp81'}" >
+                <div class="sanPham">
+                    <div class="sanPhamNoiThat">
+                        <div class="anhDoTrangTri">
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
+                        <div class="noiDungDoTrangTri">
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
+                        </div>
+                        <div class="nutgiohang">
+                            <a href="cart-add?id=${p.id}">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp82'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </c:if>
+            </c:forEach>
+        </div>
+
+    // TỪ A DẾN Z
+    <div id="XepA" class="CacSanPham">
+
+        <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+        <c:forEach var="p" items="${productDetailsAllProduct}">
+        <c:if test="${p.id == 'sp59'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp60'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp61'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp62'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp63'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp64'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name} </h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp65'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp66'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp67'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp68'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp69'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp70'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp71'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp72'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp73'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp74'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp75'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp76'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp77'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp78'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp79'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp80'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp81'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp82'}" >
+        <div class="sanPham">
+            <div class="sanPhamNoiThat">
+                <div class="anhDoTrangTri">
+                    <img class="anh" src="${p.linkImage}"/>
+                </div>
+                <div class="noiDungDoTrangTri">
+                    <h4 class="ten">${p.name}</h4>
+                    <h4 class="gia">${p.priceNew}đ</h4>
+                </div>
+                <div class="nutgiohang">
+                    <a href="cart-add?id=${p.id}">
+                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                        aria-hidden="true"></i><span> </span></button>
+                    </a>
+                    <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                            data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                          aria-hidden="true"></i></button>
+                    <a href="ThanhToan.jsp">
+                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <span></span></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </c:if>
+        </c:forEach>
+    </div>
+// Hang moi
+<div id="Hangmoi" class="CacSanPham">
+
+    <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetailsAllProduct}">
+        <c:if test="${p.id == 'sp59'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp60'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp61'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp62'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp63'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp64'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name} </h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp65'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp66'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp67'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp68'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp69'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp70'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp71'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp72'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp73'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp74'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp75'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp76'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp77'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp78'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp79'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp80'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp81'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp82'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+    </c:forEach>
+</div>
+//Gia thap den cao
+<div id="Giathap" class="CacSanPham">
+
+    <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetailsAllProduct}">
+        <c:if test="${p.id == 'sp59'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp60'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp61'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp62'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp63'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp64'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name} </h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp65'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp66'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp67'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp68'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp69'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp70'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp71'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp72'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp73'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp74'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp75'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp76'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp77'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp78'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp79'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp80'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp81'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp82'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+    </c:forEach>
+</div>
+// Gia cao den thap
+<div id="Giacao" class="CacSanPham">
+
+    <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetailsAllProduct}">
+        <c:if test="${p.id == 'sp59'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp60'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp61'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp62'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp63'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp64'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name} </h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp65'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp66'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+
+        <c:if test="${p.id == 'sp67'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp68'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp69'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp70'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp71'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> ${p.name}</h4>
+                        <h4 class="gia"> ${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp72'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp73'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp74'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp75'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp76'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp77'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp78'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp79'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp80'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp81'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp82'}" >
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="${p.linkImage}"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
+                    </div>
+                    <div class="nutgiohang">
+                        <a href="cart-add?id=${p.id}">
+                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-cart-plus"
+                                                            aria-hidden="true"></i><span> </span></button>
+                        </a>
+                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                              aria-hidden="true"></i></button>
+                        <a href="ThanhToan.jsp">
+                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span></span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+    </c:forEach>
+</div>
+        -->
 
 
 
 
-        <div id="themTrangMoi">
+
+            <div id="themTrangMoi">
             <div class="khung1">
                 <i class="fa fa-angle-double-left" aria-hidden="true"></i>
             </div>
