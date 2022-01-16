@@ -17,6 +17,7 @@
         <junit.version>5.7.1</junit.version>
     </properties>
 
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-core -->
         <dependency>
@@ -90,6 +91,8 @@
 
     </dependencies>
 
+    <!--CharsetFilter start-->
+
     <build>
         <plugins>
             <plugin>
@@ -107,4 +110,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

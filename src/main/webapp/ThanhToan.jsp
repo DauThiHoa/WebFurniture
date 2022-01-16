@@ -1,4 +1,5 @@
-
+<%--<%@ page language ="java" contentType="text/html; charset=ISO-8859-1"--%>
+<%--pageEncoding="ISO-8859-1" import="java.util.Date" %>--%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
 <%@ page import="java.util.Map" %>
@@ -11,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%--    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">--%>
     <meta charset="UTF-8">
     <title>THANH TOÁN</title>
     <link rel="stylesheet" href="ThanhToan.css">
@@ -25,18 +26,18 @@
 <div class="Fields">
     <div>
         <div class="formContainer">
-            <form action="payment" method="POST">
+            <form action="PaymentSuccess" method="POST">
                 <div class="Fields">
                     <div>
                         <h3>Thông Tin Khách hàng</h3>
                         <label class="from" for="fname" >Họ Và Tên</label>
-                        <input type="text" id="fname" name="firstname" value="kk" placeholder="Bùi Hoàng Tuấn Anh"/>
+                        <input type="text" id="fname" name="firstname" value="" placeholder="Bùi Hoàng Tuấn Anh"/>
                         <label class="from" for="email"> Email</label>
-                        <input type="text" id="email" name="email" value="lll" placeholder="19130006@st.hcmuaf.edu.vn"/>
+                        <input type="text" id="email" name="email" value="" placeholder="19130006@st.hcmuaf.edu.vn"/>
                         <label class="from" for="adr"> Số Điện Thoại </label>
-                        <input type="text" id="address" name="phone" value="ppp" placeholder="0123456789"/>
+                        <input type="text" id="address" name="phone" value="" placeholder="0123456789"/>
                         <label class="from" for="adr"> Địa Chỉ </label>
-                        <input type="text" id="adr" name="address" value="kkk"
+                        <input type="text" id="adr" name="address" value=""
                                placeholder="Xã Phúc Tân - huyện Lâm Hà - tỉnh Lâm Đồng"/>
                     </div>
                     <div>
@@ -45,21 +46,32 @@
                         <input type="text" id="cardname" name="cardname" value="" placeholder="BIDV, ACB, Vietcombank,...  "/>
                         <label class="from" for="ccnum">Số Thẻ</label>
                         <input type="text" id="cardnumber" name="cardnumber" value="" placeholder="4129 7501 2345 6789"/>
+                        <label class="from" for="ccnum">Ngày sinh</label>
+                        <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date" id="brithDay" name="brithDay" value="" placeholder="12/2/1989"/>
                     </div>
                     <div>
                         <h3 style="margin-left: 20px">Phương Thức Nhận Hàng</h3>
                         <label class="from" for="cname">Giao Hàng</label>
-                        <input type="checkbox" id="cname" name="delivery" value=""
+                        <input type="checkbox" id="cname" name="delivery" value="Giao Hàng"
                                style="margin-left: 20px ; width: 10% ; height: 10%"/>
                         <label class="from" for="ccnum" style="margin-top: 55px">Nhận Tại Cửa Hàng</label>
-                        <input style="margin-left: 20px ; width: 10% ; height: 10%" type="checkbox" id="ccnum" value=""
+                        <input style="margin-left: 20px ; width: 10% ; height: 10%" type="checkbox" id="ccnum" value="Nhận Tại Cửa Hàng"
                                name="store"/>
                     </div>
+                    <div>
+                        <h3 style="margin-left: 20px">Giới tính</h3>
+                        <label class="from" for="cname">Nữ</label>
+                        <input type="checkbox" id="nu" name="nu" value="Nữ"
+                               style="margin-left: 20px ; width: 25% ; height: 25% ; margin-top: -35px; margin-bottom: -60px"/>
+                        <label class="from" for="ccnum" style="margin-top: 15px">Nam</label>
+                        <input style="margin-left: 20px ; width: 25% ; height: 25%; margin-top: -35px; margin-bottom: -60px" type="checkbox" id="nam" value="Nam"
+                               name="Nam"/>
+                    </div>
                 </div>
-            </form>
-            <a href="../WebFurniture_war_exploded/PaymentSuccess">
-                <input type="submit" value="Continue to checkout" class="checkout" />
-            </a>
+                <a href="../WebFurniture_war_exploded/PaymentSuccess">
+                    <input type="submit" value="Continue to checkout" class="checkout" />
+                </a>
+<%--            --%>
         </div>
     </div>
     <div>
@@ -80,13 +92,6 @@
                             <span class="item-price">${order.price}đ</span>
                             <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
                         </li>
-<%--                    <li class="clearfix">--%>
-<%--                        <img src="ImageProduct/tu-ao-cho-be.webp" height="70"--%>
-<%--                             width="70" alt="item1"/>--%>
-<%--                        <span class="item-name">Tủ để áo cho bé</span>--%>
-<%--                        <span class="item-price">1.100.000đ</span>--%>
-<%--                        <span class="item-quantity">Số Lượng: 01</span>--%>
-<%--                    </li>--%>
                                   </c:if >
                               </c:if >
                           </c:forEach>
@@ -95,10 +100,10 @@
 
             </div>
 
-
             <div class="noiDung_2">
-                <input class="input_1" type="text" onchange="displayname()" placeholder="Mã giảm giá"/>
+                <input class="input_1" type="text" name="discountCode" onchange="displayname()" placeholder="Mã giảm giá"/>
             </div>
+            </form>
             <h3>
 
             </h3>
@@ -128,6 +133,5 @@
         document.querySelector(".from .price").innerHTML =
             document.querySelector(".input_1").value +"đ";
     }
-    Custom
 </script>
 </html>

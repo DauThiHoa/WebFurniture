@@ -51,16 +51,29 @@ public class OrderDetailsService {
         });
     }
 
-    public boolean insert(String name, String email, String phone, String address, String bank, String cardNumber) {
+    public boolean insert(String name,String birthDay,String gender, String email, String phone, String address, String bank, String cardNumber , String method , String discountCode) {
+        int idOrder = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT idOrder FROM orders  WHERE idOrder = ( SELECT MAX(idOrder) FROM orders )")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+        int ship = sumDiscount();
+        int totalMoney = sumTotalMoney();
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-                sum += h.createUpdate("insert into customer (name , address ,phone, email ,bank, cardNumber ) values(?,?,?,?,?,?)")
-                        .bind(0 , name )
-                        .bind(1 , address)
-                        .bind(2 , phone)
-                        .bind(3 , email)
-                        .bind(4 ,   bank)
-                        .bind(5 , cardNumber )
+                sum += h.createUpdate("insert into customer (idOrder , name , birthDay,gender, address ,phone, email ,bank, cardNumber , deliveryMethod , discount , ship , totalMoney) values(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+                        .bind(0 , idOrder )
+                        .bind(1 , name )
+                        .bind(2 , birthDay )
+                        .bind(3 , gender )
+                        .bind(4 , address)
+                        .bind(5, phone)
+                        .bind(6 , email)
+                        .bind(7 ,   bank)
+                        .bind(8 , cardNumber )
+                        .bind( 9 ,method )
+                        .bind( 10 , discountCode)
+                        .bind( 11 , ship)
+                        .bind( 12 , totalMoney)
                         .execute();
             // Số dòng được chèn vào
             return sum ;

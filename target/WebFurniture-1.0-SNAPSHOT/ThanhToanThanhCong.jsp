@@ -1,4 +1,14 @@
+<%--<%@ page language ="java" contentType="text/html; charset=ISO-8859-1"--%>
+<%--pageEncoding="ISO-8859-1" import="java.util.Date" %>--%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="com.google.gson.Gson" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,25 +26,31 @@
     <i class="fa fa-check-circle" aria-hidden="true"></i>
     <h3 class="thongbao"> Thanh toán đã thực hiện thành công.
         Trong vòng 10 phút WebFurniture sẽ liên hệ xác nhận thông tin giao hàng qua mail của quý khách đã cung cấp</h3>
+    <jsp:useBean id="customerList" scope="request" type="java.util.List"/>
+    <c:forEach items="${customerList}" var="customer" >
+    <c:if test="${customerList.get(customerList.size() -1).idCustomer == customer.idCustomer}" >
     <div class="thongtin">
-        <h2 class="ten"> Hình thức thanh toán : Chuyển khoản ngân hàng Vietcombank</h2>
+        <h2 class="ten"> Hình thức thanh toán : Chuyển khoản ngân hàng ${customer.bank}</h2>
     </div>
     <div class="thongtin">
-        <h2 class="ten"> Số thẻ : 4129 7501 2345 6789</h2>
+        <h2 class="ten"> Số thẻ : ${customer.cardNumber}</h2>
     </div>
     <div class="thongtin">
-        <h2 class="ten"> Địa chỉ nhận hàng : Xã Phúc Tân - huyện Lâm Hà - tỉnh Lâm Đồng </h2>
+        <h2 class="ten"> Địa chỉ nhận hàng : ${customer.address} </h2>
     </div>
     <div class="thongtin">
-        <h2 class="ten"> Số điện thoại : 0123456789 </h2>
+        <h2 class="ten" style="margin-top: 30px"> Số điện thoại : ${customer.phone} </h2>
     </div>
     <div class="thongtin">
-        <h2 class="ten"> Số tiền : 3.950.000 VND</h2>
+        <jsp:useBean id="sumTotal" scope="request" type="java.lang.Integer"/>
+        <h2 class="ten"> Số tiền : ${sumTotal} VND</h2>
     </div>
     <div class="thongtin">
-        <h2 class="ten"> Mã giao dịch : 0123456789ABCD</h2>
+        <h2 class="ten"> Mã giao dịch : ${customer.idCustomer}</h2>
     </div>
-    <a href="HomePage.jsp">
+    </c:if>
+    </c:forEach>
+    <a href="../WebFurniture_war_exploded/ProductDetailsList">
         <button class="tieptuc"> TIẾP TỤC MUA SẮM</button>
     </a>
 </div>

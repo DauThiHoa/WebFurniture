@@ -94,9 +94,20 @@ h3 {
 p {
     color: black;
 }
-
-#fname, #email, #address, #adr, #cardname, #cardnumber {
+input[type="date"] {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#fname, #email, #address, #adr, #cardname, #cardnumber , #brithDay{
     border: 2px solid black;
+}
+#brithDay{
+    width: 200px;
+    height: 50px;
 }
 
 .price {
