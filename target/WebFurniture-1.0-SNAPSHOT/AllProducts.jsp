@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM </title>
     <link rel="stylesheet" href="AllProducts.css">
-
+    <script src="products.js"></script>
 </head>
 <body>
 <div id="Thanh_cong_cu">
@@ -296,27 +296,27 @@
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" checked>
+                <input class="SapXep" type="radio" name="Chonradio" checked onclick="changeProductList('')">
                 <p class="noiDungSapXep"> Mặc định</p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
                 <p class="noiDungSapXep"> Tên Z -> A </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
                 <p class="noiDungSapXep"> Hàng mới </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
                 <p class="noiDungSapXep"> Giá thấp đến cao </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('')">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </div>
         </div>

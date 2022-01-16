@@ -21,6 +21,7 @@
         <option value="CSS File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
