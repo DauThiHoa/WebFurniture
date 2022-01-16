@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Edit", value = "/productdetails/action")
-class Action extends HttpServlet {
+@WebServlet(name = "Action", value = "/Product/Action")
+public class Action extends HttpServlet {
     /**
      *
      * @param request
@@ -27,18 +27,26 @@ class Action extends HttpServlet {
 //        List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
 //        // Di chuyen den list
 //        request.setAttribute("list" , list);
-
-        String id = request.getParameter("id");
-        String action = request.getParameter("action");
-        System.out.println(action);
-        if ( action.equals("delete")){
-        request.setAttribute("id" , id);
+     String id = request.getParameter("id");
+     int productDetails =  ProductDetailsService.getInstance().delete(id);
+        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
+     if ( productDetails == 1 ) {
+//         response.getWriter().write("success");
+//         request.getRequestDispatcher("success.jsp").forward(request, response);
+     }else{
+//         response.getWriter().write("fail");
+//         request.getRequestDispatcher("fail.jsp").forward(request, response);
+     }
+//        String action = request.getParameter("action");
+//        System.out.println(action);
+//        if ( action.equals("delete")){
+//        request.setAttribute("id" , id);
 //            request.getRequestDispatcher("/WEB-INF/view/productdetails/delete.jsp").forward(request, response);
 //        request.getRequestDispatcher("http://localhost:8080/WebFurniture_war_exploded/manage/productdetails").forward(request, response);
-        }else if ( action.equals("edit")){
-            request.setAttribute("id" , id );
+//        }else if ( action.equals("edit")){
+//            request.setAttribute("id" , id );
 //            request.getRequestDispatcher("/WEB-INF/view/productdetails/edit.jsp").forward(request, response);
-        }
+//        }
 
     }
 
@@ -52,15 +60,7 @@ class Action extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-     String id = request.getParameter("id");
-     int productDetails =  ProductDetailsService.getInstance().delete(id);
-     if ( productDetails == 1 ) {
-         response.getWriter().write("success");
-     }else{
-         response.getWriter().write("fail");
-     }
-
+             doGet(request,response);
     }
 
 }

@@ -25,7 +25,7 @@
     <!-- Page plugins -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Page plugins -->
-    <jsp:include page="../layout/css.jsp"></jsp:include>
+    <jsp:include page="manage/layout/css.jsp"></jsp:include>
 
 </head>
 
@@ -46,7 +46,7 @@
                 <!-- Nav items -->
 <%--                <ul class="navbar-nav">--%>
 
-                <jsp:include page="../layout/nav.jsp"></jsp:include>
+                <jsp:include page="manage/layout/nav.jsp"></jsp:include>
 <%--                    <!-- lINK VE TRANG CHU-->--%>
 <%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
 <%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
@@ -498,7 +498,7 @@
                 <td ><input type="checkbox" name="sport" value="check"></td>
                 <td style="text-align: center"><%= i++ %></td>
                 <td >Home page</td>
-                <td ><img src="../${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
+                <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
                 <td >${item.name}</td>
                 <td style=" width : 5% ; overflow : hidden ">${item.description}</td>
                 <td >${item.priceNew}đ</td>
@@ -506,14 +506,14 @@
                 <td style="text-align: center">${item.quantity}</td>
                 <td >${item.status}</td>
                 <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
 <%--                <td> <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i></a></td>--%>
-<%--                <td>--%>
-<%--                    <fron action = "<%=Asset.url("/productdetails/action")%>" method = "post" >--%>
-<%--                        <input type="hidden" name ="id" value="${item.id}">--%>
-<%--                        <button type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true"></button>--%>
-<%--                    </fron>--%>
-<%--                </td>--%>
+                <td>
+                    <form action = "<%=Asset.url("Product/Action")%>" method = "POST" >
+                        <input type="hidden" name ="id" value="${item.id}">
+                        <button style="border: 1px solid white ; background: white" type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true" ></button>
+                    </form>
+                </td>
             </tr>
             </c:forEach>
         </table>
@@ -548,4 +548,9 @@
     <%--    );--%>
     <%--} );--%>
 <%--</script>--%>
+<script>
+    function trash () {
+        alert("Đã xóa sản phẩm thành công !")
+    }
+</script>
 </html>

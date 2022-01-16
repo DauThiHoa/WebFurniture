@@ -19,9 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Jsp File" />
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -83,29 +83,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
-    <configuration name="OrderDetailsService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService" />
-      <module name="WebFurniture" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.fit.webfurniture.payment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="css.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/manage/layout/css.jsp">
-      <method v="2" />
-    </configuration>
     <configuration name="dashboard.jsp (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/manage/dashboard.jsp">
       <method v="2" />
     </configuration>
     <configuration name="dashboard.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/QuanTri/Admin/examples/dashboard.jsp">
       <method v="2" />
     </configuration>
+    <configuration name="fail.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/fail.jsp">
+      <method v="2" />
+    </configuration>
     <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/manage/productdetails/index.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="success.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/success.jsp">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -196,20 +186,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.OrderDetailsService" />
-      <item itemvalue="JavaScript Debug.css.jsp" />
       <item itemvalue="JavaScript Debug.index.jsp" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
       <item itemvalue="JavaScript Debug.dashboard.jsp" />
       <item itemvalue="JavaScript Debug.dashboard.jsp (1)" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+      <item itemvalue="JavaScript Debug.success.jsp" />
+      <item itemvalue="JavaScript Debug.fail.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.success.jsp" />
+        <item itemvalue="JavaScript Debug.fail.jsp" />
         <item itemvalue="JavaScript Debug.index.jsp" />
         <item itemvalue="JavaScript Debug.dashboard.jsp (1)" />
         <item itemvalue="JavaScript Debug.dashboard.jsp" />
-        <item itemvalue="Application.OrderDetailsService" />
-        <item itemvalue="JavaScript Debug.css.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -304,6 +294,10 @@
       <workItem from="1642248970848" duration="12936000" />
       <workItem from="1642292597741" duration="13929000" />
       <workItem from="1642317896917" duration="7186000" />
+      <workItem from="1642334013961" duration="111000" />
+      <workItem from="1642334553980" duration="53000" />
+      <workItem from="1642334632703" duration="14000" />
+      <workItem from="1642334830468" duration="7288000" />
     </task>
     <servers />
   </component>
@@ -364,41 +358,6 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/filter/AccessFilter.java</url>
           <line>27</line>
           <option name="timeStamp" value="33" />
@@ -425,53 +384,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>37</line>
+          <line>45</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>40</line>
+          <line>48</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>35</line>
+          <line>43</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>34</line>
+          <line>42</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>33</line>
+          <line>41</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>32</line>
+          <line>40</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>31</line>
+          <line>39</line>
           <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/filter/AccessFilter.java</url>
@@ -532,6 +476,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java</url>
           <line>55</line>
           <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -23,7 +23,7 @@ public class Show extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
                 request.setAttribute("list" , list );
-                request.getRequestDispatcher("./WebFurniture_war_exploded/manage/productdetails/index.jsp").forward(request, response);
+                request.getRequestDispatcher("Product.jsp").forward(request, response);
     }
 
     /**

@@ -39,6 +39,7 @@ public class ProductDetailsService {
     }
 
     public int delete(String id) {
+
         return ProductDetailsDao.getInstance().delete(id);
     }
 }

@@ -4312,7 +4312,8 @@
                         <h4 class="ten">${p.name}</h4>
                         <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
-                    
+
+
                     <div class="nutgiohang">
                         <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
