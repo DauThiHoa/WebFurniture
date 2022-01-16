@@ -190,8 +190,11 @@
       <item itemvalue="JavaScript Debug.dashboard.jsp" />
       <item itemvalue="JavaScript Debug.dashboard.jsp (1)" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+<<<<<<< Updated upstream
       <item itemvalue="JavaScript Debug.success.jsp" />
       <item itemvalue="JavaScript Debug.fail.jsp" />
+=======
+>>>>>>> Stashed changes
     </list>
     <recent_temporary>
       <list>
@@ -294,10 +297,14 @@
       <workItem from="1642248970848" duration="12936000" />
       <workItem from="1642292597741" duration="13929000" />
       <workItem from="1642317896917" duration="7186000" />
+<<<<<<< Updated upstream
       <workItem from="1642334013961" duration="111000" />
       <workItem from="1642334553980" duration="53000" />
       <workItem from="1642334632703" duration="14000" />
       <workItem from="1642334830468" duration="7288000" />
+=======
+      <workItem from="1642332301575" duration="1066000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

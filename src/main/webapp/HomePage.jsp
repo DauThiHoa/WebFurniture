@@ -90,7 +90,7 @@
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="Products/PhongNgu.jsp">
+            <a href="PhongNgu.jsp">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
@@ -1279,7 +1279,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="Products/PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+        <a href="PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_11.png"/>
                 <div class="noiThat">
