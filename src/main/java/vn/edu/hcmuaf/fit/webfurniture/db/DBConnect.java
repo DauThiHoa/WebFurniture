@@ -7,13 +7,14 @@ import java.sql.Statement;
 
 public class DBConnect {
     private static DBConnect instance;
-    private Connection connection;
+    private static Connection connection;
     private static final String DB_URL = "jdbc:mysql://localhost:3306/webfurniture";
     private static final String USER = "root";
     private static final String PASS = "";
 
     public DBConnect() {
     }
+
 
     public static DBConnect getInstance() {
         if (instance == null) {
@@ -25,8 +26,20 @@ public class DBConnect {
     private void connect() throws SQLException, ClassNotFoundException {
         if (connection == null || connection.isClosed()) {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL, USER , PASS);
+            connection = DriverManager.getConnection(DB_URL, USER, PASS);
         }
+    }
+
+    public static Connection getConnection() {
+        try {
+            if (connection == null || connection.isClosed()) {
+                Class.forName("com.mysql.jdbc.Driver");
+                connection = DriverManager.getConnection(DB_URL, USER, PASS);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return connection;
     }
 
     public Statement get() {
