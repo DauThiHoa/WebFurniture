@@ -65,11 +65,11 @@
                                style="margin-left: 20px ; width: 25% ; height: 25% ; margin-top: -35px; margin-bottom: -60px"/>
                         <label class="from" for="ccnum" style="margin-top: 15px">Nam</label>
                         <input style="margin-left: 20px ; width: 25% ; height: 25%; margin-top: -35px; margin-bottom: -60px" type="checkbox" id="nam" value="Nam"
-                               name="Nam"/>
+                               name="nam"/>
                     </div>
                 </div>
                 <a href="../WebFurniture_war_exploded/PaymentSuccess">
-                    <input type="submit" value="Continue to checkout" class="checkout" />
+                    <input type="submit" value="Continue to checkout" class="checkout" onclick="clickCheckout()" />
                 </a>
 <%--            --%>
         </div>
@@ -132,6 +132,10 @@
     function displayname() {
         document.querySelector(".from .price").innerHTML =
             document.querySelector(".input_1").value +"đ";
+    }
+    const checkout = document.querySelector('.checkout');
+    function clickCheckout() {
+        alert("Qúy khách đã đăng kí thành công !");
     }
 </script>
 </html>

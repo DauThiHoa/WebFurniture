@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Show", value = "/manage/productdetails")
+@WebServlet(name = "Show", value = "/Product")
 public class Show extends HttpServlet {
     /**
      *
@@ -23,7 +23,7 @@ public class Show extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
                 request.setAttribute("list" , list );
-                request.getRequestDispatcher("./productdetails/index.jsp").forward(request, response);
+                request.getRequestDispatcher("./WebFurniture_war_exploded/manage/productdetails/index.jsp").forward(request, response);
     }
 
     /**

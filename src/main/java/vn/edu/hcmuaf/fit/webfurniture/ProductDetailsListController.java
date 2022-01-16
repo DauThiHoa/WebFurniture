@@ -27,6 +27,9 @@ public class ProductDetailsListController extends HttpServlet {
            request.setAttribute("productDetailsSanPhamKhuyenMai1" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsSanPhamKhuyenMai2" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsDacTrung" , ProductDetailsService.getInstance().getAll());
+
+
+
            request.getRequestDispatcher("HomePage.jsp").forward(request , response);
 
     }

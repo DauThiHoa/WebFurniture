@@ -13,9 +13,8 @@ import java.io.IOException;
 public class PaymentSuccessController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
-        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
-        request.getRequestDispatcher("ThanhToanThanhCong.jsp").forward(request , response);
+//        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
+//        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
@@ -47,55 +46,20 @@ public class PaymentSuccessController extends HttpServlet {
             gender = nam ;
         }
         boolean result = OrderDetailsService.getInstance().insert(name,brithDay,gender,email,phone,address,bank,cardNumber,method,discountCode);
-//        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
-        if ( result){
-            request.getRequestDispatcher("/PaymentSuccess").forward(request , response);
-        }else {
-            request.getRequestDispatcher("/payment").forward(request , response);
-        }
+        request.getRequestDispatcher("/ProductDetailsList").forward(request , response);
+
+        //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
+//        if ( result){
+//            request.getRequestDispatcher("/ProductDetailsList").forward(request , response);
+//        }else {
+//            request.getRequestDispatcher("/payment").forward(request , response);
+//        }
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request , response);
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
 
-        // Lay gia tri tu nguoi dung nhap vao
-        String name = request.getParameter("firstname");
-        String email = request.getParameter("email");
-        String phone = request.getParameter("phone");
-        String address = request.getParameter("address");
-        String bank = request.getParameter("cardname");
-        String cardNumber = request.getParameter("cardnumber");
-        String discountCode = request.getParameter("discountCode");
-        String brithDay = request.getParameter("brithDay");
-
-        String delivery = request.getParameter("delivery");
-        String store = request.getParameter("store");
-        String method ;
-        if ( delivery != null ){
-            method = delivery ;
-        }else {
-            method = store ;
-        }
-
-        String nu = request.getParameter("nu");
-        String nam = request.getParameter("nam");
-        String gender ;
-        if ( nu != null ){
-            gender = nu ;
-        }else {
-            gender = nam ;
-        }
-//                int age = Integer.parseInt(request.getParameter("txtAge"));
-        boolean result = OrderDetailsService.getInstance().insert(name,brithDay, gender,email,phone,address,bank,cardNumber,method,discountCode);
-//        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
-        if ( result){
-            request.getRequestDispatcher("/PaymentSuccess").forward(request , response);
-        }else {
-            request.getRequestDispatcher("/payment").forward(request , response);
-        }
     }
 }

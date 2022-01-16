@@ -61,7 +61,7 @@
         </div>
     </div>
     <div class="taiKhoanCuaToi">
-        <a href="Quản%20trị/Admin/examples/dashboard.jsp">
+        <a href="QuanTri/Admin/examples/dashboard.jsp">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
