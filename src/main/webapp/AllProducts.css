@@ -990,7 +990,7 @@ body {
     color: white;
 }
 
-#layout1 #right .CacSanPham .sanPham .anhDoTrangTri .anh {
+#layout1 #right #CacSanPham .sanPham .anhDoTrangTri .anh {
     width: 230px;
     height: 180px;
     margin-top: 10px;
@@ -1017,6 +1017,7 @@ body {
     margin-left: 78px;
     margin-top: -15px;
 }
+
 .btnAddToCart {
     background: white;
     color: #dd4b39;
@@ -1832,25 +1833,25 @@ body {
         font-size: 24px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .sanPhamNoiThat {
+    #layout1 #right #CacSanPham .sanPham .sanPhamNoiThat {
         width: 237px;
         height: 264px;
         margin-right: 9px;
         margin-top: 20px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .anhDoTrangTri .anh {
+    #layout1 #right #CacSanPham .sanPham .anhDoTrangTri .anh {
         width: 218px;
         height: 160px;
         margin-top: 10px;
         margin-left: 10px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .noiDungDoTrangTri {
+    #layout1 #right #CacSanPham .sanPham .noiDungDoTrangTri {
         margin-left: -7px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .nutgiohang {
+    #layout1 #right #CacSanPham .sanPham .nutgiohang {
         margin-left: 66px;
         margin-top: -15px;
     }

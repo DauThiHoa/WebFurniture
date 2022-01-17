@@ -1,3 +1,4 @@
+
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
 <%@ page import="java.util.Map" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -17,8 +18,8 @@
     <link rel="icon" href="Products/img.png" type="image/png" class="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM </title>
-    <link rel="stylesheet" href="AllProducts.css">
-    <script src="products.js"></script>
+    <link rel="stylesheet" href="AllProduct2.css">
+
 </head>
 <body>
 <div id="Thanh_cong_cu">
@@ -55,11 +56,11 @@
                 nhập </a>
             <p class="cheo">/</p> <a
                 href="DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
-            <p class="dangKi">Đăng ký</p></a> </p>
+            <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
     <div class="taiKhoanCuaToi">
-        <a href="Quản%20trị/Admin/examples/dashboard.jsp">
+        <a href="../Quản%20trị/Admin/examples/dashboard.jsp">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
@@ -85,22 +86,22 @@
         </a>
 
         <div id="top">
-            <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="PhongKhach.jsp">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="PhongNgu.jsp">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="PhongBep.jsp">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="Products/VanPhong.jsp">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
@@ -113,7 +114,7 @@
         </div>
 
     </div>
-    <a href="">
+    <a href="HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
@@ -141,7 +142,6 @@
         <h2 class="trangChu_TinTuc"> Trang Chủ / Danh mục sản phẩm </h2>
     </div>
 </div>
-
 
 <div id="layout1">
     <div id="left">
@@ -219,7 +219,6 @@
             </div>
         </div>
 
-
         <div class="tuKhoa">
             <div class="khung">
                 <h2 class="ten"> Từ Khóa</h2>
@@ -255,7 +254,7 @@
     <div id="right">
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-            <div class="loai">
+            <div class="loai1">
                 <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/phong-khach.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Phòng khách</h3>
@@ -281,7 +280,7 @@
                     <h3 class="tenLoaiDoTrangTri">Văn phòng </h3>
                 </a>
             </div>
-            <div class="loai1">
+            <div class="loai">
                 <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/trang-tri.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Trang trí</h3>
@@ -296,34 +295,34 @@
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" checked onclick="changeProductList('macDinh', this)">
+                <input class="SapXep" type="radio" name="Chonradio" checked>
                 <p class="noiDungSapXep"> Mặc định</p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('XepA', this)">
+                <input class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('XepZ', this)">
+                <input class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Tên Z -> A </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('Hangmoi', this)">
+                <input class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Hàng mới </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('Giathap', this)">
+                <input class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Giá thấp đến cao </p>
             </div>
             <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="changeProductList('Giacao',this)">
+                <input class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </div>
         </div>
 
-        <div class="CacSanPham">
-
-            <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+        <div id="CacSanPham">
+          
+        <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
                 <c:if test="${p.id == 'sp59'}" >
             <div class="sanPham">
@@ -1013,7 +1012,7 @@
             </div>
 
 
-            <div id="themTrangMoi">
+        <div id="themTrangMoi">
             <div class="khung1">
                 <i class="fa fa-angle-double-left" aria-hidden="true"></i>
             </div>
@@ -1041,8 +1040,6 @@
             </a>
         </div>
     </div>
-
-
 </div>
 
 
@@ -1131,13 +1128,13 @@
                     <div class="right">
                         <h3>Thanh Toán</h3>
                         <a href="https://www.google.com/search?q=visa&oq=visa&aqs=chrome..69i57j0i433i512l2j0i512l2j0i131i433i512j0i512l2j0i10i512j0i512.2103j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="Image_Home2/thanhToan1.PNG"/></a>
-                        <img class="mang" src="Image_Home2/thanhToan2.PNG"/>
+                            <img class="mang" src="Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan2.PNG" height="44" width="65"/>
                         <a href="https://www.google.com/search?q=paypal&oq=paypal&aqs=chrome..69i57j46i199i433i465i512j0i433i512j0i512l6.3397j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="Image_Home2/thanhToan3.PNG"/></a>
+                            <img class="mang" src="Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
                         <a href="https://www.google.com/search?q=jcb&oq=jcb&aqs=chrome..69i57j46i199i433i465i512j0i512l6j0i10i512j0i512.1389j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="Image_Home2/thanhToan4.PNG"/></a>
-                        <img class="mang" src="Image_Home2/thanhToan5.PNG"/>
+                            <img class="mang" src="Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
                 <div class="lienLac_right">
@@ -1154,5 +1151,12 @@
     </div>
 </div>
 
+
 </body>
 </html>
+
+
+
+
+
+
