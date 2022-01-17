@@ -973,7 +973,7 @@ body {
 }
 
 /* */
-#layout1 #right .CacSanPham .sanPham .sanPhamNoiThat {
+#layout1 #right #CacSanPham .sanPham .sanPhamNoiThat {
     float: left;
     clear: right;
     width: 250px;
@@ -984,7 +984,7 @@ body {
     background: white;
 }
 
-#layout1 #right .CacSanPham .sanPham .sanPhamNoiThat:hover {
+#layout1 #right #CacSanPham .sanPham .sanPhamNoiThat:hover {
     cursor: pointer;
     background: skyblue;
     color: white;
@@ -997,11 +997,11 @@ body {
     margin-left: 10px;
 }
 
-#layout1 #right .CacSanPham .sanPham .noiDungDoTrangTri {
+#layout1 #right #CacSanPham .sanPham .noiDungDoTrangTri {
     margin-left: 10px;
 }
 
-#layout1 #right .CacSanPham .sanPham .noiDungDoTrangTri .ten {
+#layout1 #right #CacSanPham .sanPham .noiDungDoTrangTri .ten {
     margin-top: 5px;
     text-align: center;
 }
@@ -1013,12 +1013,9 @@ body {
     color: #1fb5d4;
 }
 
-#layout1 #right .CacSanPham .sanPham .nutgiohang {
+#layout1 #right #CacSanPham .sanPham .nutgiohang {
     margin-left: 78px;
     margin-top: -15px;
-}
-#XepZ, #XepA, #Hangmoi, #Giacao, #Giathap {
-    display: none;
 }
 .btnAddToCart {
     background: white;
@@ -1062,7 +1059,7 @@ body {
     border: 2px solid white;
 }
 
-#layout1 #right .CacSanPham .sanPham .sanPhamNoiThat:hover .noiDungDoTrangTri .gia {
+#layout1 #right #CacSanPham .sanPham .sanPhamNoiThat:hover .noiDungDoTrangTri .gia {
     color: yellow;
 }
 
@@ -1544,24 +1541,24 @@ body {
         display: none;
     }
 
-    #layout1 #right .CacSanPham .sanPham .sanPhamNoiThat {
+    #layout1 #right #CacSanPham .sanPham .sanPhamNoiThat {
         width: 200px;
         height: 258px;
         margin-right: 6px;
         margin-top: 20px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .anhDoTrangTri .anh {
+    #layout1 #right #CacSanPham .sanPham .anhDoTrangTri .anh {
         width: 170px;
         height: 160px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .noiDungDoTrangTri {
+    #layout1 #right #CacSanPham .sanPham .noiDungDoTrangTri {
         margin-left: 0px;
         font-size: 13px;
     }
 
-    #layout1 #right .CacSanPham .sanPham .nutgiohang {
+    #layout1 #right #CacSanPham .sanPham .nutgiohang {
         margin-left: 55px;
         margin-top: -13px;
     }

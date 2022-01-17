@@ -11,7 +11,7 @@
     <!-- Font Awesome 5 CDN link to add social icons in html5 registration form -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="<c:url value='/DangKy/DangKy.css'/>">
+    <link rel="stylesheet" href="<c:url value='DangKy.css'/>">
     <link rel="icon" href="favicon.png" type="image/png">
 
 </head>
@@ -52,29 +52,23 @@
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
-<<<<<<< HEAD:src/main/webapp/DangKy.jsp
             <a href="DangNhap.jsp">
                 <button class="btn">SIGN UP</button>
-=======
             <a href=""  >
                 <button class="btn"> SIGN UP</button>
-
->>>>>>> d7c202f0a6198696207c97dcbc351fe206ae06d6:target/WebFurniture-1.0-SNAPSHOT/DangKy/DangKy.jsp
             </a>
 
-
+            </a>
         </div>
         </form>
         <!-- Right section of responsive registration form -->
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-<<<<<<< HEAD:src/main/webapp/DangKy.jsp
             <a href="DangNhap.jsp">
-=======
             <a href="dang-nhap">
->>>>>>> d7c202f0a6198696207c97dcbc351fe206ae06d6:target/WebFurniture-1.0-SNAPSHOT/DangKy/DangKy.jsp
                 <button class="btn2">SIGN IN</button>
+            </a>
             </a>
         </div>
 

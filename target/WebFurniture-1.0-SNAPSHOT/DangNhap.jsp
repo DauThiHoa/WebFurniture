@@ -216,23 +216,22 @@
                 <p class="text">Sign In with Email Address</p>
                 <div class="formGroup">
                     <i class="far fa-envelope"></i>
-                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="email" name="email" id="email" value="" placeholder="Email">
                 </div>
                 <div class="formGroup">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="password" name="password" id="password" value="" placeholder="Password">
                 </div>
                 <div class="checkBox">
                     <input type="checkbox" name="checkbox" id="checkbox">
                     <span class="text">I Agree with Term & Conditions.</span>
                 </div>
-                <a href="">
-                    <button class="btn">SIGN IN</button>
+                <a href="Login">
+                    <button type="submit" class="btn">SIGN IN</button>
                 </a>
             </div>
-<<<<<<< HEAD:target/WebFurniture-1.0-SNAPSHOT/DangNhap.jsp
-            <a href="HomePage.jsp">
-                <button class="btn">SIGN IN</button>
+            <a href="Login">
+                <button type="submit" class="btn">SIGN IN</button>
             </a>
         </div>
 
@@ -240,11 +239,9 @@
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="DangKy.jsp">
+            <a href="controllerRegister">
                 <button class="btn2">SIGN UP</button>
             </a>
-=======
-
             <!-- Right section of responsive registration form -->
             <div class="welcomeDiv">
                 <h2>Welcome Back!</h2>
@@ -253,11 +250,8 @@
                    SIGN UP
                 </a>
             </div>
->>>>>>> d7c202f0a6198696207c97dcbc351fe206ae06d6:target/WebFurniture-1.0-SNAPSHOT/DangNhap/DangNhap.jsp
         </div>
     </div>
 </form>
-</body>
-</div>
 </body>
 </html>
