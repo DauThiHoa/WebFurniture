@@ -321,19 +321,18 @@
         <div id="CacSanPham">
             <jsp:useBean id="ProductDetailsBedroom" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${ProductDetailsBedroom}">
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n1'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh"
-                             src="NoiThatPhongNgu/Image_NTTTPhongngu/bo-goi.jpg"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bộ chăn gối ngủ </h4>
-                        <h4 class="gia"> 250.000đ </h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -351,19 +350,18 @@
             </div>
             </c:if>
 
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n2'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh"
-                             src="NoiThatPhongNgu/Image_NTTTPhongngu/goi-ngu5.jpg"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối ngủ thêu chữ </h4>
-                        <h4 class="gia"> 150.000đ </h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -380,18 +378,18 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'sp61'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="ImageProduct/Ban_trang_diem.webp"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bàn trang điểm siêu sang</h4>
-                        <h4 class="gia"> 2.400.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -408,18 +406,18 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n3'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class=" anh " src="NoiThatDoTrangTri/Image_Den/den5.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đèn trang trí thiết kế GHO-2143 </h4>
-                        <h4 class="gia"> 910.000đ </h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -436,18 +434,18 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n4'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class=" anh " src="NoiThatDoTrangTri/Image_Den/den7.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đèn ngủ thiết kế đẹp GHO-2141 </h4>
-                        <h4 class="gia">1.590.000đ </h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -464,19 +462,18 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n5'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh"
-                             src="NoiThatPhongNgu/Image_NTTTPhongngu/goi-ngu6.jpg"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối cặp thêu chữ </h4>
-                        <h4 class="gia">190.000đ </h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -493,19 +490,18 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n6'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class=" anh "
-                             src="NoiThatPhongNgu/Image_NTTTPhongngu/tu-quan-ao-gon-gang-khoa-hoc-1.jpg"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Tủ quần áo siêu gọn </h4>
-                        <h4 class="gia"> 1.400.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -522,19 +518,18 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'sp81'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Guong-trang-tri-gia-dinh.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Gương trang trí phòng</h4>
-                            <h4 class="gia"> 1.100.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -551,19 +546,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'sp80'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/goi_tua_lung.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten">Gối tựa lưng</h4>
-                            <h4 class="gia"> 100.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -580,19 +574,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'sp82'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Guong-trang-tri-treo-tuong.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Gương trang trí siêu sang</h4>
-                            <h4 class="gia"> 1.500.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -609,19 +602,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'sp84'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Ke-go-treo-quan-ao-thiet-ke-nho-gon.jpg"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Kệ gỗ treo quần áo </h4>
-                            <h4 class="gia"> 620.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -638,19 +630,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n7'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Den-ngu-trang-tri-dep-cho-gia-dinh.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Đèn ngủ trang trí gia đình </h4>
-                            <h4 class="gia"> 420.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -667,19 +658,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n8'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Den-trang-tri-gia-dinh-phong-cach-co-dien.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Đèn trang trí phong cách cổ điển </h4>
-                            <h4 class="gia"> 690.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -696,19 +686,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'sp79'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Giuong_doi_ngan_duoi.webp"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Giường đôi ngăn dưới</h4>
-                            <h4 class="gia"> 8.700.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -725,19 +714,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n9'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Giuong-ngu.jpg"/>
+                            <img class="anh" src="${p.linkImage}"/>
                         </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Giường ngủ kiểu mới</h4>
-                            <h4 class="gia">7.200.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -754,18 +742,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n10'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/giuong.jpg"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Giường đơn giản</h4>
-                            <h4 class="gia"> 5.700.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -782,18 +770,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n11'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/giuong_dơn.jpeg"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Giường đơn </h4>
-                            <h4 class="gia"> 3.700.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -810,18 +798,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n12'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/giuong-hop-go-tu-nhien.jpg"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Giường hộp gỗ tự nhiên</h4>
-                            <h4 class="gia"> 4.700.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -838,19 +826,19 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n13'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
 
-                            <img class="anh"
-                                 src="ImageProduct/tu-treo-quan-ao.webp"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Tủ treo quần áo</h4>
-                            <h4 class="gia"> 1.700.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -867,18 +855,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n14'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/tu-ao-cho-be.webp"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Tủ để áo cho bé</h4>
-                            <h4 class="gia"> 1.100.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -895,18 +883,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n15'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/tu-quan-ao-canh-lua-thiet-ke.webp"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Tủ quần áo cánh lùa thiết kế</h4>
-                            <h4 class="gia"> 2.700.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -923,18 +911,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n16'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/tu-de-quan-ao-go.webp"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Tủ quần áo cho bé gái</h4>
-                            <h4 class="gia"> 1.750.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -951,18 +939,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n17'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Cay-treo-quan-ao-bang-go-tien-dung.webp"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Cây treo quần áo</h4>
-                            <h4 class="gia"> 300.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -979,18 +967,18 @@
                     </div>
                 </div>
             </c:if>
-            <c:if test="${p.id == ' '}" >
+            <c:if test="${p.id == 'n18'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
-                            <img class="anh"
-                                 src="ImageProduct/Moc-treo-tuong-tien-dung-cho-gia-dinh.webp"/></div>
+                            <img class="anh" src="${p.linkImage}"/>
+                        </div>
                         <div class="noiDungDoTrangTri">
-                            <h4 class="ten"> Móc treo tường tiện dụng </h4>
-                            <h4 class="gia"> 80.000đ</h4>
+                            <h4 class="ten">${p.name}</h4>
+                            <h4 class="gia">${p.priceNew}đ</h4>
                         </div>
                         <div class="nutgiohang">
-                            <a href="GioHang.jsp">
+                            <a href="cart-add?id=${p.id}">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                         data-id="1050379730"><i class="fa fa-cart-plus"
                                                                 aria-hidden="true"></i><span> </span></button>
@@ -1086,7 +1074,7 @@
                     <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Product/AllProducts.jsp?_ijt=lb79ipc726t04q7dgtat16sn83">
+                    <a href="AllProducts.jsp">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
@@ -1116,24 +1104,24 @@
                     <div class="left">
                         <h3>Theo dõi mạng xã hội</h3>
                         <a href="https://www.google.com/search?q=fb&oq=fb&aqs=chrome..69i57j46i131i199i433i465i512j69i59j0i512j46i199i291i433i512j69i60l3.1291j0j7&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/fb_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/fb_left.PNG"/></a>
                         <a href="https://www.google.com/search?q=google&oq=goo&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j69i57j69i60l3j69i65.1245j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/g_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/g_left.PNG"/></a>
                         <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyDMsS05XYDRgdGDwYi8pzywpSS0CAFnOB00&q=twitter&oq=tw&aqs=chrome.1.69i57j46i131i199i433i465i512j0i433i512j46i131i433i512j0i131i433i512j46i433i512j0i131i433i512j69i60.3261j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/tw_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/tw_left.PNG"/></a>
                         <a href="https://www.google.com/search?q=pinterest&oq=p&aqs=chrome.3.69i59l2j69i57j0i131i433i512j69i60l4.10676j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/p_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/p_left.PNG"/></a>
                     </div>
                     <div class="right">
                         <h3>Thanh Toán</h3>
                         <a href="https://www.google.com/search?q=visa&oq=visa&aqs=chrome..69i57j0i433i512l2j0i512l2j0i131i433i512j0i512l2j0i10i512j0i512.2103j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
-                        <img class="mang" src="../Home/Image_Home2/thanhToan2.PNG" height="44" width="65"/>
+                            <img class="mang" src="Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan2.PNG" height="44" width="65"/>
                         <a href="https://www.google.com/search?q=paypal&oq=paypal&aqs=chrome..69i57j46i199i433i465i512j0i433i512j0i512l6.3397j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
+                            <img class="mang" src="Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
                         <a href="https://www.google.com/search?q=jcb&oq=jcb&aqs=chrome..69i57j46i199i433i465i512j0i512l6j0i10i512j0i512.1389j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
-                        <img class="mang" src="../Home/Image_Home2/thanhToan5.PNG" height="40" width="57"/>
+                            <img class="mang" src="Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
                 <div class="lienLac_right">

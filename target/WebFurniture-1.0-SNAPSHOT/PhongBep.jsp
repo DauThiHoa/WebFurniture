@@ -1077,7 +1077,7 @@
                     <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Product/AllProducts.jsp?_ijt=lb79ipc726t04q7dgtat16sn83">
+                    <a href="AllProducts.jsp">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
