@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <link rel="icon" href="Products/img.png" type="image/png" class="icon">
+    <link rel="icon" href="img.png" type="image/png" class="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM </title>
     <link rel="stylesheet" href="AllProduct2.css">
@@ -101,7 +101,7 @@
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="Products/VanPhong.jsp">
+            <a href="VanPhong.jsp">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
@@ -165,7 +165,7 @@
                         <p class="nd">Nội Thất Phòng Bếp</p>
                     </div>
                 </a>
-                <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
@@ -275,7 +275,7 @@
 
             </div>
             <div class="loai">
-                <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/van-phong.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Văn phòng </h3>
                 </a>
