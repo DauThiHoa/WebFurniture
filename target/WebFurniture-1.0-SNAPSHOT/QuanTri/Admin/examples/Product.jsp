@@ -60,7 +60,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Product.jsp">
+                        <a class="nav-link active" href="/WebFurniture_war_exploded/Product">
                             <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
                             <span class="nav-link-text">Product </span>
                         </a>
@@ -471,7 +471,7 @@
     </div>
 
     <div class="button">
-        <a class="nav-link active" href="addProduct.jsp">
+        <a class="nav-link active" href="add/WebFurniture_war_exploded/Product">
             <button class="add">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Add

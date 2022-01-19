@@ -21,6 +21,8 @@ public class Edit extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
      String id = request.getParameter("id");
      String name = request.getParameter("name");
@@ -31,8 +33,7 @@ public class Edit extends HttpServlet {
      String status = request.getParameter("status");
 
      int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status);
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
+
      if ( update == 1 ) {
          request.getRequestDispatcher("/Product").forward(request, response);
      }else{

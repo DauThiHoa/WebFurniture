@@ -411,14 +411,14 @@
                 <!-- San pham khong ban bi ly do gi -->
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
                 <th class="TieuDe">Numerical order</th>
-                <th class="TieuDe">Category</th>
-                <th class="TieuDe">Image</th>
-                <th class="TieuDe">Title</th>
-                <th style=" overflow: hidden ; width: 100% " class="TieuDe">Description</th>
-                <th class="TieuDe">Price</th>
-                <th class="TieuDe">PriceSell</th>
-                <th class="TieuDe">Quantity</th>
-                <th class="TieuDe">Status</th>
+                <th  style="text-align: center" class="TieuDe">Category</th>
+                <th  style="text-align: center" class="TieuDe">Image</th>
+                <th  style="text-align: center" class="TieuDe">Title</th>
+                <th  style=" text-align: center ; overflow: hidden " class="TieuDe">Description</th>
+                <th  style="text-align: center" class="TieuDe">Price</th>
+                <th  style="text-align: center" class="TieuDe">PriceSell</th>
+                <th  style="text-align: center" class="TieuDe">Quantity</th>
+                <th  style="text-align: center" class="TieuDe">Status</th>
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
@@ -429,17 +429,17 @@
                 <form action = "<%=Asset.url("edit")%>"  method = "POST" >
                 <td ><input type="checkbox" name="sport" value="check"></td>
                 <td style="text-align: center"><%= i++ %></td>
-                <td ><input type="text" name ="type" value="HomePage"></td>
+                <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="type" value="HomePage"></td>
                 <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
-                <td ><input type="text" name ="name" value="${item.name}"></td>
-                <td style=" width : 50% ;height: 100px; overflow : hidden "><textarea style=" width : 100% ;height: 100px" type="text" name ="description"  rows="5" cols="30">${item.description}</textarea></td>
-                <td ><input type="text" name ="priceNew" value="${item.priceNew}"></td>
-                <td ><input type="text" name ="priceOld" value="${item.priceOld}"></td>
-                <td style="text-align: center"><input type="text" name ="quantity" value="${item.quantity}"></td>
-                <td ><input type="text" name ="status" value="${item.status}"></td>
+                <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="name" value="${item.name}"></td>
+                <td style=" height: 100px; overflow : hidden "><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="description"  rows="50" cols="50">${item.description}</textarea></td>
+                <td ><input type="text" name ="priceNew" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.priceNew}"></td>
+                <td ><input type="text" name ="priceOld" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.priceOld}"></td>
+                <td style="text-align: center"><input type="text" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.quantity}"></td>
+                <td ><input type="text" name ="status" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.status}"></td>
                 <td>
                         <input type="hidden" name ="id" value="${item.id}">
-                        <button style="border: 1px solid white ; background: white" type="submit" href="" class="fa fa-edit text-danger" aria-hidden="true" ></button>
+                        <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" aria-hidden="true" ></button>
                 </td>
                 </form>
 <%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
@@ -447,7 +447,7 @@
                 <td>
                     <form action = "<%=Asset.url("action")%>"  method = "POST" >
                         <input type="hidden" name ="id" value="${item.id}">
-                        <button style="border: 1px solid white ; background: white" type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true" ></button>
+                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true" ></button>
                     </form>
                 </td>
             </tr>

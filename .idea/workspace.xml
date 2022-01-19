@@ -11,16 +11,52 @@
   <component name="ChangeListManager">
     <list default="true" id="a65df523-51b2-464b-ab5e-7f328a97c43a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/ProductDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/ProductDetailsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/ProductDetailsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Edit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/DirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Posts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Posts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/addDirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/BanAillen_03.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/BanAillen_03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/ChiTietSanPham.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/anhDuoiSanPhamHot.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/anhDuoiSanPhamHot.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/anhDuoiSanPhamKhuyenMai_BoSuuTap.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/anhDuoiSanPhamKhuyenMai_BoSuuTap.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/anhDuoiSanPhamKhuyenMai_BoSuuTap2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/anhDuoiSanPhamKhuyenMai_BoSuuTap2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/anhDuoiSanPhamMoi.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/anhDuoiSanPhamMoi.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/anhDuoiSanPhamNoiBat.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/anhDuoiSanPhamNoiBat.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/banbinas1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/banbinas1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/banbinas2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/banbinas2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/ct1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/ct1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/ct2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/ct2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/ct3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/ct3.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/ct4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/ct4.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/gheaileen3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/gheaileen3.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/gheaillen2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/gheaillen2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/lq1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/lq1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/lq2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/lq2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/lq3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/lq3.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/lq4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/lq4.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/lq5.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/lq5.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/Image_ThongTinSanPham_Home/sofaBangBella1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image_ThongTinSanPham_Home/sofaBangBella1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThongTinSanPham_Home/img.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/manage/productdetails/Show.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/DirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Posts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Posts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/addDirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Edit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Edit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Edit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Edit.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +123,27 @@
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage\layout" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="vn.edu.hcmuaf.fit.webfurniture.productdetails" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture" />
+      <recent name="vn.edu.hcmuaf.fit.webfurniture.productdetails" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.payment" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.services" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.cart.manage.productdetails" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
+    <configuration name="ProductDetailsDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao" />
+      <module name="WebFurniture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.fit.webfurniture.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DangKy.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/DangKy.jsp">
       <method v="2" />
     </configuration>
@@ -102,9 +151,6 @@
       <method v="2" />
     </configuration>
     <configuration name="fail.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/fail.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/manage/productdetails/index.jsp">
       <method v="2" />
     </configuration>
     <configuration name="success.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/success.jsp">
@@ -198,20 +244,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.index.jsp" />
       <item itemvalue="JavaScript Debug.success.jsp" />
       <item itemvalue="JavaScript Debug.fail.jsp" />
       <item itemvalue="JavaScript Debug.DangKy.jsp" />
       <item itemvalue="JavaScript Debug.DangNhap.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+      <item itemvalue="Application.ProductDetailsDao" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductDetailsDao" />
         <item itemvalue="JavaScript Debug.DangNhap.jsp" />
         <item itemvalue="JavaScript Debug.DangKy.jsp" />
         <item itemvalue="JavaScript Debug.success.jsp" />
         <item itemvalue="JavaScript Debug.fail.jsp" />
-        <item itemvalue="JavaScript Debug.index.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -323,6 +369,8 @@
       <workItem from="1642553659212" duration="193000" />
       <workItem from="1642553875104" duration="14000" />
       <workItem from="1642554088875" duration="11640000" />
+      <workItem from="1642569484791" duration="4674000" />
+      <workItem from="1642575454588" duration="11032000" />
     </task>
     <servers />
   </component>

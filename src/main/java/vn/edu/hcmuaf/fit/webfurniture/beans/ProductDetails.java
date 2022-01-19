@@ -182,6 +182,25 @@ public class ProductDetails implements Serializable  {
         return quantitySold * priceNew ;
     }
 
-
+    @Override
+    public String toString() {
+        return "ProductDetails{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", trademark='" + trademark + '\'' +
+                ", production='" + production + '\'' +
+                ", priceOld=" + priceOld +
+                ", quantity=" + quantity +
+                ", quantitySold=" + quantitySold +
+                ", linkImage='" + linkImage + '\'' +
+                ", priceNew=" + priceNew +
+                ", dateSubmitted='" + dateSubmitted + '\'' +
+                ", status='" + status + '\'' +
+                ", idProductGroups='" + idProductGroups + '\'' +
+                ", idCategory='" + idCategory + '\'' +
+                ", viewProductDetails='" + viewProductDetails + '\'' +
+                '}';
+    }
 }
 

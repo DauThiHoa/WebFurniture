@@ -1,5 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
@@ -184,17 +185,20 @@
 
 <div id="SanPhamNoiBat">
 
-    <div id="BanLamViec">
+    <div id="BanLamViec" >
         <jsp:useBean id="productDetailsAll" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsAll}">
         <c:if test="${p.id == 'sp1'}" >
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-            <img id="anh_BanLamViec" src="${p.linkImage}"/>
-        </a>
-        <div id="blv">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <h1 class="chuBanLamViec">${p.name}</h1>
+        <form action="ProductDetails" method="POST">
+            <a href="../WebFurniture_war_exploded/ProductDetails">
+                <input style="display: none" type="text" name="id" value="${p.id}">
+            <button id="anh_BanLamViec"  type="submit" style="background: white;border: 1px solid white">
+                <img  id="anh_BanLamViec" style="padding: 0px" src="${p.linkImage}"/>
+            </button>
             </a>
+        </form>
+        <div id="blv">
+                    <h1 type="submit" class="chuBanLamViec">${p.name}</h1>
             <div class="sao3">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -231,13 +235,16 @@
         <c:forEach var="p" items="${productDetailsSanPhamNoiBat1}">
             <c:if test="${p.id == 'sp2'}" >
         <div class="tensanpham" id="khungsanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+            <form action="ProductDetails" method="POST">
+            <a href="ProductDetails">
+                <input type="text" style="display: none" name="id" value="${p.id}">
+                <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                </button>
             </a>
+            </form>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
-                </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
@@ -253,13 +260,16 @@
 
             <c:if test="${p.id == 'sp3'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <img class="anhSanPham" src="${p.linkImage}"/>
+            <form action="ProductDetails" method="POST">
+                <a href="ProductDetails">
+                    <input type="text" style="display: none" name="id" value="${p.id}">
+                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                        <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                </button>
             </a>
+            </form>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
-                </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
@@ -275,13 +285,16 @@
 
             <c:if test="${p.id == 'sp4'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <img class="anhSanPham" src="${p.linkImage}"/>
-            </a>
-            <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <h2 class="ten">${p.name}</h2>
+            <form action="ProductDetails" method="POST">
+                <a href="ProductDetails">
+                    <input type="text" style="display: none" name="id" value="${p.id}">
+                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                        <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                    </button>
                 </a>
+            </form>
+            <div class="sanpham">
+                    <h2 class="ten">${p.name}</h2>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
@@ -297,12 +310,16 @@
 
             <c:if test="${p.id == 'sp5'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <img class="anhSanPham" src="${p.linkImage}"/>
-            </a>
+            <form action="ProductDetails" method="POST">
+                <a href="ProductDetails">
+                    <input type="text" style="display: none" name="id" value="${p.id}">
+                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                        <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                    </button>
+                </a>
+            </form>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <h2 class="ten">${p.name}</h2></a>
+                    <h2 class="ten">${p.name}</h2>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
@@ -318,13 +335,16 @@
 
             <c:if test="${p.id == 'sp6'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <img class="anhSanPham" src="${p.linkImage}"/>
-            </a>
-            <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <h2 class="ten">${p.name}</h2>
+            <form action="ProductDetails" method="POST">
+                <a href="ProductDetails">
+                    <input type="text" style="display: none" name="id" value="${p.id}">
+                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                        <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                    </button>
                 </a>
+            </form>
+            <div class="sanpham">
+                    <h2 class="ten">${p.name}</h2>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
@@ -340,13 +360,16 @@
 
             <c:if test="${p.id == 'sp7'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                <img class="anhSanPham" src="${p.linkImage}"/>
-            </a>
-            <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <h2 class="ten">${p.name}</h2>
+            <form action="ProductDetails" method="POST">
+                <a href="ProductDetails">
+                    <input type="text" style="display: none" name="id" value="${p.id}">
+                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                        <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                    </button>
                 </a>
+            </form>
+            <div class="sanpham">
+                    <h2 class="ten">${p.name}</h2>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
@@ -367,14 +390,16 @@
             <c:forEach var="p" items="${productDetailsSanPhamNoiBat2}">
                 <c:if test="${p.id == 'sp8'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <img class="anhSanPham"
-                         src="${p.linkImage}"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                        <h2 class="ten">${p.name}</h2>
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
+                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                            <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
                     </a>
+                </form>
+                <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
@@ -392,13 +417,16 @@
 
                 <c:if test="${p.id == 'sp9'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <img class="anhSanPham" src="${p.linkImage}"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                        <h2 class="ten">${p.name}</h2>
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
+                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                            <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
                     </a>
+                </form>
+                <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
@@ -416,14 +444,16 @@
             <!-- San Pham Bam nut chuyen -->
                 <c:if test="${p.id == 'sp10'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <img class="anhSanPham"
-                         src="${p.linkImage}"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                        <h2 class="ten">${p.name}</h2>
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
+                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                            <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
                     </a>
+                </form>
+                <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
@@ -442,14 +472,16 @@
 
                 <c:if test="${p.id == 'sp11'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <img class="anhSanPham"
-                         src="${p.linkImage}"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                        <h2 class="ten">${p.name}</h2>
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
+                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                            <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
                     </a>
+                </form>
+                <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
@@ -468,14 +500,16 @@
 
                 <c:if test="${p.id == 'sp12'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <img class="anhSanPham"
-                         src="${p.linkImage}"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                        <h2 class="ten">${p.name}</h2>
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
+                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                            <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
                     </a>
+                </form>
+                <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
@@ -494,14 +528,16 @@
 
             <c:if test="${p.id == 'sp13'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                    <img class="anhSanPham"
-                         src="${p.linkImage}"/>
-                </a>
-                <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
-                        <h2 class="ten">${p.name}</h2>
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
+                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ">
+                            <img class="anhSanPham" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
                     </a>
+                </form>
+                <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
@@ -535,12 +571,12 @@
             <c:forEach var="p" items="${productDetailsSanPhamHotDoDungVanPhong}">
             <c:if test="${p.id == 'sp14'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -565,12 +601,12 @@
             <!-- San pham -->
             <c:if test="${p.id == 'sp15'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
+                <a href="BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
+                    <a href="BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -597,12 +633,12 @@
             <!-- San pham -->
             <c:if test="${p.id == 'sp16'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
+                <a href="BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
+                    <a href="BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -629,12 +665,12 @@
             <!-- San pham -->
             <c:if test="${p.id == 'sp17'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
+                <a href="BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
+                    <a href="BanAillen_03.jsp?_ijt=5vff1fns2k7mbhommgu3i8t1op">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -669,12 +705,12 @@
             <c:forEach var="p" items="${productDetailsSanPhamHotNoiThatGo}">
             <c:if test="${p.id == 'sp18'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -699,12 +735,12 @@
             <!-- San pham -->
             <c:if test="${p.id == 'sp19'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -731,12 +767,12 @@
             <!-- San pham -->
             <c:if test="${p.id == 'sp20'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -763,12 +799,12 @@
             <!-- San pham -->
             <c:if test="${p.id == 'sp21'}" >
             <div class="gheGoBapBenhIconic">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh_gheGoBapBenhIconic"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="iconic">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <div class="sao4">
@@ -799,11 +835,11 @@
     <c:forEach var="p" items="${productDetailsSanPhamHotBanGheThuGian}">
     <c:if test="${p.id == 'sp22'}" >
     <div id="gheGoBapBenhIconic">
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+        <a href="BanAillen_03.jsp">
             <img id="anh_gheGoBapBenhIconic" src="${p.linkImage}"/>
         </a>
         <div id="iconic">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <h2 class="ten">${p.name}</h2>
             </a>
             <div class="sao4">
@@ -827,11 +863,11 @@
     </c:if>
     <c:if test="${p.id == 'sp23'}" >
     <div id="ghePhongKhachArctander">
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+        <a href="BanAillen_03.jsp">
             <img id="anh_ghePhongKhachArctander" src="${p.linkImage}"/>
         </a>
         <div id="Arctander">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <h2 class="ten">${p.name}</h2>
                 <div class="sao4">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -855,11 +891,11 @@
     </c:if>
     <c:if test="${p.id == 'sp24'}" >
     <div id="BanAillen03">
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+        <a href="BanAillen_03.jsp">
             <img id="anh_BanAillen03" src="${p.linkImage}"/>
         </a>
         <div id="Aillen03">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <h2 class="ten">${p.name}</h2>
             </a>
             <div class="sao4">
@@ -883,11 +919,11 @@
     </c:if>
     <c:if test="${p.id == 'sp25'}" >
     <div id="banBinas">
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+        <a href="BanAillen_03.jsp">
             <img id="anh_banBinas" src="${p.linkImage}"/>
         </a>
         <div id="binas">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <h2 class="ten">${p.name}</h2>
             </a>
             <div class="sao4">
@@ -922,12 +958,12 @@
         <jsp:useBean id="productDetailsSanPhamMoiMiNi" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsSanPhamMoiMiNi}">
         <c:if test="${p.id == 'sp26'}" >
-        <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+        <a href="BanAillen_03.jsp">
             <img id="anh_Kozoka_trysil"
                  src="${p.linkImage}"/>
         </a>
         <div id="Kozoka">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <h2 class="ten">${p.name}</h2>
             </a>
             <div class="sao3">
@@ -963,11 +999,11 @@
         <c:forEach var="p" items="${productDetailsSanPhamMoi1}">
         <c:if test="${p.id == 'sp27'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
                 </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -984,11 +1020,11 @@
         </c:if>
         <c:if test="${p.id == 'sp28'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
                 </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1005,11 +1041,11 @@
         </c:if>
         <c:if test="${p.id == 'sp29'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
                 </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1026,11 +1062,11 @@
         </c:if>
         <c:if test="${p.id == 'sp30'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
                 </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1047,12 +1083,12 @@
         </c:if>
         <c:if test="${p.id == 'sp31'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <img class="anhSanPham"
                      src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
                 </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1069,11 +1105,11 @@
         </c:if>
         <c:if test="${p.id == 'sp32'}" >
         <div class="tensanpham">
-            <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+            <a href="BanAillen_03.jsp">
                 <img class="anhSanPham" src="${p.linkImage}"/>
             </a>
             <div class="sanpham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <h2 class="ten">${p.name}</h2>
                 </a>
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1096,12 +1132,12 @@
             <c:forEach var="p" items="${productDetailsSanPhamMoi2}">
                 <c:if test="${p.id == 'sp33'}" >
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anhSanPham"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1120,12 +1156,12 @@
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anhSanPham"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1144,12 +1180,12 @@
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anhSanPham"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1168,12 +1204,12 @@
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anhSanPham"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1192,12 +1228,12 @@
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anhSanPham"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1216,12 +1252,12 @@
             <!-- San Pham Bam nut chuyen -->
             <!-- San Pham Bam nut chuyen -->
             <div class="tensanpham1">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anhSanPham"
                          src="${p.linkImage}"/>
                 </a>
                 <div class="sanpham">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
@@ -1319,11 +1355,11 @@
                 <c:forEach var="p" items="${productDetailsBoSuuTap1}">
                     <c:if test="${p.id == 'sp39'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1349,11 +1385,11 @@
                     </c:if>
                     <c:if test="${p.id == 'sp40'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1378,11 +1414,11 @@
                     </c:if>
                     <c:if test="${p.id == 'sp41'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1406,11 +1442,11 @@
                     </c:if>
                     <c:if test="${p.id == 'sp42'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1443,11 +1479,11 @@
 <c:forEach var="p" items="${productDetailsBoSuuTap2}">
     <c:if test="${p.id == 'sp43'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1473,11 +1509,11 @@
     </c:if>
     <c:if test="${p.id == 'sp44'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1504,11 +1540,11 @@
     <c:if test="${p.id == 'sp45'}" >
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia" style="margin-top: 100px ; margin-left: -190px">${p.priceNew}đ</h3>
@@ -1536,11 +1572,11 @@
             <!-- SAN PHAM NHO -->
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1587,11 +1623,11 @@
 <c:forEach var="p" items="${productDetailsSanPhamKhuyenMai1}">
     <c:if test="${p.id == 'sp47'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1615,11 +1651,11 @@
     </c:if>
     <c:if test="${p.id == 'sp48'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia">${p.priceNew}đ</h3>
@@ -1644,11 +1680,11 @@
     </c:if>
     <c:if test="${p.id == 'sp49'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia1">${p.priceNew}đ</h3>
@@ -1672,11 +1708,11 @@
     </c:if>
     <c:if test="${p.id == 'sp50'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia" style="margin-left: -190px ">${p.priceNew}đ</h3>
@@ -1707,11 +1743,11 @@
 <c:forEach var="p" items="${productDetailsSanPhamKhuyenMai2}">
     <c:if test="${p.id == 'sp51'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia" style="margin-left: -175px ; margin-top: 100px">${p.priceNew}đ</h3>
@@ -1738,11 +1774,11 @@
     </c:if>
     <c:if test="${p.id == 'sp52'}" >
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia" style="margin-left: -200px ; margin-top: 100px">${p.priceNew}đ</h3>
@@ -1770,11 +1806,11 @@
     <c:if test="${p.id == 'sp53'}" >
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia" style="margin-left: -190px ; margin-top: 100px">${p.priceNew}đ</h3>
@@ -1803,11 +1839,11 @@
             <!-- SAN PHAM NHO -->
             <!-- SAN PHAM NHO -->
             <div class="cacSanPham">
-                <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                <a href="BanAillen_03.jsp">
                     <img class="anh5" src="${p.linkImage}"/>
                 </a>
                 <div class="moTa">
-                    <a href="ThongTinSanPham_Home/BanAillen_03.jsp">
+                    <a href="BanAillen_03.jsp">
                         <h2 class="ten">${p.name}</h2>
                     </a>
                     <h3 class="gia" style="margin-left: -205px ; margin-top: 100px">${p.priceNew}đ</h3>

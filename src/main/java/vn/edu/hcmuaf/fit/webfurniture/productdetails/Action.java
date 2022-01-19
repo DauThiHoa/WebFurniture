@@ -26,7 +26,7 @@ public class Action extends HttpServlet {
      int productDetails =  ProductDetailsService.getInstance().delete(id);
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
      if ( productDetails == 1 ) {
-         request.getRequestDispatcher("success.jsp").forward(request, response);
+         request.getRequestDispatcher("/Product").forward(request, response);
      }else{
          request.getRequestDispatcher("fail.jsp").forward(request, response);
      }

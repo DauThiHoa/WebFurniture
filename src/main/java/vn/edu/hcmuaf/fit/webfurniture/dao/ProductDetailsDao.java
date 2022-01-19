@@ -51,4 +51,9 @@ public class ProductDetailsDao {
                         .bind(6 , id )
                         .execute());
     }
+
+//    public static void main(String[] args) {
+//        ProductDetails j =  getById ("sp2");
+//        System.out.println(j.toString());
+//    }
 }

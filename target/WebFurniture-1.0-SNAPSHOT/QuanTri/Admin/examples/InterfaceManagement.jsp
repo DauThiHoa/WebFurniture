@@ -474,7 +474,7 @@
     </div>
 
     <div class="button">
-        <a class="nav-link active" href="addProduct.jsp">
+        <a class="nav-link active" href="add/WebFurniture_war_exploded/Product">
             <button class="add">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Add
