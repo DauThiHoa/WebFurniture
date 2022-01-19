@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.webfurniture.cart.manage.productdetails;
+package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;

@@ -42,4 +42,8 @@ public class ProductDetailsService {
 
         return ProductDetailsDao.getInstance().delete(id);
     }
+
+    public int update(String id, String name, String description, String priceNew, String priceOld, String quantity, String status) {
+        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status);
+    }
 }

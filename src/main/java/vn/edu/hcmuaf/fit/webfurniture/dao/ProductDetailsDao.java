@@ -38,4 +38,17 @@ public class ProductDetailsDao {
                 h.createUpdate("delete from productdetails where id = ? ")
                         .bind(0 , id ).execute());
     }
+
+    public int update (String id , String name , String description , String priceNew , String priceOld , String quantity , String status) {
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("update productdetails set `name` = ? , description = ? , priceNew = ? , priceOld = ? , quantity = ? , `status`= ? where id = ? ")
+                        .bind(0 , name )
+                        .bind(1 , description )
+                        .bind(2 , Integer.parseInt(priceNew) )
+                        .bind(3 , Integer.parseInt(priceOld) )
+                        .bind(4 , Integer.parseInt(quantity) )
+                        .bind(5 , status )
+                        .bind(6 , id )
+                        .execute());
+    }
 }

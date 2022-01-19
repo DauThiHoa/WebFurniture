@@ -5,13 +5,14 @@
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
@@ -373,97 +374,27 @@
 
     <div class="container">
 
-        <div class="dropdown">
+<%--        <div class="dropdown">--%>
 
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+<%--            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">--%>
 
-                Action <span class="caret"></span>
+<%--                Action <span class="caret"></span>--%>
 
-            </button>
+<%--            </button>--%>
 
-            <ul class="dropdown-menu">
+<%--            <ul class="dropdown-menu">--%>
 
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
+<%--                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>--%>
+<%--                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>--%>
+<%--                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>--%>
+<%--                <li class="dropdown-menuLi"><a href="#"> Change </a></li>--%>
 
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
-        </div>
+<%--            </ul>--%>
+<%--        </div>--%>
 
     </div>
 
-    <div class="container">
 
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown1">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                View all products <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Living room products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Kitchen products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Office products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Bedroom products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Interior decoration </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Hot products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Featured products </a></li>
-                <li class="dropdown-menuLi"><a href="#"> New product </a></li>
-
-            </ul>
-        </div>
-
-    </div>
 
     <div class="button">
         <a class="nav-link active" href="<%= Asset.url("QuanTri/Admin/examples/addProduct.jsp")%>">
@@ -483,7 +414,7 @@
                 <th class="TieuDe">Category</th>
                 <th class="TieuDe">Image</th>
                 <th class="TieuDe">Title</th>
-                <th width = "5%" style=" overflow: hidden " class="TieuDe">Description</th>
+                <th style=" overflow: hidden ; width: 100% " class="TieuDe">Description</th>
                 <th class="TieuDe">Price</th>
                 <th class="TieuDe">PriceSell</th>
                 <th class="TieuDe">Quantity</th>
@@ -495,21 +426,26 @@
             <% int i = 1 ;%>
             <c:forEach items="${list}" var="item" >
             <tr>
+                <form action = "<%=Asset.url("edit")%>"  method = "POST" >
                 <td ><input type="checkbox" name="sport" value="check"></td>
                 <td style="text-align: center"><%= i++ %></td>
-                <td >Home page</td>
+                <td ><input type="text" name ="type" value="HomePage"></td>
                 <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
-                <td >${item.name}</td>
-                <td style=" width : 5% ; overflow : hidden ">${item.description}</td>
-                <td >${item.priceNew}đ</td>
-                <td >${item.priceOld}đ</td>
-                <td style="text-align: center">${item.quantity}</td>
-                <td >${item.status}</td>
-                <td><i class="fa fa-edit"></i></td>
+                <td ><input type="text" name ="name" value="${item.name}"></td>
+                <td style=" width : 50% ;height: 100px; overflow : hidden "><textarea style=" width : 100% ;height: 100px" type="text" name ="description"  rows="5" cols="30">${item.description}</textarea></td>
+                <td ><input type="text" name ="priceNew" value="${item.priceNew}"></td>
+                <td ><input type="text" name ="priceOld" value="${item.priceOld}"></td>
+                <td style="text-align: center"><input type="text" name ="quantity" value="${item.quantity}"></td>
+                <td ><input type="text" name ="status" value="${item.status}"></td>
+                <td>
+                        <input type="hidden" name ="id" value="${item.id}">
+                        <button style="border: 1px solid white ; background: white" type="submit" href="" class="fa fa-edit text-danger" aria-hidden="true" ></button>
+                </td>
+                </form>
 <%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
 <%--                <td> <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i></a></td>--%>
                 <td>
-                    <form action = "<%=Asset.url("Product/Action")%>" method = "POST" >
+                    <form action = "<%=Asset.url("action")%>"  method = "POST" >
                         <input type="hidden" name ="id" value="${item.id}">
                         <button style="border: 1px solid white ; background: white" type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true" ></button>
                     </form>
@@ -521,7 +457,7 @@
 
 
     <!-- Footer -->
-    <footer class="footer pt-0">
+    <footer class="footer pt-0" >
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
