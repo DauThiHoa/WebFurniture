@@ -1,5 +1,5 @@
 
-import vn.edu.hcmuaf.fit.webfurniture.service.UserServices;
+import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

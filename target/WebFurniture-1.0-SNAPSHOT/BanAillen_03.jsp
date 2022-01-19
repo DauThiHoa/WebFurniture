@@ -105,11 +105,11 @@
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-<<<<<<< Updated upstream:target/WebFurniture-1.0-SNAPSHOT/BanAillen_03.jsp
+<<<<<<< Updated upstream:src/main/webapp/BanAillen_03.jsp
             <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
 =======
             <a href="../VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
->>>>>>> Stashed changes:target/WebFurniture-1.0-SNAPSHOT/ThongTinSanPham_Home/BanAillen_03.jsp
+>>>>>>> Stashed changes:src/main/webapp/ThongTinSanPham_Home/BanAillen_03.jsp
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>

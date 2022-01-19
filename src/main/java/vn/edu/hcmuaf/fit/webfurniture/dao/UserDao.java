@@ -20,7 +20,6 @@ public class UserDao {
     }
 
     public boolean checkLogin(String email, String password) {
-        // Statement statement = DBConnect.getInstance().get();
         Connection connection = DBConnect.getConnection();
         String sql = "SELECT * FROM user WHERE email = ? AND password = ?";
         try {
@@ -29,8 +28,10 @@ public class UserDao {
             stm.setString(2, password);
             ResultSet rs = stm.executeQuery();
             if (rs.next()) {
+                System.out.println("UserDao, true");
                 return true;
             } else {
+                System.out.println("UserDao, false");
                 return false;
             }
         } catch (SQLException e) {

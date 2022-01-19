@@ -193,65 +193,59 @@
     </style>
 </head>
 <body>
-<form action="Login" method="post">
-    <div class="container">
+<div class="container">
+    <div class="formWraper">
 
-        <div class="formWraper">
+        <!-- Left section of responsive registration form -->
 
-            <!-- Left section of responsive registration form -->
-            <div class="formDiv">
-                <h2>Sign In</h2>
-                <p class="text"> Sign In with Social Media</p>
+        <div class="formDiv">
+            <h2>Sign In</h2>
+            <p class="text"> Sign In with Social Media</p>
 
-                <!-- Font Awesome Icons -->
-                <div class="socialBtn">
-                    <div class="facebook icon"><i class="fab fa-facebook-f"></i></div>
-                    <div class="twitter icon"><i class="fab fa-twitter"></i></div>
-                    <div class="instagram icon"><i class="fab fa-instagram"></i></div>
-                </div>
-
-                <!--Horizontal Line-->
-                <hr>
-                <div class="orDiv">Or</div>
-                <p class="text">Sign In with Email Address</p>
-                <div class="formGroup">
-                    <i class="far fa-envelope"></i>
-                    <input type="email" name="email" id="email" value="" placeholder="Email">
-                </div>
-                <div class="formGroup">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" value="" placeholder="Password">
-                </div>
-                <div class="checkBox">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <span class="text">I Agree with Term & Conditions.</span>
-                </div>
-                <a href="Login">
-                    <button type="submit" class="btn">SIGN IN</button>
-                </a>
+            <!-- Font Awesome Icons -->
+            <div class="socialBtn">
+                <div class="facebook icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="twitter icon"><i class="fab fa-twitter"></i></div>
+                <div class="instagram icon"><i class="fab fa-instagram"></i></div>
             </div>
-            <a href="Login">
-                <button type="submit" class="btn">SIGN IN</button>
+
+            <!--Horizontal Line-->
+            <hr>
+            <div class="orDiv">Or</div>
+            <form action="handling-login" method="post">
+            <p class="text">Sign In with Email Address</p>
+            <div class="formGroup">
+                <i class="far fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="formGroup">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="checkBox">
+                <input type="checkbox" name="checkboxlogin" id="checkbox">
+                <span class="text">I Agree with Term & Conditions.</span>
+            </div>
+                <% if(error != null) { %>
+                    <p><%= error%></p>
+                <%} %>
+
+            <a href="../Home/HomePage.html">
+                <button class="btn">SIGN IN</button>
             </a>
+            </form>
         </div>
 
         <!-- Right section of responsive registration form -->
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="controllerRegister">
+            <a href="../DangKy/DangKy.html">
                 <button class="btn2">SIGN UP</button>
             </a>
-            <!-- Right section of responsive registration form -->
-            <div class="welcomeDiv">
-                <h2>Welcome Back!</h2>
-                <p class="text">Get in touch with us for our news letter and more updates.</p>
-                <a href="controllerRegister"class="btn2">
-                   SIGN UP
-                </a>
-            </div>
         </div>
+
     </div>
-</form>
+</div>
 </body>
 </html>

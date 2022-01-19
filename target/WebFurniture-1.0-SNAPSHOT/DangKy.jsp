@@ -20,7 +20,7 @@
     <div class="formWraper">
 
         <!-- Left section of responsive registration form -->
-        <form action="register" method="post">
+
         <div class="formDiv">
             <h2>Create Account</h2>
             <p class="text"> Sign Up with Social Media</p>
@@ -35,6 +35,7 @@
             <!--Horizontal Line-->
             <hr>
             <div class="orDiv">Or</div>
+            <form action="handling-signup" method="post">
             <p class="text">Sign Up with Email Address</p>
             <div class="formGroup">
                 <i class="far fa-user"></i>
@@ -52,23 +53,18 @@
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
-            <a href="DangNhap.jsp">
+            <a href="register">
                 <button class="btn">SIGN UP</button>
-            <a href=""  >
-                <button class="btn"> SIGN UP</button>
             </a>
-
-            </a>
+            </form>
         </div>
-        </form>
+
         <!-- Right section of responsive registration form -->
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="DangNhap.jsp">
-            <a href="dang-nhap">
+            <a href="../DangNhap/DangNhap.html">
                 <button class="btn2">SIGN IN</button>
-            </a>
             </a>
         </div>
 
