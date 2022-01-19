@@ -244,12 +244,12 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ProductDetailsDao" />
       <item itemvalue="JavaScript Debug.success.jsp" />
       <item itemvalue="JavaScript Debug.fail.jsp" />
       <item itemvalue="JavaScript Debug.DangKy.jsp" />
       <item itemvalue="JavaScript Debug.DangNhap.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
-      <item itemvalue="Application.ProductDetailsDao" />
     </list>
     <recent_temporary>
       <list>
@@ -387,7 +387,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
