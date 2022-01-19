@@ -51,9 +51,15 @@ public class ProductDetailsDao {
                         .bind(6 , id )
                         .execute());
     }
-
-//    public static void main(String[] args) {
-//        ProductDetails j =  getById ("sp2");
-//        System.out.println(j.toString());
-//    }
+    public static List <ProductDetails> getAllName (String name ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT * FROM productdetails WHERE `name` like ? ")
+                    .bind(0 , "%" + name + "%")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public static void main(String[] args) {
+        List<ProductDetails> j = getAllName ("Bàn Ghế");
+        System.out.println(j.toString());
+    }
 }

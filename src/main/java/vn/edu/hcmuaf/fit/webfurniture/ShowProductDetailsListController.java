@@ -15,6 +15,7 @@ public class ShowProductDetailsListController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 //           request.setAttribute("productDetailsAll" , ProductDetailsService.getInstance().getAll());
+           String name = request.getParameter("name");
            String id = request.getParameter("id");
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
 

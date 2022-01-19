@@ -105,16 +105,8 @@
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:src/main/webapp/BanAillen_03.jsp
-=======
->>>>>>> Stashed changes
             <a href="Products/VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
             <a href="../VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
-<<<<<<< Updated upstream
->>>>>>> Stashed changes:src/main/webapp/ThongTinSanPham_Home/BanAillen_03.jsp
-=======
->>>>>>> Stashed changes
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
@@ -149,25 +141,24 @@
     </a>
 </div>
 
-
+<jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
 <div class="tieuDe ">
-    <h2 class="trangChu_BanAilen_03">Trang Chủ / Bàn Aillen 03 </h2>
+    <h2 class="trangChu_BanAilen_03">Trang Chủ / ${productDetails.name} </h2>
 
 </div>
 <div id="thongTinSanPham">
     <div class="trai">
         <div id="anhDau">
-            <img id="anh" class="anh_BanLamViec" src="Image/BanAillen03_SPH.PNG"/>
+            <img id="anh" class="anh_BanLamViec" src="${productDetails.linkImage}"/>
         </div>
-        <img id="anhDau1" class="anh_BanLamViec_min" src="Image/BanAillen03_SPH.PNG" onclick="zoomount(this)"
+        <img id="anhDau1" class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
              alt="image"/>
-        <img id="anhDau2" class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
-             onclick="zoomount(this)" alt="image"/>
-        <img id="anhDau3" class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"
-             onclick="zoomount(this)" alt="image"/>
+<%--        <img id="anhDau2" class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"--%>
+<%--             onclick="zoomount(this)" alt="image"/>--%>
+<%--        <img id="anhDau3" class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"--%>
+<%--             onclick="zoomount(this)" alt="image"/>--%>
     </div>
     <div class="phai">
-        <jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
         <div class="tieuDe">
             <h2 class="ten">${productDetails.name}</h2>
         </div>
@@ -187,26 +178,23 @@
         <div class="thongTin">
             <div class="maSanPham">
                 <h3 class="tieuDe"> Mã sản phẩm : </h3>
-                <p class="ma">Aillen_03 </p>
+                <p class="ma">${productDetails.id}</p>
             </div>
             <div class="thuongHieu">
                 <h3 class="tieuDe">Thương hiệu : </h3>
-                <p class="ma">AILLEN</p>
+                <p class="ma">${productDetails.trademark}</p>
             </div>
         </div>
         <hr class="thanh"></hr>
         <div class="gia">
-            <h2 class="giaBLV">1.400.000đ</h2>
+            <h2 class="giaBLV">${productDetails.priceNew}đ</h2>
             <div class="TinhTrang">
                 <h4 class="tieuDe"> Tình Trạng : </h4>
-                <p class="hang"> Còn hàng </p>
+                <p class="hang">${productDetails.status}</p>
             </div>
         </div>
         <div class="thongTinChiTiet">
-            <p class="thongTinct"> Thiết kế đơn giản nhưng thanh lịch. Màu sắc tinh tế, sang trọng.
-                Chất liệu gỗ MDF chống mối mọt, chịu ẩm tốt, thân thiện với môi trường. Sơn tĩnh điện chống gỉ sét tối
-                đa.
-                Tháo lắp dễ dàng. ,...</p>
+            <p class="thongTinct">${productDetails.description}</p>
         </div>
         <div class="mauSac">
             <div class="top">
@@ -214,12 +202,12 @@
                 <p class="soMau"> Màu đen , Màu gỗ , Màu trắng </p>
             </div>
             <div class="bottom">
-                <img class="anh_BanLamViec_min" src="Image/BanAillen03_SPH.PNG" onclick="zoomount(this)"
+                <img class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
                      alt="image"/>
-                <img class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
-                     onclick="zoomount(this)" alt="image"/>
-                <img class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"
-                     onclick="zoomount(this)" alt="image"/>
+<%--                <img class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"--%>
+<%--                     onclick="zoomount(this)" alt="image"/>--%>
+<%--                <img class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"--%>
+<%--                     onclick="zoomount(this)" alt="image"/>--%>
             </div>
         </div>
         <div class="chatLieu">
@@ -237,13 +225,13 @@
             <div class="cong" onclick="cong(this)" alt="tangSoLuong">
                 <h3 class="dauCong"> + </h3>
             </div>
-            <a href="GioHang.jsp">
+            <a href="cart-add?id=${productDetails.id}">
                 <div class="gioHang">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
             </a>
-            <a href="ThanhToan.jsp">
+            <a href="payment">
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
