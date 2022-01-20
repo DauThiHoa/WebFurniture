@@ -102,7 +102,7 @@
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="../NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>

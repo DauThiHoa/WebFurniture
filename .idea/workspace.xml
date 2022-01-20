@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a65df523-51b2-464b-ab5e-7f328a97c43a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDecoration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/OrderDao.java" afterDir="false" />
@@ -21,6 +24,46 @@
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.class" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang/HeThongCuaHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang/HeThongCuaHang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LienHe/LienHe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LienHe/LienHe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Den.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Den.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Goisofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Goisofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Lohoagia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Lohoagia.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Remcua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_Remcua.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_TamTham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri/NoiThatDoTrangTri_TamTham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/Khantraiban.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/Khantraiban.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/BanTrangDiem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/BanTrangDiem.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/DenNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/DenNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GiuongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GiuongNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GoiNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GoiNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/TuQuanAo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/TuQuanAo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,8 +384,12 @@
       <workItem from="1642573802047" duration="12128000" />
       <workItem from="1642637922785" duration="6882000" />
       <workItem from="1642649820926" duration="12603000" />
+<<<<<<< Updated upstream
       <workItem from="1642671864898" duration="11124000" />
       <workItem from="1642686824996" duration="6684000" />
+=======
+      <workItem from="1642681998727" duration="13058000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -359,7 +406,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

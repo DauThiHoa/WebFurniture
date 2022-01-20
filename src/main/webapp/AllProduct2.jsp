@@ -106,7 +106,7 @@
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp">
+            <a href="NoiThatDoTrangTri.jsp">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -170,7 +170,7 @@
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
                 </a>
-                <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <div class="noiThat">
                         <p class="nd">Nội thất Đồ Trang Trí</p>
                     </div>
@@ -281,7 +281,7 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/trang-tri.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Trang trí</h3>
                 </a>

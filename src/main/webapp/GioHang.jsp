@@ -110,7 +110,7 @@
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp">
+            <a href="NoiThatDoTrangTri.jsp">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>

@@ -106,7 +106,7 @@
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp">
+            <a href="NoiThatDoTrangTri.jsp">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -1378,7 +1378,7 @@
 </div>
 <div id="layout4">
     <div class="layout4_danhMucSanPham">
-        <a href="NoiThatDoTrangTri/NoiThatDoTrangTri.jsp?_ijt=6ckcb7ad8uk7545qms42j8a53d">
+        <a href="NoiThatDoTrangTri.jsp?_ijt=6ckcb7ad8uk7545qms42j8a53d">
             <div class="danhMucSanPham">
                 <img class="anh"
                      src="NoiThatDoTrangTri/Image_DoTrangTri/rem4.PNG"/>
