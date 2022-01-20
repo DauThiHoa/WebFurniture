@@ -14,9 +14,13 @@ public class ShowProductDetailsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//           request.setAttribute("productDetailsAll" , ProductDetailsService.getInstance().getAll());
-           String name = request.getParameter("name");
+        String name = request.getParameter("name");
+//           response.getWriter().println(name);
+           request.setCharacterEncoding("UTF-8");
+           response.setCharacterEncoding("UTF-8");
+           request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
            String id = request.getParameter("id");
+//           response.getWriter().println(id);
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
 
            request.setCharacterEncoding("UTF-8");
@@ -30,4 +34,5 @@ public class ShowProductDetailsListController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             doGet(request , response);
     }
+
 }

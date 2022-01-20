@@ -4,6 +4,7 @@ import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
 import java.util.List;
+import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
 public class ProductDetailsDao {
@@ -51,15 +52,34 @@ public class ProductDetailsDao {
                         .bind(6 , id )
                         .execute());
     }
-    public static List <ProductDetails> getAllName (String name ){
+    public static String changeName (String nameOld ){
+        StringTokenizer str = new StringTokenizer(nameOld);
+        String result = null ;
+        String [] array = {"tủ" ,"sofa" ,"kệ" ,"ghế","bàn", "gối","đệm","tranh","đồng hồ","nội thất","cây","khăn","hoa","chậu"};
+        while (str.hasMoreTokens()){
+            String next = str.nextToken().toLowerCase() ;
+            for ( int i = 0 ; i < array.length ; i ++){
+                if (next.equals(array[i])){
+                    result= array[i] ;
+                    System.out.println(result);
+                    break;
+                }
+             }
+            }
+        return result;
+    }
+    public List <ProductDetails> getAllName (String name ){
+        String nameNew = changeName (name);
+        System.out.println(nameNew);
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT * FROM productdetails WHERE `name` like ? ")
-                    .bind(0 , "%" + name + "%")
+                    .bind(0 , "%" + nameNew + "%")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
-    public static void main(String[] args) {
-        List<ProductDetails> j = getAllName ("Bàn Ghế");
-        System.out.println(j.toString());
-    }
+//    public static void main(String[] args) {
+//        String name = changeName("Ghế Euro");
+//        List<ProductDetails> j = getAllName (name);
+//        System.out.println(j.toString());
+//    }
 }

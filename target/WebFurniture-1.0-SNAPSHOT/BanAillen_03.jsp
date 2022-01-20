@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thông Tin Chi Tiết Bàn Aillen 03</title>
+    <title>Thông Tin Sản phẩm </title>
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="BanAillen_03.css">
     <link rel="icon" href="img.png" type="image/png" class="icon">
@@ -141,8 +141,9 @@
     </a>
 </div>
 
-<jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
+
 <div class="tieuDe ">
+    <jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
     <h2 class="trangChu_BanAilen_03">Trang Chủ / ${productDetails.name} </h2>
 
 </div>
@@ -231,7 +232,7 @@
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
             </a>
-            <a href="payment">
+            <a href="payment" >
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
@@ -242,49 +243,23 @@
 
 <div class="uuDai1">
     <h2 class="sanPhamCungLoai"> SẢN PHẨM CÙNG LOẠI </h2>
-    <div class="giaoHang">
-        <img class="anh" src="Image_ThongTinSanPham_Home/lq1.PNG"/>
+    <jsp:useBean id="productDetailsAllName" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetailsAllName}">
+        <form style="width: 100% ; height: 35%">
+    <div class="giaoHang" >
+        <img class="anh" src="${p.linkImage}"/>
         <div class="thongTin">
-            <h3 class="tieuDe">Ghế Woody </h3>
-            <p class="thongTinChiTiet">900.000 đ </p>
+            <h3 class="tieuDe">${p.name}</h3>
+            <p class="thongTinChiTiet">${p.priceNew} đ </p>
         </div>
     </div>
-    <div class="giaoHang">
-        <img class="anh" src="Image_ThongTinSanPham_Home/lq2.PNG"/>
-        <div class="thongTin">
-            <h3 class="tieuDe">Tủ giày Hobu</h3>
-            <p class="thongTinChiTiet">3.100.000đ </p>
-        </div>
-    </div>
-    <div class="giaoHang">
-        <img class="anh" src="Image_ThongTinSanPham_Home/lq3.PNG"/>
-        <div class="thongTin">
-            <h3 class="tieuDe">Kệ đẩy Hobu</h3>
-            <p class="thongTinChiTiet">750.000đ</p>
-        </div>
-    </div>
-    <a href="../ThongTinSanPham_Home/DonghoMiso.jsp?_ijt=7q3ovei7snfo4cbs535mffetqh">
-        <div class="giaoHang">
-            <img class="anh" src="Image_ThongTinSanPham_Home/lq4.PNG"/>
-            <div class="thongTin">
-                <h3 class="tieuDe">Đồng hồ Miso</h3>
-                <p class="thongTinChiTiet">1.000.000đ</p>
-            </div>
-        </div>
-    </a>
-    <a href="../ThongTinSanPham_Home/DongHoTabu.jsp?_ijt=oadff4p4r067mbmq1774jfj5hi">
-        <div class="giaoHang">
-            <img class="anh" src="Image_ThongTinSanPham_Home/lq5.PNG"/>
-            <div class="thongTin">
-                <h3 class="tieuDe">Đồng hồ Tabu</h3>
-                <p class="thongTinChiTiet">350.000đ</p>
-            </div>
-        </div>
-    </a>
+        </form>
+    </c:forEach>
     <div class="giaoHang1">
         <p class="thongTinChiTiet1">Xem Thêm</p>
     </div>
 </div>
+
 <div class="uuDai">
     <div class="giaoHang">
         <img class="anh" src="Image_ThongTinSanPham_Home/ct1.PNG"/>
