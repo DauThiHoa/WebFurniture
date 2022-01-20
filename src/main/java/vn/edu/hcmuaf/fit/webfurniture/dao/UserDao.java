@@ -29,7 +29,6 @@ public class UserDao {
             ResultSet rs = stm.executeQuery();
             if (rs.next()) {
                 System.out.println("UserDao, true");
-                System.out.println(email);
                 return true;
             } else {
                 System.out.println("UserDao, false");
@@ -38,6 +37,26 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+    public String checkLoginCart (String email, String password) {
+        Connection connection = DBConnect.getConnection();
+        String sql = "SELECT * FROM user WHERE email = ? AND password = ?";
+        try {
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, email);
+            stm.setString(2, password);
+            ResultSet rs = stm.executeQuery();
+            if (rs.next()) {
+                System.out.println(email);
+                return email;
+            } else {
+                System.out.println(email);
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 

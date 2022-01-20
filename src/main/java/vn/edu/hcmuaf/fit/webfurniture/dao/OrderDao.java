@@ -19,11 +19,12 @@ public class OrderDao {
     }
 
     public boolean create(User user, Cart cart) {
+        System.out.println(user.getId() + user.getEmail());
         int orderId = JDBIConnector.get().withHandle(h -> {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
-                    .bind(0 , user.getId())
-//                    .bind (0, "idCustomer(User)")
+//                    .bind(0 , user.getId())
+                    .bind (0, "idCustomer(User)")
                     .bind(1, cart.getTotal())
                     .bind(2, "Đã đặt hàng")
                     .executeAndReturnGeneratedKeys();

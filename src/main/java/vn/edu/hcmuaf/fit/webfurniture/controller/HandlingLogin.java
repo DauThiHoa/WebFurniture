@@ -15,8 +15,10 @@ public class HandlingLogin extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+
         if (UserServices.getInstance().checkLogin(email, password)) {
             response.sendRedirect("ProductDetailsList");
+//              response.sendRedirect("cart");
         } else {
             System.out.println("sai");
             request.setAttribute("error", "email or password is correct");
