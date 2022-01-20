@@ -1514,7 +1514,10 @@ Tablet
         margin-left: -10px;
         margin-top: 10px;
     }
-
+    .fromSpcl{
+        height: 100px;
+        width: 60px;
+    }
     #Thanh_cong_cu input[type="text"] {
         font-size: 70%;
         max-width: 40%;
@@ -4505,6 +4508,10 @@ Tablet
     #layout7 .thanhDuoi .NoiDung .lienLac .lienLac_right .from .fromDangKi .dangKi {
         margin-top: 8px;
         margin-left: 15px;
+    }
+    .fromSpcl{
+        height: 100px;
+        width: 60px;
     }
 
 }

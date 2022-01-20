@@ -211,12 +211,12 @@
 <%--                     onclick="zoomount(this)" alt="image"/>--%>
             </div>
         </div>
-        <div class="chatLieu">
+        <div class="chatLieu" >
             <h3 class="tieuDe"> Chất liệu : </h3>
-            <p class="thongTin"> Chân bàn: Sắt sơn tĩnh điện.
+            <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
                 Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
         </div>
-        <div class="soLuongSanPham">
+        <div class="soLuongSanPham" style="margin-top: 100px">
             <div class="tru" onclick="tru(this)" alt="giamSoLuong">
                 <h3 class="dauTru"> - </h3>
             </div>
@@ -227,7 +227,7 @@
                 <h3 class="dauCong"> + </h3>
             </div>
             <a href="cart-add?id=${productDetails.id}">
-                <div class="gioHang">
+                <div class="gioHang" >
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
@@ -243,21 +243,30 @@
 
 <div class="uuDai1">
     <h2 class="sanPhamCungLoai"> SẢN PHẨM CÙNG LOẠI </h2>
+    <div class="fromSpcl" style="overflow-x:auto; overflow-y:auto; height: 500px; width: 110%">
     <jsp:useBean id="productDetailsAllName" scope="request" type="java.util.List"/>
     <c:forEach var="p" items="${productDetailsAllName}">
-        <form style="width: 100% ; height: 35%">
-    <div class="giaoHang" >
+        <form action="ProductDetails" method="POST">
+            <a href="ProductDetails">
+                <input style="display: none" type="text" name="id" value="${p.id}">
+                <input style="display: none" type="text" name="name" value="${p.name}">
+                <button type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100% ">
+    <div class="giaoHang" style="width: 99%" >
         <img class="anh" src="${p.linkImage}"/>
-        <div class="thongTin">
+        <div class="thongTin" style="text-align: left">
             <h3 class="tieuDe">${p.name}</h3>
             <p class="thongTinChiTiet">${p.priceNew} đ </p>
         </div>
     </div>
+                </button>
+            </a>
         </form>
     </c:forEach>
-    <div class="giaoHang1">
-        <p class="thongTinChiTiet1">Xem Thêm</p>
-    </div>
+<%--    <div class="giaoH
+'ang1">--%>
+<%--        <p class="thongTinChiTiet1">Xem Thêm</p>--%>
+<%--    </div>--%>
+</div>
 </div>
 
 <div class="uuDai">
@@ -330,25 +339,25 @@
     <h2 class="tieude"> GỬI NHẬN XÉT CỦA BẠN </h2>
     <div class="from">
         <h3 class="ten"> 1. Đánh giá của bạn về sản phẩm này: </h3>
-        <div class="danhGia">
-            <i class="fa fa-star twoStar" aria-hidden="true"></i>
-            <h3 class="DanhGia">Rất tệ</h3>
+        <div class="danhGia "  onclick="starOne()">
+            <i class="fa fa-star twoStar starOne" aria-hidden="true"></i>
+            <h3 class="DanhGia starOned">Rất tệ</h3>
         </div>
-        <div class="danhGia">
-            <i class="fa fa-star oneStar" aria-hidden="true"></i>
-            <h3 class="DanhGia">Tệ</h3>
+        <div class="danhGia "  onclick="starTwo()">
+            <i class="fa fa-star oneStar starTwo"  aria-hidden="true"></i>
+            <h3 class="DanhGia starTwod">Tệ</h3>
         </div>
-        <div class="danhGia2">
-            <i class="fa fa-star ThreeStar" aria-hidden="true"></i>
-            <h3 class="DanhGia">Bình thường</h3>
+        <div class="danhGia2 "  onclick="starThree()">
+            <i class="fa fa-star ThreeStar starThree "  aria-hidden="true"></i>
+            <h3 class="DanhGia starThreed">Bình thường</h3>
         </div>
-        <div class="danhGia">
-            <i class="fa fa-star oneStar" aria-hidden="true"></i>
-            <h3 class="DanhGia">Tốt</h3>
+        <div class="danhGia "  onclick="starfour()">
+            <i class="fa fa-star oneStar starfour" aria-hidden="true"></i>
+            <h3 class="DanhGia starfourd">Tốt</h3>
         </div>
-        <div class="danhGia1">
-            <i class="fa fa-star twoStar" aria-hidden="true"></i>
-            <h3 class="DanhGia">Rất Tốt</h3>
+        <div class="danhGia1 "  onclick="starFive()">
+            <i class="fa fa-star twoStar starFive" aria-hidden="true"></i>
+            <h3 class="DanhGia starFived">Rất Tốt</h3>
         </div>
     </div>
     <div class="from">
@@ -357,7 +366,7 @@
     </div>
     <div class="from1">
         <h3 class="ten"> 3. Viết nhận xét của bạn vào bên dưới:</h3>
-        <input type="text" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap"> </input>
+        <textarea type="text" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap"> </textarea>
     </div>
     <div class="from2">
         <h3 class="ten"> Thêm hình sản phẩm nếu có (tối đa 5 hình): </h3>
@@ -365,7 +374,7 @@
             <h3 class="hinh"> Chọn hình </h3>
         </div>
         <div class="chonHinh">
-            <h3 class="hinh"> Gửi nhận xét </h3>
+            <h3 class="hinh gui" onclick="send()"> Gửi nhận xét </h3>
         </div>
     </div>
 </div>
@@ -389,6 +398,25 @@
                 <p class="ngayDang">Đánh giá : Rất tốt </p>
                 <p class="ngayDang">Tiêu Đề : Màu sắc </p>
                 <p class="noiDung">Nhận xét : Màu sắc đa dạng , hài hòa </p>
+            </div>
+        </div>
+        <div class="noiDungBinhLuan">
+            <div class="anh">
+                <img class="anhBinhLuan" src="TinTuc/Image_TinTuc/anhDaiDien1.PNG"/>
+            </div>
+            <div class="thongTinBinhLuan">
+                <div class="ChiTiet">
+                    <h4 class="tenNguoiBinhLuan"> Nguyễn Huyền
+                        <i class="fa fa-star one" aria-hidden="true"></i>
+                        <i class="fa fa-star two" aria-hidden="true"></i>
+                        <i class="fa fa-star three" aria-hidden="true"></i>
+                        <i class="fa fa-star four" aria-hidden="true"></i>
+                        <i class="fa fa-star five" aria-hidden="true"></i>
+                    </h4>
+                </div>
+                <p class="ngayDang danhgiabinhluan"></p>
+                <p class="ngayDang">Tiêu Đề : Màu sắc </p>
+                <p class="noiDung" >Nhận xét : Màu sắc đa dạng , hài hòa </p>
             </div>
         </div>
     </div>
@@ -524,5 +552,26 @@
 </div>
 
 <script src="ChiTietSanPham.js"></script>
+<script>
+    function send () {
+        alert("hh");
+    }
+    function starOne () {
+        const danhgiabinhluan = document.querySelector('.danhgiabinhluan');
+        var starOned = document.querySelector('.starOned').innerHTML;
+        // alert(danhgiabinhluan +"  " + starOned);
+        danhgiabinhluan.innerHTML = "Đánh giá : " + starOned ;
+        const one = document.querySelector('.one');
+        const two = document.querySelector('.two');
+        const three = document.querySelector('.three');
+        const four = document.querySelector('.four');
+        const five = document.querySelector('.five');
+        one.style.color ="yellow";
+        two.style.color ="while";
+        three.style.color ="while";
+        four.style.color ="while";
+        five.style.color ="while";
+    }
+</script>
 </body>
 </html>

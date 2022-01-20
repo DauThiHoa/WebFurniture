@@ -14,17 +14,17 @@ public class ShowProductDetailsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String name = request.getParameter("name");
-//           response.getWriter().println(name);
-           request.setCharacterEncoding("UTF-8");
-           response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+           String name = request.getParameter("name");
+//           response.getWriter().println("NAME" + name);
+//           response.getWriter().println("ID" + id);
            request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
-           String id = request.getParameter("id");
-//           response.getWriter().println(id);
+        System.out.println(name);
+           String id = request.getParameter("id" );
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
-
-           request.setCharacterEncoding("UTF-8");
-           response.setCharacterEncoding("UTF-8");
 
            request.getRequestDispatcher("BanAillen_03.jsp").forward(request , response);
 

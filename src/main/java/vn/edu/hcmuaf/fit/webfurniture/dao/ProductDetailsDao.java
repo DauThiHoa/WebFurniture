@@ -55,22 +55,20 @@ public class ProductDetailsDao {
     public static String changeName (String nameOld ){
         StringTokenizer str = new StringTokenizer(nameOld);
         String result = null ;
-        String [] array = {"tủ" ,"sofa" ,"kệ" ,"ghế","bàn", "gối","đệm","tranh","đồng hồ","nội thất","cây","khăn","hoa","chậu"};
+        String [] array = {"tủ" ,"sofa" ,"kệ" ,"ghế","bàn", "gối","đệm","tranh","đồng","thất","cây","khăn","hoa","chậu"};
         while (str.hasMoreTokens()){
             String next = str.nextToken().toLowerCase() ;
             for ( int i = 0 ; i < array.length ; i ++){
                 if (next.equals(array[i])){
                     result= array[i] ;
-                    System.out.println(result);
-                    break;
                 }
              }
             }
         return result;
     }
-    public List <ProductDetails> getAllName (String name ){
+    public static List <ProductDetails> getAllName (String name ){
         String nameNew = changeName (name);
-        System.out.println(nameNew);
+//        System.out.println(nameNew);
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT * FROM productdetails WHERE `name` like ? ")
                     .bind(0 , "%" + nameNew + "%")
@@ -78,7 +76,7 @@ public class ProductDetailsDao {
         });
     }
 //    public static void main(String[] args) {
-//        String name = changeName("Ghế Euro");
+//        String name = changeName("Tủ bếp đơn giản");
 //        List<ProductDetails> j = getAllName (name);
 //        System.out.println(j.toString());
 //    }

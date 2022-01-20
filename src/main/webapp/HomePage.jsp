@@ -199,7 +199,7 @@
             </a>
         </form>
         <div id="blv">
-                    <h1 type="submit" class="chuBanLamViec">${p.name}</h1>
+                    <h1 class="chuBanLamViec">${p.name}</h1>
             <div class="sao3">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -240,7 +240,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -267,7 +266,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -294,7 +292,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -321,7 +318,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -348,7 +344,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -375,7 +370,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -1065,7 +1059,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -1091,7 +1084,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -1117,7 +1109,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -1143,7 +1134,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -1169,7 +1159,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
@@ -1195,7 +1184,6 @@
                 <a href="ProductDetails">
                     <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
                     <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
                         <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
                     </button>
