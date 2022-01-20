@@ -29,6 +29,7 @@ public class UserDao {
             ResultSet rs = stm.executeQuery();
             if (rs.next()) {
                 System.out.println("UserDao, true");
+                System.out.println(email);
                 return true;
             } else {
                 System.out.println("UserDao, false");

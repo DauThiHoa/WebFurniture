@@ -63,7 +63,7 @@
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="../DangNhap/DangNhap.html">
+            <a href="login">
                 <button class="btn2">SIGN IN</button>
             </a>
         </div>

@@ -230,7 +230,7 @@
                     <p><%= error%></p>
                 <%} %>
 
-            <a href="../Home/HomePage.html">
+            <a href="">
                 <button class="btn">SIGN IN</button>
             </a>
             </form>
@@ -240,7 +240,7 @@
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="../DangKy/DangKy.html">
+            <a href="controllerRegister">
                 <button class="btn2">SIGN UP</button>
             </a>
         </div>

@@ -16,12 +16,12 @@ public class ShowProductDetailsListController extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-           String name = request.getParameter("name");
+        String name = request.getParameter("name");
 //           response.getWriter().println("NAME" + name);
 //           response.getWriter().println("ID" + id);
-           request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
+        request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
         System.out.println(name);
-           String id = request.getParameter("id" );
+        String id = request.getParameter("id" );
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));

@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thông Tin Sản phẩm </title>
+    <title>THÔNG TIN SẢN PHẨM </title>
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="BanAillen_03.css">
     <link rel="icon" href="img.png" type="image/png" class="icon">
@@ -216,23 +216,23 @@
             <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
                 Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
         </div>
-        <div class="soLuongSanPham" style="margin-top: 100px">
-            <div class="tru" onclick="tru(this)" alt="giamSoLuong">
+        <div class="soLuongSanPham">
+            <div class="tru" style="margin-top: 10%" onclick="tru(this)" alt="giamSoLuong">
                 <h3 class="dauTru"> - </h3>
             </div>
-            <div class="so">
+            <div class="so" style="margin-top: 10%">
                 <h3 class="soLuongDat" id="soLuong">1</h3>
             </div>
-            <div class="cong" onclick="cong(this)" alt="tangSoLuong">
+            <div class="cong" style="margin-top: 10%" onclick="cong(this)" alt="tangSoLuong">
                 <h3 class="dauCong"> + </h3>
             </div>
             <a href="cart-add?id=${productDetails.id}">
-                <div class="gioHang" >
+                <div class="gioHang" style="margin-top: 10%" >
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
             </a>
-            <a href="payment" >
+            <a href="payment"  style="margin-top: -200px">
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
@@ -255,7 +255,7 @@
         <img class="anh" src="${p.linkImage}"/>
         <div class="thongTin" style="text-align: left">
             <h3 class="tieuDe">${p.name}</h3>
-            <p class="thongTinChiTiet">${p.priceNew} đ </p>
+            <p class="thongTinChiTiet">${p.priceNew}đ </p>
         </div>
     </div>
                 </button>
@@ -305,16 +305,7 @@
     <div class="ten"> Mô tả
         <div class="khungMoTa">
             <p>
-            <p><b> Màu sắc: </b> Chân: Trắng , Mặt: Trắng, đen, gỗ. </p>
-            <p><b> Kích thước:</b> H75 x D140 x R80. </p>
-            <p><b> Khối lượng thực tế: </b> 30,5kg. </p>
-            <p><b> Chất liệu:</b> Chân bàn: Sắt sơn tĩnh điện. Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU; màu vân gỗ phủ
-                veneer. </p>
-            <p><b> Ý tưởng thiết kế: </b> Với thiết kế tối giản và tinh tế của mình, LEHI sẽ giúp phòng ăn của bạn trở
-                nên ấm cũng và trang nhã hơn. </p>
-            <p><b> Các điểm nổi bật:</b> Thiết kế đơn giản nhưng thanh lịch. Màu sắc tinh tế, sang trọng. Chất liệu gỗ
-                MDF chống mối mọt, chịu ẩm tốt, thân thiện với môi trường. Sơn tĩnh điện chống gỉ sét tối đa. Tháo lắp
-                dễ dàng. </p>
+            ${productDetails.description}
             </p>
         </div>
     </div>
@@ -362,11 +353,11 @@
     </div>
     <div class="from">
         <h3 class="ten"> 2. Tiêu đề của nhận xét: </h3>
-        <input type="text" placeholder="Nhập tiêu đề nhận xét " class="nhap">
+        <input type="text" placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
     </div>
     <div class="from1">
         <h3 class="ten"> 3. Viết nhận xét của bạn vào bên dưới:</h3>
-        <textarea type="text" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap"> </textarea>
+        <textarea type="text" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
     </div>
     <div class="from2">
         <h3 class="ten"> Thêm hình sản phẩm nếu có (tối đa 5 hình): </h3>
@@ -415,8 +406,8 @@
                     </h4>
                 </div>
                 <p class="ngayDang danhgiabinhluan"></p>
-                <p class="ngayDang">Tiêu Đề : Màu sắc </p>
-                <p class="noiDung" >Nhận xét : Màu sắc đa dạng , hài hòa </p>
+                <p class="ngayDang danhgiaTieuDe"></p>
+                <p class="noiDung noiDungTieuDe" ></p>
             </div>
         </div>
     </div>
@@ -554,24 +545,42 @@
 <script src="ChiTietSanPham.js"></script>
 <script>
     function send () {
-        alert("hh");
+        const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');
+        const noiDungTieuDe = document.querySelector('.noiDungTieuDe');
+        var nhapTieuDe = document.querySelector('.nhapTieuDe').value;
+        var nhapNoiDung = document.querySelector('.nhapNoiDung').value;
+
+        danhgiaTieuDe.innerHTML = "Tiêu đề : " + nhapTieuDe;
+        noiDungTieuDe.innerHTML = "Nhận xét : " + nhapNoiDung;
+        alert("Khách hàng đã nhận xét thành công !");
     }
-    function starOne () {
+    function starOne() {
         const danhgiabinhluan = document.querySelector('.danhgiabinhluan');
         var starOned = document.querySelector('.starOned').innerHTML;
-        // alert(danhgiabinhluan +"  " + starOned);
-        danhgiabinhluan.innerHTML = "Đánh giá : " + starOned ;
-        const one = document.querySelector('.one');
-        const two = document.querySelector('.two');
+        danhgiabinhluan.innerHTML = "Đánh giá : " + starOned;
+
+        const one = document.querySelector('div#khungBinhLuan div.binhLuan div.noiDungBinhLuan div.thongTinBinhLuan div.chiTiet h4.tenNguoiBinhLuan i.one');
+        const two = document.querySelector('i.two');
         const three = document.querySelector('.three');
         const four = document.querySelector('.four');
         const five = document.querySelector('.five');
-        one.style.color ="yellow";
-        two.style.color ="while";
-        three.style.color ="while";
-        four.style.color ="while";
-        five.style.color ="while";
+        one.style.color = "red";
+        two.style.color = "red";
+        three.style.color = "red";
+        four.style.color = "red";
+        five.style.color = "red";
+        alert("kk");
     }
+    function count () {
+        const two = document.querySelector('.two');
+        alert("mmm");
+        two.style.color = "red";
+    }
+    const one = document.getElementById('#one');
+    one.onclick = function () {
+        one.style.color = "red";
+        alert("hhh");
+    };
 </script>
 </body>
 </html>

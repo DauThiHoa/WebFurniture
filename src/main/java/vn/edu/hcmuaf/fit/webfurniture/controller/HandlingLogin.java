@@ -11,6 +11,8 @@ import java.io.IOException;
 public class HandlingLogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         if (UserServices.getInstance().checkLogin(email, password)) {

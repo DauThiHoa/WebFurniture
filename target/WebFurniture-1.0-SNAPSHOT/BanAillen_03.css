@@ -1515,8 +1515,8 @@ Tablet
         margin-top: 10px;
     }
     .fromSpcl{
-        height: 100px;
-        width: 60px;
+        height: 30px;
+        width: 30px;
     }
     #Thanh_cong_cu input[type="text"] {
         font-size: 70%;
@@ -4510,8 +4510,8 @@ Tablet
         margin-left: 15px;
     }
     .fromSpcl{
-        height: 100px;
-        width: 60px;
+        height: 20px;
+        width: 30px;
     }
 
 }
