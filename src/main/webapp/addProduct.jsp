@@ -17,7 +17,7 @@
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="QuanTri/Admin/examples/DirectoryManagement.css">
+    <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="QuanTri/Admin/examples/addDirectoryManagement.css">
@@ -50,13 +50,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="QuanTri/Admin/examples/DirectoryManagement.jsp">
+                        <a class="nav-link active" href="DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="QuanTri/Admin/examples/DirectoryManagement.jsp">
+                        <a class="nav-link active" href="DirectoryManagement.jsp">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
                             <span class="nav-link-text">Product Type</span>
                         </a>

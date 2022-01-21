@@ -1,5 +1,12 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +18,7 @@
     <title> ADMIN - DIRECTORY MANAGEMENT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
@@ -19,12 +26,12 @@
     <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
     <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="InterfaceManagement.css">
-    <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -35,7 +42,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -50,7 +57,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../manage/dashboard.jsp">
+                        <a class="nav-link" href="manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -74,19 +81,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Posts.jsp">
+                        <a class="nav-link active" href="QuanTri/Admin/examples/Posts.jsp">
                             <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
                             <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="InterfaceManagement.jsp">
+                        <a class="nav-link " href="QuanTri/Admin/examples/InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -165,7 +172,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_1.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -185,7 +192,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -205,7 +212,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -225,7 +232,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -245,7 +252,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -320,7 +327,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -383,76 +390,7 @@
     </div>
 
 
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Action <span class="caret"></span>
-
-            </button>
-
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <a class="nav-link active" href="addDirectoryManagement.jsp">
+    <a class="nav-link active" style="margin-left: 35%" href="QuanTri/Admin/examples/addDirectoryManagement.jsp">
         <button class="add">
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
             Add
@@ -462,197 +400,28 @@
     <div class="tab">
         <table class="table tab-content">
             <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
-                <th class="TieuDe">Numerical order</th>
+                <th style="text-align: center" class="TieuDe">Numerical order</th>
                 <th class="TieuDe">Category</th>
                 <th class="TieuDe">Image</th>
-                <th class="TieuDe">Modules</th>
-                <th class="TieuDe">Home page</th>
-                <th class="TieuDe">Category</th>
+                <th style="text-align: center" class="TieuDe">Modules</th>
                 <th class="TieuDe">Display</th>
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
+            <jsp:useBean id="PageWeb" scope="request" type="java.util.List"/>
+            <% int i = 1 ;%>
+            <c:forEach items="${PageWeb}" var="p" >
             <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    1"><br></td>
-                <td>Home page</td>
-                <td><img src="../assets/img/Admin/img.png" class="image"/></td>
-                <td>Posts</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
+                <td><input style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="number" value="<%= i++ %>"><br></td>
+                <td><input style=" border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="nameCategory" value="${p.nameCategory}"></td>
+                <td><img src="${p.linkImage}" class="image"/></td>
+                <td><input style="text-align: center; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="modules" value="${p.modules}"></td>
+                <td><input style="font-size: 150%" type="checkbox" name="display" value="check"></td>
                 <td><i class="fa fa-edit"></i></td>
                 <td><i class="fa fa-trash" aria-hidden="true"></i></td>
             </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    2"><br></td>
-                <td>Sign up</td>
-                <td><img src="../assets/img/Admin/img_1.png" class="image"/></td>
-                <td>Sign up</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    3"><br></td>
-                <td>Log in</td>
-                <td><img src="../assets/img/Admin/img_2.png" class="image"/></td>
-                <td>Log in</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    4"><br></td>
-                <td>Shop system</td>
-                <td><img src="../assets/img/Admin/img_3.png" class="image"/></td>
-                <td>Posts</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    5"><br></td>
-                <td>Contact</td>
-                <td><img src="../assets/img/Admin/img_4.png" class="image"/></td>
-                <td>Posts</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    6"><br></td>
-                <td>Cart</td>
-                <td><img src="../assets/img/Admin/img_5.png" class="image"/></td>
-                <td>Cart</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    7"><br></td>
-                <td>Product details</td>
-                <td><img src="../assets/img/Admin/img_6.png" class="image"/></td>
-                <td>Product</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    8"><br></td>
-                <td>The living room's furniture</td>
-                <td><img src="../assets/img/Admin/img_7.png" class="image"/></td>
-                <td>Product</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    9"><br></td>
-                <td>Kitchen furniture</td>
-                <td><img src="../assets/img/Admin/img_8.png" class="image"/></td>
-                <td>Product</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    10"><br></td>
-                <td>Bedroom furniture</td>
-                <td><img src="../assets/img/Admin/img_10.png" class="image"/></td>
-                <td>Product</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    11"><br></td>
-                <td>Office furniture</td>
-                <td><img src="../assets/img/Admin/img_9.png" class="image"/></td>
-                <td>Product</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    12"><br></td>
-                <td>Decorations</td>
-                <td><img src="../assets/img/Admin/img_11.png" class="image"/></td>
-                <td>Product</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    13"><br></td>
-                <td>Tips</td>
-                <td><img src="../assets/img/Admin/img_12.png" class="image"/></td>
-                <td>Posts</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    14"><br></td>
-                <td>News</td>
-                <td><img src="../assets/img/Admin/img_13.png" class="image"/></td>
-                <td>Posts</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" id="fname" name="fname" value="                  15"><br></td>
-                <td>Posts</td>
-                <td><img src="../assets/img/Admin/img_14.png" class="image"/></td>
-                <td>Posts</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
+            </c:forEach>
+
         </table>
     </div>
 

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="DirectoryManagement.css">
+    <link rel="stylesheet" href="../../../DirectoryManagement.css">
     <link rel="stylesheet" href="InterfaceManagement.css">
     <link rel="stylesheet" href="ListOfPermissions.css">
     <link rel="stylesheet" href="UserConfiguration.css">
@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="DirectoryManagement.jsp">
+                        <a class="nav-link" href="../../../DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>

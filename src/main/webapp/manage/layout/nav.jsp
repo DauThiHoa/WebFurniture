@@ -19,7 +19,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<%= Asset.url("QuanTri/Admin/examples/DirectoryManagement.jsp")%>">
+                            <a class="nav-link" href="<%= Asset.url("DirectoryManagement")%>">
                                 <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                                 <span class="nav-link-text">Directory Management</span>
                             </a>

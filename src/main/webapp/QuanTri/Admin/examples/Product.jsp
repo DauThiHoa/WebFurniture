@@ -18,7 +18,7 @@
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="DirectoryManagement.css">
+    <link rel="stylesheet" href="../../../DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Product.css">
@@ -55,13 +55,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                        <a class="nav-link active" href="../../../DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                        <a class="nav-link active" href="../../../DirectoryManagement.jsp">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
                             <span class="nav-link-text">Product Type</span>
                         </a>
@@ -481,7 +481,7 @@
         <a class="nav-link active" href="add/WebFurniture_war_exploded/Product">
             <button class="add">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Add
+                AWebFurniture_war_explodeddd
             </button>
         </a>
     </div>

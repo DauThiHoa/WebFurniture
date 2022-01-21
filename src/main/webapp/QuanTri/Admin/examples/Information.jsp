@@ -20,7 +20,7 @@
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="DirectoryManagement.css">
+    <link rel="stylesheet" href="../../../DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Product.css">
@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="DirectoryManagement.jsp">
+                        <a class="nav-link " href="/WebFurniture_war_exploded/DirectoryManagement">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
