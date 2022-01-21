@@ -1,3 +1,4 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -46,6 +47,12 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link active" href="<%= Asset.url("ProductDetailsList")%>">
+                            <img src="<%= Asset.url("img.png")%>" style="height: 15px ; width: 15px ; margin-right: 18px">
+                            <span class="nav-link-text">HomePage</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="../../../manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
@@ -90,13 +97,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="login.jsp">
+                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.jsp">
+                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text">Register</span>
                         </a>

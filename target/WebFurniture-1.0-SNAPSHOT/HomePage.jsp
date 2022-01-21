@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="taiKhoanCuaToi">
-        <a href="QuanTri/Admin/examples/dashboard.jsp">
+        <a href="../WebFurniture_war_exploded/manage/dashboard.jsp">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>

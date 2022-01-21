@@ -81,13 +81,13 @@
 <%--                        </a>--%>
 <%--                    </li>--%>
 <%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/login.jsp">--%>
+<%--                        <a class="nav-link" href="/WebFurniture_war_exploded/login">--%>
 <%--                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>--%>
 <%--                            <span class="nav-link-text">Login</span>--%>
 <%--                        </a>--%>
 <%--                    </li>--%>
 <%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/register.jsp">--%>
+<%--                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">--%>
 <%--                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>--%>
 <%--                            <span class="nav-link-text">Register</span>--%>
 <%--                        </a>--%>
@@ -397,7 +397,7 @@
 
 
     <div class="button">
-        <a class="nav-link active" href="<%= Asset.url("QuanTri/Admin/examples/addProduct.jsp")%>">
+        <a class="nav-link active" href="<%= Asset.url("addProduct")%>">
             <button class="add">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Add
@@ -439,7 +439,7 @@
                 <td ><input type="text" name ="status" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.status}"></td>
                 <td>
                         <input type="hidden" name ="id" value="${item.id}">
-                        <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" aria-hidden="true" ></button>
+                        <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
                 </td>
                 </form>
 <%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
@@ -447,7 +447,7 @@
                 <td>
                     <form action = "<%=Asset.url("action")%>"  method = "POST" >
                         <input type="hidden" name ="id" value="${item.id}">
-                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" aria-hidden="true" ></button>
+                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
                     </form>
                 </td>
             </tr>
@@ -486,7 +486,10 @@
 <%--</script>--%>
 <script>
     function trash () {
-        alert("Đã xóa sản phẩm thành công !")
+        alert("Bạn đã xóa sản phẩm thành công !")
+    }
+    function edit () {
+        alert("Bạn đã sửa sản phẩm thành công !")
     }
 </script>
 </html>

@@ -10,20 +10,20 @@
     <title> ADMIN - PRODUCT - ADD NEWS </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons --> 
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="DirectoryManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="addDirectoryManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/addDirectoryManagement.css">
     <link rel="stylesheet" href="addProduct.css">
-    <link rel="stylesheet" href="InterfaceManagement.css">
-    <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -35,7 +35,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -44,19 +44,19 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../manage/dashboard.jsp">
+                        <a class="nav-link" href="manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                        <a class="nav-link active" href="QuanTri/Admin/examples/DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement.jsp">
+                        <a class="nav-link active" href="QuanTri/Admin/examples/DirectoryManagement.jsp">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
                             <span class="nav-link-text">Product Type</span>
                         </a>
@@ -68,31 +68,31 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Posts.jsp">
+                        <a class="nav-link active" href="QuanTri/Admin/examples/Posts.jsp">
                             <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
                             <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="InterfaceManagement.jsp">
+                        <a class="nav-link " href="QuanTri/Admin/examples/InterfaceManagement.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/login.jsp">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/register.jsp">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text">Register</span>
                         </a>
@@ -159,7 +159,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -179,7 +179,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -199,7 +199,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_4.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_4.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -219,7 +219,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -239,7 +239,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -314,7 +314,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -376,15 +376,16 @@
         </div>
     </div>
 
+    <form action="add-Product" method="post" >
     <div class="infor">
         <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Image </h2>
-            <img src="../../../ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>
+            <img src="ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>
         </div>
         <div class="information2">
             <h2 class="Image"> Image </h2>
-            <input class="type" type="text" name="fname" value="No files selected"><br>
+            <input class="type" type="text" name="linkImage" value=""><br>
             <button class="Select">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Select file
@@ -392,19 +393,19 @@
         </div>
         <div class="information3">
             <h2 class="Modules"> Category </h2>
-            <input class="type2" type="text" name="fname" value="Product"><br>
+            <input class="type2" type="text" name="category" value=""><br>
         </div>
         <div class="information4">
             <h2 class="Modules"> Code </h2>
-            <input class="type2" type="text" name="fname" value="SP01"><br>
+            <input class="type2" type="text" name="id" value=""><br>
         </div>
         <div class="information5">
             <h2 class="Modules"> Price </h2>
-            <input class="type2" type="text" name="fname" value="500.000 đ"><br>
+            <input class="type2" type="text" name="priceNew" value=""><br>
         </div>
         <div class="information6">
             <h2 class="Modules"> Promotion </h2>
-            <input class="type2" type="text" name="fname" value="50.000 đ"><br>
+            <input class="type2" type="text" name="priceOld" value=""><br>
         </div>
     </div>
 
@@ -412,56 +413,63 @@
         <h1 class="information"> VIETNAMESE</h1>
         <div class="information2">
             <h2 class="Category"> Title </h2>
-            <input class="type1" type="text" name="fname" value=" Lamp to decorate the desk "><br>
+            <input class="type1" type="text" name="name" value=""><br>
         </div>
         <div class="information3">
-            <h2 class="Modules"> Path </h2>
-            <input class="type2" type="text" name="fname" value=" He path to the desktop night light product "><br>
+            <h2 class="Modules"> Trademark </h2>
+            <input class="type2" type="text" name="trademark" value=""><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Production </h2>
+            <input class="type2" type="text" name="production" value=""><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Description </h2>
-            <input class="type3a" width="150px" type="text" name="fname"
-                   value=" Enter a short description of the product or article in this box "><br>
+            <textarea class="type3b" width="150px" type="text" name="description"
+                      value=""></textarea><br>
         </div>
         <div class="information3">
-            <h2 class="Modules"> Content </h2>
-            <input class="type3b" type="text" name="fname" value=" Enter detailed product information in this box
-Action "><br>
+            <h2 class="Modules"> ProductGroups </h2>
+            <input class="type3a" type="text" name="produtGroups" value=""><br>
         </div>
         <div class="information4">
-            <h2 class="Category"> Numerical order </h2>
-            <input class="type3" type="text" name="fname" value="   2"><br>
+            <h2 class="Category"> Quantity </h2>
+            <input class="type3" type="text" name="quantity" value=""><br>
         </div>
         <div class="information5">
-            <h2 class="Modules"> Action </h2>
+            <h2 class="Modules"> Status </h2>
             <div class="">
-                <input class="checkin" type="checkbox" name="sport" value="check">
-                <h3 class="ten">Highlights</h3>
+                <input class="checkin" type="checkbox" name="still" value="Còn hàng">
+                <h3 class="ten">Stocking</h3>
             </div>
             <div class="">
-                <input class="checkin" type="checkbox" name="sport" value="check">
-                <h3 class="ten">New</h3>
+                <input class="checkin" type="checkbox" name="over" value="Hết hàng">
+                <h3 class="ten">Out of stock</h3>
             </div>
-            <div class="From">
-                <input class="checkin" type="checkbox" name="sport" value="check">
-                <h3 class="ten">Featured</h3>
-            </div>
-            <div class="From">
-                <input class="checkin" type="checkbox" name="sport" value="check">
-                <h3 class="ten">Hot</h3>
-            </div>
-            <div class="From">
-                <input class="checkin" type="checkbox" name="sport" value="check">
-                <h3 class="ten">Display</h3>
-            </div>
+<%--            <div class="From">--%>
+<%--                <input class="checkin" type="checkbox" name="sport" value="check">--%>
+<%--                <h3 class="ten">Featured</h3>--%>
+<%--            </div>--%>
+<%--            <div class="From">--%>
+<%--                <input class="checkin" type="checkbox" name="sport" value="check">--%>
+<%--                <h3 class="ten">Hot</h3>--%>
+<%--            </div>--%>
+<%--            <div class="From">--%>
+<%--                <input class="checkin" type="checkbox" name="sport" value="check">--%>
+<%--                <h3 class="ten">Display</h3>--%>
+<%--            </div>--%>
         </div>
         <div class="information6">
-            <a class="nav-link active" href="/WebFurniture_war_exploded/Product">
-                <button class="Select">
-                    <img class="fa fa-floppy-o" src="../assets/img/Admin/img_16.png"/>
+                <button class="Select" type="submit" style="margin-bottom: 25px" onclick="save()">
+                    <img class="fa fa-floppy-o" src="QuanTri/Admin/assets/img/Admin/img_16.png"/>
                     Save
                 </button>
-                <button class="Select">
+        </div>
+    </div>
+    </form>
+         <div class="information6">
+            <a class="nav-link active" href="../WebFurniture_war_exploded/Product">
+                <button class="Select" style="margin-left: 75%" onclick="exit()">
                     <i class="fa fa-times-circle" aria-hidden="true"></i>
                     Exit
                 </button>
@@ -485,4 +493,14 @@ Action "><br>
 
 </body>
 
+<script>
+
+    function save() {
+        alert("Bạn đã thêm sản phẩm thành công ! ")
+    }
+    function exit() {
+        alert("Thoát và không tiếp tục thêm sản phẩm !")
+    }
+
+</script>
 </html>
