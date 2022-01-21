@@ -19,6 +19,15 @@ public class PaymentSuccessController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        request.setAttribute("name" , "");
+        request.setAttribute("email" , "");
+        request.setAttribute("phone" , "");
+        request.setAttribute("address" , "");
+        request.setAttribute("bank" , "");
+        request.setAttribute("cardNumber" , "");
+        request.setAttribute("brithDay" , "");
+        request.setAttribute("discountCode" , "");
+
         // Lay gia tri tu nguoi dung nhap vao
         String name = request.getParameter("firstname");
         String email = request.getParameter("email");
@@ -45,15 +54,24 @@ public class PaymentSuccessController extends HttpServlet {
         }else {
             gender = nam ;
         }
-        boolean result = OrderDetailsService.getInstance().insert(name,brithDay,gender,email,phone,address,bank,cardNumber,method,discountCode);
-        request.getRequestDispatcher("/ProductDetailsList").forward(request , response);
-
+        if ( name != null && brithDay != null && gender != null && email != null && phone != null && address != null && bank != null && cardNumber != null && method != null && discountCode != null ) {
+            boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode);
+            request.getRequestDispatcher("/ProductDetailsList").forward(request, response);
+        }else {
+            request.setAttribute("name" , name);
+            request.setAttribute("email" , email);
+            request.setAttribute("phone" , phone);
+            request.setAttribute("address" , address);
+            request.setAttribute("bank" , bank);
+            request.setAttribute("cardNumber" , cardNumber);
+            request.setAttribute("brithDay" , brithDay);
+            request.setAttribute("discountCode" , discountCode);
+            System.out.println(name);
+            System.out.println(email);
+            request.getRequestDispatcher("/payment").forward(request , response);
+        }
         //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
-//        if ( result){
-//            request.getRequestDispatcher("/ProductDetailsList").forward(request , response);
-//        }else {
-//            request.getRequestDispatcher("/payment").forward(request , response);
-//        }
+
 
     }
 

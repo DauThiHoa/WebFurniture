@@ -24,6 +24,7 @@
 
 </head>
 <body>
+<jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
 <div id="Thanh_cong_cu">
     <div id="Ten_Web">
         <h1>WEB FURNITURE</h1>
@@ -141,9 +142,7 @@
     </a>
 </div>
 
-
 <div class="tieuDe ">
-    <jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
     <h2 class="trangChu_BanAilen_03">Trang Chủ / ${productDetails.name} </h2>
 
 </div>
@@ -154,10 +153,12 @@
         </div>
         <img id="anhDau1" class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
              alt="image"/>
-<%--        <img id="anhDau2" class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"--%>
-<%--             onclick="zoomount(this)" alt="image"/>--%>
-<%--        <img id="anhDau3" class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"--%>
-<%--             onclick="zoomount(this)" alt="image"/>--%>
+        <c:if test="${productDetails.id == 'sp24'}" >
+        <img id="anhDau2" class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
+             onclick="zoomount(this)" alt="image"/>
+        <img id="anhDau3" class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"
+             onclick="zoomount(this)" alt="image"/>
+        </c:if>
     </div>
     <div class="phai">
         <div class="tieuDe">
@@ -205,10 +206,14 @@
             <div class="bottom">
                 <img class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
                      alt="image"/>
-<%--                <img class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"--%>
-<%--                     onclick="zoomount(this)" alt="image"/>--%>
-<%--                <img class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"--%>
-<%--                     onclick="zoomount(this)" alt="image"/>--%>
+
+                <c:if test="${productDetails.id == 'sp24'}" >
+                <img class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
+                     onclick="zoomount(this)" alt="image"/>
+                <img class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"
+                     onclick="zoomount(this)" alt="image"/>
+                </c:if>
+
             </div>
         </div>
         <div class="chatLieu" >
@@ -220,19 +225,25 @@
             <div class="tru" style="margin-top: 10%" onclick="tru(this)" alt="giamSoLuong">
                 <h3 class="dauTru"> - </h3>
             </div>
+<%--            <form action="cart-add" method="post" >--%>
             <div class="so" style="margin-top: 10%">
                 <h3 class="soLuongDat" id="soLuong">1</h3>
+<%--                <input class="soLuongDat" style="display: none" type="text" name="so" value="1">--%>
             </div>
             <div class="cong" style="margin-top: 10%" onclick="cong(this)" alt="tangSoLuong">
                 <h3 class="dauCong"> + </h3>
             </div>
-            <a href="cart-add?id=${productDetails.id}">
+            <% int i = 1 ; %>
+            <a href="cart-add?id=${productDetails.id}&&so=<%= i %>">
+<%--                <button class="gioHang" type="submit" >--%>
                 <div class="gioHang" style="margin-top: 10%" >
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </div>
+<%--                </button>--%>
             </a>
-            <a href="payment"  style="margin-top: -200px">
+<%--            </form>--%>
+            <a href="paymentAddProductDetails?id=${productDetails.id}&&quantitySold=<%= i %>&&priceNew=${productDetails.priceNew}"  style="margin-top: -200px" >
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
@@ -262,6 +273,7 @@
             </a>
         </form>
     </c:forEach>
+
 <%--    <div class="giaoH
 'ang1">--%>
 <%--        <p class="thongTinChiTiet1">Xem Thêm</p>--%>
@@ -325,39 +337,45 @@
         </div>
     </div>
 </div>
-
+<form action="send" method="post">
 <div class="NhanXet">
     <h2 class="tieude"> GỬI NHẬN XÉT CỦA BẠN </h2>
     <div class="from">
         <h3 class="ten"> 1. Đánh giá của bạn về sản phẩm này: </h3>
         <div class="danhGia "  onclick="starOne()">
-            <i class="fa fa-star twoStar starOne" aria-hidden="true"></i>
+            <input name="ratTe" type="radio" value="Rất tệ" />
+<%--            <i class="fa fa-star twoStar starOne" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starOned">Rất tệ</h3>
         </div>
         <div class="danhGia "  onclick="starTwo()">
-            <i class="fa fa-star oneStar starTwo"  aria-hidden="true"></i>
+            <input name="te" type="radio" value="Tệ" />
+<%--            <i class="fa fa-star oneStar starTwo"  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starTwod">Tệ</h3>
         </div>
         <div class="danhGia2 "  onclick="starThree()">
-            <i class="fa fa-star ThreeStar starThree "  aria-hidden="true"></i>
+            <input name="bt" type="radio" value="Bình thường" />
+<%--            <i class="fa fa-star ThreeStar starThree "  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starThreed">Bình thường</h3>
         </div>
         <div class="danhGia "  onclick="starfour()">
-            <i class="fa fa-star oneStar starfour" aria-hidden="true"></i>
+            <input name="tot" type="radio" value="Tốt" />
+<%--            <i class="fa fa-star oneStar starfour" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starfourd">Tốt</h3>
         </div>
         <div class="danhGia1 "  onclick="starFive()">
-            <i class="fa fa-star twoStar starFive" aria-hidden="true"></i>
-            <h3 class="DanhGia starFived">Rất Tốt</h3>
+            <input name="ratTot" type="radio" value="Rất tốt" />
+<%--            <i class="fa fa-star twoStar starFive" aria-hidden="true"></i>--%>
+            <h3 class="DanhGia starFived">Rất tốt</h3>
         </div>
     </div>
     <div class="from">
         <h3 class="ten"> 2. Tiêu đề của nhận xét: </h3>
-        <input type="text" placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
+        <input type="text" name="title" placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
     </div>
     <div class="from1">
         <h3 class="ten"> 3. Viết nhận xét của bạn vào bên dưới:</h3>
-        <textarea type="text" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
+        <textarea type="text" name="content" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
+<%--        <jsp:useBean id="productDetails1" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>--%>
     </div>
     <div class="from2">
         <h3 class="ten"> Thêm hình sản phẩm nếu có (tối đa 5 hình): </h3>
@@ -365,76 +383,59 @@
             <h3 class="hinh"> Chọn hình </h3>
         </div>
         <div class="chonHinh">
-            <h3 class="hinh gui" onclick="send()"> Gửi nhận xét </h3>
+            <a href="send">
+                <input type="text" style="display: none" name="id" value="${productDetails.id}">
+                <input type="text" style="display: none" name="name" value="${productDetails.name}">
+                <input type="text" style="display: none" name="linkImage" value="${productDetails.linkImage}">
+            <button class="submit" type="submit" style="font-weight: bold; font-size: 100%" value=" Gửi nhận xét " onclick="success()">
+<%--            <h3 class="hinh gui"> Gửi nhận xét </h3>--%>
+                 Gửi nhận xét
+            </button>
+            </a>
         </div>
     </div>
 </div>
-<div id="khungBinhLuan">
-    <h3 class="soBinhLuan"> Nhận xét ( 2 Nhận xét )</h3>
-    <div class="binhLuan">
-        <div class="noiDungBinhLuan">
-            <div class="anh">
-                <img class="anhBinhLuan" src="TinTuc/Image_TinTuc/anhDaiDien1.PNG"/>
-            </div>
-            <div class="thongTinBinhLuan">
-                <div class="ChiTiet">
-                    <h4 class="tenNguoiBinhLuan"> Nguyễn Huyền
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </h4>
-                </div>
-                <p class="ngayDang">Đánh giá : Rất tốt </p>
-                <p class="ngayDang">Tiêu Đề : Màu sắc </p>
-                <p class="noiDung">Nhận xét : Màu sắc đa dạng , hài hòa </p>
-            </div>
-        </div>
-        <div class="noiDungBinhLuan">
-            <div class="anh">
-                <img class="anhBinhLuan" src="TinTuc/Image_TinTuc/anhDaiDien1.PNG"/>
-            </div>
-            <div class="thongTinBinhLuan">
-                <div class="ChiTiet">
-                    <h4 class="tenNguoiBinhLuan"> Nguyễn Huyền
-                        <i class="fa fa-star one" aria-hidden="true"></i>
-                        <i class="fa fa-star two" aria-hidden="true"></i>
-                        <i class="fa fa-star three" aria-hidden="true"></i>
-                        <i class="fa fa-star four" aria-hidden="true"></i>
-                        <i class="fa fa-star five" aria-hidden="true"></i>
-                    </h4>
-                </div>
-                <p class="ngayDang danhgiabinhluan"></p>
-                <p class="ngayDang danhgiaTieuDe"></p>
-                <p class="noiDung noiDungTieuDe" ></p>
-            </div>
-        </div>
-    </div>
 
+<div id="khungBinhLuan">
+    <jsp:useBean id="count" scope="request" type="java.lang.Integer"/>
+    <h3 class="soBinhLuan"> Nhận xét ( ${count} Nhận xét )</h3>
     <div class="binhLuan">
+        <jsp:useBean id="ProductDetailsReview" scope="request" type="java.util.List"/>
+        <c:forEach var="r" items="${ProductDetailsReview}">
         <div class="noiDungBinhLuan">
             <div class="anh">
                 <img class="anhBinhLuan" src="TinTuc/Image_TinTuc/anhDaiDien2.PNG"/>
             </div>
             <div class="thongTinBinhLuan">
                 <div class="ChiTiet">
-                    <h4 class="tenNguoiBinhLuan1"> Thanh Nhi
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <h4 class="tenNguoiBinhLuan"> ${r.nameCustomer}
+                        <c:if test="${r.evaluate == 'Rất tệ' || r.evaluate == 'Tệ' || r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
+                        <i class="fa fa-star one" aria-hidden="true"></i>
+                        </c:if>
+                        <c:if test="${ r.evaluate == 'Tệ' || r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
+                        <i class="fa fa-star two" aria-hidden="true"></i>
+                        </c:if>
+                        <c:if test="${ r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
+                        <i class="fa fa-star three" aria-hidden="true"></i>
+                        </c:if>
+                        <c:if test="${r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
+                        <i class="fa fa-star four" aria-hidden="true"></i>
+                        </c:if>
+                        <c:if test="${r.evaluate == 'Rất tốt'}" >
+                        <i class="fa fa-star five" aria-hidden="true"></i>
+                        </c:if>
                     </h4>
                 </div>
-                <p class="ngayDang">Đánh giá : Tốt </p>
-                <p class="ngayDang">Tiêu Đề : ý tưởng </p>
-                <p class="noiDung">Nhân xét : Thiết kế tối giản và tinh tế , mang lại cảm giác trang nhã , tinh tế </p>
+                <p class="ngayDang danhgiabinhluan">Đánh giá : ${r.evaluate}</p>
+                <p class="ngayDang danhgiaTieuDe">Tiêu đề : ${r.title}</p>
+                <p class="noiDung noiDungTieuDe" >Nhận xét : ${r.content}</p>
             </div>
         </div>
+        </c:forEach>
     </div>
-</div>
 
+</div>
+</form>
 <div id="layout7">
     <div class="thanhDuoi">
         <div class="tenWeb">
@@ -544,6 +545,7 @@
 
 <script src="ChiTietSanPham.js"></script>
 <script>
+    var so = document.querySelector('.soLuongDat').innerHTML;
     function send () {
         const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');
         const noiDungTieuDe = document.querySelector('.noiDungTieuDe');
@@ -581,6 +583,9 @@
         one.style.color = "red";
         alert("hhh");
     };
+    function success () {
+        alert("Qúy khách đã bình luận thành công !");
+    }
 </script>
 </body>
 </html>

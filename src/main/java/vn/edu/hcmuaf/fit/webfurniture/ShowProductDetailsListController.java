@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,15 +18,15 @@ public class ShowProductDetailsListController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
-//           response.getWriter().println("NAME" + name);
-//           response.getWriter().println("ID" + id);
+
         request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
         System.out.println(name);
         String id = request.getParameter("id" );
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
-
+           request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
+           request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
            request.getRequestDispatcher("BanAillen_03.jsp").forward(request , response);
 
     }

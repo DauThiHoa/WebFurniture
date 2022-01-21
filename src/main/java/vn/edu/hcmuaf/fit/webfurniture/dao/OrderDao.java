@@ -19,7 +19,6 @@ public class OrderDao {
     }
 
     public boolean create(User user, Cart cart) {
-        System.out.println(user.getId() + user.getEmail());
         int orderId = JDBIConnector.get().withHandle(h -> {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
@@ -49,5 +48,37 @@ public class OrderDao {
         });
         // size của đơn hàng
         return total == cart.getProductDetailsList().size();
+    }
+
+    public boolean createProductDetails(User user , String id , String quantitySold , String priceNew) {
+        int quantity = Integer.parseInt(quantitySold);
+        int price = Integer.parseInt(priceNew);
+        int orderId = JDBIConnector.get().withHandle(h -> {
+            int i = 0 ;
+            ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
+//                    .bind(0 , user.getId())
+                    .bind (0, "idCustomer(User)")
+                    .bind(1, quantity * price)
+                    .bind(2, "Đã đặt hàng")
+                    .executeAndReturnGeneratedKeys();
+            // lay id order
+            return resultBearing.mapTo(Integer.class).findFirst().get();
+        });
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+                sum += h.createUpdate("INSERT INTO orderdetails ( idOrder , idProductDetails , quantitySold , price , discount , totalMoney  ) VALUES (?,?,?,?,?,?)")
+                        .bind(0 , orderId )
+                        .bind(1 , id)
+                        .bind(2 , quantity)
+                        .bind(3 , price)
+                        .bind(4 ,  price * 5 / 100 )
+                        .bind(5 , ( price) * (quantity) ).execute();
+//                        .bind(4 ,  productDetails.getPriceNew() * 10 / 100 )
+//                        .bind(5 , ( productDetails.getTotalMoney()) - (productDetails.getPriceNew() * 10 / 100)).execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
     }
 }

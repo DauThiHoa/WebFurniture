@@ -15,6 +15,8 @@ public class AddController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // get productDetalis id from request
        String id =  request.getParameter("id");
+       String so =  request.getParameter("so");
+        System.out.println(so);
        ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
        if ( productDetails != null ){
            HttpSession session = request.getSession();

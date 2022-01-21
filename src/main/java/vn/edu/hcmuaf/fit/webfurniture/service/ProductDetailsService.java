@@ -47,6 +47,7 @@ public class ProductDetailsService {
         return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status);
     }
     public List <ProductDetails> getAllName (String name ){
+
         return  ProductDetailsDao.getInstance().getAllName(name);
     }
 }

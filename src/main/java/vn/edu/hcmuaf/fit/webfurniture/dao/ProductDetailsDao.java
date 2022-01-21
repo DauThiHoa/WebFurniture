@@ -66,7 +66,7 @@ public class ProductDetailsDao {
             }
         return result;
     }
-    public static List <ProductDetails> getAllName (String name ){
+    public List <ProductDetails> getAllName (String name ){
         String nameNew = changeName (name);
 //        System.out.println(nameNew);
         return JDBIConnector.get().withHandle(handle -> {

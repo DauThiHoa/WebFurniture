@@ -24,7 +24,6 @@ public class CheckOutController extends HttpServlet {
 //                response.sendRedirect("/WebFurniture_war_exploded/login");
 //                return;
 //            }
-        response.getWriter().println(session.getId());
         if ( session.getAttribute("cart") == null ){
             response.sendRedirect("/WebFurniture_war_exploded/cart");
             return;
