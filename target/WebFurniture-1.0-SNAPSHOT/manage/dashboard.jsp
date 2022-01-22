@@ -48,52 +48,7 @@
 <%--                <ul class="navbar-nav">--%>
 
                 <jsp:include page="layout/nav.jsp"></jsp:include>
-<%--                    <!-- lINK VE TRANG CHU-->--%>
-<%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <img src="img.png">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <span class="nav-link-text">HomePage</span>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        </a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
 
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link active" href="dashboard.jsp">--%>
-<%--                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Dashboard</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/DirectoryManagement.jsp">--%>
-<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Directory Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/InterfaceManagement.jsp">--%>
-<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Interface Management</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">--%>
-<%--                            <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Profile</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="/WebFurniture_war_exploded/login">--%>
-<%--                            <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Login</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">--%>
-<%--                            <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>--%>
-<%--                            <span class="nav-link-text">Register</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-
-<%--                </ul>--%>
             </div>
         </div>
     </div>

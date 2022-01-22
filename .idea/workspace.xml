@@ -10,28 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a64daf87-600f-4492-9e4f-da6bcb425393" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/DirectoryManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/DirectoryManagementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/PageWeb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/DirectoryManagement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Information.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/ListOfPermissions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/ListOfPermissions.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Posts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Posts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/UserConfiguration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/UserConfiguration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/addDirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/layout/css.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/layout/css.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/layout/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/layout/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/DirectoryManagement.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/DirectoryManagement.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Information.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/ListOfPermissions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/ListOfPermissions.jsp" afterDir="false" />
@@ -41,8 +22,6 @@
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/UserConfiguration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/UserConfiguration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/addDirectoryManagement.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/addProduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/layout/css.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/layout/css.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -370,6 +349,7 @@
       <workItem from="1642767070130" duration="13287000" />
       <workItem from="1642785196922" duration="6415000" />
       <workItem from="1642792484894" duration="76000" />
+      <workItem from="1642815400256" duration="3173000" />
     </task>
     <servers />
   </component>
@@ -386,7 +366,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

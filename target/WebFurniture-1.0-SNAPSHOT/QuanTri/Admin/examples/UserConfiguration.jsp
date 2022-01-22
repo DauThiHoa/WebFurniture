@@ -69,6 +69,7 @@
                     <li class="nav-item">
                         <a class="nav-link active " href="profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
+
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>

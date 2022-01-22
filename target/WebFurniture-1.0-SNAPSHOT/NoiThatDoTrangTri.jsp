@@ -385,14 +385,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/Den3.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đèn cây đứng đẹp phong cách hiện đại GHO-2137</h4>
-                        <h4 class="gia"> 1.400.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -413,14 +413,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/Den4.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Đèn để bàn trang trí thiết kế đẹp GHO-2136</h4>
-                        <h4 class="gia"> 1.250.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -441,14 +441,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/tamTham1.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Thảm trải sàn gia đình cao cấp GHX-309</h4>
-                        <h4 class="gia"> 6.600.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -469,14 +469,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/tamTham2.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Thảm cotton trải sàn dành cho bé nằm chơi GHO-331</h4>
-                        <h4 class="gia"> 980.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -497,14 +497,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/tamTham3.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Thảm lót sàn cho bé cao cấp GH0-328</h4>
-                        <h4 class="gia"> 1.320.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -525,14 +525,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/tamTham4.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Thảm đa năng chần bông đẹp GHO-329</h4>
-                        <h4 class="gia"> 980.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -553,14 +553,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa1.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Lọ hoa lụa để bàn cao cấp trang trí gia đình GHS-6742</h4>
-                        <h4 class="gia"> 329.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -577,46 +577,46 @@
                 </div>
             </div>
             </c:if>
-            <c:if test="${p.id == 't10'}" >
-            <div class="sanPham">
-                <div class="sanPhamNoiThat">
-                    <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa2.PNG"/>
+                <c:if test="${p.id == 't25'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Chậu cây cảnh để bàn thiết kế sáng tạo độc đáo GHS-567</h4>
-                        <h4 class="gia"> 229.000đ</h4>
-                    </div>
-                    <div class="nutgiohang">
-                        <a href="GioHang.jsp">
-                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                    data-id="1050379730"><i class="fa fa-cart-plus"
-                                                            aria-hidden="true"></i><span> </span></button>
-                        </a>
-                        <button type="button" class="btnQuickView quick-view medium--hide small--hide"
-                                data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
-                                                                              aria-hidden="true"></i></button>
-                        <a href="ThanhToan.jsp">
-                            <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
-                                    data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                <span></span></button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </c:if>
+                </c:if>
             <c:if test="${p.id == 't11'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa3.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Bó hoa trang trí không gian gia đình GHS-6702</h4>
-                        <h4 class="gia"> 80.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -637,14 +637,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa4.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Cành mai trang trí không gian sống GHS-6698</h4>
-                        <h4 class="gia"> 60.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -665,14 +665,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/goi1.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng sofa họa tiết bằng vải nỉ cao cấp GHO-5432</h4>
-                        <h4 class="gia"> 160.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -693,14 +693,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/goi2.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng trang trí sofa đẹp GHO-110</h4>
-                        <h4 class="gia"> 180.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -721,14 +721,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/goi3.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng sofa họa tiết kẻ hiện đại GHO-105</h4>
-                        <h4 class="gia"> 170.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -749,14 +749,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/goi4.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Gối tựa lưng sofa phong cách Vintage GHO-106</h4>
-                        <h4 class="gia"> 170.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -777,14 +777,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/rem1.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Rèm cuốn cao cấp đẹp chất lượng GHO-621</h4>
-                        <h4 class="gia"> 400.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -805,14 +805,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/rem2.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Rèm Roman cao cấp chất lượng GHO-617</h4>
-                        <h4 class="gia"> 600.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -833,14 +833,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/rem3.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Rèm cuốn đẹp chất lượng cao GHO-603</h4>
-                        <h4 class="gia"> 400.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -861,14 +861,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/rem4.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Rèm vải roman chất lượng cao cấp GHO-602</h4>
-                        <h4 class="gia"> 600.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -889,14 +889,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/ke1.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Kệ gỗ để đồ tiện dụng kiểu dáng nhỏ gọn GHS-145</h4>
-                        <h4 class="gia"> 670.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -917,14 +917,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/ke2.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten">Kệ quần áo gia đình bằng gỗ sồi tự nhiên GHS-144</h4>
-                        <h4 class="gia"> 5.000.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -945,14 +945,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/ke3.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Kệ gỗ trưng bày kiểu dáng nhỏ gọn GHS-133</h4>
-                        <h4 class="gia"> 1.800.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -973,14 +973,14 @@
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
-                        <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/ke4.PNG"/>
+                        <img class="anh" src="${p.linkImage}"/>
                     </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten"> Kệ gỗ để đồ trang trí gia đình GHS-131</h4>
-                        <h4 class="gia"> 4.500.000đ</h4>
+                        <h4 class="ten">${p.name}</h4>
+                        <h4 class="gia">${p.priceNew}đ</h4>
                     </div>
                     <div class="nutgiohang">
-                        <a href="GioHang.jsp">
+                        <a href="cart-add?id=${p.id}">
                             <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                     data-id="1050379730"><i class="fa fa-cart-plus"
                                                             aria-hidden="true"></i><span> </span></button>
@@ -997,6 +997,7 @@
                 </div>
             </div>
             </c:if>
+
             </c:forEach>
         </div>
 

@@ -481,7 +481,7 @@
         <a class="nav-link active" href="add/WebFurniture_war_exploded/Product">
             <button class="add">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Add
+                AWebFurniture_war_explodeddd
             </button>
         </a>
     </div>
