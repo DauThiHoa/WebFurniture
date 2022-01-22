@@ -262,25 +262,25 @@
                     <h3 class="tenLoaiDoTrangTri">Đèn ngủ</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri_TamTham.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="NoiThatDoTrangTri_TamTham.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri2.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Tấm thảm</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri_Lohoagia.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="NoiThatDoTrangTri_Lohoagia.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri3.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Lọ , hoa giả</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri_Goisofa.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="NoiThatDoTrangTri_Goisofa.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri4.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Gối sofa</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri_Remcua.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="NoiThatDoTrangTri_Remcua.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
                 <div class="loai1">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri5.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Rèm cửa </h3>
