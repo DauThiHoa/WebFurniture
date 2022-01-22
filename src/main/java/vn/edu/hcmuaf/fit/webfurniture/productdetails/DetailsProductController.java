@@ -38,7 +38,8 @@ public class DetailsProductController extends HttpServlet {
 //                return;
 //            }
 
-            boolean result = OrderDao.getInstance().createProductDetails((User) session.getAttribute("auth") ,id,quantitySold,priceNew) ;
+//            boolean result = OrderDao.getInstance().createProductDetails((User) session.getAttribute("auth") ,id,quantitySold,priceNew) ;
+              boolean result = OrderDao.getInstance().createProductDetails(id,quantitySold,priceNew) ;
 
             if ( result ) {
                 request.getRequestDispatcher("payment").forward(request, response);

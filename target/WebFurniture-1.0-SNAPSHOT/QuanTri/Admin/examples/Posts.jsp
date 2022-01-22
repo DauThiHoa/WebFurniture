@@ -56,13 +56,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../../../DirectoryManagement.jsp">
+                        <a class="nav-link active" href="/WebFurniture_war_exploded/DirectoryManagement">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../../../DirectoryManagement.jsp">
+                        <a class="nav-link active" href="/WebFurniture_war_exploded/DirectoryManagement">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
                             <span class="nav-link-text">Product Type</span>
                         </a>

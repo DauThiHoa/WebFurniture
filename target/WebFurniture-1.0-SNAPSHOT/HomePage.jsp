@@ -47,7 +47,7 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
@@ -57,7 +57,7 @@
                     href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+                href="controllerRegister">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>

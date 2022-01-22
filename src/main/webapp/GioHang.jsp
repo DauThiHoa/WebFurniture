@@ -49,14 +49,14 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap.jsp">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="DangNhap.jsp">Đăng
+                    href="controllerRegister">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
                 href="DangKy.jsp">
