@@ -256,7 +256,7 @@
     <div id="right">
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-            <a href="NoiThatDoTrangTri/NoiThatDoTrangTri_Den.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="NoiThatDoTrangTri_Den.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri1.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Đèn ngủ</h3>
