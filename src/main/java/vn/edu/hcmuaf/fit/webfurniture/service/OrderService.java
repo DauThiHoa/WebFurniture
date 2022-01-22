@@ -15,8 +15,8 @@ public class OrderService {
         }
         return instance ;
     }
-    public boolean createOrder ( User user , Cart cart ){
+    public boolean createOrder ( Cart cart ){
         OrderDao orderDao = OrderDao.getInstance ();
-        return  orderDao.create(user , cart);
+        return  orderDao.create( cart);
     }
 }

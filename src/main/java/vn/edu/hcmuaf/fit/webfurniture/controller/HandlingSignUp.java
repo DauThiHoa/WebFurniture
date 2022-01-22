@@ -23,8 +23,12 @@ public class HandlingSignUp extends HttpServlet {
         String password = request.getParameter("password");
         System.out.println(name);
         boolean registerSuccess  = UserServices.getInstance().register(name, password, email);
+        System.out.println(registerSuccess);
         if(registerSuccess){
             response.sendRedirect("login");
+//            request.getRequestDispatcher("login").forward(request, response);
+        }else {
+            request.getRequestDispatcher("controllerRegister").forward(request, response);
         }
     }
 }

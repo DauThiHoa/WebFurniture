@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
+import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -20,23 +21,31 @@ public class CheckOutController extends HttpServlet {
         // get session
         HttpSession session = request.getSession();
         // Xử lý đăng nhập -> lấy id khách hàng
-//            if ((session.getAttribute("auth")) == null ) {
-//                response.sendRedirect("/WebFurniture_war_exploded/login");
-//                return;
-//            }
-        if ( session.getAttribute("cart") == null ){
+
+//        boolean test = false;
+//        System.out.println(test);
+//        if ((session.getAttribute("auth")) == null) {
+//            response.sendRedirect("/WebFurniture_war_exploded/login");
+//            test = true;
+//            return;
+//        }
+
+        if (session.getAttribute("cart") == null) {
             response.sendRedirect("/WebFurniture_war_exploded/cart");
             return;
         }
 
-        boolean result = OrderService.getInstance().createOrder((User) session.getAttribute("auth") ,(Cart) session.getAttribute("cart")) ;
-        session.removeAttribute("cart");
+//        boolean result = OrderService.getInstance().createOrder((User) session.getAttribute("auth") ,(Cart) session.getAttribute("cart")) ;
+            boolean result = OrderService.getInstance().createOrder((Cart) session.getAttribute("cart"));
 
-        if (result) {
+            session.removeAttribute("cart");
+
+            if (result) {
 //            response.sendRedirect("/WebFurniture_war_exploded/ProductDetailsList");
-            response.sendRedirect("/WebFurniture_war_exploded/payment");
-        } else {
-            response.sendRedirect("/WebFurniture_war_exploded/cart");
-        }
+                response.sendRedirect("/WebFurniture_war_exploded/payment");
+            } else {
+                response.sendRedirect("/WebFurniture_war_exploded/cart");
+            }
+
     }
 }

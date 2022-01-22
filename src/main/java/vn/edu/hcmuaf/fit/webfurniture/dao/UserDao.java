@@ -1,7 +1,9 @@
 package vn.edu.hcmuaf.fit.webfurniture.dao;
 
+import org.jdbi.v3.core.result.ResultBearing;
 import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.db.DBConnect;
+import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
 import java.sql.*;
 
@@ -120,39 +122,51 @@ public class UserDao {
 
     public boolean register(String username, String password, String email) {
         Connection connection = DBConnect.getConnection();
-        String sql = "INSERT INTO user(id,username, password, email) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO user(username, password, email) VALUES(?,?,?)";
         int size = getSize();
-        String next_number_id = "00000" + (size + 1);
-        while (next_number_id.length() > 6) {
-            next_number_id = next_number_id.substring(1);
-        }
-        String next_id = "USER" + next_number_id;
-        //CHECK ID is EXISTS
-        boolean userIsExit = getUserByID(next_id);
-        while (userIsExit) {
-            size++;
-            next_number_id = "00000" + (size + 1);
-            while (next_number_id.length() > 6) {
-                next_number_id = next_number_id.substring(1);
-            }
-            next_id = "USER" + next_number_id;
-        }
-        System.out.println(next_id);
-        System.out.println(username);
-        System.out.println(password);
-        System.out.println(email);
-        try {
-            PreparedStatement stm = connection.prepareStatement(sql);
-            stm.setString(1, next_id);
-            stm.setString(2, username);
-            stm.setString(3, password);
-            stm.setString(4, email);
-            stm.executeUpdate();
-            System.out.println("truee");
-            return true;
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+//        String next_number_id = "00000" + (size + 1);
+//        while (next_number_id.length() > 6) {
+//            next_number_id = next_number_id.substring(1);
+//        }
+//        String next_id = "USER" + next_number_id;
+//        //CHECK ID is EXISTS
+//        boolean userIsExit = getUserByID(next_id);
+//        while (userIsExit) {
+//            size++;
+//            next_number_id = "00000" + (size + 1);
+//            while (next_number_id.length() > 6) {
+//                next_number_id = next_number_id.substring(1);
+//            }
+//            next_id = "USER" + next_number_id;
+//        }
+
+//        System.out.println(next_id);
+
+        int test = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT COUNT(*) FROM `user` WHERE email like ?")
+                    .bind(0,email)
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+        if (test >= 1 ){
             return false;
+        }else {
+            System.out.println(username);
+            System.out.println(password);
+            System.out.println(email);
+            try {
+                PreparedStatement stm = connection.prepareStatement(sql);
+//            stm.setString(1, next_id);
+                stm.setString(1, username);
+                stm.setString(2, password);
+                stm.setString(3, email);
+                stm.executeUpdate();
+                System.out.println("true");
+                return true;
+            } catch (SQLException e) {
+                e.printStackTrace();
+                return false;
+            }
         }
 
     }

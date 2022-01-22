@@ -18,12 +18,16 @@ public class OrderDao {
         return instance;
     }
 
-    public boolean create(User user, Cart cart) {
+    public boolean create( Cart cart) {
+        int idUser = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT MAX(id) FROM `user`")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
         int orderId = JDBIConnector.get().withHandle(h -> {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
-//                    .bind(0 , user.getId())
-                    .bind (0, "idCustomer(User)")
+                    .bind(0 , idUser)
+//                    .bind (0, "idCustomer(User)")
                     .bind(1, cart.getTotal())
                     .bind(2, "Đã đặt hàng")
                     .executeAndReturnGeneratedKeys();
@@ -50,14 +54,18 @@ public class OrderDao {
         return total == cart.getProductDetailsList().size();
     }
 
-    public boolean createProductDetails(User user , String id , String quantitySold , String priceNew) {
+    public boolean createProductDetails( String id , String quantitySold , String priceNew) {
         int quantity = Integer.parseInt(quantitySold);
         int price = Integer.parseInt(priceNew);
+        int idUser = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT MAX(id) FROM `user`")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
         int orderId = JDBIConnector.get().withHandle(h -> {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
-//                    .bind(0 , user.getId())
-                    .bind (0, "idCustomer(User)")
+                    .bind(0 , idUser)
+//                    .bind (0, "idCustomer(User)")
                     .bind(1, quantity * price)
                     .bind(2, "Đã đặt hàng")
                     .executeAndReturnGeneratedKeys();
