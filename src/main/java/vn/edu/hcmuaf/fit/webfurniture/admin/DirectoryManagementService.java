@@ -58,5 +58,20 @@ public class DirectoryManagementService {
         return true;
     }
 
+    public int delete(String id) {
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("delete from pageweb where id = ? ")
+                        .bind(0 , id ).execute());
+    }
 
+    public int update(String id, String nameCategory, String modules, String display) {
+
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("update pageweb set nameCategory = ? , modules = ? , display = ? where id = ? ")
+                        .bind(0 , nameCategory )
+                        .bind(1 , modules )
+                        .bind(2 , display )
+                        .bind(3 , Integer.parseInt(id) )
+                        .execute());
+    }
 }

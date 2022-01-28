@@ -390,7 +390,7 @@
     </div>
 
 
-    <a class="nav-link active" style="margin-left: 35%" href="QuanTri/Admin/examples/addDirectoryManagement.jsp">
+    <a class="nav-link active" style="margin-left: 35%" href="<%= Asset.url("Add_DirectoryManagement")%> ">
         <button class="add">
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
             Add
@@ -412,13 +412,23 @@
             <% int i = 1 ;%>
             <c:forEach items="${PageWeb}" var="p" >
             <tr>
+                <form action = "<%=Asset.url("edit_DirectoryManagement")%>"  method = "POST" >
                 <td><input style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="number" value="<%= i++ %>"><br></td>
                 <td><input style=" border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="nameCategory" value="${p.nameCategory}"></td>
                 <td><img src="${p.linkImage}" class="image"/></td>
                 <td><input style="text-align: center; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="modules" value="${p.modules}"></td>
-                <td><input style="font-size: 150%" type="checkbox" name="display" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <td><input style="font-size: 150%" type="checkbox" name="display" value="block"></td>
+                <td>
+                    <input type="hidden" name ="id" value="${p.id}">
+                    <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
+                </td>
+                </form>
+                <td>
+                    <form action = "<%=Asset.url("Action_DirectoryManagement")%>"  method = "POST" >
+                        <input type="hidden" name ="id" value="${p.id}">
+                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
+                    </form>
+                </td>
             </tr>
             </c:forEach>
 
@@ -443,5 +453,13 @@
 
 <!-- Argon Scripts -->
 </body>
+<script>
+    function trash () {
+        alert("Bạn đã xóa sản phẩm thành công !")
+    }
+    function edit () {
+        alert("Bạn đã sửa sản phẩm thành công !")
+    }
+</script>
 
 </html>

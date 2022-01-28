@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="QuanTri/Admin/examples/addDirectoryManagement.css">
+    <link rel="stylesheet" href="addDirectoryManagement.css">
     <link rel="stylesheet" href="addProduct.css">
     <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">

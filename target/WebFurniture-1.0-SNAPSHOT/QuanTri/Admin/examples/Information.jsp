@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="Product.css">
     <link rel="stylesheet" href="InterfaceManagement.css">
     <link rel="stylesheet" href="Information.css">
-    <link rel="stylesheet" href="addDirectoryManagement.css">
+    <link rel="stylesheet" href="../../../addDirectoryManagement.css">
     <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>

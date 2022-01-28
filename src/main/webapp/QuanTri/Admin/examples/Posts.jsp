@@ -453,7 +453,7 @@
 
     </div>
 
-    <a class="nav-link active" href="addDirectoryManagement.jsp">
+    <a class="nav-link active" href="../../../addDirectoryManagement.jsp">
         <button class="add">
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
             Add
