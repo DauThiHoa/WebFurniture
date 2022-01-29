@@ -14,6 +14,9 @@ public class Add_DirectoryManagement extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        request.setAttribute("Category" ,"" );
+        request.setAttribute("linkImage" ,"" );
+        request.setAttribute("Modules" ,"" );
         request.getRequestDispatcher("addDirectoryManagement.jsp").forward(request, response);
 
     }

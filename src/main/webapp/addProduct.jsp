@@ -385,7 +385,8 @@
         </div>
         <div class="information2">
             <h2 class="Image"> Image </h2>
-            <input class="type" type="text" name="linkImage" value=""><br>
+            <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
+            <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
             <button class="Select">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Select file
@@ -393,19 +394,23 @@
         </div>
         <div class="information3">
             <h2 class="Modules"> Category </h2>
-            <input class="type2" type="text" name="category" value=""><br>
+            <jsp:useBean id="category" scope="request" class="java.lang.String"/>
+            <input class="type2" type="text" name="category" value="${category}"><br>
         </div>
         <div class="information4">
             <h2 class="Modules"> Code </h2>
-            <input class="type2" type="text" name="id" value=""><br>
+            <jsp:useBean id="id" scope="request" class="java.lang.String"/>
+            <input class="type2" type="text" name="id" value="${id}"><br>
         </div>
         <div class="information5">
             <h2 class="Modules"> Price </h2>
-            <input class="type2" type="text" name="priceNew" value=""><br>
+            <jsp:useBean id="priceNew" scope="request" class="java.lang.String"/>
+            <input class="type2" type="text" name="priceNew" value="${priceNew}"><br>
         </div>
         <div class="information6">
             <h2 class="Modules"> Promotion </h2>
-            <input class="type2" type="text" name="priceOld" value=""><br>
+            <jsp:useBean id="priceOld" scope="request" class="java.lang.String"/>
+            <input class="type2" type="text" name="priceOld" value="${priceOld}"><br>
         </div>
     </div>
 
@@ -413,28 +418,34 @@
         <h1 class="information"> VIETNAMESE</h1>
         <div class="information2">
             <h2 class="Category"> Title </h2>
-            <input class="type1" type="text" name="name" value=""><br>
+            <jsp:useBean id="name" scope="request" class="java.lang.String"/>
+            <input class="type1" type="text" name="name" value="${name}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Trademark </h2>
-            <input class="type2" type="text" name="trademark" value=""><br>
+            <jsp:useBean id="trademark" scope="request" class="java.lang.String"/>
+            <input class="type2" type="text" name="trademark" value="${trademark}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Production </h2>
-            <input class="type2" type="text" name="production" value=""><br>
+            <jsp:useBean id="production" scope="request" class="java.lang.String"/>
+            <input class="type2" type="text" name="production" value="${production}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Description </h2>
+            <jsp:useBean id="description" scope="request" class="java.lang.String"/>
             <textarea class="type3b" width="150px" type="text" name="description"
-                      value=""></textarea><br>
+                      value="${description}"></textarea><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> ProductGroups </h2>
-            <input class="type3a" type="text" name="produtGroups" value=""><br>
+            <jsp:useBean id="produtGroups" scope="request" class="java.lang.String"/>
+            <input class="type3a" type="text" name="produtGroups" value="${produtGroups}"><br>
         </div>
         <div class="information4">
             <h2 class="Category"> Quantity </h2>
-            <input class="type3" type="text" name="quantity" value=""><br>
+            <jsp:useBean id="quantity" scope="request" class="java.lang.String"/>
+            <input class="type3" type="text" name="quantity" value="${quantity}"><br>
         </div>
         <div class="information5">
             <h2 class="Modules"> Status </h2>
@@ -495,11 +506,21 @@
 
 <script>
 
+    var type = document.querySelector('.type').value;
+    var type2 = document.querySelector('.type2').value;
+    var type1 = document.querySelector('.type1').value;
+    var type3a = document.querySelector('.type3a').value;
+    var type3b = document.querySelector('.type3b').value;
+    var type3 = document.querySelector('.type3').value;
     function save() {
-        alert("Bạn đã thêm sản phẩm thành công ! ")
+        if ( type == "" || type1 == "" || type2 == "" || type3 == "" || type3a == "" || type3b == "" ){
+            alert("Vui lòng điền đầy đủ thông tin ! ");
+        }else {
+            alert("Bạn đã thêm sản phẩm thành công ! ");
+        }
     }
     function exit() {
-        alert("Thoát và không tiếp tục thêm sản phẩm !")
+        alert("Thoát và không tiếp tục thêm sản phẩm !");
     }
 
 </script>

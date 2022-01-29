@@ -156,10 +156,10 @@
     var brithDay  =  document.getElementById('brithDay').value ;
     // alert(firstname);
     function clickCheckout() {
-        if ( firstname != "" &&  email != "" && address != "" &&  adr != "" && cardname != "" &&  cardnumber != "" && brithDay != "" ){
-            alert("Qúy khách đã đăng kí thành công !");
-        }else {
+        if ( firstname == "" ||  email == "" || address == "" ||  adr == "" || cardname == "" ||  cardnumber == "" || brithDay == "" ){
             alert("Qúy khách vui lòng điền đầy đủ thông tin ! " );
+        }else {
+            alert("Qúy khách đã đăng kí thành công !");
         }
     }
 </script>

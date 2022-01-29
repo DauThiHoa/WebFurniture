@@ -27,37 +27,6 @@ public class DirectoryManagementService {
         });
     }
 
-    public  boolean addProductDetails(String id, String name, String description, String trademark, String production,
-                                      String priceOld, String linkImage, String quantity, String priceNew, String status,
-                                      String produtGroups, String category) {
-        int changePriceOld = Integer.parseInt(priceOld);
-        int changeQuantity = Integer.parseInt(quantity);
-        int changePriceNew = Integer.parseInt(priceNew);
-
-        int total = JDBIConnector.get().withHandle(h -> {
-            int sum = 0 ;
-            sum += h.createUpdate("INSERT INTO productdetails ( id , `name` , description , trademark , production ," +
-                            " priceOld , linkImage , quantity , priceNew , `status` , idProductGroups , idCategory ) " +
-                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)")
-                    .bind(0 , id )
-                    .bind(1 , name)
-                    .bind(2 , description)
-                    .bind(3 , trademark)
-                    .bind(4 ,  production)
-                    .bind(5 , changePriceOld )
-                    .bind(6 , linkImage )
-                    .bind(7 , changeQuantity)
-                    .bind(8 , changePriceNew)
-                    .bind(9 , status)
-                    .bind(10 ,  produtGroups)
-                    .bind(11, category ).execute();
-            // Số dòng được chèn vào
-            return sum ;
-        });
-        // size của đơn hàng
-        return true;
-    }
-
     public int delete(String id) {
         return JDBIConnector.get().withHandle(h ->
                 h.createUpdate("delete from pageweb where id = ? ")
@@ -73,5 +42,21 @@ public class DirectoryManagementService {
                         .bind(2 , display )
                         .bind(3 , Integer.parseInt(id) )
                         .execute());
+    }
+
+    public boolean addDirectoryManagement(String category, String linkImage, String modules, String display) {
+
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+            sum += h.createUpdate("INSERT INTO pageweb ( nameCategory , linkImage , modules , display ) VALUES (?,?,?,?)")
+                    .bind(0 , category )
+                    .bind(1 , linkImage)
+                    .bind(2 , modules)
+                    .bind(3 , display) .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
     }
 }

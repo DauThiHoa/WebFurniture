@@ -1,0 +1,51 @@
+package vn.edu.hcmuaf.fit.webfurniture.admin;
+
+import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet(name = "AddDirectoryManagement", value = "/AddDirectoryManagement")
+public class AddDirectoryManagement extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        String Category = request.getParameter ("Category"); // Loai Home, ...
+        String linkImage = request.getParameter ("linkImage"); // Link Image
+        String Modules = request.getParameter ("Modules");
+        String dis = request.getParameter ("Display");
+        System.out.println(Category);
+        String display ;
+        if (dis != null ){
+            display = dis;
+        }else {
+            display = "none";
+        }
+
+        if ( !(Category.equals("")) && !(linkImage.equals(""))  &&  !(linkImage.equals("")) && display != null ) {
+            boolean result = DirectoryManagementService.getInstance().addDirectoryManagement(Category, linkImage, Modules, display);
+            if (result) {
+                request.getRequestDispatcher("Add_DirectoryManagement").forward(request, response);
+            } else {
+                request.getRequestDispatcher("fail.jsp").forward(request, response);
+            }
+        }else {
+            request.setAttribute("Category" ,Category );
+            request.setAttribute("linkImage" ,linkImage );
+            request.setAttribute("Modules" ,Modules );
+            request.getRequestDispatcher("Add_DirectoryManagement").forward(request, response);
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+             doGet(request,response);
+    }
+}

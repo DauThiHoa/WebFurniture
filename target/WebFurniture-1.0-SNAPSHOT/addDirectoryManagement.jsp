@@ -15,8 +15,8 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+<%--    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">--%>
+<%--    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">--%>
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
@@ -64,7 +64,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/WebFurniture_war_exploded/DirectoryManagement">
-                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
                             <span class="nav-link-text">Product Type</span>
                         </a>
                     </li>
@@ -76,7 +76,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="QuanTri/Admin/examples/Posts.jsp">
-                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
                             <span class="nav-link-text">Posts </span>
                         </a>
                     </li>
@@ -379,61 +379,72 @@
         </div>
     </div>
 
+    <form action="AddDirectoryManagement" method="post" >
     <div class="infor">
         <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information1">
-            <h2 class="Image"> Image </h2>
-            <input class="type" type="text" name="fname" value="No files selected"><br>
-            <button class="Select">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Select file
-            </button>
+            <h2 class="Image"> Image </h2
+            <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
+            <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
+<%--            <button class="Select">--%>
+<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
+<%--                Select file--%>
+<%--            </button>--%> 
         </div>
         <div class="information2">
+            <jsp:useBean id="Category" scope="request" class="java.lang.String"/>
             <h2 class="Category"> Category </h2>
-            <input class="type1" type="text" name="fname" value="Enter category"><br>
+            <input class="type1" type="text" name="Category" value="${Category}"><br>
         </div>
         <div class="information3">
+            <jsp:useBean id="Modules" scope="request" class="java.lang.String"/>
             <h2 class="Modules"> Modules </h2>
-            <input class="type2" type="text" name="fname" value="Product or article"><br>
+            <input class="type2" type="text" name="Modules" value="${Modules}"><br>
         </div>
     </div>
 
-    <div class="infor2">
+    <div class="infor2" style=" height: 25%">
         <h1 class="information"> VIETNAMESE</h1>
-        <div class="information2">
-            <h2 class="Category"> Title </h2>
-            <input class="type1" type="text" name="fname" value="Product"><br>
-        </div>
-        <div class="information3">
-            <h2 class="Modules"> Path </h2>
-            <input class="type2" type="text" name="fname" value="Product Path"><br>
-        </div>
-        <div class="information4">
-            <h2 class="Category"> Numerical order </h2>
-            <input class="type3" type="text" name="fname" value="   2"><br>
-        </div>
+<%--        <div class="information2">--%>
+<%--            <h2 class="Category"> Title </h2>--%>
+<%--            <input class="type1" type="text" name="fname" value=""><br>--%>
+<%--        </div>--%>
+<%--        <div class="information3">--%>
+<%--            <h2 class="Modules"> Path </h2>--%>
+<%--            <input class="type2" type="text" name="fname" value="Product Path"><br>--%>
+<%--        </div>--%>
+<%--        <div class="information4">--%>
+<%--            <h2 class="Category"> Numerical order </h2>--%>
+<%--            <input class="type3" type="text" name="fname" value="   2"><br>--%>
+<%--        </div>--%>
         <div class="information5">
             <h2 class="Modules"> Action </h2>
             <div class="">
-                <input class="checkin" type="checkbox" name="sport" value="check">
+                <input class="checkin" type="checkbox" name="Display" value="block">
                 <h3>Display</h3>
             </div>
         </div>
         <div class="information6">
-            <a class="nav-link active" href="/WebFurniture_war_exploded/DirectoryManagement">
-                <button class="Select">
+<%--            <a class="nav-link active" href="/WebFurniture_war_exploded/DirectoryManagement">--%>
+                <button class="Select" type="submit" onclick="save()">
                     <img class="fa fa-floppy-o" src="QuanTri/Admin/assets/img/Admin/img_16.png"/>
                     Save
                 </button>
-                <button class="Select">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                    Exit
-                </button>
+<%--            </a>--%>
+
             </a>
         </div>
     </div>
+    </form>
 
+<div class="information6">
+    <a class="nav-link active" href="../WebFurniture_war_exploded/DirectoryManagement">
+        <button class="Select" style="margin-left: 75% ; margin-top: -35px" onclick="exit()">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            Exit
+        </button>
+    </a>
+</div>
     <!-- Footer -->
     <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
@@ -450,15 +461,21 @@
 </div>
 <!-- Argon Scripts -->
 <!-- Core -->
-<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Optional JS -->
-<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
-<!-- Argon JS -->
-<script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>
 
+<script>
+    var type = document.querySelector('.type').value;
+    var type1 = document.querySelector('.type').value;
+    var type2 = document.querySelector('.type').value;
+    function save() {
+        if (type == "" || type1 == "" || type2 == ""){
+            alert("Vui lòng điền đầy đủ thông tin ! ");
+        }else {
+            alert("Bạn đã thêm sản phẩm thành công ! ");
+        }
+    }
+    function exit() {
+        alert("Thoát và không tiếp tục thêm sản phẩm !");
+    }
+</script>
 </html>
