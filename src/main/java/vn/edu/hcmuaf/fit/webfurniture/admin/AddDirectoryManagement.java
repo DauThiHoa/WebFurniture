@@ -21,7 +21,8 @@ public class AddDirectoryManagement extends HttpServlet {
         String linkImage = request.getParameter ("linkImage"); // Link Image
         String Modules = request.getParameter ("Modules");
         String dis = request.getParameter ("Display");
-        System.out.println(Category);
+
+
         String display ;
         if (dis != null ){
             display = dis;
@@ -29,7 +30,7 @@ public class AddDirectoryManagement extends HttpServlet {
             display = "none";
         }
 
-        if ( !(Category.equals("")) && !(linkImage.equals(""))  &&  !(linkImage.equals("")) && display != null ) {
+        if ( !(Category.equals("")) && !(linkImage.equals(""))  &&  !(Modules.equals(""))  ) {
             boolean result = DirectoryManagementService.getInstance().addDirectoryManagement(Category, linkImage, Modules, display);
             if (result) {
                 request.getRequestDispatcher("Add_DirectoryManagement").forward(request, response);

@@ -75,13 +75,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="QuanTri/Admin/examples/Posts.jsp">
-                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
-                            <span class="nav-link-text">Posts </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="QuanTri/Admin/examples/InterfaceManagement.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/Information.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
@@ -382,22 +376,22 @@
     <form action="AddDirectoryManagement" method="post" >
     <div class="infor">
         <h1 class="information"> GENERAL INFORMATION</h1>
+        <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
         <div class="information1">
-            <h2 class="Image"> Image </h2
-            <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
+            <h2 class="Image"> Image </h2>
             <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
-<%--            <button class="Select">--%>
-<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
-<%--                Select file--%>
-<%--            </button>--%> 
+            <button class="Select">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Select file
+            </button>
         </div>
+        <jsp:useBean id="Category" scope="request" class="java.lang.String"/>
         <div class="information2">
-            <jsp:useBean id="Category" scope="request" class="java.lang.String"/>
             <h2 class="Category"> Category </h2>
             <input class="type1" type="text" name="Category" value="${Category}"><br>
         </div>
+        <jsp:useBean id="Modules" scope="request" class="java.lang.String"/>
         <div class="information3">
-            <jsp:useBean id="Modules" scope="request" class="java.lang.String"/>
             <h2 class="Modules"> Modules </h2>
             <input class="type2" type="text" name="Modules" value="${Modules}"><br>
         </div>
@@ -465,8 +459,8 @@
 
 <script>
     var type = document.querySelector('.type').value;
-    var type1 = document.querySelector('.type').value;
-    var type2 = document.querySelector('.type').value;
+    var type1 = document.querySelector('.type1').value;
+    var type2 = document.querySelector('.type2').value;
     function save() {
         if (type == "" || type1 == "" || type2 == ""){
             alert("Vui lòng điền đầy đủ thông tin ! ");

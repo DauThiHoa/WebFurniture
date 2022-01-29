@@ -68,13 +68,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="QuanTri/Admin/examples/Posts.jsp">
-                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
-                            <span class="nav-link-text">Posts </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="QuanTri/Admin/examples/InterfaceManagement.jsp">
+                        <a class="nav-link " href="QuanTri/Admin/examples/Information.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
@@ -419,7 +413,7 @@
         <div class="information2">
             <h2 class="Category"> Title </h2>
             <jsp:useBean id="name" scope="request" class="java.lang.String"/>
-            <input class="type1" type="text" name="name" value="${name}"><br>
+            <input class="type1" style="margin-left: 63px" type="text" name="name" value="${name}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Trademark </h2>
@@ -431,9 +425,9 @@
             <jsp:useBean id="production" scope="request" class="java.lang.String"/>
             <input class="type2" type="text" name="production" value="${production}"><br>
         </div>
+        <jsp:useBean id="description" scope="request" class="java.lang.String"/>
         <div class="information3">
             <h2 class="Modules"> Description </h2>
-            <jsp:useBean id="description" scope="request" class="java.lang.String"/>
             <textarea class="type3b" width="150px" type="text" name="description"
                       value="${description}"></textarea><br>
         </div>
@@ -445,7 +439,7 @@
         <div class="information4">
             <h2 class="Category"> Quantity </h2>
             <jsp:useBean id="quantity" scope="request" class="java.lang.String"/>
-            <input class="type3" type="text" name="quantity" value="${quantity}"><br>
+            <input class="type3"  style="margin-left: 63px" type="text" name="quantity" value="${quantity}"><br>
         </div>
         <div class="information5">
             <h2 class="Modules"> Status </h2>
@@ -518,6 +512,7 @@
         }else {
             alert("Bạn đã thêm sản phẩm thành công ! ");
         }
+
     }
     function exit() {
         alert("Thoát và không tiếp tục thêm sản phẩm !");

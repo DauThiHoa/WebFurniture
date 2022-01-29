@@ -24,6 +24,18 @@
                                 <span class="nav-link-text">Directory Management</span>
                             </a>
                         </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="<%= Asset.url("DirectoryManagement")%>">
+            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
+            <span class="nav-link-text">Product Type</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="<%= Asset.url("Product")%>">
+            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+            <span class="nav-link-text">Product </span>
+        </a>
+    </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<%= Asset.url("QuanTri/Admin/examples/InterfaceManagement.jsp")%>">
                                 <i class="fa fa-list-alt" aria-hidden="true"></i>

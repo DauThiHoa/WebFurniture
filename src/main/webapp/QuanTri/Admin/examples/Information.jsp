@@ -65,18 +65,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="InterfaceManagement.jsp">
+                        <a class="nav-link active " href="Information.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active " href="InterfaceManagement.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_23.png"/>
-                            <span class="nav-link-text">Image</span>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link active " href="Information.jsp">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
@@ -391,7 +385,7 @@
         <h1 class="information"> VIETNAMESE</h1>
         <div class="information2">
             <h2 class="Category"> Company name </h2>
-            <input class="type1" type="text" name="fname" value="Web Furniture Co., Ltd"><br>
+            <input class="type1" type="text" name="fname" value="Web Furniture"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Address </h2>
@@ -399,19 +393,24 @@
         </div>
         <div class="information4">
             <h2 class="Category"> Share icon </h2>
-            <input class="order" type="text" name="fname" value="No files selected"><br>
-            <button class="Select_File">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Select file
-            </button>
+<%--            <input class="order" type="text" name="fname" value="No files selected">--%>
+<%--            <i class="fa fa-share-square-o" aria-hidden="true"></i>--%>
+            <br>
+<%--            <button class="Select_File">--%>
+<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
+<%--                Select file--%>
+<%--            </button>--%>
+            <input type="file" style="border : 1px solid black ; background: white ; color: black ; width: 750px ; margin-left: 50px" value="Select file">
         </div>
         <div class="information5">
             <h2 class="Modules"> Browser Icons </h2>
-            <input class="Browser" type="text" name="fname" value="No files selected"><br>
-            <button class="Select_File2">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Select file
-            </button>
+<%--            <input class="Browser" type="text" name="fname" value="No files selected">--%>
+            <br>
+<%--            <button class="Select_File2">--%>
+<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
+<%--                Select file--%>
+<%--            </button>--%>
+            <input type="file" style="border : 1px solid black ; background: white ; color: black  ; width: 750px ; margin-left: 15px" value="Select file">
         </div>
 
     </div>
@@ -448,7 +447,7 @@
             <input class="Instagram" type="text" name="fname" value="Web Furniture"><br>
         </div>
         <div class="information6">
-            <a class="nav-link active" href="InterfaceManagement.jsp">
+            <a class="nav-link active" href="Information.jsp">
                 <button class="Select">
                     <img class="fa fa-floppy-o" src="../assets/img/Admin/img_16.png"/>
                     Save
@@ -475,17 +474,6 @@
     </footer>
 </div>
 </div>
-<!-- Argon Scripts -->
-<!-- Core -->
-<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Optional JS -->
-<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
-<!-- Argon JS -->
-<script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>
 
 </html>

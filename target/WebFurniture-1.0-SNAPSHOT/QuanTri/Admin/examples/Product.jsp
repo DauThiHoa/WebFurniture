@@ -73,13 +73,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Posts.jsp">
-                            <i class="fa fa-newspaper-o" style="color: greenyellow" aria-hidden="true"></i>
-                            <span class="nav-link-text">Posts </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="InterfaceManagement.jsp">
+                        <a class="nav-link" href="Information.jsp">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>

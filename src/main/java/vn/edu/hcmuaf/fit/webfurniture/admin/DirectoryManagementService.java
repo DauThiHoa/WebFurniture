@@ -48,7 +48,7 @@ public class DirectoryManagementService {
 
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-            sum += h.createUpdate("INSERT INTO pageweb ( nameCategory , linkImage , modules , display ) VALUES (?,?,?,?)")
+            sum = h.createUpdate("INSERT INTO pageweb ( nameCategory , linkImage , modules , display ) VALUES (?,?,?,?)")
                     .bind(0 , category )
                     .bind(1 , linkImage)
                     .bind(2 , modules)
