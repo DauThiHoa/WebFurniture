@@ -1,5 +1,11 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,9 +20,6 @@
     <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
@@ -382,6 +385,7 @@
 
 
     <div class="tab">
+
         <table class="table">
             <tr>
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
@@ -395,87 +399,27 @@
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
+<%--            <jsp:useBean id="haha" scope="request" type="java.lang.String"/>--%>
+            <jsp:useBean id="order" scope="request" type="java.util.List"/>
+            <c:forEach items="${order}" var="order" >
+                <%--                    <jsp:useBean id="customer" scope="request" type="java.util.List"/>--%>
+                <%--                    <c:forEach items="${order}" var="order" >--%>
+            <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>
             <tr>
                 <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH01</td>
-                <td>Hoàng Minh</td>
-                <td> 14-06-2021
-                    14:42:28
-                </td>
-                <td> 30-06-2021
-                    7:42:28
-                </td>
-                <td> Chuyển khoản</td>
+                <td>${order.idOrder}</td>
+                <td>${customer.name}</td>
+                <td> ${order.dateOrder}</td>
+                <td> ${order.dateReceipt}</td>
+                <td>${customer.bank}</td>
                 <td class="DangGiao"> Đang giao</td>
                 <td class="chiTiet"> Xem chi tiết</td>
                 <td><i class="fa fa-edit"></i></td>
                 <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH02</td>
-                <td>Nguyễn Thị Hòa</td>
-                <td> 14-08-2021
-                    7:42:28
-                </td>
-                <td> 30-08-2021
-                    17:42:28
-                </td>
-                <td> BIDV</td>
-                <td class="DaGiao"> Đã giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH03</td>
-                <td>Nguyễn Văn Tuấn</td>
-                <td> 14-08-2022
-                    7:42:28
-                </td>
-                <td> 30-10-2022
-                    7:42:28
-                </td>
-                <td> Trực tiếp</td>
-                <td class="DaGiao"> Đã giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH04</td>
-                <td>Trần Nguyễn</td>
-                <td> 14-08-2022
-                    8:42:28
-                </td>
-                <td> 30-10-2022
-                    7:42:28
-                </td>
-                <td> Chuyển tiền qua điện thoại</td>
-                <td class="DangGiao"> Đang giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH05</td>
-                <td>La Thị Tuyết</td>
-                <td> 9-12-2022
-                    8:42:28
-                </td>
-                <td> 30-4-2023
-                    17:42:28
-                </td>
-                <td> Thanh toán online</td>
-                <td class="kiemHang"> Đang kiểm tra hàng</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
 
+            </tr>
+            </c:forEach>
+            <%--                </c:forEach>--%>
         </table>
     </div>
 
@@ -492,7 +436,6 @@
 
         </div>
     </footer>
-</div>
 </div>
 </body>
 

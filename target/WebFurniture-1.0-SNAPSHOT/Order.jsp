@@ -1,5 +1,11 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -11,22 +17,19 @@
     <title> ADMIN - INTERFACE MANAGEMENT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="../../../DirectoryManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Product.css">
-    <link rel="stylesheet" href="InterfaceManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/Product.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
     <link rel="stylesheet" href="Order.css">
-    <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -37,7 +40,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -52,7 +55,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../manage/dashboard.jsp">
+                        <a class="nav-link" href="manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -72,18 +75,18 @@
 
                     <li class="nav-item">
                         <a class="nav-link active" href="Information">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
+                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="Order.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
+                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -163,7 +166,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_1.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -183,7 +186,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -203,7 +206,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -223,7 +226,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -243,7 +246,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -318,7 +321,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -382,6 +385,7 @@
 
 
     <div class="tab">
+
         <table class="table">
             <tr>
                 <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
@@ -395,87 +399,27 @@
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
+<%--            <jsp:useBean id="haha" scope="request" type="java.lang.String"/>--%>
+            <jsp:useBean id="order" scope="request" type="java.util.List"/>
+            <c:forEach items="${order}" var="order" >
+                <%--                    <jsp:useBean id="customer" scope="request" type="java.util.List"/>--%>
+                <%--                    <c:forEach items="${order}" var="order" >--%>
+            <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>
             <tr>
                 <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH01</td>
-                <td>Hoàng Minh</td>
-                <td> 14-06-2021
-                    14:42:28
-                </td>
-                <td> 30-06-2021
-                    7:42:28
-                </td>
-                <td> Chuyển khoản</td>
+                <td>${order.idOrder}</td>
+                <td>${customer.name}</td>
+                <td> ${order.dateOrder}</td>
+                <td> ${order.dateReceipt}</td>
+                <td>${customer.bank}</td>
                 <td class="DangGiao"> Đang giao</td>
                 <td class="chiTiet"> Xem chi tiết</td>
                 <td><i class="fa fa-edit"></i></td>
                 <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH02</td>
-                <td>Nguyễn Thị Hòa</td>
-                <td> 14-08-2021
-                    7:42:28
-                </td>
-                <td> 30-08-2021
-                    17:42:28
-                </td>
-                <td> BIDV</td>
-                <td class="DaGiao"> Đã giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH03</td>
-                <td>Nguyễn Văn Tuấn</td>
-                <td> 14-08-2022
-                    7:42:28
-                </td>
-                <td> 30-10-2022
-                    7:42:28
-                </td>
-                <td> Trực tiếp</td>
-                <td class="DaGiao"> Đã giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH04</td>
-                <td>Trần Nguyễn</td>
-                <td> 14-08-2022
-                    8:42:28
-                </td>
-                <td> 30-10-2022
-                    7:42:28
-                </td>
-                <td> Chuyển tiền qua điện thoại</td>
-                <td class="DangGiao"> Đang giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH05</td>
-                <td>La Thị Tuyết</td>
-                <td> 9-12-2022
-                    8:42:28
-                </td>
-                <td> 30-4-2023
-                    17:42:28
-                </td>
-                <td> Thanh toán online</td>
-                <td class="kiemHang"> Đang kiểm tra hàng</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
 
+            </tr>
+            </c:forEach>
+            <%--                </c:forEach>--%>
         </table>
     </div>
 
@@ -492,7 +436,6 @@
 
         </div>
     </footer>
-</div>
 </div>
 </body>
 

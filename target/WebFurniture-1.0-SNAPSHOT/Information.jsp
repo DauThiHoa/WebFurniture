@@ -83,7 +83,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="QuanTri/Admin/examples/Order.jsp">
+                        <a class="nav-link active" href="Order.jsp">
                             <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>

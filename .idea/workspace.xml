@@ -10,44 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/Edit_Information.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InformationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InformationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Information.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Information.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Information.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Information.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/ListOfPermissions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/ListOfPermissions.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Order.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/UserConfiguration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/UserConfiguration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/layout/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manage/layout/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/DirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Information.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Information.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/ListOfPermissions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/ListOfPermissions.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/UserConfiguration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/UserConfiguration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/addDirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/layout/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/layout/nav.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/QuanTri/Admin/examples/Order.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,12 +94,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
-    <configuration name="ProductDetailsDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao" />
+    <configuration name="OrderService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.webfurniture.admin.OrderService" />
       <module name="WebFurniture" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.fit.webfurniture.dao.*" />
+          <option name="PATTERN" value="vn.edu.hcmuaf.fit.webfurniture.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,10 +107,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DangNhap.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/DangNhap.jsp">
+    <configuration name="Information.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/Information.jsp">
       <method v="2" />
     </configuration>
-    <configuration name="Information.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/Information.jsp">
+    <configuration name="Order.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/Order.jsp">
       <method v="2" />
     </configuration>
     <configuration name="ThanhToan.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/ThanhToan.jsp">
@@ -236,20 +207,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ProductDetailsDao" />
-      <item itemvalue="JavaScript Debug.DangNhap.jsp" />
       <item itemvalue="JavaScript Debug.dashboard.jsp" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
       <item itemvalue="JavaScript Debug.ThanhToan.jsp" />
       <item itemvalue="JavaScript Debug.Information.jsp" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+      <item itemvalue="JavaScript Debug.Order.jsp" />
+      <item itemvalue="Application.OrderService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderService" />
+        <item itemvalue="JavaScript Debug.Order.jsp" />
         <item itemvalue="JavaScript Debug.Information.jsp" />
         <item itemvalue="JavaScript Debug.ThanhToan.jsp" />
         <item itemvalue="JavaScript Debug.dashboard.jsp" />
-        <item itemvalue="Application.ProductDetailsDao" />
-        <item itemvalue="JavaScript Debug.DangNhap.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -385,6 +356,7 @@
       <workItem from="1643455690703" duration="15202000" />
       <workItem from="1643474844273" duration="257000" />
       <workItem from="1643504928502" duration="11031000" />
+      <workItem from="1643520043883" duration="12470000" />
     </task>
     <servers />
   </component>
@@ -640,6 +612,11 @@
           <url>file://$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp</url>
           <line>382</line>
           <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/Order.jsp</url>
+          <line>401</line>
+          <option name="timeStamp" value="124" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

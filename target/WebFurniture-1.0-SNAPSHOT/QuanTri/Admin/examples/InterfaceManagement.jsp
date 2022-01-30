@@ -76,7 +76,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="Order.jsp">
+                        <a class="nav-link active " href="../../../Order.jsp">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>

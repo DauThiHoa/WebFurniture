@@ -140,4 +140,23 @@ public class Customer implements Serializable {
     public void setTotalMoney(int totalMoney) {
         this.totalMoney = totalMoney;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "idCustomer=" + idCustomer +
+                ", name='" + name + '\'' +
+                ", birthDay='" + birthDay + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", bank='" + bank + '\'' +
+                ", cardNumber='" + cardNumber + '\'' +
+                ", deliveryMethod='" + deliveryMethod + '\'' +
+                ", discount=" + discount +
+                ", ship=" + ship +
+                ", totalMoney=" + totalMoney +
+                '}';
+    }
 }

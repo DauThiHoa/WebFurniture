@@ -1,12 +1,16 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
-import vn.edu.hcmuaf.fit.webfurniture.beans.Information;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
+import vn.edu.hcmuaf.fit.webfurniture.beans.DetailedProductReview;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
+import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class OrderService implements Serializable {
+public class OrderService  implements Serializable {
     private static OrderService instance ;
 
     public static OrderService getInstance() {
@@ -18,10 +22,19 @@ public class OrderService implements Serializable {
     public OrderService(){
 
     }
-    public Order getAll () {
+
+
+    public Customer getCustomer (int id ) {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" select * from orders where idOrder = ( select max(idOrder) from orders ) ")
-                    .mapToBean(Order.class).first();
+            return handle.createQuery("select * from customer where idOrder = ? ")
+                    .bind(0 , id)
+                    .mapToBean(Customer.class).first();
+        });
+    }
+    public Customer getCustomer ( ) {
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery(" select * from customer where idOrder = ( select max(idOrder) from orders )")
+                    .mapToBean(Customer.class).first();
         });
     }
 
@@ -42,4 +55,18 @@ public class OrderService implements Serializable {
                         .bind(9 , Integer.parseInt(id) )
                         .execute());
     }
+    public List<Order> getAll (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from orders")
+                    .mapToBean(Order.class).stream().collect(Collectors.toList());
+        });
+    }
+//    public static void main(String[] args) {
+//        List<Order> re = getInstance().getAll();
+//        for ( int i = 0 ; i < re.size() ; i ++) {
+//            System.out.println(re.get(i).toString());
+//        }
+////        Customer customer = getInstance().getCustomer();
+////        System.out.println(customer.toString());
+//    }
 }
