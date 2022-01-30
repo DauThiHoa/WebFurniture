@@ -63,20 +63,20 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link active" href="Information.jsp">
+                        <a class="nav-link active" href="Information">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="Information.jsp">
+                        <a class="nav-link active" href="Information">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="Order.jsp">
+                        <a class="nav-link active " href="../../../Order.jsp">
                             <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>

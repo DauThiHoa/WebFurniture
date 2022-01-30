@@ -1,5 +1,12 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,25 +15,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN - INTERFACE MANAGEMENT</title>
+    <title> ADMIN - INTERFACE MANAGEMENT - INFORMATION</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="../../../DirectoryManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Product.css">
-    <link rel="stylesheet" href="InterfaceManagement.css">
-    <link rel="stylesheet" href="Order.css">
-    <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/Product.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
+    <link rel="stylesheet" href="Information.css">
+    <link rel="stylesheet" href="addDirectoryManagement.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -37,7 +43,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -52,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../manage/dashboard.jsp">
+                        <a class="nav-link" href="manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -64,26 +70,26 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Information.jsp">
+                        <a class="nav-link active " href="Information">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="Information.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
+                        <a class="nav-link active " href="Information">
+                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Order.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
+                        <a class="nav-link active" href="QuanTri/Admin/examples/Order.jsp">
+                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -163,7 +169,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_1.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -183,7 +189,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -203,7 +209,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -223,7 +229,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -243,7 +249,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -318,7 +324,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -363,11 +369,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Order</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Information</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#"> Interface Management / Order</a></li>
+                                <li class="breadcrumb-item"><a href="#"> Interface Management / Information</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -380,175 +386,93 @@
         </div>
     </div>
 
+    <form action = "<%=Asset.url("Edit_Information")%>"  method = "POST" >
+        <jsp:useBean id="information" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Information"/>
+<%--        <c:forEach items="${information}" var="p" >--%>
+    <div class="infor3">
+        <h1 class="information"> VIETNAMESE</h1>
+        <div class="information2">
+            <h2 class="Category"> Company name </h2>
+            <input style="border: 1px solid white" class="type1" type="text" name="Company" value="${information.companyName}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Address </h2>
+            <input style="border: 1px solid white" class="Address" type="text" name="Address" value="${information.address}"><br>
+        </div>
 
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Action <span class="caret"></span>
-
-            </button>
-
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
-
-            </ul>
+        <div class="information4">
+            <h2 class="Category"> Share icon </h2>
+<%--            <input class="order" type="text" name="fname" value="No files selected">--%>
+<%--            <i class="fa fa-share-square-o" aria-hidden="true"></i>--%>
+            <br>
+<%--            <button class="Select_File">--%>
+<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
+<%--                Select file--%>
+<%--            </button>--%>
+            <input type="file" style="border : 1px solid white ; background: white ; color: black ; width: 750px ; margin-left: 50px" value="Select file">
+        </div>
+        <div class="information5">
+            <h2 class="Modules"> Browser Icons </h2>
+<%--            <input class="Browser" type="text" name="fname" value="No files selected">--%>
+            <br>
+<%--            <button class="Select_File2">--%>
+<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
+<%--                Select file--%>
+<%--            </button>--%>
+            <input type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ; margin-left: 15px" value="Select file">
         </div>
 
     </div>
 
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
+    <div class="infor4">
+        <h1 class="information"> GENERAL INFORMATION</h1>
+        <div class="information1">
+            <h2 class="Image"> Hotline </h2>
+            <input style="border: 1px solid white" class="type" type="text" name="Hotline" value="${information.hotline}"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Email </h2>
+            <input style="border: 1px solid white" class="JhonDoue" type="text" name="Email" value="${information.email}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Copyright </h2>
+            <input style="border: 1px solid white" class="type2" type="text" name="Copyright" value="${information.copyright}"><br>
         </div>
 
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
+        <div class="information4">
+            <h2 class="Modules"> Facebook </h2>
+            <input style="border: 1px solid white" class="type2" type="text" name="Facebook" value="${information.facebook}"><br>
         </div>
-
+        <div class="information2">
+            <h2 class="Category"> Twitter </h2>
+            <input style="border: 1px solid white" class="Twitter" type="text" name="Twitter" value="${information.twitter}"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Youtube </h2>
+            <input style="border: 1px solid white" class="Youtube" type="text" name="Youtube" value="${information.youtube}"><br>
+        </div>
+        <div class="information2">
+            <h2 class="Category"> Instagram </h2>
+            <input style="border: 1px solid white" class="Instagram" type="text" name="Instagram" value="${information.instagram}"><br>
+        </div>
+        <div class="information6">
+                <button class="Select" type="submit" onclick="save()">
+                    <input style="display: none" class="Instagram" type="text" name="id" value="${information.idInformation}">
+                    <img class="fa fa-floppy-o" src="QuanTri/Admin/assets/img/Admin/img_16.png"/>
+                    Save
+                </button>
+        </div>
     </div>
-
-    <div class="tab">
-        <table class="table">
-            <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
-                <th class="TieuDe">Code orders</th>
-                <th class="TieuDe">Customer name</th>
-                <th class="TieuDe">Booking date</th>
-                <th class="TieuDe">Delivery date</th>
-                <th class="TieuDe">Payment</th>
-                <th class="TieuDe">Status</th>
-                <th class="TieuDe">See details</th>
-                <th class="TieuDe">Change</th>
-                <th class="TieuDe">Erase</th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH01</td>
-                <td>Hoàng Minh</td>
-                <td> 14-06-2021
-                    14:42:28
-                </td>
-                <td> 30-06-2021
-                    7:42:28
-                </td>
-                <td> Chuyển khoản</td>
-                <td class="DangGiao"> Đang giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH02</td>
-                <td>Nguyễn Thị Hòa</td>
-                <td> 14-08-2021
-                    7:42:28
-                </td>
-                <td> 30-08-2021
-                    17:42:28
-                </td>
-                <td> BIDV</td>
-                <td class="DaGiao"> Đã giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH03</td>
-                <td>Nguyễn Văn Tuấn</td>
-                <td> 14-08-2022
-                    7:42:28
-                </td>
-                <td> 30-10-2022
-                    7:42:28
-                </td>
-                <td> Trực tiếp</td>
-                <td class="DaGiao"> Đã giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH04</td>
-                <td>Trần Nguyễn</td>
-                <td> 14-08-2022
-                    8:42:28
-                </td>
-                <td> 30-10-2022
-                    7:42:28
-                </td>
-                <td> Chuyển tiền qua điện thoại</td>
-                <td class="DangGiao"> Đang giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>DH05</td>
-                <td>La Thị Tuyết</td>
-                <td> 9-12-2022
-                    8:42:28
-                </td>
-                <td> 30-4-2023
-                    17:42:28
-                </td>
-                <td> Thanh toán online</td>
-                <td class="kiemHang"> Đang kiểm tra hàng</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-
-        </table>
+<%--        </c:forEach>--%>
+    </form>
+    <div class="information6">
+    <a  href="/manage/dashboard.jsp">
+        <button class="Select" style="margin-left: 73%" onclick="exit()">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            Exit
+        </button>
+    </a>
     </div>
-
-
     <!-- Footer -->
     <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
@@ -562,18 +486,13 @@
         </div>
     </footer>
 </div>
-</div>
-<!-- Argon Scripts -->
-<!-- Core -->
-<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Optional JS -->
-<script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
-<!-- Argon JS -->
-<script src="../assets/js/argon.js?v=1.2.0"></script>
 </body>
-
+<script>
+    function save() {
+            alert("Bạn đã cập nhật thành công thông tin ! ");
+    }
+    function exit() {
+        alert("Bạn muốn thoát khỏi trang !");
+    }
+</script>
 </html>

@@ -37,7 +37,7 @@
         </a>
     </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<%= Asset.url("QuanTri/Admin/examples/InterfaceManagement.jsp")%>">
+                            <a class="nav-link" href="<%= Asset.url("Information")%>">
                                 <i class="fa fa-list-alt" aria-hidden="true"></i>
                                 <span class="nav-link-text">Interface Management</span>
                             </a>

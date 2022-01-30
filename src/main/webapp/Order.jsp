@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN - INTERFACE MANAGEMENT - INFORMATION</title>
+    <title> ADMIN - INTERFACE MANAGEMENT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
@@ -19,15 +19,14 @@
     <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="../../../DirectoryManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Product.css">
-    <link rel="stylesheet" href="InterfaceManagement.css">
-    <link rel="stylesheet" href="Information.css">
-    <link rel="stylesheet" href="../../../addDirectoryManagement.css">
-    <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/Product.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
+    <link rel="stylesheet" href="Order.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -38,7 +37,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -53,7 +52,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../manage/dashboard.jsp">
+                        <a class="nav-link" href="manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -65,26 +64,26 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="Information.jsp">
+                        <a class="nav-link active" href="Information">
                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                             <span class="nav-link-text">Interface Management</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active " href="Information.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_24.png"/>
+                        <a class="nav-link active" href="Information">
+                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="Order.jsp">
-                            <img class="fa fa-picture-o" src="../assets/img/Admin/img_25.png"/>
+                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -164,7 +163,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_1.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -184,7 +183,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -204,7 +203,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -224,7 +223,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -244,7 +243,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -319,7 +318,7 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -364,11 +363,11 @@
             <div class="header-body">
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Information</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">Order</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#"> Interface Management / Information</a></li>
+                                <li class="breadcrumb-item"><a href="#"> Interface Management / Order</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -381,84 +380,105 @@
         </div>
     </div>
 
-    <div class="infor3">
-        <h1 class="information"> VIETNAMESE</h1>
-        <div class="information2">
-            <h2 class="Category"> Company name </h2>
-            <input class="type1" type="text" name="fname" value="Web Furniture"><br>
-        </div>
-        <div class="information3">
-            <h2 class="Modules"> Address </h2>
-            <input class="Address" type="text" name="fname" value="Ward 26, Binh Thanh District, Ho Chi Minh City"><br>
-        </div>
-        <div class="information4">
-            <h2 class="Category"> Share icon </h2>
-<%--            <input class="order" type="text" name="fname" value="No files selected">--%>
-<%--            <i class="fa fa-share-square-o" aria-hidden="true"></i>--%>
-            <br>
-<%--            <button class="Select_File">--%>
-<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
-<%--                Select file--%>
-<%--            </button>--%>
-            <input type="file" style="border : 1px solid black ; background: white ; color: black ; width: 750px ; margin-left: 50px" value="Select file">
-        </div>
-        <div class="information5">
-            <h2 class="Modules"> Browser Icons </h2>
-<%--            <input class="Browser" type="text" name="fname" value="No files selected">--%>
-            <br>
-<%--            <button class="Select_File2">--%>
-<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
-<%--                Select file--%>
-<%--            </button>--%>
-            <input type="file" style="border : 1px solid black ; background: white ; color: black  ; width: 750px ; margin-left: 15px" value="Select file">
-        </div>
 
+    <div class="tab">
+        <table class="table">
+            <tr>
+                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
+                <th class="TieuDe">Code orders</th>
+                <th class="TieuDe">Customer name</th>
+                <th class="TieuDe">Booking date</th>
+                <th class="TieuDe">Delivery date</th>
+                <th class="TieuDe">Payment</th>
+                <th class="TieuDe">Status</th>
+                <th class="TieuDe">See details</th>
+                <th class="TieuDe">Change</th>
+                <th class="TieuDe">Erase</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td>DH01</td>
+                <td>Hoàng Minh</td>
+                <td> 14-06-2021
+                    14:42:28
+                </td>
+                <td> 30-06-2021
+                    7:42:28
+                </td>
+                <td> Chuyển khoản</td>
+                <td class="DangGiao"> Đang giao</td>
+                <td class="chiTiet"> Xem chi tiết</td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td>DH02</td>
+                <td>Nguyễn Thị Hòa</td>
+                <td> 14-08-2021
+                    7:42:28
+                </td>
+                <td> 30-08-2021
+                    17:42:28
+                </td>
+                <td> BIDV</td>
+                <td class="DaGiao"> Đã giao</td>
+                <td class="chiTiet"> Xem chi tiết</td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td>DH03</td>
+                <td>Nguyễn Văn Tuấn</td>
+                <td> 14-08-2022
+                    7:42:28
+                </td>
+                <td> 30-10-2022
+                    7:42:28
+                </td>
+                <td> Trực tiếp</td>
+                <td class="DaGiao"> Đã giao</td>
+                <td class="chiTiet"> Xem chi tiết</td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td>DH04</td>
+                <td>Trần Nguyễn</td>
+                <td> 14-08-2022
+                    8:42:28
+                </td>
+                <td> 30-10-2022
+                    7:42:28
+                </td>
+                <td> Chuyển tiền qua điện thoại</td>
+                <td class="DangGiao"> Đang giao</td>
+                <td class="chiTiet"> Xem chi tiết</td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="sport" value="check"></td>
+                <td>DH05</td>
+                <td>La Thị Tuyết</td>
+                <td> 9-12-2022
+                    8:42:28
+                </td>
+                <td> 30-4-2023
+                    17:42:28
+                </td>
+                <td> Thanh toán online</td>
+                <td class="kiemHang"> Đang kiểm tra hàng</td>
+                <td class="chiTiet"> Xem chi tiết</td>
+                <td><i class="fa fa-edit"></i></td>
+                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            </tr>
+
+        </table>
     </div>
 
-
-    <div class="infor4">
-        <h1 class="information"> GENERAL INFORMATION</h1>
-        <div class="information1">
-            <h2 class="Image"> Hotline </h2>
-            <input class="type" type="text" name="fname" value="0123456789"><br>
-        </div>
-        <div class="information2">
-            <h2 class="Category"> Email </h2>
-            <input class="JhonDoue" type="text" name="fname" value="JhonDoue@gmail.com"><br>
-        </div>
-        <div class="information3">
-            <h2 class="Modules"> Copyright </h2>
-            <input class="type2" type="text" name="fname" value="Copyright 2021 - Web Furniture"><br>
-        </div>
-        <div class="information4">
-            <h2 class="Modules"> Facebook </h2>
-            <input class="type2" type="text" name="fname" value="https://www.facebook.com"><br>
-        </div>
-        <div class="information2">
-            <h2 class="Category"> Twitter </h2>
-            <input class="Twitter" type="text" name="fname" value="https://www.twitter.com"><br>
-        </div>
-        <div class="information2">
-            <h2 class="Category"> Youtube </h2>
-            <input class="Youtube" type="text" name="fname" value="https://www.youtube.com"><br>
-        </div>
-        <div class="information2">
-            <h2 class="Category"> Instagram </h2>
-            <input class="Instagram" type="text" name="fname" value="Web Furniture"><br>
-        </div>
-        <div class="information6">
-            <a class="nav-link active" href="Information.jsp">
-                <button class="Select">
-                    <img class="fa fa-floppy-o" src="../assets/img/Admin/img_16.png"/>
-                    Save
-                </button>
-                <button class="Select">
-                    <i class="fa fa-times-circle" aria-hidden="true"></i>
-                    Exit
-                </button>
-            </a>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer pt-0">
