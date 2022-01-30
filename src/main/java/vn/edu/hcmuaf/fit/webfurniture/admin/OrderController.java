@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "OrderController", value = "/Order")
@@ -23,20 +24,22 @@ public class OrderController extends HttpServlet {
 
 
              List<Order> order =  OrderService.getInstance().getAll();
-             List<Customer> customers = null;
-//             for ( int i = 0 ; i < order.size() ; i ++){
-//                 int id = order.get(i).getIdOrder();
-                 Customer customer = OrderService.getInstance().getCustomer();
-//                 request.setCharacterEncoding("UTF-8");
-//                 response.setCharacterEncoding("UTF-8");
-//                 customers.add(customer);
-//
-//             }
+        System.out.println(order.toString());
+             ArrayList<Customer> customers = new ArrayList<Customer>();
+             for ( int i = 0 ; i < order.size() ; i ++){
+                 request.setCharacterEncoding("UTF-8");
+                 response.setCharacterEncoding("UTF-8");
+                 int id = order.get(i).getIdCustomer();
+                 System.out.println(id);
+                 Customer customer = OrderService.getInstance().getCustomer(id);
+                 customers.add(customer);
+                 System.out.println(customers.toString());
+             }
 //        for ( int i = 0 ; i < customers.size() ; i ++){
 //            System.out.println(customers.get(i).toString());
 //        }
-
-             request.setAttribute("customer" , customer);
+            Customer customer = OrderService.getInstance().getCustomer();
+             request.setAttribute("customer" , customers);
              request.setAttribute("order" , order);
 //             request.setAttribute("haha" , "haha");
              request.getRequestDispatcher("Order.jsp").forward(request, response);

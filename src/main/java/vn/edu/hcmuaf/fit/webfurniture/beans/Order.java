@@ -11,7 +11,7 @@ public class Order implements Serializable {
 //    private User user ;
 //    private List<Details> details ;
     private int idOrder ;
-    private String idCustomer ;
+    private int idCustomer ;
     private double totalMoney ;
     private User user ;
     private List<Details> details ;
@@ -71,7 +71,7 @@ public class Order implements Serializable {
 //        this.dateReceipt = dateReceipt;
 //    }
 
-    public Order(int idOrder, String idCustomer, double totalMoney, User user, List<Details> details, LocalDateTime dateOrder, LocalDateTime dateReceipt, String status) {
+    public Order(int idOrder, int idCustomer, double totalMoney, User user, List<Details> details, LocalDateTime dateOrder, LocalDateTime dateReceipt, String status) {
         this.idOrder = idOrder;
         this.idCustomer = idCustomer;
         this.totalMoney = totalMoney;
@@ -90,11 +90,11 @@ public class Order implements Serializable {
         this.idOrder = idOrder;
     }
 
-    public String getIdCustomer() {
+    public int getIdCustomer() {
         return idCustomer;
     }
 
-    public void setIdCustomer(String idCustomer) {
+    public void setIdCustomer(int idCustomer) {
         this.idCustomer = idCustomer;
     }
 

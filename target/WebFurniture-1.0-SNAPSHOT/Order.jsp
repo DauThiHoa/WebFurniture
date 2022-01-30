@@ -386,40 +386,54 @@
 
     <div class="tab">
 
-        <table class="table">
-            <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
+        <table class="table" style="table-layout: fixed ; width: 100%">
+            <tr style="width: 100%">
                 <th class="TieuDe">Code orders</th>
                 <th class="TieuDe">Customer name</th>
                 <th class="TieuDe">Booking date</th>
                 <th class="TieuDe">Delivery date</th>
+                <th class="TieuDe">Total money</th>
                 <th class="TieuDe">Payment</th>
                 <th class="TieuDe">Status</th>
-                <th class="TieuDe">See details</th>
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
 <%--            <jsp:useBean id="haha" scope="request" type="java.lang.String"/>--%>
+            <jsp:useBean id="customer" scope="request" type="java.util.List"/>
+            <c:forEach items="${customer}" var="c" >
             <jsp:useBean id="order" scope="request" type="java.util.List"/>
             <c:forEach items="${order}" var="order" >
-                <%--                    <jsp:useBean id="customer" scope="request" type="java.util.List"/>--%>
-                <%--                    <c:forEach items="${order}" var="order" >--%>
-            <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td>${order.idOrder}</td>
-                <td>${customer.name}</td>
-                <td> ${order.dateOrder}</td>
-                <td> ${order.dateReceipt}</td>
-                <td>${customer.bank}</td>
-                <td class="DangGiao"> Đang giao</td>
-                <td class="chiTiet"> Xem chi tiết</td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+<%--            <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>--%>
+<%--                <c:set var="${order.idCustomer}" value="java.lang.Integer">--%>
+<%--                <c:if test="${c.idCustomer == order.idCustomer }" >--%>
 
+            <tr>
+                <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
+                <td>${order.idOrder}</td>
+                <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${c.name}"></td>
+                <td><input type="text" name ="dateOrder" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.dateOrder}"></td>
+                <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.dateReceipt}"></td>
+                <td class="chiTiet"><input type="text" name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.totalMoney}"></td>
+                <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${c.bank}"></td>
+                <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.status}"></td>
+<%--                <td><i class="fa fa-edit"></i></td>--%>
+                <td>
+                    <input type="hidden" style="display: none" name ="idOrder" value="${order.idOrder}">
+                    <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
+                </td>
+                </form>
+<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
+                <td>
+                    <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
+                        <input type="hidden" name ="id" value="${order.idOrder}">
+                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
+                    </form>
+                </td>
             </tr>
+<%--                </c:if>--%>
+<%--                </c:set>--%>
             </c:forEach>
-            <%--                </c:forEach>--%>
+                            </c:forEach>
         </table>
     </div>
 
@@ -438,5 +452,12 @@
     </footer>
 </div>
 </body>
-
+<script>
+    function trash () {
+        alert("Bạn đã xóa đơn hàng thành công !")
+    }
+    function edit () {
+        alert("Bạn đã sửa đơn hàng thành công !")
+    }
+</script>
 </html>
