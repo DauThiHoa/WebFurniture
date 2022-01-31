@@ -72,14 +72,11 @@ public class ProfileService implements Serializable {
         int friends_int = Integer.parseInt(friends);
         int photos_int = Integer.parseInt(photos);
         int comments_int = Integer.parseInt(comments);
-        System.out.println(id+ " " + username+" " +email+" " +firstname+" " +lastname+" " +address+" " +city+" " +country+" " +postalcode+
-                " " +aboutme+" " +age+" " +friends
-        +" " +photos+" " +comments+" " +description);
 
         return JDBIConnector.get().withHandle(h ->
-                h.createUpdate("update `profile` set username = ? , email = ? , firstname = ? , lastname = ?, address = ?," +
-                                " city = ? , country = ? , postalcode = ? , aboutme = ? , age = ? , friends = ? , photos = ? , " +
-                                "country = ? , comments = ? , description = ?  where idProfile = ? ")
+                h.createUpdate("update `profile` set username = ? , email = ? , firstname = ? , lastname = ?, " +
+                                "address = ? , city = ? , country = ? , postalcode = ? , aboutme = ? , age = ? , " +
+                                "friends = ? , photos = ? , comments = ? , description = ?  where idProfile = ? ")
 
                         .bind(0 , username )
                         .bind(1 , email )
@@ -93,10 +90,9 @@ public class ProfileService implements Serializable {
                         .bind(9 , age_int )
                         .bind(10 , friends_int )
                         .bind(11 , photos_int )
-                        .bind(12 , country )
-                        .bind(13 , comments_int )
-                        .bind(14, description )
-                        .bind(15 , idProfile )
+                        .bind(12 , comments_int )
+                        .bind(13, description )
+                        .bind(14 , idProfile )
                         .execute());
     }
 

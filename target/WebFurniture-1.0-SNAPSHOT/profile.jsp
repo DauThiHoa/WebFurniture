@@ -364,26 +364,30 @@
                     <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with
                         your work and manage your projects or assigned tasks</p>
 <%--                    <a href="#" class="btn btn-neutral"></a>--%>
-                    <form action = "<%=Asset.url("Edit_Profile")%>"  method = "POST" >
-                        <input style="display: none"  name="id" value="${profile.idProfile}" type="text">
-                        <input style="display: none"  name="address" value="${profile.address}" type="text">
-                        <input style="display: none"  type="email"  name="email" value="${profile.email}">
-                        <input style="display: none"  type="text"   name="username" value="${profile.username}">
-                        <input style="display: none"   type="text" name="comments" value="${profile.comments}">
-                        <input style="display: none"   type="text" name="photos" value="${profile.photos}">
-                        <input style="display: none"   type="text" name="friends" value="${profile.friends}">
-                        <input style="display: none"  type="text" name="age" value="${profile.age}">
-                        <textarea
-                                  style="display: none"  class="ni business_briefcase-24 mr-2"
-                                  type="text" name="description">${profile.description}</textarea>
-                        <input style="display: none"  type="text"  name="firstname"  value="${profile.firstname}">
-                        <input style="display: none"  type="text" name="lastname"  value="${profile.lastname}">
-                        <input style="display: none"  type="text"  name="city" value="${profile.city}">
-                        <input style="display: none"  type="text"   name="country"  value="${profile.country}">
-                        <input style="display: none"  type="number"  name="postalcode" value="${profile.postalcode}">
-                        <textarea style="display: none"  rows="4"  name="aboutme">${profile.aboutme}</textarea>
-                    <button type="submit" class="btn btn-neutral" onclick="edit()">Edit profile</button>
-                    </form>
+<%--                    <form action = "<%=Asset.url("Edit_Profile")%>"  method = "POST" >--%>
+<%--                        <input style="display: none"  type="text"  name="id" value="${profile.idProfile}" >--%>
+<%--                        <input style="display: none"  type="text"  name="address" value="${profile.address}" >--%>
+<%--                        <input style="display: none"  type="email"  name="email" value="${profile.email}">--%>
+<%--                        <input style="display: none"  type="text"   name="username" value="${profile.username}">--%>
+<%--                        <input style="display: none"  type="text" name="comments" value="${profile.comments}">--%>
+<%--                        <input style="display: none"  type="text" name="photos" value="${profile.photos}">--%>
+<%--                        <input style="display: none"  type="text" name="friends" value="${profile.friends}">--%>
+<%--                        <input style="display: none"  type="text" name="age" value="${profile.age}">--%>
+<%--                        <textarea style="display: none" type="text" name="description">${profile.description}</textarea>--%>
+<%--                        <input style="display: none"  type="text"  name="firstname"  value="${profile.firstname}">--%>
+<%--                        <input style="display: none"  type="text" name="lastname"  value="${profile.lastname}">--%>
+<%--                        <input style="display: none"  type="text"  name="city" value="${profile.city}">--%>
+<%--                        <input style="display: none"  type="text"   name="country"  value="${profile.country}">--%>
+<%--                        <input style="display: none"  type="number"  name="postalcode" value="${profile.postalcode}">--%>
+<%--                        <textarea style="display: none"  rows="4"  name="aboutme">${profile.aboutme}</textarea>--%>
+<%--                    <button type="submit" class="btn btn-neutral" onclick="edit()">Edit profile</button>--%>
+<%--                    </form>--%>
+                    <a href="AddProfile.jsp">
+                        <div class="col-4 text-right">
+                            <button class="btn btn-sm btn-primary" >
+                                ADD</button>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -391,7 +395,7 @@
     <!-- Page content -->
 
     <div class="container-fluid mt--6">
-        <form action = "<%=Asset.url("Add_Profile")%>"  method = "POST" >
+        <form action = "<%=Asset.url("Edit_Profile")%>"  method = "POST" >
         <div class="row">
             <div class="col-xl-4 order-xl-2">
                 <div class="card card-profile">
@@ -461,10 +465,11 @@
                             <div class="col-8">
                                 <h3 class="mb-0">Edit profile </h3>
                             </div>
-                            <div class="col-4 text-right">
-                                <button class="btn btn-sm btn-primary" type="submit" onclick="add()">
-                                ADD</button>
-                            </div>
+
+                                <input style="display: none"  type="text"  name="id" value="${profile.idProfile}" >
+                                <button style="margin-left: 100px ; margin-top: -50px" type="submit" class="btn btn-neutral" onclick="edit()">Edit profile</button>
+
+
                         </div>
                     </div>
                     <div class="card-body">
@@ -560,6 +565,7 @@
 
         </div>
         </form>
+
         <!-- Footer -->
         <footer class="footer pt-0">
             <div class="row align-items-center justify-content-lg-between">

@@ -35,13 +35,15 @@ public class EditProfile extends HttpServlet {
         System.out.println(friends + " " + photos + "" + comments + " " + age + " " + username + " " + email
                 + " " + firstname + " " + lastname + " " + address + " " + city + " " + country + "" + postalcode + "" + aboutme + "" + description +" " + id);
 
+        System.out.println(id + " == " +aboutme);
         Profile profile = ProfileService.getInstance().getProfile() ;
         request.setAttribute("profile" , profile);
 
         if ( !(friends.equals("")) && !(photos.equals(""))  &&  !(comments.equals("")) && !(age.equals("")) && !(username.equals(""))  &&  !(email.equals(""))
           && !(firstname.equals("")) && !(lastname.equals(""))  &&  !(address.equals("")) && !(city.equals("")) && !(country.equals(""))  &&  !(postalcode.equals(""))
         && !(aboutme.equals("")) ) {
-            int result = ProfileService.getInstance().UpdateProfile(id , username, email, firstname, lastname,address,city,country,postalcode,aboutme,age,friends,photos,comments,description);
+            int result = ProfileService.getInstance().UpdateProfile(id , username, email, firstname, lastname,address,city,
+                    country,postalcode,aboutme,age,friends,photos,comments,description);
             System.out.println(result);
             if (result == 1 ) {
                 request.getRequestDispatcher("Profile").forward(request, response);
