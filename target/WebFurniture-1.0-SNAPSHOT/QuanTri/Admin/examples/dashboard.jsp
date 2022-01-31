@@ -1,13 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
-<%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+
 <!DOCTYPE html>
 <html>
 
@@ -34,7 +31,7 @@
 </head>
 
 <body>
-
+<jsp:useBean id="profile" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Profile"/>
 <%--<!-- Sidenav -->--%>
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -78,7 +75,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">
+                        <a class="nav-link" href="Profile">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -163,7 +160,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -183,7 +180,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -203,7 +200,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>5 hrs ago</small>
@@ -223,7 +220,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -243,7 +240,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -315,7 +312,7 @@
                     <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/theme/team-4.jpg")%>">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                                    <span class="mb-0 text-sm  font-weight-bold">${profile.username}</span>
                                 </div>
                             </div>
                         </a>
@@ -365,10 +362,6 @@
                                 <li class="breadcrumb-item active" aria-current="page">Default</li>
                             </ol>
                         </nav>
-                    </div>
-                    <div class="col-lg-6 col-5 text-right">
-                        <a href="#" class="btn btn-sm btn-neutral">New</a>
-                        <a href="#" class="btn btn-sm btn-neutral">Filters</a>
                     </div>
                 </div>
                 <!-- Card stats -->

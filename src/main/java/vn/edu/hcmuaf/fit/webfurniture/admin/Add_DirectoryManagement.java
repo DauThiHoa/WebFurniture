@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +15,10 @@ public class Add_DirectoryManagement extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-//
-//        request.setAttribute("Category" ,"" );
-//        request.setAttribute("linkImage" ,"" );
-//        request.setAttribute("Modules" ,"" );
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
+
         request.getRequestDispatcher("addDirectoryManagement.jsp").forward(request, response);
 
     }

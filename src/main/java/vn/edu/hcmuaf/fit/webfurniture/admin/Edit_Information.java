@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Information;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,6 +36,8 @@ public class Edit_Information extends HttpServlet {
         String Youtube = request.getParameter("Youtube");
         String Instagram = request.getParameter("Instagram");
 
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
      int update = InformationService.getInstance().update(id,Company,Address,Hotline,Email,Copyright,Facebook,Twitter,Youtube,Instagram);
 

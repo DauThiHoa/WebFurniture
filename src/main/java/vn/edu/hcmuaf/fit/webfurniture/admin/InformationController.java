@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Information;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +16,9 @@ public class InformationController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
              Information information = InformationService.getInstance().getAll();
             request.setAttribute("information" , information);

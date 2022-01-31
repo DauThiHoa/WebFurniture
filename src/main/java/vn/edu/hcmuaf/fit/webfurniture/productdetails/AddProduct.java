@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
+import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -15,7 +17,8 @@ public class AddProduct extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
             request.getRequestDispatcher("addProduct.jsp").forward(request, response);
 
     }

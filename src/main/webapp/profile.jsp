@@ -1,7 +1,15 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
+
 
 <head>
     <meta charset="utf-8">
@@ -11,28 +19,27 @@
     <title> ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-    <link rel="stylesheet" href="../../../DirectoryManagement.css">
-    <link rel="stylesheet" href="InterfaceManagement.css">
-    <link rel="stylesheet" href="ListOfPermissions.css">
-    <link rel="stylesheet" href="../../../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="DirectoryManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
+    <link rel="stylesheet" href="QuanTri/Admin/examples/ListOfPermissions.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+<jsp:useBean id="profile" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Profile"/>
 <!-- Sidenav -->
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -47,13 +54,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../../manage/dashboard.jsp">
+                        <a class="nav-link" href="manage/dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/DirectoryManagement">
+                        <a class="nav-link" href="DirectoryManagement.jsp">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
@@ -65,15 +72,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="profile.jsp">
+                        <a class="nav-link active " href="Profile">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="ListOfPermissions.jsp">
-                            <img class="anh" src="icon/article.png"/>
-                            <span class="nav-link-text">List Of Permissions</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -95,8 +96,10 @@
     </div>
 </nav>
 <!-- Main content -->
+
 <div class="main-content" id="panel">
     <!-- Topnav -->
+
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -150,13 +153,14 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_1.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <input style="border: 1px solid white" class="mb-0 text-sm" type="text" name="username" value="${profile.username}">
+<%--                                                    <h4 class="mb-0 text-sm" >${profile.username}</h4>--%>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -170,13 +174,13 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -190,13 +194,13 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>5 hrs ago</small>
@@ -210,13 +214,13 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -230,13 +234,13 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_4.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -305,10 +309,10 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                                    <span class="mb-0 text-sm  font-weight-bold">${profile.username}</span>
                                 </div>
                             </div>
                         </a>
@@ -321,9 +325,11 @@
                                 <span>My profile</span>
                             </a>
                             <a href="#" class="dropdown-item">
+<%--                            <button type="submit" class="dropdown-item" >--%>
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Settings</span>
                             </a>
+<%--                            </button>--%>
                             <a href="#" class="dropdown-item">
                                 <i class="ni ni-calendar-grid-58"></i>
                                 <span>Activity</span>
@@ -343,245 +349,240 @@
             </div>
         </div>
     </nav>
-
     <!-- Header -->
-    <div class="header bg-primary pb-6">
-        <div class="container-fluid">
-            <div class="header-body">
-                <div class="row align-items-center py-4">
-                    <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">List Of Permissions</h6>
-                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Profile / List Of Permissions</a></li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <div class="col-lg-6 col-5 text-right">
-                        <a href="#" class="btn btn-sm btn-neutral">New</a>
-                        <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                    </div>
+    <!-- Header -->
+
+    <div class="header pb-6 d-flex align-items-center"
+         style="min-height: 500px; background-image: url(QuanTri/Admin/assets/img/Admin/img_27.png); background-size: cover; background-position: center top;">
+        <!-- Mask -->
+        <span class="mask bg-gradient-default opacity-8"></span>
+        <!-- Header container -->
+        <div class="container-fluid d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-7 col-md-10">
+                    <h1 class="display-2 text-white">Hello ${profile.username}</h1>
+                    <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with
+                        your work and manage your projects or assigned tasks</p>
+<%--                    <a href="#" class="btn btn-neutral"></a>--%>
+                    <form action = "<%=Asset.url("Edit_Profile")%>"  method = "POST" >
+                        <input style="display: none"  name="id" value="${profile.idProfile}" type="text">
+                        <input style="display: none"  name="address" value="${profile.address}" type="text">
+                        <input style="display: none"  type="email"  name="email" value="${profile.email}">
+                        <input style="display: none"  type="text"   name="username" value="${profile.username}">
+                        <input style="display: none"   type="text" name="comments" value="${profile.comments}">
+                        <input style="display: none"   type="text" name="photos" value="${profile.photos}">
+                        <input style="display: none"   type="text" name="friends" value="${profile.friends}">
+                        <input style="display: none"  type="text" name="age" value="${profile.age}">
+                        <textarea
+                                  style="display: none"  class="ni business_briefcase-24 mr-2"
+                                  type="text" name="description">${profile.description}</textarea>
+                        <input style="display: none"  type="text"  name="firstname"  value="${profile.firstname}">
+                        <input style="display: none"  type="text" name="lastname"  value="${profile.lastname}">
+                        <input style="display: none"  type="text"  name="city" value="${profile.city}">
+                        <input style="display: none"  type="text"   name="country"  value="${profile.country}">
+                        <input style="display: none"  type="number"  name="postalcode" value="${profile.postalcode}">
+                        <textarea style="display: none"  rows="4"  name="aboutme">${profile.aboutme}</textarea>
+                    <button type="submit" class="btn btn-neutral" onclick="edit()">Edit profile</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Page content -->
 
+    <div class="container-fluid mt--6">
+        <form action = "<%=Asset.url("Add_Profile")%>"  method = "POST" >
+        <div class="row">
+            <div class="col-xl-4 order-xl-2">
+                <div class="card card-profile">
+                    <img src="QuanTri/Admin/assets/img/Admin/img_28.png" alt="Image placeholder" class="card-img-top">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 order-lg-2">
+                            <div class="card-profile-image">
+                                <a href="#">
+                                    <img src="QuanTri/Admin/assets/img/theme/team-4.jpg" class="rounded-circle">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-info  mr-4 "></a>
+                            <a href="#" class="btn btn-sm btn-default float-right"></a>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <input style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="friends" value="${profile.friends}">
+<%--                                        <span class="heading">${profile.friends}</span>--%>
+                                        <span class="description">Friends</span>
+                                    </div>
+                                    <div>
 
-    <div class="container">
+                                        <input style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="photos" value="${profile.photos}">
+<%--                                        <span class="heading">${profile.photos}</span>--%>
+                                        <span class="description">Photos</span>
+                                    </div>
+                                    <div>
+                                        <input style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="comments" value="${profile.comments}">
+<%--                                        <span class="heading">${profile.comments}</span>--%>
+                                        <span class="description">Comments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="dropdown">
+                        <div class="text-center">
+                            <h5 class="h3">
 
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Action <span class="caret"></span>
-
-            </button>
-
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Change </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Search by <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> Numerical order </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Category </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Image </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Modules </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Action </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="dropdown">
-
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-
-                Display number <span class="caret"></span>
-
-            </button>
-            <ul class="dropdown-menu">
-
-                <li class="dropdown-menuLi"><a href="#"> One </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Two </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Three </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Four </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Five </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Six </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Seven </a></li>
-                <li class="dropdown-menuLi"><a href="#"> Eight </a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <a class="nav-link active" href="UserConfiguration.jsp">
-        <button class="add">
-            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            Add
-        </button>
-    </a>
-
-    <div class="tab">
-        <table class="table">
-            <tr>
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
-                <th class="TieuDe">ID</th>
-                <th class="TieuDe">Full name</th>
-                <th class="TieuDe">Avatar</th>
-                <th class="TieuDe">Power</th>
-                <th class="TieuDe">Display</th>
-                <th class="TieuDe">Change</th>
-                <th class="TieuDe">Erase</th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    1"><br></td>
-                <td> Join</td>
-                <td><img src="icon/img.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    2"><br></td>
-                <td>Doue</td>
-                <td><img src="icon/img_1.png" class="image"/></td>
-                <td class="full">Full User Rights</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    3"><br></td>
-                <td>Tom Hiddleston</td>
-                <td><img src="icon/img_2.png" class="image"/></td>
-                <td class="full">Full User Rights</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    4"><br></td>
-                <td>Christopher</td>
-                <td><img src="icon/img_3.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    5"><br></td>
-                <td>Elizabeth</td>
-                <td><img src="icon/img_4.png" class="image"/></td>
-                <td class="Restricted">Restricted users</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    6"><br></td>
-                <td>David</td>
-                <td><img src="icon/img_5.png" class="image"/></td>
-                <td class="full">Full User Rights</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    7"><br></td>
-                <td>Matthew</td>
-                <td><img src="icon/img_6.png" class="image"/></td>
-                <td class="Restricted">Restricted users</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    8"><br></td>
-                <td>Jennifer</td>
-                <td><img src="icon/img_7.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    9"><br></td>
-                <td>Linda</td>
-                <td><img src="icon/img_8.png" class="image"/></td>
-                <td class="Restricted">Restricted users</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><input type="text" name="fname" value="                    10"><br></td>
-                <td>Jessica</td>
-                <td><img src="icon/img_9.png" class="image"/></td>
-                <td class="Owner">Owner</td>
-                <td><input type="checkbox" name="sport" value="check"></td>
-                <td><i class="fa fa-edit"></i></td>
-                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-
-        </table>
-    </div>
-
-    <footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6">
-                <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
-                    WebFurniture</a>
+                                ${profile.username} - <input style="border: 1px solid white ; background: white ; width: 30px" class="heading" type="text" name="age" value="${profile.age}">
+<%--                                    <span class="font-weight-light">, ${profile.age}</span>--%>
+                            </h5>
+                            <div class="h5 font-weight-300">
+                                <i class="ni location_pin mr-2"></i>${profile.country}, ${profile.city}
+                            </div>
+                            <div class="h5 mt-4">
+                                <textarea class="ni business_briefcase-24 mr-2"
+                                       style="text-align : center ; border: 1px solid white ; background: white; width: 350px ; height: 100px" class="ni business_briefcase-24 mr-2"
+                                          type="text" name="description">${profile.description}</textarea>
+<%--                                <i class="ni business_briefcase-24 mr-2"></i>${profile.description}--%>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</div>
-</div>
-<!-- Argon Scripts -->
+            <div class="col-xl-8 order-xl-1">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Edit profile </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <button class="btn btn-sm btn-primary" type="submit" onclick="add()">
+                                ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4">User information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-username">Username</label>
+                                            <input style="font-weight: bold" type="text" id="input-username" class="form-control"
+                                                   placeholder="Username" name="username" value="${profile.username}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email">Email address</label>
+                                            <input style="font-weight: bold" type="email" id="input-email" class="form-control" name="email"
+                                                   value="${profile.email}">
+                                        </div>
+                                    </div>
+                                </div>
 
-<!-- Core -->
-<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Argon JS -->
-<script src="../assets/js/argon.js?v=1.2.0"></script>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-first-name">First name</label>
+                                            <input style="font-weight: bold" type="text" id="input-first-name" class="form-control" name="firstname"
+                                                   placeholder="First name" value="${profile.firstname}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-last-name">Last name</label>
+                                            <input style="font-weight: bold" type="text" id="input-last-name" class="form-control" name="lastname"
+                                                   placeholder="Last name" value="${profile.lastname}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4"/>
+                            <!-- Address -->
+                            <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-address">Address</label>
+                                            <input style="font-weight: bold" id="input-address" class="form-control" placeholder="Home Address" name="address"
+                                                   value="${profile.address}" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-city">City</label>
+                                            <input style="font-weight: bold" type="text" id="input-city" class="form-control"  name="city"
+                                                   value="${profile.city}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-country">Country</label>
+                                            <input style="font-weight: bold" type="text" id="input-country" class="form-control" name="country"
+                                                    value="${profile.country}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-country">Postal code</label>
+                                            <input style="font-weight: bold" type="number" id="input-postal-code" class="form-control" name="postalcode"
+                                                   value="${profile.postalcode}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4"/>
+                            <!-- Description -->
+                            <h6 class="heading-small text-muted mb-4">About me</h6>
+                            <div class="pl-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label">About Me</label>
+                                    <textarea style="font-weight: bold" rows="4" class="form-control" name="aboutme">${profile.aboutme}</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </form>
+        <!-- Footer -->
+        <footer class="footer pt-0">
+            <div class="row align-items-center justify-content-lg-between">
+                <div class="col-lg-6">
+                    <div class="copyright text-center  text-lg-left  text-muted">
+                        &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
+                                       target="_blank"> WebFurniture</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
 </body>
+<script>
+    function add () {
+        alert("Bạn đã thêm thông tin thành công !")
+    }
+    function edit() {
+        alert("Bạn đã sửa thông tin thành công !")
+    }
+</script>
 
 </html>

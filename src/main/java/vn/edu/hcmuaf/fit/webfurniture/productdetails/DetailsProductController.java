@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
+import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
@@ -26,6 +28,9 @@ public class DetailsProductController extends HttpServlet {
         request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
         request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
         request.setAttribute("sumTotalMoney" , OrderDetailsService.getInstance().sumTotalMoney());
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
         String id = request.getParameter("id");
         String quantitySold = request.getParameter("quantitySold");

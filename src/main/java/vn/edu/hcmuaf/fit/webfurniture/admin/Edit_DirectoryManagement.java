@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -28,6 +29,9 @@ public class Edit_DirectoryManagement extends HttpServlet {
      String nameCategory = request.getParameter("nameCategory");
      String modules = request.getParameter("modules");
      String dis = request.getParameter("display");
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
      String display ;
      if (dis != null ){

@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
+import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.*;
@@ -22,6 +24,8 @@ public class Show extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
                 request.setAttribute("list" , list );
                 request.getRequestDispatcher("Product.jsp").forward(request, response);
     }

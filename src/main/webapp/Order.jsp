@@ -34,6 +34,7 @@
 </head>
 
 <body>
+<jsp:useBean id="profile" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Profile"/>
 <!-- Sidenav -->
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -86,7 +87,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
+                        <a class="nav-link" href="Profile">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -172,7 +173,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -192,7 +193,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -212,7 +213,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>5 hrs ago</small>
@@ -232,7 +233,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -252,7 +253,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -324,7 +325,7 @@
                     <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                                    <span class="mb-0 text-sm  font-weight-bold">${profile.username}</span>
                                 </div>
                             </div>
                         </a>
@@ -374,10 +375,7 @@
                             </ol>
                         </nav>
                     </div>
-                    <div class="col-lg-6 col-5 text-right">
-                        <a href="#" class="btn btn-sm btn-neutral">New</a>
-                        <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                    </div>
+
                 </div>
             </div>
         </div>

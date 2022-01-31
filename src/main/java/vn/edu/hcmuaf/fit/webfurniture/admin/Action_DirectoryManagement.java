@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -25,6 +26,10 @@ public class Action_DirectoryManagement extends HttpServlet {
      String id = request.getParameter("id");
      int pageweb =  DirectoryManagementService.getInstance().delete(id);
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
+
      if ( pageweb == 1 ) {
          request.getRequestDispatcher("/DirectoryManagement").forward(request, response);
      }else{

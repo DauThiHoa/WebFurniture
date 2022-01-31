@@ -1,5 +1,12 @@
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -30,6 +37,7 @@
 </head>
 
 <body>
+<jsp:useBean id="profile" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Profile"/>
 <!-- Sidenav -->
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -81,7 +89,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="QuanTri/Admin/examples/profile.jsp">
+                        <a class="nav-link" href="Profile">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -166,7 +174,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -186,7 +194,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -206,7 +214,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>5 hrs ago</small>
@@ -226,7 +234,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>2 hrs ago</small>
@@ -246,7 +254,7 @@
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div>
-                                                    <h4 class="mb-0 text-sm">John Snow</h4>
+                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
                                                 </div>
                                                 <div class="text-right text-muted">
                                                     <small>3 hrs ago</small>
@@ -318,7 +326,7 @@
                     <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                                    <span class="mb-0 text-sm  font-weight-bold">${profile.username}</span>
                                 </div>
                             </div>
                         </a>
@@ -326,7 +334,7 @@
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Welcome!</h6>
                             </div>
-                            <a href="QuanTri/Admin/examples/profile.jsp" class="dropdown-item">
+                            <a href="Profile" class="dropdown-item">
                                 <i class="ni ni-single-02"></i>
                                 <span>My profile</span>
                             </a>
@@ -364,10 +372,7 @@
                             </ol>
                         </nav>
                     </div>
-                    <div class="col-lg-6 col-5 text-right">
-                        <a href="#" class="btn btn-sm btn-neutral">New</a>
-                        <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -380,10 +385,7 @@
         <div class="information1">
             <h2 class="Image"> Image </h2>
             <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
-            <button class="Select">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Select file
-            </button>
+            <input type="file" style="font-weight: bold" value="Select file">
         </div>
         <jsp:useBean id="Category" scope="request" class="java.lang.String"/>
         <div class="information2">

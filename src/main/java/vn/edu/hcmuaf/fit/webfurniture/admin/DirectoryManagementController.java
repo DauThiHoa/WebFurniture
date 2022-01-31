@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -15,6 +16,9 @@ public class DirectoryManagementController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
             request.setAttribute("PageWeb" , DirectoryManagementService.getInstance().getAll());
             request.getRequestDispatcher("DirectoryManagement.jsp").forward(request, response);

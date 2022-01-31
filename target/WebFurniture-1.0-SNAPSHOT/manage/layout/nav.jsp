@@ -43,7 +43,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<%= Asset.url("QuanTri/Admin/examples/profile.jsp")%>">
+                            <a class="nav-link" href="<%= Asset.url("Profile")%>">
                                 <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                                 <span class="nav-link-text">Profile</span>
                             </a>

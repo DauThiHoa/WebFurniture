@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
+import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
@@ -18,6 +20,9 @@ public class ShowProductDetailsListController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
         request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
         System.out.println(name);

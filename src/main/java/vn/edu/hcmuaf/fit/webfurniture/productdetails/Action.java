@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
+import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -24,6 +26,8 @@ public class Action extends HttpServlet {
 
      String id = request.getParameter("id");
      int productDetails =  ProductDetailsService.getInstance().delete(id);
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
      if ( productDetails == 1 ) {
          request.getRequestDispatcher("/Product").forward(request, response);

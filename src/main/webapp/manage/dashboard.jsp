@@ -30,8 +30,7 @@
 
 </head>
 
-<body>
-
+<body> 
 <%--<!-- Sidenav -->--%>
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -77,7 +76,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<%= Asset.url("QuanTri/Admin/examples/profile.jsp")%>">
+                        <a class="nav-link" href="<%= Asset.url("Profile")%>">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
@@ -364,10 +363,6 @@
                                 <li class="breadcrumb-item active" aria-current="page">Default</li>
                             </ol>
                         </nav>
-                    </div>
-                    <div class="col-lg-6 col-5 text-right">
-                        <a href="#" class="btn btn-sm btn-neutral">New</a>
-                        <a href="#" class="btn btn-sm btn-neutral">Filters</a>
                     </div>
                 </div>
                 <!-- Card stats -->

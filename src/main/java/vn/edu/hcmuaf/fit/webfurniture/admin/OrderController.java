@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -22,6 +23,8 @@ public class OrderController extends HttpServlet {
 
 //             Order order = OrderService.getInstance().getAll();
 
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
              List<Order> order =  OrderService.getInstance().getAll();
         System.out.println(order.toString());

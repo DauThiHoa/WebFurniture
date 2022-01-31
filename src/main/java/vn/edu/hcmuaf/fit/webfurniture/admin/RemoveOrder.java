@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.*;
@@ -14,6 +15,10 @@ public class RemoveOrder extends HttpServlet {
              String id = request.getParameter("id");
         int customer =  OrderService.getInstance().delete_Customer(id);
         int orders = OrderService.getInstance().delete_Order(id);
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
+
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
         if ( customer == 1  && orders == 1 ) {
             request.getRequestDispatcher("/Order").forward(request, response);

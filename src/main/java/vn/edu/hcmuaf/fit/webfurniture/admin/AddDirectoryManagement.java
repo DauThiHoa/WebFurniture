@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -22,6 +23,8 @@ public class AddDirectoryManagement extends HttpServlet {
         String Modules = request.getParameter ("Modules");
         String dis = request.getParameter ("Display");
 
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
         String display ;
         if (dis != null ){

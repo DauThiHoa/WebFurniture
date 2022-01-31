@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
+import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.payment.CustomerService;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
@@ -15,6 +17,9 @@ public class PaymentSuccessController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
 //        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
