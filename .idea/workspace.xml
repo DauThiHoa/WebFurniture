@@ -10,16 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manage/blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manage/team-4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/EditProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Information.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/EditProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/EditProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/dashboard.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/EditProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/EditProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +40,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -67,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -81,11 +90,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\QuanTri\Admin\examples" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\resources" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\vendor\dt\lang" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
@@ -369,6 +378,9 @@
       <workItem from="1643557832453" duration="10654000" />
       <workItem from="1643588871520" duration="24681000" />
       <workItem from="1643636330713" duration="6283000" />
+      <workItem from="1643719447476" duration="1318000" />
+      <workItem from="1643720855483" duration="25000" />
+      <workItem from="1643721141584" duration="8833000" />
     </task>
     <servers />
   </component>

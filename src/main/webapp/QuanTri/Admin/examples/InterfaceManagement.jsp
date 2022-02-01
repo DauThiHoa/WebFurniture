@@ -464,7 +464,7 @@
         <%--        </c:forEach>--%>
     </form>
     <div class="information6">
-        <a  href="/manage/dashboard.jsp">
+        <a  href="/dashboard.jsp">
             <button class="Select" style="margin-left: 73%" onclick="exit()">
                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                 Exit

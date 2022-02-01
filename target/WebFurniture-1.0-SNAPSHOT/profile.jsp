@@ -54,13 +54,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="manage/dashboard.jsp">
+                        <a class="nav-link" href="dashboard.jsp">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="DirectoryManagement.jsp">
+                        <a class="nav-link" href="DirectoryManagement">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>

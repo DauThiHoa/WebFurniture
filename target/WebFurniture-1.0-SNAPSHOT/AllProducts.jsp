@@ -298,10 +298,10 @@
                 <input class="SapXep" type="radio" name="Chonradio" checked>
                 <p class="noiDungSapXep"> Mặc định</p>
             </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input  class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
-            </div>
+            </button>
             <div class="tenKieu">
                 <input class="SapXep" type="radio" name="Chonradio">
                 <p class="noiDungSapXep"> Tên Z -> A </p>

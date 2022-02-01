@@ -15,7 +15,7 @@
     <title> ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
-    <link rel="icon" href="../QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Page plugins -->
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="<%= Asset.url("QuanTri/Admin/examples/InterfaceManagement.css")%>">
     <link rel="stylesheet" href="<%= Asset.url("stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css")%>">
 
-    <jsp:include page="layout/css.jsp"></jsp:include>
+    <jsp:include page="manage/layout/css.jsp"></jsp:include>
 
 </head>
 
@@ -37,7 +37,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand">
-                <img src="../QuanTri/Admin/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="manage/blue.png" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -155,7 +155,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_1.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -175,7 +175,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_2.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -195,7 +195,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_3.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -215,7 +215,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/assets/img/theme/team-4.jpg"
+                                            <img alt="Image placeholder" src="manage/team-4.jpg"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -235,7 +235,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../QuanTri/Admin/examples/icon/img_5.png"
+                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
                                                  class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
@@ -310,7 +310,8 @@
                            aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../QuanTri/Admin/assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="manage/team-4.jpg">
+
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
