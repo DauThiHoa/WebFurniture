@@ -10,25 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/manage/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/manage/team-4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Information.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/InterfaceManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/QuanTri/Admin/examples/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/manage/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,6 +367,7 @@
       <workItem from="1643719447476" duration="1318000" />
       <workItem from="1643720855483" duration="25000" />
       <workItem from="1643721141584" duration="8833000" />
+      <workItem from="1643770819035" duration="8066000" />
     </task>
     <servers />
   </component>

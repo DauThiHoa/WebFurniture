@@ -1017,7 +1017,51 @@ body {
     margin-left: 78px;
     margin-top: -15px;
 }
+/**/
+#layout1 #right .az .sanPham .sanPhamNoiThat {
+    float: left;
+    clear: right;
+    width: 250px;
+    height: 280px;
+    margin-right: 11px;
+    margin-top: 20px;
+    border: 1px solid #1fb5d4;
+    background: white;
+}
 
+#layout1 #right .az .sanPham .sanPhamNoiThat:hover {
+    cursor: pointer;
+    background: skyblue;
+    color: white;
+}
+
+#layout1 #right .az .sanPham .anhDoTrangTri .anh {
+    width: 230px;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#layout1 #right .az .sanPham .noiDungDoTrangTri {
+    margin-left: 10px;
+}
+
+#layout1 #right .az .sanPham .noiDungDoTrangTri .ten {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#layout1 #right .az .sanPham .noiDungDoTrangTri .gia {
+    text-align: center;
+    font-size: 100%;
+    margin-top: -10px;
+    color: #1fb5d4;
+}
+
+#layout1 #right .az .sanPham .nutgiohang {
+    margin-left: 78px;
+    margin-top: -15px;
+}
 .btnAddToCart {
     background: white;
     color: #dd4b39;
@@ -1063,7 +1107,9 @@ body {
 #layout1 #right #CacSanPham .sanPham .sanPhamNoiThat:hover .noiDungDoTrangTri .gia {
     color: yellow;
 }
-
+#layout1 #right .az .sanPham .sanPhamNoiThat:hover .noiDungDoTrangTri .gia {
+    color: yellow;
+}
 #layout1 #right #themTrangMoi {
     margin-left: 537px;
 }
@@ -1563,6 +1609,28 @@ body {
         margin-left: 55px;
         margin-top: -13px;
     }
+/**/
+    #layout1 #right .az .sanPham .sanPhamNoiThat {
+        width: 200px;
+        height: 258px;
+        margin-right: 6px;
+        margin-top: 20px;
+    }
+
+    #layout1 #right .az .sanPham .anhDoTrangTri .anh {
+        width: 170px;
+        height: 160px;
+    }
+
+    #layout1 #right .az .sanPham .noiDungDoTrangTri {
+        margin-left: 0px;
+        font-size: 13px;
+    }
+
+    #layout1 #right .az .sanPham .nutgiohang {
+        margin-left: 55px;
+        margin-top: -13px;
+    }
 
     #layout1 #right #themTrangMoi .khung1 {
         display: none;
@@ -1855,6 +1923,31 @@ body {
         margin-left: 66px;
         margin-top: -15px;
     }
+
+    /**/
+    #layout1 #right .az .sanPham .sanPhamNoiThat {
+        width: 237px;
+        height: 264px;
+        margin-right: 9px;
+        margin-top: 20px;
+    }
+
+    #layout1 #right .az .sanPham .anhDoTrangTri .anh {
+        width: 218px;
+        height: 160px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #layout1 #right .az .sanPham .noiDungDoTrangTri {
+        margin-left: -7px;
+    }
+
+    #layout1 #right .az .sanPham .nutgiohang {
+        margin-left: 66px;
+        margin-top: -15px;
+    }
+
 
     #layout1 #right #themTrangMoi {
         margin-left: 235px;

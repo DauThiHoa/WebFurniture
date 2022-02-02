@@ -86,5 +86,23 @@ public class ProductDetailsService {
         return true;
     }
 
+    public List<ProductDetails> getListAZ (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails order by `name` asc")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getListZA (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails order by `name` desc")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getListPriceAZ (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails order by `name` desc")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
 
 }

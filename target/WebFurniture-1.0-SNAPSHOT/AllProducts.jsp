@@ -294,33 +294,105 @@
         </div>
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" checked>
-                <p class="noiDungSapXep"> Mặc định</p>
-            </div>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input  class="SapXep" type="radio" name="Chonradio">
+                <input class="SapXep" type="radio" name="Chonradio" checked onclick="clickMacDinh()">
+                <p class="noiDungSapXep"> Mặc định</p>
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="clickAZ()">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
             </button>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="clickZA()">
                 <p class="noiDungSapXep"> Tên Z -> A </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="clickHangMoi()">
                 <p class="noiDungSapXep"> Hàng mới </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="clickGiaThapDenCao()">
                 <p class="noiDungSapXep"> Giá thấp đến cao </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="Chonradio" onclick="clickGiaCaoXuongThap()">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
+            </button>
+        </div>
+<div class="az" id="CacSanPham" style="display: none">
+<jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${getListAZ}">
+    <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+        <div class="sanPham">
+            <div class="sanPhamNoiThat">
+                <div class="anhDoTrangTri">
+                    <img class="anh" src="${p.linkImage}"/>
+                </div>
+                <div class="noiDungDoTrangTri">
+                    <h4 class="ten">${p.name}</h4>
+                    <h4 class="gia">${p.priceNew}đ</h4>
+                </div>
+                <div class="nutgiohang">
+                    <a href="cart-add?id=${p.id}">
+                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                        aria-hidden="true"></i><span> </span></button>
+                    </a>
+                    <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                            data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                          aria-hidden="true"></i></button>
+                    <a href="ThanhToan.jsp">
+                        <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <span></span></button>
+                    </a>
+                </div>
             </div>
         </div>
+    </c:if>
+</c:forEach>
+</div>
 
-        <div id="CacSanPham">
+        <div class="za" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListZA}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div id="CacSanPham" class="ClassSanPham" style="display: block">
           
         <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
@@ -1151,8 +1223,35 @@
     </div>
 </div>
 
+<script>
+    // sp59 sp60 sp61 sp62 sp63 sp64 sp65 sp66 sp67 sp68 sp69 sp70 sp71 sp72 sp73 sp74 sp75 sp76 sp77
+    // sp78 sp79 sp80 sp81 sp82
 
+    const az = document.querySelector('.az');
+    const za = document.querySelector('.za');
+    const ClassSanPham = document.querySelector('.ClassSanPham');
+    function clickAZ() {
+        az.style.display = "block";
+        // alert("jjjj");
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+    }
+
+    function clickMacDinh() {
+        az.style.display = "none";
+        za.style.display = "none";
+        // alert("jjjj");
+        ClassSanPham.style.display = "block";
+    }
+    function clickZA() {
+        az.style.display = "none";
+        za.style.display = "block";
+        // alert("jjjj");
+        ClassSanPham.style.display = "none";
+    }
+</script>
 </body>
+
 </html>
 
 
