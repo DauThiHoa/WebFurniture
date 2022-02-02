@@ -65,7 +65,7 @@
     </div>
 
     <div class="taiKhoanCuaToi">
-        <a href="../Nhom7_WebFurniture/Quản%20trị/Admin/examples/dashboard.jsp">
+        <a href="Dashboard">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>

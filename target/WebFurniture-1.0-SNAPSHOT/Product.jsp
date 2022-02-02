@@ -50,14 +50,14 @@
                 <jsp:include page="manage/layout/nav.jsp"></jsp:include>
 <%--                    <!-- lINK VE TRANG CHU-->--%>
 <%--&lt;%&ndash;                    <li class="nav-item">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("dashboard.jsp")%>">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <a class="nav-link active" href="<%= Asset.url("Dashboard")%>">&ndash;%&gt;--%>
 <%--&lt;%&ndash;                            <img src="img.png">&ndash;%&gt;--%>
 <%--&lt;%&ndash;                            <span class="nav-link-text">HomePage</span>&ndash;%&gt;--%>
 <%--&lt;%&ndash;                        </a>&ndash;%&gt;--%>
 <%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
 
 <%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link active" href="dashboard.jsp">--%>
+<%--                        <a class="nav-link active" href="Dashboard">--%>
 <%--                            <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>--%>
 <%--                            <span class="nav-link-text">Dashboard</span>--%>
 <%--                        </a>--%>

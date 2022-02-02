@@ -16,7 +16,15 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
+        request.setAttribute("getListPriceAZ", ProductDetailsService.getInstance().getListPriceAZ());
+        request.setAttribute("getListPriceZA", ProductDetailsService.getInstance().getListPriceZA());
 
+        request.setAttribute("getList500000", ProductDetailsService.getInstance().getList500000());
+        request.setAttribute("getList1000000", ProductDetailsService.getInstance().getList1000000());
+        request.setAttribute("getList1500000", ProductDetailsService.getInstance().getList1500000());
+        request.setAttribute("getList2000000", ProductDetailsService.getInstance().getList2000000());
+        request.setAttribute("getList2500000", ProductDetailsService.getInstance().getList2500000());
+        request.setAttribute("getList2501000", ProductDetailsService.getInstance().getList2501000());
         request.getRequestDispatcher("AllProducts.jsp").forward(request, response);
 
     }

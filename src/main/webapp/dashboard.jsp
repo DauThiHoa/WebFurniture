@@ -58,7 +58,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="<%= Asset.url("../WebFurniture_war_exploded/manage/dashboard.jsp")%>">
+                        <a class="nav-link active" href="<%= Asset.url("../WebFurniture_war_exploded/manage/Dashboard")%>">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>

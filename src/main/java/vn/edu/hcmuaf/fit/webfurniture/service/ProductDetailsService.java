@@ -100,9 +100,53 @@ public class ProductDetailsService {
     }
     public List<ProductDetails> getListPriceAZ (){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails order by `name` desc")
+            return handle.createQuery("select * from productdetails order by priceNew + 0 asc")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
 
+    public List<ProductDetails> getListPriceZA (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails order by priceNew + 0 desc")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+
+    public List<ProductDetails> getList500000 (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where priceNew + 0 < 500000 ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+
+    public List<ProductDetails> getList1000000 (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where priceNew + 0 >= 500000 and priceNew + 0 < 1000000 ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getList1500000 (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where priceNew + 0 < 1500000 and priceNew + 0 >= 1000000 ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getList2000000 (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where priceNew + 0 >= 1500000 and priceNew + 0 < 2000000 ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getList2500000 (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where priceNew + 0 < 2500000 and priceNew + 0 >= 2000000 ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getList2501000 (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where priceNew + 0 >= 2500000")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
 }

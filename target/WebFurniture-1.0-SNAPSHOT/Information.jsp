@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard.jsp">
+                        <a class="nav-link" href="Dashboard">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
@@ -464,7 +464,7 @@
 <%--        </c:forEach>--%>
     </form>
     <div class="information6">
-    <a  href="/WebFurniture_war_exploded/manage/dashboard.jsp">
+    <a  href="Dashboard">
         <button class="Select" style="margin-left: 73%" onclick="exit()">
             <i class="fa fa-times-circle" aria-hidden="true"></i>
             Exit

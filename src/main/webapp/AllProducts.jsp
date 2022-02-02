@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="taiKhoanCuaToi">
-        <a href="../Quản%20trị/Admin/examples/dashboard.jsp">
+        <a href="Dashboard">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
@@ -187,33 +187,38 @@
                 <h3 class="noiDungBoLoc"> Tìm theo mức giá</h3>
                 <div class="gia">
                     <div class="khungGia">
-                        <input class="check" type="checkbox" name="timtheomucgia"/>
+                        <input class="check" type="radio" name="radio" value="500000" onclick="clickDuoi500000()"/>
                         <p class="mucGia"> Giá dưới 500.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="1000000" onclick="clickDuoi1000000()"/>
                         <p class="mucGia"> 500.000đ - 1.000.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="1500000" onclick="clickDuoi1500000()"/>
                         <p class="mucGia"> 1.000.000đ - 1.500.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
-                        <p class="mucGia"> 2.000.000đ - 3.500.000đ</p>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="2000000" onclick="clickDuoi2000000()"/>
+                        <p class="mucGia"> 1.500.000đ - 2.000.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
-                        <p class="mucGia"> 3.500.000đ - 5.000.000đ</p>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="2500000" onclick="clickDuoi2500000()"/>
+                        <p class="mucGia"> 2.000.000đ - 2.500.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
-                        <p class="mucGia"> Giá trên 5.000.000đ</p>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="2501000" onclick="clickTren2501000()"/>
+                        <p class="mucGia"> Giá trên 2.500.000đ</p>
                     </div>
                 </div>
             </div>
@@ -224,7 +229,7 @@
                 <h2 class="ten"> Từ Khóa</h2>
             </div>
             <div class="noiDung">
-                <input class="tuKhoaTimKiem" placeholder="Từ khóa tìm kiếm"></input>
+                <input value="" class="tuKhoaTimKiem" placeholder="Từ khóa tìm kiếm" onchange="timkiem()"></input>
             </div>
         </div>
 
@@ -246,9 +251,9 @@
             </div>
         </div>
 
-        <div class="apDung">
+        <button class="apDung">
             <h3 class="tenApDung"> Áp dụng</h3>
-        </div>
+        </button>
     </div>
 
     <div id="right">
@@ -318,6 +323,222 @@
                 <input class="SapXep" type="radio" name="Chonradio" onclick="clickGiaCaoXuongThap()">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </button>
+        </div>
+        <div class="getList2501000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2501000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2500000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2500000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2000000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2000000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList1500000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList1500000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList1000000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList1000000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList500000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList500000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
         </div>
 <div class="az" id="CacSanPham" style="display: none">
 <jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
@@ -392,6 +613,81 @@
                 </c:if>
             </c:forEach>
         </div>
+
+        <div class="priceaz" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListPriceAZ}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+
+        <div class="priceza" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListPriceZA}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+
         <div id="CacSanPham" class="ClassSanPham" style="display: block">
           
         <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
@@ -1229,25 +1525,176 @@
 
     const az = document.querySelector('.az');
     const za = document.querySelector('.za');
+    const priceaz = document.querySelector('.priceaz');
+    const priceza = document.querySelector('.priceza');
+    const getList500000 = document.querySelector('.getList500000');
+    const getList1000000 = document.querySelector('.getList1000000');
+    const getList1500000 = document.querySelector('.getList1500000');
+    const getList2000000 = document.querySelector('.getList2000000');
+    const getList2500000 = document.querySelector('.getList2500000');
+    const getList2501000 = document.querySelector('.getList2501000');
     const ClassSanPham = document.querySelector('.ClassSanPham');
-    function clickAZ() {
-        az.style.display = "block";
-        // alert("jjjj");
+
+    function clickTren2501000() {
+        az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "block";
+    }
+    function clickDuoi2500000() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "block";
+        getList2501000.style.display = "none";
+    }
+    function clickDuoi2000000() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "block";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function clickDuoi1500000() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "block";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function clickDuoi1000000() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "block";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function clickDuoi500000() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "block";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function clickAZ() {
+        az.style.display = "block";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
     }
 
     function clickMacDinh() {
         az.style.display = "none";
         za.style.display = "none";
-        // alert("jjjj");
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
         ClassSanPham.style.display = "block";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function clickHangMoi() {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "block";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
     }
     function clickZA() {
         az.style.display = "none";
         za.style.display = "block";
-        // alert("jjjj");
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
         ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+
+    function clickGiaThapDenCao () {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "block";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function clickGiaCaoXuongThap() {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "block";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+    }
+    function timkiem () {
+        
     }
 </script>
 </body>
