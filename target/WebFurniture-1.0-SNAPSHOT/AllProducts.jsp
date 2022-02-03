@@ -114,7 +114,7 @@
         </div>
 
     </div>
-    <a href="HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
+    <a href="ProductDetailsList">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
@@ -252,7 +252,7 @@
             </div>
         </div>
 
-        <button class="apDung" type="submit">
+        <button class="apDung" type="submit" onclick="ClickSearchName()">
             <h3 class="tenApDung"> Áp dụng</h3>
         </button>
         </form>
@@ -302,29 +302,65 @@
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input class="SapXep" type="radio" name="Chonradio" checked onclick="clickMacDinh()">
+                <input class="SapXep" type="radio" name="radio" checked onclick="clickMacDinh()">
                 <p class="noiDungSapXep"> Mặc định</p>
             </button>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="clickAZ()">
+                <input class="SapXep" type="radio" name="radio" onclick="clickAZ()">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
             </button>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="clickZA()">
+                <input class="SapXep" type="radio" name="radio" onclick="clickZA()">
                 <p class="noiDungSapXep"> Tên Z -> A </p>
             </button>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="clickHangMoi()">
+                <input class="SapXep" type="radio" name="radio" onclick="clickHangMoi()">
                 <p class="noiDungSapXep"> Hàng mới </p>
             </button>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="clickGiaThapDenCao()">
+                <input class="SapXep" type="radio" name="radio" onclick="clickGiaThapDenCao()">
                 <p class="noiDungSapXep"> Giá thấp đến cao </p>
             </button>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
-                <input class="SapXep" type="radio" name="Chonradio" onclick="clickGiaCaoXuongThap()">
+                <input class="SapXep" type="radio" name="radio" onclick="clickGiaCaoXuongThap()">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </button>
+        </div>
+        <div class="searchName" id="CacSanPham" style="display: block">
+            <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${searchName}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <div class="anhDoTrangTri">
+                                <img class="anh" src="${p.linkImage}"/>
+                            </div>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}">
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                        data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                      aria-hidden="true"></i></button>
+                                <a href="ThanhToan.jsp">
+                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                            data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
         </div>
         <div class="getList2501000" id="CacSanPham" style="display: none">
             <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
@@ -542,7 +578,7 @@
                 </c:if>
             </c:forEach>
         </div>
-<div class="az" id="CacSanPham" style="display: none">
+        <div class="az" id="CacSanPham" style="display: none">
 <jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
 <c:forEach var="p" items="${getListAZ}">
     <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -578,7 +614,6 @@
     </c:if>
 </c:forEach>
 </div>
-
         <div class="za" id="CacSanPham" style="display: none">
             <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListZA}">
@@ -615,7 +650,6 @@
                 </c:if>
             </c:forEach>
         </div>
-
         <div class="priceaz" id="CacSanPham" style="display: none">
             <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceAZ}">
@@ -652,7 +686,6 @@
                 </c:if>
             </c:forEach>
         </div>
-
         <div class="priceza" id="CacSanPham" style="display: none">
             <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceZA}">
@@ -689,7 +722,6 @@
                 </c:if>
             </c:forEach>
         </div>
-
         <div id="CacSanPham" class="ClassSanPham" style="display: block">
           
         <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
@@ -1382,33 +1414,33 @@
             </div>
 
 
-        <div id="themTrangMoi">
-            <div class="khung1">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-            </div>
-            <div class="khung2">
-                <h3 class="fa2"> 1 </h3>
-            </div>
-            <a href="AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">
-                <div class="khung">
-                    <h3 class="fa"> 2 </h3>
-                </div>
-            </a>
-            <div class="khung">
-                <h3 class="fa"> 3 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 4 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 5 </h3>
-            </div>
-            <a href="AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">
-                <div class="khung3">
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                </div>
-            </a>
-        </div>
+<%--        <div id="themTrangMoi">--%>
+<%--            <div class="khung1">--%>
+<%--                <i class="fa fa-angle-double-left" aria-hidden="true"></i>--%>
+<%--            </div>--%>
+<%--            <div class="khung2">--%>
+<%--                <h3 class="fa2"> 1 </h3>--%>
+<%--            </div>--%>
+<%--            <a href="AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">--%>
+<%--                <div class="khung">--%>
+<%--                    <h3 class="fa"> 2 </h3>--%>
+<%--                </div>--%>
+<%--            </a>--%>
+<%--            <div class="khung">--%>
+<%--                <h3 class="fa"> 3 </h3>--%>
+<%--            </div>--%>
+<%--            <div class="khung">--%>
+<%--                <h3 class="fa"> 4 </h3>--%>
+<%--            </div>--%>
+<%--            <div class="khung">--%>
+<%--                <h3 class="fa"> 5 </h3>--%>
+<%--            </div>--%>
+<%--            <a href="AllProduct2.jsp?_ijt=3rjausmtjj40hmtdmlaouuicag&_ij_reload=RELOAD_ON_SAVE">--%>
+<%--                <div class="khung3">--%>
+<%--                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>--%>
+<%--                </div>--%>
+<%--            </a>--%>
+<%--        </div>--%>
     </div>
 </div>
 
@@ -1452,7 +1484,7 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="ProductDetailsList">
                         <p>Trang chủ</p></a>
                     <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
@@ -1535,7 +1567,23 @@
     const getList2000000 = document.querySelector('.getList2000000');
     const getList2500000 = document.querySelector('.getList2500000');
     const getList2501000 = document.querySelector('.getList2501000');
+    const searchName = document.querySelector('.searchName');
     const ClassSanPham = document.querySelector('.ClassSanPham');
+
+    function ClickSearchName() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "block";
+    }
 
     function clickTren2501000() {
         az.style.display = "none";
@@ -1549,6 +1597,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "block";
+        searchName.style.display = "none";
     }
     function clickDuoi2500000() {
         az.style.display = "none";
@@ -1562,6 +1611,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "block";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickDuoi2000000() {
         az.style.display = "none";
@@ -1575,6 +1625,7 @@
         getList2000000.style.display = "block";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickDuoi1500000() {
         az.style.display = "none";
@@ -1588,6 +1639,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickDuoi1000000() {
         az.style.display = "none";
@@ -1601,6 +1653,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickDuoi500000() {
         az.style.display = "none";
@@ -1614,6 +1667,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickAZ() {
         az.style.display = "block";
@@ -1627,6 +1681,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
 
     function clickMacDinh() {
@@ -1641,6 +1696,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickHangMoi() {
         az.style.display = "none";
@@ -1654,6 +1710,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickZA() {
         az.style.display = "none";
@@ -1667,6 +1724,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
 
     function clickGiaThapDenCao () {
@@ -1681,6 +1739,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function clickGiaCaoXuongThap() {
         az.style.display = "none";
@@ -1694,6 +1753,7 @@
         getList2000000.style.display = "none";
         getList2500000.style.display = "none";
         getList2501000.style.display = "none";
+        searchName.style.display = "none";
     }
     function timkiem () {
         

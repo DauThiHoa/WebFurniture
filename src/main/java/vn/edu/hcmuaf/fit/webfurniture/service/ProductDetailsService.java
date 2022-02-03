@@ -149,4 +149,17 @@ public class ProductDetailsService {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
+    public List<ProductDetails> searchName ( String name ){
+        String name_result = "%" + name + "%";
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where `name` like ? ")
+                    .bind(0 , name_result)
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+
+//    public static void main(String[] args) {
+//       List<ProductDetails> se =  searchName ("G");
+//        System.out.println(se.toString());
+//    }
 }
