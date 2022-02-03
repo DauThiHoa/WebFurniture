@@ -16,6 +16,7 @@ public class SearchAllProducts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
+//        request.setAttribute("productDetailsAllProduct", "");
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
         request.setAttribute("getListPriceAZ", ProductDetailsService.getInstance().getListPriceAZ());
@@ -33,7 +34,7 @@ public class SearchAllProducts extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("ProductDetailsListAllProduct").forward(request, response);
+        request.getRequestDispatcher("AllProducts2.jsp").forward(request, response);
 
     }
     @Override
