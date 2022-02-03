@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ContactService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "LienHeSendController", value = "/LienHeController")
+@WebServlet(name = "LienHeSendController", value = "/LienHeSendController")
 public class LienHeSendController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,7 +20,27 @@ public class LienHeSendController extends HttpServlet {
         String email = request.getParameter("email");
         String content = request.getParameter("content");
 
-        request.getRequestDispatcher("LienHeController").forward(request, response);
+        if ( name != "" && email != "" && content != ""){
+        boolean result = ContactService.getInstance().addContact(name,email,content);
+            System.out.println(result);
+        if (result) {
+            request.setAttribute("name" , "");
+            request.setAttribute("email" , "");
+            request.setAttribute("content" , "");
+            request.getRequestDispatcher("LienHe").forward(request, response);
+        }else {
+            request.setAttribute("name" , name);
+            request.setAttribute("email" , email);
+            request.setAttribute("content" , content);
+            request.getRequestDispatcher("LienHe").forward(request, response);
+          }
+        }
+        else {
+            request.setAttribute("name" , name);
+            request.setAttribute("email" , email);
+            request.setAttribute("content" , content);
+            request.getRequestDispatcher("LienHe").forward(request, response);
+        }
     }
 
     @Override

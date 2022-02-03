@@ -160,14 +160,20 @@
                     <p class="noiDung" align="left"> Email: WebFurniture@gmail.com </p>
                 </div>
                 <h3 class="ten"> Liên hệ với chúng tôi </h3>
+
+                <form action="LienHeSendController" method="POST">
                 <div class="noiDung_2">
-                    <input class="input_1" type="text" placeholder="Họ và tên"/>
-                    <input class="input_1" type="text" placeholder="Email"/>
-                    <input class="input_2" type="text" placeholder="Nội Dung"/>
+                    <jsp:useBean id="name" scope="request" class="java.lang.String"/>
+                    <input class="input_1" type="text" name="name" value="${name}" placeholder="Họ và tên"/>
+                    <jsp:useBean id="email" scope="request" class="java.lang.String"/>
+                    <input class="input_1" type="text" name="email" value="${email}" placeholder="Email"/>
+                    <jsp:useBean id="content" scope="request" class="java.lang.String"/>
+                    <input class="input_2" type="text" name="content" value="${content}" placeholder="Nội Dung"/>
                 </div>
                 <div class="noiDung_3">
-                    <button class="btn">Gửi liên hệ của bạn</button>
+                    <button class="btn" type="submit" onclick="clickInput()" >Gửi liên hệ của bạn</button>
                 </div>
+                    <form>
             </div>
         </div>
     </div>
@@ -281,5 +287,17 @@
     </div>
 </div>
 
+<script>
+    var input_1 = document.querySelector('.input_1').value;
+    var input_2 = document.querySelector('.input_2').value;
+
+    function clickInput () {
+        if (  input_1 == "" || input_2 == ""){
+            alert("Qúy khách vui lòng điền đầy đủ thông tin ! " );
+        }else {
+            alert("Qúy khách gửi liên hệ thành công ! " );
+        }
+    }z
+</script>
 </body>
 </html>
