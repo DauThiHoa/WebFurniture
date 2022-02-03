@@ -223,13 +223,14 @@
                 </div>
             </div>
         </div>
+        <form action="SearchAllProducts" method="POST">
 
         <div class="tuKhoa">
             <div class="khung">
                 <h2 class="ten"> Từ Khóa</h2>
             </div>
             <div class="noiDung">
-                <input value="" class="tuKhoaTimKiem" placeholder="Từ khóa tìm kiếm" onchange="timkiem()"></input>
+                <input value="" class="tuKhoaTimKiem" name="search" placeholder="Từ khóa tìm kiếm" onchange="timkiem()" ></input>
             </div>
         </div>
 
@@ -251,9 +252,10 @@
             </div>
         </div>
 
-        <button class="apDung">
+        <button class="apDung" type="submit">
             <h3 class="tenApDung"> Áp dụng</h3>
         </button>
+        </form>
     </div>
 
     <div id="right">
