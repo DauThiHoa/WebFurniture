@@ -26,7 +26,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
-        <a href="../LienHe/LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
+        <a href="../LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
             <div>
                 <i class="fa fa-phone-square" aria-hidden="true"></i>
             </div>
@@ -122,7 +122,7 @@
             <h3 class="ten"> TIN TỨC </h3>
         </div>
     </a>
-    <a href="../LienHe/LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
+    <a href="../LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
         <div id="lienHe">
             <h3 class="ten"> LIÊN HỆ </h3>
         </div>
@@ -960,7 +960,7 @@
             <p class="kinhNghiem">Với kinh nghiệm hơn 10 năm trong ngành nội thất, nội thất WEB FURNITURE tự hào là cung
                 cấp những mẫu sản phẩm nội thất tốt nhất . </p>
             <div class="hotline">
-                <a href="../LienHe/LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
+                <a href="../LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
                     <i class="fa fa-phone-square" aria-hidden="true"></i></a>
                 <p class="line">1900.363.079</p>
             </div>
@@ -1001,7 +1001,7 @@
                     </a>
                     <a href="../TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
                         <p>Tin tức</p></a>
-                    <a href="../LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="../LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>
                 </div>
                 <div class="chucNang">
