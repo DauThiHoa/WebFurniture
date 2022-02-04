@@ -107,17 +107,17 @@
         </div>
 
     </div>
-    <a href="../HomePage.jsp?_ijt=pae316ajrmdat5oebu7viiupon">
+    <a href="ProductDetailsList">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
     </a>
-    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=tbj9541mbers5cne53u03tmg0j">
+    <a href="HeThongCuaHang">
         <div id="heThongCuaHang">
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="../TinTuc/TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="TinTuc">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
@@ -808,15 +808,15 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="ProductDetailsList">
                         <p>Trang chủ</p></a>
-                    <a href="../HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="HeThongCuaHang">
                         <p>Giới thiệu</p>
                     </a>
                     <a href="../AllProducts.jsp">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="../TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="TinTuc">
                         <p>Tin tức</p></a>
                     <a href="../LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>

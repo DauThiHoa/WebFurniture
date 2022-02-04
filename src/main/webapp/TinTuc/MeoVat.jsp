@@ -28,7 +28,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
-        <a href="../LienHe/LienHe.html?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
+        <a href="LienHe">
             <div>
                 <i class="fa fa-phone-square" aria-hidden="true"></i>
             </div>

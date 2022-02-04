@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ContactService;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -20,7 +22,14 @@ public class LienHeController extends HttpServlet {
         request.setAttribute("email" , email);
         request.setAttribute("content" , content);
 
+        if ( name != "" && email != "" && content != "") {
+            request.setAttribute("name", "");
+            request.setAttribute("email", "");
+            request.setAttribute("content", "");
+        }
+
         request.getRequestDispatcher("LienHe.jsp").forward(request, response);
+
     }
 
     @Override

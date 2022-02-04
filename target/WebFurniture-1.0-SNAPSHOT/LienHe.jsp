@@ -1,4 +1,11 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -110,17 +117,17 @@
         </div>
 
     </div>
-    <a href="HomePage.jsp?_ijt=dvcgr4eqabqa191pdiriackdbe">
+    <a href="ProductDetailsList">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
     </a>
-    <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=tbj9541mbers5cne53u03tmg0j">
+    <a href="HeThongCuaHang">
         <div id="heThongCuaHang">
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="TinTuc/TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="TinTuc">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
@@ -173,7 +180,7 @@
                 <div class="noiDung_3">
                     <button class="btn" type="submit" onclick="clickInput()" >Gửi liên hệ của bạn</button>
                 </div>
-                    <form>
+                </form>
             </div>
         </div>
     </div>
@@ -187,7 +194,7 @@
             <p class="kinhNghiem">Với kinh nghiệm hơn 10 năm trong ngành nội thất, nội thất WEB FURNITURE tự hào là cung
                 cấp những mẫu sản phẩm nội thất tốt nhất . </p>
             <div class="hotline">
-                <a href="../LienHe/LienHe.jsp?_ijt=q9t21vli8l1t46l15aaa24a1ig">
+                <a href="LienHe">
                     <i class="fa fa-phone-square" aria-hidden="true"></i></a>
                 <p class="line">1900.363.079</p>
             </div>
@@ -218,15 +225,15 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="HomePage.jsp?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="ProductDetailsList">
                         <p>Trang chủ</p></a>
-                    <a href="HeThongCuaHang/HeThongCuaHang.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="HeThongCuaHang">
                         <p>Giới thiệu</p>
                     </a>
                     <a href=" ../Product/AllProducts.jsp?_ijt=lb79ipc726t04q7dgtat16sn83">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="TinTuc/TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="TinTuc">
                         <p>Tin tức</p></a>
                     <a href="../LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Liên hệ</p></a>
@@ -297,7 +304,7 @@
         }else {
             alert("Qúy khách gửi liên hệ thành công ! " );
         }
-    }z
+    }
 </script>
 </body>
 </html>
