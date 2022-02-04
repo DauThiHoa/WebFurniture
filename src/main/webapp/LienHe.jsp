@@ -36,7 +36,7 @@
         <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
-        <a href="../LienHe/LienHe.jsp?_ijt=bgebfatbnkkhu3d1mtpkq4j6ov">
+        <a href="LienHe">
             <div>
                 <i class="fa fa-phone-square" aria-hidden="true"></i>
             </div>
@@ -132,7 +132,7 @@
             <h3 class="ten"> TIN TỨC </h3>
         </div>
     </a>
-    <a href="../LienHe/LienHe.jsp?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
+    <a href="LienHe">
         <div id="lienHe">
             <h3 class="ten"> LIÊN HỆ </h3>
         </div>
@@ -235,7 +235,7 @@
                     </a>
                     <a href="TinTuc">
                         <p>Tin tức</p></a>
-                    <a href="../LienHe/LienHe.jsp?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="LienHe">
                         <p>Liên hệ</p></a>
                 </div>
                 <div class="chucNang">

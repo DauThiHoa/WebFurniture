@@ -20,6 +20,9 @@ public class TinTucController extends HttpServlet {
 
         List<NewComment> list = NewCommentService.getInstance().getAll();
         request.setAttribute("NewCommentList" , list);
+//        System.out.println(list);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         int sum = NewCommentService.getInstance().sumNewComment();
         request.setAttribute("sumNewComment" , sum);
 

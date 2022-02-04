@@ -35,11 +35,11 @@ public class NewCommentService implements Serializable {
         });
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-            sum += h.createUpdate("INSERT INTO newcomment ( nameCustomer , emailCustomer , content , idNew VALUES (?,?,?,?)")
+            sum += h.createUpdate("INSERT INTO newcomment ( nameCustomer , emailCustomer , content , idNew )  VALUES (?,?,?,?)")
                     .bind(0 , nameCustomer )
                     .bind(1 , emailCustomer)
                     .bind(2 , content)
-                    .bind(3 , idNew)
+                    .bind(3 , idNew + 1 )
                      .execute();
             // Số dòng được chèn vào
             return sum ;

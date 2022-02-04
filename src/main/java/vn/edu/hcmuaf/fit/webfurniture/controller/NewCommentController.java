@@ -27,7 +27,7 @@ public class NewCommentController extends HttpServlet {
 
         if ( nameCustomer != "" && emailCustomer != "" && content != ""){
             boolean result = NewCommentService.getInstance().addNewComment(nameCustomer,emailCustomer,content);
-            System.out.println(result);
+//            System.out.println(result);
             if (result) {
                 request.setAttribute("nameCustomer" , "");
                 request.setAttribute("emailCustomer" , "");

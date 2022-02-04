@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <link rel="icon" href="" type="image/png" class="icon">
+    <link rel="icon" href="HeThongCuaHang.png" type="image/png" class="icon">
     <title> NHOM 7 WEB FURNITURE - TIN TỨC </title>
     <link rel="stylesheet" href="TinTuc.css">
 
@@ -263,21 +263,22 @@
         <form>
 <%--        <jsp:useBean id="sumNewComment" scope="request" class="java.lang.Integer"/>--%>
     <h3 class="soBinhLuan"> Bình luận ( ${sumNewComment} bình luận )</h3>
-        <jsp:useBean id="NewCommentList" scope="request" type="java.util.List"/>
-        <c:forEach items="${NewCommentList}" var="new" >
+    <jsp:useBean id="NewCommentList" scope="request" type="java.util.List"/>
+    <c:forEach items="${NewCommentList}" var="n" >
     <div class="binhLuan">
         <div class="noiDungBinhLuan">
             <div class="anh">
                 <img class="anhBinhLuan" src="TinTuc/Image_TinTuc/anhDaiDien2.PNG"/>
             </div>
             <div class="thongTinBinhLuan">
-                <h4 class="tenNguoiBinhLuan">${new.nameCustomer}</h4>
-                <p class="ngayDang">${new.emailCustomer}</p>
-                <p class="noiDung">${new.content}</p>
+<%--                    <h3> ${NewCommentList} </h3>--%>
+                <h4 class="tenNguoiBinhLuan">${n.nameCustomer}</h4>
+                <p class="ngayDang">${n.emailCustomer}</p>
+                <p class="noiDung">${n.content}</p>
             </div>
         </div>
     </div>
-        </c:forEach>
+    </c:forEach>
 </div>
 
 

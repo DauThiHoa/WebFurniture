@@ -123,7 +123,7 @@
             <h3 class="ten"> TIN TỨC </h3>
         </div>
     </a>
-    <a href="../LienHe/LienHe.html?_ijt=8lg57ntcbod9a8p8j8prq19rf6">
+    <a href="LienHe">
         <div id="lienHe">
             <h3 class="ten"> LIÊN HỆ </h3>
         </div>
@@ -285,7 +285,7 @@
             <p class="kinhNghiem">Với kinh nghiệm hơn 10 năm trong ngành nội thất, nội thất WEB FURNITURE tự hào là cung
                 cấp những mẫu sản phẩm nội thất tốt nhất . </p>
             <div class="hotline">
-                <a href="../LienHe/LienHe.html?_ijt=q9t21vli8l1t46l15aaa24a1ig">
+                <a href="LienHe">
                     <i class="fa fa-phone-square" aria-hidden="true"></i></a>
                 <p class="line">1900.363.079</p>
             </div>
@@ -326,7 +326,7 @@
                     </a>
                     <a href="../TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">
                         <p>Tin tức</p></a>
-                    <a href="../LienHe/LienHe.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="LienHe">
                         <p>Liên hệ</p></a>
                 </div>
                 <div class="chucNang">
