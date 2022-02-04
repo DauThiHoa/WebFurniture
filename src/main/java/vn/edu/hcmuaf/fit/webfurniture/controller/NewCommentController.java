@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ContactService;
 import vn.edu.hcmuaf.fit.webfurniture.service.NewCommentService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -19,8 +20,32 @@ public class NewCommentController extends HttpServlet {
 
         request.setAttribute("NewCommentList" , NewCommentService.getInstance().getAll());
         request.setAttribute("sumNewComment" , NewCommentService.getInstance().sumNewComment());
-        request.getRequestDispatcher("TinTuc.jsp").forward(request, response);
 
+        String nameCustomer = request.getParameter("nameCustomer");
+        String emailCustomer = request.getParameter("emailCustomer");
+        String content = request.getParameter("content");
+
+        if ( nameCustomer != "" && emailCustomer != "" && content != ""){
+            boolean result = NewCommentService.getInstance().addNewComment(nameCustomer,emailCustomer,content);
+            System.out.println(result);
+            if (result) {
+                request.setAttribute("nameCustomer" , "");
+                request.setAttribute("emailCustomer" , "");
+                request.setAttribute("content" , "");
+                request.getRequestDispatcher("TinTuc").forward(request, response);
+            }else {
+                request.setAttribute("nameCustomer" , nameCustomer);
+                request.setAttribute("emailCustomer" , emailCustomer);
+                request.setAttribute("content" , content);
+                request.getRequestDispatcher("TinTuc").forward(request, response);
+            }
+        }
+        else {
+            request.setAttribute("nameCustomer" , nameCustomer);
+            request.setAttribute("emailCustomer" , emailCustomer);
+            request.setAttribute("content" , content);
+            request.getRequestDispatcher("TinTuc").forward(request, response);
+        }
     }
 
     @Override

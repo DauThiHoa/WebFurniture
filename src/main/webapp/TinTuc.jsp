@@ -1,6 +1,4 @@
-<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="com.google.gson.Gson" %>
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn"
@@ -242,24 +240,28 @@
 </div>
 
 <div id="khungBinhLuan">
-    <form action="NewCommentController" METHOD="post">
+    <form action="NewCommentController" method="post">
     <h3 class="tieuDeBinhLuan"> Viết bình luận của bạn : </h3>
     <div class="hoTen_Email">
         <div class="hoten">
-            <input class="ten" placeholder="Họ tên :" name="nameCustomer" value=""> </input>
+            <jsp:useBean id="nameCustomer" scope="request" class="java.lang.String"/>
+            <input class="ten" placeholder="Họ tên :" name="nameCustomer" value="${nameCustomer}"> </input>
         </div>
         <div class="Email">
-            <input class="email" placeholder="Email :" name="emailCustomer" value=""> </input>
+            <jsp:useBean id="emailCustomer" scope="request" class="java.lang.String"/>
+            <input class="email" placeholder="Email :" name="emailCustomer" value="${emailCustomer}"> </input>
         </div>
     </div>
 
     <div class="noiDungBinhLuan">
-        <input class="thongTinNoiDung" placeholder="Nội dung : " name="content" value=""> </input>
+        <jsp:useBean id="content" scope="request" class="java.lang.String"/>
+        <input class="thongTinNoiDung" placeholder="Nội dung : " name="content" value="${content}"> </input>
     </div>
-    <button class="guiBinhLuan" type="submit">
+    <button class="guiBinhLuan" type="submit" onclick="clickNewComment()">
         <h4 class="gui"> Gửi bình luận </h4>
     </button>
-        <jsp:useBean id="sumNewComment" scope="request" class="java.lang.Integer"/>
+        <form>
+<%--        <jsp:useBean id="sumNewComment" scope="request" class="java.lang.Integer"/>--%>
     <h3 class="soBinhLuan"> Bình luận ( ${sumNewComment} bình luận )</h3>
         <jsp:useBean id="NewCommentList" scope="request" type="java.util.List"/>
         <c:forEach items="${NewCommentList}" var="new" >
@@ -276,8 +278,6 @@
         </div>
     </div>
         </c:forEach>
-
-    <form>
 </div>
 
 
@@ -424,6 +424,18 @@
         </div>
     </div>
 </div>
+<script>
 
+    var ten = document.querySelector('.ten');
+    var email = document.querySelector('.email');
+    var thongTinNoiDung = document.querySelector('.thongTinNoiDung');
+    function clickNewComment() {
+        if ( ten == "" ||  email == "" || thongTinNoiDung == ""  ){
+            alert("Qúy khách vui lòng điền đầy đủ thông tin ! " );
+        }else {
+            alert("Qúy khách đã bình luận thành công !");
+        }
+    }
+</script>
 </body>
 </html>

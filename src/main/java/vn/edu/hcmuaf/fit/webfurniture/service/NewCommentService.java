@@ -5,11 +5,12 @@ import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class NewCommentService {
+public class NewCommentService implements Serializable {
     private static NewCommentService instance ;
 
     public static NewCommentService getInstance() {
@@ -28,12 +29,17 @@ public class NewCommentService {
         });
     }
     public boolean addNewComment (String nameCustomer, String emailCustomer, String content ) {
+        int idNew = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*) from newcomment")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-            sum += h.createUpdate("INSERT INTO newcomment ( nameCustomer , emailCustomer , content  VALUES (?,?,?)")
+            sum += h.createUpdate("INSERT INTO newcomment ( nameCustomer , emailCustomer , content , idNew VALUES (?,?,?,?)")
                     .bind(0 , nameCustomer )
                     .bind(1 , emailCustomer)
                     .bind(2 , content)
+                    .bind(3 , idNew)
                      .execute();
             // Số dòng được chèn vào
             return sum ;
