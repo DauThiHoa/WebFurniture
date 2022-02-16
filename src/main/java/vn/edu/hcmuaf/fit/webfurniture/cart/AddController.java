@@ -15,8 +15,8 @@ public class AddController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // get productDetalis id from request
        String id =  request.getParameter("id");
-       String so =  request.getParameter("so");
-        System.out.println(so);
+       String quantitySold =  request.getParameter("quantitySold");
+       System.out.println(quantitySold);
        ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
        if ( productDetails != null ){
            HttpSession session = request.getSession();
@@ -24,6 +24,7 @@ public class AddController extends HttpServlet {
            if ( cart == null ){
                cart = Cart.getInstance();
            }
+           cart.setQuantitySold(Integer.parseInt(quantitySold));
            cart.put(productDetails);
            session.setAttribute("cart" , cart); // add session cart
        }
@@ -33,6 +34,6 @@ public class AddController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+                   doGet(request,response);
     }
 }

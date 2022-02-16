@@ -221,29 +221,25 @@
             <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
                 Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
         </div>
-        <div class="soLuongSanPham">
-            <div class="tru" style="margin-top: 10%" onclick="tru(this)" alt="giamSoLuong">
-                <h3 class="dauTru"> - </h3>
-            </div>
-<%--            <form action="cart-add" method="post" >--%>
-            <div class="so" style="margin-top: 10%">
-                <h3 class="soLuongDat" id="soLuong">1</h3>
-<%--                <input class="soLuongDat" style="display: none" type="text" name="so" value="1">--%>
-            </div>
-            <div class="cong" style="margin-top: 10%" onclick="cong(this)" alt="tangSoLuong">
-                <h3 class="dauCong"> + </h3>
-            </div>
-            <% int i = 1 ; %>
-            <a href="cart-add?id=${productDetails.id}&&so=<%= i %>">
+
+        <form action="cart-add?id=${productDetails.id}" method="post" class="soLuongSanPham">
+    <input style="margin-top: 10% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
+     background: #1fb5d4 ; color: white ; text-align: center" class="so soLuongDat quantity" name="quantitySold"
+           type="number" value="1" onclick="clickQuantitySold()">
+
+<%--    <button type="submit" style="display: none">--%>
+<%--            <a href="cart-add?id=${productDetails.id}" type="submit">--%>
 <%--                <button class="gioHang" type="submit" >--%>
-                <div class="gioHang" style="margin-top: 10%" >
+                <button type="submit" class="gioHang" style="margin-top: 10% ; margin-right: -50%" >
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
-                </div>
+                </button>
 <%--                </button>--%>
-            </a>
+<%--            </a>--%>
+<%--    </button>--%>
+        </form>
 <%--            </form>--%>
-            <a href="paymentAddProductDetails?id=${productDetails.id}&&quantitySold=<%= i %>&&priceNew=${productDetails.priceNew}"  style="margin-top: -200px" >
+            <a href="paymentAddProductDetails?id=${productDetails.id}&&quantitySold=<%= 1 %>&&priceNew=${productDetails.priceNew}"  style="margin-top: -200px" >
                 <div class="muaNgay">
                     <h3 class="mua"> Đặt mua ngay</h3>
                 </div>
@@ -545,7 +541,12 @@
 
 <script src="ChiTietSanPham.js"></script>
 <script>
-    var so = document.querySelector('.soLuongDat').innerHTML;
+    var soLuongDat = document.querySelector('.quantity').value;
+    function clickQuantitySold () {
+        alert(soLuongDat );
+        soLuongDat = Number( soLuongDat + 1 ) ;
+        alert(soLuongDat );
+    }
     function send () {
         const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');
         const noiDungTieuDe = document.querySelector('.noiDungTieuDe');

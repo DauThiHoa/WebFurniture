@@ -8,9 +8,17 @@ public class Cart implements Serializable {
     private static Cart instance ;
     private int id ;
     private Map <String , ProductDetails > productDetailsList ;
-
+    private int quantitySold = 1 ;
     private Cart (){
          productDetailsList = new HashMap<>( );
+    }
+
+    public int getQuantitySold() {
+        return quantitySold;
+    }
+
+    public void setQuantitySold(int quantitySold) {
+        this.quantitySold = quantitySold;
     }
 
     public static Cart getInstance(){
@@ -21,7 +29,7 @@ public class Cart implements Serializable {
         if (productDetailsList.containsKey ( productDetails.getId()) ){
                upQuantity(productDetails.getId());
         }else {
-            productDetails.setQuantitySold(1);
+            productDetails.setQuantitySold(quantitySold);
             productDetailsList.put(productDetails.getId(), productDetails);
         }
     }
