@@ -116,7 +116,7 @@
         </div>
 
     </div>
-    <a href="HomePage.jsp?_ijt=dvcgr4eqabqa191pdiriackdbe">
+    <a href="ProductDetailsList">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>

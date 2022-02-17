@@ -11,32 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InformationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/ProfileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/AddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/ProductDetailsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/ProductDetailsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAillen_03.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Goisofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Goisofa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Lohoagia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Lohoagia.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Remcua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Remcua.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_TamTham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_TamTham.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,6 +394,7 @@
       <workItem from="1643987638927" duration="4274000" />
       <workItem from="1645015589525" duration="10868000" />
       <workItem from="1645068750423" duration="28392000" />
+      <workItem from="1645103150402" duration="20783000" />
     </task>
     <servers />
   </component>
@@ -537,26 +520,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java</url>
           <line>20</line>
           <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/OrderDao.java</url>

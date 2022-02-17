@@ -401,18 +401,6 @@
 
     <div class="infor2" style=" height: 25%">
         <h1 class="information"> VIETNAMESE</h1>
-<%--        <div class="information2">--%>
-<%--            <h2 class="Category"> Title </h2>--%>
-<%--            <input class="type1" type="text" name="fname" value=""><br>--%>
-<%--        </div>--%>
-<%--        <div class="information3">--%>
-<%--            <h2 class="Modules"> Path </h2>--%>
-<%--            <input class="type2" type="text" name="fname" value="Product Path"><br>--%>
-<%--        </div>--%>
-<%--        <div class="information4">--%>
-<%--            <h2 class="Category"> Numerical order </h2>--%>
-<%--            <input class="type3" type="text" name="fname" value="   2"><br>--%>
-<%--        </div>--%>
         <div class="information5">
             <h2 class="Modules"> Action </h2>
             <div class="">

@@ -244,7 +244,7 @@
       </form>
         <form action="paymentAddProductDetails?id=${productDetails.id}&&priceNew=${productDetails.priceNew}"
               method="post" class="soLuongSanPham" style="margin-top: -198px ; margin-left: 7%" >
-            <input style="display: none ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
+            <input style="display: block ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
             <c:if test="${productDetails.id != 'sp24'}">
                 <button class="muaNgay" style="margin-left: 60%" type="submit">
                     <h3 class="mua"> Đặt mua ngay</h3>
@@ -387,10 +387,10 @@
 <%--        <jsp:useBean id="productDetails1" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>--%>
     </div>
     <div class="from2">
-        <h3 class="ten"> Thêm hình sản phẩm nếu có (tối đa 5 hình): </h3>
-        <div class="chonHinh">
-            <h3 class="hinh"> Chọn hình </h3>
-        </div>
+<%--        <h3 class="ten"> Thêm hình sản phẩm nếu có (tối đa 5 hình): </h3>--%>
+<%--        <div class="chonHinh">--%>
+<%--            <h3 class="hinh"> Chọn hình </h3>--%>
+<%--        </div>--%>
         <div class="chonHinh">
             <a href="send">
                 <input type="text" style="display: none" name="id" value="${productDetails.id}">
@@ -554,11 +554,12 @@
 
 <script src="ChiTietSanPham.js"></script>
 <script>
-    var soLuongDat = document.querySelector('.quantity').value;
+    var soLuongDat = document.querySelector('.quantity');
     var quantityPayment = document.querySelector('.quantityPayment');
 
     function clickQuantitySold () {
-        quantityPayment.value = Number( soLuongDat ) + 1 ;
+        quantityPayment.value = Number( soLuongDat.value ) + 1 ;
+        soLuongDat.value = Number( soLuongDat.value ) ;
     }
     function send () {
         const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');

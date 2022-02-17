@@ -89,4 +89,46 @@ public class OrderDao {
         // size của đơn hàng
         return true;
     }
+//    select count(*) from orderdetails
+//    select count(*)/100 from orderdetails
+//    select count(*) from orders
+//    select count(*)/100 from orders
+
+    public int sumOrder (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*) from orders")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+    }
+    public Double countOrder (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*)/100 from orders")
+                    .mapTo(Double.class).findFirst().get() ;
+        });
+    }
+    public int sumContact (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*) from contact")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+    }
+    public Double countContact (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*)/100 from contact")
+                    .mapTo(Double.class).findFirst().get() ;
+        });
+    }
+
+    public int sumOrderDetails (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*) from orderdetails")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+    }
+    public Double countOrderDetails (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*)/100 from orderdetails")
+                    .mapTo(Double.class).findFirst().get() ;
+        });
+    }
 }

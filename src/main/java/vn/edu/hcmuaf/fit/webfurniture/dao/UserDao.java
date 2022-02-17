@@ -170,4 +170,18 @@ public class UserDao {
         }
 
     }
+//    select count(*) from `user`
+//    select count(*)/100 from `user`
+    public int sumUser (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*) from `user`")
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+    }
+    public Double countUser (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*)/100 from `user`")
+                    .mapTo(Double.class).findFirst().get() ;
+        });
+    }
 }

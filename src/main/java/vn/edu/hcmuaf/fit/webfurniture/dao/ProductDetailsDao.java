@@ -80,4 +80,16 @@ public class ProductDetailsDao {
 //        List<ProductDetails> j = getAllName (name);
 //        System.out.println(j.toString());
 //    }
+    public int sumProductDetails (){
+    return JDBIConnector.get().withHandle(handle -> {
+        return handle.createQuery("select count(*) from productdetails")
+                .mapTo(Integer.class).findFirst().get() ;
+    });
+}
+    public Double countProductDetails (){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*)/100 from productdetails ")
+                    .mapTo(Double.class).findFirst().get() ;
+        });
+    }
 }
