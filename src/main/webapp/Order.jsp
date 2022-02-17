@@ -62,7 +62,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/WebFurniture_war_exploded/DirectoryManagement">
+                        <a class="nav-link " href="DirectoryManagement">
                             <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
                             <span class="nav-link-text">Directory Management</span>
                         </a>
@@ -396,13 +396,11 @@
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
-<%--            <jsp:useBean id="haha" scope="request" type="java.lang.String"/>--%>
             <jsp:useBean id="customer" scope="request" type="java.util.List"/>
             <c:forEach items="${customer}" var="c" >
             <jsp:useBean id="order" scope="request" type="java.util.List"/>
             <c:forEach items="${order}" var="order" >
-<%--            <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>--%>
-<%--                <c:set var="${order.idCustomer}" value="java.lang.Integer">--%>
+
 <%--                <c:if test="${c.idCustomer == order.idCustomer }" >--%>
 
             <tr>
@@ -414,13 +412,11 @@
                 <td class="chiTiet"><input type="text" name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.totalMoney}"></td>
                 <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${c.bank}"></td>
                 <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.status}"></td>
-<%--                <td><i class="fa fa-edit"></i></td>--%>
                 <td>
                     <input type="hidden" style="display: none" name ="idOrder" value="${order.idOrder}">
                     <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
                 </td>
                 </form>
-<%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
                 <td>
                     <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
                         <input type="hidden" name ="id" value="${order.idOrder}">
@@ -428,8 +424,7 @@
                     </form>
                 </td>
             </tr>
-<%--                </c:if>--%>
-<%--                </c:set>--%>
+<%--              </c:if>--%>
             </c:forEach>
                             </c:forEach>
         </table>

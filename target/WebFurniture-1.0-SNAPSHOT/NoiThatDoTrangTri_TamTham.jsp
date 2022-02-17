@@ -58,7 +58,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="cart">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>

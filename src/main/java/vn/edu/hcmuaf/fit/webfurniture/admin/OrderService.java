@@ -48,7 +48,7 @@ public class OrderService  implements Serializable {
 
     public Customer getCustomer ( ) {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" select * from customer where idOrder = ( select max(idOrder) from orders )")
+            return handle.createQuery(" select * from customer where idOrder = ( select max(idOrder + 0) from orders )")
                     .mapToBean(Customer.class).first();
         });
     }

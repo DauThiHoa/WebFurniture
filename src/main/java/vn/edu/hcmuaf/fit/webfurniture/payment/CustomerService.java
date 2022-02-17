@@ -28,7 +28,7 @@ public class CustomerService {
     // TONG TIEN KHACH HANG PHAI TRA
     public int sumTotal(){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT (totalMoney + ship ) - discount FROM customer WHERE idCustomer = ( SELECT MAX(idCustomer) FROM customer )")
+            return handle.createQuery("SELECT (totalMoney + ship ) - discount FROM customer WHERE idCustomer = ( SELECT MAX(idCustomer + 0) FROM customer )")
                     .mapTo(Integer.class).findFirst().get() ;
         });
     }

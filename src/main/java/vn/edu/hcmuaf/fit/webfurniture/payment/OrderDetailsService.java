@@ -38,22 +38,22 @@ public class OrderDetailsService {
     // SUM DISCOUNT ( KHUYEN MAI )
     public int sumDiscount(){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails )")
-                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails )")
+            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
                     .mapTo(Integer.class).findFirst().get();
         });
     }
     // SUM TOTALMONEY ( TONG TIEN SAN PHAM )
     public int sumTotalMoney(){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT SUM( totalMoney ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder ) FROM orderdetails ) ")
+            return handle.createQuery("SELECT SUM( totalMoney ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0 ) FROM orderdetails ) ")
                     .mapTo(Integer.class).findFirst().get() ;
         });
     }
 
     public boolean insert(String name,String birthDay,String gender, String email, String phone, String address, String bank, String cardNumber , String method , String discountCode) {
         int idOrder = JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT idOrder FROM orders  WHERE idOrder = ( SELECT MAX(idOrder) FROM orders )")
+            return handle.createQuery("SELECT idOrder FROM orders  WHERE idOrder = ( SELECT MAX(idOrder + 0) FROM orders )")
                     .mapTo(Integer.class).findFirst().get() ;
         });
         int ship = sumDiscount();

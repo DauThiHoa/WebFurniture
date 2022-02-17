@@ -27,21 +27,23 @@ public class OrderController extends HttpServlet {
         request.setAttribute("profile" , profile);
 
              List<Order> order =  OrderService.getInstance().getAll();
-        System.out.println(order.toString());
              ArrayList<Customer> customers = new ArrayList<Customer>();
+
              for ( int i = 0 ; i < order.size() ; i ++){
                  request.setCharacterEncoding("UTF-8");
                  response.setCharacterEncoding("UTF-8");
                  int id = order.get(i).getIdCustomer();
-                 System.out.println(id);
                  Customer customer = OrderService.getInstance().getCustomer(id);
                  customers.add(customer);
-                 System.out.println(customers.toString());
              }
+//        for ( int i = 0 ; i < order.size() ; i ++){
+//            System.out.println(order.get(i).toString());
+//        }
 //        for ( int i = 0 ; i < customers.size() ; i ++){
 //            System.out.println(customers.get(i).toString());
 //        }
-            Customer customer = OrderService.getInstance().getCustomer();
+
+             Customer customer = OrderService.getInstance().getCustomer();
              request.setAttribute("customer" , customers);
              request.setAttribute("order" , order);
 //             request.setAttribute("haha" , "haha");

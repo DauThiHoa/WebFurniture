@@ -23,7 +23,7 @@ public class InformationService implements Serializable {
     }
     public Information getAll () {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from information where idInformation = ( select max( idInformation ) from information ) ")
+            return handle.createQuery("select * from information where idInformation = ( select max( idInformation + 0) from information ) ")
                     .mapToBean(Information.class).first();
         });
     }

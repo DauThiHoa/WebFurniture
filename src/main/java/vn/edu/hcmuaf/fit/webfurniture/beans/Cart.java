@@ -35,7 +35,7 @@ public class Cart implements Serializable {
     }
     private void upQuantity ( String id ){
         ProductDetails productDetails = productDetailsList.get(id);
-        productDetails.setQuantitySold(productDetails.getQuantitySold() + 1 );
+        productDetails.setQuantitySold(productDetails.getQuantitySold() + quantitySold );
     }
     // update quantity of productDetails by id
     public void updateQuantity ( String id , int quantity ){

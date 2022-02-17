@@ -70,7 +70,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="GioHang.jsp">
+        <a href="cart">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>

@@ -36,6 +36,7 @@ public class DetailsProductController extends HttpServlet {
         String quantitySold = request.getParameter("quantitySold");
         String priceNew = request.getParameter("priceNew");
 
+        System.out.println(quantitySold);
         HttpSession session = request.getSession();
         // Xử lý đăng nhập -> lấy id khách hàng
 //        if ((session.getAttribute("auth")) == null ) {

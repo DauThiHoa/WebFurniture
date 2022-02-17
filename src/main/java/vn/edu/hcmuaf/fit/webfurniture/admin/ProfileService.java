@@ -26,7 +26,7 @@ public class ProfileService implements Serializable {
 
     public Profile getProfile ( ) {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" select * from profile where idProfile = ( select max(idProfile) from profile )")
+            return handle.createQuery(" select * from profile where idProfile = ( select max(idProfile + 0) from profile )")
                     .mapToBean(Profile.class).first();
         });
     }

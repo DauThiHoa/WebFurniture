@@ -71,7 +71,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="cart">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -116,6 +116,7 @@
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
+            </a>
             </a>
         </div>
 
@@ -216,34 +217,46 @@
 
             </div>
         </div>
-        <div class="chatLieu" >
-            <h3 class="tieuDe"> Chất liệu : </h3>
+        <c:if test="${productDetails.id != 'sp24'}">
+        <div class="chatLieu" style="margin-top: 20%" >
+            <h3 class="tieuDe" > Chất liệu : </h3>
             <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
                 Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
         </div>
+        </c:if>
+        <c:if test="${productDetails.id == 'sp24'}">
+            <div class="chatLieu" >
+                <h3 class="tieuDe" > Chất liệu : </h3>
+                <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
+                    Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
+            </div>
+        </c:if>
 
         <form action="cart-add?id=${productDetails.id}" method="post" class="soLuongSanPham">
     <input style="margin-top: 10% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
-     background: #1fb5d4 ; color: white ; text-align: center" class="so soLuongDat quantity" name="quantitySold"
+     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -87%" class="so soLuongDat quantity" name="quantitySold"
            type="number" value="1" onclick="clickQuantitySold()">
 
-<%--    <button type="submit" style="display: none">--%>
-<%--            <a href="cart-add?id=${productDetails.id}" type="submit">--%>
-<%--                <button class="gioHang" type="submit" >--%>
-                <button type="submit" class="gioHang" style="margin-top: 10% ; margin-right: -50%" >
+                <button type="submit" class="gioHang" style="margin-top: 10% ; margin-right: -50% ; margin-left: -60%" >
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </button>
-<%--                </button>--%>
-<%--            </a>--%>
-<%--    </button>--%>
-        </form>
-<%--            </form>--%>
-            <a href="paymentAddProductDetails?id=${productDetails.id}&&quantitySold=<%= 1 %>&&priceNew=${productDetails.priceNew}"  style="margin-top: -200px" >
-                <div class="muaNgay">
+      </form>
+        <form action="paymentAddProductDetails?id=${productDetails.id}&&priceNew=${productDetails.priceNew}"
+              method="post" class="soLuongSanPham" style="margin-top: -198px ; margin-left: 7%" >
+            <input style="display: none ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
+            <c:if test="${productDetails.id != 'sp24'}">
+                <button class="muaNgay" style="margin-left: 60%" type="submit">
                     <h3 class="mua"> Đặt mua ngay</h3>
-                </div>
-            </a>
+                </button>
+            </c:if>
+            <c:if test="${productDetails.id == 'sp24'}">
+                <button class="muaNgay" style="margin-left: 60% ; margin-top: 4%"  type="submit">
+                    <h3 class="mua"> Đặt mua ngay</h3>
+                </button>
+            </c:if>
+        </form>
+<%--        </form>--%>
         </div>
     </div>
 </div>
@@ -542,10 +555,10 @@
 <script src="ChiTietSanPham.js"></script>
 <script>
     var soLuongDat = document.querySelector('.quantity').value;
+    var quantityPayment = document.querySelector('.quantityPayment');
+
     function clickQuantitySold () {
-        alert(soLuongDat +"lllllll");
-        soLuongDat = Number( soLuongDat + 1 ) ;
-        alert(soLuongDat +"oooooo");
+        quantityPayment.value = Number( soLuongDat ) + 1 ;
     }
     function send () {
         const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');

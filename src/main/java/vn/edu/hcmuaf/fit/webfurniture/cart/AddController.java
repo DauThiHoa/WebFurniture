@@ -24,7 +24,9 @@ public class AddController extends HttpServlet {
            if ( cart == null ){
                cart = Cart.getInstance();
            }
-           cart.setQuantitySold(Integer.parseInt(quantitySold));
+           if (quantitySold != null ) {
+               cart.setQuantitySold(Integer.parseInt(quantitySold));
+           }
            cart.put(productDetails);
            session.setAttribute("cart" , cart); // add session cart
        }

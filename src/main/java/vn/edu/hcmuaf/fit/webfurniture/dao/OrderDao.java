@@ -20,7 +20,7 @@ public class OrderDao {
 
     public boolean create( Cart cart) {
         int idUser = JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT MAX(id) FROM `user`")
+            return handle.createQuery("SELECT MAX(id + 0) FROM `user`")
                     .mapTo(Integer.class).findFirst().get() ;
         });
         int orderId = JDBIConnector.get().withHandle(h -> {
@@ -58,12 +58,12 @@ public class OrderDao {
         int quantity = Integer.parseInt(quantitySold);
         int price = Integer.parseInt(priceNew);
         int idUser = JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT MAX(id) FROM `user`")
+            return handle.createQuery("SELECT MAX(id + 0) FROM `user`")
                     .mapTo(Integer.class).findFirst().get() ;
         });
         int orderId = JDBIConnector.get().withHandle(h -> {
             int i = 0 ;
-            ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
+            ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ? , ? )")
                     .bind(0 , idUser)
 //                    .bind (0, "idCustomer(User)")
                     .bind(1, quantity * price)
