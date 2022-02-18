@@ -462,6 +462,11 @@
     <%--    );--%>
     <%--} );--%>
 <%--</script>--%>
+<script type="text/javascript" src="<%= Asset.url("vendor/dt/datatables.min.js")%>"></script>
+<script type="text/javascript" href="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" href="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 <script>
     function trash () {
         alert("Bạn đã xóa sản phẩm thành công !")

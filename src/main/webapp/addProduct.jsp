@@ -377,16 +377,17 @@
     </div>
 
     <form action="add-Product" method="post" >
-    <div class="infor" style="height: 370px; width: 95%">
+    <div class="infor" style="height: 480px; width: 95%">
         <h1 class="information" style="font-size: 125%"> GENERAL INFORMATION</h1>
-<%--        <div class="information1">--%>
-<%--            <h2 class="Image"> Image </h2>--%>
-<%--            <img src="ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>--%>
-<%--        </div>--%>
-        <div class="information2">
+        <div class="information1">
             <h2 class="Image"> Image </h2>
+            <img src="ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="imageINPUT image"/>
+            <input type="file" style="margin-left: 240px" name="file" class="file" onchange="clickImage()">
+        </div>
+        <div class="information2">
+            <h2 class="Image">Link </h2>
             <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
-            <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
+            <input class="type linkImage" type="text" style="margin-left: 20px" name="linkImage" value="${linkImage}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Category </h2>
@@ -518,6 +519,18 @@
     }
     function exit() {
         alert("Thoát và không tiếp tục thêm sản phẩm !");
+    }
+
+    const file = document.querySelector('.file') ;
+    const imageINPUT = document.querySelector('.imageINPUT');
+    var imagevalueINPUT = document.querySelector('.imageINPUT') ;
+    var linkImage = document.querySelector('.linkImage') ;
+
+    function clickImage () {
+        let url = URL.createObjectURL(file.files[0]);
+        imageINPUT.setAttribute('src', url);
+        imagevalueINPUT.value = url;
+        linkImage.value = url;
     }
 
 </script>

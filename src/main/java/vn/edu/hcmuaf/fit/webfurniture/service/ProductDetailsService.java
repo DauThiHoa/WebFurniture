@@ -62,6 +62,14 @@ public class ProductDetailsService {
         int changeQuantity = Integer.parseInt(quantity);
         int changePriceNew = Integer.parseInt(priceNew);
 
+        int exist = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select count(*) from productdetails where id = ? ")
+                    .bind(0,id)
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+        if (exist >= 1 ){
+            return false ;
+        }
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
             sum += h.createUpdate("INSERT INTO productdetails ( id , `name` , description , trademark , production ," +

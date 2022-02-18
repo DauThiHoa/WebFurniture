@@ -28,7 +28,7 @@ public class OrderController extends HttpServlet {
 
              List<Order> order =  OrderService.getInstance().getAll();
              ArrayList<Customer> customers = new ArrayList<Customer>();
-
+        System.out.println(1);
              for ( int i = 0 ; i < order.size() ; i ++){
                  request.setCharacterEncoding("UTF-8");
                  response.setCharacterEncoding("UTF-8");
@@ -36,16 +36,17 @@ public class OrderController extends HttpServlet {
                  Customer customer = OrderService.getInstance().getCustomer(id);
                  customers.add(customer);
              }
-//        for ( int i = 0 ; i < order.size() ; i ++){
-//            System.out.println(order.get(i).toString());
-//        }
-//        for ( int i = 0 ; i < customers.size() ; i ++){
-//            System.out.println(customers.get(i).toString());
-//        }
-
              Customer customer = OrderService.getInstance().getCustomer();
-             request.setAttribute("customer" , customers);
-             request.setAttribute("order" , order);
+
+if( order.isEmpty() || customers.isEmpty()){
+    request.setAttribute("customer" , "null");
+    request.setAttribute("order" , "null");
+    System.out.println(order);
+    System.out.println(customers);
+}else {
+    request.setAttribute("customer", customers);
+    request.setAttribute("order", order);
+}
 //             request.setAttribute("haha" , "haha");
              request.getRequestDispatcher("Order.jsp").forward(request, response);
 

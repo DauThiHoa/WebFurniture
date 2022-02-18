@@ -411,11 +411,12 @@
                 <td><input style="text-align: center; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="modules" value="${p.modules}"></td>
                 <td>
                     <c:if test="${p.display == 'none'}">
-                        <input style="font-size: 150%" type="checkbox" name="display" value="block">
+                        <input style="font-size: 200px" type="checkbox" name="display" value="block">
                     </c:if>
                     <c:if test="${p.display == 'block'}">
-                        <input class="fa fa-check-square" style="font-size: 150%" type="checkbox" name="display" value="block">
-                        <i style="font-size: 150% ; background: #1fb5d4 ; color: white" class="fa fa-check-square" aria-hidden="true"></i>
+<%--                        <input class="fa fa-check-square" style="font-size: 150% ;background: white ; color: #00dea2"--%>
+<%--                               type="checkbox" name="display" value="block" aria-hidden="true">--%>
+                        <i style="font-size: 150% ; background: white ; color: #00dea2" class="fa fa-check-square" aria-hidden="true"></i>
                     </c:if>
                 </td>
                 <td>

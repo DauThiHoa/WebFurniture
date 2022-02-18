@@ -19,7 +19,7 @@ public class AddProduct extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
-            request.getRequestDispatcher("addProduct.jsp").forward(request, response);
+        request.getRequestDispatcher("addProduct.jsp").forward(request, response);
 
     }
 

@@ -1,31 +1,27 @@
-/*package vn.edu.hcmuaf.fit.webfurniture.mail;
-
-import com.google.protobuf.*;
-import com.mysql.cj.Session;
-import com.sun.jdi.connect.Transport;
+package vn.edu.hcmuaf.fit.webfurniture.mail;
 
 import javax.mail.*;
-import java.io.UnsupportedEncodingException;
-import java.net.PasswordAuthentication;
-import javax.mail.Message;
-import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-import static javax.management.remote.JMXConnectorFactory.connect;
+import static com.mysql.cj.Session.*;
+import static com.sun.jdi.connect.Transport.*;
+import static javax.mail.Transport.send;
 
 public class Mail {
-    private static String username = "19130052@st.hcmuaf.edu,vn";
-    private static String password = "taomydung2612@";
+    private static String username = "19130075@st.hcmuaf.edu.vn";
+    private static String password = "N7481360345389984$";
 
+    // to => ai / subject => noi dung / content =?
     public static boolean sendMail(String to, String subject, String content) {
-         Session session = connect();
+        Session session = connect();
         try {
             Message messmage = new MimeMessage(session);
-            messmage.setFrom(new InternetAddress(username, "Web noi that"));
+            messmage.setFrom(new InternetAddress(username, "WebFurniture"));
             messmage.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.prase(to));
+                    InternetAddress.parse(to));
             messmage.setSubject(subject);
             messmage.setText(content);
             Transport.send(messmage);
@@ -43,20 +39,24 @@ public class Mail {
         props.put("mail.smtp.socketFactory.class",
                 "javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.host","smtp.gmail.com");
-        props.put("mail.smtp.port","587");
+        // 465 || 587
+        props.put("mail.smtp.port","465");
 
         return Session.getInstance(props,
                 new javax.mail.Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
-                return new PasswordAuthentication(username,password);
+                return new PasswordAuthentication(username,username);
             }
                 });
+
     }
 
     public static void main(String[] args) {
-        System.out.println(sendMail("19130052@st.hcmuaf.edu.vn","Test mail","Dear mail Crawler\n\n No spam to my emai, please") ? "Send mail success" : "Send mail fail");
+        // Gui den 19130052
+        //
+        System.out.println(sendMail("19130075@st.hcmuaf.edu.vn","Test Mail","Dear mail Crawler\n\n No spam to my emai, please") ? "Send mail success" : "Send mail fail");
     }
 }
 
- */
+
 

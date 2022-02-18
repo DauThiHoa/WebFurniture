@@ -396,12 +396,12 @@
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
+
             <jsp:useBean id="customer" scope="request" type="java.util.List"/>
             <c:forEach items="${customer}" var="c" >
             <jsp:useBean id="order" scope="request" type="java.util.List"/>
             <c:forEach items="${order}" var="order" >
-
-<%--                <c:if test="${c.idCustomer == order.idCustomer }" >--%>
+                <c:if test="${customer != 'null' }" >
 
             <tr>
                 <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
@@ -424,7 +424,31 @@
                     </form>
                 </td>
             </tr>
-<%--              </c:if>--%>
+              </c:if>
+                <c:if test="${customer == 'null' }" >
+
+                    <tr>
+                        <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
+                            <td>NULL</td>
+                            <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
+                            <td><input type="text" name ="dateOrder" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
+                            <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
+                            <td class="chiTiet"><input type="text" name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
+                            <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
+                            <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
+                            <td>
+                                <input type="hidden" style="display: none" name ="idOrder" value="NULL">
+                                <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
+                            </td>
+                        </form>
+                        <td>
+                            <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
+                                <input type="hidden" name ="id" value="NULL">
+                                <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
+                            </form>
+                        </td>
+                    </tr>
+                </c:if>
             </c:forEach>
                             </c:forEach>
         </table>
