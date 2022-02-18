@@ -28,6 +28,10 @@ public class Edit_Information extends HttpServlet {
         String id = request.getParameter("id");
         String Company = request.getParameter("Company");
         String Address = request.getParameter("Address");
+        String shareicon = request.getParameter("share");
+        System.out.println(shareicon);
+        String browsericon = request.getParameter("browser");
+
         String Hotline = request.getParameter("Hotline");
         String Email = request.getParameter("Email");
         String Copyright = request.getParameter("Copyright");
@@ -39,7 +43,7 @@ public class Edit_Information extends HttpServlet {
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 
-     int update = InformationService.getInstance().update(id,Company,Address,Hotline,Email,Copyright,Facebook,Twitter,Youtube,Instagram);
+     int update = InformationService.getInstance().update(id,Company,Address,shareicon,browsericon,Hotline,Email,Copyright,Facebook,Twitter,Youtube,Instagram);
 
      if ( update == 1 ) {
          Information information = InformationService.getInstance().getAll();

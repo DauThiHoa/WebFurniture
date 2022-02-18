@@ -377,20 +377,16 @@
     </div>
 
     <form action="add-Product" method="post" >
-    <div class="infor">
-        <h1 class="information"> GENERAL INFORMATION</h1>
-        <div class="information1">
-            <h2 class="Image"> Image </h2>
-            <img src="ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>
-        </div>
+    <div class="infor" style="height: 370px; width: 95%">
+        <h1 class="information" style="font-size: 125%"> GENERAL INFORMATION</h1>
+<%--        <div class="information1">--%>
+<%--            <h2 class="Image"> Image </h2>--%>
+<%--            <img src="ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="image"/>--%>
+<%--        </div>--%>
         <div class="information2">
             <h2 class="Image"> Image </h2>
             <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
             <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
-<%--            <button class="Select">--%>
-<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
-                <input type="file" style="font-weight: bold" value="Select file">
-<%--            </button>--%>
         </div>
         <div class="information3">
             <h2 class="Modules"> Category </h2>
@@ -415,7 +411,7 @@
     </div>
 
     <div class="infor2">
-        <h1 class="information"> VIETNAMESE</h1>
+        <h1 class="information" style="font-size: 125%"> VIETNAMESE</h1>
         <div class="information2">
             <h2 class="Category"> Title </h2>
             <jsp:useBean id="name" scope="request" class="java.lang.String"/>

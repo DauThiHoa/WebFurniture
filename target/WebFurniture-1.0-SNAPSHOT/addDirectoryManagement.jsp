@@ -379,16 +379,16 @@
     </div>
 
     <form action="AddDirectoryManagement" method="post" >
-    <div class="infor">
-        <h1 class="information"> GENERAL INFORMATION</h1>
+    <div class="infor" style="width: 97%">
+        <h1 class="information" style="font-size: 125%"> GENERAL INFORMATION</h1>
         <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
         <div class="information1">
             <h2 class="Image"> Image </h2>
             <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
-            <input type="file" style="font-weight: bold" value="Select file">
+<%--            <input type="file" style="font-weight: bold" value="Select file">--%>
         </div>
         <jsp:useBean id="Category" scope="request" class="java.lang.String"/>
-        <div class="information2">
+        <div class="information3">
             <h2 class="Category"> Category </h2>
             <input class="type1" type="text" name="Category" value="${Category}"><br>
         </div>
@@ -399,8 +399,8 @@
         </div>
     </div>
 
-    <div class="infor2" style=" height: 25%">
-        <h1 class="information"> VIETNAMESE</h1>
+    <div class="infor2" style=" height: 200px">
+        <h1 class="information" style="font-size: 125%"> VIETNAMESE</h1>
         <div class="information5">
             <h2 class="Modules"> Action </h2>
             <div class="">
@@ -455,11 +455,11 @@
         if (type == "" || type1 == "" || type2 == ""){
             alert("Vui lòng điền đầy đủ thông tin ! ");
         }else {
-            alert("Bạn đã thêm sản phẩm thành công ! ");
+            alert("Bạn đã thêm trang thành công ! ");
         }
     }
     function exit() {
-        alert("Thoát và không tiếp tục thêm sản phẩm !");
+        alert("Thoát và không tiếp tục thêm trang !");
     }
 </script>
 </html>

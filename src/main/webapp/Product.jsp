@@ -371,23 +371,6 @@
 
     <div class="container">
 
-<%--        <div class="dropdown">--%>
-
-<%--            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">--%>
-
-<%--                Action <span class="caret"></span>--%>
-
-<%--            </button>--%>
-
-<%--            <ul class="dropdown-menu">--%>
-
-<%--                <li class="dropdown-menuLi"><a href="#"> Erase </a></li>--%>
-<%--                <li class="dropdown-menuLi"><a href="#"> Revision </a></li>--%>
-<%--                <li class="dropdown-menuLi"><a href="#"> Insert </a></li>--%>
-<%--                <li class="dropdown-menuLi"><a href="#"> Change </a></li>--%>
-
-<%--            </ul>--%>
-<%--        </div>--%>
 
     </div>
 
@@ -406,7 +389,6 @@
         <table class="table table-hover table-responsive table-bordered" id="productdetails-table" style="table-layout: fixed ; width: 100%">
             <tr>
                 <!-- San pham khong ban bi ly do gi -->
-                <th><input type="checkbox" name="sport" value="check" id="checkBox"></th>
                 <th class="TieuDe">Numerical order</th>
                 <th  style="text-align: center" class="TieuDe">Category</th>
                 <th  style="text-align: center" class="TieuDe">Image</th>
@@ -424,7 +406,6 @@
             <c:forEach items="${list}" var="item" >
             <tr>
                 <form action = "<%=Asset.url("edit")%>"  method = "POST" >
-                <td ><input type="checkbox" name="sport" value="check"></td>
                 <td style="text-align: center"><%= i++ %></td>
                 <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="type" value="HomePage"></td>
                 <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>

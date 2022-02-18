@@ -409,7 +409,15 @@
                 <td><input style=" border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="nameCategory" value="${p.nameCategory}"></td>
                 <td><img src="${p.linkImage}" class="image"/></td>
                 <td><input style="text-align: center; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="modules" value="${p.modules}"></td>
-                <td><input style="font-size: 150%" type="checkbox" name="display" value="block"></td>
+                <td>
+                    <c:if test="${p.display == 'none'}">
+                        <input style="font-size: 150%" type="checkbox" name="display" value="block">
+                    </c:if>
+                    <c:if test="${p.display == 'block'}">
+                        <input class="fa fa-check-square" style="font-size: 150%" type="checkbox" name="display" value="block">
+                        <i style="font-size: 150% ; background: #1fb5d4 ; color: white" class="fa fa-check-square" aria-hidden="true"></i>
+                    </c:if>
+                </td>
                 <td>
                     <input type="hidden" name ="id" value="${p.id}">
                     <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>

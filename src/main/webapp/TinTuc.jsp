@@ -239,7 +239,8 @@
     </div>
 </div>
 
-<div id="khungBinhLuan">
+<%--        <jsp:useBean id="sumNewComment" scope="request" class="java.lang.Integer"/>--%>
+<div id="khungBinhLuan" style="height: ${sumNewComment + 6}00px  ">
     <form action="NewCommentController" method="post">
     <h3 class="tieuDeBinhLuan"> Viết bình luận của bạn : </h3>
     <div class="hoTen_Email">
@@ -261,7 +262,7 @@
         <h4 class="gui"> Gửi bình luận </h4>
     </button>
         <form>
-<%--        <jsp:useBean id="sumNewComment" scope="request" class="java.lang.Integer"/>--%>
+
     <h3 class="soBinhLuan"> Bình luận ( ${sumNewComment} bình luận )</h3>
     <jsp:useBean id="NewCommentList" scope="request" type="java.util.List"/>
     <c:forEach items="${NewCommentList}" var="n" >

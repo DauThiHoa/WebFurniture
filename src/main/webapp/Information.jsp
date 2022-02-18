@@ -399,25 +399,22 @@
         </div>
 
         <div class="information4">
-            <h2 class="Category"> Share icon </h2>
-<%--            <input class="order" type="text" name="fname" value="No files selected">--%>
-<%--            <i class="fa fa-share-square-o" aria-hidden="true"></i>--%>
+            <h2 class="Category" style="margin-right: 60px"> Share icon </h2>
             <br>
-<%--            <button class="Select_File">--%>
-<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
-<%--                Select file--%>
-<%--            </button>--%>
-            <input type="file" style="border : 1px solid white ; background: white ; color: black ; width: 750px ; margin-left: 50px" value="Select file">
+            <input type="file" style="border : 1px solid white ; background: white ; color: black ; width: 750px ;
+            margin-left: 15px" class="shareicon" value="Select file" accept=".jpg , .png" onchange="clickshareicon()">
+            <input type="image" name="shareicon" style="float: left; clear: right ; width: 50px ; height: 50px "
+                   class="imgshareicon" src="${information.shareIcon}" >
+            <input style="display : none ;width: 300px ; height: 25px" type="text" value="" class="share" name="share">
         </div>
         <div class="information5">
             <h2 class="Modules"> Browser Icons </h2>
-<%--            <input class="Browser" type="text" name="fname" value="No files selected">--%>
             <br>
-<%--            <button class="Select_File2">--%>
-<%--                <i class="fa fa-plus-circle" aria-hidden="true"></i>--%>
-<%--                Select file--%>
-<%--            </button>--%>
-            <input type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ; margin-left: 15px" value="Select file">
+            <input type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ;
+            margin-left: 15px"  class="browsericon" value="Select file" accept=".jpg , .png" onchange="clickbrowsericon()">
+            <input type="image" name="browsericon" style="float: left; clear:right ;width: 50px ; height: 50px"
+                   class="imgbrowsericon" src="${information.browserIcon}">
+            <input style="display : none ;width: 300px ; height: 25px" type="text" value="" class="browser" name="browser">
         </div>
 
     </div>
@@ -492,5 +489,30 @@
     function exit() {
         alert("Bạn muốn thoát khỏi trang !");
     }
+    const shareicon = document.querySelector('.shareicon') ;
+    const imgshareicon = document.querySelector('.imgshareicon');
+    var imgshareiconvalue = document.querySelector('.imgshareicon') ;
+    var share = document.querySelector('.share') ;
+
+    function clickshareicon () {
+        let url = URL.createObjectURL(shareicon.files[0]);
+        imgshareicon.setAttribute('src', url);
+        imgshareiconvalue.value = url;
+        share.value = url;
+        // alert(imgshareiconvalue.value);
+    }
+    const browsericon = document.querySelector('.browsericon') ;
+    const imgbrowsericon = document.querySelector('.imgbrowsericon');
+    var imgbrowsericonvalue = document.querySelector('.imgbrowsericon') ;
+    var browser = document.querySelector('.browser') ;
+
+    function clickbrowsericon () {
+        let url = URL.createObjectURL(browsericon.files[0]);
+        imgbrowsericon.setAttribute('src', url);
+        imgbrowsericonvalue.value = url;
+        browser.value = url;
+        // alert(imgbrowsericonvalue.value);
+    }
 </script>
+
 </html>

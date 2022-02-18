@@ -244,7 +244,7 @@
       </form>
         <form action="paymentAddProductDetails?id=${productDetails.id}&&priceNew=${productDetails.priceNew}"
               method="post" class="soLuongSanPham" style="margin-top: -198px ; margin-left: 7%" >
-            <input style="display: block ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
+            <input style="display: none ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
             <c:if test="${productDetails.id != 'sp24'}">
                 <button class="muaNgay" style="margin-left: 60%" type="submit">
                     <h3 class="mua"> Đặt mua ngay</h3>
@@ -558,8 +558,8 @@
     var quantityPayment = document.querySelector('.quantityPayment');
 
     function clickQuantitySold () {
-        quantityPayment.value = Number( soLuongDat.value ) + 1 ;
-        soLuongDat.value = Number( soLuongDat.value ) ;
+        quantityPayment.value = Number( soLuongDat.value ) ;
+        soLuongDat.value = quantityPayment.value;
     }
     function send () {
         const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');
