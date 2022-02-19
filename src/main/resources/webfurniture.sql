@@ -11,11 +11,27 @@
  Target Server Version : 100422
  File Encoding         : 65001
 
- Date: 22/01/2022 09:45:17
+ Date: 19/02/2022 20:49:47
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for contact
+-- ----------------------------
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE `contact`  (
+  `idContact` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`idContact`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of contact
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for customer
@@ -37,7 +53,7 @@ CREATE TABLE `customer`  (
   `ship` int NOT NULL,
   `totalMoney` int NOT NULL,
   PRIMARY KEY (`idCustomer`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of customer
@@ -58,11 +74,56 @@ CREATE TABLE `detailedproductreview`  (
   `linkImage` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
   `idProductDetails` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci NULL DEFAULT NULL,
   PRIMARY KEY (`idDetailedProductReview`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of detailedproductreview
 -- ----------------------------
+INSERT INTO `detailedproductreview` VALUES (1, 'Màu sắc', 'Tốt', 'null', 'null', '2022-02-16 19:51:28', ' Phong phú, đa dạng', 'Image/dongHoMiso_SPM.PNG', 'sp27');
+
+-- ----------------------------
+-- Table structure for information
+-- ----------------------------
+DROP TABLE IF EXISTS `information`;
+CREATE TABLE `information`  (
+  `idInformation` int NOT NULL AUTO_INCREMENT,
+  `companyName` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `shareIcon` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `browserIcon` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `hotline` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `copyright` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `facebook` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `twitter` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `youtube` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `instagram` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`idInformation`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of information
+-- ----------------------------
+INSERT INTO `information` VALUES (1, 'Web Furniture', 'Ward 26, Binh Thanh District, Ho Chi Minh City', 'img_1.png', 'img.png', '0123456789', 'JhonDoue@gmail.com', 'Copyright 2021 - Web Furniture', 'https://www.facebook.com', 'https://www.twitter.com', 'https://www.youtube.com', 'Web Furniture');
+
+-- ----------------------------
+-- Table structure for newcomment
+-- ----------------------------
+DROP TABLE IF EXISTS `newcomment`;
+CREATE TABLE `newcomment`  (
+  `idNewComment` int NOT NULL AUTO_INCREMENT,
+  `nameCustomer` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `emailCustomer` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `dateSubmitted` datetime(0) NOT NULL DEFAULT current_timestamp(0),
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `idNew` int NULL DEFAULT NULL,
+  PRIMARY KEY (`idNewComment`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of newcomment
+-- ----------------------------
+INSERT INTO `newcomment` VALUES (1, 'Tuyết Nhi', '19130075@st.hcmuaf.edu.vn', '2022-02-04 19:22:14', 'Nội dung hay', 1);
 
 -- ----------------------------
 -- Table structure for orderdetails
@@ -77,11 +138,12 @@ CREATE TABLE `orderdetails`  (
   `discount` double(50, 0) NULL DEFAULT NULL,
   `totalMoney` double(50, 0) NOT NULL,
   PRIMARY KEY (`idOrderDetails`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orderdetails
 -- ----------------------------
+INSERT INTO `orderdetails` VALUES (1, '1', 'sp2', 1, 500000, 25000, 500000);
 
 -- ----------------------------
 -- Table structure for orders
@@ -95,7 +157,7 @@ CREATE TABLE `orders`  (
   `dateReceipt` datetime(0) NOT NULL DEFAULT current_timestamp(0),
   `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
   PRIMARY KEY (`idOrder`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 46 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of orders
@@ -308,6 +370,34 @@ INSERT INTO `productdetails` VALUES ('sp98', 'Chậu rửa', 'Chậu rửa inox,
 INSERT INTO `productdetails` VALUES ('sp99', 'Bó hoa trang trí chất lượng', 'Hoa trang trí nhà cửa màu sắc nhẹ nhàng', 'RUBY', 'Việt Nam', '220000', 'ImageProduct/Bo-hoa-trang-tri-an-tuong-chat-luong.webp', '63', '200000', '0000-00-00 00:00:00', 'Còn hàng', 'PG99', 'C99', '245');
 
 -- ----------------------------
+-- Table structure for profile
+-- ----------------------------
+DROP TABLE IF EXISTS `profile`;
+CREATE TABLE `profile`  (
+  `idProfile` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `firstname` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `lastname` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `city` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `country` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `postalcode` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `aboutme` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  `age` int NULL DEFAULT NULL,
+  `friends` int NULL DEFAULT NULL,
+  `photos` int NULL DEFAULT NULL,
+  `comments` int NULL DEFAULT NULL,
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`idProfile`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of profile
+-- ----------------------------
+INSERT INTO `profile` VALUES (1, 'John Snow', 'JohnSnow@gmail.com', 'John', 'Snow', 'Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09', 'New York', 'United States', '7', 'A beautiful Dashboard .', 27, 22, 10, 89, 'Solution Manager - Creative Tim Officer\r\nUniversity of Computer Science');
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -317,10 +407,11 @@ CREATE TABLE `user`  (
   `password` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES (1, 'Đậu Hoa', '12345', '19130075@st.hcmuaf.edu.vn');
 
 SET FOREIGN_KEY_CHECKS = 1;
