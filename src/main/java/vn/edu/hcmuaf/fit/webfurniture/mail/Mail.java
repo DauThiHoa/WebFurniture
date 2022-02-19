@@ -6,9 +6,6 @@ import javax.mail.internet.MimeMessage;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-import static com.mysql.cj.Session.*;
-import static com.sun.jdi.connect.Transport.*;
-import static javax.mail.Transport.send;
 
 public class Mail {
     private static String username = "19130075@st.hcmuaf.edu.vn";
@@ -20,10 +17,10 @@ public class Mail {
         try {
             Message messmage = new MimeMessage(session);
             messmage.setFrom(new InternetAddress(username, "WebFurniture"));
-            messmage.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(to));
+            messmage.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             messmage.setSubject(subject);
             messmage.setText(content);
+//            messmage.setContent(content, "text/html");
             Transport.send(messmage);
             return true;
         }catch (MessagingException | UnsupportedEncodingException e){
@@ -37,11 +34,12 @@ public class Mail {
         props.put("mail.smtp.auth","true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.socketFactory.class",
-                "javax.net.ssl.SSLSocketFactory");
+                  "javax.net.ssl.SSLSocketFactory");
+        //smtp.googlemail.com || smtp.gmail.com || gmail.com
         props.put("mail.smtp.host","smtp.gmail.com");
         // 465 || 587
-        props.put("mail.smtp.port","465");
-
+        props.put("mail.smtp.port","587");
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
         return Session.getInstance(props,
                 new javax.mail.Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
@@ -53,7 +51,6 @@ public class Mail {
 
     public static void main(String[] args) {
         // Gui den 19130052
-        //
         System.out.println(sendMail("19130075@st.hcmuaf.edu.vn","Test Mail","Dear mail Crawler\n\n No spam to my emai, please") ? "Send mail success" : "Send mail fail");
     }
 }
