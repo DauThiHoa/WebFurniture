@@ -2312,10 +2312,10 @@
                 <div class="lienLac_right">
                     <h2 class="nhanTin">Đăng kí nhận tin</h2>
                     <div class="from">
-                        <input class="email" placeholder="Nhập email của bạn ..."> </input>
-                        <div class="fromDangKi">
-                            <h5 class="dangKi">Đăng kí</h5>
-                        </div>
+                        <input type="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                        <button class="fromDangKi">
+                            <h6 class="dangKi">Đăng kí</h6>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -2324,4 +2324,5 @@
 </div>
 
 </body>
+
 </html>

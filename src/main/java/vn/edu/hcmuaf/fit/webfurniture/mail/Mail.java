@@ -8,15 +8,15 @@ import java.util.Properties;
 
 
 public class Mail {
-    private static String username = "19130075@st.hcmuaf.edu.vn";
-    private static String password = "N7481360345389984$";
+    private static String username = "webfurniture7@gmail.com";
+    private static String password = "WebFurniture12345$";
 
     // to => ai / subject => noi dung / content =?
     public static boolean sendMail(String to, String subject, String content) {
         Session session = connect();
 //        session.setDebug(true);
         try {
-            Message message = new MimeMessage(session);
+            Message message = new MimeMessage(session); 
             message.setFrom(new InternetAddress(username, "WebFurniture"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(to));
