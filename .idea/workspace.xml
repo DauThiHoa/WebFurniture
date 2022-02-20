@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/MailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,8 +106,8 @@
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage\layout" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="vn.edu.hcmuaf.fit.webfurniture.service" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.controller" />
+      <recent name="vn.edu.hcmuaf.fit.webfurniture.service" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.productdetails" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.admin" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.cart" />
@@ -443,6 +446,7 @@
       <workItem from="1645272375852" duration="6302000" />
       <workItem from="1645287871557" duration="5253000" />
       <workItem from="1645332381238" duration="695000" />
+      <workItem from="1645391235475" duration="1733000" />
     </task>
     <servers />
   </component>
