@@ -2309,6 +2309,7 @@
                         <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
+
                 <div class="lienLac_right">
                     <h2 class="nhanTin">Đăng kí nhận tin</h2>
                     <div class="from">
@@ -2318,10 +2319,15 @@
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+</script>
 
 </body>
 
