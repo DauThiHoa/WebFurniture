@@ -2,4 +2,8 @@ Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
 Built-By: THINKPRO
 Build-Jdk: version 17.0.1
+Implementation-Title: WebFurniture
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: vn.edu.hcmuaf.fit
+Main-Class: ${start-class}
 

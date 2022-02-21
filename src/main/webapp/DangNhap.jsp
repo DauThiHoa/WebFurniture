@@ -216,11 +216,11 @@
             <p class="text">Sign In with Email Address</p>
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" value="" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password" onchange="checkValidate()">
             </div>
             <div class="checkBox">
                 <input type="checkbox" name="checkboxlogin" id="checkbox">
@@ -231,7 +231,7 @@
                 <%} %>
 
             <a href="">
-                <button class="btn">SIGN IN</button>
+                <button onclick="clickValidate()" class="btn">SIGN IN</button>
             </a>
             </form>
         </div>
@@ -248,4 +248,27 @@
     </div>
 </div>
 </body>
+<script>
+    function clickValidate() {
+        let isValid = checkValidate();
+        if (isValid) {
+            alert('Kiểm tra thông tin đăng nhập');
+        }
+    }
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    function checkValidate() {
+        let emailValue = email.value;
+        let passwordValue = password.value;
+        let isCheck = true;
+        if (emailValue == '') {
+            alert('Email không được để trống');
+            isCheck = false;
+        } if (passwordValue == '') {
+            alert('Password không được để trống');
+            isCheck = false;
+        }
+        return isCheck;
+    }
+</script>
 </html>

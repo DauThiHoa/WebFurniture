@@ -50,7 +50,7 @@
     </div>
     </c:if>
     </c:forEach>
-    <a href="../WebFurniture_war_exploded/ProductDetailsList">
+    <a href="ProductDetailsList">
         <button class="tieptuc"> TIẾP TỤC MUA SẮM</button>
     </a>
 </div>

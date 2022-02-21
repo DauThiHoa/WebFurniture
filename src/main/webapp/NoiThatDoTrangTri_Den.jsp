@@ -1098,19 +1098,42 @@
                         <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
-                <div class="lienLac_right">
-                    <h2 class="nhanTin">Đăng kí nhận tin</h2>
-                    <div class="from">
-                        <input class="email" placeholder="Nhập email của bạn ..."> </input>
-                        <div class="fromDangKi">
-                            <h5 class="dangKi">Đăng kí</h5>
+                <form action="MailController" method="post">
+                    <div class="lienLac_right">
+                        <h2 class="nhanTin">Đăng kí nhận tin</h2>
+                        <div class="from">
+                            <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                            <button type="submit" class="fromDangKi" onclick="clickValidate()">
+                                <h6 class="dangKi">Đăng kí</h6>
+                            </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
 </body>
+<script>
+    function clickValidate() {
+        let isValid = checkValidate();
+        if (isValid) {
+            alert('Gửi đăng ký thành công');
+        }
+    }
+    const email = document.querySelector('.email');
+    function checkValidate() {
+        let emailValue = email.value;
+        let isCheck = true;
+        if (emailValue == '') {
+            alert('Email không được để trống');
+            isCheck = false;
+        }else {
+            isCheck = true;
+        }
+        return isCheck;
+    }
+
+</script>
 </html>

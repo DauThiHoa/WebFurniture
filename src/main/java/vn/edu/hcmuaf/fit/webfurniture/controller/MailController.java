@@ -24,10 +24,14 @@ public class MailController extends HttpServlet {
         }
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        String subject = "ĐĂNG KÍ NHẬN TIN";
-        String content = "WebFurniture xin chào quý khách !\n\n Qúy khách đã đăng kí thành công nhận tin từ trang " +
-                "web nội thất WebFurniture .\n\n Bạn sẽ nhận được các thông tin mới nhất từ trang web ." +
-                "\n\n Cảm ơn quý khách đã quan tâm đến trang =_=";
+
+        String subject = "SIGN UP FOR NEWS";
+//        String content = "<img style=\"height: 50px ; width: 50px\" src=\"data:img.png\">";
+        String content = "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Sign up successfully</h2> \n";
+        content += "<h5 style=\"text-align: center\">You have successfully registered to receive news from WebFurniture furniture website.</h5>\n";
+        content += "<h5 style=\"text-align: center\">We will update via Mail with useful information to you!</h5> \n";
+        content += "<h5 style=\"text-align: center\">Thank you for signing up to receive the latest information from us =_=</h5> \n";
+
         boolean result = sendMail(email, subject, content);
         if(result) {
             request.getRequestDispatcher("success.jsp").forward(request, response);

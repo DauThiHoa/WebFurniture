@@ -1539,15 +1539,17 @@
                         <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
-                <div class="lienLac_right">
-                    <h2 class="nhanTin">Đăng kí nhận tin</h2>
-                    <div class="from">
-                        <input class="email" placeholder="Nhập email của bạn ..."> </input>
-                        <div class="fromDangKi">
-                            <h5 class="dangKi">Đăng kí</h5>
+                <form action="MailController" method="post">
+                    <div class="lienLac_right">
+                        <h2 class="nhanTin">Đăng kí nhận tin</h2>
+                        <div class="from">
+                            <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                            <button type="submit" class="fromDangKi" onclick="clickValidate()">
+                                <h6 class="dangKi">Đăng kí</h6>
+                            </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -1556,6 +1558,24 @@
 <script>
     // sp59 sp60 sp61 sp62 sp63 sp64 sp65 sp66 sp67 sp68 sp69 sp70 sp71 sp72 sp73 sp74 sp75 sp76 sp77
     // sp78 sp79 sp80 sp81 sp82
+    function clickValidate() {
+        let isValid = checkValidate();
+        if (isValid) {
+            alert('Gửi đăng ký thành công');
+        }
+    }
+    const email = document.querySelector('.email');
+    function checkValidate() {
+        let emailValue = email.value;
+        let isCheck = true;
+        if (emailValue == '') {
+            alert('Email không được để trống');
+            isCheck = false;
+        }else {
+            isCheck = true;
+        }
+        return isCheck;
+    }
 
     const az = document.querySelector('.az');
     const za = document.querySelector('.za');

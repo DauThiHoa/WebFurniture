@@ -2,10 +2,14 @@ package vn.edu.hcmuaf.fit.webfurniture.controller;
 
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
 
 @WebServlet(name = "handling-signup", value = "/handling-signup")
 public class HandlingSignUp extends HttpServlet {
@@ -24,7 +28,14 @@ public class HandlingSignUp extends HttpServlet {
         System.out.println(name);
         boolean registerSuccess  = UserServices.getInstance().register(name, password, email);
         System.out.println(registerSuccess);
+
+        String subject = "SIGN UP FOR AN ACCOUNT";
+        String content = "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Congratulation !</h2>\n ";
+        content += "<h5 style=\"text-align: center\">You have successfully registered an account at WebFurniture.</h5>\n";
+        content += "<h5 style=\"text-align: center\">You can use this account to access WebFurniture!</h5>\n";
+
         if(registerSuccess){
+            boolean result = sendMail(email, subject, content);
             response.sendRedirect("login");
 //            request.getRequestDispatcher("login").forward(request, response);
         }else {

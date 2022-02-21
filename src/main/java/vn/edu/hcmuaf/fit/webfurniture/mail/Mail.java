@@ -6,7 +6,6 @@ import javax.mail.internet.MimeMessage;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-
 public class Mail {
     private static String username = "webfurniture7@gmail.com";
     private static String password = "WebFurniture12345$";
@@ -16,12 +15,13 @@ public class Mail {
         Session session = connect();
 //        session.setDebug(true);
         try {
-            Message message = new MimeMessage(session); 
+            Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(username, "WebFurniture"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(to));
             message.setSubject(subject);
-            message.setText(content);
+            message.setContent(content ,"text/html" );
+            // Tạo đối tượng Email.
             Transport.send(message);
             System.out.println("Done");
             return true;
@@ -54,6 +54,7 @@ public class Mail {
         System.out.println(sendMail("19130075@st.hcmuaf.edu.vn","Test Mail",
                 "Dear mail Crawler\n\n No spam to my emai, please") ? "Send mail success" : "Send mail fail");
     }
+
 }
 
 

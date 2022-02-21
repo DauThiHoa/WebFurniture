@@ -77,7 +77,7 @@
 
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
-        <img id="anh_danhMuc" src="../Home/Image/ThanhChon.PNG"/>
+        <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
         <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
 
         <div id="top">
@@ -108,7 +108,7 @@
             </a>
         </div>
     </div>
-    <a href="../Home/HomePage.html?_ijt=pae316ajrmdat5oebu7viiupon">
+    <a href="HomePage.html?_ijt=pae316ajrmdat5oebu7viiupon">
         <div id="trangchu">
             <h3 class="ten"> TRANG CHỦ </h3>
         </div>
@@ -234,15 +234,15 @@
     <div class="TieuDe">
         <h2 class="ten"> Mẹo vặt hay</h2>
         <div class="right">
-            <img src="../Home/Image/sangTrai.PNG"/>
-            <img src="../Home/Image/sangPhai.PNG"/>
+            <img src="Image/sangTrai.PNG"/>
+            <img src="Image/sangPhai.PNG"/>
         </div>
 
     </div>
     <div class="meoVatHay">
         <div class="meoVat">
             <a href="">
-                <img class="anh" src="../Home/Image_Home2/baoQuanVaVeSinh_Layout7.PNG"/>
+                <img class="anh" src="Image_Home2/baoQuanVaVeSinh_Layout7.PNG"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                     <p class="ngay"> 16/10/2021 Đăng bởi : Sea Team</p>
@@ -253,7 +253,7 @@
         </div>
         <div class="meoVat">
             <a href="../TinTuc/MeoVat.html?_ijt=42n7g22303aucjlb03u168175o">
-                <img class="anh" src="../Home/Image_Home2/meoVat_2.PNG" height="447" width="785"/>
+                <img class="anh" src="Image_Home2/meoVat_2.PNG" height="447" width="785"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                     <p class="ngay"> 17/10/2021 Đăng bởi : Sea </p>
@@ -264,7 +264,7 @@
         </div>
         <div class="meoVat">
             <a href="">
-                <img class="anh" src="../Home/Image_Home2/baoQuanDoGo_layout7.PNG"/>
+                <img class="anh" src="Image_Home2/baoQuanDoGo_layout7.PNG"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                     <p class="ngay"> 18/10/2021 Đăng bởi : Team </p>
@@ -316,7 +316,7 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="../Home/HomePage.html?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="HomePage.html?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
                         <p>Trang chủ</p></a>
                     <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
                         <p>Giới thiệu</p>
@@ -351,35 +351,37 @@
                     <div class="left">
                         <h3>Theo dõi mạng xã hội</h3>
                         <a href="https://www.google.com/search?q=fb&oq=fb&aqs=chrome..69i57j46i131i199i433i465i512j69i59j0i512j46i199i291i433i512j69i60l3.1291j0j7&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/fb_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/fb_left.PNG"/></a>
                         <a href="https://www.google.com/search?q=google&oq=goo&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j69i57j69i60l3j69i65.1245j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/g_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/g_left.PNG"/></a>
                         <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyDMsS05XYDRgdGDwYi8pzywpSS0CAFnOB00&q=twitter&oq=tw&aqs=chrome.1.69i57j46i131i199i433i465i512j0i433i512j46i131i433i512j0i131i433i512j46i433i512j0i131i433i512j69i60.3261j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/tw_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/tw_left.PNG"/></a>
                         <a href="https://www.google.com/search?q=pinterest&oq=p&aqs=chrome.3.69i59l2j69i57j0i131i433i512j69i60l4.10676j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/p_left.PNG"/></a>
+                            <img class="mang" src="Image_Home2/p_left.PNG"/></a>
                     </div>
                     <div class="right">
                         <h3>Thanh Toán</h3>
                         <a href="https://www.google.com/search?q=visa&oq=visa&aqs=chrome..69i57j0i433i512l2j0i512l2j0i131i433i512j0i512l2j0i10i512j0i512.2103j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
-                        <img class="mang" src="../Home/Image_Home2/thanhToan2.PNG" height="44" width="65"/>
+                            <img class="mang" src="Image_Home2/thanhToan1.PNG" height="43" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan2.PNG" height="44" width="65"/>
                         <a href="https://www.google.com/search?q=paypal&oq=paypal&aqs=chrome..69i57j46i199i433i465i512j0i433i512j0i512l6.3397j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
+                            <img class="mang" src="Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
                         <a href="https://www.google.com/search?q=jcb&oq=jcb&aqs=chrome..69i57j46i199i433i465i512j0i512l6j0i10i512j0i512.1389j0j9&sourceid=chrome&ie=UTF-8">
-                            <img class="mang" src="../Home/Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
-                        <img class="mang" src="../Home/Image_Home2/thanhToan5.PNG" height="40" width="57"/>
+                            <img class="mang" src="Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
+                        <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
-                <div class="lienLac_right">
-                    <h2 class="nhanTin">Đăng kí nhận tin</h2>
-                    <div class="from">
-                        <input class="email" placeholder="Nhập email của bạn ..."> </input>
-                        <div class="fromDangKi">
-                            <h5 class="dangKi">Đăng kí</h5>
+                <form action="MailController" method="post">
+                    <div class="lienLac_right">
+                        <h2 class="nhanTin">Đăng kí nhận tin</h2>
+                        <div class="from">
+                            <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                            <button type="submit" class="fromDangKi" onclick="clickValidate()">
+                                <h6 class="dangKi">Đăng kí</h6>
+                            </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -387,4 +389,25 @@
 
 
 </body>
+<script>
+    function clickValidate() {
+        let isValid = checkValidate();
+        if (isValid) {
+            alert('Gửi đăng ký thành công');
+        }
+    }
+    const email = document.querySelector('.email');
+    function checkValidate() {
+        let emailValue = email.value;
+        let isCheck = true;
+        if (emailValue == '') {
+            alert('Email không được để trống');
+            isCheck = false;
+        }else {
+            isCheck = true;
+        }
+        return isCheck;
+    }
+
+</script>
 </html>

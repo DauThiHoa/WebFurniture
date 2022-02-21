@@ -39,22 +39,22 @@
             <p class="text">Sign Up with Email Address</p>
             <div class="formGroup">
                 <i class="far fa-user"></i>
-                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="text" name="name" id="name" placeholder="Name" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password" onchange="checkValidate()">
             </div>
             <div class="checkBox">
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
             <a href="register">
-                <button class="btn">SIGN UP</button>
+                <button onclick="clickValidate()" class="btn">SIGN UP</button>
             </a>
             </form>
         </div>
@@ -71,4 +71,33 @@
     </div>
 </div>
 </body>
+<script>
+    function clickValidate() {
+        let isValid = checkValidate();
+        if (isValid) {
+            alert('Kiểm tra thông tin đăng ký');
+        }
+    }
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    function checkValidate() {
+        let nameValue = name.value;
+        let emailValue = email.value;
+        let passwordValue = password.value;
+        let isCheck = true;
+        if (emailValue == '') {
+            alert('Email không được để trống');
+            isCheck = false;
+        } if (passwordValue == '') {
+            alert('Password không được để trống');
+            isCheck = false;
+        } if (nameValue == '') {
+            alert('Name không được để trống');
+            isCheck = false;
+        }
+        return isCheck;
+    }
+</script>
 </html>
