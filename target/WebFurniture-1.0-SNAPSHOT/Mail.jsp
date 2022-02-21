@@ -24,9 +24,24 @@
 
 </head>
 <body>
-<h2 style="text-align: center; color: #00dea2; font-weight: bold">Congratulation !</h2>
-<h5 style="text-align: center">You have successfully registered an account at WebFurniture.</h5>
-<h5 style="text-align: center">You can use this account to access WebFurniture!</h5>
+<h2 style="color: #1fb5d4 ; font-weight: bold">Payment made successfully!</h2>
+<h3 style="color: #1fb5d4 ; font-weight: bold">Within 5 minutes, WebFurniture will
+    contact you to confirm the delivery information via email you have provided</h3>
+<h3 style=" font-weight: bold">Payment method : Bank transfer bank</h3>
+<h3 style=" font-weight: bold">Card number : cardNumber</h3>
+<h3 style=" font-weight: bold">Delivery address : address</h3>
+<h3 style=" font-weight: bold">Phone number : phone</h3>
+<h3 style=" font-weight: bold">Amount : sumTotal VND</h3>
+<h3 style=" font-weight: bold">Transaction code : idCustomer</h3>
+
+<%--    Thanh toán đã thực hiện thành công.--%>
+<%--    Trong vòng 5 phút WebFurniture sẽ liên hệ xác nhận thông tin giao hàng qua mail của quý khách đã cung cấp--%>
+<%--    Hình thức thanh toán : Chuyển khoản ngân hàng ${customer.bank}--%>
+<%--    Số thẻ : ${customer.cardNumber}--%>
+<%--    Địa chỉ nhận hàng : ${customer.address}--%>
+<%--    Số điện thoại : ${customer.phone}--%>
+<%--    Số tiền : ${sumTotal} VND--%>
+<%--    Mã giao dịch : ${customer.idCustomer}--%>
 
 </body>
 </html>

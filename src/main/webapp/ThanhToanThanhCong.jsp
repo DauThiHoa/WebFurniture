@@ -25,7 +25,7 @@
     <h1 class="tieude">THANH TOÁN THÀNH CÔNG !</h1>
     <i class="fa fa-check-circle" aria-hidden="true"></i>
     <h3 class="thongbao"> Thanh toán đã thực hiện thành công.
-        Trong vòng 10 phút WebFurniture sẽ liên hệ xác nhận thông tin giao hàng qua mail của quý khách đã cung cấp</h3>
+        Trong vòng 5 phút WebFurniture sẽ liên hệ xác nhận thông tin giao hàng qua mail của quý khách đã cung cấp</h3>
     <jsp:useBean id="customerList" scope="request" type="java.util.List"/>
     <c:forEach items="${customerList}" var="customer" >
     <c:if test="${customerList.get(customerList.size() -1).idCustomer == customer.idCustomer}" >

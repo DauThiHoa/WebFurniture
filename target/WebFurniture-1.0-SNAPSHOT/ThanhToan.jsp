@@ -180,7 +180,6 @@
     // alert(firstname);
     function clickCheckout() {
         let isValid = checkValidate();
-        alert(isValid);
         if (isValid) {
             alert('Qúy khách đã đặt hàng thành công !');
         }

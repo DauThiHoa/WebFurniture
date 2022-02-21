@@ -188,14 +188,14 @@
 </div>
 
 <div class="MuaHang">
-    <a href="../WebFurniture_war_exploded/ProductDetailsList" >
+    <a href="ProductDetailsList" >
         <div class="tiepTuc">
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
             <h2 class="ten"> Tiếp tục mua hàng</h2>
         </div>
     </a>
     <!-- ThanhToan/ThanhToan.jsp -->
-    <a href="../WebFurniture_war_exploded/cart-checkOut">
+    <a href="cart-checkOut">
         <div class="tiepTheo" style="margin-left: 1280px ; margin-top: -45px">
             <h2 class="ten" > Thanh toán </h2>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -226,19 +226,23 @@
         <div class="lienHe">
             <h1 style="color: #0a58ca">HÃY LIÊN HỆ VỚI CHÚNG TÔI !!!</h1>
             <p style="color: #555555">Luôn sẵn sàng hỗ trợ và tư vấn cho bạn để có sản phẩm tốt nhất.</p>
-<%--            <button class="btn1" style="width: 500px; height: 58px; color: #555555">Nhập email của bạn</button>--%>
-<%--            <button class="btn2" style="width: 110px; height: 58px; color: white">Gửi</button>--%>
             <form action="MailController" method="post">
-                <div class="lienLac_right">
-                    <h2 class="nhanTin">Đăng kí nhận tin</h2>
-                    <div class="from">
-                        <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
-                        <button type="submit" class="fromDangKi" onclick="clickValidate()">
-                            <h6 class="dangKi">Đăng kí</h6>
-                        </button>
-                    </div>
-                </div>
+                  <input onchange="checkValidate()" class="btn1" style="width: 500px; height: 58px; color: #555555"
+                         type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                  <button type="submit" class="fromDangKi" onclick="clickValidate()" class="btn2"
+                          style="width: 110px; height: 58px; color: white ; font-size: 200%; background: #1fb5d4">Gửi</button>
             </form>
+<%--            <form action="MailController" method="post">--%>
+<%--                <div class="lienLac_right">--%>
+<%--                    <h2 class="nhanTin">Đăng kí nhận tin</h2>--%>
+<%--                    <div class="from">--%>
+<%--                        <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>--%>
+<%--                        <button type="submit" class="fromDangKi" onclick="clickValidate()">--%>
+<%--                            <h6 class="dangKi">Đăng kí</h6>--%>
+<%--                        </button>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </form>--%>
         </div>
     </div>
 </div>
@@ -478,7 +482,6 @@
         let emailValue = email.value;
         let isCheck = true;
         if (emailValue == '') {
-            alert('Email không được để trống');
             isCheck = false;
         }else {
             isCheck = true;

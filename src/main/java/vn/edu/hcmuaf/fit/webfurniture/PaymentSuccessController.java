@@ -2,14 +2,16 @@ package vn.edu.hcmuaf.fit.webfurniture;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
-import vn.edu.hcmuaf.fit.webfurniture.payment.CustomerService;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
-import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
 
 @WebServlet(name = "PaymentSuccessController", value = "/PaymentSuccess")
 public class PaymentSuccessController extends HttpServlet {
@@ -17,6 +19,9 @@ public class PaymentSuccessController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
 //        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
+
+        int sumDiscount = OrderDetailsService.getInstance().sumDiscount();
+        int sumTotalMoney = OrderDetailsService.getInstance().sumTotalMoney();
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
@@ -61,6 +66,22 @@ public class PaymentSuccessController extends HttpServlet {
         }
         if ( name != null && brithDay != null && gender != null && email != null && phone != null && address != null && bank != null && cardNumber != null && method != null && discountCode != null ) {
             boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode);
+            String subject = "PAYMENT SUCCESS";
+            String content = "<h2 style=\"color: #1fb5d4 ; font-weight: bold\">Payment made successfully!</h2>";
+            content += "<h3 style=\"color: #1fb5d4 ; font-weight: bold\">Within 5 minutes, WebFurniture will" +
+                    "    contact you to confirm the delivery information via email you have provided</h3>";
+            content += "<h3 style=\" font-weight: bold\">Full name :"+name+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">BrithDay :"+brithDay+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Shipping fee : "+sumDiscount+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Total money : "+sumTotalMoney+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Payment method : Bank transfer "+bank+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Card number : "+cardNumber+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Delivery address : "+address+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Phone number : "+phone+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Transaction code : "+discountCode+"</h3>";
+
+            boolean sendMail = sendMail(email, subject, content);
+
             request.getRequestDispatcher("/ProductDetailsList").forward(request, response);
         }else {
             request.setAttribute("name" , name);
