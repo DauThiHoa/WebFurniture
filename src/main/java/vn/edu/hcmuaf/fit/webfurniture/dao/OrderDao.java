@@ -3,7 +3,6 @@ package vn.edu.hcmuaf.fit.webfurniture.dao;
 import org.jdbi.v3.core.result.ResultBearing;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
 public class OrderDao {
@@ -27,7 +26,6 @@ public class OrderDao {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")
                     .bind(0 , idUser)
-//                    .bind (0, "idCustomer(User)")
                     .bind(1, cart.getTotal())
                     .bind(2, "Đã đặt hàng")
                     .executeAndReturnGeneratedKeys();
@@ -65,7 +63,6 @@ public class OrderDao {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ? , ? )")
                     .bind(0 , idUser)
-//                    .bind (0, "idCustomer(User)")
                     .bind(1, quantity * price)
                     .bind(2, "Đã đặt hàng")
                     .executeAndReturnGeneratedKeys();

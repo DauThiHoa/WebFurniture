@@ -216,6 +216,7 @@
             <p class="text">Sign In with Email Address</p>
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
+<%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
                 <input type="email" name="email" id="email" placeholder="Email" value="" onchange="checkValidate()">
             </div>
             <div class="formGroup">
@@ -249,10 +250,12 @@
 </div>
 </body>
 <script>
+<%--    <jsp:useBean id="correct" scope="request" type="java.lang.String"/>--%>
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
             alert('Kiểm tra thông tin đăng nhập');
+            <%--alert('${correct}');--%>
         }
     }
     const email = document.getElementById('email');

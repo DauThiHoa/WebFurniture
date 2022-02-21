@@ -1,8 +1,10 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "ControllerLogin", value = "/login")
@@ -12,7 +14,12 @@ public class ControllerLogin extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        request.setAttribute("email", "");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        request.setAttribute("email", email);
+        request.setAttribute("password", password);
+        request.setAttribute("error", "");
 
         request.getRequestDispatcher("/DangNhap.jsp").forward(request, response);
     }

@@ -32,13 +32,13 @@
                         <h3>Thông Tin Khách hàng</h3>
                         <label class="from" for="fname" >Họ Và Tên</label>
                         <jsp:useBean id="name" scope="request" class="java.lang.String"/>
-                        <input type="text" id="fname" name="firstname" value="${name}" onchange="click()" placeholder="Bùi Hoàng Tuấn Anh"/>
+                        <input type="text" id="fname" name="firstname" value="${name}" onchange="checkValidate()" onchange="click()" placeholder="Bùi Hoàng Tuấn Anh"/>
                         <label class="from" for="email"> Email</label>
                         <jsp:useBean id="email" scope="request" class="java.lang.String"/>
-                        <input type="text" id="email" name="email" value="${email}"  placeholder="19130006@st.hcmuaf.edu.vn"/>
+                        <input type="text" id="email" name="email" value="${email}" onchange="checkValidate()" placeholder="19130006@st.hcmuaf.edu.vn"/>
                         <label class="from" for="adr"> Số Điện Thoại </label>
                         <jsp:useBean id="phone" scope="request" class="java.lang.String"/>
-                        <input type="text" id="address" name="phone" value="${phone}"  placeholder="0123456789"/>
+                        <input type="text" id="address" name="phone" value="${phone}" onchange="checkValidate()" placeholder="0123456789"/>
                         <label class="from" for="adr"> Địa Chỉ </label>
                         <jsp:useBean id="address" scope="request" class="java.lang.String"/>
                         <input type="text" id="adr" name="address" value="${address}"
@@ -48,13 +48,13 @@
                         <h3>Thanh Toán</h3>
                         <label class="from" for="cname">Ngân hàng </label>
                         <jsp:useBean id="bank" scope="request" class="java.lang.String"/>
-                        <input type="text" id="cardname" name="cardname" value="${bank}" placeholder="BIDV, ACB, Vietcombank,...  "/>
+                        <input type="text" id="cardname" name="cardname" value="${bank}" onchange="checkValidate()" placeholder="BIDV, ACB, Vietcombank,...  "/>
                         <label class="from" for="ccnum">Số Thẻ</label>
                         <jsp:useBean id="cardNumber" scope="request" class="java.lang.String"/>
-                        <input type="text" id="cardnumber" name="cardnumber" value="${cardNumber}"   placeholder="4129 7501 2345 6789"/>
+                        <input type="text" id="cardnumber" name="cardnumber" value="${cardNumber}" onchange="checkValidate()"  placeholder="4129 7501 2345 6789"/>
                         <label class="from" for="ccnum">Ngày sinh</label>
                         <jsp:useBean id="brithDay" scope="request" class="java.lang.String"/>
-                        <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date" id="brithDay" name="brithDay" value="${brithDay}"  placeholder="12/2/1989"/>
+                        <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date" id="brithDay" name="brithDay" value="${brithDay}" onchange="checkValidate()" placeholder="12/2/1989"/>
                     </div>
                     <div>
                         <h3 style="margin-left: 20px">Phương Thức Nhận Hàng</h3>
@@ -154,13 +154,37 @@
     var cardname  =  document.getElementById('cardname').value ;
     var cardnumber  =  document.getElementById('cardnumber').value ;
     var brithDay  =  document.getElementById('brithDay').value ;
+
+    function checkValidate() {
+        let isCheck = true;
+        if ( firstname == ''  ){
+            // alert('Qúy khách vui lòng điền đầy đủ thông tin ! ');
+            isCheck = false;
+        }else if (email == ''){
+            isCheck = false;
+        }else if (address == ''){
+            isCheck = false;
+        }else if (adr == ''){
+            isCheck = false;
+        }else if (cardname == ''){
+            isCheck = false;
+        }else if (cardnumber == ''){
+            isCheck = false;
+        }else if (brithDay == ''){
+            isCheck = false;
+        }else {
+            isCheck = true;
+        }
+        return isCheck;
+    }
     // alert(firstname);
     function clickCheckout() {
-        if ( firstname == "" ||  email == "" || address == "" ||  adr == "" || cardname == "" ||  cardnumber == "" || brithDay == "" ){
-            alert("Qúy khách vui lòng điền đầy đủ thông tin ! " );
-        }else {
-            alert("Qúy khách đã đăng kí thành công !");
+        let isValid = checkValidate();
+        alert(isValid);
+        if (isValid) {
+            alert('Qúy khách đã đặt hàng thành công !');
         }
     }
+
 </script>
 </html>

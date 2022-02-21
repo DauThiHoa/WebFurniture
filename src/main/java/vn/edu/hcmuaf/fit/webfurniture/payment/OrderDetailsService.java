@@ -1,11 +1,9 @@
 package vn.edu.hcmuaf.fit.webfurniture.payment;
 
 //import org.apache.catalina.filters.ExpiresFilter;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
+
 import vn.edu.hcmuaf.fit.webfurniture.beans.Details;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
-import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
 import java.util.List;
@@ -68,7 +66,7 @@ public class OrderDetailsService {
                         .bind(4 , address)
                         .bind(5, phone)
                         .bind(6 , email)
-                        .bind(7 ,   bank)
+                        .bind(7 ,  bank)
                         .bind(8 , cardNumber )
                         .bind( 9 ,method )
                         .bind( 10 , discountCode)

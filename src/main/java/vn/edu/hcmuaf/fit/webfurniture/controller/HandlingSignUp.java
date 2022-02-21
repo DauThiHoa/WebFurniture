@@ -22,10 +22,12 @@ public class HandlingSignUp extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         System.out.println(name);
+
         boolean registerSuccess  = UserServices.getInstance().register(name, password, email);
         System.out.println(registerSuccess);
 

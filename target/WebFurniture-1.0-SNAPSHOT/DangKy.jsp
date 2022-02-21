@@ -87,6 +87,7 @@
         let emailValue = email.value;
         let passwordValue = password.value;
         let isCheck = true;
+
         if (emailValue == '') {
             alert('Email không được để trống');
             isCheck = false;
