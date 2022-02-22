@@ -10,12 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/DoAm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/DoAm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/BaoQuan1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/BaoQuan2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/BaoQuan3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/BaoQuan4.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/DoAm0.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/DoAm1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/DoAm2.1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/DoAm2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/DoAm3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc/DoAm4.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/VeSinhNoiThat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc/VeSinhNoiThat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/mail/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/mail/Mail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Mail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Mail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToanThanhCong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToanThanhCong.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Mail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Mail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/mail/Mail.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +102,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -94,11 +116,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\TinTuc\Image_TinTuc" />
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\TinTuc" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\resources" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\QuanTri\Admin\examples" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\vendor\dt\lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
@@ -422,6 +444,7 @@
       <workItem from="1645406510957" duration="14028000" />
       <workItem from="1645429856967" duration="8451000" />
       <workItem from="1645446612198" duration="3474000" />
+      <workItem from="1645459614448" duration="7140000" />
     </task>
     <servers />
   </component>
@@ -530,12 +553,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

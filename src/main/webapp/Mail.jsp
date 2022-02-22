@@ -7,21 +7,14 @@
 --%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img.png" type="image/png" class="icon">
-    <title>NHOM 7 WEB FURNITURE</title>
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 </head>
 <body>
 <h2 style="color: #1fb5d4 ; font-weight: bold">Payment made successfully!</h2>
@@ -33,15 +26,6 @@
 <h3 style=" font-weight: bold">Phone number : phone</h3>
 <h3 style=" font-weight: bold">Amount : sumTotal VND</h3>
 <h3 style=" font-weight: bold">Transaction code : idCustomer</h3>
-
-<%--    Thanh toán đã thực hiện thành công.--%>
-<%--    Trong vòng 5 phút WebFurniture sẽ liên hệ xác nhận thông tin giao hàng qua mail của quý khách đã cung cấp--%>
-<%--    Hình thức thanh toán : Chuyển khoản ngân hàng ${customer.bank}--%>
-<%--    Số thẻ : ${customer.cardNumber}--%>
-<%--    Địa chỉ nhận hàng : ${customer.address}--%>
-<%--    Số điện thoại : ${customer.phone}--%>
-<%--    Số tiền : ${sumTotal} VND--%>
-<%--    Mã giao dịch : ${customer.idCustomer}--%>
-
+<i style="text-align: center ; color: #1fb5d4; font-size: 300% " class="fa fa-check-circle" aria-hidden="true"></i>
 </body>
 </html>

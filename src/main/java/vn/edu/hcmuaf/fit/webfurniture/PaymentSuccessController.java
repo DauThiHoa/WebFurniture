@@ -17,6 +17,7 @@ import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
 public class PaymentSuccessController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 //        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
 //        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
 
@@ -66,12 +67,13 @@ public class PaymentSuccessController extends HttpServlet {
         }
         if ( name != null && brithDay != null && gender != null && email != null && phone != null && address != null && bank != null && cardNumber != null && method != null && discountCode != null ) {
             boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode);
+
             String subject = "PAYMENT SUCCESS";
             String content = "<h2 style=\"color: #1fb5d4 ; font-weight: bold\">Payment made successfully!</h2>";
             content += "<h3 style=\"color: #1fb5d4 ; font-weight: bold\">Within 5 minutes, WebFurniture will" +
                     "    contact you to confirm the delivery information via email you have provided</h3>";
-            content += "<h3 style=\" font-weight: bold\">Full name :"+name+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">BrithDay :"+brithDay+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">Full name :"+ name+"</h3>";
+            content += "<h3 style=\" font-weight: bold\">BrithDay :"+ brithDay+"</h3>";
             content += "<h3 style=\" font-weight: bold\">Shipping fee : "+sumDiscount+"</h3>";
             content += "<h3 style=\" font-weight: bold\">Total money : "+sumTotalMoney+"</h3>";
             content += "<h3 style=\" font-weight: bold\">Payment method : Bank transfer "+bank+"</h3>";
@@ -97,7 +99,6 @@ public class PaymentSuccessController extends HttpServlet {
             request.getRequestDispatcher("/payment").forward(request , response);
         }
         //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
-
 
     }
 

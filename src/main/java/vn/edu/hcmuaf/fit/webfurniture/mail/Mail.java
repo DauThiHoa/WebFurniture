@@ -20,7 +20,9 @@ public class Mail {
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(to));
             message.setSubject(subject);
-            message.setContent(content ,"text/html" );
+            message.setHeader("stylesheets" , "stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css");
+            message.setContent(content ,"text/html; charset=utf-8" );
+
             // Tạo đối tượng Email.
             Transport.send(message);
             System.out.println("Done");

@@ -32,7 +32,8 @@ public class HandlingSignUp extends HttpServlet {
         System.out.println(registerSuccess);
 
         String subject = "SIGN UP FOR AN ACCOUNT";
-        String content = "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Congratulation !</h2>\n ";
+        String content = "<i style=\"text-align: center ; color: #1fb5d4; font-size: 300% \" class=\"fa fa-check-circle\" aria-hidden=\"true\"></i>";
+        content += "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Congratulation !</h2>\n ";
         content += "<h5 style=\"text-align: center\">You have successfully registered an account at WebFurniture.</h5>\n";
         content += "<h5 style=\"text-align: center\">You can use this account to access WebFurniture!</h5>\n";
 
