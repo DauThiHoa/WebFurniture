@@ -31,6 +31,12 @@ public class ShowProductDetailsListController extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
            request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
+        System.out.println(ReviewProductDetailsService.getInstance().getAll());
+           if (ReviewProductDetailsService.getInstance().nameCustomer() != null){
+               request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());
+           }else {
+               request.setAttribute("nameCustomer" , "Name Customer");
+           }
            request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
            request.getRequestDispatcher("BanAillen_03.jsp").forward(request , response);
 

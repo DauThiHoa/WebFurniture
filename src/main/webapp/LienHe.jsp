@@ -171,11 +171,11 @@
                 <form action="LienHeSendController" method="POST">
                 <div class="noiDung_2">
                     <jsp:useBean id="name" scope="request" class="java.lang.String"/>
-                    <input class="input_1" type="text" name="name" value="${name}" placeholder="Họ và tên"/>
+                    <input class="input_1" onchange="changeInput()" type="text" name="name" value="${name}" placeholder="Họ và tên"/>
                     <jsp:useBean id="email" scope="request" class="java.lang.String"/>
-                    <input class="input_1" type="text" name="email" value="${email}" placeholder="Email"/>
+                    <input class="input_1" onchange="changeInput()" type="text" name="email" value="${email}" placeholder="Email"/>
                     <jsp:useBean id="content" scope="request" class="java.lang.String"/>
-                    <input class="input_2" type="text" name="content" value="${content}" placeholder="Nội Dung"/>
+                    <input class="input_2" onchange="changeInput()" type="text" name="content" value="${content}" placeholder="Nội Dung"/>
                 </div>
                 <div class="noiDung_3">
                     <button class="btn" type="submit" onclick="clickInput()" >Gửi liên hệ của bạn</button>
@@ -320,10 +320,17 @@
     var input_1 = document.querySelector('.input_1').value;
     var input_2 = document.querySelector('.input_2').value;
 
+    function changeInput() {
+        let ischeck = true ;
+        if (  input_1 == ""){
+            ischeck = false ;
+        }if (  input_2 == ""){
+            ischeck = false ;
+        }
+        return ischeck ;
+    }
     function clickInput () {
-        if (  input_1 == "" || input_2 == ""){
-            alert("Qúy khách vui lòng điền đầy đủ thông tin ! " );
-        }else {
+        if ( changeInput() ){
             alert("Qúy khách gửi liên hệ thành công ! " );
         }
     }

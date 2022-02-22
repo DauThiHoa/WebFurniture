@@ -1,11 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.service;
 
-import org.jdbi.v3.core.result.ResultBearing;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.DetailedProductReview;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Details;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
-import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
 import java.util.List;
@@ -52,5 +47,13 @@ public class ReviewProductDetailsService {
             return handle.createQuery("SELECT COUNT(*) FROM detailedproductreview ")
                     .mapTo(Integer.class).findFirst().get() ;
         });
+    }
+    public String nameCustomer (){
+      String result = null ;
+        result = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT username FROM `user` ORDER BY (id+0) DESC LIMIT 1;")
+                    .mapTo(String.class).findFirst().get() ;
+        });
+        return  result ;
     }
 }

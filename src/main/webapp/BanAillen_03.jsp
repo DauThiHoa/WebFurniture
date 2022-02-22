@@ -417,7 +417,8 @@
             </div>
             <div class="thongTinBinhLuan">
                 <div class="ChiTiet">
-                    <h4 class="tenNguoiBinhLuan"> ${r.nameCustomer}
+                    <jsp:useBean id="nameCustomer" scope="request" type="java.lang.String"/>
+                    <h4 class="tenNguoiBinhLuan"> ${nameCustomer}
                         <c:if test="${r.evaluate == 'Rất tệ' || r.evaluate == 'Tệ' || r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
                         <i class="fa fa-star one" aria-hidden="true"></i>
                         </c:if>
