@@ -18,6 +18,7 @@ public class MailController extends HttpServlet {
 
         String email = request.getParameter("email");
         request.setAttribute("email" , email);
+        String session = request.getParameter("session");
 
         if ( email != "" ) {
             request.setAttribute("email", "");
@@ -34,7 +35,9 @@ public class MailController extends HttpServlet {
 
         boolean result = sendMail(email, subject, content);
         if(result) {
-            request.getRequestDispatcher("success.jsp").forward(request, response);
+//          request.getRequestDispatcher(session).forward(request, response);
+//          request.getRequestDispatcher("success.jsp").forward(request, response);
+            request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         }else {
             request.getRequestDispatcher("fail.jsp").forward(request, response);
         }

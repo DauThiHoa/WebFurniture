@@ -15,12 +15,11 @@
     <meta charset="UTF-8">
     <title>THÔNG TIN SẢN PHẨM </title>
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="BanAillen_03.css">
+    <link rel="stylesheet" href="ChiTietSanPham.css">
     <link rel="icon" href="img.png" type="image/png" class="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="ChiTietSanPham.js"></script>
-
 
 </head>
 <body>
@@ -347,7 +346,7 @@
     </div>
 </div>
 <form action="send" method="post">
-<div class="NhanXet">
+<div class="NhanXet"  >
     <h2 class="tieude"> GỬI NHẬN XÉT CỦA BẠN </h2>
     <div class="from">
         <h3 class="ten"> 1. Đánh giá của bạn về sản phẩm này: </h3>
@@ -378,11 +377,15 @@
         </div>
     </div>
     <div class="from">
-        <h3 class="ten"> 2. Tiêu đề của nhận xét: </h3>
+        <h3 class="ten"> 2. Tên khách hàng: </h3>
+        <input type="text" name="nameCustomer" placeholder="Nhập tên khách hàng " class="nhap nhapTieuDe">
+    </div>
+    <div class="from">
+        <h3 class="ten"> 3. Tiêu đề của nhận xét: </h3>
         <input type="text" name="title" placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
     </div>
     <div class="from1">
-        <h3 class="ten"> 3. Viết nhận xét của bạn vào bên dưới:</h3>
+        <h3 class="ten"> 4. Viết nhận xét của bạn vào bên dưới:</h3>
         <textarea type="text" name="content" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
 <%--        <jsp:useBean id="productDetails1" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>--%>
     </div>
@@ -405,7 +408,7 @@
     </div>
 </div>
 
-<div id="khungBinhLuan">
+<div id="khungBinhLuan" style=" height: ${count + 1 }00px ; margin-top: 350px ">
     <jsp:useBean id="count" scope="request" type="java.lang.Integer"/>
     <h3 class="soBinhLuan"> Nhận xét ( ${count} Nhận xét )</h3>
     <div class="binhLuan">
@@ -417,8 +420,7 @@
             </div>
             <div class="thongTinBinhLuan">
                 <div class="ChiTiet">
-                    <jsp:useBean id="nameCustomer" scope="request" type="java.lang.String"/>
-                    <h4 class="tenNguoiBinhLuan"> ${nameCustomer}
+                    <h4 class="tenNguoiBinhLuan">Tên : ${r.nameCustomer}
                         <c:if test="${r.evaluate == 'Rất tệ' || r.evaluate == 'Tệ' || r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
                         <i class="fa fa-star one" aria-hidden="true"></i>
                         </c:if>
@@ -544,6 +546,7 @@
                         <h2 class="nhanTin">Đăng kí nhận tin</h2>
                         <div class="from">
                             <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+<%--                            <input style="display: none" type="text" name="session" value="ProductDetails"> </input>--%>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
                                 <h6 class="dangKi">Đăng kí</h6>
                             </button>

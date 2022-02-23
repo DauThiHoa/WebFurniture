@@ -2,12 +2,13 @@ package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
-import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "Send", value = "/send")
@@ -31,6 +32,7 @@ public class Send extends HttpServlet {
         String ratTot = request.getParameter("ratTot");
         String title = request.getParameter("title");
         String content = request.getParameter("content");
+        String nameCustomer = request.getParameter("nameCustomer");
 
         String evaluate  ;
         if ( ratTe != null ){
@@ -44,18 +46,27 @@ public class Send extends HttpServlet {
         }else {
             evaluate = ratTot ;
         }
-        if ( title != null && evaluate != null && content != null && linkImage != null && id != null ) {
-            boolean result = ReviewProductDetailsService.getInstance().createrReview(title, evaluate, content, linkImage, id);
+        System.out.println(title);
+        System.out.println(evaluate);
+        System.out.println(nameCustomer);
+        System.out.println(content);
+        System.out.println(linkImage);
+        System.out.println(id);
+        if ( title != null && evaluate != null && nameCustomer != null && content != null && linkImage != null && id != null ) {
+            boolean result = ReviewProductDetailsService.getInstance().createrReview(title, evaluate,nameCustomer, content, linkImage, id);
             if (result) {
                 request.setAttribute("name", name);
                 request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
                 request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
                 request.getRequestDispatcher("/ProductDetails").forward(request, response);
+                System.out.println("m");
             } else {
                 request.getRequestDispatcher("fail.jsp").forward(request, response);
+                System.out.println("fail1");
             }
         } else {
             request.getRequestDispatcher("fail.jsp").forward(request, response);
+            System.out.println("fail2");
         }
     }
 
