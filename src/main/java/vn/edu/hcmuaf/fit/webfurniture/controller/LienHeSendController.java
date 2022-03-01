@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
+
 @WebServlet(name = "LienHeSendController", value = "/LienHeSendController")
 public class LienHeSendController extends HttpServlet {
     @Override
@@ -27,6 +29,17 @@ public class LienHeSendController extends HttpServlet {
             request.setAttribute("name" , "");
             request.setAttribute("email" , "");
             request.setAttribute("content" , "");
+
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
+
+            String subject = " CONTACT SENT SUCCESSFULLY ";
+//          String content = "<img style=\"height: 50px ; width: 50px\" src=\"data:img.png\">";
+            String contentMail = "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Congratulations you have successfully submitted your contact to our furniture website !</h2> \n";
+            contentMail += "<h5 style=\"text-align: center\">The site will contact you via the email you responded to to answer your question.</h5>\n";
+            contentMail += "<h5 style=\"text-align: center\">Thank you very much for your comments on the website!</h5> \n";
+
+            boolean resultMail = sendMail(email, subject, contentMail);
             request.getRequestDispatcher("LienHe").forward(request, response);
         }else {
             request.setAttribute("name" , name);

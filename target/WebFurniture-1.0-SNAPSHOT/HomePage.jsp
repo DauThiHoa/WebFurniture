@@ -2243,7 +2243,7 @@
 
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <h3 class="ten">----- Email :</h3>
-                <p class="noiDung"> WebFurniture@gmail.com </p>
+                <p class="noiDung"> webfurniture7@gmail.com </p>
 
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                 <h3 class="ten">----- Giờ mở cửa :</h3>
@@ -2314,7 +2314,8 @@
                 <div class="lienLac_right">
                     <h2 class="nhanTin">Đăng kí nhận tin</h2>
                     <div class="from">
-                        <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+<%--                        <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
+                        <input onchange="checkValidate()" type="email" name="email"  class="email" placeholder="Nhập email của bạn ..."> </input>
                         <button type="submit" class="fromDangKi" onclick="clickValidate()">
                             <h6 class="dangKi">Đăng kí</h6>
                         </button>
@@ -2322,6 +2323,7 @@
                 </div>
                 </form>
 
+<%--                <h3 style="color: red ; font-weight: bold ; margin-left: -450px ; margin-top: 500px "></h3>--%>
             </div>
         </div>
     </div>
@@ -2332,6 +2334,8 @@ function clickValidate() {
     let isValid = checkValidate();
     if (isValid) {
         alert('Gửi đăng ký thành công');
+    }else {
+        alert('Qúy khách đăng kí nhận tin không thành công');
     }
 }
 const email = document.querySelector('.email');

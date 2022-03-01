@@ -595,7 +595,7 @@
 
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <h3 class="ten">----- Email :</h3>
-                <p class="noiDung"> WebFurniture@gmail.com </p>
+                <p class="noiDung"> webfurniture7@gmail.com </p>
 
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                 <h3 class="ten">----- Giờ mở cửa :</h3>
@@ -683,6 +683,8 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Gửi đăng ký thành công');
+        }else {
+            alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
     const email = document.querySelector('.email');

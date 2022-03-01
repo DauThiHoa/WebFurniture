@@ -35,7 +35,7 @@ public class ShowProductDetailsListController extends HttpServlet {
            String nameCustomer = "Name Customer";
 
            request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());
-           System.out.println(nameCustomer );
+           System.out.println(nameCustomer);
            request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
            request.getRequestDispatcher("ChiTietSanPham.jsp").forward(request , response);
 

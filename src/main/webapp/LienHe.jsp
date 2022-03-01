@@ -164,7 +164,7 @@
                 </div>
                 <div class="noiDung_1">
                     <i class="fa fa-envelope"></i>
-                    <p class="noiDung" align="left"> Email: WebFurniture@gmail.com </p>
+                    <p class="noiDung" align="left"> Email: webfurniture7@gmail.com </p>
                 </div>
                 <h3 class="ten"> Liên hệ với chúng tôi </h3>
 
@@ -214,7 +214,7 @@
 
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <h3 class="ten">----- Email :</h3>
-                <p class="noiDung"> WebFurniture@gmail.com </p>
+                <p class="noiDung"> webfurniture7@gmail.com </p>
 
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                 <h3 class="ten">----- Giờ mở cửa :</h3>
@@ -302,6 +302,8 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Gửi đăng ký thành công');
+        }else {
+            alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
     const email = document.querySelector('.email');
@@ -321,16 +323,19 @@
     var input_2 = document.querySelector('.input_2').value;
 
     function changeInput() {
-        let ischeck = true ;
-        if (  input_1 == ""){
-            ischeck = false ;
-        }if (  input_2 == ""){
+        let ischeck  ;
+        if (  input_1 != ''  ){
+            ischeck = true ;
+        }
+        else  {
             ischeck = false ;
         }
         return ischeck ;
     }
     function clickInput () {
-        if ( changeInput() ){
+        if ( changeInput() == false){
+            alert("Qúy khách vui lòng kiểm tra thông tin liên hệ ! " );
+        }else {
             alert("Qúy khách gửi liên hệ thành công ! " );
         }
     }

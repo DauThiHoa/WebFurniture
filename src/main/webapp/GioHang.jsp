@@ -230,7 +230,7 @@
                   <input onchange="checkValidate()" class="btn1" style="width: 500px; height: 58px; color: #555555"
                          type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                   <button type="submit" class="fromDangKi" onclick="clickValidate()" class="btn2"
-                          style="width: 110px; height: 58px; color: white ; font-size: 200%; background: #1fb5d4">Gửi</button>
+                          style="width: 110px; height: 58px; color: white ; font-size: 200%; background: #1fb5d4 ; margin-bottom: -10px" >Gửi</button>
             </form>
 <%--            <form action="MailController" method="post">--%>
 <%--                <div class="lienLac_right">--%>
@@ -278,9 +278,9 @@
     </div>
 </div>
 
-<div id="layout5">
-    <button style="color: white"><h3>THÔNG TIN KHÁC</h3></button>
-</div>
+<%--<div id="layout5">--%>
+<%--    <button style="color: white"><h3>THÔNG TIN KHÁC</h3></button>--%>
+<%--</div>--%>
 
 
 <div id="layout7">
@@ -310,7 +310,7 @@
 
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <h3 class="ten">----- Email :</h3>
-                <p class="noiDung"> WebFurniture@gmail.com </p>
+                <p class="noiDung"> webfurniture7@gmail.com </p>
 
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                 <h3 class="ten">----- Giờ mở cửa :</h3>
@@ -475,6 +475,8 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Gửi đăng ký thành công');
+        }else {
+            alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
     const email = document.querySelector('.email');

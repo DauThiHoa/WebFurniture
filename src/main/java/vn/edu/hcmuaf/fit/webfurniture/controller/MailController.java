@@ -35,11 +35,12 @@ public class MailController extends HttpServlet {
 
         boolean result = sendMail(email, subject, content);
         if(result) {
-//          request.getRequestDispatcher(session).forward(request, response);
 //          request.getRequestDispatcher("success.jsp").forward(request, response);
             request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         }else {
-            request.getRequestDispatcher("fail.jsp").forward(request, response);
+//          request.getRequestDispatcher("fail.jsp").forward(request, response);
+            request.setAttribute("email", "Qúy khách đăng kí nhận tin không thành công");
+            request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         }
     }
 
