@@ -24,12 +24,12 @@
     <div id="Ten_Web">
         <h1>WEB FURNITURE</h1>
     </div>
-    <form>
+    <form action="ProductDetailsList" >
         <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
+        <button id="Tim_Kiem" type="submit" style="height: 42px ; width: 43px" >
+            <i style=" font-size : 130% ; margin-top: 3px ; margin-left: 6px" class="fa fa-search" aria-hidden="true"></i>
+        </button>
     </form>
-    <div id="Tim_Kiem">
-        <i class="fa fa-search" aria-hidden="true"></i>
-    </div>
     <div id="Hotline">
         <a href="LienHe">
             <div>
@@ -246,22 +246,22 @@
     <div class="hoTen_Email">
         <div class="hoten">
             <jsp:useBean id="nameCustomer" scope="request" class="java.lang.String"/>
-            <input class="ten" placeholder="Họ tên :" name="nameCustomer" value="${nameCustomer}"> </input>
+            <input class="ten" onchange="inputInformation()" placeholder="Họ tên :" name="nameCustomer" value="${nameCustomer}"> </input>
         </div>
         <div class="Email">
             <jsp:useBean id="emailCustomer" scope="request" class="java.lang.String"/>
-            <input class="email" placeholder="Email :" name="emailCustomer" value="${emailCustomer}"> </input>
+            <input class="email" onchange="inputInformation()" placeholder="Email :" name="emailCustomer" value="${emailCustomer}"> </input>
         </div>
     </div>
 
     <div class="noiDungBinhLuan">
         <jsp:useBean id="content" scope="request" class="java.lang.String"/>
-        <input class="thongTinNoiDung" placeholder="Nội dung : " name="content" value="${content}"> </input>
+        <input class="thongTinNoiDung" onchange="inputInformation()" placeholder="Nội dung : " name="content" value="${content}"> </input>
     </div>
     <button class="guiBinhLuan" type="submit" onclick="clickNewComment()">
         <h4 class="gui"> Gửi bình luận </h4>
     </button>
-        <form>
+   </form>
 
     <h3 class="soBinhLuan"> Bình luận ( ${sumNewComment} bình luận )</h3>
     <jsp:useBean id="NewCommentList" scope="request" type="java.util.List"/>
@@ -318,8 +318,6 @@
         </div>
     </div>
 </div>
-
-
 <div id="layout7">
     <div class="thanhDuoi">
         <div class="tenWeb">
@@ -429,6 +427,7 @@
     </div>
 </div>
 <script>
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
@@ -437,14 +436,31 @@
             alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
-    var ten = document.querySelector('.ten');
-    var email = document.querySelector('.email');
-    var thongTinNoiDung = document.querySelector('.thongTinNoiDung');
+
+    const ten = document.querySelector('.ten');
+    const email = document.querySelector('.email');
+    const thongTinNoiDung = document.querySelector('.thongTinNoiDung');
+
+    function inputInformation () {
+        let check ;
+        if ( ten.value == ""  ){
+            check = false ;
+        }else  if (  email.value == ""  ){
+            check = false ;
+        }
+        else  if (  thongTinNoiDung.value == ""  ){
+            check = false ;
+        }
+        else {
+            check = true ;
+        }
+        return check ;
+    }
     function clickNewComment() {
-        if ( ten == "" ||  email == "" || thongTinNoiDung == ""  ){
-            alert("Qúy khách vui lòng điền đầy đủ thông tin ! " );
-        }else {
+        if ( inputInformation () ){
             alert("Qúy khách đã bình luận thành công !");
+        }else {
+            alert("Qúy khách vui lòng điền đầy đủ thông tin !" );
         }
     }
     var lienheMail = document.querySelector('.lienheMail');

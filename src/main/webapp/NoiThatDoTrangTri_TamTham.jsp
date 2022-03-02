@@ -18,12 +18,12 @@
     <div id="Ten_Web">
         <h1>WEB FURNITURE</h1>
     </div>
-    <form>
+    <form action="ProductDetailsList" >
         <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
+        <button id="Tim_Kiem" type="submit" style="height: 42px ; width: 43px" >
+            <i style=" font-size : 130% ; margin-top: 3px ; margin-left: 6px" class="fa fa-search" aria-hidden="true"></i>
+        </button>
     </form>
-    <div id="Tim_Kiem">
-        <i class="fa fa-search" aria-hidden="true"></i>
-    </div>
     <div id="Hotline">
         <a href="LienHe">
             <div>

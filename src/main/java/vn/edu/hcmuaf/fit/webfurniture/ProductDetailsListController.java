@@ -17,6 +17,12 @@ public class ProductDetailsListController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
            request.setAttribute("productDetailsAll" , ProductDetailsService.getInstance().getAll());
 
+           String search = request.getParameter("search");
+           if ( search != null) {
+               request.setAttribute("search", search);
+           }else {
+               request.setAttribute("search", "");
+           }
            Profile profile = ProfileService.getInstance().getProfile();
            request.setAttribute("profile" , profile);
 
@@ -33,8 +39,6 @@ public class ProductDetailsListController extends HttpServlet {
            request.setAttribute("productDetailsSanPhamKhuyenMai1" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsSanPhamKhuyenMai2" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsDacTrung" , ProductDetailsService.getInstance().getAll());
-
-
 
            request.getRequestDispatcher("HomePage.jsp").forward(request , response);
 

@@ -3,8 +3,7 @@
 <%@ page import="com.google.gson.Gson" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 
 <!doctype html>
 <html lang="en">
@@ -28,12 +27,12 @@
     <div id="Ten_Web">
         <h1>WEB FURNITURE</h1>
     </div>
-    <form>
+    <form action="ProductDetailsList"  >
         <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
+        <button id="Tim_Kiem" type="submit" style="height: 42px ; width: 43px" >
+            <i style=" font-size : 130% ; margin-top: 3px ; margin-left: 6px" class="fa fa-search" aria-hidden="true"></i>
+        </button>
     </form>
-    <div id="Tim_Kiem">
-        <i class="fa fa-search" aria-hidden="true"></i>
-    </div>
     <div id="Hotline">
         <a href="LienHe">
             <div>
@@ -47,17 +46,17 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">Đăng
+                    href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+                href="controllerRegister">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>

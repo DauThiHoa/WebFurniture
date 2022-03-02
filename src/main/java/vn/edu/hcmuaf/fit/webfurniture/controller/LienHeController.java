@@ -1,10 +1,10 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
-import vn.edu.hcmuaf.fit.webfurniture.service.ContactService;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "LienHeController", value = "/LienHe")
@@ -13,6 +13,8 @@ public class LienHeController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        request.setAttribute("search" , "");
 
         String name = request.getParameter("name");
         String email = request.getParameter("email");

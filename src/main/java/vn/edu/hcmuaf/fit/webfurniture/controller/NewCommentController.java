@@ -1,8 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
-import vn.edu.hcmuaf.fit.webfurniture.service.ContactService;
 import vn.edu.hcmuaf.fit.webfurniture.service.NewCommentService;
-import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

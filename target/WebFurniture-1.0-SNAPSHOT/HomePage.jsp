@@ -29,9 +29,10 @@
         <h1>WEB FURNITURE</h1>
     </div>
     <form>
-        <input class="inputSearch" type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
+        <jsp:useBean id="search" scope="request" type="java.lang.String"/>
+        <input class="inputSearch" type="text" value="${search}" name="search" placeholder="Tìm kiếm sản phẩm ...">
     </form>
-    <div id="Tim_Kiem" onclick="searchProduct()">
+    <div id="Tim_Kiem" onchange="searchProductChange()" onclick="searchProduct()" >
         <i class="fa fa-search"  aria-hidden="true"></i>
     </div>
     <div id="Hotline">
@@ -2343,6 +2344,7 @@ function checkValidate() {
     }
     return isCheck;
 }
+
   var i = 1 ;
 setInterval(function zoomountRight(image) {
     document.getElementById('trangKhung').src = "Capture1.PNG";
@@ -2360,6 +2362,7 @@ const layout5 = document.getElementById('layout5') ;
 const DiemDen = document.querySelector('.DiemDen') ;
 // inputSearch fa-search
 const inputSearch = document.querySelector('.inputSearch') ;
+
 function searchProduct () {
     // alert(inputSearch.value.toUpperCase());
     var noibat = "NỔI BẬT";
@@ -2368,7 +2371,7 @@ function searchProduct () {
     var bosuutap = "BỘ SƯU TẬP";
     var khuyenmai = "KHUYẾN MÃI";
 
-    if (inputSearch.value.toUpperCase().endsWith(noibat)){
+    if (inputSearch.value.toUpperCase().endsWith(noibat)) {
         SanPhamNoiBat.style.display = "block";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "none";
@@ -2377,8 +2380,7 @@ function searchProduct () {
         DiemDen.style.display = "block";
         DiemDen.style.marginTop = "150px";
 
-    }
-    else if (inputSearch.value.toUpperCase().endsWith(hot)){
+    } else if (inputSearch.value.toUpperCase().endsWith(hot)) {
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "block";
         SanPhamHot.style.marginTop = "50px";
@@ -2388,8 +2390,7 @@ function searchProduct () {
         layout5.style.display = "none";
         DiemDen.style.display = "block";
         DiemDen.style.marginTop = "150px";
-    }
-    else if (inputSearch.value.toUpperCase().endsWith(moi)){
+    } else if (inputSearch.value.toUpperCase().endsWith(moi)) {
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "block";
@@ -2399,8 +2400,7 @@ function searchProduct () {
         layout5.style.display = "none";
         DiemDen.style.display = "block";
         DiemDen.style.marginTop = "150px";
-    }
-    else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)){
+    } else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)) {
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "none";
@@ -2410,14 +2410,71 @@ function searchProduct () {
         layout5.style.marginTop = "200px";
         DiemDen.style.display = "block";
         DiemDen.style.marginTop = "50px";
-    }
-    else {
+    } else {
         SanPhamNoiBat.style.display = "block";
         SanPhamHot.style.display = "block";
         SanPhamMoi.style.display = "block";
         layout4.style.display = "block";
         layout4.style.marginTop = "800px";
+        layout5.style.display = "block";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
+    }
+}
+function searchProductChange () {
 
+    // alert(inputSearch.value.toUpperCase());
+    var noibat = "NỔI BẬT";
+    var hot = "HOT";
+    var moi = "MỚI";
+    var bosuutap = "BỘ SƯU TẬP";
+    var khuyenmai = "KHUYẾN MÃI";
+
+    if (inputSearch.value.toUpperCase().endsWith(noibat)) {
+        SanPhamNoiBat.style.display = "block";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "block";
+        layout5.style.display = "none";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
+
+    } else if (inputSearch.value.toUpperCase().endsWith(hot)) {
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "block";
+        SanPhamHot.style.marginTop = "50px";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "block";
+        layout4.style.marginTop = "50px";
+        layout5.style.display = "none";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
+    } else if (inputSearch.value.toUpperCase().endsWith(moi)) {
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "block";
+        SanPhamMoi.style.marginTop = "50px";
+        layout4.style.display = "block";
+        layout4.style.marginTop = "750px";
+        layout5.style.display = "none";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
+    } else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)) {
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "block";
+        layout4.style.marginTop = "50px";
+        layout5.style.display = "block";
+        layout5.style.marginTop = "200px";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "50px";
+    } else {
+        SanPhamNoiBat.style.display = "block";
+        SanPhamHot.style.display = "block";
+        SanPhamMoi.style.display = "block";
+        layout4.style.display = "block";
+        layout4.style.marginTop = "800px";
         layout5.style.display = "block";
         DiemDen.style.display = "block";
         DiemDen.style.marginTop = "150px";

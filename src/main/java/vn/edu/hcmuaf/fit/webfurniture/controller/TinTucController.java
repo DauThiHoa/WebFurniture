@@ -26,10 +26,19 @@ public class TinTucController extends HttpServlet {
         int sum = NewCommentService.getInstance().sumNewComment();
         request.setAttribute("sumNewComment" , sum);
 
-        request.setAttribute("nameCustomer" , "");
-        request.setAttribute("emailCustomer" , "");
-        request.setAttribute("content" , "");
+        String nameCustomer = request.getParameter("nameCustomer");
+        String emailCustomer = request.getParameter("emailCustomer");
+        String content = request.getParameter("content");
 
+        if ( nameCustomer == "" || emailCustomer == "" || content == "" ) {
+            request.setAttribute("nameCustomer", nameCustomer);
+            request.setAttribute("emailCustomer", emailCustomer);
+            request.setAttribute("content", content);
+        }else {
+            request.setAttribute("nameCustomer", "");
+            request.setAttribute("emailCustomer", "");
+            request.setAttribute("content", "");
+        }
         request.getRequestDispatcher("TinTuc.jsp").forward(request, response);
 
     }
