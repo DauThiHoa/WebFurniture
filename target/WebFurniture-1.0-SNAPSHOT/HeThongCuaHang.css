@@ -1180,4 +1180,8 @@ body {
         margin-left: 545px;
 
     }
-}
+}#layout7 .thanhDuoi .NoiDung .lienLac .lienLac_right .from .fromDangKi:hover {
+     cursor: pointer;
+     background: #ffb39d;
+     color: white;
+ }

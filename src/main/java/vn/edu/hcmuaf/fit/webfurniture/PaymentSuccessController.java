@@ -65,7 +65,8 @@ public class PaymentSuccessController extends HttpServlet {
         }else {
             gender = nam ;
         }
-        if ( name != null && brithDay != null && gender != null && email != null && phone != null && address != null && bank != null && cardNumber != null && method != null && discountCode != null ) {
+        if ( name != "" && brithDay != "" && gender != "" && email != "" && phone != "" && address != "" && bank != "" &&
+                cardNumber != "" && method != "" && discountCode != "" ) {
             boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode);
 
             String subject = "PAYMENT SUCCESS";
@@ -94,8 +95,7 @@ public class PaymentSuccessController extends HttpServlet {
             request.setAttribute("cardNumber" , cardNumber);
             request.setAttribute("brithDay" , brithDay);
             request.setAttribute("discountCode" , discountCode);
-            System.out.println(name);
-            System.out.println(email);
+
             request.getRequestDispatcher("/payment").forward(request , response);
         }
         //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);

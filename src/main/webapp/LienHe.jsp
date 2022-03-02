@@ -50,7 +50,7 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
@@ -321,24 +321,26 @@
         return isCheck;
     }
 
-    var input_1 = document.querySelector('.input_1').value;
-    var input_2 = document.querySelector('.input_2').value;
+    const input_1 = document.querySelector('.input_1');
+    const input_2 = document.querySelector('.input_2');
 
     function changeInput() {
         let ischeck  ;
-        if (  input_1 != ''  ){
-            ischeck = true ;
+        if (  input_1.value == ''  ){
+            ischeck = false ;
+        }else  if ( input_2.value == ''  ){
+            ischeck = false ;
         }
         else  {
-            ischeck = false ;
+            ischeck = true ;
         }
         return ischeck ;
     }
     function clickInput () {
-        if ( changeInput() == false){
-            alert("Qúy khách vui lòng kiểm tra thông tin liên hệ ! " );
-        }else {
+        if ( changeInput()){
             alert("Qúy khách gửi liên hệ thành công ! " );
+        }else {
+            alert("Qúy khách vui lòng kiểm tra thông tin liên hệ ! " );
         }
     }
 </script>

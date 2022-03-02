@@ -39,15 +39,16 @@
             <p class="text">Sign Up with Email Address</p>
             <div class="formGroup">
                 <i class="far fa-user"></i>
-                <input type="text" name="name" id="name" placeholder="Name" onchange="checkValidate()">
+<%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
+                <input type="text" name="name" id="name" placeholder="Name" value="${name}" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
-                <input type="email" name="email" id="email" placeholder="Email" onchange="checkValidate()">
+                <input type="email" name="email" id="email" value="${email}" placeholder="Email" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password" onchange="checkValidate()">
+                <input type="password" name="password" id="password" value="${password}" placeholder="Password" onchange="checkValidate()">
             </div>
             <div class="checkBox">
                 <input type="checkbox" name="checkbox" id="checkbox">
@@ -76,6 +77,8 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Kiểm tra thông tin đăng ký');
+        }else {
+            alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
     }
     const name = document.getElementById('name');
@@ -86,17 +89,16 @@
         let nameValue = name.value;
         let emailValue = email.value;
         let passwordValue = password.value;
-        let isCheck = true;
+        let isCheck ;
 
         if (emailValue == '') {
-            alert('Email không được để trống');
             isCheck = false;
-        } if (passwordValue == '') {
-            alert('Password không được để trống');
+        }else if (passwordValue == '') {
             isCheck = false;
-        } if (nameValue == '') {
-            alert('Name không được để trống');
+        }else if (nameValue == '') {
             isCheck = false;
+        }else {
+            isCheck = true;
         }
         return isCheck;
     }

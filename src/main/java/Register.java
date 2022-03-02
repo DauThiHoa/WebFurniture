@@ -24,6 +24,7 @@ public class Register extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         request.getRequestDispatcher("DangKy.jsp").forward(request, response);
+
         if (UserServices.getInstance().register(name, password, email)) {
             response.sendRedirect("../WebFurniture_war_exploded/DangNhap.jsp");
         } else {

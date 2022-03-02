@@ -1500,7 +1500,7 @@ a {
 }
 
 #layout7 .thanhDuoi .NoiDung .lienLac .lienLac_right .from .fromDangKi:hover {
-    background: blue;
+    background: #ffb39d;
     color: white;
 }
 
@@ -2976,7 +2976,7 @@ Tablet
     }
 
     #layout7 .thanhDuoi .NoiDung .lienLac .lienLac_right .from .fromDangKi:hover {
-        background: blue;
+        background: #ffb39d;
         color: white;
     }
 
@@ -4536,7 +4536,7 @@ Tablet
     }
 
     #layout7 .thanhDuoi .NoiDung .lienLac .lienLac_right .from .fromDangKi:hover {
-        background: blue;
+        background: #ffb39d;
         color: white;
     }
 
@@ -4550,5 +4550,9 @@ Tablet
     }
 
 }
-
+#layout7 .thanhDuoi .NoiDung .lienLac .lienLac_right .from button.fromDangKi:hover {
+    cursor: pointer;
+    background: #ffb39d;
+    color: white;
+}
 

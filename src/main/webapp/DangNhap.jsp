@@ -217,11 +217,12 @@
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
 <%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
-                <input type="email" name="email" id="email" placeholder="Email" value="" onchange="checkValidate()">
+                <input type="email" name="email" id="email" placeholder="Email" value="${email}" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password" onchange="checkValidate()">
+<%--                <jsp:useBean id="password" scope="request" type="java.lang.String"/>--%>
+                <input type="password" name="password" id="password" value="${password}" placeholder="Password" onchange="checkValidate()">
             </div>
             <div class="checkBox">
                 <input type="checkbox" name="checkboxlogin" id="checkbox">
@@ -256,6 +257,8 @@
         if (isValid) {
             alert('Kiểm tra thông tin đăng nhập');
             <%--alert('${correct}');--%>
+        }else {
+            alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
     }
     const email = document.getElementById('email');
@@ -263,13 +266,13 @@
     function checkValidate() {
         let emailValue = email.value;
         let passwordValue = password.value;
-        let isCheck = true;
+        let isCheck ;
         if (emailValue == '') {
-            alert('Email không được để trống');
             isCheck = false;
-        } if (passwordValue == '') {
-            alert('Password không được để trống');
+        } else  if (passwordValue == '') {
             isCheck = false;
+        }else {
+            isCheck = true;
         }
         return isCheck;
     }

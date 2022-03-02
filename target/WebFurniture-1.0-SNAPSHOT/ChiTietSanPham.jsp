@@ -16,6 +16,7 @@
     <title>THÔNG TIN SẢN PHẨM </title>
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="ChiTietSanPham.css">
+   
     <link rel="icon" href="img.png" type="image/png" class="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,17 +48,17 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="/Login">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="/Login">Đăng
+                    href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="/Register"><p
+                href="controllerRegister"><p
                 class="dangKi">Đăng ký</p></a>  </p>
         </div>
 
@@ -376,17 +377,18 @@
             <h3 class="DanhGia starFived">Rất tốt</h3>
         </div>
     </div>
+
     <div class="from">
         <h3 class="ten"> 2. Tên khách hàng: </h3>
-        <input type="text" name="nameCustomer" placeholder="Nhập tên khách hàng " class="nhap nhapTieuDe">
+        <input type="text"  name="nameCustomer" onchange="binhluan()" placeholder="Nhập tên khách hàng " class="nhap nhapTieuDe nhapTenKhachHang">
     </div>
     <div class="from">
         <h3 class="ten"> 3. Tiêu đề của nhận xét: </h3>
-        <input type="text" name="title" placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
+        <input type="text"  name="title" onchange="binhluan()"  placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
     </div>
     <div class="from1">
         <h3 class="ten"> 4. Viết nhận xét của bạn vào bên dưới:</h3>
-        <textarea type="text" name="content" placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
+        <textarea type="text"   name="content" onchange="binhluan()"  placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
 <%--        <jsp:useBean id="productDetails1" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>--%>
     </div>
     <div class="from2">
@@ -395,7 +397,7 @@
 <%--            <h3 class="hinh"> Chọn hình </h3>--%>
 <%--        </div>--%>
         <div class="chonHinh">
-            <a href="send">
+<%--            <a href="send">--%>
                 <input type="text" style="display: none" name="id" value="${productDetails.id}">
                 <input type="text" style="display: none" name="name" value="${productDetails.name}">
                 <input type="text" style="display: none" name="linkImage" value="${productDetails.linkImage}">
@@ -403,11 +405,11 @@
 <%--            <h3 class="hinh gui"> Gửi nhận xét </h3>--%>
                  Gửi nhận xét
             </button>
-            </a>
+<%--            </a>--%>
         </div>
     </div>
 </div>
-
+</form>
 <div id="khungBinhLuan" style=" height: ${count + 1 }00px ; margin-top: 350px ">
     <jsp:useBean id="count" scope="request" type="java.lang.Integer"/>
     <h3 class="soBinhLuan"> Nhận xét ( ${count} Nhận xét )</h3>
@@ -447,7 +449,7 @@
     </div>
 
 </div>
-</form>
+
 <div id="layout7">
     <div class="thanhDuoi">
         <div class="tenWeb">
@@ -548,7 +550,7 @@
                             <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
 <%--                            <input style="display: none" type="text" name="session" value="ProductDetails"> </input>--%>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
-                                <h6 class="dangKi">Đăng kí</h6>
+                                <h6 class="dangKi" >Đăng kí</h6>
                             </button>
                         </div>
                     </div>
@@ -567,6 +569,7 @@
         quantityPayment.value = Number( soLuongDat.value ) ;
         soLuongDat.value = quantityPayment.value;
     }
+
     function send () {
         const danhgiaTieuDe = document.querySelector('.danhgiaTieuDe');
         const noiDungTieuDe = document.querySelector('.noiDungTieuDe');
@@ -604,8 +607,32 @@
         one.style.color = "red";
         alert("hhh");
     };
+    // nhapTenKhachHang nhapTieuDe nhapNoiDung
+    const nhapTenKhachHang = document.querySelector('.nhapTenKhachHang');
+    const nhapTieuDe = document.querySelector('.nhapTieuDe');
+    const nhapNoiDung = document.querySelector('.nhapNoiDung');
+
+    function binhluan() {
+        let ischeck ;
+        if (nhapTenKhachHang.value == "") {
+            alert("kkkkkkkk");
+            ischeck = false;
+        } else if (nhapTieuDe.value  == "") {
+            ischeck = false;
+        }else if (nhapNoiDung.value  == "") {
+            ischeck = false;
+        }
+        else {
+            ischeck = true;
+        }
+        return ischeck;
+    }
     function success () {
-        alert("Qúy khách đã bình luận thành công !");
+        if(binhluan()){
+            alert("Qúy khách đã bình luận thành công !");
+        }else{
+            alert('Qúy khách vui lòng điền đầy đủ thông tin !');
+        }
     }
 
     function clickValidate() {

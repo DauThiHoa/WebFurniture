@@ -19,7 +19,6 @@ public class ControllerLogin extends HttpServlet {
 
         request.setAttribute("email", email);
         request.setAttribute("password", password);
-        request.setAttribute("error", "");
 
         request.getRequestDispatcher("/DangNhap.jsp").forward(request, response);
     }

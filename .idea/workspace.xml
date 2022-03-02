@@ -11,19 +11,27 @@
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ShowProductDetailsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ShowProductDetailsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/LienHeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/LienHeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/NewCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/NewCommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/TinTucController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/TinTucController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/services/UserServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DangKy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DangKy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DangNhap.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DangNhap.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/DoAm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DoAm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/MeoVat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MeoVat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" afterDir="false" />
@@ -55,6 +63,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/TinTuc.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.jsp" afterDir="false" />
@@ -475,6 +484,7 @@
       <workItem from="1646198005673" duration="3149000" />
       <workItem from="1646220924823" duration="3589000" />
       <workItem from="1646228587502" duration="10252000" />
+      <workItem from="1646243838479" duration="8194000" />
     </task>
     <servers />
   </component>
@@ -628,7 +638,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp</url>
-          <line>414</line>
+          <line>416</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -643,18 +653,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java</url>
-          <line>127</line>
+          <line>128</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java</url>
-          <line>141</line>
+          <line>142</line>
           <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java</url>
-          <line>158</line>
-          <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java</url>
@@ -693,7 +698,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/AllProducts.jsp</url>
-          <line>1416</line>
+          <line>1417</line>
           <option name="timeStamp" value="141" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -703,12 +708,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/TinTuc.jsp</url>
-          <line>265</line>
+          <line>266</line>
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp</url>
-          <line>245</line>
+          <line>246</line>
           <option name="timeStamp" value="150" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -743,23 +748,53 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/GioHang.jsp</url>
-          <line>229</line>
+          <line>230</line>
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/GioHang.jsp</url>
-          <line>231</line>
+          <line>232</line>
           <option name="timeStamp" value="165" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp</url>
-          <line>548</line>
+          <line>550</line>
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/GioHang.jsp</url>
-          <line>280</line>
+          <line>281</line>
           <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp</url>
+          <line>399</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp</url>
+          <line>407</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.jsp</url>
+          <line>15</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/HomePage.jsp</url>
+          <line>15</line>
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

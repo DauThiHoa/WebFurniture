@@ -24,7 +24,6 @@ public class UserServices {
     }
 
     public boolean register(String username, String password, String email){
-        System.out.println("userService");
         return UserDao.getInstance().register(username, password,email);
 
     }

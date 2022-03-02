@@ -147,30 +147,30 @@
     }
 
     // const checkout = document.querySelector('.checkout');
-    var firstname  =  document.getElementById("fname").value ;
-    var email  =  document.getElementById('email').value ;
-    var address  =  document.getElementById('address').value ;
-    var adr  =  document.getElementById('adr').value ;
-    var cardname  =  document.getElementById('cardname').value ;
-    var cardnumber  =  document.getElementById('cardnumber').value ;
-    var brithDay  =  document.getElementById('brithDay').value ;
+    const firstname  =  document.getElementById("fname") ;
+    const email  =  document.getElementById('email') ;
+    const address  =  document.getElementById('address') ;
+    const adr  =  document.getElementById('adr') ;
+    const cardname  =  document.getElementById('cardname') ;
+    const cardnumber  =  document.getElementById('cardnumber') ;
+    const brithDay  =  document.getElementById('brithDay') ;
 
     function checkValidate() {
-        let isCheck = true;
-        if ( firstname == ''  ){
+        let isCheck ;
+        if ( firstname.value == ""  ){
             // alert('Qúy khách vui lòng điền đầy đủ thông tin ! ');
             isCheck = false;
-        }else if (email == ''){
+        }else if (email.value == ""){
             isCheck = false;
-        }else if (address == ''){
+        }else if (address.value == ""){
             isCheck = false;
-        }else if (adr == ''){
+        }else if (adr.value == ""){
             isCheck = false;
-        }else if (cardname == ''){
+        }else if (cardname.value == ""){
             isCheck = false;
-        }else if (cardnumber == ''){
+        }else if (cardnumber.value == ""){
             isCheck = false;
-        }else if (brithDay == ''){
+        }else if (brithDay.value == ""){
             isCheck = false;
         }else {
             isCheck = true;
@@ -182,6 +182,8 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Qúy khách đã đặt hàng thành công !');
+        }else {
+            alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
     }
 

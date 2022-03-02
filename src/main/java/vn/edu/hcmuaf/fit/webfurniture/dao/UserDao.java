@@ -1,11 +1,12 @@
 package vn.edu.hcmuaf.fit.webfurniture.dao;
 
-import org.jdbi.v3.core.result.ResultBearing;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.db.DBConnect;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDao {
     private static UserDao instance;

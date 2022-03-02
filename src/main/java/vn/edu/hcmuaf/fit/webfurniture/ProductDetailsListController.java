@@ -23,6 +23,10 @@ public class ProductDetailsListController extends HttpServlet {
            }else {
                request.setAttribute("search", "");
            }
+           request.setAttribute("email", "");
+           request.setAttribute("password", "");
+           request.setAttribute("name", "");
+
            Profile profile = ProfileService.getInstance().getProfile();
            request.setAttribute("profile" , profile);
 

@@ -46,27 +46,26 @@ public class Send extends HttpServlet {
         }else {
             evaluate = ratTot ;
         }
-        System.out.println(title);
-        System.out.println(evaluate);
-        System.out.println(nameCustomer);
-        System.out.println(content);
-        System.out.println(linkImage);
-        System.out.println(id);
-        if ( title != null && evaluate != null && nameCustomer != null && content != null && linkImage != null && id != null ) {
+        if ( title != "" && evaluate != "" && nameCustomer != "" && content != "" && linkImage != "" && id != "" ) {
             boolean result = ReviewProductDetailsService.getInstance().createrReview(title, evaluate,nameCustomer, content, linkImage, id);
+            System.out.println(result);
             if (result) {
                 request.setAttribute("name", name);
                 request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
                 request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
                 request.getRequestDispatcher("/ProductDetails").forward(request, response);
-                System.out.println("m");
-            } else {
-                request.getRequestDispatcher("fail.jsp").forward(request, response);
-                System.out.println("fail1");
+
+            } else {// F
+                request.setAttribute("name", name);
+                request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
+                request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
+                request.getRequestDispatcher("/ProductDetails").forward(request, response);
             }
-        } else {
-            request.getRequestDispatcher("fail.jsp").forward(request, response);
-            System.out.println("fail2");
+        } else {// F
+            request.setAttribute("name", name);
+            request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
+            request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
+            request.getRequestDispatcher("/ProductDetails").forward(request, response);
         }
     }
 

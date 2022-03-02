@@ -6,6 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="../stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -703,7 +704,7 @@
                             <img class="mang" src="Image_Home2/thanhToan3.PNG" height="40" width="64"/></a>
                         <a href="https://www.google.com/search?q=jcb&oq=jcb&aqs=chrome..69i57j46i199i433i465i512j0i512l6j0i10i512j0i512.1389j0j9&sourceid=chrome&ie=UTF-8">
                             <img class="mang" src="Image_Home2/thanhToan4.PNG" height="38" width="62"/></a>
-                        <img class="mang" src="../Image_Home2/thanhToan5.PNG" height="40" width="57"/>
+                        <img class="mang" src="Image_Home2/thanhToan5.PNG" height="40" width="57"/>
                     </div>
                 </div>
                 <form action="MailController" method="post">
@@ -712,7 +713,7 @@
                         <div class="from">
                             <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
-                                <h6 class="dangKi">Đăng kí</h6>
+                                <h6 class="dangKi" style="color: #ffb39d">Đăng kí</h6>
                             </button>
                         </div>
                     </div>

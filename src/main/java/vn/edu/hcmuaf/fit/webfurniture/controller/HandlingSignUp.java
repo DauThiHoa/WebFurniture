@@ -26,22 +26,34 @@ public class HandlingSignUp extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        System.out.println(name);
 
-        boolean registerSuccess  = UserServices.getInstance().register(name, password, email);
-        System.out.println(registerSuccess);
+        boolean registerSuccess = false;
+        if (name != "" && email != "" && password != "") {
+             registerSuccess = UserServices.getInstance().register(name, password, email);
+        }else {
+            request.setAttribute("name", name);
+            request.setAttribute("email", email);
+            request.setAttribute("password", password);
 
+            request.getRequestDispatcher("controllerRegister").forward(request, response);
+        }
         String subject = "SIGN UP FOR AN ACCOUNT";
         String content = "<i style=\"text-align: center ; color: #1fb5d4; font-size: 300% \" class=\"fa fa-check-circle\" aria-hidden=\"true\"></i>";
         content += "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Congratulation !</h2>\n ";
         content += "<h5 style=\"text-align: center\">You have successfully registered an account at WebFurniture.</h5>\n";
         content += "<h5 style=\"text-align: center\">You can use this account to access WebFurniture!</h5>\n";
 
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         if(registerSuccess){
             boolean result = sendMail(email, subject, content);
             response.sendRedirect("login");
 //            request.getRequestDispatcher("login").forward(request, response);
         }else {
+            request.setAttribute("name", name);
+            request.setAttribute("email", email);
+            request.setAttribute("password", password);
+
             request.getRequestDispatcher("controllerRegister").forward(request, response);
         }
     }
