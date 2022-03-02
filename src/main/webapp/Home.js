@@ -1,17 +1,9 @@
 function zoomountLeft(image) {
     document.getElementById('trangKhung').src = "Image/Capture.PNG";
 }
-var  leftSetTime = function zoomountLeft(image) {
-    document.getElementById('trangKhung').src = "Image/Capture.PNG";
-}
-setTimeout(leftSetTime, 2);
 function zoomountRight(image) {
     document.getElementById('trangKhung').src = "Capture1.PNG";
 }
-var  rìghtSetTime = function zoomountRight(image) {
-    document.getElementById('trangKhung').src = "Capture1.PNG";
-}
-setTimeout(rìghtSetTime, 5);
 function left(left) {
     document.querySelector('.tenCacSanPhamNoiBat1').style.display = "none";
 }

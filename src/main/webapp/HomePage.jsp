@@ -29,10 +29,10 @@
         <h1>WEB FURNITURE</h1>
     </div>
     <form>
-        <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
+        <input class="inputSearch" type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
     </form>
-    <div id="Tim_Kiem">
-        <i class="fa fa-search" aria-hidden="true"></i>
+    <div id="Tim_Kiem" onclick="searchProduct()">
+        <i class="fa fa-search"  aria-hidden="true"></i>
     </div>
     <div id="Hotline">
         <a href="LienHe">
@@ -182,8 +182,7 @@
     <img id="hinh4" src="Image/hinh4.PNG"/>
 </div>
 
-
-<div id="SanPhamNoiBat">
+<div id="SanPhamNoiBat" style="display: block" >
 
     <div id="BanLamViec" >
         <jsp:useBean id="productDetailsAll" scope="request" type="java.util.List"/>
@@ -569,9 +568,7 @@
         </div>
     </div>
 </div>
-
-
-<div id="SanPhamHot">
+<div id="SanPhamHot" style="display: block">
     <div id="chu_SanPhamHot">
         <h2 id="chu">SẢN PHẨM HOT</h2>
         <hr id="thanhKe2">
@@ -1005,8 +1002,7 @@
     </div>
 </div>
 
-
-<div id="SanPhamMoi">
+<div id="SanPhamMoi" style="display: block">
     <div id="Kozoka_trysil">
         <jsp:useBean id="productDetailsSanPhamMoiMiNi" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsSanPhamMoiMiNi}">
@@ -1376,7 +1372,7 @@
 
     </div>
 </div>
-<div id="layout4">
+<div id="layout4" style="display: block">
     <div class="layout4_danhMucSanPham">
         <a href="NoiThatDoTrangTri.jsp?_ijt=6ckcb7ad8uk7545qms42j8a53d">
             <div class="danhMucSanPham">
@@ -1434,7 +1430,7 @@
         </a>
     </div>
 </div>
-<div id="layout5">
+<div id="layout5" style="display: block">
     <div class="sanPham">
         <div class="tieuDe">
             <div class="left">
@@ -2036,13 +2032,12 @@
     <!-- SanPham Khi Nhan Nut-->
 
 </div>
-</div>
-<div class="DiemDen">
+<div class="DiemDen" style="display: block">
     <h1 class="chuDiemDenMoi"> Sản Phẩm Đặc Trưng </h1>
 <jsp:useBean id="productDetailsDacTrung" scope="request" type="java.util.List"/>
 <c:forEach var="p" items="${productDetailsDacTrung}">
     <c:if test="${p.id == 'sp55'}" >
-    <div class="SanPhamDiemDenMoi">
+    <div class="SanPhamDiemDenMoi" >
         <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
             <a href="ProductDetails">
                 <input type="text" style="display: none" name="id" value="${p.id}">
@@ -2061,7 +2056,7 @@
             <i class="fa fa-star" aria-hidden="true"></i>
         </div>
         <h3 class="gia">${p.priceNew}đ </h3>
-        <div class="gioHang3">
+        <div class="gioHang3"   >
             <a href="cart-add?id=${p.id}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -2166,8 +2161,7 @@
 </c:forEach>
 </div>
 
-
-<div id="layout6">
+<div id="layout6"  >
 
     <div class="TieuDe">
         <h2 class="ten"> Mẹo vặt hay</h2>
@@ -2216,7 +2210,7 @@
 
 </div>
 
-<div id="layout7">
+<div id="layout7" >
     <div class="thanhDuoi">
         <div class="tenWeb">
             <h1 class="ten">WEB FURNITURE</h1>
@@ -2350,7 +2344,69 @@ function checkValidate() {
     }
     return isCheck;
 }
+  var i = 1 ;
+setInterval(function zoomountRight(image) {
+    document.getElementById('trangKhung').src = "Capture1.PNG";
+}, 5000);
+setInterval(function zoomountLeft(image) {
+    document.getElementById('trangKhung').src = "Image/Capture.PNG";
+}, 10000);
 
+// SanPhamNoiBat SanPhamHot SanPhamMoi layout4 layout5 DiemDen
+const SanPhamNoiBat = document.getElementById('SanPhamNoiBat') ;
+const SanPhamHot = document.getElementById('SanPhamHot') ;
+const SanPhamMoi = document.getElementById('SanPhamMoi') ;
+const layout4 = document.getElementById('layout4') ;
+const layout5 = document.getElementById('layout5') ;
+const DiemDen = document.getElementById('DiemDen') ;
+// inputSearch fa-search
+const inputSearch = document.querySelector('.inputSearch') ;
+function searchProduct () {
+    if (inputSearch.toUpperCase().equals("NỔI BẬT")){
+        SanPhamNoiBat.style.display = "block";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "block";
+        layout5.style.display = "none";
+        DiemDen.style.display = "none";
+    }else if (inputSearch.toUpperCase().equals ("HOT")){
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "block";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "block";
+        layout5.style.display = "none";
+        DiemDen.style.display = "none";
+    }else if (inputSearch.toUpperCase().equals ("MỚI")){
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "block";
+        layout4.style.display = "block";
+        layout5.style.display = "none";
+        DiemDen.style.display = "none";
+    }else if (inputSearch.toUpperCase().equals ("MỚI")){
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "block";
+        layout4.style.display = "block";
+        layout5.style.display = "none";
+        DiemDen.style.display = "none";
+    }
+    else if (inputSearch.toUpperCase().equals ("BỘ SƯU TẬP") || inputSearch.toUpperCase().equals ("KHUYẾN MÃI")){
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "block";
+        layout5.style.display = "block";
+        DiemDen.style.display = "none";
+    }else {
+        SanPhamNoiBat.style.display = "none";
+        SanPhamHot.style.display = "none";
+        SanPhamMoi.style.display = "none";
+        layout4.style.display = "none";
+        layout5.style.display = "block";
+        DiemDen.style.display = "block";
+    }
+}
 </script>
 
 </body>
