@@ -2357,11 +2357,11 @@ const SanPhamHot = document.getElementById('SanPhamHot') ;
 const SanPhamMoi = document.getElementById('SanPhamMoi') ;
 const layout4 = document.getElementById('layout4') ;
 const layout5 = document.getElementById('layout5') ;
-const DiemDen = document.getElementById('DiemDen') ;
+const DiemDen = document.querySelector('.DiemDen') ;
 // inputSearch fa-search
 const inputSearch = document.querySelector('.inputSearch') ;
 function searchProduct () {
-    alert(inputSearch.value.toUpperCase());
+    // alert(inputSearch.value.toUpperCase());
     var noibat = "NỔI BẬT";
     var hot = "HOT";
     var moi = "MỚI";
@@ -2374,41 +2374,53 @@ function searchProduct () {
         SanPhamMoi.style.display = "none";
         layout4.style.display = "block";
         layout5.style.display = "none";
-        DiemDen.style.display = "none";
-        layout4.style.marginBottom = "650px";
-    }else if (inputSearch.value.toUpperCase().endsWith(hot)){
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
+
+    }
+    else if (inputSearch.value.toUpperCase().endsWith(hot)){
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "block";
-        SanPhamHot.style.marginTop = "-700px";
-        layout4.style.marginTop = "50px";
-        layout5.style.marginTop = "-700px";
-
+        SanPhamHot.style.marginTop = "50px";
         SanPhamMoi.style.display = "none";
         layout4.style.display = "block";
+        layout4.style.marginTop = "50px";
         layout5.style.display = "none";
-        DiemDen.style.display = "none";
-    }else if (inputSearch.value.toUpperCase().endsWith(moi)){
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
+    }
+    else if (inputSearch.value.toUpperCase().endsWith(moi)){
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "block";
+        SanPhamMoi.style.marginTop = "50px";
         layout4.style.display = "block";
+        layout4.style.marginTop = "750px";
         layout5.style.display = "none";
-        DiemDen.style.display = "none";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
     }
     else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)){
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "none";
         layout4.style.display = "block";
+        layout4.style.marginTop = "50px";
         layout5.style.display = "block";
-        DiemDen.style.display = "none";
-    }else {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout5.style.display = "none";
+        layout5.style.marginTop = "200px";
         DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "50px";
+    }
+    else {
+        SanPhamNoiBat.style.display = "block";
+        SanPhamHot.style.display = "block";
+        SanPhamMoi.style.display = "block";
+        layout4.style.display = "block";
+        layout4.style.marginTop = "800px";
+
+        layout5.style.display = "block";
+        DiemDen.style.display = "block";
+        DiemDen.style.marginTop = "150px";
     }
 }
 </script>
