@@ -1001,7 +1001,6 @@
         <img id="right_SPH" src="Image/sangPhai.PNG" onclick="right(this)" alt="right"/>
     </div>
 </div>
-
 <div id="SanPhamMoi" style="display: block">
     <div id="Kozoka_trysil">
         <jsp:useBean id="productDetailsSanPhamMoiMiNi" scope="request" type="java.util.List"/>
@@ -2362,28 +2361,33 @@ const DiemDen = document.getElementById('DiemDen') ;
 // inputSearch fa-search
 const inputSearch = document.querySelector('.inputSearch') ;
 function searchProduct () {
-    if (inputSearch.toUpperCase().equals("NỔI BẬT")){
+    alert(inputSearch.value.toUpperCase());
+    var noibat = "NỔI BẬT";
+    var hot = "HOT";
+    var moi = "MỚI";
+    var bosuutap = "BỘ SƯU TẬP";
+    var khuyenmai = "KHUYẾN MÃI";
+
+    if (inputSearch.value.toUpperCase().endsWith(noibat)){
         SanPhamNoiBat.style.display = "block";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "none";
         layout4.style.display = "block";
         layout5.style.display = "none";
         DiemDen.style.display = "none";
-    }else if (inputSearch.toUpperCase().equals ("HOT")){
+        layout4.style.marginBottom = "650px";
+    }else if (inputSearch.value.toUpperCase().endsWith(hot)){
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "block";
+        SanPhamHot.style.marginTop = "-700px";
+        layout4.style.marginTop = "50px";
+        layout5.style.marginTop = "-700px";
+
         SanPhamMoi.style.display = "none";
         layout4.style.display = "block";
         layout5.style.display = "none";
         DiemDen.style.display = "none";
-    }else if (inputSearch.toUpperCase().equals ("MỚI")){
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "block";
-        layout4.style.display = "block";
-        layout5.style.display = "none";
-        DiemDen.style.display = "none";
-    }else if (inputSearch.toUpperCase().equals ("MỚI")){
+    }else if (inputSearch.value.toUpperCase().endsWith(moi)){
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "block";
@@ -2391,7 +2395,7 @@ function searchProduct () {
         layout5.style.display = "none";
         DiemDen.style.display = "none";
     }
-    else if (inputSearch.toUpperCase().equals ("BỘ SƯU TẬP") || inputSearch.toUpperCase().equals ("KHUYẾN MÃI")){
+    else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)){
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "none";
@@ -2402,8 +2406,8 @@ function searchProduct () {
         SanPhamNoiBat.style.display = "none";
         SanPhamHot.style.display = "none";
         SanPhamMoi.style.display = "none";
-        layout4.style.display = "none";
-        layout5.style.display = "block";
+        layout4.style.display = "block";
+        layout5.style.display = "none";
         DiemDen.style.display = "block";
     }
 }
