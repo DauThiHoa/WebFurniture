@@ -1559,7 +1559,7 @@
                 <div class="moTa">
                         <h2 class="ten">${p.name}</h2>
                     <h3 class="gia">${p.priceNew}đ</h3>
-                    <p><strike CLASS="giaCu" style="margin-left: -78px">${p.priceOld}đ</strike></p>
+                    <p><strike class="giaCu" style="margin-left: -78px">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang1">
                     <a href="cart-add?id=${p.id}">
@@ -2038,7 +2038,7 @@
 <c:forEach var="p" items="${productDetailsDacTrung}">
     <c:if test="${p.id == 'sp55'}" >
     <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
-        <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
+        <form action="ProductDetails" method="post" style="height: 57% ; margin-bottom: 50px">
             <a href="ProductDetails">
                 <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">

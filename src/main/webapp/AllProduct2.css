@@ -1045,6 +1045,7 @@ figure.zoom img {
     background: #dd4b39;
     color: white;
     border: 2px solid white;
+
 }
 
 .btnQuickView {
@@ -1063,14 +1064,14 @@ figure.zoom img {
 
 .btnBuyNow {
     background: white;
-    color: palevioletred;
-    border: 2px solid palevioletred;
+    color: #34ce57;
+    border: 2px solid #34ce57;
     font-size: 100%;
 }
 
 .btnBuyNow:hover {
     cursor: pointer;
-    background: palevioletred;
+    background: #34ce57;
     color: white;
     border: 2px solid white;
 }
