@@ -20,5 +20,15 @@
 </head>
 <body>
 <h1 style="color: #e4606d">FAIL</h1>
+<script>
+    function zoom(e) {
+        var zoomer = e.currentTarget;
+        e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+        e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+        x = (offsetX / zoomer.offsetWidth) * 100
+        y = (offsetY / zoomer.offsetHeight) * 100
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+    }
+</script>
 </body>
 </html>

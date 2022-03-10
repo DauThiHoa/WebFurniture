@@ -10,64 +10,115 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ZoomImage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProduct2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProduct2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerBedroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerBedroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDecoration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDecoration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerGoiSofa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerGoiSofa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerKitchen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerKitchen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLivingRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLivingRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLoHoaGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLoHoaGia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerOffice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerRemcua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerRemcua.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerTamtham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerTamtham.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AddProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DangKy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DangKy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DangNhap.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DangNhap.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/DoAm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DoAm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/DoAm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DoAm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Information.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Information.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Information.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LienHe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LienHe.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Mail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Mail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/MeoVat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MeoVat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/MeoVat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MeoVat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Den.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Goisofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Goisofa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Goisofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Goisofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Lohoagia.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Lohoagia.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Lohoagia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Lohoagia.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Remcua.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Remcua.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Remcua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_Remcua.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_TamTham.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_TamTham.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_TamTham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri_TamTham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/HoaGia.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/HoaGia.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/HoaGia.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/HoaGia.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/KhanTraiBan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/KhanTraiBan.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/Khantraiban.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/Khantraiban.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/BanTrangDiem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/BanTrangDiem.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/BanTrangDiem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/BanTrangDiem.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/DenNgu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/DenNgu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/DenNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/DenNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GiuongNgu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GiuongNgu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GiuongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GiuongNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GoiNgu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GoiNgu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GoiNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/GoiNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/TuQuanAo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/TuQuanAo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/TuQuanAo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongNgu/TuQuanAo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongNgu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongNgu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToanThanhCong.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToanThanhCong.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToanThanhCong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToanThanhCong.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TinTuc.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/TinTuc.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/VanPhong.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VanPhong.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDirectoryManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/upload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/AllProducts.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,9 +361,9 @@
       <item itemvalue="JavaScript Debug.BanAn.jsp" />
       <item itemvalue="JavaScript Debug.AllProduct2.jsp" />
       <item itemvalue="JavaScript Debug.AllProducts2.jsp" />
+      <item itemvalue="JavaScript Debug.AllProducts.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
       <item itemvalue="Tomcat Server.BanAn.jsp" />
-      <item itemvalue="JavaScript Debug.AllProducts.jsp" />
     </list>
     <recent_temporary>
       <list>
@@ -507,6 +558,7 @@
       <workItem from="1646873919740" duration="3578000" />
       <workItem from="1646879202530" duration="21000" />
       <workItem from="1646895227287" duration="6106000" />
+      <workItem from="1646910745662" duration="4475000" />
     </task>
     <servers />
   </component>
@@ -719,11 +771,6 @@
           <option name="timeStamp" value="139" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/AllProducts.jsp</url>
-          <line>1417</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/LienHeController.java</url>
           <line>22</line>
           <option name="timeStamp" value="142" />
@@ -732,11 +779,6 @@
           <url>file://$PROJECT_DIR$/src/main/webapp/TinTuc.jsp</url>
           <line>266</line>
           <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp</url>
-          <line>246</line>
-          <option name="timeStamp" value="150" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java</url>

@@ -709,14 +709,19 @@
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
+
                                 <button type="button" class="btnQuickView quick-view medium--hide small--hide"
                                         data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
                                                                                       aria-hidden="true"></i></button>
-                                <a href="ThanhToan.jsp">
-                                    <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+
+                                <form style="margin-top: -25px ; margin-left: 69px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
-                                </a>
+
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -727,7 +732,7 @@
           
         <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
-                <c:if test="${p.id == 'sp59'}" >
+            <c:if test="${p.id == 'sp59'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -755,7 +760,6 @@
                 </div>
             </div>
                 </c:if>
-
             <c:if test="${p.id == 'sp60'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
@@ -784,7 +788,6 @@
                 </div>
             </div>
             </c:if>
-
             <c:if test="${p.id == 'sp61'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
@@ -813,7 +816,6 @@
                 </div>
             </div>
             </c:if>
-
             <c:if test="${p.id == 'sp62'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
@@ -842,7 +844,6 @@
                 </div>
             </div>
            </c:if>
-
             <c:if test="${p.id == 'sp63'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
@@ -871,7 +872,6 @@
                 </div>
             </div>
             </c:if>
-
             <c:if test="${p.id == 'sp64'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
@@ -900,7 +900,6 @@
                 </div>
             </div>
             </c:if>
-
             <c:if test="${p.id == 'sp65'}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
@@ -929,7 +928,6 @@
                 </div>
             </div>
             </c:if>
-
             <c:if test="${p.id == 'sp66'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
@@ -958,7 +956,6 @@
                     </div>
                 </div>
             </c:if>
-
             <c:if test="${p.id == 'sp67'}" >
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
@@ -1775,6 +1772,14 @@
             isCheck = true;
         }
         return isCheck;
+    }
+    function zoom(e) {
+        var zoomer = e.currentTarget;
+        e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+        e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+        x = (offsetX / zoomer.offsetWidth) * 100
+        y = (offsetY / zoomer.offsetHeight) * 100
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
     }
 
 </script>
