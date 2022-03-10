@@ -11,27 +11,27 @@
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/ControllerSignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/controller/HandlingSignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/services/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProduct2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProduct2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerAllProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerBedroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerBedroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDecoration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDecoration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerDen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerGoiSofa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerGoiSofa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerKitchen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerKitchen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLivingRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLivingRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLoHoaGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerLoHoaGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerRemcua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerRemcua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerTamtham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerTamtham.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DangKy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DangKy.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DangNhap.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DangNhap.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/DoAm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DoAm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GioHang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HeThongCuaHang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LienHe.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/MeoVat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MeoVat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatDoTrangTri.jsp" afterDir="false" />
@@ -63,10 +63,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/TinTuc.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TinTuc.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VeSinhNoiThat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/TinTuc/Image_TinTuc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -167,40 +168,56 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
-    <configuration name="JavaMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.webfurniture.mail.JavaMail" />
-      <module name="WebFurniture" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.fit.webfurniture.mail.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="AllProduct2.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/AllProduct2.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="AllProducts2.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/AllProducts2.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="AllProducts.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/AllProducts.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="BanAn.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/NoiThatPhongBep/BanAn.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="BanAn.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/NoiThatPhongBep/BanAn.jsp" />
+      <deployment>
+        <artifact name="WebFurniture:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/WebFurniture_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="2cb50367-a7b1-48c2-bbf7-9574ba875e10" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="WebFurniture:war exploded" />
+        </option>
       </method>
-    </configuration>
-    <configuration name="Mail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.webfurniture.mail.Mail" />
-      <module name="WebFurniture" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vn.edu.hcmuaf.fit.webfurniture.mail.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Mail.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/Mail.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="ThanhToan.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/ThanhToan.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="success.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/success.jsp">
-      <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -290,20 +307,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Mail" />
-      <item itemvalue="Application.JavaMail" />
-      <item itemvalue="JavaScript Debug.Mail.jsp" />
-      <item itemvalue="JavaScript Debug.success.jsp" />
-      <item itemvalue="JavaScript Debug.ThanhToan.jsp" />
+      <item itemvalue="JavaScript Debug.BanAn.jsp" />
+      <item itemvalue="JavaScript Debug.AllProduct2.jsp" />
+      <item itemvalue="JavaScript Debug.AllProducts2.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
+      <item itemvalue="Tomcat Server.BanAn.jsp" />
+      <item itemvalue="JavaScript Debug.AllProducts.jsp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.ThanhToan.jsp" />
-        <item itemvalue="JavaScript Debug.success.jsp" />
-        <item itemvalue="JavaScript Debug.Mail.jsp" />
-        <item itemvalue="Application.Mail" />
-        <item itemvalue="Application.JavaMail" />
+        <item itemvalue="JavaScript Debug.AllProduct2.jsp" />
+        <item itemvalue="JavaScript Debug.AllProducts.jsp" />
+        <item itemvalue="JavaScript Debug.AllProducts2.jsp" />
+        <item itemvalue="JavaScript Debug.BanAn.jsp" />
+        <item itemvalue="Tomcat Server.BanAn.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -485,6 +502,11 @@
       <workItem from="1646220924823" duration="3589000" />
       <workItem from="1646228587502" duration="10252000" />
       <workItem from="1646243838479" duration="8194000" />
+      <workItem from="1646472223266" duration="25000" />
+      <workItem from="1646842953379" duration="722000" />
+      <workItem from="1646873919740" duration="3578000" />
+      <workItem from="1646879202530" duration="21000" />
+      <workItem from="1646895227287" duration="6106000" />
     </task>
     <servers />
   </component>

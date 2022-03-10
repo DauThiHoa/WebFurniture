@@ -86,32 +86,32 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
-        <a href="AllProducts.jsp">
+        <a href="ProductDetailsListAllProduct">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="PhongKhach.jsp">
+            <a href="ProductDetailsListLivingRoom">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="PhongNgu.jsp">
+            <a href="ProductDetailsListBedroom">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="PhongBep.jsp">
+            <a href="ProductDetailsListKitchen">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="VanPhong.jsp">
+            <a href="ProductDetailsListOffice">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri.jsp">
+            <a href="ProductDetailsListDecoration">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>

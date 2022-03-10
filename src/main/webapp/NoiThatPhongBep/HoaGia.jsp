@@ -75,32 +75,32 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
-        <a href="../Products/AllProducts.html?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="ProductDetailsListAllProduct">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="../Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ProductDetailsListLivingRoom">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ProductDetailsListBedroom">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ProductDetailsListKitchen">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ProductDetailsListOffice">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ProductDetailsListDecoration">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -143,27 +143,27 @@
                 <h2 class="ten"> Danh Mục Sản Phẩm </h2>
             </div>
             <div class="noiDung">
-                <a href="../Products/PhongKhach.html?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListLivingRoom">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Khách</p>
                     </div>
                 </a>
-                <a href="../Products/PhongNgu.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListBedroom">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Ngủ </p>
                     </div>
                 </a>
-                <a href="../Products/PhongBep.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListKitchen">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Bếp</p>
                     </div>
                 </a>
-                <a href="../Products/VanPhong.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListOffice">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
                 </a>
-                <a href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListDecoration">
                     <div class="noiThat">
                         <p class="nd">Nội thất Đồ Trang Trí</p>
                     </div>
@@ -844,29 +844,6 @@
             </div>
         </div>
 
-        <div id="themTrangMoi">
-            <div class="khung1">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-            </div>
-            <div class="khung2">
-                <h3 class="fa2"> 1 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 2 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 3 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 4 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 5 </h3>
-            </div>
-            <div class="khung3">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            </div>
-        </div>
     </div>
 
 
@@ -911,15 +888,15 @@
             <div class="hoTro">
                 <div class="chucNang">
                     <h2>Về Chúng Tôi</h2>
-                    <a href="HomePage.html?_ijt=sdb4e0o3k6e2s6nue45ib5bgg8">
+                    <a href="ProductDetailsList">
                         <p>Trang chủ</p></a>
-                    <a href="../HeThongCuaHang/HeThongCuaHang.html?_ijt=k6p7tj27b1b7ko58l8jc0ko3o6">
+                    <a href="HeThongCuaHang">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Product/AllProducts.html?_ijt=lb79ipc726t04q7dgtat16sn83">
+                    <a href="ProductDetailsListAllProduct">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="../TinTuc/TinTuc.html?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="TinTuc">
                         <p>Tin tức</p></a>
                     <a href="LienHe">
                         <p>Liên hệ</p></a>

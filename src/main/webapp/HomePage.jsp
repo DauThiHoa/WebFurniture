@@ -82,32 +82,32 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
-        <a href="AllProducts.jsp?_ijt=7pes57a6sf1vpphf135u5omt3j&_ij_reload=RELOAD_ON_SAVE">
+        <a href="ProductDetailsListAllProduct">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="PhongKhach.jsp">
+            <a href="ProductDetailsListLivingRoom">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="PhongNgu.jsp">
+            <a href="ProductDetailsListBedroom">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="PhongBep.jsp">
+            <a href="ProductDetailsListKitchen">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="VanPhong.jsp">
+            <a href="ProductDetailsListOffice">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri.jsp">
+            <a href="ProductDetailsListDecoration">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -1374,7 +1374,7 @@
 </div>
 <div id="layout4" style="display: block">
     <div class="layout4_danhMucSanPham">
-        <a href="NoiThatDoTrangTri.jsp?_ijt=6ckcb7ad8uk7545qms42j8a53d">
+        <a href="ProductDetailsListDecoration">
             <div class="danhMucSanPham">
                 <img class="anh"
                      src="NoiThatDoTrangTri/Image_DoTrangTri/rem4.PNG"/>
@@ -1386,7 +1386,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+        <a href="ProductDetailsListKitchen">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_12.png"/>
                 <div class="noiThat">
@@ -1397,7 +1397,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+        <a href="ProductDetailsListLivingRoom">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_5.png"/>
                 <div class="noiThat">
@@ -1408,7 +1408,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+        <a href="ProductDetailsListBedroom">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_11.png"/>
                 <div class="noiThat">
@@ -1419,7 +1419,7 @@
         </a>
     </div>
     <div class="layout4_danhMucSanPham">
-        <a href="VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+        <a href="ProductDetailsListOffice">
             <div class="danhMucSanPham">
                 <img class="anh" src="Image/img_10.png"/>
                 <div class="noiThat">
@@ -2037,7 +2037,7 @@
 <jsp:useBean id="productDetailsDacTrung" scope="request" type="java.util.List"/>
 <c:forEach var="p" items="${productDetailsDacTrung}">
     <c:if test="${p.id == 'sp55'}" >
-    <div class="SanPhamDiemDenMoi" >
+    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
         <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
             <a href="ProductDetails">
                 <input type="text" style="display: none" name="id" value="${p.id}">
@@ -2068,7 +2068,7 @@
     </c:if>
     <c:if test="${p.id == 'sp56'}" >
 
-    <div class="SanPhamDiemDenMoi">
+    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
         <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
             <a href="ProductDetails">
                 <input type="text" style="display: none" name="id" value="${p.id}">
@@ -2098,7 +2098,7 @@
     </div>
     </c:if>
     <c:if test="${p.id == 'sp57'}" >
-    <div class="SanPhamDiemDenMoi">
+    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
         <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
             <a href="ProductDetails">
                 <input type="text" style="display: none" name="id" value="${p.id}">
@@ -2129,7 +2129,7 @@
     </c:if>
     <c:if test="${p.id == 'sp58'}" >
 
-    <div class="SanPhamDiemDenMoi">
+    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
         <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
             <a href="ProductDetails">
                 <input type="text" style="display: none" name="id" value="${p.id}">
@@ -2253,7 +2253,7 @@
                     <a href="HeThongCuaHang">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Product/AllProducts.jsp?_ijt=lb79ipc726t04q7dgtat16sn83">
+                    <a href="ProductDetailsListAllProduct">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="TinTuc">

@@ -82,32 +82,32 @@
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
-        <a href="AllProducts.jsp">
+        <a href="ProductDetailsListAllProduct">
             <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
         </a>
 
         <div id="top">
-            <a href="PhongKhach.jsp">
+            <a href="ProductDetailsListLivingRoom">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="PhongNgu.jsp">
+            <a href="ProductDetailsListBedroom">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="PhongBep.jsp">
+            <a href="ProductDetailsListKitchen">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="VanPhong.jsp">
+            <a href="ProductDetailsListOffice">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri.jsp">
+            <a href="ProductDetailsListDecoration">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -151,27 +151,27 @@
                 <h2 class="ten"> Danh Mục Sản Phẩm </h2>
             </div>
             <div class="noiDung">
-                <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListLivingRoom">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Khách</p>
                     </div>
                 </a>
-                <a href="PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListBedroom">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Ngủ </p>
                     </div>
                 </a>
-                <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListKitchen">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Phòng Bếp</p>
                     </div>
                 </a>
-                <a href="VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListOffice">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
                 </a>
-                <a href="NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListDecoration">
                     <div class="noiThat">
                         <p class="nd">Nội thất Đồ Trang Trí</p>
                     </div>
@@ -256,19 +256,19 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai1">
-                <a href="PhongKhach.jsp?_ijt=gnb6d8fm3mj6k2rnt8rlpjjb8r&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListLivingRoom">
                     <img class="anh" src="ImageProduct/phong-khach.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Phòng khách</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="PhongNgu.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListBedroom">
                     <img class="anh" src="ImageProduct/phong-ngu.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Phòng ngủ</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="PhongBep.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListKitchen">
                     <img class="anh"
                          src="ImageProduct/phong-bep.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Phòng bếp</h3>
@@ -276,13 +276,13 @@
 
             </div>
             <div class="loai">
-                <a href="VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListOffice">
                     <img class="anh" src="ImageProduct/van-phong.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Văn phòng </h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatDoTrangTri.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListDecoration">
                     <img class="anh" src="ImageProduct/trang-tri.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Trang trí</h3>
                 </a>
@@ -1003,33 +1003,27 @@
                 </c:if>
             </c:forEach>
         </div>
-
         <div id="themTrangMoi">
-            <a href="AllProducts.jsp?_ijt=vr4d2hs4v4ons63to8okodjutn&_ij_reload=RELOAD_ON_SAVE">
-                <div class="khung1">
-                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            <a href="ProductDetailsListAllProduct">
+                <div class="khung3">
+                    <i style="font-size: 150% ; margin-top: 10px ; margin-left: 15px" class="fa fa-angle-double-left" aria-hidden="true"></i>
                 </div>
             </a>
-            <a href="AllProducts.jsp?_ijt=vr4d2hs4v4ons63to8okodjutn&_ij_reload=RELOAD_ON_SAVE">
+            <a href="ProductDetailsListAllProduct">
                 <div class="khung">
                     <h3 class="fa"> 1 </h3>
                 </div>
             </a>
-            <div class="khung2">
-                <h3 class="fa2"> 2 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 3 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 4 </h3>
-            </div>
-            <div class="khung">
-                <h3 class="fa"> 5 </h3>
-            </div>
-            <div class="khung">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            </div>
+            <a href="ProductDetailsListAllProduct2">
+                <div class="khung2">
+                    <h3 class="fa2"> 2 </h3>
+                </div>
+            </a>
+            <a href="ProductDetailsListAllProduct2">
+                <div class="khung1" >
+                    <i style="font-size: 150% ; margin-top: 10px ; margin-left: 15px" class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -1080,7 +1074,7 @@
                     <a href="HeThongCuaHang">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href="AllProducts.jsp">
+                    <a href="ProductDetailsListAllProduct">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="TinTuc">

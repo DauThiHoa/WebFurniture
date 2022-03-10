@@ -18,7 +18,6 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
         request.setAttribute("getListPriceAZ", ProductDetailsService.getInstance().getListPriceAZ());
@@ -38,6 +37,7 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
 
+        request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("AllProducts.jsp").forward(request, response);
 
     }

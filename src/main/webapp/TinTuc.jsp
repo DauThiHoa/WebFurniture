@@ -85,27 +85,27 @@
         <h3 id="chu_DanhMuc"> DANH MỤC SẢN PHẨM </h3>
 
         <div id="top">
-            <a href="../Products/PhongKhach.html">
+            <a href="ProductDetailsListLivingRoom">
                 <div class="danhMuc1">
                     <h4 class="noiDungSanPham1"> NỘI THẤT PHÒNG KHÁCH</h4>
                 </div>
             </a>
-            <a href="../Products/PhongNgu.html">
+            <a href="ProductDetailsListBedroom">
                 <div class="danhMuc2">
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href="../Products/PhongBep.html">
+            <a href="ProductDetailsListKitchen">
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>
             </a>
-            <a href="../Products/VanPhong.html">
+            <a href="ProductDetailsListOffice">
                 <div class="danhMuc4">
                     <h4 class="noiDungSanPham4"> NỘI THẤT VĂN PHÒNG</h4>
                 </div>
             </a>
-            <a  href="../NoiThatDoTrangTri/NoiThatDoTrangTri.html">
+            <a  href="ProductDetailsListDecoration">
                 <div class="danhMuc5">
                     <h4 class="noiDungSanPham5"> ĐỒ TRANG TRÍ </h4>
                 </div>
@@ -362,7 +362,7 @@
                     <a href="HeThongCuaHang">
                         <p>Giới thiệu</p>
                     </a>
-                    <a href=" ../Products/AllProducts.html">
+                    <a href="ProductDetailsListAllProduct">
                         <p>Sản phẩm</p>
                     </a>
                     <a href="TinTuc">
