@@ -1,15 +1,14 @@
 package vn.edu.hcmuaf.fit.webfurniture.service;
 
-import org.jdbi.v3.core.result.ResultBearing;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
-import java.util.*;
+import java.io.Serializable;
+import java.util.List;
 import java.util.stream.Collectors;
 
-public class ProductDetailsService {
+public class ProductDetailsService implements Serializable {
     private static ProductDetailsService instance ;
 
     public static ProductDetailsService getInstance() {
@@ -165,9 +164,25 @@ public class ProductDetailsService {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
+    public List<ProductDetails> getColor ( String color ){
+
+        String color_result;
+        if ( color != null) {
+             color_result = "%" + (String) color.toLowerCase().trim() + "%";
+        }else {
+            color_result = "%" + color  + "%";
+        }
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like ? ")
+                    .bind(0 , color_result)
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
 
 //    public static void main(String[] args) {
-//       List<ProductDetails> se =  searchName ("G");
-//        System.out.println(se.toString());
+//        String result = "HH";
+//        System.out.println("kkkkkkkkkkkk");
+//        System.out.println(result.toLowerCase().trim());
 //    }
+
 }

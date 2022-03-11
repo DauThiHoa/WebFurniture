@@ -1144,6 +1144,226 @@
 
 
 <script>
+
+    // Danh Sach Cac San Pham
+    // sp59 sp60 sp61 sp62 sp63 sp64 sp65 sp66 sp67 sp68 sp69 sp70 sp71 sp72 sp73 sp74 sp75 sp76 sp77
+    // sp78 sp79 sp80 sp81 sp82
+
+    const layout7 = document.getElementById('layout7');
+    const themTrangMoi = document.getElementById('themTrangMoi');
+    const az = document.querySelector('.az');
+    const za = document.querySelector('.za');
+    const priceaz = document.querySelector('.priceaz');
+    const priceza = document.querySelector('.priceza');
+    const getList500000 = document.querySelector('.getList500000');
+    const getList1000000 = document.querySelector('.getList1000000');
+    const getList1500000 = document.querySelector('.getList1500000');
+    const getList2000000 = document.querySelector('.getList2000000');
+    const getList2500000 = document.querySelector('.getList2500000');
+    const getList2501000 = document.querySelector('.getList2501000');
+    const searchName = document.querySelector('.searchName');
+    const ClassSanPham = document.querySelector('.ClassSanPham');
+
+    function ClickSearchName() {
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "block";
+    }
+
+    function clickTren2501000() {
+        layout7.style.marginTop = "-1000px";
+        themTrangMoi.style.display = "none";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "block";
+        searchName.style.display = "none";
+    }
+    function clickDuoi2500000() {
+        layout7.style.marginTop = "-1000px";
+        themTrangMoi.style.display = "none";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "block";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi2000000() {
+        layout7.style.marginTop = "-1000px";
+        themTrangMoi.style.display = "none";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "block";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi1500000() {
+        layout7.style.marginTop = "-1000px";
+        themTrangMoi.style.display = "none";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "block";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi1000000() {
+        layout7.style.marginTop = "-1000px";
+        themTrangMoi.style.display = "none";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "block";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi500000() {
+        layout7.style.marginTop = "-1000px";
+        themTrangMoi.style.display = "none";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "block";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickAZ() {
+        az.style.display = "block";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+
+    function clickMacDinh() {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "block";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickHangMoi() {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "block";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickZA() {
+        az.style.display = "none";
+        za.style.display = "block";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+
+    function clickGiaThapDenCao () {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "block";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickGiaCaoXuongThap() {
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "block";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function timkiem () {
+
+    }
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {

@@ -53,8 +53,8 @@ public class Mail {
 
     public static void main(String[] args) {
         // Gui den 19130052
-        System.out.println(sendMail("19130052@st.hcmuaf.edu.vn","Test Mail",
-                "Dear mail Crawler\n\n No spam to my emai, please") ? "Send mail success" : "Send mail fail");
+        System.out.println(sendMail("19130075@st.hcmuaf.edu.vn","Test Mail",
+                "Dear mail Crawler\n\n No spam to my emai, please  " ) ? "Send mail success" : "Send mail fail");
     }
 
 }

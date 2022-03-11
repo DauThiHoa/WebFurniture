@@ -1,6 +1,5 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
-import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -9,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "ProductDetailsListControllerAllProduct", value = "/ProductDetailsListAllProduct")
 public class ProductDetailsListControllerAllProducts extends HttpServlet {
@@ -34,8 +32,17 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
+
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+
+        String color = request.getParameter("color");
+        System.out.println(color);
+        request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("AllProducts.jsp").forward(request, response);
