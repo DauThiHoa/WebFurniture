@@ -321,9 +321,6 @@
         </div>
 
         <div id="CacSanPham">
-            <jsp:useBean id="productDetailsDen" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${productDetailsDen}">
-            <c:if test="${p.id == }" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -350,8 +347,6 @@
                     </div>
                 </div>
             </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -378,8 +373,7 @@
                     </div>
                 </div>
             </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -405,8 +399,7 @@
                     </div>
                 </div>
             </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+           
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -432,8 +425,7 @@
                     </div>
                 </div>
             </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+      
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -458,9 +450,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+            </div> 
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -485,9 +475,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+            </div> 
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -513,8 +501,7 @@
                     </div>
                 </div>
             </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+            
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -540,8 +527,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+            
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -567,8 +553,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+           
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -594,8 +579,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+            
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -621,8 +605,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+           
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -648,8 +631,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+           
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -675,8 +657,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+           
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -702,8 +683,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+            
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -729,8 +709,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -756,8 +735,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -783,8 +761,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -810,8 +787,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -837,8 +813,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -864,8 +839,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -891,8 +865,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -918,8 +891,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -945,8 +917,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            <c:if test="${p.id == ''}" >
+
                 <div class="sanPham">
                     <div class="sanPhamNoiThat">
                         <div class="anhDoTrangTri">
@@ -972,8 +943,7 @@
                         </div>
                     </div>
                 </div>
-            </c:if>
-            </c:forEach>
+
             </div>
         </div>
 
