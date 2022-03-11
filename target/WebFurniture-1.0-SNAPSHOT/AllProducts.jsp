@@ -66,17 +66,17 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">Đăng
+                    href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+                href="controllerRegister">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
@@ -357,545 +357,18 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="searchName" id="CacSanPham" style="display: block">
-            <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${searchName}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="getList2501000" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getList2501000}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="getList2500000" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getList2500000}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="getList2000000" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getList2000000}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="getList1500000" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getList1500000}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="getList1000000" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getList1000000}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="getList500000" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getList500000}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="az" id="CacSanPham" style="display: none">
-<jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${getListAZ}">
-    <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-        <form action="ProductDetails" method="post" >
-            <div class="sanPham">
-                <div class="sanPhamNoiThat" style="height: 285px">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                        <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                            <img src="${p.linkImage}" />
-                        </figure>
-                    </button>
-                    <div class="noiDungDoTrangTri">
-                        <h4 class="ten">${p.name}</h4>
-                        <h4 class="gia">${p.priceNew}đ</h4>
-                    </div>
-                    <div class="nutgiohang">
-                        <a href="cart-add?id=${p.id}" >
-                            <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                    style="margin-top: -35px ; margin-left: 10px"
-                                    data-id="1050379730"><i class="fa fa-cart-plus"
-                                                            aria-hidden="true"></i><span> </span></button>
-                        </a>
-                        <form style="margin-top: -35px ; margin-left: 45px"
-                              action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                            <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                     data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                <span></span></button>
-
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </form>
-    </c:if>
-</c:forEach>
-</div>
-        <div class="za" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getListZA}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="priceaz" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getListPriceAZ}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="priceza" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getListPriceZA}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
-                                <input type="text" style="display: none" name="id" value="${p.id}">
-                                <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                        <img src="${p.linkImage}" />
-                                    </figure>
-                                </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </c:if>
-            </c:forEach>
-        </div>
-        <div class="ClassSanPham" id="CacSanPham" style="display: block">
-            <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${productDetailsAllProduct}">
-                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
-    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
-    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
-    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-            <form action="ProductDetails" method="post" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat" style="height: 285px">
-                            <input type="text" style="display: none" name="id" value="${p.id}">
-                            <input style="display: none" type="text" name="name" value="${p.name}">
-                            <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
-                                        onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                                    <img src="${p.linkImage}" />
-                                </figure>
-                            </button>
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
                             <div class="noiDungDoTrangTri">
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
@@ -903,11 +376,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -35px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 10px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -35px ; margin-left: 45px"
+                                <form style="margin-top: -22px ; margin-left: 43px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -918,7 +391,534 @@
                             </div>
                         </div>
                     </div>
-            </form>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="searchName" id="CacSanPham" style="display: block">
+            <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${searchName}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2501000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2501000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2500000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2500000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2000000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2000000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList1500000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList1500000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList1000000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList1000000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList500000" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList500000}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="az" id="CacSanPham" style="display: none">
+<jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
+<c:forEach var="p" items="${getListAZ}">
+    <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+        <div class="sanPham">
+            <div class="sanPhamNoiThat" style="height: 285px">
+                <form action="ProductDetails" method="post" >
+                    <input type="text" style="display: none" name="id" value="${p.id}">
+                    <input style="display: none" type="text" name="name" value="${p.name}">
+                    <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                        <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                            <img src="${p.linkImage}" />
+                        </figure>
+                    </button>
+                </form>
+                <div class="noiDungDoTrangTri">
+                    <h4 class="ten">${p.name}</h4>
+                    <h4 class="gia">${p.priceNew}đ</h4>
+                </div>
+                <div class="nutgiohang">
+                    <a href="cart-add?id=${p.id}" >
+                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                style="margin-top: -3px ; margin-left: 10px"
+                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                        aria-hidden="true"></i><span> </span></button>
+                    </a>
+                    <form style="margin-top: -22px ; margin-left: 43px"
+                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            <span></span></button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </c:if>
+</c:forEach>
+</div>
+        <div class="za" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListZA}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="priceaz" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListPriceAZ}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="priceza" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListPriceZA}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="ClassSanPham" id="CacSanPham" style="display: block">
+            <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsAllProduct}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>

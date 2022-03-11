@@ -13,6 +13,9 @@ import java.io.IOException;
 public class SearchAllProducts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
 //        request.setAttribute("productDetailsAllProduct", "");
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
@@ -31,11 +34,10 @@ public class SearchAllProducts extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        response.setContentType("text/html;charset=UTF-8");
-        request.setCharacterEncoding("utf-8");
-
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
-        System.out.println(color);
+        System.out.println(color +"2");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));

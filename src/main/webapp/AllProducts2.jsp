@@ -1,11 +1,11 @@
 
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
 <%@ page import="java.util.Map" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -357,9 +357,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -368,29 +368,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -401,9 +401,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -412,29 +412,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -445,9 +445,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -456,29 +456,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -489,9 +489,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -500,29 +500,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -533,9 +533,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -544,29 +544,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -577,9 +577,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -588,29 +588,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -621,9 +621,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -632,29 +632,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -665,9 +665,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -676,29 +676,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -709,9 +709,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -720,29 +720,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -753,9 +753,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -764,29 +764,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -797,9 +797,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -808,29 +808,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -841,9 +841,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -852,33 +852,32 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
-
         <div class= "ClassSanPham" id="CacSanPham" style="display: none" >
             <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
@@ -886,9 +885,9 @@
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
     || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
-                    <form action="ProductDetails" method="post" >
-                        <div class="sanPham">
-                            <div class="sanPhamNoiThat" style="height: 285px">
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
@@ -897,29 +896,29 @@
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
-                                <div class="noiDungDoTrangTri">
-                                    <h4 class="ten">${p.name}</h4>
-                                    <h4 class="gia">${p.priceNew}đ</h4>
-                                </div>
-                                <div class="nutgiohang">
-                                    <a href="cart-add?id=${p.id}" >
-                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                                style="margin-top: -35px ; margin-left: 10px"
-                                                data-id="1050379730"><i class="fa fa-cart-plus"
-                                                                        aria-hidden="true"></i><span> </span></button>
-                                    </a>
-                                    <form style="margin-top: -35px ; margin-left: 45px"
-                                          action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
-                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
-                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                            <span></span></button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: 3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -32px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
 
-                                    </form>
+                                </form>
 
-                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </c:if>
             </c:forEach>
         </div>

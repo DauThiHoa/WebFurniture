@@ -11,6 +11,7 @@
     <packaging>war</packaging>
 
     <properties>
+        <request-character-encoding>UTF-8</request-character-encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -26,6 +27,7 @@
 
     <!-- https://mvnrepository.com/artifact/javax.mail/smtp -->
     <dependencies>
+
         <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-core -->
         <dependency>
             <groupId>org.jdbi</groupId>
@@ -273,6 +275,7 @@
     </dependencies>
 
     <!--CharsetFilter start-->
+
 
     <build>
         <plugins>

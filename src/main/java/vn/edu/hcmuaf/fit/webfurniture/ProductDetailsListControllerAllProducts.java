@@ -38,10 +38,13 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         response.setContentType("text/html;charset=UTF-8");
-        request.setCharacterEncoding("utf-8");
+        request.setCharacterEncoding("UTF-8");
 
         String color = request.getParameter("color");
-        System.out.println(color);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        System.out.println(color + "1");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());

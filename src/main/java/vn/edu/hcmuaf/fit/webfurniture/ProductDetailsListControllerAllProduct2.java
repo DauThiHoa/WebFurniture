@@ -1,13 +1,13 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
-import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "ProductDetailsListControllerAllProduct2", value = "/ProductDetailsListAllProduct2")
 public class ProductDetailsListControllerAllProduct2 extends HttpServlet {
@@ -32,8 +32,20 @@ public class ProductDetailsListControllerAllProduct2 extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
+
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+        String color = request.getParameter("color");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        System.out.println(color + "1");
+        request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("AllProduct2.jsp").forward(request, response);

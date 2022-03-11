@@ -165,7 +165,7 @@ public class ProductDetailsService implements Serializable {
         });
     }
     public List<ProductDetails> getColor ( String color ){
-
+        System.out.println(color + "JAVA");
         String color_result;
         if ( color != null) {
              color_result = "%" + (String) color.toLowerCase().trim() + "%";
