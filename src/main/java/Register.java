@@ -23,17 +23,20 @@ public class Register extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
 
-        System.out.println(name + "REGISTER");
-        System.out.println(password + "REGISTER");
-        System.out.println(email + "REGISTER");
         request.getRequestDispatcher("DangKy.jsp").forward(request, response);
 
-        if (UserServices.getInstance().register(name, password, email)) {
-            response.sendRedirect("../WebFurniture_war_exploded/DangNhap.jsp");
-        } else {
-            request.setAttribute("error", "Username exits");
-            request.getRequestDispatcher("../WebFurniture_war_exploded/DangKy.jsp").forward(request, response);
-        }
+if ( name != null && password != null && email != null ) {
+    System.out.println(name +"REGISTER");
+    System.out.println(password +"REGISTER");
+    System.out.println(email +"REGISTER");
+
+    if (UserServices.getInstance().register(name, password, email)) {
+        response.sendRedirect("../WebFurniture_war_exploded/DangNhap.jsp");
+    } else {
+        request.setAttribute("error", "Username exits");
+        request.getRequestDispatcher("../WebFurniture_war_exploded/DangKy.jsp").forward(request, response);
+    }
+}
         request.getRequestDispatcher("DangKy.jsp").forward(request,response);
     }
 }
