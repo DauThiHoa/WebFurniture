@@ -29,24 +29,14 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         request.setAttribute("getList2501000", ProductDetailsService.getInstance().getList2501000());
 
         String search = request.getParameter("search");
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
 
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
 
-        System.out.println(color + "1");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 // getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack getColorPurple getColorRed
         request.setAttribute("getColorPink", ProductDetailsService.getInstance().getColorPink());
