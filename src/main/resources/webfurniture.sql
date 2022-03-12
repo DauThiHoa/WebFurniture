@@ -412,6 +412,6 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'Đậu Hoa', '12345', '19130075@st.hcmuaf.edu.vn');
+
 
 SET FOREIGN_KEY_CHECKS = 1;
