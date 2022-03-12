@@ -39,6 +39,8 @@ public class ProductDetailsListControllerAllProduct2 extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
         String color = request.getParameter("color");
         request.setCharacterEncoding("UTF-8");
@@ -46,6 +48,18 @@ public class ProductDetailsListControllerAllProduct2 extends HttpServlet {
 
         System.out.println(color + "1");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
+
+        // getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack getColorPurple getColorRed
+        request.setAttribute("getColorPink", ProductDetailsService.getInstance().getColorPink());
+        request.setAttribute("getColorYellow", ProductDetailsService.getInstance().getColorYellow());
+        request.setAttribute("getColorGray", ProductDetailsService.getInstance().getColorGray());
+        request.setAttribute("getColorBlue", ProductDetailsService.getInstance().getColorBlue());
+        request.setAttribute("getColorGreen", ProductDetailsService.getInstance().getColorGreen());
+        request.setAttribute("getColorOrange", ProductDetailsService.getInstance().getColorOrange());
+        request.setAttribute("getColorWhite", ProductDetailsService.getInstance().getColorWhite());
+        request.setAttribute("getColorBlack", ProductDetailsService.getInstance().getColorBlack());
+        request.setAttribute("getColorPurple", ProductDetailsService.getInstance().getColorPurple());
+        request.setAttribute("getColorRed", ProductDetailsService.getInstance().getColorRed());
 
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("AllProduct2.jsp").forward(request, response);

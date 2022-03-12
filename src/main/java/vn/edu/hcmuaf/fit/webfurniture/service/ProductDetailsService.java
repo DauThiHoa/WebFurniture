@@ -178,11 +178,71 @@ public class ProductDetailsService implements Serializable {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
-
-//    public static void main(String[] args) {
-//        String result = "HH";
-//        System.out.println("kkkkkkkkkkkk");
-//        System.out.println(result.toLowerCase().trim());
-//    }
+    public List<ProductDetails> getColorPink ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%hồng%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorYellow ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%vàng%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorGray ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%xám%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorBlue ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%xanh lam%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorGreen ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%xanh lục%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorOrange ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%cam%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public static List<ProductDetails> getColorWhite ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%trắng%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorBlack ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%đen%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorPurple ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%tím%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public List<ProductDetails> getColorRed ( ){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from productdetails where description like '%đỏ%' ")
+                    .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
+        });
+    }
+    public static void main(String[] args) {
+        List<ProductDetails> re = getColorWhite ();
+        for (ProductDetails pd : re ){
+            System.out.println(pd.toString());
+        }
+    }
 
 }

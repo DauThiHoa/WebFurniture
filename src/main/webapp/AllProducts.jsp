@@ -245,25 +245,25 @@
             </div>
         </div>
 
-        <form action="ColorAllProducts" method="post">
+<%--        <form action="ColorAllProducts" method="post">--%>
         <div class="mauSac">
             <div class="khung">
-                <h2 class="tenMauSac"> Màu Sắc</h2>
+                <h2 class="tenMauSac" > Màu Sắc </h2>
             </div>
             <div class="boMau">
-                <input type="submit" class="fa fa-circle " id="fa1"  value="hồng" style="background: #ffa9bf ; font-size: 0.1px ; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa2"  value="vàng" style="background: yellow ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa3"  value="xám" style="background: #9a9a9a ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa4"  value="xanh lam" style="background: #1fb5d4 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa5"  value="xanh lục" style="background: #00dea2 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa6"  value="cam" style="background: orange ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa7"  value="trắng" style="border : 1px solid black ; background: white ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa8"  value="đen" style="background: black ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa9"  value="tím" style="background: #9d03ad ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                <input type="submit" class="fa fa-circle " id="fa10" value="đỏ" style="background: red ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                <input type="submit" class="fa fa-circle " id="fa1"  value="hồng" style="background: #ffa9bf ; font-size: 0.1px ; width: 46px ; height: 46px" name="color" onclick="clickgetColorPink()">
+                <input type="submit" class="fa fa-circle " id="fa2"  value="vàng" style="background: yellow ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorYellow()">
+                <input type="submit" class="fa fa-circle " id="fa3"  value="xám" style="background: #9a9a9a ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorGray()">
+                <input type="submit" class="fa fa-circle " id="fa4"  value="xanh lam" style="background: #1fb5d4 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorBlue()">
+                <input type="submit" class="fa fa-circle " id="fa5"  value="xanh lục" style="background: #00dea2 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorGreen()">
+                <input type="submit" class="fa fa-circle " id="fa6"  value="cam" style="background: orange ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorOrange()">
+                <input type="submit" class="fa fa-circle " id="fa7"  value="trắng" style="border : 1px solid black ; background: white ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorWhite()">
+                <input type="submit" class="fa fa-circle " id="fa8"  value="đen" style="background: black ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorBlack()">
+                <input type="submit" class="fa fa-circle " id="fa9"  value="tím" style="background: #9d03ad ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorPurple()">
+                <input type="submit" class="fa fa-circle " id="fa10" value="đỏ" style="background: red ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="getColorRed()">
             </div>
         </div>
-        </form>
+<%--        </form>--%>
 
         <form action="SearchAllProducts" method="post">
 
@@ -350,9 +350,10 @@
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </button>
         </div>
-        <div class="getColor" id="CacSanPham" style="display: none">
-            <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${getColor}">
+
+        <div class="ColorPink" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorPink" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorPink}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
     || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
     ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
@@ -394,7 +395,405 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="searchName" id="CacSanPham" style="display: block">
+        <div class="getColorYellow" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorYellow" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorYellow}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorGray" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorGray" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorGray}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorBlue" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorBlue" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorBlue}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorGreen" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorGreen" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorGreen}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <%--    getColorPink getColorYellow getColorGray getColorBlue getColorGreen getColorOrange getColorWhite
+        getColorBlack getColorPurple getColorRed --%>
+        <div class="getColorOrange" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorOrange" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorOrange}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorWhite"  id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorWhite" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorWhite}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorBlack"  id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorBlack" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorBlack}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorPurple" id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorPurple" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorPurple}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getColorRed"    id="CacSanPham" style="display: none">
+            <jsp:useBean id="getColorRed" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColorRed}">
+                <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
+    || p.id == 'sp65' || p.id == 'sp66' || p.id == 'sp67' || p.id == 'sp68' || p.id == 'sp69' || p.id == 'sp70'
+    ||  p.id == 'sp71' || p.id == 'sp72' || p.id == 'sp73' || p.id == 'sp74' || p.id == 'sp75' || p.id == 'sp76'
+    || p.id == 'sp77' || p.id == 'sp78' || p.id == 'sp79' || p.id == 'sp80' || p.id == 'sp81' || p.id == 'sp82'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat" style="height: 285px">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                            </div>
+                            <div class="nutgiohang">
+                                <a href="cart-add?id=${p.id}" >
+                                    <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                            style="margin-top: -3px ; margin-left: 10px"
+                                            data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                    aria-hidden="true"></i><span> </span></button>
+                                </a>
+                                <form style="margin-top: -22px ; margin-left: 43px"
+                                      action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                    <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                             data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                        <span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="searchName"     id="CacSanPham" style="display: none">
             <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${searchName}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -879,6 +1278,7 @@
             </c:forEach>
         </div>
         <div class="ClassSanPham" id="CacSanPham" style="display: block">
+
             <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -1061,6 +1461,18 @@
     // Danh Sach Cac San Pham
     // sp59 sp60 sp61 sp62 sp63 sp64 sp65 sp66 sp67 sp68 sp69 sp70 sp71 sp72 sp73 sp74 sp75 sp76 sp77
     // sp78 sp79 sp80 sp81 sp82
+    // getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack
+    // getColorPurple getColorRed
+    const getColorPink = document.querySelector('.ColorPink');
+    const getColorYellow = document.querySelector('.getColorYellow');
+    const getColorGray = document.querySelector('.getColorGray');
+    const getColorBlue = document.querySelector('.getColorBlue');
+    const getColorGreen = document.querySelector('.getColorGreen');
+    const getColorOrange = document.querySelector('.getColorOrange');
+    const getColorWhite = document.querySelector('.getColorWhite');
+    const getColorBlack = document.querySelector('.getColorBlack');
+    const getColorPurple = document.querySelector('.getColorPurple');
+    const getColorRed = document.querySelector('.getColorRed');
 
     const layout7 = document.getElementById('layout7');
     const themTrangMoi = document.getElementById('themTrangMoi');
@@ -1079,6 +1491,16 @@
     const ClassSanPham = document.querySelector('.ClassSanPham');
 
     function ClickSearchName() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
         themTrangMoi.style.display = "none";
@@ -1095,8 +1517,17 @@
         getList2501000.style.display = "none";
         searchName.style.display = "block";
     }
-
     function clickTren2501000() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
         themTrangMoi.style.display = "none";
@@ -1114,6 +1545,16 @@
         searchName.style.display = "none";
     }
     function clickDuoi2500000() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
         themTrangMoi.style.display = "none";
@@ -1131,6 +1572,16 @@
         searchName.style.display = "none";
     }
     function clickDuoi2000000() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
         themTrangMoi.style.display = "none";
@@ -1148,6 +1599,16 @@
         searchName.style.display = "none";
     }
     function clickDuoi1500000() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
         themTrangMoi.style.display = "none";
@@ -1165,6 +1626,16 @@
         searchName.style.display = "none";
     }
     function clickDuoi1000000() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
         themTrangMoi.style.display = "none";
@@ -1182,6 +1653,16 @@
         searchName.style.display = "none";
     }
     function clickDuoi500000() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
         themTrangMoi.style.display = "none";
@@ -1199,6 +1680,16 @@
         searchName.style.display = "none";
     }
     function clickAZ() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
@@ -1215,8 +1706,17 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
-
     function clickMacDinh() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
@@ -1234,6 +1734,16 @@
         searchName.style.display = "none";
     }
     function clickHangMoi() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
@@ -1251,6 +1761,16 @@
         searchName.style.display = "none";
     }
     function clickZA() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
@@ -1267,8 +1787,17 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
-
     function clickGiaThapDenCao () {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
@@ -1286,6 +1815,16 @@
         searchName.style.display = "none";
     }
     function clickGiaCaoXuongThap() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
         layout7.style.marginTop = "1000px";
@@ -1303,6 +1842,16 @@
         searchName.style.display = "none";
     }
     function ClickGetColor() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
         themTrangMoi.style.display = "none";
         getColor.style.display = "block";
         layout7.style.marginTop = "1000px";
@@ -1319,9 +1868,273 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
-    function timkiem () {
-        
+
+    // getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack
+    // getColorPurple getColorRed
+    // function getColorPink() {
+    //     getColorPink.style.display = "block";
+    //     getColorYellow.style.display = "none";
+    //     getColorGray.style.display = "none";
+    //     getColorBlue.style.display = "none";
+    //     getColorGreen.style.display = "none";
+    //     getColorOrange.style.display = "none";
+    //     getColorWhite.style.display = "none";
+    //     getColorBlack.style.display = "none";
+    //     getColorPurple.style.display = "none";
+    //     getColorRed.style.display = "none";
+    //     themTrangMoi.style.display = "none";
+    //     layout7.style.marginTop = "1000px";
+    //     az.style.display = "none";
+    //     za.style.display = "none";
+    //     priceaz.style.display = "none";
+    //     priceza.style.display = "none";
+    //     ClassSanPham.style.display = "none";
+    //     getList500000.style.display = "none";
+    //     getList1000000.style.display = "none";
+    //     getList1500000.style.display = "none";
+    //     getList2000000.style.display = "none";
+    //     getList2500000.style.display = "none";
+    //     getList2501000.style.display = "none";
+    //     searchName.style.display = "none";
+    // }
+    function clickgetColorPink () {
+        alert("haha");
     }
+    function getColorYellow() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "block";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorGray() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "block";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorBlue() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "block";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorGreen() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "block";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorOrange() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "block";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorWhite() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "block";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorBlack() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "block";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorPurple() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "block";
+        getColorRed.style.display = "none";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function getColorRed() {
+        getColorPink.style.display = "none";
+        getColorYellow.style.display = "none";
+        getColorGray.style.display = "none";
+        getColorBlue.style.display = "none";
+        getColorGreen.style.display = "none";
+        getColorOrange.style.display = "none";
+        getColorWhite.style.display = "none";
+        getColorBlack.style.display = "none";
+        getColorPurple.style.display = "none";
+        getColorRed.style.display = "block";
+        themTrangMoi.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
