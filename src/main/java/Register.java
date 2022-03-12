@@ -1,4 +1,3 @@
-
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
 import javax.servlet.ServletException;
@@ -23,6 +22,10 @@ public class Register extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
+
+        System.out.println(name + "REGISTER");
+        System.out.println(password + "REGISTER");
+        System.out.println(email + "REGISTER");
         request.getRequestDispatcher("DangKy.jsp").forward(request, response);
 
         if (UserServices.getInstance().register(name, password, email)) {

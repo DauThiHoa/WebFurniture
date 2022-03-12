@@ -31,6 +31,8 @@ public class UserServices {
     }
 private String hashPasword(String pass) {
         try {
+            System.out.println(pass);
+
             MessageDigest ma = MessageDigest.getInstance("MD5");
             ma.update(pass.getBytes());
             byte[] byteData = ma.digest();
