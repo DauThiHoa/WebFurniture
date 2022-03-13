@@ -35,11 +35,15 @@ public class OrderDetailsService {
     }
     // SUM DISCOUNT ( KHUYEN MAI )
     public int sumDiscount(){
-        return JDBIConnector.get().withHandle(handle -> {
+        int sum = 1 ;
+        int discount = 1 ;
+        int count = 1 ;
+        sum = JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
                     .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
                     .mapTo(Integer.class).findFirst().get();
         });
+        return sum;
     }
     // SUM TOTALMONEY ( TONG TIEN SAN PHAM )
     public int sumTotalMoney(){
