@@ -34,32 +34,30 @@ public class OrderDetailsService {
         });
     }
     // SUM DISCOUNT ( KHUYEN MAI )
-    public int sumDiscount(){
-        int sum = 1 ;
-        int discount = 1 ;
-        int count = 1 ;
-        sum = JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
-                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
-                    .mapTo(Integer.class).findFirst().get();
-        });
-        return sum;
-    }
+//    public int sumDiscount(){
+//        int sum = 1 ;
+//        sum = JDBIConnector.get().withHandle(handle -> {
+//            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+//                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+//                    .mapTo(Integer.class).findFirst().get();
+//        });
+//        return sum ;
+//    }
     // SUM TOTALMONEY ( TONG TIEN SAN PHAM )
     public int sumTotalMoney(){
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT SUM( totalMoney ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0 ) FROM orderdetails ) ")
-                    .mapTo(Integer.class).findFirst().get() ;
-        });
+            return  JDBIConnector.get().withHandle(handle -> {
+                return handle.createQuery("SELECT SUM( totalMoney ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0 ) FROM orderdetails ) ")
+                        .mapTo(Integer.class).findFirst().get();
+            });
     }
 
-    public boolean insert(String name,String birthDay,String gender, String email, String phone, String address, String bank, String cardNumber , String method , String discountCode) {
+    public boolean insert(String name,String birthDay,String gender, String email, String phone, String address, String bank, String cardNumber , String method , String discountCode ,String sumDiscount ,String sumTotalMoney) {
         int idOrder = JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT idOrder FROM orders  WHERE idOrder = ( SELECT MAX(idOrder + 0) FROM orders )")
                     .mapTo(Integer.class).findFirst().get() ;
         });
-        int ship = sumDiscount();
-        int totalMoney = sumTotalMoney();
+//        int ship = sumDiscount();
+//        int totalMoney = sumTotalMoney();
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
                 sum += h.createUpdate("insert into customer (idOrder , name , birthDay,gender, address ,phone, email ,bank, cardNumber , deliveryMethod , discount , ship , totalMoney) values(?,?,?,?,?,?,?,?,?,?,?,?,?)")
@@ -74,8 +72,8 @@ public class OrderDetailsService {
                         .bind(8 , cardNumber )
                         .bind( 9 ,method )
                         .bind( 10 , discountCode)
-                        .bind( 11 , ship)
-                        .bind( 12 , totalMoney)
+                        .bind( 11 , Integer.parseInt(sumDiscount))
+                        .bind( 12 ,  Integer.parseInt(sumTotalMoney))
                         .execute();
             // Số dòng được chèn vào
             return sum ;

@@ -76,6 +76,10 @@
                     </div>
                 </div>
                 <a href = "" >
+                    <jsp:useBean id="sumDiscount" scope="request" type="java.lang.Integer"/>
+                    <input  value="${sumDiscount}" name="sumDiscount" style="display: none"/>
+                    <jsp:useBean id="sumTotalMoney" scope="request" type="java.lang.Integer"/>
+                    <input  value="${sumTotalMoney}" name="sumTotalMoney" style="display: none"/>
                     <input type="submit" value="Continue to checkout" class="checkout" onclick="clickCheckout()" />
                 </a>
 <%--            --%>
@@ -122,13 +126,11 @@
             </p>
             <p class="from" style="color: #555555">
                 Phí Ship
-                <jsp:useBean id="sumDiscount" scope="request" type="java.lang.Integer"/>
                 <span class="price from" style="margin-left: 240px; color: #555555">${sumDiscount}đ</span>
             </p>
             <div>
                 <p class="from" style="color: #555555">
                     Tổng Tiền
-                    <jsp:useBean id="sumTotalMoney" scope="request" type="java.lang.Integer"/>
                     <span class="price from thanhtoan" style="margin-left: 220px; color: #555555">${sumTotalMoney}đ</span>
                 </p>
             </div>

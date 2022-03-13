@@ -18,7 +18,7 @@ public class OrderDetailsListController extends HttpServlet {
 
         request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
         request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
-        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
+//        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
         request.setAttribute("sumTotalMoney" , OrderDetailsService.getInstance().sumTotalMoney());
 
 
@@ -33,7 +33,7 @@ public class OrderDetailsListController extends HttpServlet {
 
         request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
         request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
-        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
+//        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
         request.setAttribute("sumTotalMoney" , OrderDetailsService.getInstance().sumTotalMoney());
 
         request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);

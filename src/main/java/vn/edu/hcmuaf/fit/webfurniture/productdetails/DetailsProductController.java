@@ -1,12 +1,9 @@
 package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
-import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,8 +23,7 @@ public class DetailsProductController extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
         request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
-        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
-        request.setAttribute("sumTotalMoney" , OrderDetailsService.getInstance().sumTotalMoney());
+//        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
@@ -35,8 +31,12 @@ public class DetailsProductController extends HttpServlet {
         String id = request.getParameter("id");
         String quantitySold = request.getParameter("quantitySold");
         String priceNew = request.getParameter("priceNew");
+        request.setAttribute("sumTotalMoney" ,Integer.parseInt(quantitySold) * Integer.parseInt(priceNew));
+        int quantity = Integer.parseInt(quantitySold) ;
+        int price = Integer.parseInt(priceNew) ;
+        double sumDiscount = (quantity * price) * (quantity * 0.01);
+        request.setAttribute("sumDiscount" ,(int) sumDiscount) ;
 
-        System.out.println(quantitySold);
         HttpSession session = request.getSession();
         // Xử lý đăng nhập -> lấy id khách hàng
 //        if ((session.getAttribute("auth")) == null ) {

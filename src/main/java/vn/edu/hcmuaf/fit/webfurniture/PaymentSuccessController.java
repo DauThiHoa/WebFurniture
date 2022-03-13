@@ -21,8 +21,9 @@ public class PaymentSuccessController extends HttpServlet {
 //        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
 //        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
 
-        int sumDiscount = OrderDetailsService.getInstance().sumDiscount();
-        int sumTotalMoney = OrderDetailsService.getInstance().sumTotalMoney();
+//        int sumDiscount = OrderDetailsService.getInstance().sumDiscount();
+//        int sumTotalMoney = OrderDetailsService.getInstance().sumTotalMoney();
+
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
@@ -51,6 +52,10 @@ public class PaymentSuccessController extends HttpServlet {
         String store = request.getParameter("store");
         String discountCode = request.getParameter("discountCode");
 //                int age = Integer.parseInt(request.getParameter("txtAge"));
+
+        String sumDiscount = request.getParameter("sumDiscount");
+        String sumTotalMoney = request.getParameter("sumTotalMoney");
+
         String method ;
         if ( delivery != null ){
             method = delivery ;
@@ -67,7 +72,7 @@ public class PaymentSuccessController extends HttpServlet {
         }
         if ( name != "" && brithDay != "" && gender != "" && email != "" && phone != "" && address != "" && bank != "" &&
                 cardNumber != "" && method != "" && discountCode != "" ) {
-            boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode);
+            boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode , sumDiscount , sumTotalMoney);
 
             String subject = "PAYMENT SUCCESS";
             String content = "<h2 style=\"color: #1fb5d4 ; font-weight: bold\">Payment made successfully!</h2>";
