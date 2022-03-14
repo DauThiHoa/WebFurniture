@@ -113,7 +113,8 @@
 
             <div class="noiDung_2" >
                 <jsp:useBean id="discountCode" scope="request" class="java.lang.String"/>
-                <input class="input_1" type="text" name="discountCode" value="${discountCode}" onchange="displayname()" placeholder="Mã giảm giá"/>
+                <input class="input_1" type="text" name="discountCode" value="${discountCode}" onchange="displayname()"
+                       placeholder="Mã giảm giá"/>
             </div>
             </form>
             <h3>
@@ -139,6 +140,7 @@
 </div>
 </body>
 <script>
+
     function displayname() {
         document.querySelector(".from .price").innerHTML =
             document.querySelector(".input_1").value +"đ";
@@ -148,7 +150,6 @@
         result = "true" ;
     }
 
-    // const checkout = document.querySelector('.checkout');
     const firstname  =  document.getElementById("fname") ;
     const email  =  document.getElementById('email') ;
     const address  =  document.getElementById('address') ;
@@ -179,6 +180,7 @@
         }
         return isCheck;
     }
+
     // alert(firstname);
     function clickCheckout() {
         let isValid = checkValidate();
@@ -188,6 +190,7 @@
             alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
     }
+
     function zoom(e) {
         var zoomer = e.currentTarget;
         e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
@@ -196,5 +199,16 @@
         y = (offsetY / zoomer.offsetHeight) * 100
         zoomer.style.backgroundPosition = x + "% " + y + "%";
     }
+
 </script>
 </html>
+
+
+
+
+
+
+
+
+
+

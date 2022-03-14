@@ -22,6 +22,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="ChiTietSanPham.js"></script>
 
+    <style>
+        figure.zoom {
+            background-position: 50% 50%;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+
+        figure.zoom img:hover {
+            opacity: 0;
+        }
+
+        figure.zoom img {
+            transition: opacity 0.5s;
+            display: block;
+            width: 100%;
+        }
+
+    </style>
+
 </head>
 <body>
 <jsp:useBean id="productDetails" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>
@@ -144,13 +165,18 @@
 </div>
 
 <div class="tieuDe ">
-    <h2 class="trangChu_BanAilen_03">Trang Chủ / ${productDetails.name} </h2>
+    <h2 class="trangChu_BanAilen_03"> Trang Chủ / ${productDetails.name} </h2>
 
 </div>
 <div id="thongTinSanPham">
     <div class="trai">
         <div id="anhDau">
-            <img id="anh" class="anh_BanLamViec" src="${productDetails.linkImage}"/>
+            <figure id="anh" class="anh_BanLamViec"
+                    style="background:url(${productDetails.linkImage})"
+                    onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                <img src="${productDetails.linkImage}"/>
+<%--                    <img id="anh" class="anh_BanLamViec" src="${productDetails.linkImage}" />--%>
+            </figure>
         </div>
         <img id="anhDau1" class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
              alt="image"/>
