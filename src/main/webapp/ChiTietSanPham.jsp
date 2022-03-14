@@ -247,12 +247,12 @@
             <input style="display: none ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
             <c:if test="${productDetails.id != 'sp24'}">
                 <button class="muaNgay" style="margin-left: 60%" type="submit">
-                    <h3 class="mua"> Đặt mua ngay</h3>
+                    <h3 class="mua"> Đặt mua ngay </h3>
                 </button>
             </c:if>
             <c:if test="${productDetails.id == 'sp24'}">
                 <button class="muaNgay" style="margin-left: 60% ; margin-top: 4%"  type="submit">
-                    <h3 class="mua"> Đặt mua ngay</h3>
+                    <h3 class="mua"> Đặt mua ngay</h3 >
                 </button>
             </c:if>
         </form>

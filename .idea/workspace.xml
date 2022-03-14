@@ -11,11 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/PaymentSuccessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/webfurniture.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webfurniture.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ChiTietSanPham.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/ChiTietSanPham.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/ChiTietSanPham.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +143,9 @@
     <configuration name="AllProduct2.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/AllProduct2.jsp">
       <method v="2" />
     </configuration>
+    <configuration name="BanAn.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/NoiThatPhongBep/BanAn.jsp">
+      <method v="2" />
+    </configuration>
     <configuration name="NoiThatDoTrangTri_Den.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/WebFurniture_war_exploded/NoiThatDoTrangTri_Den.jsp">
       <method v="2" />
     </configuration>
@@ -240,10 +241,12 @@
       <item itemvalue="Application.Mail" />
       <item itemvalue="JavaScript Debug.NoiThatDoTrangTri_Den.jsp" />
       <item itemvalue="JavaScript Debug.AllProduct2.jsp" />
+      <item itemvalue="JavaScript Debug.BanAn.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.54" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.BanAn.jsp" />
         <item itemvalue="Application.ProductDetailsService" />
         <item itemvalue="JavaScript Debug.AllProduct2.jsp" />
         <item itemvalue="Application.Mail" />
@@ -453,6 +456,8 @@
       <workItem from="1647101945063" duration="5563000" />
       <workItem from="1647136034303" duration="2221000" />
       <workItem from="1647176887944" duration="7936000" />
+      <workItem from="1647234675859" duration="2026000" />
+      <workItem from="1647236829734" duration="42000" />
     </task>
     <servers />
   </component>
