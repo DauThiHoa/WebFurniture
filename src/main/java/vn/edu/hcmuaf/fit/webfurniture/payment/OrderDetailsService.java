@@ -34,15 +34,15 @@ public class OrderDetailsService {
         });
     }
     // SUM DISCOUNT ( KHUYEN MAI )
-//    public int sumDiscount(){
-//        int sum = 1 ;
-//        sum = JDBIConnector.get().withHandle(handle -> {
-//            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
-//                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
-//                    .mapTo(Integer.class).findFirst().get();
-//        });
-//        return sum ;
-//    }
+    public int sumDiscount(){
+        int sum = 1 ;
+        sum = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+                    .mapTo(Integer.class).findFirst().get();
+        });
+        return sum ;
+    }
     // SUM TOTALMONEY ( TONG TIEN SAN PHAM )
     public int sumTotalMoney(){
             return  JDBIConnector.get().withHandle(handle -> {

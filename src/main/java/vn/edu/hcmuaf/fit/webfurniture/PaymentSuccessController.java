@@ -18,12 +18,11 @@ public class PaymentSuccessController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//        request.setAttribute("customerList" , CustomerService.getInstance().getAll());
-//        request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
+//      request.setAttribute("customerList" , CustomerService.getInstance().getAll());
+//      request.setAttribute("sumTotal" , CustomerService.getInstance().sumTotal());
 
-//        int sumDiscount = OrderDetailsService.getInstance().sumDiscount();
-//        int sumTotalMoney = OrderDetailsService.getInstance().sumTotalMoney();
-
+//      int sumDiscount = OrderDetailsService.getInstance().sumDiscount();
+//      int sumTotalMoney = OrderDetailsService.getInstance().sumTotalMoney();
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
@@ -52,6 +51,18 @@ public class PaymentSuccessController extends HttpServlet {
         String store = request.getParameter("store");
         String discountCode = request.getParameter("discountCode");
 //                int age = Integer.parseInt(request.getParameter("txtAge"));
+
+        String id = request.getParameter("id");
+        String quantitySold = request.getParameter("quantitySold");
+        String priceNew = request.getParameter("priceNew");
+
+//        int quantity = Integer.parseInt(quantitySold) ;
+//        int price = Integer.parseInt(priceNew) ;
+//        System.out.println(quantity + "  =  " + price);
+//
+//        request.setAttribute("sumTotalMoney" ,quantity * price);
+//        double sumDiscount_double = (quantity * price) * (quantity * 0.01);
+//        request.setAttribute("sumDiscount" ,(int) sumDiscount_double) ;
 
         String sumDiscount = request.getParameter("sumDiscount");
         String sumTotalMoney = request.getParameter("sumTotalMoney");
@@ -110,6 +121,5 @@ public class PaymentSuccessController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request , response);
-
     }
 }

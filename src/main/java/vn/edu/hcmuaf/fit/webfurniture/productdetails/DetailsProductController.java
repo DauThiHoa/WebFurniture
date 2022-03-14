@@ -19,11 +19,12 @@ public class DetailsProductController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //           String idProductDetails =  request.getParameter("idProductDetails");
 //           request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
         request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
-//        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
+//      request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
@@ -31,6 +32,7 @@ public class DetailsProductController extends HttpServlet {
         String id = request.getParameter("id");
         String quantitySold = request.getParameter("quantitySold");
         String priceNew = request.getParameter("priceNew");
+
         request.setAttribute("sumTotalMoney" ,Integer.parseInt(quantitySold) * Integer.parseInt(priceNew));
         int quantity = Integer.parseInt(quantitySold) ;
         int price = Integer.parseInt(priceNew) ;

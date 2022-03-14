@@ -233,9 +233,9 @@
         </c:if>
 
         <form action="cart-add?id=${productDetails.id}" method="post" class="soLuongSanPham">
-    <input style="margin-top: 10% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
+     <input style="margin-top: 10% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
      background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -87%" class="so soLuongDat quantity" name="quantitySold"
-           type="number" value="1" onclick="clickQuantitySold()">
+     type="number" value="1" onclick="clickQuantitySold()">
 
                 <button type="submit" class="gioHang" style="margin-top: 10% ; margin-right: -50% ; margin-left: -60%" >
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
