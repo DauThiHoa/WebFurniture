@@ -171,12 +171,13 @@
 <div id="thongTinSanPham">
     <div class="trai">
         <div id="anhDau">
-            <figure id="anh" class="anh_BanLamViec"
-                    style="background:url(${productDetails.linkImage})"
-                    onmousemove="zoom(event)" ontouchmove="zoom(event)">
-                <img src="${productDetails.linkImage}"/>
-<%--                    <img id="anh" class="anh_BanLamViec" src="${productDetails.linkImage}" />--%>
-            </figure>
+<%--            <figure id="anh" class="anh_BanLamViec"--%>
+<%--                    style="background:url(${productDetails.linkImage})"--%>
+<%--                    onmousemove="zoom(event)" ontouchmove="zoom(event)">--%>
+<%--                <img src="${productDetails.linkImage}"/>--%>
+                 <img id="anh" class="anh_BanLamViec" src="${productDetails.linkImage}" />
+<%--            </figure>--%>
+
         </div>
         <img id="anhDau1" class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
              alt="image"/>

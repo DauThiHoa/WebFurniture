@@ -22,7 +22,7 @@
         figure.zoom {
             background-position: 50% 50%;
             position: relative;
-            width: 500px;
+            width: 1000px;
             overflow: hidden;
             cursor: zoom-in;
         }

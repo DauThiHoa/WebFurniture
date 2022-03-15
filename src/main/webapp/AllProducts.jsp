@@ -891,7 +891,8 @@
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
                                 <button style="width: 100% ; background: white ; border: 0px solid #1fb5d4" type="submit" class="anhDoTrangTri">
-                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ; height: 170px ; margin-left: 4px"
+                                    <figure class="zoom anh" style="background:url(${p.linkImage}) ;
+                                            height: 170px ; margin-left: 4px"
                                             onmousemove="zoom(event)" ontouchmove="zoom(event)">
                                         <img src="${p.linkImage}" />
                                     </figure>

@@ -419,20 +419,22 @@
             data: {
                 id: id
             },
-            success: function (data){
-                delete cart.productDetailsList[id];
-                //loadCart(cart);
+            error: function (data){
+                alert("Sản phẩm không còn trong giỏ hàng");
+            },
 
+            success: function (data){
+                // thisRow.parents('tr').remove() ;
                 sum = 0 ;
+                //loadCart(cart);
+                delete cart.productDetailsList[id];
                 for ( const  x in cart.productDetailsList){
                     sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
                  }
                     $(".total-cart").html("Tổng tiền : " + sum +"đ");
                    thisRow.parents('tr').remove() ;
             },
-            error: function (data){
-               alert("Sản phẩm không còn trong giỏ hàng");
-            }
+
         });
     });
     $('.tab table#cart tbody tr.trSanPham td.quantitySold .changeQuantity').on('blur',  function (){
