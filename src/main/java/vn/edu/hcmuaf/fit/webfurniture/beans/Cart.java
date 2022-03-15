@@ -42,14 +42,17 @@ public class Cart implements Serializable {
         ProductDetails productDetails = productDetailsList.get(id);
         productDetails.setQuantitySold(quantity);
     }
+
     // get productDetails from cart by id
     public ProductDetails get ( String id ){
         return productDetailsList.get(id);
     }
+
     // remove productDetails from cart by id
     public ProductDetails remove ( String id ){
         return productDetailsList.remove(id);
     }
+
     // get total price of cart
     public void removeById ( String id ){
         for ( ProductDetails productDetails : productDetailsList.values()) {

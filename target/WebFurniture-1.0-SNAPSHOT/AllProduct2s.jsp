@@ -349,7 +349,7 @@
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </button>
         </div>
-        <div class="getColor" id="CacSanPham" style="display: none">
+        <div class="getColor" id="CacSanPham" style="display: block">
 <%--            sp83 sp84 sp85 sp86 sp87 => sp106--%>
             <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getColor}">
@@ -878,7 +878,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="ClassSanPham" id="CacSanPham" style="display: block">
+        <div class="ClassSanPham" id="CacSanPham" style="display: none">
             <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
                 <c:if test="${p.id == 'sp83' || p.id == 'sp84' || p.id == 'sp85' || p.id == 'sp86' || p.id == 'sp87' || p.id == 'sp88'

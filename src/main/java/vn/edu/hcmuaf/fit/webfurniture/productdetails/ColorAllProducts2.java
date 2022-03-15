@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ColorAllProducts", value = "/ColorAllProducts")
-public class ColorAllProducts extends HttpServlet {
+@WebServlet(name = "ColorAllProducts2", value = "/ColorAllProducts2")
+public class ColorAllProducts2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -36,6 +36,7 @@ public class ColorAllProducts extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
+
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 // getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack getColorPurple getColorRed
         request.setAttribute("getColorPink", ProductDetailsService.getInstance().getColorPink());
@@ -50,7 +51,7 @@ public class ColorAllProducts extends HttpServlet {
         request.setAttribute("getColorRed", ProductDetailsService.getInstance().getColorRed());
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("AllProducts2.jsp").forward(request, response);
+        request.getRequestDispatcher("AllProduct2s.jsp").forward(request, response);
 
     }
     @Override

@@ -2032,10 +2032,12 @@
     <!-- SanPham Khi Nhan Nut-->
 
 </div>
+
 <div class="DiemDen" style="display: block">
     <h1 class="chuDiemDenMoi"> Sản Phẩm Đặc Trưng </h1>
 <jsp:useBean id="productDetailsDacTrung" scope="request" type="java.util.List"/>
 <c:forEach var="p" items="${productDetailsDacTrung}">
+
     <c:if test="${p.id == 'sp55'}" >
     <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
         <form action="ProductDetails" method="post" style="height: 57% ; margin-bottom: 50px">

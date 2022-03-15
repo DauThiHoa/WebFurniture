@@ -409,6 +409,7 @@
             }
         );
     } );
+
     $('.tab table#cart tbody tr.trSanPham td.productDetails-remove a.link .fa-trash').on('click',  function (){
         // send ajax to remove product in cart
         var id = $(this).attr('pid');
@@ -419,24 +420,23 @@
             data: {
                 id: id
             },
+            success: function (data){
+                delete cart.productDetailsList[id];
+                // thisRow.parents('tr').remove() ;
+                sum = 0 ;
+                // loadCart(cart);
+                for ( const x in cart.productDetailsList){
+                    sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
+                 }
+                thisRow.parents('tr').remove() ;
+                $(".total-cart").html("Tổng tiền : " + sum +"đ");
+            },
             error: function (data){
                 alert("Sản phẩm không còn trong giỏ hàng");
             },
-
-            success: function (data){
-                // thisRow.parents('tr').remove() ;
-                sum = 0 ;
-                //loadCart(cart);
-                delete cart.productDetailsList[id];
-                for ( const  x in cart.productDetailsList){
-                    sum += cart.productDetailsList[x].priceNew * cart.productDetailsList[x].quantitySold;
-                 }
-                    $(".total-cart").html("Tổng tiền : " + sum +"đ");
-                   thisRow.parents('tr').remove() ;
-            },
-
         });
     });
+
     $('.tab table#cart tbody tr.trSanPham td.quantitySold .changeQuantity').on('blur',  function (){
         // send ajax to remove product in cart
         var id = $(this).attr('pid');
@@ -468,12 +468,13 @@
             }
         });
     });
-    $(".total-cart").html("Tổng tiền : " + ${cart.total} +"đ");
 
+    $(".total-cart").html("Tổng tiền : " + ${cart.total} +"đ");
 
     function  updateQuantity(cart, id ,quantity){
         cart.productDetailsList[id].quantitySold = quantity ;
     }
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {

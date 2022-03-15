@@ -244,7 +244,7 @@
             </div>
         </div>
 
-        <form action="ColorAllProducts" method="post">
+        <form action="ColorAllProducts2" method="post">
             <div class="mauSac">
                 <div class="khung">
                     <h2 class="tenMauSac"> Màu Sắc</h2>
@@ -264,7 +264,7 @@
             </div>
         </form>
 
-        <form action="SearchAllProducts" method="post">
+        <form action="SearchAllProducts2" method="post">
 
             <div class="tuKhoa" style="margin-top: 25px">
                 <div class="khung">

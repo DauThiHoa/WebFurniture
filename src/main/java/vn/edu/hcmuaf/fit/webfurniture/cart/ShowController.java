@@ -19,6 +19,7 @@ public class ShowController extends HttpServlet {
         session.setAttribute("cart" , cart); // add session cart
         request.setAttribute("cart" , cart);
         request.getRequestDispatcher("GioHang.jsp").forward(request, response);
+
     }
 
     @Override
