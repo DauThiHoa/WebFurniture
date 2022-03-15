@@ -66,17 +66,17 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="DangNhap.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">Đăng
+                    href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="DangKy.jsp?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+                href="controllerRegister">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
@@ -323,6 +323,7 @@
         <div id="tieuDe">
             <h1 class="noiThatTrangtri"> Danh Mục Sản Phẩm</h1>
         </div>
+
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
             <button class="tenKieu" style="background: white ; border: 1px solid white">
@@ -1095,7 +1096,6 @@
         getList2501000.style.display = "none";
         searchName.style.display = "block";
     }
-
     function clickTren2501000() {
         getColor.style.display = "none";
         layout7.style.marginTop = "-1000px";
@@ -1215,7 +1215,6 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
-
     function clickMacDinh() {
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
@@ -1267,7 +1266,6 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
-
     function clickGiaThapDenCao () {
         themTrangMoi.style.display = "block";
         getColor.style.display = "none";
@@ -1319,6 +1317,7 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
