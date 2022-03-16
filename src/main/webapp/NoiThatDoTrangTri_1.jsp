@@ -244,6 +244,8 @@
                 </div>
             </div>
         </div>
+
+
         <form action="ColorDecorator" method="post">
             <div class="mauSac">
                 <div class="khung">
@@ -349,7 +351,7 @@
             </button>
         </div>
 
-        <div class="getColor" id="CacSanPham" style="display: none">
+        <div class="getColor" id="CacSanPham" style="display: block">
             <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getColor}">
                 <c:if test="${p.id == 't1' || p.id == 't2' || p.id == 't3' || p.id == 't4' || p.id == 't5' || p.id == 't6'
@@ -393,7 +395,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="searchName" id="CacSanPham" style="display: none">
+        <div class="searchName" id="CacSanPham" style="display: block">
             <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${searchName}">
                 <c:if test="${p.id == 't1' || p.id == 't2' || p.id == 't3' || p.id == 't4' || p.id == 't5' || p.id == 't6'
@@ -877,7 +879,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class= "ClassSanPham" id="CacSanPham" style="display: block" >
+        <div class= "ClassSanPham" id="CacSanPham" style="display: none" >
             <jsp:useBean id="ProductDetailsDecoration" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${ProductDetailsDecoration}">
                 <c:if test="${p.id == 't1' || p.id == 't2' || p.id == 't3' || p.id == 't4' || p.id == 't5' || p.id == 't6'
@@ -1279,6 +1281,7 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
+
 
     function clickValidate() {
         let isValid = checkValidate();

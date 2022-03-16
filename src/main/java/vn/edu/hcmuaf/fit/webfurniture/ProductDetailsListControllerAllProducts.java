@@ -36,8 +36,8 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         String color = request.getParameter("color");
-
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
+
 // getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack getColorPurple getColorRed
         request.setAttribute("getColorPink", ProductDetailsService.getInstance().getColorPink());
         request.setAttribute("getColorYellow", ProductDetailsService.getInstance().getColorYellow());

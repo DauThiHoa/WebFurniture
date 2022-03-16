@@ -1,16 +1,18 @@
-package vn.edu.hcmuaf.fit.webfurniture;
+package vn.edu.hcmuaf.fit.webfurniture.Decorator;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProductDetailsListControllerDecoration", value = "/ProductDetailsListDecoration")
-public class ProductDetailsListControllerDecoration extends HttpServlet {
+@WebServlet(name = "ProductDetailsListControllerDecorationLamp", value = "/ProductDetailsListControllerDecorationLamp")
+public class ProductDetailsListControllerDecorationLamp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -40,8 +42,9 @@ public class ProductDetailsListControllerDecoration extends HttpServlet {
 
         String color = request.getParameter("color");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
+
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatDoTrangTri.jsp").forward(request, response);
+        request.getRequestDispatcher("NoiThatDoTrangTri_Den.jsp").forward(request, response);
 
     }
     @Override
