@@ -9,15 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ColorDecoratorLamp", value = "/ColorDecoratorLamp")
-public class ColorDecoratorLamp extends HttpServlet {
+@WebServlet(name = "ColorDecoratorSofa", value = "/ColorDecoratorSofa")
+public class ColorDecoratorSofa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
 //        response.setCharacterEncoding("UTF-8");
-
-        request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
 
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
@@ -46,7 +44,9 @@ public class ColorDecoratorLamp extends HttpServlet {
         request.setAttribute("display", display);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatDoTrangTri_Den.jsp").forward(request, response);
+
+        request.setAttribute("ProductDetailsDecorationSofa", ProductDetailsService.getInstance().getAll());
+        request.getRequestDispatcher("NoiThatDoTrangTri_Goisofa.jsp").forward(request, response);
 
     }
     @Override

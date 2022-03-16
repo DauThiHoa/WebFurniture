@@ -265,7 +265,7 @@
                     <h3 class="tenLoaiDoTrangTri">Lọ , hoa giả</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri_Goisofa.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="ProductDetailsListControllerDecoratorSofa">
                 <div class="loai2">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri4.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Gối sofa</h3>

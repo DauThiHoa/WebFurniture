@@ -351,7 +351,12 @@
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
             </button>
         </div>
-        <div class="getColor" id="CacSanPham" style="display: none">
+
+        <jsp:useBean id="block" scope="request" class="java.lang.String"/>
+        <jsp:useBean id="none" scope="request" class="java.lang.String"/>
+        <jsp:useBean id="display" scope="request" class="java.lang.String"/>
+
+        <div class="getColor" id="CacSanPham" style="display: ${none}">
             <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getColor}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -395,7 +400,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="searchName" id="CacSanPham" style="display: block">
+        <div class="searchName" id="CacSanPham" style="display: ${none}">
             <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${searchName}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -439,7 +444,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="getList2501000" id="CacSanPham" style="display: none">
+        <div class="getList2501000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2501000}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -483,7 +488,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="getList2500000" id="CacSanPham" style="display: none">
+        <div class="getList2500000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2500000}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -527,7 +532,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="getList2000000" id="CacSanPham" style="display: none">
+        <div class="getList2000000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2000000}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -571,7 +576,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="getList1500000" id="CacSanPham" style="display: none">
+        <div class="getList1500000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList1500000}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -615,7 +620,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="getList1000000" id="CacSanPham" style="display: none">
+        <div class="getList1000000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList1000000}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -659,7 +664,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="getList500000" id="CacSanPham" style="display: none">
+        <div class="getList500000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList500000}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -703,7 +708,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="az" id="CacSanPham" style="display: none">
+        <div class="az" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListAZ}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -747,7 +752,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="za" id="CacSanPham" style="display: none">
+        <div class="za" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListZA}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -791,7 +796,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="priceaz" id="CacSanPham" style="display: none">
+        <div class="priceaz" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceAZ}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -835,7 +840,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class="priceza" id="CacSanPham" style="display: none">
+        <div class="priceza" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceZA}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'
@@ -879,7 +884,7 @@
                 </c:if>
             </c:forEach>
         </div>
-        <div class= "ClassSanPham" id="CacSanPham" style="display: block" >
+        <div class= "ClassSanPham" id="CacSanPham" style="display: ${block}" >
             <jsp:useBean id="productDetailsAllProduct" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsAllProduct}">
                 <c:if test="${p.id == 'sp59' || p.id == 'sp60' || p.id == 'sp61' || p.id == 'sp62' || p.id == 'sp63' || p.id == 'sp64'

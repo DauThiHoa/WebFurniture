@@ -40,8 +40,15 @@ public class SearchDecorator extends HttpServlet {
 
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
+        String block = "none";
+        String none = "block";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("ColorDecorator").forward(request, response);
+        request.getRequestDispatcher("NoiThatDoTrangTri.jsp").forward(request, response);
 
     }
     @Override

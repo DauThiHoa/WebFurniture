@@ -156,10 +156,10 @@ public class ProductDetailsService implements Serializable {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
-    public List<ProductDetails> searchName ( String name ){
+    public static List<ProductDetails> searchName ( String name ){
         String name_result = "%" + name + "%";
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where `name` like ? ")
+            return handle.createQuery("SELECT * FROM webfurniture.productdetails WHERE webfurniture.productdetails.`name` LIKE ? ")
                     .bind(0 , name_result)
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
@@ -257,10 +257,11 @@ public class ProductDetailsService implements Serializable {
     }
 
     public static void main(String[] args) {
-        List<ProductDetails> re = getColorWhite ();
+        List<ProductDetails> re = searchName ("bó hoa");
         for (ProductDetails pd : re ){
             System.out.println(pd.toString());
         }
+
     }
 
 }

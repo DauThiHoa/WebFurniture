@@ -32,25 +32,22 @@ public class ColorAllProducts extends HttpServlet {
         request.setAttribute("getList2501000", ProductDetailsService.getInstance().getList2501000());
 
         String search = request.getParameter("search");
+        System.out.println(search +" TEST");
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
-// getColorPink getColorYellow getColorGray getColorBlue getColorGreen  getColorOrange getColorWhite getColorBlack getColorPurple getColorRed
-        request.setAttribute("getColorPink", ProductDetailsService.getInstance().getColorPink());
-        request.setAttribute("getColorYellow", ProductDetailsService.getInstance().getColorYellow());
-        request.setAttribute("getColorGray", ProductDetailsService.getInstance().getColorGray());
-        request.setAttribute("getColorBlue", ProductDetailsService.getInstance().getColorBlue());
-        request.setAttribute("getColorGreen", ProductDetailsService.getInstance().getColorGreen());
-        request.setAttribute("getColorOrange", ProductDetailsService.getInstance().getColorOrange());
-        request.setAttribute("getColorWhite", ProductDetailsService.getInstance().getColorWhite());
-        request.setAttribute("getColorBlack", ProductDetailsService.getInstance().getColorBlack());
-        request.setAttribute("getColorPurple", ProductDetailsService.getInstance().getColorPurple());
-        request.setAttribute("getColorRed", ProductDetailsService.getInstance().getColorRed());
+
+        String block = "none";
+        String none = "block";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("AllProducts2.jsp").forward(request, response);
+        request.getRequestDispatcher("AllProducts.jsp").forward(request, response);
 
     }
     @Override

@@ -3,6 +3,9 @@ body {
     overflow: auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.getColor {
+    display: block;
+}
 figure.zoom {
     background-position: 50% 50%;
     position: relative;
@@ -1914,4 +1917,5 @@ figure.zoom img {
         margin-left: 545px;
 
     }
+
 }

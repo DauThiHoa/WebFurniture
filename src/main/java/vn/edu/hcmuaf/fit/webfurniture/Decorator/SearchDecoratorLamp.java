@@ -40,8 +40,15 @@ public class SearchDecoratorLamp extends HttpServlet {
 
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
+        String block = "none";
+        String none = "block";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("ColorDecoratorLamp").forward(request, response);
+        request.getRequestDispatcher("NoiThatDoTrangTri_Den.jsp").forward(request, response);
 
     }
     @Override

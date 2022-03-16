@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.webfurniture;
+package vn.edu.hcmuaf.fit.webfurniture.Decorator;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
@@ -9,8 +9,8 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProductDetailsListControllerDen", value = "/ProductDetailsListDen")
-public class ProductDetailsListControllerDen extends HttpServlet {
+@WebServlet(name = "ProductDetailsListControllerDecoratorSofa", value = "/ProductDetailsListControllerDecoratorSofa")
+public class ProductDetailsListControllerDecoratorSofa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -35,8 +35,21 @@ public class ProductDetailsListControllerDen extends HttpServlet {
         List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
 
-        request.setAttribute("productDetailsDen", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatDoTrangTri_Den.jsp").forward(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+        String color = request.getParameter("color");
+        request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
+        request.setAttribute("ProductDetailsDecorationSofa", ProductDetailsService.getInstance().getAll());
+        request.getRequestDispatcher("NoiThatDoTrangTri_Goisofa.jsp").forward(request, response);
 
     }
     @Override

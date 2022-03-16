@@ -40,6 +40,14 @@ public class ProductDetailsListControllerDecoration extends HttpServlet {
 
         String color = request.getParameter("color");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("NoiThatDoTrangTri.jsp").forward(request, response);
 
