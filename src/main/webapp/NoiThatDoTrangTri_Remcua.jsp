@@ -268,7 +268,7 @@
                     <h3 class="tenLoaiDoTrangTri">Đèn ngủ</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri_TamTham.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="ProductDetailsListControllerDecorationCarpet">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri2.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Tấm thảm</h3>
