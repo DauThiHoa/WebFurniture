@@ -33,6 +33,7 @@ public class DBProperties {
 
     }
     public static  String getDbOption (){
+
         return prop.get("db.options").toString();
    }
     public static String getDbName() {

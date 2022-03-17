@@ -1085,14 +1085,14 @@ figure.zoom img {
 
 .btnBuyNow {
     background: white;
-    color: #34ce57;
-    border: 2px solid #34ce57;
+    color: palevioletred;
+    border: 2px solid palevioletred;
     font-size: 100%;
 }
 
 .btnBuyNow:hover {
     cursor: pointer;
-    background: #34ce57;
+    background: palevioletred;
     color: white;
     border: 2px solid white;
 }

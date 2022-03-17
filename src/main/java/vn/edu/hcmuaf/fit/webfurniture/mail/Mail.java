@@ -43,7 +43,7 @@ public class Mail {
         props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 
         return Session.getInstance(props,
-                new javax.mail.Authenticator(){
+                new Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
                 return new PasswordAuthentication(username,password);
             }

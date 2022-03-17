@@ -23,6 +23,7 @@ public class JDBIConnector {
             throwables.printStackTrace();
             throw new RuntimeException(throwables);
         }
+
         jdbi = Jdbi.create(dataSource);
     }
 

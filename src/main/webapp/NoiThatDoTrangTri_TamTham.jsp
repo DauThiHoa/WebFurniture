@@ -1,8 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -262,7 +258,7 @@
                     <h3 class="tenLoaiDoTrangTri">Tấm thảm</h3>
                 </div>
             </a>
-            <a href="ProductDetailsListControllerFlower">
+            <a href="NoiThatDoTrangTri_Lohoagia.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri3.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Lọ , hoa giả</h3>
