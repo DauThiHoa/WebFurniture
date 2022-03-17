@@ -1,4 +1,11 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -864,12 +871,12 @@
                             <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
-<%--                                <button type="submit" style="" class="anhDoTrangTri">--%>
+                                <button type="submit" style="" class="anhDoTrangTri">
                                     <figure class="zoom anh anhDoTrangTri" style="background:url(${p.linkImage}) "
                                             onmousemove="zoom(event)" ontouchmove="zoom(event)">
                                         <img src="${p.linkImage}" />
                                     </figure>
-<%--                                </button>--%>
+                                </button>
                             </form>
                             <div class="noiDungDoTrangTri" >
                                 <h4 class="ten">${p.name}</h4>
