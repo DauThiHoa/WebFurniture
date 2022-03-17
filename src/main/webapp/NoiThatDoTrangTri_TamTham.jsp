@@ -270,7 +270,7 @@
                     <h3 class="tenLoaiDoTrangTri">Gối sofa</h3>
                 </div>
             </a>
-            <a href="NoiThatDoTrangTri_Remcua.jsp?_ijt=np9345g6gd07lv3nj744bjnhi1">
+            <a href="ProductDetailsListControllerDecorationCurtain">
                 <div class="loai">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri5.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Rèm cửa </h3>
