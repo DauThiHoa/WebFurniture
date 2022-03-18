@@ -249,7 +249,7 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai">
-                <a href="../NoiThatPhongBep/BanAn.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../BanAn.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="Image_phongbep/ban-an.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn ăn</h3>
                 </a>
