@@ -51,7 +51,7 @@ public class ProductDetailsListControllerKitchenTable extends HttpServlet {
         request.setAttribute("display", display);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("BanAn.jsp").forward(request, response);
+        request.getRequestDispatcher("NoiThatPhongBep_BanAn.jsp").forward(request, response);
 
     }
     @Override

@@ -48,7 +48,7 @@ public class SearchKitchenTable extends HttpServlet {
         request.setAttribute("display", display);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("BanAn.jsp").forward(request, response);
+        request.getRequestDispatcher("NoiThatPhongBep_BanAn.jsp").forward(request, response);
 
     }
     @Override

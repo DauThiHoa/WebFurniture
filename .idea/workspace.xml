@@ -10,13 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/Kitchen/ColorKitchenTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/Kitchen/ProductDetailsListControllerKitchenTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/Kitchen/SearchKitchenTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/BanAn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/BanAn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/BanAn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/BanAn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GheBep.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/GheBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GheBep.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/Khantraiban.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/Khantraiban.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongBep/TuBep.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" afterDir="false" />
@@ -484,7 +482,7 @@
       <workItem from="1647508906026" duration="651000" />
       <workItem from="1647509681900" duration="3266000" />
       <workItem from="1647513301443" duration="145000" />
-      <workItem from="1647616813650" duration="2458000" />
+      <workItem from="1647616813650" duration="4292000" />
     </task>
     <servers />
   </component>
@@ -1191,6 +1189,16 @@
           <url>file://$PROJECT_DIR$/src/main/webapp/BanAn.jsp</url>
           <line>13</line>
           <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/Kitchen/ProductDetailsListControllerKitchenTable.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/Kitchen/ProductDetailsListControllerKitchenTable.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="266" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>

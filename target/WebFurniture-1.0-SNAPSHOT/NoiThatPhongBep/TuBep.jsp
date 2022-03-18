@@ -249,13 +249,13 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai">
-                <a href="../BanAn.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../NoiThatPhongBep_BanAn.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="Image_phongbep/ban-an.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn ăn</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="../NoiThatPhongBep/GheBep.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../GheBep.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="Image_phongbep/ghe-nha-bep.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế bếp</h3>
                 </a>

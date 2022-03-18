@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="NoiThatPhongBep/img.png" type="image/png" class="icon">
     <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM - NỘI THẤT PHÒNG BẾP </title>
-    <link rel="stylesheet" href="BanAn.css">
+    <link rel="stylesheet" href="NoiThatPhongBep_BanAn.css">
 
 </head>
 <body>
@@ -269,7 +269,7 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongBep/GheBep.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
+                <a href="GheBep.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="NoiThatPhongBep/Image_phongbep/ghe-nha-bep.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế bếp</h3>
                 </a>
