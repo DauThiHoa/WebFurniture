@@ -255,7 +255,7 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="../GheBep.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
+                <a href="../NoiThatPhongBep_GheBep.jsp?_ijt=g87liiup59jojj8nf83nmo3tff&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="Image_phongbep/ghe-nha-bep.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế bếp</h3>
                 </a>

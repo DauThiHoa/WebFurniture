@@ -13,13 +13,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+   
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="NoiThatPhongBep/img.png" type="image/png" class="icon">
     <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM - NỘI THẤT PHÒNG BẾP </title>
-    <link rel="stylesheet" href="NoiThatPhongBep_BanAn.css">
+    <link rel="stylesheet" href="NoiThatPhongBep_GheBep.css">
 
 </head>
 <body>
@@ -67,7 +67,7 @@
     </div>
 
     <div id="gioHang">
-        <a href="GioHang.jsp">
+        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
             <div>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
@@ -139,7 +139,7 @@
 
 <div id="khungTinTuc">
     <div id="tenTinTuc">
-        <h2 class="trangChu_TinTuc"> Trang Chủ / Danh mục sản phẩm / Nội thất phòng bếp / Bàn ăn </h2>
+        <h2 class="trangChu_TinTuc"> Trang Chủ / Danh mục sản phẩm / Nội thất phòng bếp / Ghế bếp </h2>
     </div>
 </div>
 
@@ -165,7 +165,7 @@
                         <p class="nd">Nội Thất Phòng Bếp</p>
                     </div>
                 </a>
-                <a href="VanPhong.jsp?_ijt=u02dapo0848viiovmlb2f3u0eo&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListOffice">
                     <div class="noiThat">
                         <p class="nd">Nội Thất Văn Phòng</p>
                     </div>
@@ -262,13 +262,13 @@
     <div id="right">
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-            <div class="loai1">
+            <div class="loai2">
                 <a href="ProductDetailsListControllerKitchenTable">
                     <img class="anh" src="NoiThatPhongBep/Image_phongbep/ban-an.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn ăn</h3>
                 </a>
             </div>
-            <div class="loai">
+            <div class="loai1">
                 <a href="ProductDetailsListControllerKitchenChair">
                     <img class="anh" src="NoiThatPhongBep/Image_phongbep/ghe-nha-bep.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế bếp</h3>
@@ -287,7 +287,7 @@
                     <h3 class="tenLoaiDoTrangTri">Lọ hoa giả</h3>
                 </a>
             </div>
-            <div class="loai2">
+            <div class="loai">
                 <a href="NoiThatPhongBep/Khantraiban.jsp?_ijt=7cqc1eq6c7pal62fnpcs46bqqd&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="NoiThatPhongBep/Image_phongbep/khan-trai-ban.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Khăn trải bàn </h3>
@@ -336,9 +336,8 @@
         <div class="getColor" id="CacSanPham" style="display: ${none}">
             <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getColor}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -379,9 +378,8 @@
         <div class="searchName" id="CacSanPham" style="display: ${none}">
             <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${searchName}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -422,9 +420,8 @@
         <div class="getList2501000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2501000}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -465,9 +462,8 @@
         <div class="getList2500000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2500000}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -508,9 +504,8 @@
         <div class="getList2000000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2000000}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -551,9 +546,8 @@
         <div class="getList1500000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList1500000}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -594,9 +588,8 @@
         <div class="getList1000000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList1000000}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -637,9 +630,8 @@
         <div class="getList500000" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList500000}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -680,9 +672,8 @@
         <div class="az" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListAZ}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -723,9 +714,8 @@
         <div class="za" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListZA}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -766,9 +756,8 @@
         <div class="priceaz" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceAZ}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -809,9 +798,8 @@
         <div class="priceza" id="CacSanPham" style="display: ${display}">
             <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceZA}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -852,9 +840,8 @@
         <div class= "ClassSanPham" id="CacSanPham" style="display: ${block}" >
             <jsp:useBean id="ProductDetailsDecoration" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${ProductDetailsDecoration}">
-                <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+                <c:if test="${p.id == 's10' || p.id == 's11' || p.id == 's12' || p.id == 's2' || p.id == 's3' || p.id == 's4'
+    || p.id == 's5' || p.id == 's6' || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16'}" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -899,7 +886,6 @@
 
 
 </div>
-
     <%--
         <div id="CacSanPham">
 
@@ -907,10 +893,11 @@
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
                         <img class="anh"
-                             src="NoiThatPhongBep/Image_phongbep/ban-an.jpg"/></div>
+                             src="NoiThatPhongBep/Image_phongbep/ghe-nha-bep.jpg"/>
+                    </div>
                     <div class="noiDungDoTrangTri">
-                        <h4 class="ten">Bàn ăn</h4>
-                        <h4 class="gia"> 1.890.000đ</h4>
+                        <h4 class="ten">Ghế nhà bếp</h4>
+                        <h4 class="gia"> 350.000đ</h4>
                         <div class="nutgiohang" style="margin-left: 0%">
                             <a href="GioHang.jsp">
                                 <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
@@ -929,7 +916,58 @@
                     </div>
                 </div>
             </div>
-
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh" src="NoiThatPhongBep/Image_phongbep/ghe_bep.jpg"/>
+                    </div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Ghế nhà bếp</h4>
+                        <h4 class="gia"> 290.000đ</h4>
+                        <div class="nutgiohang" style="margin-left: 0%">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sanPham">
+                <div class="sanPhamNoiThat">
+                    <div class="anhDoTrangTri">
+                        <img class="anh"
+                             src="NoiThatPhongBep/Image_phongbep/ghe_nha_bep.jpg"/></div>
+                    <div class="noiDungDoTrangTri">
+                        <h4 class="ten"> Ghế nhà bếp</h4>
+                        <h4 class="gia"> 210.000đ</h4>
+                        <div class="nutgiohang" style="margin-left: 0%">
+                            <a href="GioHang.jsp">
+                                <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                aria-hidden="true"></i><span> </span></button>
+                            </a>
+                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"
+                                    data-handle="/products/sofa-da-hana-bd-24"><i class="fa fa-search-plus"
+                                                                                  aria-hidden="true"></i></button>
+                            <a href="ThanhToan.jsp">
+                                <button type="button" class="btnBuyNow buy-now medium--hide small--hide"
+                                        data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                    <span></span></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="sanPham">
                 <div class="sanPhamNoiThat">
                     <div class="anhDoTrangTri">
@@ -1276,7 +1314,7 @@
                         <div class="from">
                             <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
-                                <h6 class="dangKi" style="color: #ffb39d">Đăng kí</h6>
+                                <h6 class="dangKi">Đăng kí</h6>
                             </button>
                         </div>
                     </div>
@@ -1287,7 +1325,6 @@
 </div>
 
 </body>
-
 <script>
     const layout7 = document.getElementById('layout7');
     const getColor = document.querySelector('.getColor');
@@ -1534,8 +1571,7 @@
         if (isValid) {
             alert('Gửi đăng ký thành công');
         }else {
-        alert('Qúy khách đăng kí nhận tin không thành công');}
-
+            alert('Qúy khách đăng kí nhận tin không thành công');}
     }
     const email = document.querySelector('.email');
     function checkValidate() {
