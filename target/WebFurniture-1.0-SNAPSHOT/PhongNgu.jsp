@@ -255,31 +255,31 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai">
-                <a href="NoiThatPhongNgu/GiuongNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatPhongNgu_GiuongNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/giuong_dơn.jpeg"/>
                     <h3 class="tenLoaiDoTrangTri">Giường ngủ</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongNgu/GoiNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatPhongNgu_GoiNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/goi-ngu.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Gối ngủ</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongNgu/TuQuanAo.jsp?_ijt=6g3r4pp5e250oaaamsf2kadfbc&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatPhongNgu_TuQuanAo.jsp?_ijt=6g3r4pp5e250oaaamsf2kadfbc&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/tu-de-quan-ao-go.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Tủ quần áo</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongNgu/DenNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatPhongNgu_DenNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/den-trang-tri-de-ban-bang-pha-le.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Đèn ngủ</h3>
                 </a>
             </div>
             <div class="loai1">
-                <a href="NoiThatPhongNgu/BanTrangDiem.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="NoiThatPhongNgu_BanTrangDiem.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
                     <img class="anh" src="ImageProduct/Ban_trang_diem.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn trang điểm </h3>
                 </a>
