@@ -10,17 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_BanLamViec.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/BanLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_BanLamViec.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_DenLamViec.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/DenLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_DenLamViec.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_Ghe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Ghe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_Ghe.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_Sofa.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/Sofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_Sofa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_TrangTri.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong/TrangTri.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_TrangTri.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/VanPhong.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_BanLamViec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatVanPhong_BanLamViec.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
