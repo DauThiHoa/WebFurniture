@@ -269,13 +269,13 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongNgu_GoiNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerBedroomPillow">
                     <img class="anh" src="ImageProduct/goi-ngu.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Gối ngủ</h3>
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongNgu_TuQuanAo.jsp?_ijt=6g3r4pp5e250oaaamsf2kadfbc&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerBedroomWardrobe">
                     <img class="anh" src="ImageProduct/tu-de-quan-ao-go.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Tủ quần áo</h3>
                 </a>
