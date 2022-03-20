@@ -275,7 +275,7 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongBep/HoaGia.jsp?_ijt=7cqc1eq6c7pal62fnpcs46bqqd&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerKitchenFlower">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa1.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Lọ hoa giả</h3>
                 </a>

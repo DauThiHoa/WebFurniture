@@ -282,7 +282,7 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongBep/HoaGia.jsp?_ijt=7cqc1eq6c7pal62fnpcs46bqqd&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerKitchenFlower">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa1.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Lọ hoa giả</h3>
                 </a>
@@ -337,8 +337,7 @@
             <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getColor}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -380,8 +379,7 @@
             <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${searchName}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -423,8 +421,7 @@
             <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2501000}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -466,8 +463,7 @@
             <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2500000}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -509,8 +505,7 @@
             <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList2000000}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -552,8 +547,7 @@
             <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList1500000}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -595,8 +589,7 @@
             <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList1000000}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -638,8 +631,7 @@
             <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getList500000}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -681,8 +673,7 @@
             <jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListAZ}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -724,8 +715,7 @@
             <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListZA}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -767,8 +757,7 @@
             <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceAZ}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -810,8 +799,7 @@
             <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${getListPriceZA}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
@@ -853,8 +841,7 @@
             <jsp:useBean id="ProductDetailsDecoration" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${ProductDetailsDecoration}">
                 <c:if test="${p.id == 's45' || p.id == 's2' || p.id == 's3' || p.id == 's4' || p.id == 's5' || p.id == 's6'
-    || p.id == 's7' || p.id == 'dn8' || p.id == 'dn9' || p.id == 'dn10' || p.id == 'dn11' || p.id == 'dn12'
-    ||  p.id == 'dn13' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
+    || p.id == 's7' || p.id == 's43' || p.id == 's44' || p.id == 's16' }" >
                     <div class="sanPham">
                         <div class="sanPhamNoiThat">
                             <form action="ProductDetails" method="post" >
