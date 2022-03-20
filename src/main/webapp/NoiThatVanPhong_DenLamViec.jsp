@@ -1420,6 +1420,7 @@
         getList2501000.style.display = "none";
         searchName.style.display = "none";
     }
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
