@@ -262,7 +262,7 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai">
-                <a href="NoiThatPhongNgu_GiuongNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerBedroomBed">
                     <img class="anh" src="ImageProduct/giuong_dơn.jpeg"/>
                     <h3 class="tenLoaiDoTrangTri">Giường ngủ</h3>
                 </a>
@@ -280,13 +280,13 @@
                 </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongNgu_DenNgu.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerBedroomLamp">
                     <img class="anh" src="ImageProduct/den-trang-tri-de-ban-bang-pha-le.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Đèn ngủ</h3>
                 </a>
             </div>
             <div class="loai1">
-                <a href="../NoiThatPhongNgu/BanTrangDiem.jsp?_ijt=4b15g065qk9olv9si9tpclofes&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerBedroomMakeupTable">
                     <img class="anh" src="ImageProduct/Ban_trang_diem.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn trang điểm </h3>
                 </a>
