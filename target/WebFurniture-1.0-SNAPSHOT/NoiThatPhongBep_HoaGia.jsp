@@ -276,13 +276,13 @@
 
             </div>
             <div class="loai">
-                <a href="../NoiThatPhongBep/TuBep.html?_ijt=7cqc1eq6c7pal62fnpcs46bqqd&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerKitchenCabinet">
                     <img class="anh" src="NoiThatPhongBep/Image_phongbep/tu-bep-hien-dai.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Tủ bếp </h3>
                 </a>
             </div>
             <div class="loai1">
-                <a href="../NoiThatPhongBep/HoaGia.html?_ijt=7cqc1eq6c7pal62fnpcs46bqqd&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerKitchenFlower">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loHoa1.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Lọ hoa giả</h3>
                 </a>
