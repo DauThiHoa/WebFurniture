@@ -263,21 +263,21 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai2">
-                <a href="NoiThatVanPhong_BanLamViec.jsp?_ijt=afedu4rmvu71rltpdugkadgo4l&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerOfficeDesk">
                     <img class="anh" src="ImageProduct/Ban_lam_viec_go.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn làm việc</h3>
                 </a>
 
             </div>
             <div class="loai">
-                <a href="NoiThatVanPhong_Ghe.jsp?_ijt=afedu4rmvu71rltpdugkadgo4l&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerOfficeChair">
                     <img class="anh" src="NoiThatVanPhong/Image_vanphong/ghe-xoay.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế</h3>
                 </a>
 
             </div>
             <div class="loai">
-                <a href="NoiThatVanPhong_Sofa.jsp?_ijt=k085o4525afcc1aaffmng95bir&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerOfficeSofa">
                     <img class="anh"
                          src="ImageProduct/Sofa_nau_co_dien.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Sofa</h3>
@@ -285,14 +285,14 @@
 
             </div>
             <div class="loai1">
-                <a href="../NoiThatVanPhong/DenLamViec.jsp?_ijt=k085o4525afcc1aaffmng95bir&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerOfficeLamp">
                     <img class="anh" src="ImageProduct/Den_de_ban.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Đèn làm việc </h3>
                 </a>
 
             </div>
             <div class="loai">
-                <a href="NoiThatVanPhong_TrangTri.jsp?_ijt=k085o4525afcc1aaffmng95bir&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerOfficeDecorator">
                     <img class="anh" src="ImageProduct/trang-tri.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Trang trí</h3>
                 </a>
