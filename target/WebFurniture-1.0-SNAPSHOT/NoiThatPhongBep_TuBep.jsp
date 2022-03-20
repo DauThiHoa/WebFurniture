@@ -288,7 +288,7 @@
                 </a>
             </div>
             <div class="loai2">
-                <a href="NoiThatPhongBep/Khantraiban.jsp?_ijt=7cqc1eq6c7pal62fnpcs46bqqd&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerKitchenNapkin">
                     <img class="anh" src="NoiThatPhongBep/Image_phongbep/khan-trai-ban.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Khăn trải bàn </h3>
                 </a>
