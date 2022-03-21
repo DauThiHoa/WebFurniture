@@ -1,4 +1,11 @@
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -180,70 +187,78 @@
                 <h3 class="noiDungBoLoc"> Tìm theo mức giá</h3>
                 <div class="gia">
                     <div class="khungGia">
-                        <input class="check" type="checkbox" name="timtheomucgia"/>
+                        <input class="check" type="radio" name="radio" value="500000" onclick="clickDuoi500000()"/>
                         <p class="mucGia"> Giá dưới 500.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="1000000" onclick="clickDuoi1000000()"/>
                         <p class="mucGia"> 500.000đ - 1.000.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="1500000" onclick="clickDuoi1500000()"/>
                         <p class="mucGia"> 1.000.000đ - 1.500.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
-                        <p class="mucGia"> 2.000.000đ - 3.500.000đ</p>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="2000000" onclick="clickDuoi2000000()"/>
+                        <p class="mucGia"> 1.500.000đ - 2.000.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
-                        <p class="mucGia"> 3.500.000đ - 5.000.000đ</p>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="2500000" onclick="clickDuoi2500000()"/>
+                        <p class="mucGia"> 2.000.000đ - 2.500.000đ</p>
                     </div>
                 </div>
                 <div class="gia">
-                    <div class="khungGia"><input class="check" type="checkbox" name="timtheomucgia"/>
-                        <p class="mucGia"> Giá trên 5.000.000đ</p>
+                    <div class="khungGia">
+                        <input class="check" type="radio" name="radio" value="2501000" onclick="clickTren2501000()"/>
+                        <p class="mucGia"> Giá trên 2.500.000đ</p>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="tuKhoa">
-            <div class="khung">
-                <h2 class="ten"> Từ Khóa</h2>
+        <form action="ColorDecoratorLamp" method="post">
+            <div class="mauSac">
+                <div class="khung">
+                    <h2 class="tenMauSac"> Màu Sắc</h2>
+                </div>
+                <div class="boMau">
+                    <input type="submit" class="fa fa-circle " id="fa1"  value="hong" style="background: #ffa9bf ; font-size: 0.1px ; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa2"  value="vang" style="background: yellow ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa3"  value="xam" style="background: #9a9a9a ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa4"  value="xanh lam" style="background: #1fb5d4 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa5"  value="xanh luc" style="background: #00dea2 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa6"  value="cam" style="background: orange ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa7"  value="trang" style="border : 1px solid black ; background: white ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa8"  value="den" style="background: black ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa9"  value="tim" style="background: #9d03ad ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa10" value="do" style="background: red ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                </div>
             </div>
-            <div class="noiDung">
-                <input class="tuKhoaTimKiem" placeholder="Từ khóa tìm kiếm"></input>
-            </div>
-        </div>
+        </form>
+        <form action="SearchDecoratorLamp" method="post">
 
-        <div class="mauSac">
-            <div class="khung">
-                <h2 class="tenMauSac"> Màu Sắc</h2>
+            <div class="tuKhoa" style="margin-top: 25px">
+                <div class="khung">
+                    <h2 class="ten"> Từ Khóa</h2>
+                </div>
+                <div class="noiDung">
+                    <input value="" class="tuKhoaTimKiem" name="search" placeholder="Từ khóa tìm kiếm" onchange="timkiem()" ></input>
+                </div>
             </div>
-            <div class="boMau">
-                <i class="fa fa-circle " id="fa1" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa2" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa3" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa4" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa5" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa6" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa7" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa8" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa9" aria-hidden="true"></i>
-                <i class="fa fa-circle " id="fa10" aria-hidden="true"></i>
-            </div>
-        </div>
 
-        <div class="apDung">
-            <h3 class="tenApDung"> Áp dụng</h3>
-        </div>
+            <button class="apDung" type="submit" onclick="ClickSearchName()">
+                <h3 class="tenApDung"> Áp dụng</h3>
+            </button>
+        </form>
     </div>
+
 
     <div id="right">
         <div id="CacLoaiDoTrangTri">
@@ -289,32 +304,603 @@
 
         <div id="sapXep">
             <div class="tenSapXep"><h3 class="ten">Xếp theo : </h3></div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio" checked>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="radio" checked onclick="clickMacDinh()">
                 <p class="noiDungSapXep"> Mặc định</p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="radio" onclick="clickAZ()">
                 <p class="noiDungSapXep"> Tên A -> Z </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="radio" onclick="clickZA()">
                 <p class="noiDungSapXep"> Tên Z -> A </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="radio" onclick="clickHangMoi()">
                 <p class="noiDungSapXep"> Hàng mới </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="radio" onclick="clickGiaThapDenCao()">
                 <p class="noiDungSapXep"> Giá thấp đến cao </p>
-            </div>
-            <div class="tenKieu">
-                <input class="SapXep" type="radio" name="Chonradio">
+            </button>
+            <button class="tenKieu" style="background: white ; border: 1px solid white">
+                <input class="SapXep" type="radio" name="radio" onclick="clickGiaCaoXuongThap()">
                 <p class="noiDungSapXep"> Giá cao xuống thấp </p>
-            </div>
+            </button>
         </div>
 
+        <jsp:useBean id="block" scope="request" class="java.lang.String"/>
+        <jsp:useBean id="none" scope="request" class="java.lang.String"/>
+        <jsp:useBean id="display" scope="request" class="java.lang.String"/>
+
+        <div class="getColor" id="CacSanPham" style="display: ${none}">
+            <jsp:useBean id="getColor" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getColor}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="searchName" id="CacSanPham" style="display: ${none}">
+            <jsp:useBean id="searchName" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${searchName}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2501000" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getList2501000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2501000}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2500000" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getList2500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2500000}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList2000000" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getList2000000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList2000000}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList1500000" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getList1500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList1500000}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList1000000" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getList1000000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList1000000}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="getList500000" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getList500000" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getList500000}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="az" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getListAZ" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListAZ}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="za" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getListZA" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListZA}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="priceaz" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getListPriceAZ" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListPriceAZ}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class="priceza" id="CacSanPham" style="display: ${display}">
+            <jsp:useBean id="getListPriceZA" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${getListPriceZA}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+        <div class= "ClassSanPham" id="CacSanPham" style="display: ${block}" >
+            <jsp:useBean id="ProductDetailsDecoration" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${ProductDetailsDecoration}">
+                <c:if test="${p.id == 'g1' || p.id == 'g2' || p.id == 'g3' || p.id == 'g4' || p.id == 'g5' || p.id == 'g6'
+    || p.id == 'g7' || p.id == 'g8' || p.id == 'g9' || p.id == 'g10' || p.id == 'g11' || p.id == 'g12' || p.id == 'g13' || p.id == 'g14'
+     || p.id == 'g15' || p.id == 'g16' || p.id == 'g17' || p.id == 'g18'|| p.id == 'g19'|| p.id == 'g20'}" >
+                    <div class="sanPham">
+                        <div class="sanPhamNoiThat">
+                            <form action="ProductDetails" method="post" >
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
+                                            onmousemove="zoom(event)" ontouchmove="zoom(event)">
+                                        <img src="${p.linkImage}" />
+                                    </figure>
+                                </button>
+                            </form>
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
+                                <h4 class="ten">${p.name}</h4>
+                                <h4 class="gia">${p.priceNew}đ</h4>
+                                <div class="nutgiohang" style="margin-left: 0%">
+                                    <a href="cart-add?id=${p.id}" >
+                                        <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
+                                                style="margin-top: -3px ; margin-left: 3px"
+                                                data-id="1050379730"><i class="fa fa-cart-plus"
+                                                                        aria-hidden="true"></i><span> </span></button>
+                                    </a>
+                                    <form
+                                            style="margin-top: -25px ; margin-left: 36px"
+                                            action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
+                                        <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
+                                                 data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                            <span></span></button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+    <%--
         <div id="CacSanPham">
 
             <div class="sanPham">
@@ -951,7 +1537,7 @@
 
 
 </div>
-
+--%>
 
 <div id="layout7">
     <div class="thanhDuoi">
@@ -1064,6 +1650,247 @@
 
 </body>
 <script>
+
+    const layout7 = document.getElementById('layout7');
+    const getColor = document.querySelector('.getColor');
+    const az = document.querySelector('.az');
+    const za = document.querySelector('.za');
+    const priceaz = document.querySelector('.priceaz');
+    const priceza = document.querySelector('.priceza');
+    const getList500000 = document.querySelector('.getList500000');
+    const getList1000000 = document.querySelector('.getList1000000');
+    const getList1500000 = document.querySelector('.getList1500000');
+    const getList2000000 = document.querySelector('.getList2000000');
+    const getList2500000 = document.querySelector('.getList2500000');
+    const getList2501000 = document.querySelector('.getList2501000');
+    const searchName = document.querySelector('.searchName');
+    const ClassSanPham = document.querySelector('.ClassSanPham');
+
+    function ClickSearchName() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "block";
+    }
+    function clickTren2501000() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "-1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "block";
+        searchName.style.display = "none";
+    }
+    function clickDuoi2500000() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "-1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "block";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi2000000() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "-1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "block";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi1500000() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "-1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "block";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi1000000() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "-1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "block";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickDuoi500000() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "-1000px";
+        az.style.display = "none";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "block";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickAZ() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "block";
+        ClassSanPham.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickMacDinh() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "block";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickHangMoi() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "block";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickZA() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "block";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickGiaThapDenCao () {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "block";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function clickGiaCaoXuongThap() {
+        getColor.style.display = "none";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "block";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+    function ClickGetColor() {
+        getColor.style.display = "block";
+        layout7.style.marginTop = "1000px";
+        az.style.display = "none";
+        za.style.display = "none";
+        priceaz.style.display = "none";
+        priceza.style.display = "none";
+        ClassSanPham.style.display = "none";
+        getList500000.style.display = "none";
+        getList1000000.style.display = "none";
+        getList1500000.style.display = "none";
+        getList2000000.style.display = "none";
+        getList2500000.style.display = "none";
+        getList2501000.style.display = "none";
+        searchName.style.display = "none";
+    }
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
