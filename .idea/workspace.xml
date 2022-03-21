@@ -10,17 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_BanTra.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/BanTra.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_BanTra.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GheSofa.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GheSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GheSofa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GoiSofa.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/GoiSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GoiSofa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_KeTivi.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/KeTivi.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_KeTivi.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_RemCua.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach/RemCua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_RemCua.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/LivingRoom/ColorLivingRoomTeatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/LivingRoom/ProductDetailsListControllerLivingRoomTeatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/LivingRoom/SearchLivingRoomTeatable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_BanTra.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_BanTra.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,11 +107,11 @@
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\manage\layout" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vn.edu.hcmuaf.fit.webfurniture.LivingRoom" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.Office" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.Bedroom" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.Kitchen" />
       <recent name="vn.edu.hcmuaf.fit.webfurniture.Decorator" />
-      <recent name="vn.edu.hcmuaf.fit.webfurniture.productdetails" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
@@ -487,7 +481,7 @@
       <workItem from="1647513301443" duration="145000" />
       <workItem from="1647616813650" duration="6454000" />
       <workItem from="1647759371161" duration="3528000" />
-      <workItem from="1647823992392" duration="457000" />
+      <workItem from="1647823992392" duration="1749000" />
     </task>
     <servers />
   </component>
