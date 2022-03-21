@@ -10,10 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/LivingRoom/ColorLivingRoomCurtain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/LivingRoom/ProductDetailsListControllerLivingRoomCurtain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/LivingRoom/SearchLivingRoomCurtain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_BanTra.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_BanTra.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GheSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GheSofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GoiSofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_GoiSofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_KeTivi.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_KeTivi.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_RemCua.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/NoiThatPhongKhach_RemCua.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

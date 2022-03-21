@@ -256,30 +256,32 @@
         <div id="CacLoaiDoTrangTri">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <div class="loai">
-                <a href="NoiThatPhongKhach_BanTra.jsp?_ijt=fk2t0r4e54mbcbqcu89nrkltgm&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerLivingRoomTeatable">
                     <img class="anh" src="ImageProduct/ban-tra-phong-khach.webp"/>
                     <h3 class="tenLoaiDoTrangTri">Bàn trà</h3>
                 </a>
 
             </div>
             <div class="loai">
-                <a href="NoiThatPhongKhach_GheSofa.jsp?_ijt=fk2t0r4e54mbcbqcu89nrkltgm&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerLivingRoomChairSofa">
                     <img class="anh" src="ImageProduct/Sofa_nau_co_dien.jpg"/>
                     <h3 class="tenLoaiDoTrangTri">Ghế Sofa</h3>
                 </a>
             </div>
             <div class="loai">
+                <a href="ProductDetailsListControllerLivingRoomShelf">
                 <img class="anh" src="ImageProduct/ke-tivi.jpg"/>
                 <h3 class="tenLoaiDoTrangTri">Kệ tivi</h3>
+                </a>
             </div>
             <div class="loai">
-                <a href="NoiThatPhongKhach_GoiSofa.jsp?_ijt=5a9ujc352almkagjduojj3h8io&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerLivingRoomShelf">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri4.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Gối sofa</h3>
                 </a>
             </div>
             <div class="loai1">
-                <a href="NoiThatPhongKhach_RemCua.jsp?_ijt=5a9ujc352almkagjduojj3h8io&_ij_reload=RELOAD_ON_SAVE">
+                <a href="ProductDetailsListControllerLivingRoomCurtain">
                     <img class="anh" src="NoiThatDoTrangTri/Image_DoTrangTri/loaiDoTrangTri5.PNG"/>
                     <h3 class="tenLoaiDoTrangTri">Rèm cửa </h3>
                 </a>
