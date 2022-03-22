@@ -225,7 +225,7 @@
                 </div>
             </div>
         </div>
-        <form action="ColorDecorator" method="post">
+        <form action="ColorOffice" method="post">
             <div class="mauSac">
                 <div class="khung">
                     <h2 class="tenMauSac"> Màu Sắc</h2>
@@ -245,7 +245,7 @@
             </div>
         </form>
 
-        <form action="SearchDecorator" method="post">
+        <form action="SearchOffice" method="post">
 
             <div class="tuKhoa" style="margin-top: 25px">
                 <div class="khung">
