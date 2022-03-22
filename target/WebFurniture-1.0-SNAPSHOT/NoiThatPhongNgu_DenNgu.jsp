@@ -223,7 +223,7 @@
                 </div>
             </div>
         </div>
-        <form action="ColorDecoratorLamp" method="post">
+        <form action="ColorBedroomLamp" method="post">
             <div class="mauSac">
                 <div class="khung">
                     <h2 class="tenMauSac"> Màu Sắc</h2>
@@ -242,7 +242,7 @@
                 </div>
             </div>
         </form>
-        <form action="SearchDecoratorLamp" method="post">
+        <form action="SearchBedroomLamp" method="post">
 
             <div class="tuKhoa" style="margin-top: 25px">
                 <div class="khung">
