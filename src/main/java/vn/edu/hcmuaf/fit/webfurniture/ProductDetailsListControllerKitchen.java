@@ -35,6 +35,19 @@ public class ProductDetailsListControllerKitchen extends HttpServlet {
         List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
 
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+        String color = request.getParameter("color");
+        request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         request.setAttribute("productDetailsKitchen", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("PhongBep.jsp").forward(request, response);
 

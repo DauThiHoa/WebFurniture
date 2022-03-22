@@ -10,8 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerBedroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerBedroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongNgu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerKitchen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ProductDetailsListControllerKitchen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongBep.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/PhongKhach.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -479,7 +481,7 @@
       <workItem from="1647616813650" duration="6454000" />
       <workItem from="1647759371161" duration="3528000" />
       <workItem from="1647823992392" duration="4175000" />
-      <workItem from="1647917555069" duration="935000" />
+      <workItem from="1647917555069" duration="3586000" />
     </task>
     <servers />
   </component>
@@ -1184,7 +1186,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/PhongBep.jsp</url>
-          <line>285</line>
+          <line>295</line>
           <option name="timeStamp" value="267" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
