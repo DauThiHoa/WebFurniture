@@ -1,20 +1,22 @@
-package vn.edu.hcmuaf.fit.webfurniture;
+package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
-import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet(name = "ProductDetailsListControllerLivingRoom", value = "/ProductDetailsListLivingRoom")
-public class ProductDetailsListControllerLivingRoom extends HttpServlet {
+@WebServlet(name = "SearchLivingRoom", value = "/SearchLivingRoom")
+public class SearchLivingRoom extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
+
+        request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
 
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
@@ -32,28 +34,25 @@ public class ProductDetailsListControllerLivingRoom extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
-        request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-
-        response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-
+        response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
+
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
-        String block = "block";
-        String none = "none";
+        String block = "none";
+        String none = "block";
         String display = "none";
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.setAttribute("productDetailsLivingRoom", ProductDetailsService.getInstance().getAll());
+        request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
         request.getRequestDispatcher("PhongKhach.jsp").forward(request, response);
 
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request , response);
+            doGet(request , response);
     }
 }
