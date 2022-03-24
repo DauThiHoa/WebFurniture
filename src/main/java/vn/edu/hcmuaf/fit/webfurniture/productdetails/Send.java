@@ -67,6 +67,13 @@ public class Send extends HttpServlet {
             request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
             request.getRequestDispatcher("/ProductDetails").forward(request, response);
         }
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
     }
 
     @Override

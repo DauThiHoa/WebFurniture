@@ -3,7 +3,6 @@ package vn.edu.hcmuaf.fit.webfurniture.admin;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
-import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +24,13 @@ public class OrderController extends HttpServlet {
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
              List<Order> order =  OrderService.getInstance().getAll();
              ArrayList<Customer> customers = new ArrayList<Customer>();

@@ -1,7 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
-import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,6 +28,13 @@ public class Action_DirectoryManagement extends HttpServlet {
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
      if ( pageweb == 1 ) {
          request.getRequestDispatcher("/DirectoryManagement").forward(request, response);

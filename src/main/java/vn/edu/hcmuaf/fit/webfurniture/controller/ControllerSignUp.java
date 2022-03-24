@@ -29,6 +29,14 @@ public class ControllerSignUp extends HttpServlet {
         request.setAttribute("password", password);
 
         response.sendRedirect("/DangKy.jsp");
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
     }
 
 }

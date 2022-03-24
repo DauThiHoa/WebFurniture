@@ -17,6 +17,7 @@ public class FileLocationContextListener implements ServletContextListener, Http
         System.out.println("File Directory create to be used for storing files");
         ctx.setAttribute("FILES_DIR_FILE", file);
         ctx.setAttribute("FILE_DIR", rootPath + File.separator + "webapps" + File.separator + relativePath);
+
     }
     public void contextDestroyed(ServletContextEvent servletContextEvent){
 

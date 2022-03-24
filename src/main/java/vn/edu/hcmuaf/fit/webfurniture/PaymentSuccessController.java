@@ -113,6 +113,13 @@ public class PaymentSuccessController extends HttpServlet {
             request.setAttribute("discountCode" , discountCode);
 
             request.getRequestDispatcher("/payment").forward(request , response);
+
+            String block = "block";
+            String none = "none";
+            String display = "none";
+            request.setAttribute("block", block);
+            request.setAttribute("none", none);
+            request.setAttribute("display", display);
         }
         //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
 

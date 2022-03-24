@@ -20,6 +20,12 @@ public class InformationController extends HttpServlet {
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
              Information information = InformationService.getInstance().getAll();
             request.setAttribute("information" , information);
             request.getRequestDispatcher("Information.jsp").forward(request, response);

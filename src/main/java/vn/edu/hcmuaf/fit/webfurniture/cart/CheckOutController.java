@@ -1,12 +1,14 @@
 package vn.edu.hcmuaf.fit.webfurniture.cart;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
-import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
-import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
+import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "CheckOutController", value = "/cart-checkOut")
@@ -21,6 +23,13 @@ public class CheckOutController extends HttpServlet {
         // get session
         HttpSession session = request.getSession();
         // Xử lý đăng nhập -> lấy id khách hàng
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
 //        boolean test = false;
 //        System.out.println(test);

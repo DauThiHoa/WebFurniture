@@ -16,6 +16,13 @@ public class ShowController extends HttpServlet {
         if ( cart == null ){
             cart =  Cart.getInstance() ;
         }
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         session.setAttribute("cart" , cart); // add session cart
         request.setAttribute("cart" , cart);
         request.getRequestDispatcher("GioHang.jsp").forward(request, response);

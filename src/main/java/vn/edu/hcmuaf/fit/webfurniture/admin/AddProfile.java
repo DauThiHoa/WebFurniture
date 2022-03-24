@@ -16,6 +16,13 @@ public class AddProfile extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         String friends = request.getParameter ("friends");
         String photos = request.getParameter ("photos");
         String comments = request.getParameter ("comments");

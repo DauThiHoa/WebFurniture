@@ -18,6 +18,14 @@ public class AddController extends HttpServlet {
        String quantitySold =  request.getParameter("quantitySold");
        System.out.println(quantitySold);
        ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
        if ( productDetails != null ){
            HttpSession session = request.getSession();
            Cart cart = ( Cart) session.getAttribute("cart");

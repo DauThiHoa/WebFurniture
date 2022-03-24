@@ -25,6 +25,13 @@ public class Edit_Information extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         String id = request.getParameter("id");
         String Company = request.getParameter("Company");
         String Address = request.getParameter("Address");

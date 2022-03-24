@@ -3,11 +3,12 @@ package vn.edu.hcmuaf.fit.webfurniture.admin;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.dao.UserDao;
-import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "DashboardController", value = "/Dashboard")
@@ -24,6 +25,13 @@ public class DashboardController extends HttpServlet {
         request.setAttribute("countProductDetails" , ProductDetailsDao.getInstance().countProductDetails());
         request.setAttribute("sumContact" , OrderDao.getInstance().sumContact());
         request.setAttribute("countContact" , OrderDao.getInstance().countContact());
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);
 

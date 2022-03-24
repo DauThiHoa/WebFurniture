@@ -42,6 +42,13 @@ public class MailController extends HttpServlet {
             request.setAttribute("email", "Qúy khách đăng kí nhận tin không thành công");
             request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         }
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
     }
 
     @Override

@@ -45,6 +45,12 @@ public class Edit extends HttpServlet {
          request.getRequestDispatcher("fail.jsp").forward(request, response);
      }
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
     }
 

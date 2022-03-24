@@ -28,6 +28,13 @@ public class Show extends HttpServlet {
         request.setAttribute("profile" , profile);
                 request.setAttribute("list" , list );
                 request.getRequestDispatcher("Product.jsp").forward(request, response);
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
     }
 
     /**

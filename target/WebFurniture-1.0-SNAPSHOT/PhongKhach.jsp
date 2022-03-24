@@ -908,7 +908,6 @@
 
     </div>
 
-
 </div>
 
 
@@ -1249,7 +1248,7 @@
     }
     function ClickGetColor() {
         getColor.style.display = "block";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-1000px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";

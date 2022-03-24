@@ -41,6 +41,13 @@ public class TinTucController extends HttpServlet {
         }
         request.getRequestDispatcher("TinTuc.jsp").forward(request, response);
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
     }
 
     @Override

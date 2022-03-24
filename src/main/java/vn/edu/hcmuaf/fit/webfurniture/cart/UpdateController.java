@@ -40,5 +40,13 @@ public class UpdateController extends HttpServlet {
         response.getWriter().println(
                 new Gson().toJson(Map.of("quantity" ,quantityAffterUpadte))
         );
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
     }
 }

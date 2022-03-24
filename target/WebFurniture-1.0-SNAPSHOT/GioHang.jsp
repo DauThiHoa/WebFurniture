@@ -129,7 +129,7 @@
             <h3 class="ten"> HỆ THỐNG CỬA HÀNG </h3>
         </div>
     </a>
-    <a href="TinTuc.jsp?_ijt=iv6smvovu312mhdpg2551fpkq2">
+    <a href="TinTuc">
         <div id="tinTuc">
             <h3 class="ten"> TIN TỨC </h3>
         </div>
@@ -330,7 +330,7 @@
                     <a href="ProductDetailsListAllProduct">
                         <p>Sản phẩm</p>
                     </a>
-                    <a href="TinTuc.jsp?_ijt=uf04v4frj3s542hpmh3eguf6kr">
+                    <a href="TinTuc">
                         <p>Tin tức</p></a>
                     <a href="LienHe">
                         <p>Liên hệ</p></a>

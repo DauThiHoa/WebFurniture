@@ -21,6 +21,13 @@ public class DelController extends HttpServlet {
          HttpSession session = request.getSession();
          // load cart from session
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         Cart cart = (Cart) session.getAttribute("cart");
         if ( cart.get(id) == null ){
             response.setStatus(404);

@@ -33,5 +33,13 @@ public class HandlingLogin extends HttpServlet {
             request.setAttribute("error", "Email or password is correct");
             request.getRequestDispatcher("login").forward(request,response);
         }
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
     }
 }
