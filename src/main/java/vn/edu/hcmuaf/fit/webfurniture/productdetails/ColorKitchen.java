@@ -17,7 +17,7 @@ public class ColorKitchen extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 //        response.setCharacterEncoding("UTF-8");
 
-        request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
+        request.setAttribute("productDetailsKitchen", ProductDetailsService.getInstance().getAll());
 
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());

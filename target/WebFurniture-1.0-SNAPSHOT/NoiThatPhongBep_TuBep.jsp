@@ -1032,7 +1032,7 @@
     }
     function clickTren2501000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-200px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1048,7 +1048,7 @@
     }
     function clickDuoi2500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-200px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1064,7 +1064,7 @@
     }
     function clickDuoi2000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-200px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1080,7 +1080,7 @@
     }
     function clickDuoi1500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-200px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1096,7 +1096,7 @@
     }
     function clickDuoi1000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-200px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1112,7 +1112,7 @@
     }
     function clickDuoi500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-200px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
