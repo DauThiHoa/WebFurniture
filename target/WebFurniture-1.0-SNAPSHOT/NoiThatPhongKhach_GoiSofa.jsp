@@ -901,7 +901,7 @@
 
 </div>
 
-<div id="layout7">
+<div id="layout7" style="margin-top: -500px">
     <div class="thanhDuoi">
         <div class="tenWeb">
             <h1 class="ten">WEB FURNITURE</h1>
@@ -1030,7 +1030,7 @@
 
     function ClickSearchName() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-700px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1046,7 +1046,7 @@
     }
     function clickTren2501000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1550px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1062,7 +1062,7 @@
     }
     function clickDuoi2500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1078,7 +1078,7 @@
     }
     function clickDuoi2000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1094,7 +1094,7 @@
     }
     function clickDuoi1500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1110,7 +1110,7 @@
     }
     function clickDuoi1000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1126,7 +1126,7 @@
     }
     function clickDuoi500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1142,7 +1142,7 @@
     }
     function clickAZ() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "block";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1158,7 +1158,7 @@
     }
     function clickMacDinh() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1174,7 +1174,7 @@
     }
     function clickHangMoi() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1190,7 +1190,7 @@
     }
     function clickZA() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "none";
         za.style.display = "block";
         priceaz.style.display = "none";
@@ -1206,7 +1206,7 @@
     }
     function clickGiaThapDenCao () {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "block";
@@ -1222,7 +1222,7 @@
     }
     function clickGiaCaoXuongThap() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1238,7 +1238,7 @@
     }
     function ClickGetColor() {
         getColor.style.display = "block";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-500px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";

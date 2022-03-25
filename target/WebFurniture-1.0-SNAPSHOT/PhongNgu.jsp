@@ -359,11 +359,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -403,11 +403,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -447,11 +447,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -491,11 +491,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -535,11 +535,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -579,11 +579,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -623,11 +623,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -667,11 +667,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -711,11 +711,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -755,11 +755,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -799,11 +799,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -843,11 +843,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -888,11 +888,11 @@
                             <div class="nutgiohang">
                                 <a href="cart-add?id=${p.id}" >
                                     <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
-                                            style="margin-top: -3px ; margin-left: 10px"
+                                            style="margin-top: -3px ; margin-left: 16px"
                                             data-id="1050379730"><i class="fa fa-cart-plus"
                                                                     aria-hidden="true"></i><span> </span></button>
                                 </a>
-                                <form style="margin-top: -25px ; margin-left: 43px"
+                                <form style="margin-top: -25px ; margin-left: 49px"
                                       action = "paymentAddProductDetails?id=${p.id}&&priceNew=${p.priceNew}&&quantitySold=${1}" method="post" >
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>

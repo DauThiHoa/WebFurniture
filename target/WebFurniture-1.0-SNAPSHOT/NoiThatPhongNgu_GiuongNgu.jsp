@@ -884,10 +884,7 @@
 </div>
 
 
-</div>
-
-
-<div id="layout7">
+<div id="layout7" style="margin-top: -250px">
     <div class="thanhDuoi">
         <div class="tenWeb">
             <h1 class="ten">WEB FURNITURE</h1>
@@ -1127,7 +1124,7 @@
     }
     function clickAZ() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-350px";
         az.style.display = "block";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1143,7 +1140,7 @@
     }
     function clickMacDinh() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-350px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1159,7 +1156,7 @@
     }
     function clickHangMoi() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-350px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1175,7 +1172,7 @@
     }
     function clickZA() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-350px";
         az.style.display = "none";
         za.style.display = "block";
         priceaz.style.display = "none";
@@ -1191,7 +1188,7 @@
     }
     function clickGiaThapDenCao () {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-350px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "block";
@@ -1207,7 +1204,7 @@
     }
     function clickGiaCaoXuongThap() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-350px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
