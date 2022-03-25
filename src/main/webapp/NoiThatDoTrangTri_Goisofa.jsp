@@ -871,17 +871,17 @@
                             <form action="ProductDetails" method="post" >
                                 <input type="text" style="display: none" name="id" value="${p.id}">
                                 <input style="display: none" type="text" name="name" value="${p.name}">
-                                <button type="submit" style="" class="anhDoTrangTri">
-                                    <figure class="zoom anh anhDoTrangTri" style="background:url(${p.linkImage}) "
+                                <button style="height: 200px ; width: 53% ; background: white ; border: 1px solid white" type="submit" class="anhDoTrangTri">
+                                    <figure class="zoom  anh " style="background:url(${p.linkImage}) "
                                             onmousemove="zoom(event)" ontouchmove="zoom(event)">
                                         <img src="${p.linkImage}" />
                                     </figure>
                                 </button>
                             </form>
-                            <div class="noiDungDoTrangTri" >
+                            <div class="noiDungDoTrangTri" style="margin-top: -165px ; margin-left: 56%">
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
-                                <div class="nutgiohang" >
+                                <div class="nutgiohang" style="margin-left: 0%">
                                     <a href="cart-add?id=${p.id}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
@@ -1055,7 +1055,7 @@
     }
     function clickTren2501000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1071,7 +1071,7 @@
     }
     function clickDuoi2500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1087,7 +1087,7 @@
     }
     function clickDuoi2000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1103,7 +1103,7 @@
     }
     function clickDuoi1500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1119,7 +1119,7 @@
     }
     function clickDuoi1000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1135,7 +1135,7 @@
     }
     function clickDuoi500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-1800px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
