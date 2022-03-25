@@ -17,7 +17,7 @@ public class SearchAllProducts2 extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
-//        request.setAttribute("productDetailsAllProduct", "");
+
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
         request.setAttribute("getListPriceAZ", ProductDetailsService.getInstance().getListPriceAZ());

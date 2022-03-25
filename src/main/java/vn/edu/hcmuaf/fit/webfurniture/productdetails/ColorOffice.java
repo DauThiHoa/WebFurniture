@@ -17,7 +17,7 @@ public class ColorOffice extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 //        response.setCharacterEncoding("UTF-8");
 
-        request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
+        request.setAttribute("ProductDetailsOffice", ProductDetailsService.getInstance().getAll());
 
         request.setAttribute("getListAZ", ProductDetailsService.getInstance().getListAZ());
         request.setAttribute("getListZA", ProductDetailsService.getInstance().getListZA());
