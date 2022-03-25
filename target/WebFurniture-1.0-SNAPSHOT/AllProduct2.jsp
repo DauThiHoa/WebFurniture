@@ -941,12 +941,12 @@
                 </div>
             </a>
             <a href="ProductDetailsListAllProduct2">
-                <div class="khung" style="background: orange">
+                <div class="khung" style="background: #ff7010">
                     <h3 class="fa"> 2 </h3>
                 </div>
             </a>
             <a href="ProductDetailsListAllProduct2">
-                <div class="khung3" style="background: orange">
+                <div class="khung3" style="background:  #ff7010">
                     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                 </div>
             </a>

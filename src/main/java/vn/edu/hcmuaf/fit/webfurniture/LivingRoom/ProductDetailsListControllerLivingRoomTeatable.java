@@ -50,7 +50,7 @@ public class ProductDetailsListControllerLivingRoomTeatable extends HttpServlet 
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
+        request.setAttribute("ProductDetailsLivingRoomTeatable", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("NoiThatPhongKhach_BanTra.jsp").forward(request, response);
 
     }

@@ -839,8 +839,8 @@
             </c:forEach>
         </div>
         <div class= "ClassSanPham" id="CacSanPham" style="display: ${block}" >
-            <jsp:useBean id="ProductDetailsDecoration" scope="request" type="java.util.List"/>
-            <c:forEach var="p" items="${ProductDetailsDecoration}">
+            <jsp:useBean id="ProductDetailsLivingRoomTeatable" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${ProductDetailsLivingRoomTeatable}">
                 <c:if test="${p.id == 's30' || p.id == 's32' || p.id == 's19' || p.id == 'sp107' || p.id == 's18' || p.id == 'sp108'
     || p.id == 'sp109' || p.id == 'sp110' || p.id == 'sp111' || p.id == 'sp112' }" >
                     <div class="sanPham">
@@ -1016,7 +1016,7 @@
 
     function ClickSearchName() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1032,7 +1032,7 @@
     }
     function clickTren2501000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1048,7 +1048,7 @@
     }
     function clickDuoi2500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1059,12 +1059,12 @@
         getList1500000.style.display = "none";
         getList2000000.style.display = "none";
         getList2500000.style.display = "block";
-        getList2501000.style.display = "none";
+        getList2501000.style.display= "none";
         searchName.style.display = "none";
     }
     function clickDuoi2000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1080,7 +1080,7 @@
     }
     function clickDuoi1500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1096,7 +1096,7 @@
     }
     function clickDuoi1000000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1112,7 +1112,7 @@
     }
     function clickDuoi500000() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "-1000px";
+        layout7.style.marginTop = "-300px";
         az.style.display = "none";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1128,7 +1128,7 @@
     }
     function clickAZ() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "block";
         ClassSanPham.style.display = "none";
         za.style.display = "none";
@@ -1144,7 +1144,7 @@
     }
     function clickMacDinh() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1160,7 +1160,7 @@
     }
     function clickHangMoi() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1176,7 +1176,7 @@
     }
     function clickZA() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         za.style.display = "block";
         priceaz.style.display = "none";
@@ -1192,7 +1192,7 @@
     }
     function clickGiaThapDenCao () {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "block";
@@ -1208,7 +1208,7 @@
     }
     function clickGiaCaoXuongThap() {
         getColor.style.display = "none";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1224,7 +1224,7 @@
     }
     function ClickGetColor() {
         getColor.style.display = "block";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "300px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
