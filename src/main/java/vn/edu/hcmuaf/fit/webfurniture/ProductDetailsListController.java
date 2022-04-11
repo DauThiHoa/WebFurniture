@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
+import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -52,6 +53,11 @@ public class ProductDetailsListController extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+//        Số sản phẩm trong giỏ hàng
+        Cart cart = new Cart();
+        request.setAttribute("sizeListCart" , cart.getSize());
+        System.out.println( cart.getSize() + " CART SIZE");
     }
 
     @Override

@@ -9,7 +9,8 @@ public class Cart implements Serializable {
     private int id ;
     private Map <String , ProductDetails > productDetailsList ;
     private int quantitySold = 1 ;
-    private Cart (){
+    private int size ;
+    public Cart(){
          productDetailsList = new HashMap<>( );
     }
 
@@ -110,6 +111,17 @@ public class Cart implements Serializable {
         }
         productDetails.setQuantitySold(quantity);
         return productDetails.getQuantitySold();
+    }
+    public int getSizeList (){
+        return productDetailsList.size();
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }
 

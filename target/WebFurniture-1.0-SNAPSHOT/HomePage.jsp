@@ -71,11 +71,16 @@
     <div id="gioHang">
         <a href="cart">
             <div>
-                <input class="inputCart"
-                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="1">
-                <i class="fa fa-shopping-cart" aria-hidden="true">
+<%--                <input class="inputCart"--%>
+<%--                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="1">--%>
+<%--    <jsp:useBean id="sizeListCart" scope="request" type="java.lang.String"/>--%>
+    <input class="inputCart"
+           style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="5">
+
+    <i class="fa fa-shopping-cart" aria-hidden="true">
                 </i>
             </div>
+<%--            style="margin-top: -1% ; color: black"--%>
             <div id="chu_giohang" style="margin-top: -1% ; color: black">
                 <p>Giỏ hàng</p>
             </div>

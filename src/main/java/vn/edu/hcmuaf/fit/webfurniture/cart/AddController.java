@@ -16,7 +16,6 @@ public class AddController extends HttpServlet {
         // get productDetalis id from request
        String id =  request.getParameter("id");
        String quantitySold =  request.getParameter("quantitySold");
-       System.out.println(quantitySold);
        ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
 
         String block = "block";
@@ -37,6 +36,9 @@ public class AddController extends HttpServlet {
            }
            cart.put(productDetails);
            session.setAttribute("cart" , cart); // add session cart
+           Cart car = new Cart();
+           car.setSize(cart.getSizeList());
+           System.out.println(car.getSize() + " Size Cart");
        }
 
        response.sendRedirect("/WebFurniture_war_exploded/cart");
