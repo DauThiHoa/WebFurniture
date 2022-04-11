@@ -71,8 +71,12 @@
     <div id="gioHang">
         <a href="cart">
             <div>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+<%--                <input class="inputCart"--%>
+<%--                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="1">--%>
+                <i class="fa fa-shopping-cart" aria-hidden="true">
+                </i>
             </div>
+<%--            style="margin-top: -1% ; color: black"--%>
             <div id="chu_giohang">
                 <p>Giỏ hàng</p>
             </div>

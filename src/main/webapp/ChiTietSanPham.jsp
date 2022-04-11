@@ -94,7 +94,8 @@
     <div id="gioHang">
         <a href="cart">
             <div>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart" aria-hidden="true">
+                </i>
             </div>
             <div id="chu_giohang">
                 <p>Giỏ hàng</p>
