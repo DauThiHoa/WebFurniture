@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +19,10 @@ public class HelloServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         // Hello
         PrintWriter out = response.getWriter();

@@ -50,6 +50,10 @@ public class ProductDetailsListControllerLivingRoomTeatable extends HttpServlet 
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         request.setAttribute("ProductDetailsLivingRoomTeatable", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("NoiThatPhongKhach_BanTra.jsp").forward(request, response);
 

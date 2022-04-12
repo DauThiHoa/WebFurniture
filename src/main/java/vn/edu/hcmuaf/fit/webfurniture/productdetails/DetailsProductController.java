@@ -4,6 +4,7 @@ import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,6 +40,17 @@ public class DetailsProductController extends HttpServlet {
         double sumDiscount = (quantity * price) * (quantity * 0.01);
         request.setAttribute("sumDiscount" ,(int) sumDiscount) ;
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         HttpSession session = request.getSession();
         // Xử lý đăng nhập -> lấy id khách hàng
 //        if ((session.getAttribute("auth")) == null ) {
@@ -55,12 +67,6 @@ public class DetailsProductController extends HttpServlet {
                 request.getRequestDispatcher("ProductDetails").forward(request, response);
             }
 
-        String block = "block";
-        String none = "none";
-        String display = "none";
-        request.setAttribute("block", block);
-        request.setAttribute("none", none);
-        request.setAttribute("display", display);
 
     }
 

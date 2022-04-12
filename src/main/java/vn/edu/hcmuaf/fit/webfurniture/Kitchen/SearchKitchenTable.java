@@ -47,6 +47,10 @@ public class SearchKitchenTable extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
         request.getRequestDispatcher("NoiThatPhongBep_BanAn.jsp").forward(request, response);
 

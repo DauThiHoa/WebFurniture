@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.controller;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.NewComment;
 import vn.edu.hcmuaf.fit.webfurniture.service.NewCommentService;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +40,10 @@ public class TinTucController extends HttpServlet {
             request.setAttribute("emailCustomer", "");
             request.setAttribute("content", "");
         }
-        request.getRequestDispatcher("TinTuc.jsp").forward(request, response);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         String block = "block";
         String none = "none";
@@ -47,6 +51,8 @@ public class TinTucController extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        request.getRequestDispatcher("TinTuc.jsp").forward(request, response);
 
     }
 

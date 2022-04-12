@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
 import javax.servlet.ServletException;
@@ -22,6 +23,10 @@ public class HandlingLogin extends HttpServlet {
         request.setAttribute("email", email);
         request.setAttribute("password", password);
         request.setAttribute("error", "");
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         if (UserServices.getInstance().checkLogin(email, password)) {
             response.sendRedirect("ProductDetailsList");

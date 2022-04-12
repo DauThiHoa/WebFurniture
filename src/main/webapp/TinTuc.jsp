@@ -69,16 +69,19 @@
     <div id="gioHang">
         <a href="cart">
             <div>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <jsp:useBean id="sizeListCart" scope="request" type="java.lang.Integer"/>
+                <input class="inputCart"
+                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="${sizeListCart}">
+
+                <i class="fa fa-shopping-cart" aria-hidden="true">
+                </i>
             </div>
-            <div id="chu_giohang">
+            <div id="chu_giohang" style="margin-top: -1%">
                 <p>Giỏ hàng</p>
             </div>
         </a>
     </div>
 </div>
-
-
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">
         <img id="anh_danhMuc" src="Image/ThanhChon.PNG"/>
@@ -136,7 +139,7 @@
 </div>
 
 <div id="khungTinTuc">
-    <img id="anh_khungTinTuc" src="TinTuc/Image_TinTuc/anhKhungTinTuc.PNG"/>
+    <img id="anh_khungTinTuc" style="margin-left: -93%" src="TinTuc/Image_TinTuc/anhKhungTinTuc.PNG"/>
     <div id="tenTinTuc">
         <h1 id="ten"> TIN TỨC </h1>
         <h2 id="trangChu_TinTuc"> Trang Chủ / Tin Tức</h2>

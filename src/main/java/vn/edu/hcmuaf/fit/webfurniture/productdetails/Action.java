@@ -24,7 +24,18 @@ public class Action extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-     String id = request.getParameter("id");
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        String id = request.getParameter("id");
      int productDetails =  ProductDetailsService.getInstance().delete(id);
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
@@ -45,13 +56,6 @@ public class Action extends HttpServlet {
 //            request.setAttribute("id" , id );
 //            request.getRequestDispatcher("/WEB-INF/view/productdetails/edit.jsp").forward(request, response);
 //        }
-
-        String block = "block";
-        String none = "none";
-        String display = "none";
-        request.setAttribute("block", block);
-        request.setAttribute("none", none);
-        request.setAttribute("display", display);
 
     }
 

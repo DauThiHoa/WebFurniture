@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,6 +31,10 @@ public class AddDirectoryManagement extends HttpServlet {
         }else {
             display = "none";
         }
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         if ( !(Category.equals("")) && !(linkImage.equals(""))  &&  !(Modules.equals(""))  ) {
             boolean result = DirectoryManagementService.getInstance().addDirectoryManagement(Category, linkImage, Modules, display);

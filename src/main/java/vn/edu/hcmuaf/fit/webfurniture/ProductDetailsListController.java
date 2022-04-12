@@ -1,7 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -45,8 +44,6 @@ public class ProductDetailsListController extends HttpServlet {
            request.setAttribute("productDetailsSanPhamKhuyenMai2" , ProductDetailsService.getInstance().getAll());
            request.setAttribute("productDetailsDacTrung" , ProductDetailsService.getInstance().getAll());
 
-           request.getRequestDispatcher("HomePage.jsp").forward(request , response);
-
         String block = "block";
         String none = "none";
         String display = "none";
@@ -55,9 +52,11 @@ public class ProductDetailsListController extends HttpServlet {
         request.setAttribute("display", display);
 
 //        Số sản phẩm trong giỏ hàng
-        Cart cart = new Cart();
-        request.setAttribute("sizeListCart" , cart.getSize());
-        System.out.println( cart.getSize() + " CART SIZE");
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        request.getRequestDispatcher("HomePage.jsp").forward(request , response);
+
     }
 
     @Override

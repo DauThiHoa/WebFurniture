@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +17,10 @@ public class RemoveOrder extends HttpServlet {
              String id = request.getParameter("id");
         int customer =  OrderService.getInstance().delete_Customer(id);
         int orders = OrderService.getInstance().delete_Order(id);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         String block = "block";
         String none = "none";

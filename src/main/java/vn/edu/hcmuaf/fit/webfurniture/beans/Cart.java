@@ -113,13 +113,16 @@ public class Cart implements Serializable {
         return productDetails.getQuantitySold();
     }
     public int getSizeList (){
-        return productDetailsList.size();
+        int  sl  = 0 ;
+        for ( ProductDetails productDetails : productDetailsList.values()){
+            sl += productDetails.getQuantitySold();
+        }
+        return sl ;
     }
 
     public int getSize() {
         return size;
     }
-
     public void setSize(int size) {
         this.size = size;
     }

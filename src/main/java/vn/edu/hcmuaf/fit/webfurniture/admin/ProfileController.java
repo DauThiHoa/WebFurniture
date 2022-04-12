@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +21,10 @@ public class ProfileController extends HttpServlet {
              request.setAttribute("profile" , profile);
 //             request.setAttribute("haha" , "haha");
              request.getRequestDispatcher("profile.jsp").forward(request, response);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         String block = "block";
         String none = "none";

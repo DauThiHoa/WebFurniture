@@ -38,7 +38,6 @@ public class ShowProductDetailsListController extends HttpServlet {
            request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());
            System.out.println(nameCustomer);
            request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
-           request.getRequestDispatcher("ChiTietSanPham.jsp").forward(request , response);
 
         String block = "block";
         String none = "none";
@@ -46,6 +45,13 @@ public class ShowProductDetailsListController extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+           request.getRequestDispatcher("ChiTietSanPham.jsp").forward(request , response);
+
 
     }
 

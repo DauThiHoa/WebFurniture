@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +33,11 @@ public class Edit_DirectoryManagement extends HttpServlet {
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 
-     String display ;
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        String display ;
      if (dis != null ){
          display = dis ;
      }else {

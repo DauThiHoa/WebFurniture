@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
 import javax.servlet.ServletException;
@@ -26,6 +27,10 @@ public class HandlingSignUp extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         boolean registerSuccess = false;
         if (name != "" && email != "" && password != "") {

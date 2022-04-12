@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.fit.webfurniture.admin;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.dao.UserDao;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +26,10 @@ public class DashboardController extends HttpServlet {
         request.setAttribute("countProductDetails" , ProductDetailsDao.getInstance().countProductDetails());
         request.setAttribute("sumContact" , OrderDao.getInstance().sumContact());
         request.setAttribute("countContact" , OrderDao.getInstance().countContact());
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         String block = "block";
         String none = "none";

@@ -50,6 +50,10 @@ public class ProductDetailsListControllerBedroomPillow extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("NoiThatPhongNgu_GoiNgu.jsp").forward(request, response);
 

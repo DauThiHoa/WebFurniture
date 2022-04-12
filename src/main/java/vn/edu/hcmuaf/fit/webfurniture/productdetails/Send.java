@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.productdetails;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
 import javax.servlet.ServletException;
@@ -46,6 +47,18 @@ public class Send extends HttpServlet {
         }else {
             evaluate = ratTot ;
         }
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         if ( title != "" && evaluate != "" && nameCustomer != "" && content != "" && linkImage != "" && id != "" ) {
             boolean result = ReviewProductDetailsService.getInstance().createrReview(title, evaluate,nameCustomer, content, linkImage, id);
             System.out.println(result);
@@ -68,12 +81,6 @@ public class Send extends HttpServlet {
             request.getRequestDispatcher("/ProductDetails").forward(request, response);
         }
 
-        String block = "block";
-        String none = "none";
-        String display = "none";
-        request.setAttribute("block", block);
-        request.setAttribute("none", none);
-        request.setAttribute("display", display);
     }
 
     @Override

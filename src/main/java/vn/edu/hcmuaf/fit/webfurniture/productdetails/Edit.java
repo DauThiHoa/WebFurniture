@@ -37,13 +37,6 @@ public class Edit extends HttpServlet {
      String quantity = request.getParameter("quantity");
      String status = request.getParameter("status");
 
-     int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status);
-
-     if ( update == 1 ) {
-         request.getRequestDispatcher("/Product").forward(request, response);
-     }else{
-         request.getRequestDispatcher("fail.jsp").forward(request, response);
-     }
 
         String block = "block";
         String none = "none";
@@ -51,6 +44,19 @@ public class Edit extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+
+        int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status);
+
+     if ( update == 1 ) {
+         request.getRequestDispatcher("/Product").forward(request, response);
+     }else{
+         request.getRequestDispatcher("fail.jsp").forward(request, response);
+     }
 
     }
 

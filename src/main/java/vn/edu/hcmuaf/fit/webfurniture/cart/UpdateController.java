@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.cart;
 
 import com.google.gson.Gson;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -21,6 +22,11 @@ public class UpdateController extends HttpServlet {
         String id = request.getParameter("id");
         HttpSession session = request.getSession();
         // load cart from session
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         Cart cart = ( Cart) session.getAttribute("cart");
         if ( cart.get(id) == null ){
             response.setStatus(404);

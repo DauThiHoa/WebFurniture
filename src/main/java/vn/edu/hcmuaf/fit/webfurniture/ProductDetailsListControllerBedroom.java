@@ -48,6 +48,10 @@ public class ProductDetailsListControllerBedroom extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         request.setAttribute("ProductDetailsBedroom", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("PhongNgu.jsp").forward(request, response);
 

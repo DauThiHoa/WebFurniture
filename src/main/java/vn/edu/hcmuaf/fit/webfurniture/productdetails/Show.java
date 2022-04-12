@@ -26,8 +26,7 @@ public class Show extends HttpServlet {
         List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
-                request.setAttribute("list" , list );
-                request.getRequestDispatcher("Product.jsp").forward(request, response);
+        request.setAttribute("list" , list );
 
         String block = "block";
         String none = "none";
@@ -35,6 +34,13 @@ public class Show extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        request.getRequestDispatcher("Product.jsp").forward(request, response);
+
     }
 
     /**

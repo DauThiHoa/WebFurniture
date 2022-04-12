@@ -67,11 +67,16 @@
     </div>
 
     <div id="gioHang">
-        <a href="GioHang.jsp?_ijt=jcprnpa34msltves625aqk8542">
+        <a href="cart">
             <div>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <jsp:useBean id="sizeListCart" scope="request" type="java.lang.Integer"/>
+                <input class="inputCart"
+                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="${sizeListCart}">
+
+                <i class="fa fa-shopping-cart" aria-hidden="true">
+                </i>
             </div>
-            <div id="chu_giohang">
+            <div id="chu_giohang" style="margin-top: -1%">
                 <p>Giỏ hàng</p>
             </div>
         </a>
@@ -97,7 +102,7 @@
                     <h4 class="noiDungSanPham2"> NỘI THẤT PHÒNG NGỦ</h4>
                 </div>
             </a>
-            <a href=ProductDetailsListKitchen">
+            <a href=ProductDetailsListKitchen>
                 <div class="danhMuc3">
                     <h4 class="noiDungSanPham3"> NỘI THẤT PHÒNG BẾP</h4>
                 </div>

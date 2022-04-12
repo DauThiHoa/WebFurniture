@@ -53,6 +53,18 @@ public class AddProductServlet extends HttpServlet {
             status = over;
         }
 
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
         if ( !(id.equals("")) &&  !(name.equals("")) && !(description.equals("")) && !(trademark.equals("")) && !(production.equals("")) &&
                 !(priceOld.equals("")) && !(linkImage.equals("")) && !(quantity.equals("")) &&  !(priceNew.equals("")) && !(status.equals(""))
         && produtGroups != null && category != null ) {
@@ -78,12 +90,6 @@ public class AddProductServlet extends HttpServlet {
             request.getRequestDispatcher("addProduct.jsp").forward(request, response);
         }
 
-        String block = "block";
-        String none = "none";
-        String display = "none";
-        request.setAttribute("block", block);
-        request.setAttribute("none", none);
-        request.setAttribute("display", display);
     }
 
     @Override

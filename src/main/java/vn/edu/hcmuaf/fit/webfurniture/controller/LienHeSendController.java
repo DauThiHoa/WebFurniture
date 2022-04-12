@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
 import vn.edu.hcmuaf.fit.webfurniture.service.ContactService;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +22,10 @@ public class LienHeSendController extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String content = request.getParameter("content");
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         if ( name != "" && email != "" && content != ""){
         boolean result = ContactService.getInstance().addContact(name,email,content);

@@ -1,3 +1,4 @@
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
 import javax.servlet.ServletException;
@@ -37,6 +38,17 @@ if ( name != null && password != null && email != null ) {
         request.getRequestDispatcher("../WebFurniture_war_exploded/DangKy.jsp").forward(request, response);
     }
 }
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         request.getRequestDispatcher("DangKy.jsp").forward(request,response);
     }
 }

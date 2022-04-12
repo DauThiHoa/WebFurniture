@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Information;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,6 +47,10 @@ public class Edit_Information extends HttpServlet {
         String Twitter = request.getParameter("Twitter");
         String Youtube = request.getParameter("Youtube");
         String Instagram = request.getParameter("Instagram");
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);

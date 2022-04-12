@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.webfurniture.cart;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -16,6 +18,11 @@ public class ShowController extends HttpServlet {
         if ( cart == null ){
             cart =  Cart.getInstance() ;
         }
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
         String block = "block";
         String none = "none";
         String display = "none";

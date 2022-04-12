@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.payment;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,15 +23,18 @@ public class OrderDetailsListController extends HttpServlet {
         request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
         request.setAttribute("sumTotalMoney" , OrderDetailsService.getInstance().sumTotalMoney());
 
-
-        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
-
         String block = "block";
         String none = "none";
         String display = "none";
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
 
     }
 

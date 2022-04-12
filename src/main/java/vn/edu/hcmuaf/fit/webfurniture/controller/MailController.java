@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,6 +44,10 @@ public class MailController extends HttpServlet {
             request.setAttribute("email", "Qúy khách đăng kí nhận tin không thành công");
             request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         }
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         String block = "block";
         String none = "none";

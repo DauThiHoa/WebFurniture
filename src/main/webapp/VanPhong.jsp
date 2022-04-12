@@ -70,15 +70,19 @@
     <div id="gioHang">
         <a href="cart">
             <div>
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <jsp:useBean id="sizeListCart" scope="request" type="java.lang.Integer"/>
+                <input class="inputCart"
+                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="${sizeListCart}">
+
+                <i class="fa fa-shopping-cart" aria-hidden="true">
+                </i>
             </div>
-            <div id="chu_giohang">
+            <div id="chu_giohang" style="margin-top: -1%">
                 <p>Giỏ hàng</p>
             </div>
         </a>
     </div>
 </div>
-
 
 <div id="trangChu_DanhMuc">
     <div id="danhMuc">

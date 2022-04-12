@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture.cart;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
+import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +24,10 @@ public class CheckOutController extends HttpServlet {
         // get session
         HttpSession session = request.getSession();
         // Xử lý đăng nhập -> lấy id khách hàng
+
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
         String block = "block";
         String none = "none";

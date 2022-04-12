@@ -43,8 +43,11 @@ public class ColorDecoratorSofa extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
 
+        request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
         request.setAttribute("ProductDetailsDecorationSofa", ProductDetailsService.getInstance().getAll());
         request.getRequestDispatcher("NoiThatDoTrangTri_Goisofa.jsp").forward(request, response);
 

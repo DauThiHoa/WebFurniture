@@ -11,11 +11,30 @@
  Target Server Version : 100422
  File Encoding         : 65001
 
- Date: 29/03/2022 23:36:19
+ Date: 13/04/2022 01:14:39
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for cart
+-- ----------------------------
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE `cart`  (
+  `stt` int NOT NULL AUTO_INCREMENT,
+  `linkImage` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `idProduct` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `nameProduct` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `price` int NOT NULL,
+  `quantitySold` int NOT NULL,
+  `money` int NOT NULL,
+  PRIMARY KEY (`stt`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cart
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for contact

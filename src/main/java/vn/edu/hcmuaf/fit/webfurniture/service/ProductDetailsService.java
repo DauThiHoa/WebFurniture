@@ -10,6 +10,15 @@ import java.util.stream.Collectors;
 
 public class ProductDetailsService implements Serializable {
     private static ProductDetailsService instance ;
+    private int sumCart = 0 ;
+
+    public int getSumCart() {
+        return sumCart;
+    }
+
+    public void setSumCart(int sumCart) {
+        this.sumCart = sumCart;
+    }
 
     public static ProductDetailsService getInstance() {
         if (instance == null ){
@@ -54,7 +63,7 @@ public class ProductDetailsService implements Serializable {
         return  ProductDetailsDao.getInstance().getAllName(name);
     }
 
-    public  boolean addProductDetails(String id, String name, String description, String trademark, String production,
+    public static boolean addProductDetails(String id, String name, String description, String trademark, String production,
                                       String priceOld, String linkImage, String quantity, String priceNew, String status,
                                       String produtGroups, String category) {
         int changePriceOld = Integer.parseInt(priceOld);
@@ -93,6 +102,48 @@ public class ProductDetailsService implements Serializable {
         return true;
     }
 
+    public static boolean addProductCart(String linkImage, String idProduct, String nameProduct, int price, int quantitySold,
+                                         int money) {
+
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+            sum += h.createUpdate("INSERT INTO cart ( linkImage , idProduct , nameProduct , price , quantitySold , money) " +
+                            "VALUES (?,?,?,?,?,? )")
+                    .bind(0 , linkImage)
+                    .bind(1 , idProduct)
+                    .bind(2 , nameProduct)
+                    .bind(3 , price)
+                    .bind(4 , quantitySold)
+                    .bind(5 , money ) .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
+    }
+
+    public static boolean cartExits ( ) {
+
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+            sum += h.createUpdate("update cart set quantitySold = quantitySold + 1 where stt = ( select max(stt) from cart )") .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
+    }
+
+    public static int sumListCart (String linkImage, String idProduct , String nameProduct, int price, int quantitySold, int money){
+        if (addProductCart (linkImage,  idProduct ,  nameProduct,  price,  quantitySold, money ) ) {
+            return JDBIConnector.get().withHandle(handle -> {
+                return handle.createQuery("select sum(quantitySold) from cart")
+                        .mapTo(Integer.class).findFirst().get();
+            });
+        }else {
+            return 0 ;
+        }
+    }
     public List<ProductDetails> getListAZ (){
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from productdetails order by `name` asc")
@@ -257,10 +308,8 @@ public class ProductDetailsService implements Serializable {
     }
 
     public static void main(String[] args) {
-        List<ProductDetails> re = searchName ("bó hoa");
-        for (ProductDetails pd : re ){
-            System.out.println(pd.toString());
-        }
+        System.out.println("RESULT");
+//        System.out.println("SUM LIST CART " + ProductDetailsService.getInstance().sumListCart());
 
     }
 

@@ -25,22 +25,28 @@ public class AddController extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-       if ( productDetails != null ){
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        if ( productDetails != null ) {
            HttpSession session = request.getSession();
            Cart cart = ( Cart) session.getAttribute("cart");
            if ( cart == null ){
                cart = Cart.getInstance();
-           }
+       }
            if (quantitySold != null ) {
                cart.setQuantitySold(Integer.parseInt(quantitySold));
-           }
+       }
            cart.put(productDetails);
            session.setAttribute("cart" , cart); // add session cart
-           Cart car = new Cart();
-           car.setSize(cart.getSizeList());
-           System.out.println(car.getSize() + " Size Cart");
-       }
 
+           int totalMoney = productDetails.getPriceNew() * cart.getQuantitySold() ;
+           int sumList = ProductDetailsService.getInstance().sumListCart(productDetails.getLinkImage(), productDetails.getId() ,
+                   productDetails.getName(), productDetails.getPriceNew(), cart.getQuantitySold(), totalMoney);
+           ProductDetailsService.getInstance().setSumCart(sumList);
+
+       }
        response.sendRedirect("/WebFurniture_war_exploded/cart");
     }
 
