@@ -11,12 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/AddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -500,6 +498,7 @@
       <workItem from="1649686454359" duration="6019000" />
       <workItem from="1649770137553" duration="16333000" />
       <workItem from="1649830242735" duration="3097000" />
+      <workItem from="1649860709737" duration="3597000" />
     </task>
     <servers />
   </component>
@@ -674,22 +673,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>83</line>
+          <line>84</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>84</line>
+          <line>85</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>87</line>
+          <line>88</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>88</line>
+          <line>89</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -969,7 +968,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>44</line>
+          <line>45</line>
           <option name="timeStamp" value="202" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -979,7 +978,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>58</line>
+          <line>59</line>
           <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -989,17 +988,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsListController.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsListController.java</url>
-          <line>47</line>
+          <line>48</line>
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/ThanhToan.jsp</url>
-          <line>134</line>
+          <line>135</line>
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1009,7 +1008,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>59</line>
+          <line>60</line>
           <option name="timeStamp" value="212" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1219,7 +1218,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
-          <line>36</line>
+          <line>37</line>
           <properties class="vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService" method="sumDiscount">
             <option name="EMULATED" value="true" />
           </properties>

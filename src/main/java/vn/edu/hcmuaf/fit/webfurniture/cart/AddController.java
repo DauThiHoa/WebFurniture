@@ -44,6 +44,7 @@ public class AddController extends HttpServlet {
            int totalMoney = productDetails.getPriceNew() * cart.getQuantitySold() ;
            int sumList = ProductDetailsService.getInstance().sumListCart(productDetails.getLinkImage(), productDetails.getId() ,
                    productDetails.getName(), productDetails.getPriceNew(), cart.getQuantitySold(), totalMoney);
+
            ProductDetailsService.getInstance().setSumCart(sumList);
 
        }

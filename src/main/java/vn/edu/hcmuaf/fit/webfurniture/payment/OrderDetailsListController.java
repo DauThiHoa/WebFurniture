@@ -13,8 +13,9 @@ import java.io.IOException;
 public class OrderDetailsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//           String idProductDetails =  request.getParameter("idProductDetails");
-//           request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
+//      String idProductDetails =  request.getParameter("idProductDetails");
+//      request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 

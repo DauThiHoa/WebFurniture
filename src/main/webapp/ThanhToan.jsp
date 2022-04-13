@@ -9,6 +9,7 @@
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<jsp:useBean id="cart" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Cart"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -23,7 +23,8 @@ public class OrderDetailsService {
 
     public List <Details> getAll () {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from orderdetails").mapToBean(Details.class).stream().collect(Collectors.toList());
+            return handle.createQuery("select * from orderdetails")
+                    .mapToBean(Details.class).stream().collect(Collectors.toList());
         });
     }
 
