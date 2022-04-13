@@ -55,7 +55,9 @@ public class CheckOutController extends HttpServlet {
 
             if (result) {
 //            response.sendRedirect("/WebFurniture_war_exploded/ProductDetailsList");
-                response.sendRedirect("/WebFurniture_war_exploded/payment");
+                if ( ProductDetailsService.getInstance().removeCart()){
+                ProductDetailsService.getInstance().setSumCart(0);
+                response.sendRedirect("/WebFurniture_war_exploded/payment");}
             } else {
                 response.sendRedirect("/WebFurniture_war_exploded/cart");
             }

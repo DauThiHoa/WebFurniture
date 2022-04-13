@@ -121,19 +121,17 @@ public class ProductDetailsService implements Serializable {
         // size của đơn hàng
         return true;
     }
-
-    public static boolean cartExits ( ) {
+    public boolean removeCart ( ) {
 
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-            sum += h.createUpdate("update cart set quantitySold = quantitySold + 1 where stt = ( select max(stt) from cart )") .execute();
+            sum += h.createUpdate("DELETE FROM cart ") .execute();
             // Số dòng được chèn vào
             return sum ;
         });
         // size của đơn hàng
         return true;
     }
-
     public static int sumListCart (String linkImage, String idProduct , String nameProduct, int price, int quantitySold, int money){
         if (addProductCart (linkImage,  idProduct ,  nameProduct,  price,  quantitySold, money ) ) {
             return JDBIConnector.get().withHandle(handle -> {
