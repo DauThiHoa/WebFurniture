@@ -14,9 +14,9 @@ public class AddController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // get productDetalis id from request
-       String id =  request.getParameter("id");
-       String quantitySold =  request.getParameter("quantitySold");
-       ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
+        String id =  request.getParameter("id");
+        String quantitySold =  request.getParameter("quantitySold");
+        ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
 
         String block = "block";
         String none = "none";

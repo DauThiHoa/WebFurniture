@@ -53,8 +53,10 @@ public class OrderDao {
     }
 
     public boolean createProductDetails( String id , String quantitySold , String priceNew) {
+
         int quantity = Integer.parseInt(quantitySold);
         int price = Integer.parseInt(priceNew);
+
         int idUser = JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT MAX(id + 0) FROM `user`")
                     .mapTo(Integer.class).findFirst().get() ;

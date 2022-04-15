@@ -38,6 +38,7 @@ public class CheckOutController extends HttpServlet {
 
 //        boolean test = false;
 //        System.out.println(test);
+
         if ((session.getAttribute("auth")) == null) {
             response.sendRedirect("/WebFurniture_war_exploded/login");
             session.setAttribute("auth" , "");
@@ -47,8 +48,9 @@ public class CheckOutController extends HttpServlet {
             response.sendRedirect("/WebFurniture_war_exploded/cart");
             return;
         }
-//            response.sendRedirect("/WebFurniture_war_exploded/login");
-//        boolean result = OrderService.getInstance().createOrder((User) session.getAttribute("auth") ,(Cart) session.getAttribute("cart")) ;
+
+//          response.sendRedirect("/WebFurniture_war_exploded/login");
+//          boolean result = OrderService.getInstance().createOrder((User) session.getAttribute("auth") ,(Cart) session.getAttribute("cart")) ;
             boolean result = OrderService.getInstance().createOrder((Cart) session.getAttribute("cart"));
 
             session.removeAttribute("cart");
