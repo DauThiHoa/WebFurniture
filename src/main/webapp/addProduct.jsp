@@ -377,7 +377,7 @@
     </div>
 
     <form action="add-Product" method="post" >
-    <div class="infor" style="height: 480px; width: 95%">
+    <div class="infor" style="height: 480px; width: 82% ; margin-left: 8%">
         <h1 class="information" style="font-size: 125%"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Image </h2>
@@ -411,7 +411,7 @@
         </div>
     </div>
 
-    <div class="infor2">
+    <div class="infor2" style="height: 1025px">
         <h1 class="information" style="font-size: 125%"> VIETNAMESE</h1>
         <div class="information2">
             <h2 class="Category"> Title </h2>
@@ -437,7 +437,32 @@
         <div class="information3">
             <h2 class="Modules"> ProductGroups </h2>
             <jsp:useBean id="produtGroups" scope="request" class="java.lang.String"/>
-            <input class="type3a" type="text" name="produtGroups" value="${produtGroups}"><br>
+            <input style="margin-left: 0%" class="type3a" type="text" name="produtGroups" value="${produtGroups}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Color </h2>
+            <jsp:useBean id="color" scope="request" class="java.lang.String"/>
+            <input style="margin-left: 9%" class="type3a" type="text" name="color" value="${color}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Size </h2>
+            <jsp:useBean id="size" scope="request" class="java.lang.String"/>
+            <input style="margin-left: 10%"  class="type3a" type="text" name="size" value="${size}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Weight </h2>
+            <jsp:useBean id="weight" scope="request" class="java.lang.String"/>
+            <input  style="margin-left: 7%" class="type3a" type="text" name="weight" value="${weight}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Material </h2>
+            <jsp:useBean id="material" scope="request" class="java.lang.String"/>
+            <input  style="margin-left: 6%" class="type3a" type="text" name="material" value="${material}"><br>
+        </div>
+        <div class="information3">
+            <h2 class="Modules"> Design </h2>
+            <jsp:useBean id="design" scope="request" class="java.lang.String"/>
+            <input  style="margin-left: 7%" class="type3a" type="text" name="design" value="${design}"><br>
         </div>
         <div class="information4">
             <h2 class="Category"> Quantity </h2>
@@ -490,8 +515,7 @@
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
-                    Web Furniture</a>
+                    &copy; 2021 Web Furniture
                 </div>
             </div>
 

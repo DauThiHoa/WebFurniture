@@ -31,6 +31,12 @@ public class AddProductServlet extends HttpServlet {
         request.setAttribute("produtGroups" ,"" );
         request.setAttribute("quantity" ,"" );
 
+        request.setAttribute("color" ,"" );
+        request.setAttribute("size" ,"" );
+        request.setAttribute("weight" ,"" );
+        request.setAttribute("material" ,"" );
+        request.setAttribute("design" ,"" );
+
         String linkImage = request.getParameter ("linkImage"); // Link Image
         String category = request.getParameter ("category"); // Loai Home, ...
         String id = request.getParameter ("id");
@@ -42,6 +48,12 @@ public class AddProductServlet extends HttpServlet {
         String description = request.getParameter ("description");
         String produtGroups = request.getParameter ("produtGroups"); // mã nhóm sản phẩm
         String quantity = request.getParameter ("quantity");
+
+        String color = request.getParameter ("color"); // Thuong hieu
+        String size = request.getParameter ("size");
+        String weight = request.getParameter ("weight");
+        String material = request.getParameter ("material"); // mã nhóm sản phẩm
+        String design = request.getParameter ("design");
 
         // status
         String still = request.getParameter ("still"); // mã nhóm sản phẩm
@@ -67,9 +79,10 @@ public class AddProductServlet extends HttpServlet {
 
         if ( !(id.equals("")) &&  !(name.equals("")) && !(description.equals("")) && !(trademark.equals("")) && !(production.equals("")) &&
                 !(priceOld.equals("")) && !(linkImage.equals("")) && !(quantity.equals("")) &&  !(priceNew.equals("")) && !(status.equals(""))
-        && produtGroups != null && category != null ) {
+        && produtGroups != null && category != null && !(color.equals("")) && !(size.equals("")) && !(weight.equals("")) &&  !(material.equals("")) && !(design.equals(""))) {
+
             boolean result = ProductDetailsService.getInstance().addProductDetails(id, name, description, trademark, production,
-                    priceOld, linkImage, quantity, priceNew, status, produtGroups, category);
+                    priceOld, linkImage, quantity, priceNew, status, produtGroups, category , color , size , weight , material , design);
             if (result) {
                 request.getRequestDispatcher("addProduct.jsp").forward(request, response);
             } else {
@@ -87,6 +100,13 @@ public class AddProductServlet extends HttpServlet {
             request.setAttribute("description" ,description );
             request.setAttribute("produtGroups" ,produtGroups );
             request.setAttribute("quantity" ,quantity );
+
+            request.setAttribute("color" ,color );
+            request.setAttribute("size" ,size );
+            request.setAttribute("weight" ,weight );
+            request.setAttribute("material" ,material );
+            request.setAttribute("design" ,design );
+
             request.getRequestDispatcher("addProduct.jsp").forward(request, response);
         }
 

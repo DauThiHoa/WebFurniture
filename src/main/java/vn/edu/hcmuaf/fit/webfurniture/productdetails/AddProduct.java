@@ -17,9 +17,9 @@ public class AddProduct extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
-        request.getRequestDispatcher("addProduct.jsp").forward(request, response);
 
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
@@ -31,6 +31,8 @@ public class AddProduct extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        request.getRequestDispatcher("addProduct.jsp").forward(request, response);
 
     }
 

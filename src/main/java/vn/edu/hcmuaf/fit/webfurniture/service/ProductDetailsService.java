@@ -54,8 +54,9 @@ public class ProductDetailsService implements Serializable {
         return ProductDetailsDao.getInstance().delete(id);
     }
 
-    public int update(String id, String name, String description, String priceNew, String priceOld, String quantity, String status) {
-        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status);
+    public int update(String id, String name, String description, String priceNew, String priceOld, String quantity, String status
+            , String color, String size, String weight, String material, String design) {
+        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status , color,size,weight,material,design);
     }
 
     public List <ProductDetails> getAllName (String name ){
@@ -65,7 +66,8 @@ public class ProductDetailsService implements Serializable {
 
     public static boolean addProductDetails(String id, String name, String description, String trademark, String production,
                                       String priceOld, String linkImage, String quantity, String priceNew, String status,
-                                      String produtGroups, String category) {
+                                      String produtGroups, String category , String color, String size, String weight,
+                                            String material, String design) {
         int changePriceOld = Integer.parseInt(priceOld);
         int changeQuantity = Integer.parseInt(quantity);
         int changePriceNew = Integer.parseInt(priceNew);
@@ -81,8 +83,9 @@ public class ProductDetailsService implements Serializable {
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
             sum += h.createUpdate("INSERT INTO productdetails ( id , `name` , description , trademark , production ," +
-                            " priceOld , linkImage , quantity , priceNew , `status` , idProductGroups , idCategory ) " +
-                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)")
+                            " priceOld , linkImage , quantity , priceNew , `status` , idProductGroups , idCategory " +
+                            " , color , size , weight , material , design) " +
+                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
                     .bind(0 , id )
                     .bind(1 , name)
                     .bind(2 , description)
@@ -94,7 +97,13 @@ public class ProductDetailsService implements Serializable {
                     .bind(8 , changePriceNew)
                     .bind(9 , status)
                     .bind(10 ,  produtGroups)
-                    .bind(11, category ).execute();
+                    .bind(11, category )
+                    .bind(12 , color)
+                    .bind(13 , size)
+                    .bind(14 , weight)
+                    .bind(15 ,  material)
+                    .bind(16, design )
+                    .execute();
             // Số dòng được chèn vào
             return sum ;
         });
@@ -218,23 +227,23 @@ public class ProductDetailsService implements Serializable {
         // hong vang xam xanh lam  xanh luc  cam trang den tim do
 //        getColorPink getColorYellow getColorGray getColorBlue getColorGreen getColorOrange getColorWhite getColorBlack getColorPurple getColorRed
         if (color != null){
-        if ( color.equals("hong")){
+        if ( color.equals("hồng")){
             return getColorPink();
-        }else if ( color.equals("vang")){
+        }else if ( color.equals("vàng")){
             return getColorYellow();
-        }else if ( color.equals("xam")){
+        }else if ( color.equals("xám")){
             return getColorGray();
         }else if ( color.equals("xanh lam")){
             return getColorBlue();
-        }else if ( color.equals("xanh luc")){
+        }else if ( color.equals("xanh lục")){
             return getColorGreen();
         }else if ( color.equals("cam")){
             return getColorOrange();
-        }else if ( color.equals("trang")){
+        }else if ( color.equals("trắng")){
             return getColorWhite();
-        }else if ( color.equals("den")){
+        }else if ( color.equals("đen")){
             return getColorBlack();
-        }else if ( color.equals("tim")){
+        }else if ( color.equals("tím")){
             return getColorPurple();
         }else if ( color.equals("null")){
             return null;
@@ -246,61 +255,61 @@ public class ProductDetailsService implements Serializable {
     }
     public  static List<ProductDetails> getColorPink ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%hồng%' ")
+            return handle.createQuery("select * from productdetails where color like '%hồng%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorYellow ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%vàng%' ")
+            return handle.createQuery("select * from productdetails where color like '%vàng%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorGray ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%xám%' ")
+            return handle.createQuery("select * from productdetails where color like '%xám%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorBlue ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%xanh lam%' ")
+            return handle.createQuery("select * from productdetails where color like '%xanh lam%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorGreen ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%xanh lục%' ")
+            return handle.createQuery("select * from productdetails where color like '%xanh lục%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorOrange ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%cam%' ")
+            return handle.createQuery("select * from productdetails where color like '%cam%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorWhite ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%trắng%' ")
+            return handle.createQuery("select * from productdetails where color like '%trắng%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorBlack ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%đen%' ")
+            return handle.createQuery("select * from productdetails where color like '%đen%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorPurple ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%tím%' ")
+            return handle.createQuery("select * from productdetails where color like '%tím%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
     public  static List<ProductDetails> getColorRed ( ){
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from productdetails where description like '%đỏ%' ")
+            return handle.createQuery("select * from productdetails where color like '%đỏ%' ")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }

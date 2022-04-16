@@ -37,6 +37,11 @@ public class Edit extends HttpServlet {
      String quantity = request.getParameter("quantity");
      String status = request.getParameter("status");
 
+        String color = request.getParameter("color");
+        String size = request.getParameter("size");
+        String weight = request.getParameter("weight");
+        String material = request.getParameter("material");
+        String design = request.getParameter("design");
 
         String block = "block";
         String none = "none";
@@ -50,12 +55,12 @@ public class Edit extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
 
-        int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status);
+        int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status, color,size,weight,material,design);
 
      if ( update == 1 ) {
          request.getRequestDispatcher("/Product").forward(request, response);
      }else{
-         request.getRequestDispatcher("fail.jsp").forward(request, response);
+         request.getRequestDispatcher("/Product").forward(request, response);
      }
 
     }

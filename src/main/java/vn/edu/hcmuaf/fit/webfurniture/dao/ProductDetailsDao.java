@@ -40,9 +40,11 @@ public class ProductDetailsDao {
                         .bind(0 , id ).execute());
     }
 
-    public int update (String id , String name , String description , String priceNew , String priceOld , String quantity , String status) {
+    public int update (String id , String name , String description , String priceNew , String priceOld , String quantity , String status
+            , String color, String size, String weight, String material, String design) {
         return JDBIConnector.get().withHandle(h ->
-                h.createUpdate("update productdetails set `name` = ? , description = ? , priceNew = ? , priceOld = ? , quantity = ? , `status`= ? where id = ? ")
+                h.createUpdate("update productdetails set `name` = ? , description = ? , priceNew = ? , priceOld = ? , " +
+                                "quantity = ? , `status`= ? , color = ? , size = ? , weight = ? , material = ? , design = ? where id = ? ")
                         .bind(0 , name )
                         .bind(1 , description )
                         .bind(2 , Integer.parseInt(priceNew) )
@@ -50,6 +52,11 @@ public class ProductDetailsDao {
                         .bind(4 , Integer.parseInt(quantity) )
                         .bind(5 , status )
                         .bind(6 , id )
+                        .bind(7 , color )
+                        .bind(8 , size )
+                        .bind(9 , weight )
+                        .bind(10 , material )
+                        .bind(11 , design )
                         .execute());
     }
     public static String changeName (String nameOld ){
@@ -92,4 +99,5 @@ public class ProductDetailsDao {
                     .mapTo(Double.class).findFirst().get() ;
         });
     }
+
 }

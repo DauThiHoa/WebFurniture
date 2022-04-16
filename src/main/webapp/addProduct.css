@@ -56,8 +56,8 @@ figure.zoom img {
 }
 
 .infor2 {
-    height: 760px;
-    margin-bottom: 25px;
+    height: 1500px;
+    margin-bottom: 50px;
 }
 
 .information3a .Modules {
@@ -120,8 +120,5 @@ Tablet
         width: 85%;
     }
 
-    .infor2 {
-        height: 950px;
-    }
 
 }

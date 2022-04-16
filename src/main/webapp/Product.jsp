@@ -398,6 +398,13 @@
                 <th  style="text-align: center" class="TieuDe">PriceSell</th>
                 <th  style="text-align: center" class="TieuDe">Quantity</th>
                 <th  style="text-align: center" class="TieuDe">Status</th>
+
+                <th  style=" text-align: center ; overflow: hidden " class="TieuDe">Color</th>
+                <th  style="text-align: center" class="TieuDe">Size</th>
+                <th  style="text-align: center" class="TieuDe">Weight</th>
+                <th  style="text-align: center" class="TieuDe">Material</th>
+                <th  style="text-align: center" class="TieuDe">Design</th>
+
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
             </tr>
@@ -415,6 +422,13 @@
                 <td ><input type="text" name ="priceOld" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.priceOld}"></td>
                 <td style="text-align: center"><input type="text" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.quantity}"></td>
                 <td ><input type="text" name ="status" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.status}"></td>
+
+                    <td ><input type="text" name ="color" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.color}"></td>
+                    <td ><input type="text" name ="size" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.size}"></td>
+                    <td style="text-align: center"><input type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}"></td>
+                    <td ><input type="text" name ="material" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.material}"></td>
+                    <td ><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="design"  rows="50" cols="50">${item.design}</textarea></td>
+
                 <td>
                         <input type="hidden" name ="id" value="${item.id}">
                         <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>

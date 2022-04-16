@@ -25,6 +25,7 @@ public class Show extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<ProductDetails> list = ProductDetailsService.getInstance().getAll();
         Profile profile = ProfileService.getInstance().getProfile();
+
         request.setAttribute("profile" , profile);
         request.setAttribute("list" , list );
 
