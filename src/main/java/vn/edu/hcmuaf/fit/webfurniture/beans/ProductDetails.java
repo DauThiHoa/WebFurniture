@@ -19,8 +19,37 @@ public class ProductDetails implements Serializable  {
     private String idProductGroups  ;
     private String idCategory ;
     private String viewProductDetails    ;
+//    color size weight material
+    private String color ;
+    private String size ;
+    private String weight ;
+    private String material ;
+    private String design;
 
     public ProductDetails() {
+    }
+
+    public ProductDetails(String id, String name, String description, String trademark, String production, int priceOld, int quantity, int quantitySold, String linkImage, int priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails, String color, String size, String weight, String material, String design) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.trademark = trademark;
+        this.production = production;
+        this.priceOld = priceOld;
+        this.quantity = quantity;
+        this.quantitySold = quantitySold;
+        this.linkImage = linkImage;
+        this.priceNew = priceNew;
+        this.dateSubmitted = dateSubmitted;
+        this.status = status;
+        this.idProductGroups = idProductGroups;
+        this.idCategory = idCategory;
+        this.viewProductDetails = viewProductDetails;
+        this.color = color;
+        this.size = size;
+        this.weight = weight;
+        this.material = material;
+        this.design = design;
     }
 
     public ProductDetails(String id, String name, String description, String trademark, String production, int priceOld, int quantity, int quantitySold, String linkImage, int priceNew, String dateSubmitted, String status, String idProductGroups, String idCategory, String viewProductDetails) {
@@ -182,6 +211,46 @@ public class ProductDetails implements Serializable  {
         return quantitySold * priceNew ;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public String getDesign() {
+        return design;
+    }
+
+    public void setDesign(String design) {
+        this.design = design;
+    }
+
     @Override
     public String toString() {
         return "ProductDetails{" +
@@ -200,6 +269,11 @@ public class ProductDetails implements Serializable  {
                 ", idProductGroups='" + idProductGroups + '\'' +
                 ", idCategory='" + idCategory + '\'' +
                 ", viewProductDetails='" + viewProductDetails + '\'' +
+                ", color='" + color + '\'' +
+                ", size='" + size + '\'' +
+                ", weight='" + weight + '\'' +
+                ", material='" + material + '\'' +
+                ", design='" + design + '\'' +
                 '}';
     }
 }

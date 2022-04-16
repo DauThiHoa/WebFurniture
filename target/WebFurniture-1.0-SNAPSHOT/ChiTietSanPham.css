@@ -755,7 +755,6 @@ figure.zoom img {
 }
 
 #thongTinSanPham .phai .soLuongSanPham {
-    margin-left: 50px;
     margin-top: 20px;
 
 }
@@ -785,19 +784,15 @@ figure.zoom img {
 }
 
 #thongTinSanPham .phai .soLuongSanPham .so {
-    float: left;
-    clear: right;
     width: 50px;
     height: 50px;
     background: darkorange;
     border: 2px solid black;
     margin-top: 45px;
-    margin-left: -496px;
 }
 
 #thongTinSanPham .phai .soLuongSanPham .so .soLuongDat {
     font-size: 250%;
-    margin-left: 15px;
     margin-top: 0px;
     color: white;
 }
@@ -2203,20 +2198,15 @@ Tablet
     }
 
     #thongTinSanPham .phai .soLuongSanPham .so {
-        float: left;
-        clear: right;
         width: 25px;
         height: 25px;
         background: darkorange;
         border: 2px solid black;
         margin-top: 25px;
-        margin-left: -245px;
-
     }
 
     #thongTinSanPham .phai .soLuongSanPham .so .soLuongDat {
         font-size: 100%;
-        margin-left: 8px;
         margin-top: 5px;
         font-weight: bold;
         color: white;
@@ -3802,13 +3792,11 @@ Tablet
         background: darkorange;
         border: 2px solid black;
         margin-top: 13px;
-        margin-left: 75px;
     }
 
     #thongTinSanPham .phai .soLuongSanPham .so .soLuongDat {
         font-size: 250%;
         color: white;
-        margin-left: 10px;
         margin-top: 3px;
     }
 
@@ -3843,7 +3831,6 @@ Tablet
         height: 40px;
         background: darkorange;
         border: 2px solid white;
-        margin-left: 200px;
         margin-top: -42px;
         border-radius: 10px;
     }

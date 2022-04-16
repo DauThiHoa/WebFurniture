@@ -226,22 +226,22 @@
                 <p class="hang">${productDetails.status}</p>
             </div>
         </div>
-        <div class="thongTinChiTiet">
-            <p class="thongTinct">${productDetails.description}</p>
-        </div>
+<%--        <div class="thongTinChiTiet">--%>
+<%--            <p class="thongTinct">${productDetails.description}</p>--%>
+<%--        </div>--%>
         <div class="mauSac">
             <div class="top">
-                <h3 class="tieuDe"> Màu sắc : </h3>
-                <p class="soMau"> Màu đen , Màu gỗ , Màu trắng </p>
+                <h3 class="tieuDe" style="margin-left: -16%"> Màu sắc : </h3>
+                <p class="soMau">${productDetails.color}</p>
             </div>
             <div class="bottom">
-                <img class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)"
+                <img class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)" style="margin-left: 0%;"
                      alt="image"/>
 
                 <c:if test="${productDetails.id == 'sp24'}" >
-                <img class="anh_BanLamViec_min1" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
+                <img class="anh_BanLamViec_min1" style="margin-left: -14%; margin-right: 4%" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
                      onclick="zoomount(this)" alt="image"/>
-                <img class="anh_BanLamViec_min2" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"
+                <img class="anh_BanLamViec_min2" style="margin-left: 0%;" src="Image_ThongTinSanPham_Home/gheaileen3.PNG"
                      onclick="zoomount(this)" alt="image"/>
                 </c:if>
 
@@ -250,43 +250,90 @@
         <c:if test="${productDetails.id != 'sp24'}">
         <div class="chatLieu" style="margin-top: 20%" >
             <h3 class="tieuDe" > Chất liệu : </h3>
-            <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
-                Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
+            <p class="thongTin" >${productDetails.material}</p>
         </div>
         </c:if>
         <c:if test="${productDetails.id == 'sp24'}">
             <div class="chatLieu" >
                 <h3 class="tieuDe" > Chất liệu : </h3>
-                <p class="thongTin" > Chân bàn: Sắt sơn tĩnh điện.
-                    Mặt bàn: Gỗ MDF chống ẩm, sơn phủ PU . </p>
+                <p class="thongTin" >${productDetails.material}</p>
             </div>
         </c:if>
 
         <form action="cart-add?id=${productDetails.id}" method="post" class="soLuongSanPham">
-     <input style="margin-top: 10% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
-     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -87%" class="so soLuongDat quantity" name="quantitySold"
-     type="number" value="1" onclick="clickQuantitySold()">
 
-                <button type="submit" class="gioHang" style="margin-top: 10% ; margin-right: -50% ; margin-left: -60%" >
+            <c:if test="${productDetails.id != 'sp2' && productDetails.id != 'sp24' && productDetails.id != 'sp32'}">
+     <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
+     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -57%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
+     type="number" value="1" onclick="clickQuantitySold()">
+            </c:if>
+                <c:if test="${productDetails.id == 'sp2'}">
+                <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
+     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -87%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
+                       type="number" value="1" onclick="clickQuantitySold()">
+                </c:if>
+            <c:if test="${productDetails.id == 'sp24'}">
+                <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
+     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -24%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
+                       type="number" value="1" onclick="clickQuantitySold()">
+            </c:if>
+
+            <c:if test="${productDetails.id == 'sp32'}">
+                <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
+     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -98%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
+                       type="number" value="1" onclick="clickQuantitySold()">
+            </c:if>
+
+                <c:if test="${productDetails.id == 'sp2'}">
+                <button type="submit" class="gioHang" style="margin-left: -59%; margin-top: 12% ; width: 43%">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </button>
+                </c:if>
+
+            <c:if test="${productDetails.id == 'sp24'}">
+                <button type="submit" class="gioHang" style="margin-left: 0%; margin-top: 12% ; width: 43%">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <h3 class="them">Thêm vào giỏ hàng</h3>
+                </button>
+            </c:if>
+            <c:if test="${productDetails.id == 'sp32'}">
+                <button type="submit" class="gioHang" style="margin-left: 15%; margin-top: 3% ; width: 43%">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <h3 class="them">Thêm vào giỏ hàng</h3>
+                </button>
+            </c:if>
+
+            <c:if test="${productDetails.id != 'sp24' && productDetails.id != 'sp2' && productDetails.id != 'sp32'}">
+                <button type="submit" class="gioHang" style="margin-left: -30%; margin-top: 12% ; width: 43%">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <h3 class="them">Thêm vào giỏ hàng</h3>
+                </button>
+            </c:if>
       </form>
+
         <form action="paymentAddProductDetails?id=${productDetails.id}&&priceNew=${productDetails.priceNew}"
               method="post" class="soLuongSanPham" style="margin-top: -198px ; margin-left: 7%" >
             <input style="display: none ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
-            <c:if test="${productDetails.id != 'sp24'}">
-                <button class="muaNgay" style="margin-left: 60%" type="submit">
+            <c:if test="${productDetails.id == 'sp2'}">
+                <button class="muaNgay" style="margin-left: 73%; margin-top: 2%; width: 28%" type="submit">
+                    <h3 class="mua"> Đặt mua ngay </h3>
+                </button>
+            </c:if>
+            <c:if test="${productDetails.id != 'sp24' && productDetails.id != 'sp2'}">
+                <button class="muaNgay" style="margin-left: 73%; margin-top: -8%; width: 28%" type="submit">
                     <h3 class="mua"> Đặt mua ngay </h3>
                 </button>
             </c:if>
             <c:if test="${productDetails.id == 'sp24'}">
-                <button class="muaNgay" style="margin-left: 60% ; margin-top: 4%"  type="submit">
+                <button class="muaNgay" style="margin-left: 73%; margin-top: -8%; width: 28%"  type="submit">
                     <h3 class="mua"> Đặt mua ngay</h3 >
                 </button>
             </c:if>
+
         </form>
 <%--        </form>--%>
+
         </div>
     </div>
 </div>
@@ -355,9 +402,11 @@
 <div class="MoTa_ThongTinThanhToan">
     <div class="ten"> Mô tả
         <div class="khungMoTa">
-            <p>
-            ${productDetails.description}
-            </p>
+            <p>    <span style="font-weight: bold">  Màu sắc : </span>${productDetails.color}</p>
+            <p>    <span style="font-weight: bold">  Kích thước : </span>${productDetails.size}</p>
+            <p>    <span style="font-weight: bold">  Khối lượng : </span>${productDetails.weight}</p>
+            <p>    <span style="font-weight: bold">  Chất liệu : </span>${productDetails.material}</p>
+            <p>    <span style="font-weight: bold">  Ý tưởng thiết kế : </span>${productDetails.design}</p>
         </div>
     </div>
     <div class="tenThongTinThanhToan">
