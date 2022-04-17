@@ -4,6 +4,7 @@ import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
@@ -77,7 +78,26 @@ public class DetailsProductController extends HttpServlet {
 
 //            boolean result = OrderDao.getInstance().createProductDetails(id, quantitySold, priceNew);
 
-            boolean result = OrderDao.getInstance().create (cart);
+            HttpSession sessionUser = request.getSession();
+
+            if ((sessionUser.getAttribute("auth")) == null) {
+                response.sendRedirect("/WebFurniture_war_exploded/login");
+                sessionUser.setAttribute("auth" , "");
+                return;
+            }
+            if (sessionUser.getAttribute("payment") == null) {
+                response.sendRedirect("/WebFurniture_war_exploded/payment");
+                return;
+            }
+
+            User user = (User) sessionUser.getAttribute("idUser");
+            if (user == null) {
+                user = User.getInstance();
+            }
+            String idUser = user.getId();
+            session.setAttribute("idUser" , idUser); // add session cart
+
+            boolean result = OrderDao.getInstance().create (cart , idUser);
 
             if (result) {
                 request.getRequestDispatcher("payment").forward(request, response);

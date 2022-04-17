@@ -427,7 +427,7 @@
                     <td ><input type="text" name ="size" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.size}"></td>
                     <td style="text-align: center"><input type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}"></td>
                     <td ><input type="text" name ="material" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.material}"></td>
-                    <td ><input type="text" name ="design" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.design}"></td>
+                    <td ><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="design"  rows="50" cols="50">${item.design}</textarea></td>
 
                 <td>
                         <input type="hidden" name ="id" value="${item.id}">

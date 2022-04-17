@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.cart;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
+import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -51,7 +52,16 @@ public class CheckOutController extends HttpServlet {
 
 //          response.sendRedirect("/WebFurniture_war_exploded/login");
 //          boolean result = OrderService.getInstance().createOrder((User) session.getAttribute("auth") ,(Cart) session.getAttribute("cart")) ;
-            boolean result = OrderService.getInstance().createOrder((Cart) session.getAttribute("cart"));
+        HttpSession sessionUser = request.getSession();
+        User user = (User) sessionUser.getAttribute("idUser");
+        if (user == null) {
+            user = User.getInstance();
+        }
+        String idUser = user.getId();
+        System.out.println("ID USSER ::::::::::::::;; "+idUser);
+        session.setAttribute("idUser" , idUser); // add session cart
+
+        boolean result = OrderService.getInstance().createOrder((Cart) session.getAttribute("cart") , idUser);
 
             session.removeAttribute("cart");
 

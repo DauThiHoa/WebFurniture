@@ -1,5 +1,5 @@
 package vn.edu.hcmuaf.fit.webfurniture.service;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
+
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 
@@ -15,8 +15,8 @@ public class OrderService {
         }
         return instance ;
     }
-    public boolean createOrder ( Cart cart ){
+    public boolean createOrder ( Cart cart , String id  ){
         OrderDao orderDao = OrderDao.getInstance ();
-        return  orderDao.create( cart);
+        return  orderDao.create( cart , id);
     }
 }

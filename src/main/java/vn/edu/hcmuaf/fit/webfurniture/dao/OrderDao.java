@@ -17,11 +17,18 @@ public class OrderDao {
         return instance;
     }
 
-    public boolean create( Cart cart) {
-        int idUser = JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT MAX(id + 0) FROM `user`")
-                    .mapTo(Integer.class).findFirst().get() ;
-        });
+    public boolean create( Cart cart , String id) {
+//        int idUser = JDBIConnector.get().withHandle(handle -> {
+//            return handle.createQuery("SELECT MAX(id + 0) FROM `user`")
+//                    .mapTo(Integer.class).findFirst().get() ;
+//        });
+//        int idUser ;
+//        if ( id == null ) {
+//            idUser = 0 ;
+//        }else {
+            int idUser = Integer.parseInt(id);
+            System.out.println(idUser + " nnnnnnnnnnnnn");
+//        }
         int orderId = JDBIConnector.get().withHandle(h -> {
             int i = 0 ;
             ResultBearing resultBearing = h.createUpdate("INSERT INTO orders ( idCustomer , totalMoney , status) VALUES  (? , ?, ? )")

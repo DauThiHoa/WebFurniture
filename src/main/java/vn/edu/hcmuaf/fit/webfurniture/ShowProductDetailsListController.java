@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ReviewProductDetailsService;
 
@@ -10,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "ShowProductDetailsListController", value = "/ProductDetails")
@@ -33,11 +35,19 @@ public class ShowProductDetailsListController extends HttpServlet {
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
            request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
 
-           String nameCustomer = "Name Customer";
+//        String nameCustomer = "Name Customer";
+//      request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());
 
-           request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());
-           System.out.println(nameCustomer);
-           request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("nameCustomer");
+        if (user == null) {
+            user = User.getInstance();
+        }
+        String nameCustomer = user.getUsername();
+        session.setAttribute("nameCustomer" , nameCustomer); // add session cart
+
+        System.out.println(nameCustomer);
+        request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
 
         String block = "block";
         String none = "none";

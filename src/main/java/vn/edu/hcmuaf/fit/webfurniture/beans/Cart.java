@@ -25,6 +25,7 @@ public class Cart implements Serializable {
     public static Cart getInstance(){
         return new Cart() ;
     }
+
     // put productDetails to cart
     public void put ( ProductDetails productDetails){
         if (productDetailsList.containsKey ( productDetails.getId()) ){

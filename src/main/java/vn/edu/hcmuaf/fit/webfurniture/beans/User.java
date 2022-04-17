@@ -17,6 +17,9 @@ public class User implements Serializable {
 
     public User() {
     }
+    public static User getInstance(){
+        return new User() ;
+    }
     // full constructor
 
 
