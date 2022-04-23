@@ -126,7 +126,6 @@ public class PaymentSuccessController extends HttpServlet {
 
         }
         //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
-
     }
 
     @Override

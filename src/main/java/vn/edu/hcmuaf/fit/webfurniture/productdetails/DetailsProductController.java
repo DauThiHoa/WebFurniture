@@ -23,6 +23,18 @@ public class DetailsProductController extends HttpServlet {
 //      String idProductDetails =  request.getParameter("idProductDetails");
 //      request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
 
+        HttpSession sessionUser = request.getSession();
+
+        if ((sessionUser.getAttribute("auth")) == null) {
+            response.sendRedirect("/WebFurniture_war_exploded/login");
+            sessionUser.setAttribute("auth" , "");
+            return;
+        }
+        if (sessionUser.getAttribute("cart") == null) {
+            response.sendRedirect("/WebFurniture_war_exploded/cart");
+            return;
+        }
+
         String block = "block";
         String none = "none";
         String display = "none";
@@ -51,7 +63,7 @@ public class DetailsProductController extends HttpServlet {
                 cart = Cart.getInstance();
             }
             if (quantitySold != null) {
-                cart.setQuantitySold(Integer.parseInt(quantitySold));
+                cart.setQuantitySold(Integer.parseInt(quantitySold) + cart.getQuantitySold());
             }
 
         cart.put(productDetails);
@@ -73,18 +85,6 @@ public class DetailsProductController extends HttpServlet {
             // Số sản phẩm trong giỏ hàng
             int sumListCart = ProductDetailsService.getInstance().getSumCart();
             request.setAttribute("sizeListCart", sumListCart);
-
-            HttpSession sessionUser = request.getSession();
-
-            if ((sessionUser.getAttribute("auth")) == null) {
-                response.sendRedirect("/WebFurniture_war_exploded/login");
-                sessionUser.setAttribute("auth" , "");
-                return;
-            }
-            if (sessionUser.getAttribute("cart") == null) {
-                response.sendRedirect("/WebFurniture_war_exploded/cart");
-                return;
-            }
 
             boolean result = OrderDao.getInstance().create (cart);
 

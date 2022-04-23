@@ -393,7 +393,6 @@
                                     <button  type="submit" class="btnBuyNow buy-now medium--hide small--hide"
                                              data-id="1050379730"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span></span></button>
-
                                 </form>
 
                             </div>

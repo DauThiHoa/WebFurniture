@@ -36,7 +36,8 @@ public class Action extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         String id = request.getParameter("id");
-     int productDetails =  ProductDetailsService.getInstance().delete(id);
+        int productDetails =  ProductDetailsService.getInstance().delete(id);
+
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);

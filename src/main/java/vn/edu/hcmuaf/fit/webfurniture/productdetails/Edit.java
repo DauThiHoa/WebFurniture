@@ -29,13 +29,13 @@ public class Edit extends HttpServlet {
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 
-     String id = request.getParameter("id");
-     String name = request.getParameter("name");
-     String description = request.getParameter("description");
-     String priceNew = request.getParameter("priceNew");
-     String priceOld = request.getParameter("priceOld");
-     String quantity = request.getParameter("quantity");
-     String status = request.getParameter("status");
+        String id = request.getParameter("id");
+        String name = request.getParameter("name");
+        String description = request.getParameter("description");
+        String priceNew = request.getParameter("priceNew");
+        String priceOld = request.getParameter("priceOld");
+        String quantity = request.getParameter("quantity");
+        String status = request.getParameter("status");
 
         String color = request.getParameter("color");
         String size = request.getParameter("size");
@@ -75,7 +75,8 @@ public class Edit extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-             doGet(request,response);
+
+        doGet(request,response);
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
     }

@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductDetailsService implements Serializable {
-    private static ProductDetailsService instance ;
-    private int sumCart = 0 ;
+    private static ProductDetailsService instance;
+    private int sumCart = 0;
 
     public int getSumCart() {
         return sumCart;
@@ -21,32 +21,34 @@ public class ProductDetailsService implements Serializable {
     }
 
     public static ProductDetailsService getInstance() {
-        if (instance == null ){
+        if (instance == null) {
             instance = new ProductDetailsService();
         }
         return instance;
     }
-    public ProductDetailsService (){
+
+    public ProductDetailsService() {
 
     }
-    public List <ProductDetails> getAll () {
+
+    public List<ProductDetails> getAll() {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from productdetails")
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
 
-    public ProductDetails getProductDetails ( String id ){
+    public ProductDetails getProductDetails(String id) {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from productdetails where id = ? ")
-                    .bind (0 , id)
+                    .bind(0, id)
                     .mapToBean(ProductDetails.class).first();
         });
     }
 
-    public ProductDetails getById(String id ) {
+    public ProductDetails getById(String id) {
 
-        return ProductDetailsDao.getInstance ().getById (id);
+        return ProductDetailsDao.getInstance().getById(id);
     }
 
     public int delete(String id) {
@@ -56,17 +58,17 @@ public class ProductDetailsService implements Serializable {
 
     public int update(String id, String name, String description, String priceNew, String priceOld, String quantity, String status
             , String color, String size, String weight, String material, String design) {
-        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status , color,size,weight,material,design);
+        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status, color, size, weight, material, design);
     }
 
-    public List <ProductDetails> getAllName (String name ){
+    public List<ProductDetails> getAllName(String name) {
 
-        return  ProductDetailsDao.getInstance().getAllName(name);
+        return ProductDetailsDao.getInstance().getAllName(name);
     }
 
     public static boolean addProductDetails(String id, String name, String description, String trademark, String production,
-                                      String priceOld, String linkImage, String quantity, String priceNew, String status,
-                                      String produtGroups, String category , String color, String size, String weight,
+                                            String priceOld, String linkImage, String quantity, String priceNew, String status,
+                                            String produtGroups, String category, String color, String size, String weight,
                                             String material, String design) {
         int changePriceOld = Integer.parseInt(priceOld);
         int changeQuantity = Integer.parseInt(quantity);
@@ -74,38 +76,38 @@ public class ProductDetailsService implements Serializable {
 
         int exist = JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select count(*) from productdetails where id = ? ")
-                    .bind(0,id)
-                    .mapTo(Integer.class).findFirst().get() ;
+                    .bind(0, id)
+                    .mapTo(Integer.class).findFirst().get();
         });
-        if (exist >= 1 ){
-            return false ;
+        if (exist >= 1) {
+            return false;
         }
         int total = JDBIConnector.get().withHandle(h -> {
-            int sum = 0 ;
+            int sum = 0;
             sum += h.createUpdate("INSERT INTO productdetails ( id , `name` , description , trademark , production ," +
                             " priceOld , linkImage , quantity , priceNew , `status` , idProductGroups , idCategory " +
                             " , color , size , weight , material , design) " +
                             "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
-                    .bind(0 , id )
-                    .bind(1 , name)
-                    .bind(2 , description)
-                    .bind(3 , trademark)
-                    .bind(4 ,  production)
-                    .bind(5 , changePriceOld )
-                    .bind(6 , linkImage )
-                    .bind(7 , changeQuantity)
-                    .bind(8 , changePriceNew)
-                    .bind(9 , status)
-                    .bind(10 ,  produtGroups)
-                    .bind(11, category )
-                    .bind(12 , color)
-                    .bind(13 , size)
-                    .bind(14 , weight)
-                    .bind(15 ,  material)
-                    .bind(16, design )
+                    .bind(0, id)
+                    .bind(1, name)
+                    .bind(2, description)
+                    .bind(3, trademark)
+                    .bind(4, production)
+                    .bind(5, changePriceOld)
+                    .bind(6, linkImage)
+                    .bind(7, changeQuantity)
+                    .bind(8, changePriceNew)
+                    .bind(9, status)
+                    .bind(10, produtGroups)
+                    .bind(11, category)
+                    .bind(12, color)
+                    .bind(13, size)
+                    .bind(14, weight)
+                    .bind(15, material)
+                    .bind(16, design)
                     .execute();
             // Số dòng được chèn vào
-            return sum ;
+            return sum;
         });
         // size của đơn hàng
         return true;
@@ -113,23 +115,32 @@ public class ProductDetailsService implements Serializable {
 
     public static boolean addProductCart(String linkImage, String idProduct, String nameProduct, int price, int quantitySold,
                                          int money) {
-
-        int total = JDBIConnector.get().withHandle(h -> {
-            int sum = 0 ;
-            sum += h.createUpdate("INSERT INTO cart ( linkImage , idProduct , nameProduct , price , quantitySold , money) " +
-                            "VALUES (?,?,?,?,?,? )")
-                    .bind(0 , linkImage)
-                    .bind(1 , idProduct)
-                    .bind(2 , nameProduct)
-                    .bind(3 , price)
-                    .bind(4 , quantitySold)
-                    .bind(5 , money ) .execute();
+        int update = JDBIConnector.get().withHandle(h -> {
+            int sum = 0;
+            sum += h.createUpdate("update cart set quantitySold = quantitySold + 1 where idProduct = ? ")
+                    .bind(0, idProduct).execute();
             // Số dòng được chèn vào
-            return sum ;
+            return sum;
         });
-        // size của đơn hàng
-        return true;
+        if (update != 1 ) {
+            int total = JDBIConnector.get().withHandle(h -> {
+                int sum = 0;
+                sum += h.createUpdate("INSERT INTO cart ( linkImage , idProduct , nameProduct , price , quantitySold , money) " +
+                                "VALUES (?,?,?,?,?,? )")
+                        .bind(0, linkImage)
+                        .bind(1, idProduct)
+                        .bind(2, nameProduct)
+                        .bind(3, price)
+                        .bind(4, quantitySold)
+                        .bind(5, money).execute();
+                // Số dòng được chèn vào
+                return sum;
+            });
+        }
+            // size của đơn hàng
+            return true;
     }
+
     public boolean removeCart ( ) {
 
         int total = JDBIConnector.get().withHandle(h -> {
