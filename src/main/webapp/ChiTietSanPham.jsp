@@ -274,7 +274,7 @@
                 </c:if>
             <c:if test="${productDetails.id == 'sp24'}">
                 <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
-     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -24%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
+     background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -65%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
                        type="number" value="1" onclick="clickQuantitySold()">
             </c:if>
 

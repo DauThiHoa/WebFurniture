@@ -26,7 +26,6 @@ public class ControllerLogin extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
-        request.getRequestDispatcher("/DangNhap.jsp").forward(request, response);
 
         String block = "block";
         String none = "none";
@@ -35,6 +34,7 @@ public class ControllerLogin extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
+        request.getRequestDispatcher("/DangNhap.jsp").forward(request, response);
     }
 
     @Override

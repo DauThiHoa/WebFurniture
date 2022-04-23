@@ -1,14 +1,15 @@
 package vn.edu.hcmuaf.fit.webfurniture.services;
 
 import vn.edu.hcmuaf.fit.webfurniture.dao.UserDao;
+import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
+
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
 
-
-public class UserServices {
+public class UserServices implements Serializable {
     private static UserServices instance;
-
 
     private UserServices() {
 
@@ -25,11 +26,12 @@ public class UserServices {
         return UserDao.getInstance().checkLogin(email, hashPasword(password));
     }
 
-    public boolean register(String username, String password, String email){
-        return UserDao.getInstance().register(username, hashPasword(password) ,email);
+    public boolean register(String username, String password, String email) {
+        return UserDao.getInstance().register(username, hashPasword(password), email);
 
     }
-private String hashPasword(String pass) {
+
+    private String hashPasword(String pass) {
         try {
             System.out.println(pass);
 
@@ -44,4 +46,22 @@ private String hashPasword(String pass) {
         }
     }
 
+    // Lấy id
+    public int idUser(String email) {
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select id from `user` where email like '19130075@st.hcmuaf.edu.vn' ")
+                    .mapTo(Integer.class).findFirst().get();
+        });
+    }
+
+    // Lấy user
+    public String userName(String email) {
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select username from `user` where email like ?")
+                    .bind(0, email)
+                    .mapTo(String.class).findFirst().get();
+        });
+    }
+
 }
+

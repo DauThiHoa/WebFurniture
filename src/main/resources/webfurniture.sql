@@ -11,7 +11,7 @@
  Target Server Version : 100422
  File Encoding         : 65001
 
- Date: 16/04/2022 15:32:36
+ Date: 23/04/2022 11:14:37
 */
 
 SET NAMES utf8mb4;
@@ -30,13 +30,11 @@ CREATE TABLE `cart`  (
   `quantitySold` int NOT NULL,
   `money` int NOT NULL,
   PRIMARY KEY (`stt`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cart
 -- ----------------------------
-INSERT INTO `cart` VALUES (7, 'Image/KeTiViHoBu.PNG', 'sp6', 'Kệ Ti Vi HoBu', 900000, 1, 900000);
-INSERT INTO `cart` VALUES (8, 'NoiThatPhongBep/Image_phongbep/tu-bep-don-gian.jpg', 's22', 'Tủ bếp đơn giản', 1100000, 3, 3300000);
 
 -- ----------------------------
 -- Table structure for contact
@@ -75,13 +73,11 @@ CREATE TABLE `customer`  (
   `ship` int NOT NULL,
   `totalMoney` int NOT NULL,
   PRIMARY KEY (`idCustomer`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of customer
 -- ----------------------------
-INSERT INTO `customer` VALUES (3, 13, 'Đậu Thị Hoa', '2022-04-15', 'Nữ', 'Thôn Phúc Tân - xã Phúc Thọ - huyện Lâm Hà - tỉnh Lâm Đồng', '0397080549', '19130075@st.hcmuaf.edu.vn', 'BIDV', '3', 'Nhận Tại Cửa Hàng', 1000, 130000, 5200000);
-INSERT INTO `customer` VALUES (4, 20, 'Đậu Thị Hoa', '2022-03-30', 'Nữ', 'Thôn Phúc Tân - xã Phúc Thọ - huyện Lâm Hà - tỉnh Lâm Đồng', '0397080549', '19130075@st.hcmuaf.edu.vn', 'BIDV', '43243', 'Giao Hàng', 1000, 52916, 6550000);
 
 -- ----------------------------
 -- Table structure for detailedproductreview
@@ -162,37 +158,11 @@ CREATE TABLE `orderdetails`  (
   `discount` double(50, 0) NULL DEFAULT NULL,
   `totalMoney` double(50, 0) NOT NULL,
   PRIMARY KEY (`idOrderDetails`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 44 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of orderdetails
 -- ----------------------------
-INSERT INTO `orderdetails` VALUES (18, '13', 'sp4', 1, 5000000, 250000, 5000000);
-INSERT INTO `orderdetails` VALUES (19, '13', 'sp7', 1, 200000, 10000, 200000);
-INSERT INTO `orderdetails` VALUES (20, '14', 'sp7', 1, 200000, 10000, 200000);
-INSERT INTO `orderdetails` VALUES (21, '15', 'sp7', 2, 200000, 10000, 400000);
-INSERT INTO `orderdetails` VALUES (22, '16', 's26', 1, 3150000, 157500, 3150000);
-INSERT INTO `orderdetails` VALUES (23, '16', 'sp7', 2, 200000, 10000, 400000);
-INSERT INTO `orderdetails` VALUES (24, '17', 's26', 1, 3150000, 157500, 3150000);
-INSERT INTO `orderdetails` VALUES (25, '17', 'sp7', 2, 200000, 10000, 400000);
-INSERT INTO `orderdetails` VALUES (26, '17', 's29', 1, 320000, 16000, 320000);
-INSERT INTO `orderdetails` VALUES (27, '18', 's26', 1, 3150000, 157500, 3150000);
-INSERT INTO `orderdetails` VALUES (28, '18', 's37', 1, 100000, 5000, 100000);
-INSERT INTO `orderdetails` VALUES (29, '18', 'sp7', 2, 200000, 10000, 400000);
-INSERT INTO `orderdetails` VALUES (30, '18', 's29', 1, 320000, 16000, 320000);
-INSERT INTO `orderdetails` VALUES (31, '19', 's33', 1, 2280000, 114000, 2280000);
-INSERT INTO `orderdetails` VALUES (32, '19', 's26', 1, 3150000, 157500, 3150000);
-INSERT INTO `orderdetails` VALUES (33, '19', 's37', 1, 100000, 5000, 100000);
-INSERT INTO `orderdetails` VALUES (34, '19', 'sp7', 2, 200000, 10000, 400000);
-INSERT INTO `orderdetails` VALUES (35, '19', 's29', 1, 320000, 16000, 320000);
-INSERT INTO `orderdetails` VALUES (36, '20', 's33', 1, 2280000, 114000, 2280000);
-INSERT INTO `orderdetails` VALUES (37, '20', 'sp58', 1, 300000, 15000, 300000);
-INSERT INTO `orderdetails` VALUES (38, '20', 's26', 1, 3150000, 157500, 3150000);
-INSERT INTO `orderdetails` VALUES (39, '20', 's37', 1, 100000, 5000, 100000);
-INSERT INTO `orderdetails` VALUES (40, '20', 'sp7', 2, 200000, 10000, 400000);
-INSERT INTO `orderdetails` VALUES (41, '20', 's29', 1, 320000, 16000, 320000);
-INSERT INTO `orderdetails` VALUES (42, '21', 's22', 6, 1100000, 55000, 6600000);
-INSERT INTO `orderdetails` VALUES (43, '22', 'sp24', 1, 1400000, 70000, 1400000);
 
 -- ----------------------------
 -- Table structure for orders
@@ -206,21 +176,11 @@ CREATE TABLE `orders`  (
   `dateReceipt` datetime(0) NOT NULL DEFAULT current_timestamp(0),
   `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
   PRIMARY KEY (`idOrder`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
-INSERT INTO `orders` VALUES (13, '1', 5200000, '2022-04-15 15:17:18', '2022-04-15 15:17:18', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (14, '1', 200000, '2022-04-15 15:17:49', '2022-04-15 15:17:49', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (15, '1', 400000, '2022-04-15 15:17:52', '2022-04-15 15:17:52', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (16, '1', 3550000, '2022-04-15 15:17:58', '2022-04-15 15:17:58', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (17, '1', 3870000, '2022-04-15 15:18:07', '2022-04-15 15:18:07', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (18, '1', 3970000, '2022-04-15 15:18:15', '2022-04-15 15:18:15', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (19, '1', 6250000, '2022-04-15 15:18:26', '2022-04-15 15:18:26', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (20, '1', 6550000, '2022-04-15 15:18:42', '2022-04-15 15:18:42', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (21, '1', 6600000, '2022-04-16 09:06:49', '2022-04-16 09:06:49', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (22, '1', 1400000, '2022-04-16 10:30:20', '2022-04-16 10:30:20', 'Đã đặt hàng');
 
 -- ----------------------------
 -- Table structure for pageweb
@@ -688,11 +648,10 @@ CREATE TABLE `user`  (
   `password` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'Đậu Hoa', '827ccb0eea8a706c4c34a16891f84e7b', '19130075@st.hcmuaf.edu.vn');
 
 SET FOREIGN_KEY_CHECKS = 1;

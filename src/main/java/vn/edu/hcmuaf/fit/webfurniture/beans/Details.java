@@ -5,23 +5,66 @@ import java.io.Serializable;
 public class Details implements Serializable {
      private String idOrderDetails ;
      private String idOrder ;
-     private String idProductDetails ;
-     private int quantitySold ;
+     private String linkImage ;
+     private String idProduct ;
+     private String nameProduct ;
      private int price ;
+     private int quantitySold ;
      private int discount ;
-     private int totalMoney ;
+     private int money ;
 
      public Details( ) {
      }
 
-     public Details(String idOrderDetails, String idOrder, String idProductDetails, int quantitySold, int price, int discount, int totalMoney) {
+     public Details(String linkImage, String idProduct, String nameProduct, int price, int quantitySold, int money) {
+          this.linkImage = linkImage;
+          this.idProduct = idProduct;
+          this.nameProduct = nameProduct;
+          this.price = price;
+          this.quantitySold = quantitySold;
+          this.money = money;
+     }
+
+     public String getLinkImage() {
+          return linkImage;
+     }
+
+     public void setLinkImage(String linkImage) {
+          this.linkImage = linkImage;
+     }
+
+     public String getIdProduct() {
+          return idProduct;
+     }
+
+     public void setIdProduct(String idProduct) {
+          this.idProduct = idProduct;
+     }
+
+     public String getNameProduct() {
+          return nameProduct;
+     }
+
+     public void setNameProduct(String nameProduct) {
+          this.nameProduct = nameProduct;
+     }
+
+     public int getMoney() {
+          return money;
+     }
+
+     public void setMoney(int money) {
+          this.money = money;
+     }
+
+     public Details(String idOrderDetails, String idOrder, String idProduct, int quantitySold, int price, int discount, int money) {
           this.idOrderDetails = idOrderDetails;
           this.idOrder = idOrder;
-          this.idProductDetails = idProductDetails;
+          this.idProduct = idProduct;
           this.quantitySold = quantitySold;
           this.price = price;
           this.discount = discount;
-          this.totalMoney = totalMoney;
+          this.money = money;
      }
 
      public String getIdOrderDetails() {
@@ -41,11 +84,11 @@ public class Details implements Serializable {
      }
 
      public String getIdProductDetails() {
-          return idProductDetails;
+          return idProduct;
      }
 
-     public void setIdProductDetails(String idProductDetails) {
-          this.idProductDetails = idProductDetails;
+     public void setIdProductDetails(String idProduct) {
+          this.idProduct = idProduct;
      }
 
      public int getQuantitySold() {
@@ -73,10 +116,10 @@ public class Details implements Serializable {
      }
 
      public int getTotalMoney() {
-          return totalMoney;
+          return money;
      }
 
-     public void setTotalMoney(int totalMoney) {
-          this.totalMoney = totalMoney;
+     public void setTotalMoney(int money) {
+          this.money = money;
      }
 }

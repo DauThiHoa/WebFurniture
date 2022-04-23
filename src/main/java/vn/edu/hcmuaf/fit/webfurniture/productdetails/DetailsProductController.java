@@ -4,7 +4,6 @@ import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
 import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
@@ -21,8 +20,15 @@ import java.io.IOException;
 public class DetailsProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//           String idProductDetails =  request.getParameter("idProductDetails");
-//           request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
+//      String idProductDetails =  request.getParameter("idProductDetails");
+//      request.setAttribute("ProductDetailsAll" , OrderDetailsService.getInstance().getProductDetails(idProductDetails));
+
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
@@ -47,8 +53,9 @@ public class DetailsProductController extends HttpServlet {
             if (quantitySold != null) {
                 cart.setQuantitySold(Integer.parseInt(quantitySold));
             }
-            cart.put(productDetails);
-            session.setAttribute("cart", cart); // add session cart
+
+        cart.put(productDetails);
+        session.setAttribute("cart", cart); // add session cart
 
             request.setAttribute("sumTotalMoney", Integer.parseInt(quantitySold) * Integer.parseInt(priceNew));
             int quantity = Integer.parseInt(quantitySold);
@@ -57,26 +64,15 @@ public class DetailsProductController extends HttpServlet {
             double sumDiscount = (quantity * price) * (quantity * 0.01);
             request.setAttribute("sumDiscount", (int) sumDiscount);
 
-            String block = "block";
-            String none = "none";
-            String display = "none";
-            request.setAttribute("block", block);
-            request.setAttribute("none", none);
-            request.setAttribute("display", display);
+            int totalMoney = productDetails.getPriceNew() * cart.getQuantitySold() ;
+            int sumList = ProductDetailsService.getInstance().sumListCart(productDetails.getLinkImage(), productDetails.getId() ,
+                    productDetails.getName(), productDetails.getPriceNew(), cart.getQuantitySold(), totalMoney);
 
-            //        Số sản phẩm trong giỏ hàng
+            ProductDetailsService.getInstance().setSumCart(sumList);
+
+            // Số sản phẩm trong giỏ hàng
             int sumListCart = ProductDetailsService.getInstance().getSumCart();
             request.setAttribute("sizeListCart", sumListCart);
-
-            // Xử lý đăng nhập -> lấy id khách hàng
-//        if ((session.getAttribute("auth")) == null ) {
-//                response.sendRedirect("/WebFurniture_war_exploded/login");
-//                return;
-//            }
-
-//            boolean result = OrderDao.getInstance().createProductDetails((User) session.getAttribute("auth") ,id,quantitySold,priceNew) ;
-
-//            boolean result = OrderDao.getInstance().createProductDetails(id, quantitySold, priceNew);
 
             HttpSession sessionUser = request.getSession();
 
@@ -85,33 +81,24 @@ public class DetailsProductController extends HttpServlet {
                 sessionUser.setAttribute("auth" , "");
                 return;
             }
-            if (sessionUser.getAttribute("payment") == null) {
-                response.sendRedirect("/WebFurniture_war_exploded/payment");
+            if (sessionUser.getAttribute("cart") == null) {
+                response.sendRedirect("/WebFurniture_war_exploded/cart");
                 return;
             }
 
-            User user = (User) sessionUser.getAttribute("idUser");
-            if (user == null) {
-                user = User.getInstance();
-            }
-            String idUser = user.getId();
-            session.setAttribute("idUser" , idUser); // add session cart
-
-            boolean result = OrderDao.getInstance().create (cart , idUser);
+            boolean result = OrderDao.getInstance().create (cart);
 
             if (result) {
-                request.getRequestDispatcher("payment").forward(request, response);
-            } else {
-                request.getRequestDispatcher("ProductDetails").forward(request, response);
+                    request.getRequestDispatcher("payment").forward(request, response);
+               } else {
+                    request.getRequestDispatcher("ProductDetails").forward(request, response);
             }
-
-
         }
     }
         @Override
         protected void doPost (HttpServletRequest request, HttpServletResponse response) throws
         ServletException, IOException {
             doGet(request, response);
-
         }
+
 }

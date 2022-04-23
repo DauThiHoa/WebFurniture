@@ -1,9 +1,12 @@
 package vn.edu.hcmuaf.fit.webfurniture.beans;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
+    private static List<User> usersList = new ArrayList<User>() ;
     private String id ;
     private String username;
     private String password;
@@ -21,7 +24,30 @@ public class User implements Serializable {
         return new User() ;
     }
     // full constructor
+    public void addProductListUser (User user){
+        if (!usersList.contains(user)){
+            usersList.add(user);
+        }
+    }
+    public void removeProductListUser (User user){
+            usersList.remove(user);
+    }
 
+    public static List<User> getUsersList() {
+        return usersList;
+    }
+
+
+    public static void setUsersList(List<User> usersList) {
+        User.usersList = usersList;
+    }
+
+    public User(String id, String username, String password, String email) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 
     public User(String username, String password, String email) {
         this.username = username;

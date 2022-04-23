@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.controller;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
@@ -28,7 +29,20 @@ public class HandlingLogin extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+        String block = "block";
+        String none = "none";
+        String display = "none";
+        request.setAttribute("block", block);
+        request.setAttribute("none", none);
+        request.setAttribute("display", display);
+
+
         if (UserServices.getInstance().checkLogin(email, password)) {
+            User.getInstance().setEmail(email);
+            User.getInstance().setPassword(password);
+            User.getInstance().setId(UserServices.getInstance().idUser(email)+"");
+            User.getInstance().setFullname(UserServices.getInstance().userName(email));
+
             response.sendRedirect("ProductDetailsList");
 //          response.sendRedirect("cart");
 
@@ -38,13 +52,6 @@ public class HandlingLogin extends HttpServlet {
             request.setAttribute("error", "Email or password is correct");
             request.getRequestDispatcher("login").forward(request,response);
         }
-
-        String block = "block";
-        String none = "none";
-        String display = "none";
-        request.setAttribute("block", block);
-        request.setAttribute("none", none);
-        request.setAttribute("display", display);
 
     }
 }

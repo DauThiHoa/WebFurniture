@@ -23,7 +23,7 @@ public class OrderDetailsService {
 
     public List <Details> getAll () {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select * from orderdetails")
+            return handle.createQuery("select * from cart")
                     .mapToBean(Details.class).stream().collect(Collectors.toList());
         });
     }
@@ -34,20 +34,32 @@ public class OrderDetailsService {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
+
+//    // SUM DISCOUNT ( KHUYEN MAI )
+//    public int sumDiscount(){
+//        int sum = 1 ;
+//        sum = JDBIConnector.get().withHandle(handle -> {
+//            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+//                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails" +
+//                            " WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
+//                    .mapTo(Integer.class).findFirst().get();
+//        });
+//        return sum ;
+//    }
+
     // SUM DISCOUNT ( KHUYEN MAI )
     public int sumDiscount(){
-        int sum = 1 ;
-        sum = JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT SUM( discount ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
-                    .mapTo(Integer.class).findFirst().get() / handle.createQuery("SELECT COUNT(*) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0) FROM orderdetails )")
-                    .mapTo(Integer.class).findFirst().get();
-        });
-        return sum ;
-    }
+    int sum = 1 ;
+    sum = JDBIConnector.get().withHandle(handle -> {
+        return handle.createQuery("select sum(money) * 0.01 from cart")
+                .mapTo(Integer.class).findFirst().get() ;
+    });
+    return sum ;
+}
     // SUM TOTALMONEY ( TONG TIEN SAN PHAM )
     public int sumTotalMoney(){
             return  JDBIConnector.get().withHandle(handle -> {
-                return handle.createQuery("SELECT SUM( totalMoney ) FROM orderdetails WHERE idOrder = ( SELECT MAX( idOrder + 0 ) FROM orderdetails ) ")
+                return handle.createQuery("select sum(money) from cart")
                         .mapTo(Integer.class).findFirst().get();
             });
     }
@@ -57,11 +69,13 @@ public class OrderDetailsService {
             return handle.createQuery("SELECT idOrder FROM orders  WHERE idOrder = ( SELECT MAX(idOrder + 0) FROM orders )")
                     .mapTo(Integer.class).findFirst().get() ;
         });
+
 //        int ship = sumDiscount();
 //        int totalMoney = sumTotalMoney();
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-                sum += h.createUpdate("insert into customer (idOrder , name , birthDay,gender, address ,phone, email ,bank, cardNumber , deliveryMethod , discount , ship , totalMoney) values(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+                sum += h.createUpdate("insert into customer (idOrder , name , birthDay,gender, address ,phone, email" +
+                                " ,bank, cardNumber , deliveryMethod , discount , ship , totalMoney) values(?,?,?,?,?,?,?,?,?,?,?,?,?)")
                         .bind(0 , idOrder )
                         .bind(1 , name )
                         .bind(2 , birthDay )
@@ -69,7 +83,7 @@ public class OrderDetailsService {
                         .bind(4 , address)
                         .bind(5, phone)
                         .bind(6 , email)
-                        .bind(7 ,  bank)
+                        .bind(7 , bank)
                         .bind(8 , cardNumber )
                         .bind( 9 ,method )
                         .bind( 10 , discountCode)

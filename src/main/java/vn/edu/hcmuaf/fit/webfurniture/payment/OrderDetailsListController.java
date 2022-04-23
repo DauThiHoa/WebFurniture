@@ -35,7 +35,7 @@ public class OrderDetailsListController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
-            request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
+        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
 
     }
 
@@ -44,12 +44,7 @@ public class OrderDetailsListController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        request.setAttribute("OrderDetailsAll" , OrderDetailsService.getInstance().getAll());
-        request.setAttribute("getProductDetailsAll" , OrderDetailsService.getInstance().getProductDetailsAll());
-        request.setAttribute("sumDiscount" , OrderDetailsService.getInstance().sumDiscount());
-        request.setAttribute("sumTotalMoney" , OrderDetailsService.getInstance().sumTotalMoney());
-
-        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
+        doGet(request,response);
 
     }
 }

@@ -358,7 +358,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -402,7 +402,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -446,7 +446,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -490,7 +490,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -534,7 +534,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -578,7 +578,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -622,7 +622,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -666,7 +666,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -710,7 +710,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -754,7 +754,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -798,7 +798,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -842,7 +842,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"
@@ -886,7 +886,7 @@
                                 <h4 class="ten">${p.name}</h4>
                                 <h4 class="gia">${p.priceNew}đ</h4>
                                 <div class="nutgiohang" style="margin-left: 0%">
-                                    <a href="cart-add?id=${p.id}" >
+                                    <a href="cart-add?id=${p.id}&quantitySold=${1}" >
                                         <button type="button" class="btnAddToCart add-to-cart medium--hide small--hide"
                                                 style="margin-top: -3px ; margin-left: 3px"
                                                 data-id="1050379730"><i class="fa fa-cart-plus"

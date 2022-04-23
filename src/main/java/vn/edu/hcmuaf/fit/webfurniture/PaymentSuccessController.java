@@ -57,14 +57,6 @@ public class PaymentSuccessController extends HttpServlet {
         String quantitySold = request.getParameter("quantitySold");
         String priceNew = request.getParameter("priceNew");
 
-//        int quantity = Integer.parseInt(quantitySold) ;
-//        int price = Integer.parseInt(priceNew) ;
-//        System.out.println(quantity + "  =  " + price);
-//
-//        request.setAttribute("sumTotalMoney" ,quantity * price);
-//        double sumDiscount_double = (quantity * price) * (quantity * 0.01);
-//        request.setAttribute("sumDiscount" ,(int) sumDiscount_double) ;
-
         String sumDiscount = request.getParameter("sumDiscount");
         String sumTotalMoney = request.getParameter("sumTotalMoney");
 
@@ -84,21 +76,27 @@ public class PaymentSuccessController extends HttpServlet {
         }
         if ( name != "" && brithDay != "" && gender != "" && email != "" && phone != "" && address != "" && bank != "" &&
                 cardNumber != "" && method != "" && discountCode != "" ) {
-            boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address, bank, cardNumber, method, discountCode , sumDiscount , sumTotalMoney);
+            boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address,
+                    bank, cardNumber, method, discountCode , sumDiscount , sumTotalMoney);
+
+            // Xác nhận đã thanh toán số sản phẩm trong bảng sản phẩm tạm thời
+            if ( ProductDetailsService.getInstance().removeCart()){
+                ProductDetailsService.getInstance().setSumCart(0);
+            }
 
             String subject = "PAYMENT SUCCESS";
-            String content = "<h2 style=\"color: #1fb5d4 ; font-weight: bold\">Payment made successfully!</h2>";
-            content += "<h3 style=\"color: #1fb5d4 ; font-weight: bold\">Within 5 minutes, WebFurniture will" +
-                    "    contact you to confirm the delivery information via email you have provided</h3>";
-            content += "<h3 style=\" font-weight: bold\">Full name :"+ name+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">BrithDay :"+ brithDay+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Shipping fee : "+sumDiscount+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Total money : "+sumTotalMoney+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Payment method : Bank transfer "+bank+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Card number : "+cardNumber+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Delivery address : "+address+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Phone number : "+phone+"</h3>";
-            content += "<h3 style=\" font-weight: bold\">Transaction code : "+discountCode+"</h3>";
+            String content = "<h6 style=\"color: #1fb5d4 ; font-weight: bold\">Payment made successfully!</h6>";
+            content += "<p style=\"color: #1fb5d4 ; font-weight: bold\">Within 5 minutes, WebFurniture will" +
+                    "    contact you to confirm the delivery information via email you have provided</p>";
+            content += "<p style=\" font-weight: bold\">Full name : "+ name+"</p>";
+            content += "<p style=\" font-weight: bold\">BrithDay : "+ brithDay+"</p>";
+            content += "<p style=\" font-weight: bold\">Shipping fee : "+sumDiscount+"</p>";
+            content += "<p style=\" font-weight: bold\">Total money : "+sumTotalMoney+"</p>";
+            content += "<p style=\" font-weight: bold\">Payment method : Bank transfer "+bank+"</p>";
+            content += "<p style=\" font-weight: bold\">Card number : "+cardNumber+"</p>";
+            content += "<p style=\" font-weight: bold\">Delivery address : "+address+"</p>";
+            content += "<p style=\" font-weight: bold\">Phone number : "+phone+"</p>";
+            content += "<p style=\" font-weight: bold\">Transaction code : "+discountCode+"</p>";
 
             boolean sendMail = sendMail(email, subject, content);
 
@@ -125,7 +123,6 @@ public class PaymentSuccessController extends HttpServlet {
             request.setAttribute("sizeListCart" , sumListCart);
 
             request.getRequestDispatcher("/payment").forward(request , response);
-
 
         }
         //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);

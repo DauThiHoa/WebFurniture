@@ -127,6 +127,16 @@ public class Cart implements Serializable {
     public void setSize(int size) {
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "id=" + id +
+                ", productDetailsList=" + productDetailsList +
+                ", quantitySold=" + quantitySold +
+                ", size=" + size +
+                '}';
+    }
 }
 
 

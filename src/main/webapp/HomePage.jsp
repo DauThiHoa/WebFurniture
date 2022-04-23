@@ -215,7 +215,7 @@
             <p id="luxury">${p.trademark}</p>
             <h2 id="giaBLV">${p.priceNew}đ</h2>
             <div class="gioHang">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -255,7 +255,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -281,7 +281,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -307,7 +307,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -333,7 +333,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -343,7 +343,7 @@
         </div>
         </c:if>
 
-            <c:if test="${p.id == 'sp6'}" >
+        <c:if test="${p.id == 'sp6'}" >
         <div class="tensanpham">
             <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
                 <a href="ProductDetails">
@@ -359,7 +359,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -385,7 +385,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -416,7 +416,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -444,7 +444,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -472,7 +472,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -501,7 +501,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -530,7 +530,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -559,7 +559,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -607,7 +607,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -640,7 +640,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -675,7 +675,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -710,7 +710,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -753,7 +753,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -786,7 +786,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -821,7 +821,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -856,7 +856,7 @@
                     </div>
                     <h3 class="giaIconic">${p.priceNew}đ</h3>
                     <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
                             <div>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -895,7 +895,7 @@
             </div>
             <h3 id="giaIconic">${p.priceNew}đ</h3>
             <div class="gioHang4">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -927,7 +927,7 @@
                 </div>
             <h3 id="giaArctander">${p.priceNew}đ</h3>
             <div class="gioHang4">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -959,7 +959,7 @@
             </div>
             <h3 id="giaAillen03">${p.priceNew}đ</h3>
             <div class="gioHang4">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -991,7 +991,7 @@
             </div>
             <h3 id="giaBinas">${p.priceNew}đ</h3>
             <div class="gioHang4">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1032,7 +1032,7 @@
             </div>
             <h3 id="giaKozoka">${p.priceNew}đ</h3>
             <div class="gioHang">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1070,7 +1070,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1095,7 +1095,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1120,7 +1120,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1145,7 +1145,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1170,7 +1170,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1195,7 +1195,7 @@
                 <h3 class="giasanpham">${p.priceNew}đ</h3>
             </div>
             <div class="gioHang5">
-                <a href="cart-add?id=${p.id}">
+                <a href="cart-add?id=${p.id}&quantitySold=${1}">
                     <div>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1226,7 +1226,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1253,7 +1253,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1280,7 +1280,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1307,7 +1307,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1334,7 +1334,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1361,7 +1361,7 @@
                     <h3 class="giasanpham">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1468,7 +1468,7 @@
                 </div>
 
                 <div class="gioHang">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1502,7 +1502,7 @@
                     <p><strike CLASS="giaCu" style="margin-left: -88px">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang2">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -80px"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1534,7 +1534,7 @@
                     <h3 class="gia">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1567,7 +1567,7 @@
                     <p><strike class="giaCu" style="margin-left: -78px">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang1">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -70px"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1608,7 +1608,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1642,7 +1642,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1677,7 +1677,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1713,7 +1713,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1767,7 +1767,7 @@
                     <h3 class="gia">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1800,7 +1800,7 @@
                     <p><strike CLASS="giaCu">${p.priceOld}đ</strike></p>
                 </div>
                 <div class="gioHang">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1832,7 +1832,7 @@
                     <h3 class="gia1">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1864,7 +1864,7 @@
                     <h3 class="gia" style="margin-left: -190px ">${p.priceNew}đ</h3>
                 </div>
                 <div class="gioHang">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1905,7 +1905,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1940,7 +1940,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -1976,7 +1976,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -2013,7 +2013,7 @@
                 </div>
 
                 <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
                         <div>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -2064,7 +2064,7 @@
         </div>
         <h3 class="gia">${p.priceNew}đ </h3>
         <div class="gioHang3"   >
-            <a href="cart-add?id=${p.id}">
+            <a href="cart-add?id=${p.id}&quantitySold=${1}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -2095,7 +2095,7 @@
         </div>
         <h3 class="gia">${p.priceNew} đ </h3>
         <div class="gioHang3">
-            <a href="cart-add?id=${p.id}">
+            <a href="cart-add?id=${p.id}&quantitySold=${1}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -2125,7 +2125,7 @@
         </div>
         <h3 class="gia"> ${p.priceNew}đ </h3>
         <div class="gioHang3">
-            <a href="cart-add?id=${p.id}">
+            <a href="cart-add?id=${p.id}&quantitySold=${1}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
@@ -2156,7 +2156,7 @@
         </div>
         <h3 class="gia">${p.priceNew}đ </h3>
         <div class="gioHang3">
-            <a href="cart-add?id=${p.id}">
+            <a href="cart-add?id=${p.id}&quantitySold=${1}">
                 <div>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>

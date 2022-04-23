@@ -23,7 +23,7 @@
 <body>
 <h1 class="tieuDe" style="text-align: center;">WEB FURNITURE</h1>
 <p class="duongDan from" style="text-align: left; margin-left: 160px; font-family: Tahoma">
-    <a href="./cart" style="text-decoration: none ; color: black">
+    <a href="cart" style="text-decoration: none ; color: black">
         Giỏ hàng </a> > Thanh toán</p>
 <div class="Fields">
     <div>
@@ -92,23 +92,33 @@
             <div class="shopping-cart">
                 <ul class="shopping-cart-items">
 
-                    <jsp:useBean id="OrderDetailsAll" scope="request" type="java.util.List"/>
-                    <c:forEach items="${OrderDetailsAll}" var="order" >
-                          <jsp:useBean id="getProductDetailsAll" scope="request" type="java.util.List"/>
-                          <c:forEach items="${getProductDetailsAll}" var="p">
-                              <c:if test="${OrderDetailsAll.get(OrderDetailsAll.size() - 1).idOrder == order.idOrder}" >
-                              <c:if test="${p.id == order.idProductDetails}" >
-                        <li class="clearfix">
-                            <img src="${p.linkImage}" height="70"
-                                 width="70" alt="item1"/>
-                            <span class="item-name">${p.name}</span>
-                            <span class="item-price">${order.price}đ</span>
-                            <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
-                        </li>
-                                  </c:if >
-                              </c:if >
-                          </c:forEach>
-                    </c:forEach>
+<%--                    <jsp:useBean id="OrderDetailsAll" scope="request" type="java.util.List"/>--%>
+<%--                    <c:forEach items="${OrderDetailsAll}" var="order" >--%>
+<%--                          <jsp:useBean id="getProductDetailsAll" scope="request" type="java.util.List"/>--%>
+<%--                          <c:forEach items="${getProductDetailsAll}" var="p">--%>
+<%--                              <c:if test="${OrderDetailsAll.get(OrderDetailsAll.size() - 1).idOrder == order.idOrder}" >--%>
+<%--                              <c:if test="${p.id == order.idProductDetails}" >--%>
+<%--                        <li class="clearfix">--%>
+<%--                            <img src="${p.linkImage}" height="70"--%>
+<%--                                 width="70" alt="item1"/>--%>
+<%--                            <span class="item-name">${p.name}</span>--%>
+<%--                            <span class="item-price">${order.price}đ</span>--%>
+<%--                            <span class="item-quantity">Số Lượng:${order.quantitySold}</span>--%>
+<%--                        </li>--%>
+<%--                                  </c:if >--%>
+<%--                              </c:if >--%>
+<%--                          </c:forEach>--%>
+<%--                    </c:forEach>--%>
+    <jsp:useBean id="OrderDetailsAll" scope="request" type="java.util.List"/>
+    <c:forEach items="${OrderDetailsAll}" var="order" >
+                    <li class="clearfix">
+                        <img src="${order.linkImage}" height="70"
+                             width="70" alt="item1"/>
+                        <span class="item-name">${order.nameProduct}</span>
+                        <span class="item-price">${order.price}đ</span>
+                        <span class="item-quantity">Số Lượng:${order.quantitySold}</span>
+                    </li>
+    </c:forEach>
                 </ul>
 
             </div>

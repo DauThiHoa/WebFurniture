@@ -185,4 +185,5 @@ public class UserDao {
                     .mapTo(Double.class).findFirst().get() ;
         });
     }
+
 }

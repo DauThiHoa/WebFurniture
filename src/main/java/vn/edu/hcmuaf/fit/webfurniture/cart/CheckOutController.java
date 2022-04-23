@@ -1,7 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.cart;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Cart;
-import vn.edu.hcmuaf.fit.webfurniture.beans.User;
 import vn.edu.hcmuaf.fit.webfurniture.service.OrderService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -40,36 +39,27 @@ public class CheckOutController extends HttpServlet {
 //        boolean test = false;
 //        System.out.println(test);
 
+        String idUser = "" ;
         if ((session.getAttribute("auth")) == null) {
             response.sendRedirect("/WebFurniture_war_exploded/login");
             session.setAttribute("auth" , "");
             return;
         }
+
         if (session.getAttribute("cart") == null) {
             response.sendRedirect("/WebFurniture_war_exploded/cart");
             return;
         }
 
-//          response.sendRedirect("/WebFurniture_war_exploded/login");
-//          boolean result = OrderService.getInstance().createOrder((User) session.getAttribute("auth") ,(Cart) session.getAttribute("cart")) ;
-        HttpSession sessionUser = request.getSession();
-        User user = (User) sessionUser.getAttribute("idUser");
-        if (user == null) {
-            user = User.getInstance();
-        }
-        String idUser = user.getId();
-        System.out.println("ID USSER ::::::::::::::;; "+idUser);
-        session.setAttribute("idUser" , idUser); // add session cart
+        boolean result = OrderService.getInstance().createOrder((Cart) session.getAttribute("cart") );
 
-        boolean result = OrderService.getInstance().createOrder((Cart) session.getAttribute("cart") , idUser);
-
-            session.removeAttribute("cart");
+        session.removeAttribute("cart");
 
             if (result) {
-//            response.sendRedirect("/WebFurniture_war_exploded/ProductDetailsList");
-                if ( ProductDetailsService.getInstance().removeCart()){
-                ProductDetailsService.getInstance().setSumCart(0);
-                response.sendRedirect("/WebFurniture_war_exploded/payment");}
+//                if ( ProductDetailsService.getInstance().removeCart()){
+//                ProductDetailsService.getInstance().setSumCart(0);
+                response.sendRedirect("/WebFurniture_war_exploded/payment");
+//                }
             } else {
                 response.sendRedirect("/WebFurniture_war_exploded/cart");
             }
