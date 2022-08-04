@@ -26,27 +26,11 @@ public class Send extends HttpServlet {
         String id = request.getParameter("id");
         String name = request.getParameter("name");
         String linkImage = request.getParameter("linkImage");
-        String ratTe = request.getParameter("ratTe");
-        String te = request.getParameter("te");
-        String bt = request.getParameter("bt");
-        String tot = request.getParameter("tot");
-        String ratTot = request.getParameter("ratTot");
+        String evaluate = request.getParameter("evaluate");
+
         String title = request.getParameter("title");
         String content = request.getParameter("content");
         String nameCustomer = request.getParameter("nameCustomer");
-
-        String evaluate  ;
-        if ( ratTe != null ){
-            evaluate = ratTe ;
-        }else  if ( te != null ){
-            evaluate = te ;
-        }else  if ( bt != null ){
-            evaluate = bt ;
-        }else  if ( tot != null ){
-            evaluate = tot ;
-        }else {
-            evaluate = ratTot ;
-        }
 
         String block = "block";
         String none = "none";

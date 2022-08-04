@@ -20,18 +20,15 @@ public class ReviewProductDetailsService {
     }
     public boolean createrReview(String title, String evaluate, String nameCustomer , String content ,String linkImage, String id) {
 
-//        String emailCustomer = JDBIConnector.get().withHandle(handle -> {
-//            return handle.createQuery("select email from `user` where username = ( select nameCustomer from detailedproductreview )")
-//                    .mapTo(String.class).findFirst().get() ;
-//        });
-//        System.out.println(emailCustomer);
+        String email = emailCustomer (nameCustomer);
+
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
             sum += h.createUpdate("INSERT INTO detailedproductreview ( title , evaluate , nameCustomer ,emailCustomer, content,linkImage , idProductDetails) VALUES  (? , ?, ? ,? , ?, ? ,?)")
                     .bind(0 ,title)
                     .bind (1, evaluate)
                     .bind(2, nameCustomer)
-                    .bind(3 , "null")
+                    .bind(3 , email)
                     .bind (4, content)
                     .bind(5, linkImage)
                     .bind(6, id)
@@ -59,5 +56,18 @@ public class ReviewProductDetailsService {
             return handle.createQuery("SELECT username FROM `user` ORDER BY (id+0) DESC LIMIT 1;")
                     .mapTo(String.class).findFirst().get() ;
         });
+    }
+    public static String emailCustomer ( String name){
+        String email = null ;
+        email = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select email from `user` where username like ?")
+                    .bind(0 , name)
+                    .mapTo(String.class).findFirst().get() ;
+        });
+        return email;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(emailCustomer ("Đậu Hoa"));
     }
 }

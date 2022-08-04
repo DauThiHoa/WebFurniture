@@ -49,7 +49,7 @@ public class HandlingLogin extends HttpServlet {
         } else {
             request.setAttribute("email", email);
             request.setAttribute("password", password);
-            request.setAttribute("error", "Email or password is correct");
+            request.setAttribute("error", "Email or password is not correct");
             request.getRequestDispatcher("login").forward(request,response);
         }
 
