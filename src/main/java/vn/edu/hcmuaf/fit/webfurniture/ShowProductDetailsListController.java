@@ -35,7 +35,7 @@ public class ShowProductDetailsListController extends HttpServlet {
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
            request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
 
-//        String nameCustomer = "Name Customer";
+//      String nameCustomer = "Name Customer";
 //      request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());
 
         HttpSession session = request.getSession();
@@ -60,8 +60,7 @@ public class ShowProductDetailsListController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
-           request.getRequestDispatcher("ChiTietSanPham.jsp").forward(request , response);
-
+        request.getRequestDispatcher("ChiTietSanPham.jsp").forward(request , response);
 
     }
 

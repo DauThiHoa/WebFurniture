@@ -38,9 +38,14 @@ public class Mail {
         props.put("mail.smtp.auth",true);
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host","smtp.gmail.com");
-        // 465 || 587
+        // 465 || 587 || "25"
         props.put("mail.smtp.port",587);
         props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+/*
+THEM MOI
+        props.put("mail.smtp.auth", true);
+        props.put("mail.smtp.port", 587);
+*/
 
         return Session.getInstance(props,
                 new Authenticator(){

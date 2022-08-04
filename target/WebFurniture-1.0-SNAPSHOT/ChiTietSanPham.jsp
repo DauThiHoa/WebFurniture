@@ -87,7 +87,7 @@
 
     <div class="taiKhoanCuaToi">
         <a href="Dashboard">
-            <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
+            <br>&nbsp;Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>
 
@@ -339,7 +339,7 @@
 </div>
 
 <div class="uuDai1">
-    <h2 class="sanPhamCungLoai"> SẢN PHẨM CÙNG LOẠI </h2>
+    <h2 class="sanPhamCungLoai"> &emsp; SẢN PHẨM CÙNG LOẠI </h2>
     <div class="fromSpcl" style="overflow-x:auto; overflow-y:auto; height: 500px; width: 110%">
     <jsp:useBean id="productDetailsAllName" scope="request" type="java.util.List"/>
     <c:forEach var="p" items="${productDetailsAllName}">
@@ -372,28 +372,28 @@
         <img class="anh" src="Image_ThongTinSanPham_Home/ct1.PNG"/>
         <div class="thongTin">
             <h3 class="tieuDe">GIAO HÀNG MIỄN PHÍ </h3>
-            <p class="thongTinChiTiet">Đối với các đơn hàng trên 2.000.000 đ </p>
+            <p class="thongTinChiTiet">&emsp; Đối với các đơn hàng trên &emsp;&emsp;&emsp;&emsp; 2.000.000 đ </p>
         </div>
     </div>
     <div class="giaoHang">
         <img class="anh" src="Image_ThongTinSanPham_Home/ct2.PNG"/>
         <div class="thongTin">
             <h3 class="tieuDe">TÍCH ĐIỂM ĐỔI QUÀ</h3>
-            <p class="thongTinChiTiet">Cam kết chính hàng chính hãng 100% </p>
+            <p class="thongTinChiTiet">&emsp; Cam kết chính hàng chính hãng &emsp; 100% </p>
         </div>
     </div>
     <div class="giaoHang">
         <img class="anh" src="Image_ThongTinSanPham_Home/ct3.PNG"/>
         <div class="thongTin">
             <h3 class="tieuDe">BẢO HÀNH TOÀN QUỐC</h3>
-            <p class="thongTinChiTiet">Gọi ngay hotline để được tư vấn</p>
+            <p class="thongTinChiTiet">&emsp; Gọi ngay hotline để được tư vấn</p>
         </div>
     </div>
     <div class="giaoHang">
         <img class="anh" src="Image_ThongTinSanPham_Home/ct4.PNG"/>
         <div class="thongTin">
             <h3 class="tieuDe">TƯ VẤN 24/7</h3>
-            <p class="thongTinChiTiet">Giảm giá từ 10% - 30% các ngày cuối tuần</p>
+            <p class="thongTinChiTiet">&emsp; Giảm giá từ 10% - 30% các ngày &emsp; cuối tuần</p>
         </div>
     </div>
 
@@ -402,56 +402,57 @@
 <div class="MoTa_ThongTinThanhToan">
     <div class="ten"> Mô tả
         <div class="khungMoTa">
-            <p>    <span style="font-weight: bold">  Màu sắc : </span>${productDetails.color}</p>
-            <p>    <span style="font-weight: bold">  Kích thước : </span>${productDetails.size}</p>
-            <p>    <span style="font-weight: bold">  Khối lượng : </span>${productDetails.weight}</p>
-            <p>    <span style="font-weight: bold">  Chất liệu : </span>${productDetails.material}</p>
-            <p>    <span style="font-weight: bold">  Ý tưởng thiết kế : </span>${productDetails.design}</p>
+            <p>    <span style="font-weight: bold"> &emsp; Màu sắc : </span>${productDetails.color}</p>
+            <p>    <span style="font-weight: bold"> &emsp; Kích thước : </span>${productDetails.size}</p>
+            <p>    <span style="font-weight: bold"> &emsp; Khối lượng : </span>${productDetails.weight}</p>
+            <p>    <span style="font-weight: bold"> &emsp; Chất liệu : </span>${productDetails.material}</p>
+            <p>    <span style="font-weight: bold"> &emsp; Ý tưởng thiết kế : </span>${productDetails.design}</p>
         </div>
     </div>
     <div class="tenThongTinThanhToan">
-        Thông Tin Thanh Toán
+        &nbsp; Thông Tin Thanh Toán
         <div class="khungMoTa1">
             <p>
-                <b> Ngân hàng Vietcombank : </b>
-            <p> - Ng Van A </p>
-            <p> - STK: 0691000374599 </p>
-            <p> - Ngân hàng Vietcombank Hà Tây </p>
-            <b> Ngân hàng Agribank :</b>
-            <p> - Ng Van A</p>
-            <p> - STK: 2000206180703 </p>
-            <p> - Ngân hàng Agribank Đà Nẵng </p>
+                <b> &nbsp; Ngân hàng Vietcombank : </b>
+            <p> &emsp;- Ng Van A </p>
+            <p> &emsp;- STK: 0691000374599 </p>
+            <p> &emsp;- Ngân hàng Vietcombank Hà Tây </p>
+            <b> &nbsp; Ngân hàng Agribank :</b>
+            <p> &emsp;- Ng Van A</p>
+            <p> &emsp;- STK: 2000206180703 </p>
+            <p> &emsp;- Ngân hàng Agribank Đà Nẵng </p>
             </p>
         </div>
     </div>
 </div>
+
 <form action="send" method="post">
 <div class="NhanXet"  >
-    <h2 class="tieude"> GỬI NHẬN XÉT CỦA BẠN </h2>
+    <h2 class="tieude" style="color: #03acca"> GỬI NHẬN XÉT CỦA BẠN </h2>
     <div class="from">
         <h3 class="ten"> 1. Đánh giá của bạn về sản phẩm này: </h3>
         <div class="danhGia "  onclick="starOne()">
-            <input name="ratTe" type="radio" value="Rất tệ" />
+    <input name="evaluate" type="radio" value="Rất tệ" />
 <%--            <i class="fa fa-star twoStar starOne" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starOned">Rất tệ</h3>
         </div>
         <div class="danhGia "  onclick="starTwo()">
-            <input name="te" type="radio" value="Tệ" />
+            <input name="evaluate" type="radio" value="Tệ" />
 <%--            <i class="fa fa-star oneStar starTwo"  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starTwod">Tệ</h3>
         </div>
         <div class="danhGia2 "  onclick="starThree()">
-            <input name="bt" type="radio" value="Bình thường" />
+            <input name="evaluate" type="radio" value="Bình thường" />
 <%--            <i class="fa fa-star ThreeStar starThree "  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starThreed">Bình thường</h3>
         </div>
         <div class="danhGia "  onclick="starfour()">
-            <input name="tot" type="radio" value="Tốt" />
+    <input name="evaluate" type="radio" value="Tốt" />
 <%--            <i class="fa fa-star oneStar starfour" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starfourd">Tốt</h3>
         </div>
         <div class="danhGia1 "  onclick="starFive()">
-            <input name="ratTot" type="radio" value="Rất tốt" />
+    <input name="evaluate" type="radio" value="Rất tốt" />
 <%--            <i class="fa fa-star twoStar starFive" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starFived">Rất tốt</h3>
         </div>
@@ -467,7 +468,7 @@
     </div>
     <div class="from1">
         <h3 class="ten"> 4. Viết nhận xét của bạn vào bên dưới:</h3>
-        <textarea type="text"   name="content" onchange="binhluan()"  placeholder="Nhận xét của bạn về sản phẩm này " class="nhap nhapNoiDung"> </textarea>
+        <textarea type="text" name="content" onchange="binhluan()"  placeholder="Nhận xét của bạn về sản phẩm này" class="nhap nhapNoiDung"> </textarea>
 <%--        <jsp:useBean id="productDetails1" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>--%>
     </div>
     <div class="from2">
@@ -501,7 +502,7 @@
             </div>
             <div class="thongTinBinhLuan">
                 <div class="ChiTiet">
-                    <h4 class="tenNguoiBinhLuan">Tên : ${r.nameCustomer}
+                    <h4 class="tenNguoiBinhLuan">Tên : ${r.nameCustomer} &nbsp;
                         <c:if test="${r.evaluate == 'Rất tệ' || r.evaluate == 'Tệ' || r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
                         <i class="fa fa-star one" aria-hidden="true"></i>
                         </c:if>
@@ -519,7 +520,8 @@
                         </c:if>
                     </h4>
                 </div>
-                <p class="ngayDang danhgiabinhluan">Đánh giá : ${r.evaluate}</p>
+<%--                <p class="ngayDang danhgiabinhluan">Đánh giá : ${r.dateSubmitted}</p>--%>
+                <p class="ngayDang danhgiabinhluan">Ngày bình luận : ${r.dateSubmitted}</p>
                 <p class="ngayDang danhgiaTieuDe">Tiêu đề : ${r.title}</p>
                 <p class="noiDung noiDungTieuDe" >Nhận xét : ${r.content}</p>
             </div>
