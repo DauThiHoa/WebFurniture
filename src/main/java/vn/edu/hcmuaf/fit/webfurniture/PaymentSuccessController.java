@@ -60,8 +60,8 @@ public class PaymentSuccessController extends HttpServlet {
 
         String gender = request.getParameter("gender");
 
-        if ( name != "" && brithDay != "" && gender != "" && email != "" && phone != "" && address != "" && bank != "" &&
-                cardNumber != "" && delivery != "" && discountCode != "" ) {
+        if ( name != "" && brithDay != "" && gender != "" && gender != null && email != "" && phone != "" && address != "" && bank != "" &&
+                cardNumber != "" && delivery != "" && delivery != null && discountCode != "" ) {
             boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address,
                     bank, cardNumber, delivery , discountCode , sumDiscount , sumTotalMoney);
 

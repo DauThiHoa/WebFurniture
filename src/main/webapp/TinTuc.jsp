@@ -277,9 +277,9 @@
             </div>
             <div class="thongTinBinhLuan">
 <%--                    <h3> ${NewCommentList} </h3>--%>
-                <h4 class="tenNguoiBinhLuan">${n.nameCustomer}</h4>
-                <p class="ngayDang">${n.emailCustomer}</p>
-                <p class="noiDung">${n.content}</p>
+                <h4 class="tenNguoiBinhLuan"><span style="font-weight: bold">Họ tên : </span>${n.nameCustomer}<span style="font-weight: lighter">&emsp; ${n.dateSubmitted}</span></h4>
+                <p class="ngayDang"><span style="font-weight: bold">Email : </span>${n.emailCustomer}</p>
+                <p class="noiDung"><span style="font-weight: bold">Nội dung : </span>${n.content}</p>
             </div>
         </div>
     </div>

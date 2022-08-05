@@ -62,19 +62,19 @@
                         <h3 style="margin-left: 20px">Phương Thức Nhận Hàng</h3>
                         <label class="from" for="cname">Giao Hàng</label>
                         <input type="radio" id="cname" name="deliveryMethod" value="Giao Hàng"
-                               style="margin-left: 20px ; width: 10% ; height: 10%" onclick="delivery()" />
+                               style="margin-left: 20px ; width: 10% ; height: 10%" onclick="delivery()" onchange="checkRadio()" />
                         <label class="from" for="ccnum" style="margin-top: 55px">Nhận Tại Cửa Hàng</label>
                         <input style="margin-left: 20px ; width: 10% ; height: 10%" type="radio" id="ccnum" value="Nhận Tại Cửa Hàng"
-                               name="deliveryMethod" onclick="sendStore()"/>
+                               name="deliveryMethod" onclick="sendStore()" onchange="checkRadio()"/>
                     </div>
                     <div>
                         <h3 style="margin-left: 20px">Giới tính</h3>
                         <label class="from" for="cname">Nữ</label>
                         <input type="radio" id="nu" name="gender" value="Nữ"
-                               style="margin-left: 20px ; width: 25% ; height: 25% ; margin-top: -35px; margin-bottom: -60px" onclick="gender_Women()"/>
+                               style="margin-left: 20px ; width: 25% ; height: 25% ; margin-top: -35px; margin-bottom: -60px" onclick="gender_Women()" onchange="checkRadio()"/>
                         <label class="from" for="ccnum" style="margin-top: 15px">Nam</label>
                         <input style="margin-left: 20px ; width: 25% ; height: 25%; margin-top: -35px; margin-bottom: -60px" type="radio" id="nam" value="Nam"
-                               name="gender" onclick="gender_Man()"/>
+                               name="gender" onclick="gender_Man()" onchange="checkRadio()"/>
                     </div>
                 </div>
                 <a href = "" >
@@ -163,6 +163,23 @@
         result = "true" ;
     }
 
+    const cname = document.getElementById('cname').checked
+    const ccnum = document.getElementById('ccnum').checked
+    const nu = document.getElementById('nu').checked
+    const nam = document.getElementById('nam').checked
+
+    function checkRadio(){
+       let isCheck = true;
+       if( cname == false && ccnum == false ){
+           isCheck = false;
+       }
+       if (nu == false && nam == false){
+           isCheck = false ;
+       }
+       return isCheck ;
+    }
+
+
     function delivery(){
         return true;
     }
@@ -201,11 +218,9 @@
             isCheck = false;
         } else if (brithDay.value == "") {
             isCheck = false;
-        } else if (delivery == false && sendStore == false ){
+        } else if (checkRadio() == false ) {
             isCheck = false;
-        } else if (gender_Women == false && gender_Man == false ){
-            isCheck = false;
-        } else {
+        }else {
             isCheck = true;
         }
         return isCheck;

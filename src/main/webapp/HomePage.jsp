@@ -2180,7 +2180,7 @@
     </div>
     <div class="meoVatHay">
         <div class="meoVat">
-            <a href="VeSinhNoiThat.jsp">
+            <a href="furnitureCleaning">
                 <img class="anh" src="Image_Home2/baoQuanVaVeSinh_Layout7.PNG"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -2191,7 +2191,7 @@
             <p class="noiDung"> Đối với nội thất bằng kim loại - khi xủ lý các vết bẩn thông thường bạn chỉ cần ..</p>
         </div>
         <div class="meoVat">
-            <a href="MeoVat.jsp">
+            <a href="tips">
                 <img class="anh" src="Image_Home2/meoVat_2.PNG" height="447" width="785"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -2202,7 +2202,7 @@
             <p class="noiDung"> Điểm xuyến nội thất màu xanh ngọc sẽ giúp các thành viên cảm thấy thoải mái ...</p>
         </div>
         <div class="meoVat">
-            <a href="DoAm.jsp">
+            <a href="humidity">
                 <img class="anh" src="Image_Home2/baoQuanDoGo_layout7.PNG"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>

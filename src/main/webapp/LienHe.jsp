@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="LienHe/img.png" type="image/png" class="icon" style="border-radius: 10px">
 
-    <title>NHOM 7 WEB FURNITURE</title>
+    <title>NHÓM 7 - WEBFURNITURE</title>
     <style>
 
     </style>
@@ -158,7 +158,7 @@
         </div>
         <div class="meoVat">
             <div>
-                <h3 class="ten"> ND NỘI THẤT </h3>
+                <h3 class="ten"> WEBFURNITURE - WEB NỘI THẤT </h3>
                 <div class="noiDung_1">
                     <i class="fa fa-compass"></i>
                     <p class="noiDung" align="left"> Địa chỉ: Khu Phố 6 , quận Thủ Đức , TP HCM</p>
