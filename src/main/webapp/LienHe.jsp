@@ -158,7 +158,7 @@
         </div>
         <div class="meoVat">
             <div>
-                <h3 class="ten"> WEBFURNITURE - WEB NỘI THẤT </h3>
+                <h3 class="ten"> WEBFURNITURE - NỘI THẤT </h3>
                 <div class="noiDung_1">
                     <i class="fa fa-compass"></i>
                     <p class="noiDung" align="left"> Địa chỉ: Khu Phố 6 , quận Thủ Đức , TP HCM</p>

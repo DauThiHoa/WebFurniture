@@ -400,7 +400,7 @@
     </div>
 
     <div class="infor2" style=" height: 200px">
-        <h1 class="information" style="font-size: 125%"> VIETNAMESE</h1>
+        <h1 class="information" style="font-size: 125%"> DISPLAY </h1>
         <div class="information5">
             <h2 class="Modules"> Action </h2>
             <div class="">
@@ -422,7 +422,7 @@
     </form>
 
 <div class="information6">
-    <a class="nav-link active" href="../WebFurniture_war_exploded/DirectoryManagement">
+    <a class="nav-link active" href="<%= Asset.url("DirectoryManagement")%>">
         <button class="Select" style="margin-left: 75% ; margin-top: -35px" onclick="exit()">
             <i class="fa fa-times-circle" aria-hidden="true"></i>
             Exit
@@ -434,7 +434,7 @@
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
+                    &copy; 2021 <a href="<%= Asset.url("ProductDetailsList")%>" class="font-weight-bold ml-1" target="_blank">
                     Web Furniture</a>
                 </div>
             </div>

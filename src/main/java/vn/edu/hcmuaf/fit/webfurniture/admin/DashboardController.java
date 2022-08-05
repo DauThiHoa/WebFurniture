@@ -16,6 +16,7 @@ import java.io.IOException;
 public class DashboardController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.setAttribute("sumUser" , UserDao.getInstance().sumUser());
         request.setAttribute("countUser" , UserDao.getInstance().countUser());
         request.setAttribute("sumOrderDetails" , OrderDao.getInstance().sumOrderDetails());
@@ -27,7 +28,7 @@ public class DashboardController extends HttpServlet {
         request.setAttribute("sumContact" , OrderDao.getInstance().sumContact());
         request.setAttribute("countContact" , OrderDao.getInstance().countContact());
 
-        //        Số sản phẩm trong giỏ hàng
+        // Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 

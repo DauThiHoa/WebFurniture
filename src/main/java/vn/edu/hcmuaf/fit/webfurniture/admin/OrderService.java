@@ -1,15 +1,11 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
-import vn.edu.hcmuaf.fit.webfurniture.beans.DetailedProductReview;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
-import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,7 +34,7 @@ public class OrderService  implements Serializable {
                         .bind(0 , id_int ).execute());
     }
 
-    public Customer getCustomer (int id ) {
+    public Customer getCustomer (int id) {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from customer where idCustomer = ? ")
                     .bind(0 , id)

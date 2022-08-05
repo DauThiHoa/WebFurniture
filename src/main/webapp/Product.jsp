@@ -414,7 +414,8 @@
             <tr>
                 <form action = "<%=Asset.url("edit")%>"  method = "POST" >
                 <td style="text-align: center"><%= i++ %></td>
-                <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="type" value="HomePage"></td>
+                <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text"
+                             name ="type" value="HomePage"></td>
                 <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
                 <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="name" value="${item.name}"></td>
                 <td style=" height: 100px; overflow : hidden "><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="description"  rows="50" cols="50">${item.description}</textarea></td>
@@ -425,13 +426,16 @@
 
                     <td ><input type="text" name ="color" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.color}"></td>
                     <td ><input type="text" name ="size" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.size}"></td>
-                    <td style="text-align: center"><input type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}"></td>
+                    <td style="text-align: center">
+                        <input type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}">
+                    </td>
                     <td ><input type="text" name ="material" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.material}"></td>
                     <td ><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="design"  rows="50" cols="50">${item.design}</textarea></td>
 
                 <td>
                         <input type="hidden" name ="id" value="${item.id}">
-                        <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
+                        <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit"
+                                href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
                 </td>
                 </form>
 <%--                <td><i class="fa fa-trash" aria-hidden="true"></i></td>--%>
@@ -453,7 +457,7 @@
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
+                    &copy; 2021 <a href="<%= Asset.url("ProductDetailsList")%>" class="font-weight-bold ml-1" target="_blank">
                     Web Furniture</a>
                 </div>
             </div>
