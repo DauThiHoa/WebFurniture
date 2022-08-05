@@ -34,6 +34,7 @@ public class ShowProductDetailsListController extends HttpServlet {
 
            request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
            request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
+           request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
 
 //      String nameCustomer = "Name Customer";
 //      request.setAttribute("nameCustomer" , ReviewProductDetailsService.getInstance().nameCustomer());

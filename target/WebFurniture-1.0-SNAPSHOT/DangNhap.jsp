@@ -229,7 +229,7 @@
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
                 <% if(error != null) { %>
-                    <p><%= error%></p>
+                    <p style="color: red ; font-weight: bold"><%= error%></p>
                 <%} %>
 
             <a href="">

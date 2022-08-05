@@ -61,20 +61,20 @@
                     <div>
                         <h3 style="margin-left: 20px">Phương Thức Nhận Hàng</h3>
                         <label class="from" for="cname">Giao Hàng</label>
-                        <input type="checkbox" id="cname" name="delivery" value="Giao Hàng"
-                               style="margin-left: 20px ; width: 10% ; height: 10%"/>
+                        <input type="radio" id="cname" name="deliveryMethod" value="Giao Hàng"
+                               style="margin-left: 20px ; width: 10% ; height: 10%" onclick="delivery()" />
                         <label class="from" for="ccnum" style="margin-top: 55px">Nhận Tại Cửa Hàng</label>
-                        <input style="margin-left: 20px ; width: 10% ; height: 10%" type="checkbox" id="ccnum" value="Nhận Tại Cửa Hàng"
-                               name="store"/>
+                        <input style="margin-left: 20px ; width: 10% ; height: 10%" type="radio" id="ccnum" value="Nhận Tại Cửa Hàng"
+                               name="deliveryMethod" onclick="sendStore()"/>
                     </div>
                     <div>
                         <h3 style="margin-left: 20px">Giới tính</h3>
                         <label class="from" for="cname">Nữ</label>
-                        <input type="checkbox" id="nu" name="nu" value="Nữ"
-                               style="margin-left: 20px ; width: 25% ; height: 25% ; margin-top: -35px; margin-bottom: -60px"/>
+                        <input type="radio" id="nu" name="gender" value="Nữ"
+                               style="margin-left: 20px ; width: 25% ; height: 25% ; margin-top: -35px; margin-bottom: -60px" onclick="gender_Women()"/>
                         <label class="from" for="ccnum" style="margin-top: 15px">Nam</label>
-                        <input style="margin-left: 20px ; width: 25% ; height: 25%; margin-top: -35px; margin-bottom: -60px" type="checkbox" id="nam" value="Nam"
-                               name="nam"/>
+                        <input style="margin-left: 20px ; width: 25% ; height: 25%; margin-top: -35px; margin-bottom: -60px" type="radio" id="nam" value="Nam"
+                               name="gender" onclick="gender_Man()"/>
                     </div>
                 </div>
                 <a href = "" >
@@ -109,6 +109,7 @@
 <%--                              </c:if >--%>
 <%--                          </c:forEach>--%>
 <%--                    </c:forEach>--%>
+
     <jsp:useBean id="OrderDetailsAll" scope="request" type="java.util.List"/>
     <c:forEach items="${OrderDetailsAll}" var="order" >
                     <li class="clearfix">
@@ -162,6 +163,19 @@
         result = "true" ;
     }
 
+    function delivery(){
+        return true;
+    }
+    function sendStore(){
+        return true;
+    }
+    function gender_Women(){
+        return true;
+    }
+    function gender_Man(){
+        return true;
+    }
+
     const firstname  =  document.getElementById("fname") ;
     const email  =  document.getElementById('email') ;
     const address  =  document.getElementById('address') ;
@@ -171,23 +185,27 @@
     const brithDay  =  document.getElementById('brithDay') ;
 
     function checkValidate() {
-        let isCheck ;
-        if ( firstname.value == ""  ){
+        let isCheck;
+        if (firstname.value == "") {
             // alert('Qúy khách vui lòng điền đầy đủ thông tin ! ');
             isCheck = false;
-        }else if (email.value == ""){
+        } else if (email.value == "") {
             isCheck = false;
-        }else if (address.value == ""){
+        } else if (address.value == "") {
             isCheck = false;
-        }else if (adr.value == ""){
+        } else if (adr.value == "") {
             isCheck = false;
-        }else if (cardname.value == ""){
+        } else if (cardname.value == "") {
             isCheck = false;
-        }else if (cardnumber.value == ""){
+        } else if (cardnumber.value == "") {
             isCheck = false;
-        }else if (brithDay.value == ""){
+        } else if (brithDay.value == "") {
             isCheck = false;
-        }else {
+        } else if (delivery == false && sendStore == false ){
+            isCheck = false;
+        } else if (gender_Women == false && gender_Man == false ){
+            isCheck = false;
+        } else {
             isCheck = true;
         }
         return isCheck;

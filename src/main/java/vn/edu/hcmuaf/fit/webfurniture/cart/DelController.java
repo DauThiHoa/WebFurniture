@@ -19,6 +19,8 @@ public class DelController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
          String id = request.getParameter("id");
+         System.out.println("IDDDDDDDDDDDDDĐ" + id);
+
          HttpSession session = request.getSession();
          // load cart from session
 
@@ -39,8 +41,18 @@ public class DelController extends HttpServlet {
             return ;
         }
 
-        cart.remove(id);
-        session.setAttribute("cart" , cart);
+        boolean removeProductCart = ProductDetailsService.getInstance().removeProductCart(id);
+
+        if ( removeProductCart ) {
+            int getSumQuantityListProductCart = ProductDetailsService.getInstance().getSumQuantityListProductCart();
+            System.out.println("getSumQuantityListProductCart" + getSumQuantityListProductCart);
+            ProductDetailsService.getInstance().setSumCart(getSumQuantityListProductCart);
+            cart.remove(id);
+            session.setAttribute("cart", cart);
+        }else {
+            response.setStatus(404);
+            return ;
+        }
 
     }
 }

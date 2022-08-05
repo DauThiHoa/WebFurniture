@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webfurniture;
 
 import vn.edu.hcmuaf.fit.webfurniture.admin.ProfileService;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
+import vn.edu.hcmuaf.fit.webfurniture.mail.Mail;
 import vn.edu.hcmuaf.fit.webfurniture.payment.OrderDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -11,8 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
 
 @WebServlet(name = "PaymentSuccessController", value = "/PaymentSuccess")
 public class PaymentSuccessController extends HttpServlet {
@@ -48,10 +47,9 @@ public class PaymentSuccessController extends HttpServlet {
         String bank = request.getParameter("cardname");
         String cardNumber = request.getParameter("cardnumber");
         String brithDay = request.getParameter("brithDay");
-        String delivery = request.getParameter("delivery");
-        String store = request.getParameter("store");
+        String delivery = request.getParameter("deliveryMethod");
         String discountCode = request.getParameter("discountCode");
-//                int age = Integer.parseInt(request.getParameter("txtAge"));
+//      int age = Integer.parseInt(request.getParameter("txtAge"));
 
         String id = request.getParameter("id");
         String quantitySold = request.getParameter("quantitySold");
@@ -60,24 +58,12 @@ public class PaymentSuccessController extends HttpServlet {
         String sumDiscount = request.getParameter("sumDiscount");
         String sumTotalMoney = request.getParameter("sumTotalMoney");
 
-        String method ;
-        if ( delivery != null ){
-            method = delivery ;
-        }else {
-            method = store ;
-        }
-        String nu = request.getParameter("nu");
-        String nam = request.getParameter("nam");
-        String gender ;
-        if ( nu != null ){
-            gender = nu ;
-        }else {
-            gender = nam ;
-        }
+        String gender = request.getParameter("gender");
+
         if ( name != "" && brithDay != "" && gender != "" && email != "" && phone != "" && address != "" && bank != "" &&
-                cardNumber != "" && method != "" && discountCode != "" ) {
+                cardNumber != "" && delivery != "" && discountCode != "" ) {
             boolean result = OrderDetailsService.getInstance().insert(name, brithDay, gender, email, phone, address,
-                    bank, cardNumber, method, discountCode , sumDiscount , sumTotalMoney);
+                    bank, cardNumber, delivery , discountCode , sumDiscount , sumTotalMoney);
 
             // Xác nhận đã thanh toán số sản phẩm trong bảng sản phẩm tạm thời
             if ( ProductDetailsService.getInstance().removeCart()){
@@ -98,7 +84,7 @@ public class PaymentSuccessController extends HttpServlet {
             content += "<p style=\" font-weight: bold\">Phone number : "+phone+"</p>";
             content += "<p style=\" font-weight: bold\">Transaction code : "+discountCode+"</p>";
 
-            boolean sendMail = sendMail(email, subject, content);
+            boolean sendMail = Mail.sendMail(email, subject, content);
 
             request.getRequestDispatcher("/ProductDetailsList").forward(request, response);
         }else {
