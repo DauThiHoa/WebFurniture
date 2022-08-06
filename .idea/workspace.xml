@@ -10,22 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateInforCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/InforCustomer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/ListCustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/ListCustomerOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/humidity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/humidity.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/beans/ListCustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/beans/ListCustomerOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/humidity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/humidity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/InforCustomer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/admin/UpdateOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/beans/ListCustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/beans/ListCustomerOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/beans/Customer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -104,9 +103,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\resources" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture" />
-      <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\TinTuc\Image_TinTuc" />
       <recent name="C:\Users\THINKPRO\Documents\GitHub\WebFurniture\src\main\webapp\TinTuc" />
     </key>
@@ -573,6 +572,8 @@
       <workItem from="1659723899196" duration="1976000" />
       <workItem from="1659733939147" duration="7720000" />
       <workItem from="1659745259521" duration="7171000" />
+      <workItem from="1659755888870" duration="3779000" />
+      <workItem from="1659764165901" duration="6323000" />
     </task>
     <servers />
   </component>

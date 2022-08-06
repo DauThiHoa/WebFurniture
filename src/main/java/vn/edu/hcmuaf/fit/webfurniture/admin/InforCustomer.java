@@ -1,8 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
-import vn.edu.hcmuaf.fit.webfurniture.beans.ListCustomerOrder;
-import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 
@@ -12,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(name = "InforCustomer", value = "/InforCustomer")
 public class InforCustomer extends HttpServlet {
@@ -38,34 +34,13 @@ public class InforCustomer extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        List<Order> order = OrderService.getInstance().getAll();
-        ArrayList<Customer> customers = new ArrayList<Customer>();
-        System.out.println(1);
-        for (int i = 0; i < order.size(); i++) {
-            request.setCharacterEncoding("UTF-8");
-            response.setCharacterEncoding("UTF-8");
-            int id = order.get(i).getIdCustomer();
-            Customer customer = OrderService.getInstance().getCustomer(id);
-            customers.add(customer);
-        }
-//             Customer customer = OrderService.getInstance().getCustomer();
+        String idCustomer = request.getParameter("idCustomer");
+        int id = Integer.parseInt(idCustomer);
+        Customer customer = OrderService.getInstance().getCustomer(id);
+        System.out.println("ID : " + id);
+        System.out.println("CUSTOMER : " +  customer);
+        request.setAttribute("customer", customer);
 
-        if (order.isEmpty() || customers.isEmpty()) {
-            request.setAttribute("customer", "null");
-            request.setAttribute("order", "null");
-            System.out.println(order);
-            System.out.println(customers);
-        } else {
-            request.setAttribute("customer", customers);
-            request.setAttribute("order", order);
-        }
-//             request.setAttribute("haha" , "haha");
-        List<ListCustomerOrder> listCustomerOrder = OrderService.getInstance().getListCustomerOrder();
-        request.setAttribute("listCustomerOrder", listCustomerOrder);
-
-        for (ListCustomerOrder list : listCustomerOrder){
-            System.out.println(list.toString());
-        }
         System.out.println("DONE");
 
         request.getRequestDispatcher("InforCustomer.jsp").forward(request, response);

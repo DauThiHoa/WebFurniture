@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title> ADMIN - INTERFACE MANAGEMENT</title>
+    <title> ADMIN - INFORMATION CUSTOMER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
     <link rel="icon" href="QuanTri/Admin/assets/img/brand/favicon.png" type="image/png">
@@ -412,7 +412,7 @@
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#"> Interface Management / Order</a></li>
+                                <li class="breadcrumb-item"><a href="#"> Interface Management / Order / Information Customer</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -422,58 +422,81 @@
         </div>
     </div>
 
+    <form action="UpdateInforCustomer" method="POST" role="form"   >
+        <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>
+    <div class="row py-9" style="margin-left: 5%">
+        <div class="col-md-6 ">
+                <div class="form-group">
+                    <label style="font-weight: bold">ID Customer</label>
+                    <input name ="idCustomer" type="text" class="form-control" value="${customer.idCustomer}" readonly placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold">Name</label>
+                    <input name ="name" type="text" class="form-control" value="${customer.name}"  placeholder="Input field">
+                </div>
 
-    <div class="tab">
+                <div class="form-group">
+                    <label style="font-weight: bold">BirthDay</label>
+                    <input name ="birthDay" type="text" class="form-control" value="${customer.birthDay}"  placeholder="Input field">
+                </div>
 
-        <table class="table table-hover table-responsive table-bordered" style="table-layout: fixed ; width: 100%"  >
-            <tr style="width: 100%">
-                <th class="TieuDe">Code orders</th>
-                <th class="TieuDe">Customer name</th>
-                <th class="TieuDe">Booking date</th>
-                <th class="TieuDe">Delivery date</th>
-                <th class="TieuDe">Total money</th>
-                <th class="TieuDe">Payment</th>
-                <th class="TieuDe">Status</th>
-                <th class="TieuDe">Change</th>
-                <th class="TieuDe">Erase</th>
-                <th class="TieuDe">Customer Information</th>
-            </tr>
+                <div class="form-group">
+                    <label style="font-weight: bold">Gender</label>
+                    <input name ="gender" type="text" class="form-control" value="${customer.gender}"  placeholder="Input field">
+                </div>
 
-            <jsp:useBean id="listCustomerOrder" scope="request" type="java.util.List"/>
-            <c:forEach items="${listCustomerOrder}" var="list" >
-            <tr>
-                <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
-                <td>${list.idOrder}</td>
-                <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.name}"></td>
-                <td><input type="text" name ="dateOrder" readonly style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateOrder}"></td>
-                <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateReceipt}"></td>
-                <td class="chiTiet"><input type="text" readonly name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.totalMoney}"></td>
-                <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.bank}"></td>
-                <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.status}"></td>
-                <td>
-                    <input type="hidden" style="display: none" name ="idOrder" value="${list.idOrder}">
-                    <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
-                </td>
-                </form>
-                <td>
-                    <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
-                        <input type="hidden" name ="id" value="${list.idOrder}">
-                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href=""
-                                class="fa fa-trash text-danger" onclick="trash()"
-                                aria-hidden="true" ></button>
-                    </form>
-                </td>
-                <td>
-                    <form action = "<%=Asset.url("InforCustomer")%>"  method = "POST" >
-                        <input type="hidden" name ="idCustomer" value="${list.idCustomer}">
-                        <button class="btn5-hover btn5" type="submit" style="margin-left: 15%">Information</button>
-                    </form>
-                </td>
-            </tr>
-            </c:forEach>
-        </table>
+                <div class="form-group">
+                    <label style="font-weight: bold">Address</label>
+                    <input name ="address" type="text" class="form-control"  value="${customer.address}"  placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold">Phone</label>
+                    <input name ="phone" type="text" class="form-control" value="${customer.phone}"  placeholder="Input field">
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: bold">Email</label>
+                    <input name ="email" type="text" class="form-control" value="${customer.email}"  placeholder="Input field">
+                </div>
+
+        </div>
+        <div class="col-md-6 ">
+
+                <div class="form-group">
+                    <label style="font-weight: bold">Bank</label>
+                    <input name ="bank" type="text" class="form-control" value="${customer.bank}"  placeholder="Input field">
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: bold">Card Number</label>
+                    <input name ="cardNumber" type="text" class="form-control" value="${customer.cardNumber}"  placeholder="Input field">
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: bold">Delivery Method</label>
+                    <input name ="deliveryMethod" type="text" class="form-control" value="${customer.deliveryMethod}"  placeholder="Input field">
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: bold">Discount</label>
+                    <input name ="discount" type="text" class="form-control"  value="${customer.discount}" readonly placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold">Ship</label>
+                    <input name ="ship" type="text" class="form-control" value="${customer.ship}" readonly placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold">Total Money</label>
+                    <input name ="totalMoney" type="text" class="form-control" value="${customer.totalMoney}" readonly  placeholder="Input field">
+                </div>
+                <button type="submit" style="margin-right: 0%" class="btn btn-primary" onclick="edit()" >Edit</button>
+
+        </div>
     </div>
-
+    </form>
+    <a href="<%= Asset.url("Order")%>" >
+    <button style="margin-right: 0%" class="btn btn-primary" onclick="exit()" >Edit</button>
+    </a>
 
     <!-- Footer -->
     <footer class="footer pt-0">
@@ -490,11 +513,11 @@
 </div>
 </body>
 <script>
-    function trash () {
-        alert("Bạn đã xóa đơn hàng thành công !")
-    }
     function edit () {
-        alert("Bạn đã sửa đơn hàng thành công !")
+        alert("Bạn đã sửa thông tin khách hàng thành công !")
+    }
+    function exit () {
+        alert("Thoát và không tiếp tục chỉnh sửa thông tin khách hàng !")
     }
     function zoom(e) {
         var zoomer = e.currentTarget;

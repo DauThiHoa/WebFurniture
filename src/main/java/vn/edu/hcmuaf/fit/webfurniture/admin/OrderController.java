@@ -63,11 +63,6 @@ public class OrderController extends HttpServlet {
         List<ListCustomerOrder> listCustomerOrder = OrderService.getInstance().getListCustomerOrder();
         request.setAttribute("listCustomerOrder", listCustomerOrder);
 
-        for (ListCustomerOrder list : listCustomerOrder){
-            System.out.println(list.toString());
-        }
-        System.out.println("DONE");
-
         request.getRequestDispatcher("Order.jsp").forward(request, response);
 
 

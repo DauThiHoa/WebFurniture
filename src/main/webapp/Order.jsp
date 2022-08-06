@@ -445,9 +445,9 @@
                 <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
                 <td>${list.idOrder}</td>
                 <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.name}"></td>
-                <td><input type="text" name ="dateOrder" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateOrder}"></td>
+                <td><input type="text" name ="dateOrder" readonly style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateOrder}"></td>
                 <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateReceipt}"></td>
-                <td class="chiTiet"><input type="text" name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.totalMoney}"></td>
+                <td class="chiTiet"><input type="text" readonly name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.totalMoney}"></td>
                 <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.bank}"></td>
                 <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.status}"></td>
                 <td>
@@ -458,14 +458,15 @@
                 <td>
                     <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
                         <input type="hidden" name ="id" value="${list.idOrder}">
-                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()"
+                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href=""
+                                class="fa fa-trash text-danger" onclick="trash()"
                                 aria-hidden="true" ></button>
                     </form>
                 </td>
                 <td>
                     <form action = "<%=Asset.url("InforCustomer")%>"  method = "POST" >
-                        <input type="hidden" name ="id" value="${list.idCustomer}">
-                        <button class="btn5-hover btn5" style="margin-left: 15%">Information</button>
+                        <input type="hidden" name ="idCustomer" value="${list.idCustomer}">
+                        <button class="btn5-hover btn5" type="submit" style="margin-left: 15%">Information</button>
                     </form>
                 </td>
             </tr>

@@ -82,6 +82,25 @@ public class OrderService  implements Serializable {
                         .bind(2 , id )
                         .execute());
     }
+    public int update_Customer (String idCustomer, String name, String birthDay, String gender, String address, String phone,
+                                String email, String bank ,  String cardNumber, String deliveryMethod ) {
+        int idCustomerInt = Integer.parseInt(idCustomer);
+
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("update customer set name = ? , birthDay = ?, gender = ?, address = ? , \n" +
+                                "phone = ? , email = ? , bank = ? , cardNumber = ? ,deliveryMethod = ? where idCustomer = ?")
+                        .bind(0 , name )
+                        .bind(1 , birthDay )
+                        .bind(2 , gender )
+                        .bind(3 , address )
+                        .bind(4 , phone )
+                        .bind(5 , email )
+                        .bind(6 , bank )
+                        .bind(7 , cardNumber )
+                        .bind(8 , deliveryMethod )
+                        .bind(9 , idCustomerInt )
+                        .execute());
+    }
 
     public int update_Order(String idOrder, String dateOrder, String dateReceipt, String status) {
         int id = Integer.parseInt(idOrder);
