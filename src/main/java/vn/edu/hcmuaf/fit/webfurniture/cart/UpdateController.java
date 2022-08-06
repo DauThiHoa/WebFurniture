@@ -24,6 +24,7 @@ public class UpdateController extends HttpServlet {
         // load cart from session
 
         //        Số sản phẩm trong giỏ hàng
+
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
@@ -41,11 +42,23 @@ public class UpdateController extends HttpServlet {
             );
             return;
         }
-       int quantityAffterUpadte =  cart.updateQuantitySold(id , quantity);
-        session.setAttribute("cart" , cart);
-        response.getWriter().println(
-                new Gson().toJson(Map.of("quantity" ,quantityAffterUpadte))
-        );
+        int getSumQuantityListProduct  = ProductDetailsService.getInstance().getSumQuantityListProduct (quantity);
+        System.out.println("getSumQuantityListProductCart    =>    " + getSumQuantityListProduct );
+        ProductDetailsService.getInstance().updateQuantitySoldCart(id);
+
+            ProductDetailsService.getInstance().setSumCart(getSumQuantityListProduct );
+            int quantityAffterUpadte = cart.updateQuantitySold(id, quantity);
+
+        System.out.println("quantityAffterUpadte " + quantityAffterUpadte);
+
+        ProductDetailsService.getInstance().updateQuantitySoldOneProduct(id, quantityAffterUpadte);
+        System.out.println(id);
+        ProductDetailsService.getInstance().setMoneyOneProduct(id , quantityAffterUpadte);
+
+        session.setAttribute("cart", cart);
+         response.getWriter().println(
+                  new Gson().toJson(Map.of("quantity", quantityAffterUpadte))
+             );
 
         String block = "block";
         String none = "none";

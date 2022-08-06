@@ -1,15 +1,12 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
-import vn.edu.hcmuaf.fit.webfurniture.beans.DetailedProductReview;
+import vn.edu.hcmuaf.fit.webfurniture.beans.ListCustomerOrder;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
-import vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,7 +35,7 @@ public class OrderService  implements Serializable {
                         .bind(0 , id_int ).execute());
     }
 
-    public Customer getCustomer (int id ) {
+    public Customer getCustomer (int id) {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from customer where idCustomer = ? ")
                     .bind(0 , id)
@@ -46,10 +43,10 @@ public class OrderService  implements Serializable {
         });
     }
 
-    public Customer getCustomer ( ) {
+    public List<ListCustomerOrder> getListCustomerOrder ( ) {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" select * from customer where idOrder = ( select max(idOrder + 0) from orders )")
-                    .mapToBean(Customer.class).first();
+            return handle.createQuery("select c.*,o.dateOrder, o.dateReceipt, o.`status` from customer c left join orders o on c.idOrder = o.idOrder")
+                    .mapToBean(ListCustomerOrder.class).stream().collect(Collectors.toList());
         });
     }
 
@@ -85,19 +82,36 @@ public class OrderService  implements Serializable {
                         .bind(2 , id )
                         .execute());
     }
+    public int update_Customer (String idCustomer, String name, String birthDay, String gender, String address, String phone,
+                                String email, String bank ,  String cardNumber, String deliveryMethod ) {
+        int idCustomerInt = Integer.parseInt(idCustomer);
 
-    public int update_Order(String idOrder, String dateOrder, String dateReceipt, String totalMoney, String status) {
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("update customer set name = ? , birthDay = ?, gender = ?, address = ? , \n" +
+                                "phone = ? , email = ? , bank = ? , cardNumber = ? ,deliveryMethod = ? where idCustomer = ?")
+                        .bind(0 , name )
+                        .bind(1 , birthDay )
+                        .bind(2 , gender )
+                        .bind(3 , address )
+                        .bind(4 , phone )
+                        .bind(5 , email )
+                        .bind(6 , bank )
+                        .bind(7 , cardNumber )
+                        .bind(8 , deliveryMethod )
+                        .bind(9 , idCustomerInt )
+                        .execute());
+    }
+
+    public int update_Order(String idOrder, String dateOrder, String dateReceipt, String status) {
         int id = Integer.parseInt(idOrder);
-        double money = Double.parseDouble(totalMoney);
         LocalDateTime dateorder = LocalDateTime.parse( dateOrder );
         LocalDateTime datereceipt = LocalDateTime.parse( dateReceipt );
         return JDBIConnector.get().withHandle(h ->
-                h.createUpdate("update orders set dateOrder = ? , dateReceipt = ? ,totalMoney = ? , status = ?  where idOrder = ? ")
+                h.createUpdate("update orders set dateOrder = ? , dateReceipt = ? , status = ?  where idOrder = ? ")
                         .bind(0 , dateorder )
                         .bind(1 , datereceipt )
-                        .bind(2 , money )
-                        .bind(3 , status )
-                        .bind(4 , id )
+                        .bind(2 , status )
+                        .bind(3 , id )
                         .execute());
     }
 

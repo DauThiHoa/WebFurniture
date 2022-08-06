@@ -388,7 +388,7 @@
         <jsp:useBean id="information" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Information"/>
 <%--        <c:forEach items="${information}" var="p" >--%>
     <div class="infor3">
-        <h1 class="information"> VIETNAMESE</h1>
+        <h1 class="information"> DISPLAY </h1>
         <div class="information2">
             <h2 class="Category"> Company name </h2>
             <input style="border: 1px solid white" class="type1" type="text" name="Company" value="${information.companyName}"><br>
@@ -473,7 +473,7 @@
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
+                    &copy; 2021 <a href="<%= Asset.url("ProductDetailsList")%>" class="font-weight-bold ml-1" target="_blank">
                     Web Furniture</a>
                 </div>
             </div>

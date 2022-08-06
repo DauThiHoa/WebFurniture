@@ -42,6 +42,9 @@ public class ProductDetailsDao {
 
     public int update (String id , String name , String description , String priceNew , String priceOld , String quantity , String status
             , String color, String size, String weight, String material, String design) {
+        System.out.println("PRODUCT DETAILS DAO " + name );
+        System.out.println(description +"/ "+ priceNew + "/ " + priceOld +"/ "+ quantity +"/ "+ status +"/ "+ color +"/ "+
+                size +"/ "+ weight +"/ "+ material +"/ "+ design);
         return JDBIConnector.get().withHandle(h ->
                 h.createUpdate("update productdetails set `name` = ? , description = ? , priceNew = ? , priceOld = ? , " +
                                 "quantity = ? , `status`= ? , color = ? , size = ? , weight = ? , material = ? , design = ? where id = ? ")
@@ -51,12 +54,12 @@ public class ProductDetailsDao {
                         .bind(3 , Integer.parseInt(priceOld) )
                         .bind(4 , Integer.parseInt(quantity) )
                         .bind(5 , status )
-                        .bind(6 , id )
-                        .bind(7 , color )
-                        .bind(8 , size )
-                        .bind(9 , weight )
-                        .bind(10 , material )
-                        .bind(11 , design )
+                        .bind(6 , color )
+                        .bind(7 , size )
+                        .bind(8 , weight )
+                        .bind(9 , material )
+                        .bind(10 , design )
+                        .bind(11 , id )
                         .execute());
     }
     public static String changeName (String nameOld ){

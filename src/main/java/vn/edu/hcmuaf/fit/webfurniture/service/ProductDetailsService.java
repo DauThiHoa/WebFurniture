@@ -13,7 +13,47 @@ public class ProductDetailsService implements Serializable {
     private int sumCart = 0;
 
     public int getSumCart() {
+//        int result = 0 ;
+//            result = JDBIConnector.get().withHandle(handle -> {
+//                return handle.createQuery("select sum(quantitySold) from cart")
+//                        .mapTo(Integer.class).findFirst().get();
+//            });
         return sumCart;
+    }
+
+    public int getSumQuantityListProductCart() {
+        int result = 0;
+        result = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select sum(quantitySold) from cart")
+                    .mapTo(Integer.class).findFirst().get();
+        });
+        return result;
+    }
+    public static int getPriceOneProduct(String idProduct) {
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select price from cart where idProduct like ?")
+                    .bind(0, idProduct)
+                    .mapTo(Integer.class).findFirst().get();
+        });
+    }
+
+    public boolean setMoneyOneProduct(String idProduct , int quantityAffterUpadte) {
+        int price = getPriceOneProduct(idProduct);
+        System.out.println("HAHAHAHAHAHAHAH "+price * quantityAffterUpadte);
+        int update = JDBIConnector.get().withHandle(h -> {
+            int sum = 0;
+            sum += h.createUpdate("update cart set money = " + ( price * quantityAffterUpadte ) + " where idProduct like ? ")
+                    .bind(0, idProduct)
+                    .execute();
+            // Số dòng được chèn vào
+            return sum;
+        });
+        return true;
+    }
+
+    public int getSumQuantityListProduct (int quantity) {
+        int result = getSumQuantityListProductCart() ;
+        return result + quantity - 1 ;
     }
 
     public void setSumCart(int sumCart) {
@@ -132,7 +172,7 @@ public class ProductDetailsService implements Serializable {
                         .bind(2, nameProduct)
                         .bind(3, price)
                         .bind(4, quantitySold)
-                        .bind(5, money).execute();
+                        .bind(5, quantitySold * price).execute();
                 // Số dòng được chèn vào
                 return sum;
             });
@@ -152,6 +192,55 @@ public class ProductDetailsService implements Serializable {
         // size của đơn hàng
         return true;
     }
+    public boolean removeProductCart ( String idProduct) {
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+            sum += h.createUpdate("delete from cart where idProduct like ? ")
+                    .bind(0 , idProduct)
+                    .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
+    }
+    public int quantitySoldCartProduct (String idProduct){
+        int result = 0 ;
+        result = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select quantitySold from cart where idProduct like ? ")
+                    .bind(0,idProduct)
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+        return result;
+    }
+
+    public boolean updateQuantitySoldCart ( String idProduct) {
+        int quantitySoldOld = quantitySoldCartProduct (idProduct);
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+            sum += h.createUpdate("update cart set quantitySold = 1 + "+ quantitySoldOld + " where idProduct like ? ")
+                    .bind(0 , idProduct)
+                    .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
+    }
+
+    public boolean updateQuantitySoldOneProduct ( String idProduct , int quantity) {
+        int total = JDBIConnector.get().withHandle(h -> {
+            int sum = 0 ;
+            sum += h.createUpdate("update cart set quantitySold = " + quantity + " where idProduct like ? ")
+                    .bind(0 , idProduct)
+                    .execute();
+            // Số dòng được chèn vào
+            return sum ;
+        });
+        // size của đơn hàng
+        return true;
+    }
+
     public static int sumListCart (String linkImage, String idProduct , String nameProduct, int price, int quantitySold, int money){
         if (addProductCart (linkImage,  idProduct ,  nameProduct,  price,  quantitySold, money ) ) {
             return JDBIConnector.get().withHandle(handle -> {
@@ -162,6 +251,16 @@ public class ProductDetailsService implements Serializable {
             return 0 ;
         }
     }
+    public int maxQuantity (String idProduct){
+        int result = 0 ;
+        result = JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select quantity from productdetails where id like ? ")
+                    .bind(0,idProduct)
+                    .mapTo(Integer.class).findFirst().get() ;
+        });
+        return result;
+    }
+
     public List<ProductDetails> getListAZ (){
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from productdetails order by `name` asc")
@@ -328,6 +427,7 @@ public class ProductDetailsService implements Serializable {
     public static void main(String[] args) {
         System.out.println("RESULT");
 //        System.out.println("SUM LIST CART " + ProductDetailsService.getInstance().sumListCart());
+//        setMoneyOneProduct("sp31" , 5);
 
     }
 

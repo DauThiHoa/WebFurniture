@@ -168,7 +168,7 @@
 </div>
 
 <div class="tieuDe ">
-    <h2 class="trangChu_BanAilen_03"> Trang Chủ / ${productDetails.name} </h2>
+    <h6 class="trangChu_BanAilen_03"> &emsp; Trang Chủ / ${productDetails.name} </h6>
 
 </div>
 <div id="thongTinSanPham">
@@ -237,7 +237,6 @@
             <div class="bottom">
                 <img class="anh_BanLamViec_min" src="${productDetails.linkImage}" onclick="zoomount(this)" style="margin-left: 0%;"
                      alt="image"/>
-
                 <c:if test="${productDetails.id == 'sp24'}" >
                 <img class="anh_BanLamViec_min1" style="margin-left: -14%; margin-right: 4%" src="Image_ThongTinSanPham_Home/gheaillen2.PNG"
                      onclick="zoomount(this)" alt="image"/>
@@ -261,27 +260,28 @@
         </c:if>
 
         <form action="cart-add?id=${productDetails.id}" method="post" class="soLuongSanPham">
+            <jsp:useBean id="maxQuantity" scope="request" type="java.lang.Integer"/>
 
             <c:if test="${productDetails.id != 'sp2' && productDetails.id != 'sp24' && productDetails.id != 'sp32'}">
      <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
      background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -57%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
-     type="number" value="1" onclick="clickQuantitySold()">
+     type="number" min="1" max="${maxQuantity}" value="1" onclick="clickQuantitySold()">
             </c:if>
                 <c:if test="${productDetails.id == 'sp2'}">
                 <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
      background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -87%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
-                       type="number" value="1" onclick="clickQuantitySold()">
+                       type="number" max="${maxQuantity}" min="1" value="1" onclick="clickQuantitySold()">
                 </c:if>
             <c:if test="${productDetails.id == 'sp24'}">
                 <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
      background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -65%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
-                       type="number" value="1" onclick="clickQuantitySold()">
+                       type="number" max="${maxQuantity}" min="1" value="1" onclick="clickQuantitySold()">
             </c:if>
 
             <c:if test="${productDetails.id == 'sp32'}">
                 <input style="margin-top: 12% ; font-size: 250% ; font-weight: bold ; height: 250% ;width: 10%; border-radius: 5px ;
      background: white ; color: #1fb5d4 ; text-align: center ; margin-left: -98%; margin-right: -6%" class="so soLuongDat quantity" name="quantitySold"
-                       type="number" value="1" onclick="clickQuantitySold()">
+                       type="number" max="${maxQuantity}" min="1" value="1" onclick="clickQuantitySold()">
             </c:if>
 
                 <c:if test="${productDetails.id == 'sp2'}">
@@ -372,7 +372,7 @@
         <img class="anh" src="Image_ThongTinSanPham_Home/ct1.PNG"/>
         <div class="thongTin">
             <h3 class="tieuDe">GIAO HÀNG MIỄN PHÍ </h3>
-            <p class="thongTinChiTiet">&emsp; Đối với các đơn hàng trên &emsp;&emsp;&emsp;&emsp; 2.000.000 đ </p>
+            <p class="thongTinChiTiet">&emsp; Đối với các đơn hàng trên &emsp;&emsp;&emsp; 2.000.000 đ </p>
         </div>
     </div>
     <div class="giaoHang">
@@ -432,7 +432,7 @@
     <div class="from">
         <h3 class="ten"> 1. Đánh giá của bạn về sản phẩm này: </h3>
         <div class="danhGia "  onclick="starOne()">
-    <input name="evaluate" type="radio" value="Rất tệ" />
+            &emsp; <input name="evaluate" type="radio" value="Rất tệ" />
 <%--            <i class="fa fa-star twoStar starOne" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starOned">Rất tệ</h3>
         </div>
@@ -442,7 +442,7 @@
             <h3 class="DanhGia starTwod">Tệ</h3>
         </div>
         <div class="danhGia2 "  onclick="starThree()">
-            <input name="evaluate" type="radio" value="Bình thường" />
+            &emsp;&emsp; <input name="evaluate" type="radio" value="Bình thường" />
 <%--            <i class="fa fa-star ThreeStar starThree "  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starThreed">Bình thường</h3>
         </div>
@@ -452,7 +452,7 @@
             <h3 class="DanhGia starfourd">Tốt</h3>
         </div>
         <div class="danhGia1 "  onclick="starFive()">
-    <input name="evaluate" type="radio" value="Rất tốt" />
+            &emsp; <input name="evaluate" type="radio" value="Rất tốt" />
 <%--            <i class="fa fa-star twoStar starFive" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starFived">Rất tốt</h3>
         </div>
@@ -502,7 +502,7 @@
             </div>
             <div class="thongTinBinhLuan">
                 <div class="ChiTiet">
-                    <h4 class="tenNguoiBinhLuan">Tên : ${r.nameCustomer} &nbsp;
+                    <h4 class="tenNguoiBinhLuan">Tên : ${r.nameCustomer} &emsp;
                         <c:if test="${r.evaluate == 'Rất tệ' || r.evaluate == 'Tệ' || r.evaluate == 'Bình thường' || r.evaluate == 'Tốt' || r.evaluate == 'Rất tốt'}" >
                         <i class="fa fa-star one" aria-hidden="true"></i>
                         </c:if>

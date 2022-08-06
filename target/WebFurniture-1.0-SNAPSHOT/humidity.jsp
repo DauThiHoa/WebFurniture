@@ -1,4 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+ <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn"
+           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +16,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="img.png" type="image/png" class="icon" >
     <title> NHOM 7 WEB FURNITURE - MẸO VẶT - BẢO QUẢN ĐỒ GHỖ KHI ĐỘ ẨM KHÔNG KHÍ CAO </title>
-    <link rel="stylesheet" href="DoAm.css">
+    <link rel="stylesheet" href="humidity.css">
 
 </head>
 <body>
@@ -218,17 +222,17 @@
 <%--                    <p class="noiDungSanPham"> Xu hướng nội thất mây</p>--%>
 <%--                </div>--%>
 <%--            </a>--%>
-            <a href="MeoVat.jsp">
+            <a href="tips">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Thư thái trong chính căn hộ của bạn</p>
                 </div>
             </a>
-            <a href="VeSinhNoiThat.jsp">
+            <a href="furnitureCleaning">
                 <div class="danhMuc">
                     <p class="noiDungSanPham">Mẹo bảo quản và vệ sinh các đồ nội thất</p>
                 </div>
             </a>
-            <a href="DoAm.jsp">
+            <a href="humidity">
                 <div class="danhMuc">
                     <p class="noiDungSanPham"> Bảo quản đồ gỗ khi độ ẩm không khí cao</p>
                 </div>
@@ -236,7 +240,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="layout6">
 
@@ -251,7 +254,7 @@
     <div class="meoVatHay">
 
         <div class="meoVat">
-            <a href="VeSinhNoiThat.jsp">
+            <a href="furnitureCleaning">
                 <img class="anh" src="Image_Home2/baoQuanVaVeSinh_Layout7.PNG" />
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -262,7 +265,7 @@
             <p class="noiDung"> Đối với nội thất bằng kim loại - khi xủ lý các vết bẩn thông thường bạn chỉ cần ..</p>
         </div>
         <div class="meoVat">
-            <a href="MeoVat.jsp">
+            <a href="tips">
                 <img class="anh" src="Image_Home2/meoVat_2.PNG" height="447" width="785"/>
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -273,7 +276,7 @@
             <p class="noiDung"> Điểm xuyến nội thất màu xanh ngọc sẽ giúp các thành viên cảm thấy thoải mái ...</p>
         </div>
         <div class="meoVat">
-            <a href="DoAm.jsp">
+            <a href="humidity">
                 <img class="anh" src="Image_Home2/baoQuanDoGo_layout7.PNG"  />
                 <div class="lich">
                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>

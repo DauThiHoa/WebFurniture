@@ -32,7 +32,48 @@
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
+<style>
+    .btn5-hover {
+        width: 100px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 0px;
+        height: 25px;
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
 
+    .btn5-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .btn5-hover:focus {
+        outline: none;
+    }
+
+    .btn5-hover.btn5 {
+        background-image: linear-gradient(
+                to right,
+                #25aae1,
+                #4481eb,
+                #04befe,
+                #3f86ed
+        );
+        box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    }
+</style>
 <body>
 <jsp:useBean id="profile" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Profile"/>
 <!-- Sidenav -->
@@ -94,13 +135,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
+                        <a class="nav-link" href="<%= Asset.url("login")%>">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
+                        <a class="nav-link" href="<%= Asset.url("controllerRegister")%>">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text">Register</span>
                         </a>
@@ -384,7 +425,7 @@
 
     <div class="tab">
 
-        <table class="table" style="table-layout: fixed ; width: 100%">
+        <table class="table table-hover table-responsive table-bordered" style="table-layout: fixed ; width: 100%"  >
             <tr style="width: 100%">
                 <th class="TieuDe">Code orders</th>
                 <th class="TieuDe">Customer name</th>
@@ -395,62 +436,41 @@
                 <th class="TieuDe">Status</th>
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
+                <th class="TieuDe">Customer Information</th>
             </tr>
 
-            <jsp:useBean id="customer" scope="request" type="java.util.List"/>
-            <c:forEach items="${customer}" var="c" >
-            <jsp:useBean id="order" scope="request" type="java.util.List"/>
-            <c:forEach items="${order}" var="order" >
-                <c:if test="${customer != 'null' }" >
-
+            <jsp:useBean id="listCustomerOrder" scope="request" type="java.util.List"/>
+            <c:forEach items="${listCustomerOrder}" var="list" >
             <tr>
                 <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
-                <td>${order.idOrder}</td>
-                <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${c.name}"></td>
-                <td><input type="text" name ="dateOrder" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.dateOrder}"></td>
-                <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.dateReceipt}"></td>
-                <td class="chiTiet"><input type="text" name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.totalMoney}"></td>
-                <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${c.bank}"></td>
-                <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${order.status}"></td>
+                <td>${list.idOrder}</td>
+                <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.name}"></td>
+                <td><input type="text" name ="dateOrder" readonly style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateOrder}"></td>
+                <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.dateReceipt}"></td>
+                <td class="chiTiet"><input type="text" readonly name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.totalMoney}"></td>
+                <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.bank}"></td>
+                <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${list.status}"></td>
                 <td>
-                    <input type="hidden" style="display: none" name ="idOrder" value="${order.idOrder}">
+                    <input type="hidden" style="display: none" name ="idOrder" value="${list.idOrder}">
                     <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
                 </td>
                 </form>
                 <td>
                     <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
-                        <input type="hidden" name ="id" value="${order.idOrder}">
-                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
+                        <input type="hidden" name ="id" value="${list.idOrder}">
+                        <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href=""
+                                class="fa fa-trash text-danger" onclick="trash()"
+                                aria-hidden="true" ></button>
+                    </form>
+                </td>
+                <td>
+                    <form action = "<%=Asset.url("InforCustomer")%>"  method = "POST" >
+                        <input type="hidden" name ="idCustomer" value="${list.idCustomer}">
+                        <button class="btn5-hover btn5" type="submit" style="margin-left: 15%">Information</button>
                     </form>
                 </td>
             </tr>
-              </c:if>
-                <c:if test="${customer == 'null' }" >
-
-                    <tr>
-                        <form action = "<%=Asset.url("UpdateOrder")%>"  method = "POST" >
-                            <td>NULL</td>
-                            <td><input type="text" name ="name" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
-                            <td><input type="text" name ="dateOrder" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
-                            <td><input type="text" name ="dateReceipt" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
-                            <td class="chiTiet"><input type="text" name ="totalMoney" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
-                            <td><input type="text" name ="bank" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
-                            <td class="DangGiao"><input type="text" name ="status" style=" border: 1px solid #f8f9fe ; background: #f8f9fe"  value="NULL"></td>
-                            <td>
-                                <input type="hidden" style="display: none" name ="idOrder" value="NULL">
-                                <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
-                            </td>
-                        </form>
-                        <td>
-                            <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
-                                <input type="hidden" name ="id" value="NULL">
-                                <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
-                            </form>
-                        </td>
-                    </tr>
-                </c:if>
             </c:forEach>
-                            </c:forEach>
         </table>
     </div>
 
@@ -460,7 +480,7 @@
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">
-                    &copy; 2021 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">
+                    &copy; 2021 <a href="<%= Asset.url("ProductDetailsList")%>" class="font-weight-bold ml-1" target="_blank">
                     Web Furniture</a>
                 </div>
             </div>

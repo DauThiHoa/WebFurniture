@@ -411,8 +411,10 @@
         </div>
     </div>
 
+        <img src="https://tse3.mm.bing.net/th?id=OIP.tpdxbYwVUMQZe8d9qIQfvgHaFj&pid=Api&P=0">
+
     <div class="infor2" style="height: 1025px">
-        <h1 class="information" style="font-size: 125%"> VIETNAMESE</h1>
+        <h1 class="information" style="font-size: 125%"> DISPLAY </h1>
         <div class="information2">
             <h2 class="Category"> Title </h2>
             <jsp:useBean id="name" scope="request" class="java.lang.String"/>
@@ -564,6 +566,15 @@
         y = (offsetY / zoomer.offsetHeight) * 100
         zoomer.style.backgroundPosition = x + "% " + y + "%";
     }
+
+    let mySrc;
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onloadend = function() {
+        // result includes identifier 'data:image/png;base64,' plus the base64 data
+        mySrc = reader.result;
+    }
+
 
 </script>
 </html>

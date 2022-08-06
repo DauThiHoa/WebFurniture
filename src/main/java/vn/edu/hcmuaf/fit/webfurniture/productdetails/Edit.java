@@ -31,6 +31,8 @@ public class Edit extends HttpServlet {
 
         String id = request.getParameter("id");
         String name = request.getParameter("name");
+        System.out.println("NAME" + name );
+
         String description = request.getParameter("description");
         String priceNew = request.getParameter("priceNew");
         String priceOld = request.getParameter("priceOld");
@@ -60,7 +62,8 @@ public class Edit extends HttpServlet {
      if ( update == 1 ) {
          request.getRequestDispatcher("/Product").forward(request, response);
      }else{
-         request.getRequestDispatcher("/Product").forward(request, response);
+//         request.getRequestDispatcher("/Product").forward(request, response);
+         response.setStatus(404);
      }
 
     }

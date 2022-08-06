@@ -75,7 +75,8 @@
             <div>
                 <jsp:useBean id="sizeListCart" scope="request" type="java.lang.Integer"/>
                 <input class="inputCart"
-                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="${sizeListCart}">
+                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%"
+                       value="${sizeListCart}">
 
                 <i class="fa fa-shopping-cart" aria-hidden="true">
                 </i>
@@ -180,7 +181,8 @@
                 <input pid="${productDetails.id}" class="form-control text-center changeQuantity" value="${productDetails.quantitySold}" type="number">
             </td>
             <td align="center" class="totalMoney" style="font-size: 20px  ; font-weight: bold ; color: orange">${productDetails.totalMoney}đ</td>
-            <td align="center" class="productDetails-remove"><a class="link"> <i style="font-size: 35px ; color: red" class="fa fa-trash" aria-hidden="true" pid="${productDetails.id}"></i> </a></td>
+            <td align="center" class="productDetails-remove"><a class="link"> <i style="font-size: 35px ; color: red" class="fa fa-trash"
+                               aria-hidden="true" pid="${productDetails.id}" ></i> </a></td>
         </tr>
         </c:forEach>
 
@@ -457,6 +459,7 @@
                 thisRow.val(JSQuantity.quantity);
                 // ham update
                 updateQuantity(cart, id , JSQuantity.quantity);
+                alert("Cập nhật số lượng sản phẩm thành công");
 
                 sum = 0 ;
                 for ( const  x in cart.productDetailsList){

@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
+import vn.edu.hcmuaf.fit.webfurniture.beans.Profile;
 import vn.edu.hcmuaf.fit.webfurniture.dao.OrderDao;
 import vn.edu.hcmuaf.fit.webfurniture.dao.ProductDetailsDao;
 import vn.edu.hcmuaf.fit.webfurniture.dao.UserDao;
@@ -16,6 +17,7 @@ import java.io.IOException;
 public class DashboardController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.setAttribute("sumUser" , UserDao.getInstance().sumUser());
         request.setAttribute("countUser" , UserDao.getInstance().countUser());
         request.setAttribute("sumOrderDetails" , OrderDao.getInstance().sumOrderDetails());
@@ -27,7 +29,7 @@ public class DashboardController extends HttpServlet {
         request.setAttribute("sumContact" , OrderDao.getInstance().sumContact());
         request.setAttribute("countContact" , OrderDao.getInstance().countContact());
 
-        //        Số sản phẩm trong giỏ hàng
+        // Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
@@ -37,6 +39,9 @@ public class DashboardController extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
+        Profile profile = ProfileService.getInstance().getProfile();
+        request.setAttribute("profile" , profile);
 
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);
 
