@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.webfurniture.admin;
 
 import vn.edu.hcmuaf.fit.webfurniture.beans.Customer;
+import vn.edu.hcmuaf.fit.webfurniture.beans.ListCustomerOrder;
 import vn.edu.hcmuaf.fit.webfurniture.beans.Order;
 import vn.edu.hcmuaf.fit.webfurniture.db.JDBIConnector;
 
@@ -42,10 +43,10 @@ public class OrderService  implements Serializable {
         });
     }
 
-    public Customer getCustomer ( ) {
+    public List<ListCustomerOrder> getListCustomerOrder ( ) {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery(" select * from customer where idOrder = ( select max(idOrder + 0) from orders )")
-                    .mapToBean(Customer.class).first();
+            return handle.createQuery("select c.*,o.dateOrder, o.dateReceipt, o.`status` from customer c left join orders o on c.idOrder = o.idOrder")
+                    .mapToBean(ListCustomerOrder.class).stream().collect(Collectors.toList());
         });
     }
 
