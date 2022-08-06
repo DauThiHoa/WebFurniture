@@ -83,18 +83,16 @@ public class OrderService  implements Serializable {
                         .execute());
     }
 
-    public int update_Order(String idOrder, String dateOrder, String dateReceipt, String totalMoney, String status) {
+    public int update_Order(String idOrder, String dateOrder, String dateReceipt, String status) {
         int id = Integer.parseInt(idOrder);
-        double money = Double.parseDouble(totalMoney);
         LocalDateTime dateorder = LocalDateTime.parse( dateOrder );
         LocalDateTime datereceipt = LocalDateTime.parse( dateReceipt );
         return JDBIConnector.get().withHandle(h ->
-                h.createUpdate("update orders set dateOrder = ? , dateReceipt = ? ,totalMoney = ? , status = ?  where idOrder = ? ")
+                h.createUpdate("update orders set dateOrder = ? , dateReceipt = ? , status = ?  where idOrder = ? ")
                         .bind(0 , dateorder )
                         .bind(1 , datereceipt )
-                        .bind(2 , money )
-                        .bind(3 , status )
-                        .bind(4 , id )
+                        .bind(2 , status )
+                        .bind(3 , id )
                         .execute());
     }
 

@@ -7,6 +7,7 @@ public class ListCustomerOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private int idCustomer;
+    private int idOrder ;
     private String name;
     private String birthDay;
     private String gender;
@@ -26,8 +27,11 @@ public class ListCustomerOrder implements Serializable {
     public ListCustomerOrder() {
     }
 
-    public ListCustomerOrder(int idCustomer, String name, String birthDay, String gender, String address, String phone, String email, String bank, String cardNumber, String deliveryMethod, int discount, int ship, double totalMoney, LocalDateTime dateOrder, LocalDateTime dateReceipt, String status) {
+    public ListCustomerOrder(int idCustomer, int idOrder, String name, String birthDay, String gender, String address,
+                             String phone, String email, String bank, String cardNumber, String deliveryMethod,
+                             int discount, int ship, double totalMoney, LocalDateTime dateOrder, LocalDateTime dateReceipt, String status) {
         this.idCustomer = idCustomer;
+        this.idOrder = idOrder;
         this.name = name;
         this.birthDay = birthDay;
         this.gender = gender;
@@ -51,6 +55,14 @@ public class ListCustomerOrder implements Serializable {
 
     public void setIdCustomer(int idCustomer) {
         this.idCustomer = idCustomer;
+    }
+
+    public int getIdOrder() {
+        return idOrder;
+    }
+
+    public void setIdOrder(int idOrder) {
+        this.idOrder = idOrder;
     }
 
     public String getName() {
@@ -177,6 +189,7 @@ public class ListCustomerOrder implements Serializable {
     public String toString() {
         return "ListCustomerOrder{" +
                 "idCustomer=" + idCustomer +
+                ", idOrder=" + idOrder +
                 ", name='" + name + '\'' +
                 ", birthDay='" + birthDay + '\'' +
                 ", gender='" + gender + '\'' +

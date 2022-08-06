@@ -32,7 +32,48 @@
     <link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
+<style>
+    .btn5-hover {
+        width: 100px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 0px;
+        height: 25px;
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
 
+    .btn5-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .btn5-hover:focus {
+        outline: none;
+    }
+
+    .btn5-hover.btn5 {
+        background-image: linear-gradient(
+                to right,
+                #25aae1,
+                #4481eb,
+                #04befe,
+                #3f86ed
+        );
+        box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    }
+</style>
 <body>
 <jsp:useBean id="profile" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Profile"/>
 <!-- Sidenav -->
@@ -384,7 +425,7 @@
 
     <div class="tab">
 
-        <table class="table" style="table-layout: fixed ; width: 100%">
+        <table class="table table-hover table-responsive table-bordered" style="table-layout: fixed ; width: 100%"  >
             <tr style="width: 100%">
                 <th class="TieuDe">Code orders</th>
                 <th class="TieuDe">Customer name</th>
@@ -395,6 +436,7 @@
                 <th class="TieuDe">Status</th>
                 <th class="TieuDe">Change</th>
                 <th class="TieuDe">Erase</th>
+                <th class="TieuDe">Customer Information</th>
             </tr>
 
             <jsp:useBean id="listCustomerOrder" scope="request" type="java.util.List"/>
@@ -418,6 +460,12 @@
                         <input type="hidden" name ="id" value="${list.idOrder}">
                         <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()"
                                 aria-hidden="true" ></button>
+                    </form>
+                </td>
+                <td>
+                    <form action = "<%=Asset.url("InforCustomer")%>"  method = "POST" >
+                        <input type="hidden" name ="id" value="${list.idCustomer}">
+                        <button class="btn5-hover btn5" style="margin-left: 15%">Information</button>
                     </form>
                 </td>
             </tr>

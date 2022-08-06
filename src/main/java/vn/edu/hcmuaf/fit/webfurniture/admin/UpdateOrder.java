@@ -40,7 +40,7 @@ public class UpdateOrder extends HttpServlet {
         String status = request.getParameter("status");
 
         int update_Customer = OrderService.getInstance().update_Customer(idOrder,name,bank);
-        int update_Order = OrderService.getInstance().update_Order(idOrder,dateOrder,dateReceipt,totalMoney,status);
+        int update_Order = OrderService.getInstance().update_Order(idOrder,dateOrder,dateReceipt,status);
 
         if ( update_Customer == 1 && update_Order == 1 ) {
             request.getRequestDispatcher("/Order").forward(request, response);
