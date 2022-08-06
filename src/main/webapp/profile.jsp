@@ -542,7 +542,7 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-country">Postal code</label>
-                                            <input style="font-weight: bold" type="number" id="input-postal-code" class="form-control" name="postalcode"
+                                            <input style="font-weight: bold" type="number" min="1" id="input-postal-code" class="form-control" name="postalcode"
                                                    value="${profile.postalcode}">
                                         </div>
                                     </div>
