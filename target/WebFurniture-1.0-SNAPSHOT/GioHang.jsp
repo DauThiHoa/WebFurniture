@@ -234,7 +234,7 @@
             <p style="color: #555555">Luôn sẵn sàng hỗ trợ và tư vấn cho bạn để có sản phẩm tốt nhất.</p>
             <form action="MailController" method="post">
                   <input onchange="checkValidate()" class="btn1" style="width: 500px; height: 58px; color: #555555"
-                         type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                         type="email" required name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                   <button type="submit" class="fromDangKi" onclick="clickValidate()" class="btn2"
                           style="width: 110px; height: 58px; color: white ; font-size: 200%; background: #1fb5d4 ; margin-bottom: -10px" >Gửi</button>
             </form>
@@ -386,7 +386,7 @@
                     <div class="lienLac_right">
                         <h2 class="nhanTin">Đăng kí nhận tin</h2>
                         <div class="from">
-                            <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                            <input onchange="checkValidate()" type="email" required name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
                                 <h6 class="dangKi">Đăng kí</h6>
                             </button>

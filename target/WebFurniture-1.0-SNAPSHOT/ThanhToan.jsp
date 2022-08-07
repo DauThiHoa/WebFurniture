@@ -34,29 +34,29 @@
                         <h3>Thông Tin Khách hàng</h3>
                         <label class="from" for="fname" >Họ Và Tên</label>
                         <jsp:useBean id="name" scope="request" class="java.lang.String"/>
-                        <input type="text" id="fname" name="firstname" value="${name}" onchange="checkValidate()" onchange="click()" placeholder="Bùi Hoàng Tuấn Anh"/>
+                        <input type="text"  required  id="fname" name="firstname" value="${name}" onchange="checkValidate()" onchange="click()" placeholder="Bùi Hoàng Tuấn Anh"/>
                         <label class="from" for="email"> Email</label>
                         <jsp:useBean id="email" scope="request" class="java.lang.String"/>
-                        <input type="text" id="email" name="email" value="${email}" onchange="checkValidate()" placeholder="19130006@st.hcmuaf.edu.vn"/>
+                        <input type="text"  required  id="email" name="email" value="${email}" onchange="checkValidate()" placeholder="19130006@st.hcmuaf.edu.vn"/>
                         <label class="from" for="adr"> Số Điện Thoại </label>
                         <jsp:useBean id="phone" scope="request" class="java.lang.String"/>
-                        <input type="text" id="address" name="phone" value="${phone}" onchange="checkValidate()" placeholder="0123456789"/>
+                        <input type="text"  required  id="address" name="phone" value="${phone}" onchange="checkValidate()" placeholder="0123456789"/>
                         <label class="from" for="adr"> Địa Chỉ </label>
                         <jsp:useBean id="address" scope="request" class="java.lang.String"/>
-                        <input type="text" id="adr" name="address" value="${address}"
+                        <input type="text"   id="adr" required  name="address" value="${address}"
                                placeholder="Xã Phúc Tân - huyện Lâm Hà - tỉnh Lâm Đồng"/>
                     </div>
                     <div>
                         <h3>Thanh Toán</h3>
                         <label class="from" for="cname">Ngân hàng </label>
                         <jsp:useBean id="bank" scope="request" class="java.lang.String"/>
-                        <input type="text" id="cardname" name="cardname" value="${bank}" onchange="checkValidate()" placeholder="BIDV, ACB, Vietcombank,...  "/>
+                        <input type="text" required  id="cardname" name="cardname" value="${bank}" onchange="checkValidate()" placeholder="BIDV, ACB, Vietcombank,...  "/>
                         <label class="from" for="ccnum">Số Thẻ</label>
                         <jsp:useBean id="cardNumber" scope="request" class="java.lang.String"/>
-                        <input type="text" id="cardnumber" name="cardnumber" value="${cardNumber}" onchange="checkValidate()"  placeholder="4129 7501 2345 6789"/>
+                        <input type="text"  required id="cardnumber" name="cardnumber" value="${cardNumber}" onchange="checkValidate()"  placeholder="4129 7501 2345 6789"/>
                         <label class="from" for="ccnum">Ngày sinh</label>
-                        <jsp:useBean id="brithDay" scope="request" class="java.lang.String"/>
-                        <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date" id="brithDay" name="brithDay" value="${brithDay}" onchange="checkValidate()" placeholder="12/2/1989"/>
+                        <jsp:useBean id="brithDay" =  scope="request" class="java.lang.String"/>
+                        <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date"  required id="brithDay" name="brithDay" value="${brithDay}" onchange="checkValidate()" placeholder="12/2/1989"/>
                     </div>
                     <div>
                         <h3 style="margin-left: 20px">Phương Thức Nhận Hàng</h3>
@@ -79,9 +79,9 @@
                 </div>
                 <a href = "" >
                     <jsp:useBean id="sumDiscount" scope="request" type="java.lang.Integer"/>
-                    <input  value="${sumDiscount}" name="sumDiscount" style="display: none"/>
+                    <input  value="${sumDiscount}"  required  name="sumDiscount" style="display: none"/>
                     <jsp:useBean id="sumTotalMoney" scope="request" type="java.lang.Integer"/>
-                    <input  value="${sumTotalMoney}" name="sumTotalMoney" style="display: none"/>
+                    <input  value="${sumTotalMoney}"  required  name="sumTotalMoney" style="display: none"/>
                     <input type="submit" value="Continue to checkout" class="checkout" onclick="clickCheckout()" />
                 </a>
 <%--            --%>
@@ -126,7 +126,7 @@
 
             <div class="noiDung_2" >
                 <jsp:useBean id="discountCode" scope="request" class="java.lang.String"/>
-                <input class="input_1" type="text" name="discountCode" value="${discountCode}" onchange="displayname()"
+                <input class="input_1" type="text"  required  name="discountCode" value="${discountCode}" onchange="displayname()"
                        placeholder="Mã giảm giá"/>
             </div>
             </form>

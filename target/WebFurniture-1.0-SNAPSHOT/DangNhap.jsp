@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn"
+           uri="http://java.sun.com/jsp/jstl/functions" %>
 <%
     String error = (String) request.getAttribute("error");
 %>
@@ -28,12 +28,15 @@
             background-size: cover;
             background-attachment: fixed;
         }
-.btn:hover{
-    cursor: pointer;
-}
-#forgot:hover{
-    text-decoration: black;
-}
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        #forgot:hover {
+            text-decoration: black;
+        }
+
         .container {
             display: flex;
             align-content: center;
@@ -218,35 +221,38 @@
             <hr>
             <div class="orDiv">Or</div>
             <form action="handling-login" method="post">
-            <p class="text">Sign In with Email Address</p>
-            <div class="formGroup">
-                <i class="far fa-envelope"></i>
-<%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
-                <input type="email" required name="email" id="email" placeholder="Email" value="${email}" onchange="checkValidate()">
-            </div>
-            <div class="formGroup">
-                <i class="fas fa-lock"></i>
-<%--                <jsp:useBean id="password" scope="request" type="java.lang.String"/>--%>
-                <input type="password" name="password" id="password" value="${password}"
-                       placeholder="Password" onchange="checkValidate()">
-            </div>
-            <div class="checkBox">
-                <input type="checkbox" name="checkboxlogin" id="checkbox">
-                <span class="text">I Agree with Term & Conditions.</span>
-            </div>
-                <% if(error != null) { %>
-                    <p style="color: red ; font-weight: bold; margin-bottom: -2%"><%= error%></p>
+                <p class="text">Sign In with Email Address</p>
+                <div class="formGroup">
+                    <i class="far fa-envelope"></i>
+                    <%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
+                    <input type="email" required name="email" id="email" placeholder="Email" value="${email}"
+                           onchange="checkValidate()">
+                </div>
+                <div class="formGroup">
+                    <i class="fas fa-lock"></i>
+                    <%--                <jsp:useBean id="password" scope="request" type="java.lang.String"/>--%>
+                    <input type="password" name="password" id="password" value="${password}"
+                           placeholder="Password" onchange="checkValidate()">
+                </div>
+                <div class="checkBox">
+                    <input type="checkbox" name="checkboxlogin" id="checkbox">
+                    <span class="text">I Agree with Term & Conditions.</span>
+                </div>
+                <% if (error != null) { %>
+                <p style="color: red ; font-weight: bold; margin-bottom: -2%"><%= error%>
+                </p>
                 <%} %>
 
-            <a href="">
-                <input id="check" style="display: none" type="text" name="check" value="1" >
-                <button onclick="clickValidate()" class="btn">SIGN IN</button>
-            </a>
+                <a href="">
+                    <input id="check" style="display: none" type="text" name="check" value="1">
+                    <button onclick="clickValidate()" class="btn">SIGN IN</button>
+                </a>
 
                 <%--            <form action="ForgotPassword" method="post">--%>
-                <input id="text" style="display: none" type="text" name="text" value="1" >
+                <input id="text" style="display: none" type="text" name="text" value="1">
                 <button type="submit" id="forgot" style="background: lavender; color: black; margin-top: -0.1%"
-                        onclick="forgotPassword()" class="btn btn-primary">Forgot password</button>
+                        onclick="forgotPassword()" class="btn btn-primary">Forgot password
+                </button>
                 <%--            </form>--%>
             </form>
 
@@ -265,57 +271,61 @@
 </div>
 </body>
 <script>
-<%--    <jsp:useBean id="correct" scope="request" type="java.lang.String"/>--%>
+    <%--    <jsp:useBean id="correct" scope="request" type="java.lang.String"/>--%>
+
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
             alert('Kiểm tra thông tin đăng nhập');
             <%--alert('${correct}');--%>
-        }else {
+        } else {
             alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
     }
 
-const check = document.getElementById('check');
-const text = document.getElementById('text');
-function makeid() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const check = document.getElementById('check');
+    const text = document.getElementById('text');
 
-    for (var i = 0; i < 10; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    function makeid() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    return text;
-}
+        for (var i = 0; i < 10; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-function forgotPassword () {
+        return text;
+    }
+
+    function forgotPassword() {
         alert('Mật Khẩu mới đã được gửi về mail của bạn vui lòng kiểm tra mail');
         check.value = 2;
         text.value = makeid();
-}
+    }
 
     const email = document.getElementById('email');
     const password = document.getElementById('password');
+
     function checkValidate() {
         let emailValue = email.value;
         let passwordValue = password.value;
-        let isCheck ;
+        let isCheck;
         if (emailValue == '') {
             isCheck = false;
-        } else  if (passwordValue == '') {
+        } else if (passwordValue == '') {
             isCheck = false;
-        }else {
+        } else {
             isCheck = true;
         }
         return isCheck;
     }
-function zoom(e) {
-    var zoomer = e.currentTarget;
-    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-    x = (offsetX / zoomer.offsetWidth) * 100
-    y = (offsetY / zoomer.offsetHeight) * 100
-    zoomer.style.backgroundPosition = x + "% " + y + "%";
-}
+
+    function zoom(e) {
+        var zoomer = e.currentTarget;
+        e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+        e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+        x = (offsetX / zoomer.offsetWidth) * 100
+        y = (offsetY / zoomer.offsetHeight) * 100
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+    }
 </script>
 </html>

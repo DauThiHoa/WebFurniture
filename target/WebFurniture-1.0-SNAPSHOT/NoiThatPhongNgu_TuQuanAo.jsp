@@ -991,7 +991,7 @@
             <div class="lienLac_right">
                 <h2 class="nhanTin">Đăng kí nhận tin</h2>
                 <div class="from">
-                    <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                    <input onchange="checkValidate()" type="email" name="email" required  class="email" placeholder="Nhập email của bạn ..."> </input>
                     <button type="submit" class="fromDangKi" onclick="clickValidate()">
                         <h6 class="dangKi">Đăng kí</h6>
                     </button>

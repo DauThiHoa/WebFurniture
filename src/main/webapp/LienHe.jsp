@@ -176,11 +176,11 @@
                 <form action="LienHeSendController" method="POST">
                 <div class="noiDung_2">
                     <jsp:useBean id="name" scope="request" class="java.lang.String"/>
-                    <input class="input_1" onchange="changeInput()" type="text" name="name" value="${name}" placeholder="Họ và tên"/>
+                    <input class="input_1" required onchange="changeInput()" type="text" name="name" value="${name}" placeholder="Họ và tên"/>
                     <jsp:useBean id="email" scope="request" class="java.lang.String"/>
-                    <input class="input_1" onchange="changeInput()" type="text" name="email" value="${email}" placeholder="Email"/>
+                    <input class="input_1" required onchange="changeInput()" type="email" name="email" value="${email}" placeholder="Email"/>
                     <jsp:useBean id="content" scope="request" class="java.lang.String"/>
-                    <input class="input_2" onchange="changeInput()" type="text" name="content" value="${content}" placeholder="Nội Dung"/>
+                    <input class="input_2" required onchange="changeInput()" type="text" name="content" value="${content}" placeholder="Nội Dung"/>
                 </div>
                 <div class="noiDung_3">
                     <button class="btn" type="submit" onclick="clickInput()" >Gửi liên hệ của bạn</button>
@@ -289,7 +289,7 @@
                     <div class="lienLac_right">
                         <h2 class="nhanTin">Đăng kí nhận tin</h2>
                         <div class="from">
-                            <input onchange="checkValidate()" type="email" name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
+                            <input onchange="checkValidate()" type="email" required name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
                                 <h6 class="dangKi">Đăng kí</h6>
                             </button>

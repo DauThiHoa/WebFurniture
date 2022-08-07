@@ -40,15 +40,15 @@
             <div class="formGroup">
                 <i class="far fa-user"></i>
 <%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
-                <input type="text" name="name" id="name" placeholder="Name" value="${name}" onchange="checkValidate()">
+                <input type="text" required name="name" id="name" placeholder="Name" value="${name}" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
-                <input type="email" name="email" id="email" value="${email}" placeholder="Email" onchange="checkValidate()">
+                <input type="email" required name="email" id="email" value="${email}" placeholder="Email" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" value="${password}" placeholder="Password" onchange="checkValidate()">
+                <input type="password" required name="password" id="password" value="${password}" placeholder="Password" onchange="checkValidate()">
             </div>
             <div class="checkBox">
                 <input type="checkbox" name="checkbox" id="checkbox">

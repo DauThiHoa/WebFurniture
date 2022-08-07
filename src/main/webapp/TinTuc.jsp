@@ -250,17 +250,17 @@
     <div class="hoTen_Email">
         <div class="hoten">
             <jsp:useBean id="nameCustomer" scope="request" class="java.lang.String"/>
-            <input class="ten" onchange="inputInformation()" placeholder="Họ tên :" name="nameCustomer" value="${nameCustomer}"> </input>
+            <input class="ten"  required  onchange="inputInformation()" placeholder="Họ tên :" name="nameCustomer" value="${nameCustomer}"> </input>
         </div>
         <div class="Email">
             <jsp:useBean id="emailCustomer" scope="request" class="java.lang.String"/>
-            <input class="email" onchange="inputInformation()" placeholder="Email :" name="emailCustomer" value="${emailCustomer}"> </input>
+            <input class="email" type="email" required  onchange="inputInformation()" placeholder="Email :" name="emailCustomer" value="${emailCustomer}"> </input>
         </div>
     </div>
 
     <div class="noiDungBinhLuan">
         <jsp:useBean id="content" scope="request" class="java.lang.String"/>
-        <input class="thongTinNoiDung" onchange="inputInformation()" placeholder="Nội dung : " name="content" value="${content}"> </input>
+        <input class="thongTinNoiDung"  required  onchange="inputInformation()" placeholder="Nội dung : " name="content" value="${content}"> </input>
     </div>
     <button class="guiBinhLuan" type="submit" onclick="clickNewComment()">
         <h4 class="gui"> Gửi bình luận </h4>
