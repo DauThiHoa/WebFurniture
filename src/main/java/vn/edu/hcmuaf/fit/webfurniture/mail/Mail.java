@@ -8,7 +8,9 @@ import java.util.Properties;
 
 public class Mail {
     private static String username = "webfurniture7@gmail.com";
-    private static String password = "WebFurniture12345$";
+    // vktwcfsfegvhxcah
+//    private static String password = "WebFurniture12345$";
+    private static String password = "vktwcfsfegvhxcah";
 
     // to => ai / subject => noi dung / content =?
     public static boolean sendMail(String to, String subject, String content) {
@@ -34,18 +36,20 @@ public class Mail {
     }
 
     private static Session connect() {
+
         Properties props = new Properties();
-        props.put("mail.smtp.auth",true);
+        props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.host","smtp.gmail.com");
         // 465 || 587 || "25"
-        props.put("mail.smtp.port",587);
-        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-/*
-THEM MOI
-        props.put("mail.smtp.auth", true);
-        props.put("mail.smtp.port", 587);
-*/
+        props.put("mail.smtp.port", "587" );
+
+//        props.put("mail.smtp.ssl.enable", "true");
+//        props.put ("mail.smtp.EnableSSL.enable", "true");
+//        props.put ("mail.debug", "true" );
+//        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+//        props.put("mail.transport.protocol", "smtp");
 
         return Session.getInstance(props,
                 new Authenticator(){
@@ -57,7 +61,8 @@ THEM MOI
     }
 
     public static void main(String[] args) {
-        // Gui den 19130052
+        // Gui den 19130075
+        System.out.println("kkkkjjkkkkkkkk");
         System.out.println(sendMail("19130075@st.hcmuaf.edu.vn","Test Mail",
                 "Dear mail Crawler\n\n No spam to my emai, please  " ) ? "Send mail success" : "Send mail fail");
     }

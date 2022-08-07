@@ -19,10 +19,10 @@ public class MailController extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         String email = request.getParameter("email");
-        request.setAttribute("email" , email);
+        request.setAttribute("email", email);
         String session = request.getParameter("session");
 
-        if ( email != "" ) {
+        if (email != "") {
             request.setAttribute("email", "");
         }
         request.setCharacterEncoding("UTF-8");
@@ -36,18 +36,19 @@ public class MailController extends HttpServlet {
         content += "<h5 style=\"text-align: center\">Thank you for signing up to receive the latest information from us =_=</h5> \n";
 
         boolean result = sendMail(email, subject, content);
-        if(result) {
+        System.out.println(result);
+        if (result) {
 //          request.getRequestDispatcher("success.jsp").forward(request, response);
             request.getRequestDispatcher("ProductDetailsList").forward(request, response);
-        }else {
-//          request.getRequestDispatcher("fail.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("fail.jsp").forward(request, response);
             request.setAttribute("email", "Qúy khách đăng kí nhận tin không thành công");
-            request.getRequestDispatcher("ProductDetailsList").forward(request, response);
+//            request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         }
 
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
-        request.setAttribute("sizeListCart" , sumListCart);
+        request.setAttribute("sizeListCart", sumListCart);
 
         String block = "block";
         String none = "none";
@@ -59,6 +60,6 @@ public class MailController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-           doGet(request,response);
+        doGet(request, response);
     }
 }

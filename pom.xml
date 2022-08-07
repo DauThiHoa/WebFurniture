@@ -34,17 +34,6 @@
             <artifactId>jdbi3-core</artifactId>
             <version>3.26.0</version>
         </dependency>
-            <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>javax.mail</artifactId>
-                <version>1.6.2</version>
-            </dependency>
-        <!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
         <dependency>
@@ -53,11 +42,11 @@
             <version>1.5.0-b01</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>javax.mail</groupId>-->
-<!--            <artifactId>smtp</artifactId>-->
-<!--            <version>1.4</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>javax.mail</groupId>-->
+        <!--            <artifactId>smtp</artifactId>-->
+        <!--            <version>1.4</version>-->
+        <!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
@@ -104,11 +93,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.27</version>
         </dependency>
-        <dependency>
-            <groupId>org.jdbi</groupId>
-            <artifactId>jdbi3-core</artifactId>
-            <version>3.24.1</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.jdbi</groupId>-->
+        <!--            <artifactId>jdbi3-core</artifactId>-->
+        <!--            <version>3.24.1</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -122,20 +111,17 @@
             <version>2.11.0</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>me.minidigger</groupId>-->
-<!--            <artifactId>MiniMessage</artifactId>-->
-<!--            <version>2.1.0</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
-            <!-- https://search.maven.org/remotecontent?filepath=javax/mail/mail/1.4.7/mail-1.4.7.jar -->
-            <dependency>
-                <groupId>javax.mail</groupId>
-                <artifactId>mail</artifactId>
-                <version>1.4.7</version>
-            </dependency>
-        <!-- http://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.thymeleaf</groupId>
@@ -156,11 +142,6 @@
             <groupId>com.google.errorprone</groupId>
             <artifactId>javac</artifactId>
             <version>9-dev-r3297-3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.5.5</version>
         </dependency>
         <dependency>
             <groupId>com.sun.mail</groupId>
@@ -190,17 +171,10 @@
             <version>1.5.2</version>
             <scope>runtime</scope>
         </dependency>
-<!--         Thanks for using https://jar-download.com -->
-<!--         https://mvnrepository.com/artifact/javax.mail/mail -->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
-            <version>1.4</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4.1</version>
+            <version>1.4.7</version>
         </dependency>
 
         <dependency>
@@ -228,21 +202,6 @@
             <artifactId>commons-email</artifactId>
             <version>1.4</version>
         </dependency>
-        <!-- Thanks for using https://jar-download.com -->
-
-        <!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.5.5</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-email</artifactId>
-            <version>1.4</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
         <dependency>
@@ -252,28 +211,22 @@
         </dependency>
 
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-            </dependency>
-
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
-            </dependency>
-             
-               <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
         <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
-            <version>1.1.1</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
 
     </dependencies>
 
