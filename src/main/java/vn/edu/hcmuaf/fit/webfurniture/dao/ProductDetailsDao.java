@@ -40,6 +40,7 @@ public class ProductDetailsDao {
                         .bind(0 , id ).execute());
     }
 
+
     public int update (String id , String name , String description , String priceNew , String priceOld , String quantity , String status
             , String color, String size, String weight, String material, String design) {
         System.out.println("PRODUCT DETAILS DAO " + name );

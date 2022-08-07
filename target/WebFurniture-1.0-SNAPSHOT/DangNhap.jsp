@@ -28,7 +28,12 @@
             background-size: cover;
             background-attachment: fixed;
         }
-
+.btn:hover{
+    cursor: pointer;
+}
+#forgot:hover{
+    text-decoration: black;
+}
         .container {
             display: flex;
             align-content: center;
@@ -198,7 +203,7 @@
 
         <!-- Left section of responsive registration form -->
 
-        <div class="formDiv">
+        <div class="formDiv" style="padding: 4%">
             <h2>Sign In</h2>
             <p class="text"> Sign In with Social Media</p>
 
@@ -217,25 +222,34 @@
             <div class="formGroup">
                 <i class="far fa-envelope"></i>
 <%--                <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
-                <input type="email" name="email" id="email" placeholder="Email" value="${email}" onchange="checkValidate()">
+                <input type="email" required name="email" id="email" placeholder="Email" value="${email}" onchange="checkValidate()">
             </div>
             <div class="formGroup">
                 <i class="fas fa-lock"></i>
 <%--                <jsp:useBean id="password" scope="request" type="java.lang.String"/>--%>
-                <input type="password" name="password" id="password" value="${password}" placeholder="Password" onchange="checkValidate()">
+                <input type="password" name="password" id="password" value="${password}"
+                       placeholder="Password" onchange="checkValidate()">
             </div>
             <div class="checkBox">
                 <input type="checkbox" name="checkboxlogin" id="checkbox">
                 <span class="text">I Agree with Term & Conditions.</span>
             </div>
                 <% if(error != null) { %>
-                    <p style="color: red ; font-weight: bold"><%= error%></p>
+                    <p style="color: red ; font-weight: bold; margin-bottom: -2%"><%= error%></p>
                 <%} %>
 
             <a href="">
+                <input id="check" style="display: none" type="text" name="check" value="1" >
                 <button onclick="clickValidate()" class="btn">SIGN IN</button>
             </a>
+
+                <%--            <form action="ForgotPassword" method="post">--%>
+                <input id="text" style="display: none" type="text" name="text" value="1" >
+                <button type="submit" id="forgot" style="background: lavender; color: black; margin-top: -0.1%"
+                        onclick="forgotPassword()" class="btn btn-primary">Forgot password</button>
+                <%--            </form>--%>
             </form>
+
         </div>
 
         <!-- Right section of responsive registration form -->
@@ -261,6 +275,25 @@
             alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
     }
+
+const check = document.getElementById('check');
+const text = document.getElementById('text');
+function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 10; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+function forgotPassword () {
+        alert('Mật Khẩu mới đã được gửi về mail của bạn vui lòng kiểm tra mail');
+        check.value = 2;
+        text.value = makeid();
+}
+
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     function checkValidate() {
