@@ -52,7 +52,7 @@ public class SearchDecoratorFlower extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatDoTrangTri_Lohoagia.jsp").forward(request, response);
+        request.getRequestDispatcher("InteriorDecorations_flowerVase.jsp").forward(request, response);
 
     }
     @Override

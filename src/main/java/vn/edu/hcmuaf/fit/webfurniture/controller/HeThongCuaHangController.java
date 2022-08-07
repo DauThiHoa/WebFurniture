@@ -27,7 +27,7 @@ public class HeThongCuaHangController extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.getRequestDispatcher("HeThongCuaHang.jsp").forward(request, response);
+        request.getRequestDispatcher("ShopSystem.jsp").forward(request, response);
 
     }
 

@@ -34,7 +34,7 @@ public class ControllerLogin extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.getRequestDispatcher("/DangNhap.jsp").forward(request, response);
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 
     @Override

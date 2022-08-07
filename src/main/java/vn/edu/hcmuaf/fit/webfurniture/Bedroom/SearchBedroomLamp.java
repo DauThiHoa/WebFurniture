@@ -52,7 +52,7 @@ public class SearchBedroomLamp extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongNgu_DenNgu.jsp").forward(request, response);
+        request.getRequestDispatcher("Bedroom_lamp.jsp").forward(request, response);
 
     }
     @Override

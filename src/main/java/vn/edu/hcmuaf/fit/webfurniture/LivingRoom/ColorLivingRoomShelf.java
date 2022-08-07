@@ -50,7 +50,7 @@ public class ColorLivingRoomShelf extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongKhach_KeTivi.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom_tvShelf.jsp").forward(request, response);
 
     }
     @Override

@@ -24,7 +24,7 @@ public class Register extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
 
-        request.getRequestDispatcher("DangKy.jsp").forward(request, response);
+        request.getRequestDispatcher("Register.jsp").forward(request, response);
 
 if ( name != null && password != null && email != null ) {
     System.out.println(name +"REGISTER");
@@ -32,10 +32,10 @@ if ( name != null && password != null && email != null ) {
     System.out.println(email +"REGISTER");
 
     if (UserServices.getInstance().register(name, password, email)) {
-        response.sendRedirect("../WebFurniture_war_exploded/DangNhap.jsp");
+        response.sendRedirect("../WebFurniture_war_exploded/login");
     } else {
         request.setAttribute("error", "Username exits");
-        request.getRequestDispatcher("../WebFurniture_war_exploded/DangKy.jsp").forward(request, response);
+        request.getRequestDispatcher("../WebFurniture_war_exploded/controllerRegister").forward(request, response);
     }
 }
         String block = "block";
@@ -49,6 +49,6 @@ if ( name != null && password != null && email != null ) {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
-        request.getRequestDispatcher("DangKy.jsp").forward(request,response);
+        request.getRequestDispatcher("Register.jsp").forward(request,response);
     }
 }

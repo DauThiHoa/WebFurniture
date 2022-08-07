@@ -53,7 +53,7 @@ public class ProductDetailsListControllerKitchen extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("productDetailsKitchen", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("PhongBep.jsp").forward(request, response);
+        request.getRequestDispatcher("kitchen.jsp").forward(request, response);
 
     }
     @Override

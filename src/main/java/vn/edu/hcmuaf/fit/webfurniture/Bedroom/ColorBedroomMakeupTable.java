@@ -50,7 +50,7 @@ public class ColorBedroomMakeupTable extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongNgu_BanTrangDiem.jsp").forward(request, response);
+        request.getRequestDispatcher("Bedroom_makeupTable.jsp").forward(request, response);
 
     }
     @Override

@@ -49,7 +49,7 @@ public class ColorLivingRoomChairSofa extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongKhach_GheSofa.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom_sofa.jsp").forward(request, response);
 
     }
     @Override

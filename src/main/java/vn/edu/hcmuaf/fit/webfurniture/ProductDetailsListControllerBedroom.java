@@ -53,7 +53,7 @@ public class ProductDetailsListControllerBedroom extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsBedroom", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("PhongNgu.jsp").forward(request, response);
+        request.getRequestDispatcher("Bedroom.jsp").forward(request, response);
 
     }
     @Override

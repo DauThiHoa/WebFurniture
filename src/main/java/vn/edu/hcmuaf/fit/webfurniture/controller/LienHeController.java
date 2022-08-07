@@ -36,7 +36,7 @@ public class LienHeController extends HttpServlet {
             request.setAttribute("content", "");
         }
 
-        request.getRequestDispatcher("LienHe.jsp").forward(request, response);
+        request.getRequestDispatcher("Contact.jsp").forward(request, response);
 
         String block = "block";
         String none = "none";

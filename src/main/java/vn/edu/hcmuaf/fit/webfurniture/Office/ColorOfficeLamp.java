@@ -50,7 +50,7 @@ public class ColorOfficeLamp extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatVanPhong_DenLamViec.jsp").forward(request, response);
+        request.getRequestDispatcher("Office_workLights.jsp").forward(request, response);
 
     }
     @Override

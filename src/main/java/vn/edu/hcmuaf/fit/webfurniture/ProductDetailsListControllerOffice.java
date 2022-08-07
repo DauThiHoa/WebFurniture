@@ -53,7 +53,7 @@ public class ProductDetailsListControllerOffice extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsOffice", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("VanPhong.jsp").forward(request, response);
+        request.getRequestDispatcher("Office.jsp").forward(request, response);
 
     }
     @Override

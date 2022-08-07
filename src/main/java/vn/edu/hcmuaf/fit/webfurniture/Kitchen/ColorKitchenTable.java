@@ -50,7 +50,7 @@ public class ColorKitchenTable extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongBep_BanAn.jsp").forward(request, response);
+        request.getRequestDispatcher("kitchen_dinnerTable.jsp").forward(request, response);
 
     }
     @Override

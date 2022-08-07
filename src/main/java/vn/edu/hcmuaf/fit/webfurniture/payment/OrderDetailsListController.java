@@ -35,7 +35,7 @@ public class OrderDetailsListController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
-        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
+        request.getRequestDispatcher("Pay.jsp").forward(request , response);
 
     }
 

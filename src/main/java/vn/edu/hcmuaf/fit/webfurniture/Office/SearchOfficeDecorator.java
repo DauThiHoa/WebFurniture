@@ -52,7 +52,7 @@ public class SearchOfficeDecorator extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatVanPhong_TrangTri.jsp").forward(request, response);
+        request.getRequestDispatcher("Office_decorate.jsp").forward(request, response);
 
     }
     @Override

@@ -53,7 +53,7 @@ public class SearchOfficeSofa extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatVanPhong_Sofa.jsp").forward(request, response);
+        request.getRequestDispatcher("Office_sofa.jsp").forward(request, response);
 
     }
     @Override

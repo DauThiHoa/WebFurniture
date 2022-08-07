@@ -55,7 +55,7 @@ public class ProductDetailsListControllerDecorationCurtain extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatDoTrangTri_Remcua.jsp").forward(request, response);
+        request.getRequestDispatcher("InteriorDecorations_curtains.jsp").forward(request, response);
 
     }
     @Override

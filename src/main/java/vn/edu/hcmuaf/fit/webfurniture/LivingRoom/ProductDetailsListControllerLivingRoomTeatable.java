@@ -55,7 +55,7 @@ public class ProductDetailsListControllerLivingRoomTeatable extends HttpServlet 
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsLivingRoomTeatable", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatPhongKhach_BanTra.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom_teaTable.jsp").forward(request, response);
 
     }
     @Override

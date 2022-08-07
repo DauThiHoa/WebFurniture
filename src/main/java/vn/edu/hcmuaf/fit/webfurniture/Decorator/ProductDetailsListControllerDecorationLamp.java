@@ -55,7 +55,7 @@ public class ProductDetailsListControllerDecorationLamp extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatDoTrangTri_Den.jsp").forward(request, response);
+        request.getRequestDispatcher("InteriorDecorations_lamp.jsp").forward(request, response);
 
     }
     @Override

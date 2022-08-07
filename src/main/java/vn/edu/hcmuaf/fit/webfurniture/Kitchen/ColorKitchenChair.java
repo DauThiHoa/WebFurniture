@@ -50,7 +50,7 @@ public class ColorKitchenChair extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongBep_GheBep.jsp").forward(request, response);
+        request.getRequestDispatcher("kitchen_kitchenChair.jsp").forward(request, response);
 
     }
     @Override

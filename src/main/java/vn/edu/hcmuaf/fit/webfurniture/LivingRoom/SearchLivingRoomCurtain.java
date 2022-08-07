@@ -52,7 +52,7 @@ public class SearchLivingRoomCurtain extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongKhach_RemCua.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom_curtains.jsp").forward(request, response);
 
     }
     @Override
