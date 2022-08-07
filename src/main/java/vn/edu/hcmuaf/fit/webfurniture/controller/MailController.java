@@ -38,12 +38,16 @@ public class MailController extends HttpServlet {
         boolean result = sendMail(email, subject, content);
         System.out.println(result);
         if (result) {
-//          request.getRequestDispatcher("success.jsp").forward(request, response);
+//          request.setAttribute("result", null);
+            request.setAttribute("checkMail", "Qúy khách đã đăng kí nhận tin thành công");
             request.getRequestDispatcher("ProductDetailsList").forward(request, response);
         } else {
-            request.getRequestDispatcher("fail.jsp").forward(request, response);
-            request.setAttribute("email", "Qúy khách đăng kí nhận tin không thành công");
-//            request.getRequestDispatcher("ProductDetailsList").forward(request, response);
+
+//          request.getRequestDispatcher("fail.jsp").forward(request, response);
+            request.setAttribute("checkMail", "Qúy khách đăng kí nhận tin không thành công");
+
+            response.setStatus(404);
+            return ;
         }
 
         //        Số sản phẩm trong giỏ hàng

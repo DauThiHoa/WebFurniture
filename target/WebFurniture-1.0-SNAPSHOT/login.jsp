@@ -277,7 +277,6 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Kiểm tra thông tin đăng nhập');
-            <%--alert('${correct}');--%>
         } else {
             alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
@@ -327,5 +326,6 @@
         y = (offsetY / zoomer.offsetHeight) * 100
         zoomer.style.backgroundPosition = x + "% " + y + "%";
     }
+
 </script>
 </html>

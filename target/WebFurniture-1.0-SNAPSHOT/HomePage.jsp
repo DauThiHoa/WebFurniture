@@ -6,6 +6,10 @@
 <%@ taglib prefix = "fn"
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 
+<%
+    String checkMail = (String) request.getAttribute("checkMail");
+%>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,7 +25,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="Home.js"></script>
+    <script>
+<%--        <% if (checkMail != null) { %>--%>
+        alert( <%= checkMail %> + " HAHHAHAHA");
+        // alert("HAHHAHAHA");
+<%--        <%} %>--%>
 
+    </script>
 </head>
 <body>
 <div id="Thanh_cong_cu">
@@ -2217,6 +2227,11 @@
 
 </div>
 
+<% if (checkMail != null) { %>
+<p style="color: red ; font-weight: bold; margin-bottom: -2%"><%= checkMail %> hhhhhhhhhh
+</p>
+<%} %>
+
 <div id="layout7" >
     <div class="thanhDuoi">
         <div class="tenWeb">
@@ -2331,14 +2346,18 @@
 </div>
 
 <script>
+
 function clickValidate() {
     let isValid = checkValidate();
     if (isValid) {
-        alert('Gửi đăng ký thành công');
+        alert('Gửi đăng ký thành công' +  <% if (checkMail != null) { %>
+                                          <%= checkMail%>
+                                          <%} %>);
     }else {
         alert('Qúy khách đăng kí nhận tin không thành công');
     }
 }
+
 const email = document.querySelector('.email');
 function checkValidate() {
     let emailValue = email.value;

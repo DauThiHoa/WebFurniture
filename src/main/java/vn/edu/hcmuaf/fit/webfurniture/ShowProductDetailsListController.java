@@ -25,6 +25,7 @@ public class ShowProductDetailsListController extends HttpServlet {
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
+        request.setAttribute("result", "Qúy khách đã đăng kí nhận tin thành công");
 
         request.setAttribute("productDetailsAllName" , ProductDetailsService.getInstance().getAllName(name));
         System.out.println(name);

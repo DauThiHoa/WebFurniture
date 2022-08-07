@@ -26,6 +26,7 @@ public class ProductDetailsListController extends HttpServlet {
            request.setAttribute("email", "");
            request.setAttribute("password", "");
            request.setAttribute("name", "");
+//         request.setAttribute("checkMail", null);
 
            Profile profile = ProfileService.getInstance().getProfile();
            request.setAttribute("profile" , profile);
