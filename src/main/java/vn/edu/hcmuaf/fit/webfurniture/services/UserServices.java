@@ -49,7 +49,8 @@ public class UserServices implements Serializable {
     // Lấy id
     public int idUser(String email) {
         return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("select id from `user` where email like '19130075@st.hcmuaf.edu.vn' ")
+            return handle.createQuery("select id from `user` where email like ?")
+                    .bind(0, email)
                     .mapTo(Integer.class).findFirst().get();
         });
     }
@@ -61,6 +62,9 @@ public class UserServices implements Serializable {
                     .bind(0, email)
                     .mapTo(String.class).findFirst().get();
         });
+    }
+    public int updatePassword (String email , String password) {
+        return UserDao.getInstance().updatePassword(email,hashPasword(password));
     }
 
 }

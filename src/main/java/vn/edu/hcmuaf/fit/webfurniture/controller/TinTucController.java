@@ -52,7 +52,7 @@ public class TinTucController extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.getRequestDispatcher("TinTuc.jsp").forward(request, response);
+        request.getRequestDispatcher("News.jsp").forward(request, response);
 
     }
 

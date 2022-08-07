@@ -52,7 +52,7 @@ public class SearchKitchenCabinet extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongBep_TuBep.jsp").forward(request, response);
+        request.getRequestDispatcher("kitchen_kitchenCabinets.jsp").forward(request, response);
 
     }
     @Override

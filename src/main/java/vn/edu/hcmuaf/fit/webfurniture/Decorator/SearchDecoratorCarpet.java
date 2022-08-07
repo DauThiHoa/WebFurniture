@@ -52,7 +52,7 @@ public class SearchDecoratorCarpet extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatDoTrangTri_TamTham.jsp").forward(request, response);
+        request.getRequestDispatcher("InteriorDecorations_carpet.jsp").forward(request, response);
 
     }
     @Override

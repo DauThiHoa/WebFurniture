@@ -111,7 +111,7 @@ public class PaymentSuccessController extends HttpServlet {
             request.getRequestDispatcher("/payment").forward(request , response);
 
         }
-        //        request.getRequestDispatcher("ThanhToan.jsp").forward(request , response);
+        //        request.getRequestDispatcher("Pay.jsp").forward(request , response);
     }
 
     @Override

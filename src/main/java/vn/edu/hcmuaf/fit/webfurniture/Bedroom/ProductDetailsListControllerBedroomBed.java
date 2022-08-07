@@ -55,7 +55,7 @@ public class ProductDetailsListControllerBedroomBed extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatPhongNgu_GiuongNgu.jsp").forward(request, response);
+        request.getRequestDispatcher("Bedroom_bed.jsp").forward(request, response);
 
     }
     @Override

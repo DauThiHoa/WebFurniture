@@ -61,7 +61,7 @@ public class ShowProductDetailsListController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
-        request.getRequestDispatcher("ChiTietSanPham.jsp").forward(request , response);
+        request.getRequestDispatcher("ProductDetails.jsp").forward(request , response);
 
     }
 

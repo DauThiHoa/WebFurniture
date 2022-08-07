@@ -50,7 +50,7 @@ public class ColorOfficeDesk extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatVanPhong_BanLamViec.jsp").forward(request, response);
+        request.getRequestDispatcher("Office_desk.jsp").forward(request, response);
 
     }
     @Override

@@ -41,7 +41,7 @@ public class ControllerSignUp extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        response.sendRedirect("/DangKy.jsp");
+        response.sendRedirect("/Register.jsp");
 
     }
 

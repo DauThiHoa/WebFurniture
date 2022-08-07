@@ -428,35 +428,35 @@
         <div class="col-md-6 ">
                 <div class="form-group">
                     <label style="font-weight: bold">ID Customer</label>
-                    <input name ="idCustomer" type="text" class="form-control" value="${customer.idCustomer}" readonly placeholder="Input field">
+                    <input name ="idCustomer" required type="text" class="form-control" value="${customer.idCustomer}" readonly placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Name</label>
-                    <input name ="name" type="text" class="form-control" value="${customer.name}"  placeholder="Input field">
+                    <input name ="name" required type="text" class="form-control" value="${customer.name}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">BirthDay</label>
-                    <input name ="birthDay" type="text" class="form-control" value="${customer.birthDay}"  placeholder="Input field">
+                    <input name ="birthDay" required type="text" class="form-control" value="${customer.birthDay}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Gender</label>
-                    <input name ="gender" type="text" class="form-control" value="${customer.gender}"  placeholder="Input field">
+                    <input name ="gender" required type="text" class="form-control" value="${customer.gender}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Address</label>
-                    <input name ="address" type="text" class="form-control"  value="${customer.address}"  placeholder="Input field">
+                    <input name ="address" required type="text" class="form-control"  value="${customer.address}"  placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Phone</label>
-                    <input name ="phone" type="text" class="form-control" value="${customer.phone}"  placeholder="Input field">
+                    <input name ="phone" required type="text" class="form-control" value="${customer.phone}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Email</label>
-                    <input name ="email" type="text" class="form-control" value="${customer.email}"  placeholder="Input field">
+                    <input name ="email" required required type="email" class="form-control" value="${customer.email}"  placeholder="Input field">
                 </div>
 
         </div>
@@ -464,30 +464,30 @@
 
                 <div class="form-group">
                     <label style="font-weight: bold">Bank</label>
-                    <input name ="bank" type="text" class="form-control" value="${customer.bank}"  placeholder="Input field">
+                    <input name ="bank" required type="text" class="form-control" value="${customer.bank}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Card Number</label>
-                    <input name ="cardNumber" type="text" class="form-control" value="${customer.cardNumber}"  placeholder="Input field">
+                    <input name ="cardNumber" required type="text" class="form-control" value="${customer.cardNumber}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Delivery Method</label>
-                    <input name ="deliveryMethod" type="text" class="form-control" value="${customer.deliveryMethod}"  placeholder="Input field">
+                    <input name ="deliveryMethod" required type="text" class="form-control" value="${customer.deliveryMethod}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Discount</label>
-                    <input name ="discount" type="text" class="form-control"  value="${customer.discount}" readonly placeholder="Input field">
+                    <input name ="discount" required type="number" class="form-control"  value="${customer.discount}" readonly placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Ship</label>
-                    <input name ="ship" type="text" class="form-control" value="${customer.ship}" readonly placeholder="Input field">
+                    <input name ="ship" required type="number" class="form-control" value="${customer.ship}" readonly placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Total Money</label>
-                    <input name ="totalMoney" type="text" class="form-control" value="${customer.totalMoney}" readonly  placeholder="Input field">
+                    <input name ="totalMoney" required type="number" class="form-control" value="${customer.totalMoney}" readonly  placeholder="Input field">
                 </div>
                 <button type="submit" style="margin-right: 0%" class="btn btn-primary" onclick="edit()" >Edit</button>
 

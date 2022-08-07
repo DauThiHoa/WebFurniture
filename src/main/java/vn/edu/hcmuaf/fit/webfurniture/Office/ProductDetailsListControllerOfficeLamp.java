@@ -55,7 +55,7 @@ public class ProductDetailsListControllerOfficeLamp extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatVanPhong_DenLamViec.jsp").forward(request, response);
+        request.getRequestDispatcher("Office_workLights.jsp").forward(request, response);
 
     }
     @Override

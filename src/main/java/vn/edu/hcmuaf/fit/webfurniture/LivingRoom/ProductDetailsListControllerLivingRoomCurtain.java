@@ -55,7 +55,7 @@ public class ProductDetailsListControllerLivingRoomCurtain extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatPhongKhach_RemCua.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom_curtains.jsp").forward(request, response);
 
     }
     @Override

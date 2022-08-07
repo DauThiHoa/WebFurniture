@@ -50,7 +50,7 @@ public class ColorKitchenFlower extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatPhongBep_HoaGia.jsp").forward(request, response);
+        request.getRequestDispatcher("kitchen_artificialFlowers.jsp").forward(request, response);
 
     }
     @Override

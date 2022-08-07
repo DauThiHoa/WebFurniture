@@ -487,7 +487,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-email">Email address</label>
-                                            <input style="font-weight: bold" type="email" id="input-email" class="form-control" name="email"
+                                            <input style="font-weight: bold" type="email"  required  id="input-email" class="form-control" name="email"
                                                    value="${profile.email}">
                                         </div>
                                     </div>

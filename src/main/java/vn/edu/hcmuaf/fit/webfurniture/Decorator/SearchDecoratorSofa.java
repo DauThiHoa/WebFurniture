@@ -53,7 +53,7 @@ public class SearchDecoratorSofa extends HttpServlet {
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
         request.setAttribute("ProductDetailsDecorationSofa", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatDoTrangTri_Goisofa.jsp").forward(request, response);
+        request.getRequestDispatcher("InteriorDecorations_sofaPillow.jsp").forward(request, response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

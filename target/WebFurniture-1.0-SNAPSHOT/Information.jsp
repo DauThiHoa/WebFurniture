@@ -391,11 +391,11 @@
         <h1 class="information"> DISPLAY </h1>
         <div class="information2">
             <h2 class="Category"> Company name </h2>
-            <input style="border: 1px solid white" class="type1" type="text" name="Company" value="${information.companyName}"><br>
+            <input style="border: 1px solid white" class="type1" required type="text" name="Company" value="${information.companyName}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Address </h2>
-            <input style="border: 1px solid white" class="Address" type="text" name="Address" value="${information.address}"><br>
+            <input style="border: 1px solid white" class="Address" required type="text" name="Address" value="${information.address}"><br>
         </div>
 
         <div class="information4">
@@ -411,10 +411,11 @@
             <h2 class="Modules"> Browser Icons </h2>
             <br>
             <input type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ;
-            margin-left: 15px"  class="browsericon" value="Select file" accept=".jpg , .png" onchange="clickbrowsericon()">
-            <input type="image" name="browsericon" style="float: left; clear:right ;width: 50px ; height: 50px"
+            margin-left: 15px"  class="browsericon" value="Select file" accept=".jpg , .png"
+                   onchange="clickbrowsericon()">
+            <input type="image" required name="browsericon" style="float: left; clear:right ;width: 50px ; height: 50px"
                    class="imgbrowsericon" src="${information.browserIcon}">
-            <input style="display : none ;width: 300px ; height: 25px" type="text" value="" class="browser" name="browser">
+            <input required style="display : none ;width: 300px ; height: 25px" type="text" value="" class="browser" name="browser">
         </div>
 
     </div>
@@ -423,32 +424,32 @@
         <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Hotline </h2>
-            <input style="border: 1px solid white" class="type" type="text" name="Hotline" value="${information.hotline}"><br>
+            <input style="border: 1px solid white" required class="type" type="text" name="Hotline" value="${information.hotline}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Email </h2>
-            <input style="border: 1px solid white" class="JhonDoue" type="text" name="Email" value="${information.email}"><br>
+            <input style="border: 1px solid white" class="JhonDoue" required type="email" name="Email" value="${information.email}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Copyright </h2>
-            <input style="border: 1px solid white" class="type2" type="text" name="Copyright" value="${information.copyright}"><br>
+            <input style="border: 1px solid white" class="type2" required type="text" name="Copyright" value="${information.copyright}"><br>
         </div>
 
         <div class="information4">
             <h2 class="Modules"> Facebook </h2>
-            <input style="border: 1px solid white" class="type2" type="text" name="Facebook" value="${information.facebook}"><br>
+            <input style="border: 1px solid white" class="type2" required type="text" name="Facebook" value="${information.facebook}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Twitter </h2>
-            <input style="border: 1px solid white" class="Twitter" type="text" name="Twitter" value="${information.twitter}"><br>
+            <input style="border: 1px solid white" class="Twitter" required type="text" name="Twitter" value="${information.twitter}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Youtube </h2>
-            <input style="border: 1px solid white" class="Youtube" type="text" name="Youtube" value="${information.youtube}"><br>
+            <input style="border: 1px solid white" class="Youtube" required type="text" name="Youtube" value="${information.youtube}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Instagram </h2>
-            <input style="border: 1px solid white" class="Instagram" type="text" name="Instagram" value="${information.instagram}"><br>
+            <input style="border: 1px solid white" class="Instagram" required type="text" name="Instagram" value="${information.instagram}"><br>
         </div>
         <div class="information6">
                 <button class="Select" type="submit" onclick="save()">

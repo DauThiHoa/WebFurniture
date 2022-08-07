@@ -2316,7 +2316,7 @@
                     <h2 class="nhanTin">Đăng kí nhận tin</h2>
                     <div class="from">
 <%--                        <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
-                        <input onchange="checkValidate()" type="email" name="email"  class="email" placeholder="Nhập email của bạn ..."> </input>
+                        <input onchange="checkValidate()" type="email" required name="email"  class="email" placeholder="Nhập email của bạn ..."> </input>
                         <button type="submit" class="fromDangKi" onclick="clickValidate()">
                             <h6 class="dangKi">Đăng kí</h6>
                         </button>

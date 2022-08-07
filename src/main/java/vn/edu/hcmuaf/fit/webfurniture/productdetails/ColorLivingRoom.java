@@ -48,7 +48,7 @@ public class ColorLivingRoom extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("PhongKhach.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom.jsp").forward(request, response);
 
     }
     @Override

@@ -50,7 +50,7 @@ public class ColorOfficeChair extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
-        request.getRequestDispatcher("NoiThatVanPhong_Ghe.jsp").forward(request, response);
+        request.getRequestDispatcher("Office_chair.jsp").forward(request, response);
 
     }
     @Override

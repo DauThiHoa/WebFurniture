@@ -81,6 +81,14 @@ public class UserDao {
         }
     }
 
+    public int updatePassword (String email , String password) {
+        System.out.println("EMAIL : " + email + "PASSWORD: " + password);
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("update `user` set `password` = ? where email like ?")
+                        .bind(0 , password )
+                        .bind(1 , email )
+                        .execute());
+    }
 //
 //        if (statement == null) return false;
 //        try {

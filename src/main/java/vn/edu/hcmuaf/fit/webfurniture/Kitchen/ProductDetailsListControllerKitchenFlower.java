@@ -55,7 +55,7 @@ public class ProductDetailsListControllerKitchenFlower extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatPhongBep_HoaGia.jsp").forward(request, response);
+        request.getRequestDispatcher("kitchen_artificialFlowers.jsp").forward(request, response);
 
     }
     @Override

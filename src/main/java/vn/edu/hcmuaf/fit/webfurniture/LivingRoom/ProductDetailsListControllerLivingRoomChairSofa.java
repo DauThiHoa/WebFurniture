@@ -55,7 +55,7 @@ public class ProductDetailsListControllerLivingRoomChairSofa extends HttpServlet
         request.setAttribute("sizeListCart" , sumListCart);
 
         request.setAttribute("ProductDetailsDecoration", ProductDetailsService.getInstance().getAll());
-        request.getRequestDispatcher("NoiThatPhongKhach_GheSofa.jsp").forward(request, response);
+        request.getRequestDispatcher("LivingRoom_sofa.jsp").forward(request, response);
 
     }
     @Override
