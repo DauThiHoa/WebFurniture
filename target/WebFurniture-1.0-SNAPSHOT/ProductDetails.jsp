@@ -28,9 +28,9 @@
 
     <style>
         figure.zoom {
-            background-position: 50% 50%;
+            background-position: 5% 5%;
             position: relative;
-            width: 100%;
+            /*width: 500px;*/
             overflow: hidden;
             cursor: zoom-in;
         }

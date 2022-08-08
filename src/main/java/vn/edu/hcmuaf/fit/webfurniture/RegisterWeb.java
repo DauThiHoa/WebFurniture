@@ -37,8 +37,6 @@ public class RegisterWeb extends HttpServlet {
             request.setAttribute("search", "");
         }
 
-        request.getRequestDispatcher("register.jsp").forward(request, response);
-
 if ( name != null && password != null && email != null ) {
     System.out.println(name +"REGISTER");
     System.out.println(password +"REGISTER");
