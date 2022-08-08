@@ -158,7 +158,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
             <div class="media-body  ml-2  d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -188,39 +188,39 @@
 
     <form action="UpdateInforCustomer" method="POST" role="form"   >
         <jsp:useBean id="customer" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Customer"/>
-    <div class="row py-9" style="margin-left: 5%">
+    <div class="row py-9" style="margin-top: -8%; margin-left: 3%" >
         <div class="col-md-6 ">
                 <div class="form-group">
                     <label style="font-weight: bold">ID Customer</label>
-                    <input name ="idCustomer" required type="text" class="form-control" value="${customer.idCustomer}" readonly placeholder="Input field">
+                    <input  required name ="idCustomer" required type="text" class="form-control" value="${customer.idCustomer}" readonly placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Name</label>
-                    <input name ="name" required type="text" class="form-control" value="${customer.name}"  placeholder="Input field">
+                    <input  required name ="name" required type="text" class="form-control" value="${customer.name}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">BirthDay</label>
-                    <input name ="birthDay" required type="text" class="form-control" value="${customer.birthDay}"  placeholder="Input field">
+                    <input  required name ="birthDay" required type="text" class="form-control" value="${customer.birthDay}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Gender</label>
-                    <input name ="gender" required type="text" class="form-control" value="${customer.gender}"  placeholder="Input field">
+                    <input  required name ="gender" required type="text" class="form-control" value="${customer.gender}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Address</label>
-                    <input name ="address" required type="text" class="form-control"  value="${customer.address}"  placeholder="Input field">
+                    <input  required name ="address" required type="text" class="form-control"  value="${customer.address}"  placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Phone</label>
-                    <input name ="phone" required type="text" class="form-control" value="${customer.phone}"  placeholder="Input field">
+                    <input  required name ="phone" required type="text" class="form-control" value="${customer.phone}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Email</label>
-                    <input name ="email" required required type="email" class="form-control" value="${customer.email}"  placeholder="Input field">
+                    <input  required name ="email" required required type="email" class="form-control" value="${customer.email}"  placeholder="Input field">
                 </div>
 
         </div>
@@ -228,42 +228,42 @@
 
                 <div class="form-group">
                     <label style="font-weight: bold">Bank</label>
-                    <input name ="bank" required type="text" class="form-control" value="${customer.bank}"  placeholder="Input field">
+                    <input  required name ="bank" required type="text" class="form-control" value="${customer.bank}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Card Number</label>
-                    <input name ="cardNumber" required type="text" class="form-control" value="${customer.cardNumber}"  placeholder="Input field">
+                    <input  required name ="cardNumber" required type="text" class="form-control" value="${customer.cardNumber}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Delivery Method</label>
-                    <input name ="deliveryMethod" required type="text" class="form-control" value="${customer.deliveryMethod}"  placeholder="Input field">
+                    <input required  name ="deliveryMethod" required type="text" class="form-control" value="${customer.deliveryMethod}"  placeholder="Input field">
                 </div>
 
                 <div class="form-group">
                     <label style="font-weight: bold">Discount</label>
-                    <input name ="discount" required type="number" class="form-control"  value="${customer.discount}" readonly placeholder="Input field">
+                    <input  required name ="discount" required type="number" class="form-control"  value="${customer.discount}" readonly placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Ship</label>
-                    <input name ="ship" required type="number" class="form-control" value="${customer.ship}" readonly placeholder="Input field">
+                    <input  required name ="ship" required type="number" class="form-control" value="${customer.ship}" readonly placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">Total Money</label>
-                    <input name ="totalMoney" required type="number" class="form-control" value="${customer.totalMoney}" readonly  placeholder="Input field">
+                    <input  required name ="totalMoney" required type="number" class="form-control" value="${customer.totalMoney}" readonly  placeholder="Input field">
                 </div>
-                <button type="submit" style="margin-right: 0%" class="btn btn-primary" onclick="edit()" >Edit</button>
+                <button type="submit" style="margin-left: 70%" class="btn btn-primary" onclick="edit()" >Edit</button>
 
         </div>
     </div>
     </form>
     <a href="<%= Asset.url("Order")%>" >
-    <button style="margin-right: 0%" class="btn btn-primary" onclick="exit()" >Edit</button>
+        <button style=" background: #03acca ; margin-left: 93% ; margin-top: -40%" class="btn btn-primary" onclick="exit()" >Exit</button>
     </a>
 
     <!-- Footer -->
-    <footer class="footer pt-0">
+    <footer class="footer pt-0" style="margin-top: -15%">
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6">
                 <div class="copyright text-center  text-lg-left  text-muted">

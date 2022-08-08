@@ -67,7 +67,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="DirectoryManagement">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
-                            <span class="nav-link-text">Product Type</span>
+                            <span class="nav-link-text">Page</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -112,7 +112,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
             <div class="media-body  ml-2  d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -145,54 +145,54 @@
         <h1 class="information" style="font-size: 125%"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Image </h2>
-            <img src="ImageProduct/Den-trang-tri-ban-lam-viec.webp" class="imageINPUT image"/>
-            <input type="file" style="margin-left: 240px" name="file" class="file" onchange="clickImage()">
+            <img src="img.png" class="imageINPUT image"/>
+            <input  required type="file" style="margin-left: 240px" name="file" class="file" onchange="clickImage()">
         </div>
         <div class="information2">
             <h2 class="Image">Link </h2>
             <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
-            <input class="type linkImage" type="text" style="margin-left: 20px" name="linkImage" value="${linkImage}"><br>
+            <input  required class="type linkImage" type="text" style="margin-left: 20px" name="linkImage" value="${linkImage}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Category </h2>
             <jsp:useBean id="category" scope="request" class="java.lang.String"/>
-            <input class="type2" type="text" name="category" value="${category}"><br>
+            <input  required class="type2" type="text" name="category" value="${category}"><br>
         </div>
         <div class="information4">
             <h2 class="Modules"> Code </h2>
             <jsp:useBean id="id" scope="request" class="java.lang.String"/>
-            <input class="type2" type="text" name="id" value="${id}"><br>
+            <input required  class="type2" type="text" name="id" value="${id}"><br>
         </div>
         <div class="information5">
             <h2 class="Modules"> Price </h2>
             <jsp:useBean id="priceNew" scope="request" class="java.lang.String"/>
-            <input class="type2" type="text" name="priceNew" value="${priceNew}"><br>
+            <input  required class="type2" type="text" name="priceNew" value="${priceNew}"><br>
         </div>
         <div class="information6">
             <h2 class="Modules"> Promotion </h2>
             <jsp:useBean id="priceOld" scope="request" class="java.lang.String"/>
-            <input class="type2" type="text" name="priceOld" value="${priceOld}"><br>
+            <input  required class="type2" type="text" name="priceOld" value="${priceOld}"><br>
         </div>
     </div>
 
-        <img src="https://tse3.mm.bing.net/th?id=OIP.tpdxbYwVUMQZe8d9qIQfvgHaFj&pid=Api&P=0">
+<%--        <img src="https://tse3.mm.bing.net/th?id=OIP.tpdxbYwVUMQZe8d9qIQfvgHaFj&pid=Api&P=0">--%>
 
     <div class="infor2" style="height: 1025px">
         <h1 class="information" style="font-size: 125%"> DISPLAY </h1>
         <div class="information2">
             <h2 class="Category"> Title </h2>
             <jsp:useBean id="name" scope="request" class="java.lang.String"/>
-            <input class="type1" style="margin-left: 63px" type="text" name="name" value="${name}"><br>
+            <input  required class="type1" style="margin-left: 63px" type="text" name="name" value="${name}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Trademark </h2>
             <jsp:useBean id="trademark" scope="request" class="java.lang.String"/>
-            <input class="type2" type="text" name="trademark" value="${trademark}"><br>
+            <input  required class="type2" type="text" name="trademark" value="${trademark}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Production </h2>
             <jsp:useBean id="production" scope="request" class="java.lang.String"/>
-            <input class="type2" type="text" name="production" value="${production}"><br>
+            <input  required class="type2" type="text" name="production" value="${production}"><br>
         </div>
         <jsp:useBean id="description" scope="request" class="java.lang.String"/>
         <div class="information3">
@@ -203,46 +203,46 @@
         <div class="information3">
             <h2 class="Modules"> ProductGroups </h2>
             <jsp:useBean id="produtGroups" scope="request" class="java.lang.String"/>
-            <input style="margin-left: 0%" class="type3a" type="text" name="produtGroups" value="${produtGroups}"><br>
+            <input   required  style="margin-left: 0%" class="type3a" type="text" name="produtGroups" value="${produtGroups}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Color </h2>
             <jsp:useBean id="color" scope="request" class="java.lang.String"/>
-            <input style="margin-left: 9%" class="type3a" type="text" name="color" value="${color}"><br>
+            <input  required style="margin-left: 9%" class="type3a" type="text" name="color" value="${color}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Size </h2>
             <jsp:useBean id="size" scope="request" class="java.lang.String"/>
-            <input style="margin-left: 10%"  class="type3a" type="text" name="size" value="${size}"><br>
+            <input  required style="margin-left: 10%"  class="type3a" type="text" name="size" value="${size}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Weight </h2>
             <jsp:useBean id="weight" scope="request" class="java.lang.String"/>
-            <input  style="margin-left: 7%" class="type3a" type="text" name="weight" value="${weight}"><br>
+            <input   required style="margin-left: 7%" class="type3a" type="text" name="weight" value="${weight}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Material </h2>
             <jsp:useBean id="material" scope="request" class="java.lang.String"/>
-            <input  style="margin-left: 6%" class="type3a" type="text" name="material" value="${material}"><br>
+            <input  required  style="margin-left: 6%" class="type3a" type="text" name="material" value="${material}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Design </h2>
             <jsp:useBean id="design" scope="request" class="java.lang.String"/>
-            <input  style="margin-left: 7%" class="type3a" type="text" name="design" value="${design}"><br>
+            <input  required  style="margin-left: 7%" class="type3a" type="text" name="design" value="${design}"><br>
         </div>
         <div class="information4">
             <h2 class="Category"> Quantity </h2>
             <jsp:useBean id="quantity" scope="request" class="java.lang.String"/>
-            <input class="type3"  style="margin-left: 63px" type="text" name="quantity" value="${quantity}"><br>
+            <input required  class="type3"  style="margin-left: 63px" type="text" name="quantity" value="${quantity}"><br>
         </div>
         <div class="information5">
             <h2 class="Modules"> Status </h2>
             <div class="">
-                <input class="checkin" type="checkbox" name="still" value="Còn hàng">
+                <input  required class="checkin" type="checkbox" name="still" value="Còn hàng">
                 <h3 class="ten">Stocking</h3>
             </div>
             <div class="">
-                <input class="checkin" type="checkbox" name="over" value="Hết hàng">
+                <input required class="checkin" type="checkbox" name="over" value="Hết hàng">
                 <h3 class="ten">Out of stock</h3>
             </div>
 <%--            <div class="From">--%>
@@ -317,7 +317,8 @@
     var linkImage = document.querySelector('.linkImage') ;
 
     function clickImage () {
-        let url = URL.createObjectURL(file.files[0]);
+        let url = window.URL.createObjectURL(file.files[0]);
+        // let url = URL.createObjectURL(file.files[0]);
         imageINPUT.setAttribute('src', url);
         imagevalueINPUT.value = url;
         linkImage.value = url;

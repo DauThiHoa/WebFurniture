@@ -103,7 +103,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
             <div class="media-body  ml-2  d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -146,7 +146,7 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="QuanTri/Admin/assets/img/theme/team-4.jpg" class="rounded-circle">
+                                    <img src="QuanTri/Admin/assets/img/img.png" class="rounded-circle">
                                 </a>
                             </div>
                         </div>
@@ -162,18 +162,18 @@
                             <div class="col">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <input style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="friends" value="${profile.friends}">
+                                        <input  required style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="friends" value="${profile.friends}">
 <%--                                        <span class="heading">${profile.friends}</span>--%>
                                         <span class="description">Friends</span>
                                     </div>
                                     <div>
 
-                                        <input style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="photos" value="${profile.photos}">
+                                        <input  required style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="photos" value="${profile.photos}">
 <%--                                        <span class="heading">${profile.photos}</span>--%>
                                         <span class="description">Photos</span>
                                     </div>
                                     <div>
-                                        <input style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="comments" value="${profile.comments}">
+                                        <input  required style=" text-align: center ; border: 1px solid white ; background: white ; width: 50px" class="heading" type="text" name="comments" value="${profile.comments}">
 <%--                                        <span class="heading">${profile.comments}</span>--%>
                                         <span class="description">Comments</span>
                                     </div>
@@ -184,7 +184,7 @@
                         <div class="text-center">
                             <h5 class="h3">
 
-                                ${profile.username} - <input style="border: 1px solid white ; background: white ; width: 30px" class="heading" type="text" name="age" value="${profile.age}">
+                                ${profile.username} - <input  required style="border: 1px solid white ; background: white ; width: 30px" class="heading" type="text" name="age" value="${profile.age}">
 <%--                                    <span class="font-weight-light">, ${profile.age}</span>--%>
                             </h5>
                             <div class="h5 font-weight-300">
@@ -208,7 +208,7 @@
                                 <h3 class="mb-0">Edit profile </h3>
                             </div>
 
-                                <input style="display: none"  type="text"  name="id" value="${profile.idProfile}" >
+                                <input  required style="display: none"  type="text"  name="id" value="${profile.idProfile}" >
                                 <button style="margin-left: 100px ; margin-top: -50px" type="submit" class="btn btn-neutral" onclick="edit()">Edit profile</button>
 
 
@@ -222,14 +222,14 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-username">Username</label>
-                                            <input style="font-weight: bold" type="text" id="input-username" class="form-control"
+                                            <input  required style="font-weight: bold" type="text" id="input-username" class="form-control"
                                                    placeholder="Username" name="username" value="${profile.username}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-email">Email address</label>
-                                            <input style="font-weight: bold" type="email"  required  id="input-email" class="form-control" name="email"
+                                            <input  required style="font-weight: bold" type="email"  required  id="input-email" class="form-control" name="email"
                                                    value="${profile.email}">
                                         </div>
                                     </div>
@@ -239,14 +239,14 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-first-name">First name</label>
-                                            <input style="font-weight: bold" type="text" id="input-first-name" class="form-control" name="firstname"
+                                            <input  required style="font-weight: bold" type="text" id="input-first-name" class="form-control" name="firstname"
                                                    placeholder="First name" value="${profile.firstname}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-last-name">Last name</label>
-                                            <input style="font-weight: bold" type="text" id="input-last-name" class="form-control" name="lastname"
+                                            <input  required style="font-weight: bold" type="text" id="input-last-name" class="form-control" name="lastname"
                                                    placeholder="Last name" value="${profile.lastname}">
                                         </div>
                                     </div>
@@ -260,7 +260,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-address">Address</label>
-                                            <input style="font-weight: bold" id="input-address" class="form-control" placeholder="Home Address" name="address"
+                                            <input  required style="font-weight: bold" id="input-address" class="form-control" placeholder="Home Address" name="address"
                                                    value="${profile.address}" type="text">
                                         </div>
                                     </div>
@@ -270,21 +270,21 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-city">City</label>
-                                            <input style="font-weight: bold" type="text" id="input-city" class="form-control"  name="city"
+                                            <input  required style="font-weight: bold" type="text" id="input-city" class="form-control"  name="city"
                                                    value="${profile.city}">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-country">Country</label>
-                                            <input style="font-weight: bold" type="text" id="input-country" class="form-control" name="country"
+                                            <input  required style="font-weight: bold" type="text" id="input-country" class="form-control" name="country"
                                                     value="${profile.country}">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-country">Postal code</label>
-                                            <input style="font-weight: bold" type="number" min="1" id="input-postal-code" class="form-control" name="postalcode"
+                                            <input  required style="font-weight: bold" type="number" min="1" id="input-postal-code" class="form-control" name="postalcode"
                                                    value="${profile.postalcode}">
                                         </div>
                                     </div>

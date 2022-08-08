@@ -73,7 +73,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="DirectoryManagement">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
-                            <span class="nav-link-text">Product Type</span>
+                            <span class="nav-link-text">Page</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -117,7 +117,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
             <div class="media-body  ml-2  d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -152,18 +152,18 @@
         <jsp:useBean id="linkImage" scope="request" class="java.lang.String"/>
         <div class="information1">
             <h2 class="Image"> Image </h2>
-            <input class="type" type="text" name="linkImage" value="${linkImage}"><br>
+            <input required class="type" type="text" name="linkImage" value="${linkImage}"><br>
 <%--            <input type="file" style="font-weight: bold" value="Select file">--%>
         </div>
         <jsp:useBean id="Category" scope="request" class="java.lang.String"/>
         <div class="information3">
             <h2 class="Category"> Category </h2>
-            <input class="type1" type="text" name="Category" value="${Category}"><br>
+            <input required class="type1" type="text" name="Category" value="${Category}"><br>
         </div>
         <jsp:useBean id="Modules" scope="request" class="java.lang.String"/>
         <div class="information3">
             <h2 class="Modules"> Modules </h2>
-            <input class="type2" type="text" name="Modules" value="${Modules}"><br>
+            <input required class="type2" type="text" name="Modules" value="${Modules}"><br>
         </div>
     </div>
 
@@ -172,7 +172,7 @@
         <div class="information5">
             <h2 class="Modules"> Action </h2>
             <div class="">
-                <input class="checkin" type="checkbox" name="Display" value="block">
+                <input required class="checkin" type="checkbox" name="Display" value="block">
                 <h3>Display</h3>
             </div>
         </div>

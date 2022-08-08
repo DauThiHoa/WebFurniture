@@ -108,7 +108,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
                             <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -156,8 +156,13 @@
                                     <jsp:useBean id="countUser" scope="request" type="java.lang.Double"/>
                                     <jsp:useBean id="countOrderDetails" scope="request" type="java.lang.Double"/>
                                     <jsp:useBean id="countOrder" scope="request" type="java.lang.Double"/>
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countUser + countOrderDetails + countOrder}%</span>
-                                    <span class="text-nowrap">Since last month</span>
+                                    <jsp:useBean id="date" scope="request" type="java.time.LocalDate"/>
+
+<%--                                    <span class="text-success mr-2"><i class="fas fa-calendar-alt"></i>${countUser + countOrderDetails + countOrder}%</span>--%>
+<%--                                    fas fa-calendar-alt--%>
+<%--                                    far fa-calendar-alt--%>
+
+                                    <span class="text-nowrap">${date}</span>
                                 </p>
                             </div>
                         </div>
@@ -178,8 +183,8 @@
                                     </div>
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countUser}%</span>
-                                    <span class="text-nowrap">Since last month</span>
+<%--                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countUser}%</span>--%>
+                                    <span class="text-nowrap">${date}</span>
                                 </p>
                             </div>
                         </div>
@@ -200,8 +205,8 @@
                                     </div>
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countOrderDetails}%</span>
-                                    <span class="text-nowrap">Since last month</span>
+<%--                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countOrderDetails}%</span>--%>
+                                    <span class="text-nowrap">${date}</span>
                                 </p>
                             </div>
                         </div>
@@ -222,8 +227,8 @@
                                     </div>
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
-                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countOrder}%</span>
-                                    <span class="text-nowrap">Since last month</span>
+<%--                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>${countOrder}%</span>--%>
+                                    <span class="text-nowrap">${date}</span>
                                 </p>
                             </div>
                         </div>

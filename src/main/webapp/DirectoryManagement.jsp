@@ -72,7 +72,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/WebFurniture_war_exploded/DirectoryManagement">
                             <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
-                            <span class="nav-link-text">Product Type</span>
+                            <span class="nav-link-text">Page</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -117,7 +117,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
             <div class="media-body  ml-2  d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -169,13 +169,13 @@
             <c:forEach items="${PageWeb}" var="p" >
             <tr>
                 <form action = "<%=Asset.url("edit_DirectoryManagement")%>"  method = "POST" >
-                <td><input style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="number" value="<%= i++ %>"><br></td>
-                <td><input style=" border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="nameCategory" value="${p.nameCategory}"></td>
+                <td><input  required style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="number" value="<%= i++ %>"><br></td>
+                <td><input  required style=" border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="nameCategory" value="${p.nameCategory}"></td>
                 <td><img src="${p.linkImage}" class="image"/></td>
-                <td><input style="text-align: center; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="modules" value="${p.modules}"></td>
+                <td><input  required style="text-align: center; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name="modules" value="${p.modules}"></td>
                 <td>
                     <c:if test="${p.display == 'none'}">
-                        <input style="font-size: 200px" type="checkbox" name="display" value="block">
+                        <input  required style="font-size: 200px" type="checkbox" name="display" value="block">
                     </c:if>
                     <c:if test="${p.display == 'block'}">
 <%--                        <input class="fa fa-check-square" style="font-size: 150% ;background: white ; color: #00dea2"--%>
@@ -184,13 +184,13 @@
                     </c:if>
                 </td>
                 <td>
-                    <input type="hidden" name ="id" value="${p.id}">
+                    <input  required type="hidden" name ="id" value="${p.id}">
                     <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit" href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
                 </td>
                 </form>
                 <td>
                     <form action = "<%=Asset.url("Action_DirectoryManagement")%>"  method = "POST" >
-                        <input type="hidden" name ="id" value="${p.id}">
+                        <input  required type="hidden" name ="id" value="${p.id}">
                         <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
                     </form>
                 </td>

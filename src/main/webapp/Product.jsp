@@ -103,7 +103,7 @@
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/brand/favicon.png")%>">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
                                 </span>
             <div class="media-body  ml-2  d-none d-lg-block">
                 <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
@@ -177,26 +177,26 @@
             <tr>
                 <form action = "<%=Asset.url("edit")%>"  method = "POST" >
                 <td style="text-align: center"><%= i++ %></td>
-                <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text"
+                <td ><input   required style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text"
                              name ="type" value="HomePage"></td>
                 <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
-                <td ><input  style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="name" value="${item.name}"></td>
+                <td ><input   required style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="name" value="${item.name}"></td>
                 <td style=" height: 100px; overflow : hidden "><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="description"  rows="50" cols="50">${item.description}</textarea></td>
-                <td ><input type="text" name ="priceNew" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.priceNew}"></td>
-                <td ><input type="text" name ="priceOld" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.priceOld}"></td>
+                <td ><input  required type="text" name ="priceNew" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.priceNew}"></td>
+                <td ><input  required type="text" name ="priceOld" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.priceOld}"></td>
                 <td style="text-align: center"><input type="text" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.quantity}"></td>
-                <td ><input type="text" name ="status" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.status}"></td>
+                <td ><input  required type="text" name ="status" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.status}"></td>
 
-                    <td ><input type="text" name ="color" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.color}"></td>
-                    <td ><input type="text" name ="size" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.size}"></td>
+                    <td ><input  required type="text" name ="color" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.color}"></td>
+                    <td ><input  required type="text" name ="size" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.size}"></td>
                     <td style="text-align: center">
-                        <input type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}">
+                        <input  required type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}">
                     </td>
-                    <td ><input type="text" name ="material" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.material}"></td>
+                    <td ><input  required type="text" name ="material" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.material}"></td>
                     <td ><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="design"  rows="50" cols="50">${item.design}</textarea></td>
 
                 <td>
-                        <input type="hidden" name ="id" value="${item.id}">
+                        <input  required type="hidden" name ="id" value="${item.id}">
                         <button style="border: 1px solid white ; background: #f8f9fe  ; color: #1fb5d4" type="submit"
                                 href="" class="fa fa-edit" onclick="edit()" aria-hidden="true" ></button>
                 </td>
@@ -205,7 +205,7 @@
 <%--                <td> <a href="" class="btn btn-sn btn-prinary"><i class="fa fa-edit"></i></a></td>--%>
                 <td>
                     <form action = "<%=Asset.url("action")%>"  method = "POST" >
-                        <input type="hidden" name ="id" value="${item.id}">
+                        <input  required type="hidden" name ="id" value="${item.id}">
                         <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href="" class="fa fa-trash text-danger" onclick="trash()" aria-hidden="true" ></button>
                     </form>
                 </td>
