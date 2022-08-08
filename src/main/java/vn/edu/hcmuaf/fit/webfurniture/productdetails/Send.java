@@ -39,7 +39,7 @@ public class Send extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        //        Số sản phẩm trong giỏ hàng
+        // Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
@@ -62,6 +62,8 @@ public class Send extends HttpServlet {
             request.setAttribute("name", name);
             request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
             request.setAttribute("count" , ReviewProductDetailsService.getInstance().count());
+            request.setAttribute("error", "Qúy khách thực hiên thêm bình luận không thành công");
+
             request.getRequestDispatcher("/ProductDetails").forward(request, response);
         }
 

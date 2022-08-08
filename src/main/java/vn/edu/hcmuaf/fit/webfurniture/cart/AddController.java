@@ -17,6 +17,7 @@ public class AddController extends HttpServlet {
         String id =  request.getParameter("id");
         String quantitySold =  request.getParameter("quantitySold");
         ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
+        request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
 
         String block = "block";
         String none = "none";

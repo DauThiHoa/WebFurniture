@@ -55,7 +55,7 @@
                         <jsp:useBean id="cardNumber" scope="request" class="java.lang.String"/>
                         <input type="text"  required id="cardnumber" name="cardnumber" value="${cardNumber}" onchange="checkValidate()"  placeholder="4129 7501 2345 6789"/>
                         <label class="from" for="ccnum">Ngày sinh</label>
-                        <jsp:useBean id="brithDay" =  scope="request" class="java.lang.String"/>
+                        <jsp:useBean id="brithDay" scope="request" class="java.lang.String"/>
                         <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date"  required id="brithDay" name="brithDay" value="${brithDay}" onchange="checkValidate()" placeholder="12/2/1989"/>
                     </div>
                     <div>

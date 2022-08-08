@@ -9,6 +9,10 @@
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%
+    String error = (String) request.getAttribute("error");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -432,27 +436,27 @@
     <div class="from">
         <h3 class="ten"> 1. Đánh giá của bạn về sản phẩm này: </h3>
         <div class="danhGia "  onclick="starOne()">
-            &emsp; <input name="evaluate" type="radio" value="Rất tệ" />
+            &emsp; <input required name="evaluate" type="radio" value="Rất tệ" />
 <%--            <i class="fa fa-star twoStar starOne" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starOned">Rất tệ</h3>
         </div>
         <div class="danhGia "  onclick="starTwo()">
-            <input name="evaluate" type="radio" value="Tệ" />
+            <input required name="evaluate" type="radio" value="Tệ" />
 <%--            <i class="fa fa-star oneStar starTwo"  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starTwod">Tệ</h3>
         </div>
         <div class="danhGia2 "  onclick="starThree()">
-            &emsp;&emsp; <input name="evaluate" type="radio" value="Bình thường" />
+            &emsp;&emsp; <input required name="evaluate" type="radio" value="Bình thường" />
 <%--            <i class="fa fa-star ThreeStar starThree "  aria-hidden="true"></i>--%>
             <h3 class="DanhGia starThreed">Bình thường</h3>
         </div>
         <div class="danhGia "  onclick="starfour()">
-    <input name="evaluate" type="radio" value="Tốt" />
+    <input required name="evaluate" type="radio" value="Tốt" />
 <%--            <i class="fa fa-star oneStar starfour" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starfourd">Tốt</h3>
         </div>
         <div class="danhGia1 "  onclick="starFive()">
-            &emsp; <input name="evaluate" type="radio" value="Rất tốt" />
+            &emsp; <input required name="evaluate" type="radio" value="Rất tốt" />
 <%--            <i class="fa fa-star twoStar starFive" aria-hidden="true"></i>--%>
             <h3 class="DanhGia starFived">Rất tốt</h3>
         </div>
@@ -460,15 +464,15 @@
 
     <div class="from">
         <h3 class="ten"> 2. Tên khách hàng: </h3>
-        <input type="text"  name="nameCustomer" onchange="binhluan()" placeholder="Nhập tên khách hàng " class="nhap nhapTieuDe nhapTenKhachHang">
+        <input type="text" required name="nameCustomer" onchange="binhluan()" placeholder="Nhập tên khách hàng " class="nhap nhapTieuDe nhapTenKhachHang">
     </div>
     <div class="from">
         <h3 class="ten"> 3. Tiêu đề của nhận xét: </h3>
-        <input type="text"  name="title" onchange="binhluan()"  placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
+        <input type="text" required name="title" onchange="binhluan()"  placeholder="Nhập tiêu đề nhận xét " class="nhap nhapTieuDe">
     </div>
     <div class="from1">
         <h3 class="ten"> 4. Viết nhận xét của bạn vào bên dưới:</h3>
-        <textarea type="text" name="content" onchange="binhluan()"  placeholder="Nhận xét của bạn về sản phẩm này" class="nhap nhapNoiDung"> </textarea>
+        <textarea type="text" required name="content" onchange="binhluan()"  placeholder="Nhận xét của bạn về sản phẩm này" class="nhap nhapNoiDung"> </textarea>
 <%--        <jsp:useBean id="productDetails1" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.ProductDetails"/>--%>
     </div>
     <div class="from2">
@@ -486,6 +490,10 @@
                  Gửi nhận xét
             </button>
 <%--            </a>--%>
+        <% if (error != null) { %>
+        <p style="color: white ; font-weight: bold; margin-bottom: -2%"><%= error %> </p>
+        <%} %>
+
         </div>
     </div>
 </div>
@@ -531,7 +539,7 @@
 
 </div>
 
-<div id="layout7">
+<div id="layout7" style="margin-top: ${count - 1}00px ">
     <div class="thanhDuoi">
         <div class="tenWeb">
             <h1 class="ten">WEB FURNITURE</h1>
@@ -695,12 +703,7 @@
 
     function binhluan() {
         let ischeck ;
-        if (nhapTenKhachHang.value == "") {
-            alert("kkkkkkkk");
-            ischeck = false;
-        } else if (nhapTieuDe.value  == "") {
-            ischeck = false;
-        }else if (nhapNoiDung.value  == "") {
+        if (nhapNoiDung.value  == "") {
             ischeck = false;
         }
         else {

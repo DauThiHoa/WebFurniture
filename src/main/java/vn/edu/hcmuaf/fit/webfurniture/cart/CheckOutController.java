@@ -28,6 +28,7 @@ public class CheckOutController extends HttpServlet {
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+//        request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
 
         String block = "block";
         String none = "none";
