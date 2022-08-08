@@ -28,6 +28,12 @@ public class Show extends HttpServlet {
 
         request.setAttribute("profile" , profile);
         request.setAttribute("list" , list );
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         String block = "block";
         String none = "none";

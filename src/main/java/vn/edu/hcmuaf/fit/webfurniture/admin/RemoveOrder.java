@@ -22,6 +22,13 @@ public class RemoveOrder extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         String block = "block";
         String none = "none";
         String display = "none";

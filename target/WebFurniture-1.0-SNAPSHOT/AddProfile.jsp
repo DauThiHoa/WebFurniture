@@ -78,15 +78,15 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
+                        <a class="nav-link" href="login">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
+                        <a class="nav-link" href="controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
-                            <span class="nav-link-text">Register</span>
+                            <span class="nav-link-text"> Register</span>
                         </a>
                     </li>
 
@@ -100,252 +100,13 @@
 <div class="main-content" id="panel">
     <!-- Topnav -->
 
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Search form -->
-                <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-                    <div class="form-group mb-0">
-                        <div class="input-group input-group-alternative input-group-merge">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Search" type="text">
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main"
-                            aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </form>
-                <!-- Navbar links -->
-                <ul class="navbar-nav align-items-center  ml-md-auto ">
-                    <li class="nav-item d-xl-none">
-                        <!-- Sidenav toggler -->
-                        <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
-                             data-target="#sidenav-main">
-                            <div class="sidenav-toggler-inner">
-                                <i class="sidenav-toggler-line"></i>
-                                <i class="sidenav-toggler-line"></i>
-                                <i class="sidenav-toggler-line"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item d-sm-none">
-                        <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-                            <i class="ni ni-zoom-split-in"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="ni ni-bell-55"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                            <!-- Dropdown header -->
-                            <div class="px-3 py-3">
-                                <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong>
-                                    notifications.</h6>
-                            </div>
-                            <!-- List group -->
-                            <div class="list-group list-group-flush">
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <input style="border: 1px solid white" class="mb-0 text-sm" type="text" name="username" value="UserName">
-<%--                                                    <h4 class="mb-0 text-sm" >${profile.username}</h4>--%>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>2 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">UserName</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>3 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>5 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">UserName</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>2 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_4.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">UserName</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>3 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for web furniture.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- View all -->
-                            <a href="#" class="dropdown-item text-center text-primary font-weight-bold py-3">View
-                                all</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="ni ni-ungroup"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
-                            <div class="row shortcuts px-4">
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                      <i class="ni ni-calendar-grid-58"></i>
-                    </span>
-                                    <small>Calendar</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
-                      <i class="ni ni-email-83"></i>
-                    </span>
-                                    <small>Email</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-info">
-                      <i class="ni ni-credit-card"></i>
-                    </span>
-                                    <small>Payments</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                      <i class="ni ni-books"></i>
-                    </span>
-                                    <small>Reports</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                      <i class="ni ni-pin-3"></i>
-                    </span>
-                                    <small>Maps</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                      <i class="ni ni-basket"></i>
-                    </span>
-                                    <small>Shop</small>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
-                  </span>
-                                <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">UserName</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu  dropdown-menu-right ">
-                            <div class="dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome!</h6>
-                            </div>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-single-02"></i>
-                                <span>My profile</span>
-                            </a>
-                            <a href="#" class="dropdown-item">
-<%--                            <button type="submit" class="dropdown-item" >--%>
-                                <i class="ni ni-settings-gear-65"></i>
-                                <span>Settings</span>
-                            </a>
-<%--                            </button>--%>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-calendar-grid-58"></i>
-                                <span>Activity</span>
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-support-16"></i>
-                                <span>Support</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-user-run"></i>
-                                <span>Logout</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+        <div class="media align-items-center" style="margin-left: 90%">
+                                <span class="avatar avatar-sm rounded-circle">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
+                                </span>
+            <div class="media-body  ml-2  d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
             </div>
         </div>
     </nav>
@@ -397,18 +158,18 @@
                             <div class="col">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <input style=" text-align: center ; border: 1px solid black ; background: white ; width: 50px" class="heading" type="text" name="friends" value="">
+                                        <input  required style=" text-align: center ; border: 1px solid black ; background: white ; width: 50px" class="heading" type="text" name="friends" value="">
 <%--                                        <span class="heading">${profile.friends}</span>--%>
                                         <span class="description">Friends</span>
                                     </div>
                                     <div>
 
-                                        <input   style=" text-align: center ; border: 1px solid black ; background: white ; width: 50px" class="heading" type="text" name="photos" value="">
+                                        <input required style=" text-align: center ; border: 1px solid black ; background: white ; width: 50px" class="heading" type="text" name="photos" value="">
 <%--                                        <span class="heading">${profile.photos}</span>--%>
                                         <span class="description">Photos</span>
                                     </div>
                                     <div>
-                                        <input style=" text-align: center ; border: 1px solid black ; background: white ; width: 50px" class="heading" type="text" name="comments" value="">
+                                        <input  required style=" text-align: center ; border: 1px solid black ; background: white ; width: 50px" class="heading" type="text" name="comments" value="">
 <%--                                        <span class="heading">${profile.comments}</span>--%>
                                         <span class="description">Comments</span>
                                     </div>
@@ -419,7 +180,7 @@
                         <div class="text-center">
                             <h5 class="h3">
 
-                                UserName - <input style="border: 1px solid black ; background: white ; width: 30px" class="heading" type="text" name="age" value="">
+                                UserName - <input  required style="border: 1px solid black ; background: white ; width: 30px" class="heading" type="text" name="age" value="">
 <%--                                    <span class="font-weight-light">, ${profile.age}</span>--%>
                             </h5>
                             <div class="h5 font-weight-300">
@@ -456,14 +217,14 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-username">Username</label>
-                                            <input style="font-weight: bold" type="text" id="input-username" class="form-control"
+                                            <input  required style="font-weight: bold" type="text" id="input-username" class="form-control"
                                                     name="username" value="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-email">Email address</label>
-                                            <input style="font-weight: bold" type="email" required id="input-email" class="form-control" name="email"
+                                            <input  required style="font-weight: bold" type="email" required id="input-email" class="form-control" name="email"
                                                    value="">
                                         </div>
                                     </div>
@@ -473,14 +234,14 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-first-name">First name</label>
-                                            <input style="font-weight: bold" type="text" id="input-first-name" class="form-control" name="firstname"
+                                            <input  required style="font-weight: bold" type="text" id="input-first-name" class="form-control" name="firstname"
                                                     value="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-last-name">Last name</label>
-                                            <input style="font-weight: bold" type="text" id="input-last-name" class="form-control" name="lastname"
+                                            <input  required style="font-weight: bold" type="text" id="input-last-name" class="form-control" name="lastname"
                                                     value="">
                                         </div>
                                     </div>
@@ -494,7 +255,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-address">Address</label>
-                                            <input style="font-weight: bold" id="input-address" class="form-control"   name="address"
+                                            <input  required style="font-weight: bold" id="input-address" class="form-control"   name="address"
                                                    value="" type="text">
                                         </div>
                                     </div>
@@ -504,21 +265,21 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-city">City</label>
-                                            <input style="font-weight: bold" type="text" id="input-city" class="form-control"  name="city"
+                                            <input  required style="font-weight: bold" type="text" id="input-city" class="form-control"  name="city"
                                                    value="">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-country">Country</label>
-                                            <input style="font-weight: bold" type="text" id="input-country" class="form-control" name="country"
+                                            <input  required style="font-weight: bold" type="text" id="input-country" class="form-control" name="country"
                                                     value="">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-country">Postal code</label>
-                                            <input style="font-weight: bold" type="number" id="input-postal-code" class="form-control" name="postalcode"
+                                            <input  required style="font-weight: bold" type="number" id="input-postal-code" class="form-control" name="postalcode"
                                                    value="">
                                         </div>
                                     </div>

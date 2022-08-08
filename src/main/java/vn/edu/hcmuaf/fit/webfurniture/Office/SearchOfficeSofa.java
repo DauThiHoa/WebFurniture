@@ -51,6 +51,12 @@ public class SearchOfficeSofa extends HttpServlet {
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
         request.getRequestDispatcher("Office_sofa.jsp").forward(request, response);

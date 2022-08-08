@@ -24,7 +24,7 @@
 <h1 class="tieuDe" style="text-align: center;">WEB FURNITURE</h1>
 <p class="duongDan from" style="text-align: left; margin-left: 160px; font-family: Tahoma">
     <a href="cart" style="text-decoration: none ; color: black">
-        Giỏ hàng </a> > Thanh toán</p>
+        Giỏ hàng </a> / Thanh toán</p>
 <div class="Fields">
     <div>
         <div class="formContainer">
@@ -55,7 +55,7 @@
                         <jsp:useBean id="cardNumber" scope="request" class="java.lang.String"/>
                         <input type="text"  required id="cardnumber" name="cardnumber" value="${cardNumber}" onchange="checkValidate()"  placeholder="4129 7501 2345 6789"/>
                         <label class="from" for="ccnum">Ngày sinh</label>
-                        <jsp:useBean id="brithDay" =  scope="request" class="java.lang.String"/>
+                        <jsp:useBean id="brithDay" scope="request" class="java.lang.String"/>
                         <input style="width: 100% ; height: 45px; border: 2px solid black; border-radius: 5px" type="date"  required id="brithDay" name="brithDay" value="${brithDay}" onchange="checkValidate()" placeholder="12/2/1989"/>
                     </div>
                     <div>
@@ -231,9 +231,10 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Qúy khách đã đặt hàng thành công !');
-        }else {
-            alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
+        // else {
+        //     alert('Qúy khách vui lòng điền đầy đủ thông tin !');
+        // }
     }
 
     function zoom(e) {

@@ -26,6 +26,7 @@ public class ProductDetailsListController extends HttpServlet {
            request.setAttribute("email", "");
            request.setAttribute("password", "");
            request.setAttribute("name", "");
+//         request.setAttribute("checkMail", null);
 
            Profile profile = ProfileService.getInstance().getProfile();
            request.setAttribute("profile" , profile);
@@ -54,6 +55,7 @@ public class ProductDetailsListController extends HttpServlet {
 //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+
 
         request.getRequestDispatcher("HomePage.jsp").forward(request , response);
 

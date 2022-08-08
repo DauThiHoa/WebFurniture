@@ -81,15 +81,15 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
+                        <a class="nav-link" href="login">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
+                        <a class="nav-link" href="controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
-                            <span class="nav-link-text">Register</span>
+                            <span class="nav-link-text"> Register</span>
                         </a>
                     </li>
 
@@ -516,7 +516,7 @@
                             </tr>
                             <tr>
                                 <th class="TieuDe" scope="row">
-                                    Register
+                                     Register
                                 </th>
                                 <td>
                                     3,513

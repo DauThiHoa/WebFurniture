@@ -39,7 +39,7 @@ public class ProductDetailsService implements Serializable {
 
     public boolean setMoneyOneProduct(String idProduct , int quantityAffterUpadte) {
         int price = getPriceOneProduct(idProduct);
-        System.out.println("HAHAHAHAHAHAHAH "+price * quantityAffterUpadte);
+        System.out.println("HAHAHAHAHAHAHAH "+ price * quantityAffterUpadte);
         int update = JDBIConnector.get().withHandle(h -> {
             int sum = 0;
             sum += h.createUpdate("update cart set money = " + ( price * quantityAffterUpadte ) + " where idProduct like ? ")
@@ -53,7 +53,7 @@ public class ProductDetailsService implements Serializable {
 
     public int getSumQuantityListProduct (int quantity) {
         int result = getSumQuantityListProductCart() ;
-        return result + quantity - 1 ;
+        return result ;
     }
 
     public void setSumCart(int sumCart) {
@@ -214,25 +214,12 @@ public class ProductDetailsService implements Serializable {
         return result;
     }
 
-    public boolean updateQuantitySoldCart ( String idProduct) {
-        int quantitySoldOld = quantitySoldCartProduct (idProduct);
-        int total = JDBIConnector.get().withHandle(h -> {
-            int sum = 0 ;
-            sum += h.createUpdate("update cart set quantitySold = 1 + "+ quantitySoldOld + " where idProduct like ? ")
-                    .bind(0 , idProduct)
-                    .execute();
-            // Số dòng được chèn vào
-            return sum ;
-        });
-        // size của đơn hàng
-        return true;
-    }
-
     public boolean updateQuantitySoldOneProduct ( String idProduct , int quantity) {
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0 ;
-            sum += h.createUpdate("update cart set quantitySold = " + quantity + " where idProduct like ? ")
-                    .bind(0 , idProduct)
+            sum = h.createUpdate("update cart set quantitySold = ? where idProduct like ? ")
+                    .bind(0 , quantity)
+                    .bind(1 , idProduct)
                     .execute();
             // Số dòng được chèn vào
             return sum ;
@@ -324,7 +311,7 @@ public class ProductDetailsService implements Serializable {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
-    public static List<ProductDetails> searchName ( String name ){
+    public List<ProductDetails> searchName ( String name ){
         String name_result = "%" + name + "%";
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT * FROM webfurniture.productdetails WHERE webfurniture.productdetails.`name` LIKE ? ")

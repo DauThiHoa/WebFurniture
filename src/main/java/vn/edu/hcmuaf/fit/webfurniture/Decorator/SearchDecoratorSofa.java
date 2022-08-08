@@ -33,7 +33,12 @@ public class SearchDecoratorSofa extends HttpServlet {
         String search = request.getParameter("search");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");

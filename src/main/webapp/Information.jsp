@@ -105,7 +105,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
-                            <span class="nav-link-text">Register</span>
+                            <span class="nav-link-text"> Register</span>
                         </a>
                     </li>
 
@@ -118,248 +118,12 @@
 <div class="main-content" id="panel">
     <!-- Topnav -->
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Search form -->
-                <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-                    <div class="form-group mb-0">
-                        <div class="input-group input-group-alternative input-group-merge">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Search" type="text">
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main"
-                            aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </form>
-                <!-- Navbar links -->
-                <ul class="navbar-nav align-items-center  ml-md-auto ">
-                    <li class="nav-item d-xl-none">
-                        <!-- Sidenav toggler -->
-                        <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
-                             data-target="#sidenav-main">
-                            <div class="sidenav-toggler-inner">
-                                <i class="sidenav-toggler-line"></i>
-                                <i class="sidenav-toggler-line"></i>
-                                <i class="sidenav-toggler-line"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item d-sm-none">
-                        <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-                            <i class="ni ni-zoom-split-in"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="ni ni-bell-55"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                            <!-- Dropdown header -->
-                            <div class="px-3 py-3">
-                                <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong>
-                                    notifications.</h6>
-                            </div>
-                            <!-- List group -->
-                            <div class="list-group list-group-flush">
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_1.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>2 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_2.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>3 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_3.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>5 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>2 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="QuanTri/Admin/examples/icon/img_5.png"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">${profile.username}</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>3 hrs ago</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- View all -->
-                            <a href="#" class="dropdown-item text-center text-primary font-weight-bold py-3">View
-                                all</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="ni ni-ungroup"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
-                            <div class="row shortcuts px-4">
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                      <i class="ni ni-calendar-grid-58"></i>
-                    </span>
-                                    <small>Calendar</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
-                      <i class="ni ni-email-83"></i>
-                    </span>
-                                    <small>Email</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-info">
-                      <i class="ni ni-credit-card"></i>
-                    </span>
-                                    <small>Payments</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                      <i class="ni ni-books"></i>
-                    </span>
-                                    <small>Reports</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                      <i class="ni ni-pin-3"></i>
-                    </span>
-                                    <small>Maps</small>
-                                </a>
-                                <a href="#" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                      <i class="ni ni-basket"></i>
-                    </span>
-                                    <small>Shop</small>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="QuanTri/Admin/assets/img/theme/team-4.jpg">
-                  </span>
-                                <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">${profile.username}</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu  dropdown-menu-right ">
-                            <div class="dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome!</h6>
-                            </div>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-single-02"></i>
-                                <span>My profile</span>
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-settings-gear-65"></i>
-                                <span>Settings</span>
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-calendar-grid-58"></i>
-                                <span>Activity</span>
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-support-16"></i>
-                                <span>Support</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="ni ni-user-run"></i>
-                                <span>Logout</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+        <div class="media align-items-center" style="margin-left: 90%">
+                                <span class="avatar avatar-sm rounded-circle">
+                                    <img alt="Image placeholder" src="<%= Asset.url("QuanTri/Admin/assets/img/img.png")%>">
+                                </span>
+            <div class="media-body  ml-2  d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold" style="color: white">${profile.username}  </span>
             </div>
         </div>
     </nav>
@@ -391,29 +155,29 @@
         <h1 class="information"> DISPLAY </h1>
         <div class="information2">
             <h2 class="Category"> Company name </h2>
-            <input style="border: 1px solid white" class="type1" required type="text" name="Company" value="${information.companyName}"><br>
+            <input  required style="border: 1px solid white" class="type1" required type="text" name="Company" value="${information.companyName}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Address </h2>
-            <input style="border: 1px solid white" class="Address" required type="text" name="Address" value="${information.address}"><br>
+            <input  required style="border: 1px solid white" class="Address" required type="text" name="Address" value="${information.address}"><br>
         </div>
 
         <div class="information4">
             <h2 class="Category" style="margin-right: 60px"> Share icon </h2>
             <br>
-            <input type="file" style="border : 1px solid white ; background: white ; color: black ; width: 750px ;
+            <input  required type="file" style="border : 1px solid white ; background: white ; color: black ; width: 750px ;
             margin-left: 15px" class="shareicon" value="Select file" accept=".jpg , .png" onchange="clickshareicon()">
-            <input type="image" name="shareicon" style="float: left; clear: right ; width: 50px ; height: 50px "
+            <input  required type="image" name="shareicon" style="float: left; clear: right ; width: 50px ; height: 50px "
                    class="imgshareicon" src="${information.shareIcon}" >
-            <input style="display : none ;width: 300px ; height: 25px" type="text" value="" class="share" name="share">
+            <input  required style="display : none ;width: 300px ; height: 25px" type="text" value="" class="share" name="share">
         </div>
         <div class="information5">
             <h2 class="Modules"> Browser Icons </h2>
             <br>
-            <input type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ;
+            <input  required type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ;
             margin-left: 15px"  class="browsericon" value="Select file" accept=".jpg , .png"
                    onchange="clickbrowsericon()">
-            <input type="image" required name="browsericon" style="float: left; clear:right ;width: 50px ; height: 50px"
+            <input  required type="image" required name="browsericon" style="float: left; clear:right ;width: 50px ; height: 50px"
                    class="imgbrowsericon" src="${information.browserIcon}">
             <input required style="display : none ;width: 300px ; height: 25px" type="text" value="" class="browser" name="browser">
         </div>
@@ -424,36 +188,36 @@
         <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Hotline </h2>
-            <input style="border: 1px solid white" required class="type" type="text" name="Hotline" value="${information.hotline}"><br>
+            <input  required style="border: 1px solid white" required class="type" type="text" name="Hotline" value="${information.hotline}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Email </h2>
-            <input style="border: 1px solid white" class="JhonDoue" required type="email" name="Email" value="${information.email}"><br>
+            <input  required style="border: 1px solid white" class="JhonDoue" required type="email" name="Email" value="${information.email}"><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> Copyright </h2>
-            <input style="border: 1px solid white" class="type2" required type="text" name="Copyright" value="${information.copyright}"><br>
+            <input  required style="border: 1px solid white" class="type2" required type="text" name="Copyright" value="${information.copyright}"><br>
         </div>
 
         <div class="information4">
             <h2 class="Modules"> Facebook </h2>
-            <input style="border: 1px solid white" class="type2" required type="text" name="Facebook" value="${information.facebook}"><br>
+            <input  required style="border: 1px solid white" class="type2" required type="text" name="Facebook" value="${information.facebook}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Twitter </h2>
-            <input style="border: 1px solid white" class="Twitter" required type="text" name="Twitter" value="${information.twitter}"><br>
+            <input  required style="border: 1px solid white" class="Twitter" required type="text" name="Twitter" value="${information.twitter}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Youtube </h2>
-            <input style="border: 1px solid white" class="Youtube" required type="text" name="Youtube" value="${information.youtube}"><br>
+            <input  required style="border: 1px solid white" class="Youtube" required type="text" name="Youtube" value="${information.youtube}"><br>
         </div>
         <div class="information2">
             <h2 class="Category"> Instagram </h2>
-            <input style="border: 1px solid white" class="Instagram" required type="text" name="Instagram" value="${information.instagram}"><br>
+            <input  required style="border: 1px solid white" class="Instagram" required type="text" name="Instagram" value="${information.instagram}"><br>
         </div>
         <div class="information6">
                 <button class="Select" type="submit" onclick="save()">
-                    <input style="display: none" class="Instagram" type="text" name="id" value="${information.idInformation}">
+                    <input  required style="display: none" class="Instagram" type="text" name="id" value="${information.idInformation}">
                     <img class="fa fa-floppy-o" src="QuanTri/Admin/assets/img/Admin/img_16.png"/>
                     Save
                 </button>

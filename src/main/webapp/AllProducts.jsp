@@ -253,16 +253,16 @@
                     <h2 class="tenMauSac"> Màu Sắc</h2>
                 </div>
                 <div class="boMau">
-                    <input type="submit" class="fa fa-circle " id="fa1"  value="hong" style="background: #ffa9bf ; font-size: 0.1px ; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa2"  value="vang" style="background: yellow ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa3"  value="xam" style="background: #9a9a9a ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa1"  value="hồng" style="background: #ffa9bf ; font-size: 0.1px ; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa2"  value="vàng" style="background: yellow ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa3"  value="xám" style="background: #9a9a9a ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
                     <input type="submit" class="fa fa-circle " id="fa4"  value="xanh lam" style="background: #1fb5d4 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa5"  value="xanh luc" style="background: #00dea2 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa5"  value="xanh lục" style="background: #00dea2 ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
                     <input type="submit" class="fa fa-circle " id="fa6"  value="cam" style="background: orange ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa7"  value="trang" style="border : 1px solid black ; background: white ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa8"  value="den" style="background: black ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa9"  value="tim" style="background: #9d03ad ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
-                    <input type="submit" class="fa fa-circle " id="fa10" value="do" style="background: red ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa7"  value="trắng" style="border : 1px solid black ; background: white ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa8"  value="đen" style="background: black ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa9"  value="tím" style="background: #9d03ad ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
+                    <input type="submit" class="fa fa-circle " id="fa10" value="đỏ" style="background: red ; font-size: 0.1px; width: 46px ; height: 46px" name="color" onclick="ClickGetColor()">
                 </div>
             </div>
         </form>
@@ -1328,9 +1328,9 @@
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
-            alert('Gửi đăng ký thành công');
+            // alert('Gửi đăng ký thành công');
         }else {
-            alert('Qúy khách đăng kí nhận tin không thành công');
+            // alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
     const email = document.querySelector('.email');

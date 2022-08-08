@@ -20,6 +20,13 @@ public class NewCommentController extends HttpServlet {
         request.setAttribute("NewCommentList" , NewCommentService.getInstance().getAll());
         request.setAttribute("sumNewComment" , NewCommentService.getInstance().sumNewComment());
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         String nameCustomer = request.getParameter("nameCustomer");
         String emailCustomer = request.getParameter("emailCustomer");
         String content = request.getParameter("content");

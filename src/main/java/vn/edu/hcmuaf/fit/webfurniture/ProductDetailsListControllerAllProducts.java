@@ -33,6 +33,12 @@ public class ProductDetailsListControllerAllProducts extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         String color = request.getParameter("color");
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));

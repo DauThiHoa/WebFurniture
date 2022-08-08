@@ -29,9 +29,20 @@ public class DashboardController extends HttpServlet {
         request.setAttribute("sumContact" , OrderDao.getInstance().sumContact());
         request.setAttribute("countContact" , OrderDao.getInstance().countContact());
 
+//        System.out.println(java.time.LocalDate.now());
+//        Lấy thời gian vô tài khoản
+         request.setAttribute("date" , java.time.LocalDate.now());
+
         // Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         String block = "block";
         String none = "none";

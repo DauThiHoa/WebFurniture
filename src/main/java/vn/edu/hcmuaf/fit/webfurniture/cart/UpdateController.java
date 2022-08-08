@@ -21,12 +21,21 @@ public class UpdateController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         HttpSession session = request.getSession();
+        request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
+
         // load cart from session
 
         //        Số sản phẩm trong giỏ hàng
 
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         Cart cart = ( Cart) session.getAttribute("cart");
         if ( cart.get(id) == null ){
@@ -42,18 +51,21 @@ public class UpdateController extends HttpServlet {
             );
             return;
         }
-        int getSumQuantityListProduct  = ProductDetailsService.getInstance().getSumQuantityListProduct (quantity);
-        System.out.println("getSumQuantityListProductCart    =>    " + getSumQuantityListProduct );
-        ProductDetailsService.getInstance().updateQuantitySoldCart(id);
 
-            ProductDetailsService.getInstance().setSumCart(getSumQuantityListProduct );
-            int quantityAffterUpadte = cart.updateQuantitySold(id, quantity);
+        int quantityAffterUpadte = cart.updateQuantitySold(id, quantity);
 
         System.out.println("quantityAffterUpadte " + quantityAffterUpadte);
 
         ProductDetailsService.getInstance().updateQuantitySoldOneProduct(id, quantityAffterUpadte);
-        System.out.println(id);
+        System.out.println("ONE PRODUCT : " + id + " QUANTITY : " + quantityAffterUpadte);
         ProductDetailsService.getInstance().setMoneyOneProduct(id , quantityAffterUpadte);
+
+        int getSumQuantityListProduct  = ProductDetailsService.getInstance().getSumQuantityListProduct (quantity);
+        System.out.println("QUANTITY : " + quantity + "GET SUM QUANTITY :" + getSumQuantityListProduct);
+
+        System.out.println("getSumQuantityListProductCart    =>    " + getSumQuantityListProduct );
+
+        ProductDetailsService.getInstance().setSumCart(getSumQuantityListProduct );
 
         session.setAttribute("cart", cart);
          response.getWriter().println(

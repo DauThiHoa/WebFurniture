@@ -17,6 +17,7 @@ public class AddController extends HttpServlet {
         String id =  request.getParameter("id");
         String quantitySold =  request.getParameter("quantitySold");
         ProductDetails productDetails =  ProductDetailsService.getInstance().getById(id);
+        request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
 
         String block = "block";
         String none = "none";
@@ -28,7 +29,12 @@ public class AddController extends HttpServlet {
         // Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
-
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
         if ( productDetails != null ) {
            HttpSession session = request.getSession();
            Cart cart = ( Cart) session.getAttribute("cart");

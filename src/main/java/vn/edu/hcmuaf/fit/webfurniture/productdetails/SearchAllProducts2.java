@@ -32,6 +32,12 @@ public class SearchAllProducts2 extends HttpServlet {
 
         String search = request.getParameter("search");
         System.out.println(search +" PRODUCT-2");
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");

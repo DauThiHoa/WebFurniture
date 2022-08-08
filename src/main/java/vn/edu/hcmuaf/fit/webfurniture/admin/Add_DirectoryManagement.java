@@ -17,6 +17,13 @@ public class Add_DirectoryManagement extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 

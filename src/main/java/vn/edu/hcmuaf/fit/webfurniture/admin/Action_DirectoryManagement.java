@@ -27,6 +27,13 @@ public class Action_DirectoryManagement extends HttpServlet {
      int pageweb =  DirectoryManagementService.getInstance().delete(id);
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 

@@ -2,9 +2,13 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="vn.edu.hcmuaf.fit.webfurniture.Asset" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn"
-           uri = "http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn"
+           uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<%
+    String checkMail = (String) request.getAttribute("checkMail");
+%>
 
 <!doctype html>
 <html lang="en">
@@ -21,8 +25,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="Home.js"></script>
+    <script>
 
+        <%--        <% if (checkMail != null) { %>--%>
+        <%--        alert( <%= checkMail %> + " HAHHAHAHA");--%>
+        <%--        <%} %>--%>
+
+    </script>
 </head>
+
 <body>
 <div id="Thanh_cong_cu">
     <div id="Ten_Web">
@@ -32,8 +43,8 @@
         <jsp:useBean id="search" scope="request" type="java.lang.String"/>
         <input class="inputSearch" type="text" value="${search}" name="search" placeholder="Tìm kiếm sản phẩm ...">
     </form>
-    <div id="Tim_Kiem" onchange="searchProductChange()" onclick="searchProduct()" >
-        <i class="fa fa-search"  aria-hidden="true"></i>
+    <div id="Tim_Kiem" onchange="searchProductChange()" onclick="searchProduct()">
+        <i class="fa fa-search" aria-hidden="true"></i>
     </div>
     <div id="Hotline">
         <a href="LienHe">
@@ -71,11 +82,12 @@
     <div id="gioHang">
         <a href="cart">
             <div>
-    <jsp:useBean id="sizeListCart" scope="request" type="java.lang.Integer"/>
-    <input class="inputCart"
-           style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%" value="${sizeListCart}">
+                <jsp:useBean id="sizeListCart" scope="request" type="java.lang.Integer"/>
+                <input class="inputCart"
+                       style="border-radius: 100% ; width: 1% ; text-align: center ; margin-top: 1% ; margin-left: -1%"
+                       value="${sizeListCart}">
 
-    <i class="fa fa-shopping-cart" aria-hidden="true">
+                <i class="fa fa-shopping-cart" aria-hidden="true">
                 </i>
             </div>
             <div id="chu_giohang" style="margin-top: -1%">
@@ -142,7 +154,6 @@
     </a>
 </div>
 
-
 <div class="khungtrang">
     <i class="fa fa-chevron-circle-left" aria-hidden="true" onclick="zoomountLeft(this)" alt="image"></i>
     <img id="trangKhung" src="Image/Capture.PNG"/>
@@ -188,42 +199,43 @@
     <img id="hinh4" src="Image/hinh4.PNG"/>
 </div>
 
-<div id="SanPhamNoiBat" style="display: block" >
+<div id="SanPhamNoiBat" style="display: block">
 
-    <div id="BanLamViec" >
+    <div id="BanLamViec">
         <jsp:useBean id="productDetailsAll" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsAll}">
-        <c:if test="${p.id == 'sp1'}" >
-        <form action="ProductDetails" method="POST">
-            <a href="ProductDetails">
-                <input style="display: none" type="text" name="id" value="${p.id}">
-                <input style="display: none" type="text" name="name" value="${p.name}">
-            <button  type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100% ">
-                <img  id="anh_BanLamViec" style="margin-left: 0px ; margin-top:  10px" src="${p.linkImage}" />
-            </button>
-            </a>
-        </form>
-        <div id="blv">
+            <c:if test="${p.id == 'sp1'}">
+                <form action="ProductDetails" method="POST">
+                    <a href="ProductDetails">
+                        <input style="display: none" type="text" name="id" value="${p.id}">
+                        <input style="display: none" type="text" name="name" value="${p.name}">
+                        <button type="submit"
+                                style="background: white;border: 1px solid white ; width: 100% ; height: 100% ">
+                            <img id="anh_BanLamViec" style="margin-left: 0px ; margin-top:  10px" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <div id="blv">
                     <h1 class="chuBanLamViec">${p.name}</h1>
-            <div class="sao3">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p id="luxury">${p.trademark}</p>
-            <h2 id="giaBLV">${p.priceNew}đ</h2>
-            <div class="gioHang">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    <div class="sao3">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <p id="luxury">${p.trademark}</p>
+                    <h2 id="giaBLV">${p.priceNew}đ</h2>
+                    <div class="gioHang">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
         </c:forEach>
     </div>
 
@@ -239,335 +251,371 @@
     <div id="tenCacSanPhamNoiBat">
         <jsp:useBean id="productDetailsSanPhamNoiBat1" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsSanPhamNoiBat1}">
-            <c:if test="${p.id == 'sp2'}" >
-        <div class="tensanpham" >
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp2'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
 
-            <c:if test="${p.id == 'sp3'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp3'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
 
-            <c:if test="${p.id == 'sp4'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp4'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
 
-            <c:if test="${p.id == 'sp5'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp5'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
 
-        <c:if test="${p.id == 'sp6'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp6'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
 
-            <c:if test="${p.id == 'sp7'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp7'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
         </c:forEach>
 
         <div class="tenCacSanPhamNoiBat1">
             <!-- San Pham Bam nut chuyen -->
             <jsp:useBean id="productDetailsSanPhamNoiBat2" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsSanPhamNoiBat2}">
-                <c:if test="${p.id == 'sp8'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp8'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
-            </c:if>
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-
-                <c:if test="${p.id == 'sp9'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
-            </c:if>
+                    </div>
+                </c:if>
+                <!-- San Pham Bam nut chuyen -->
+                <!-- San Pham Bam nut chuyen -->
 
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-                <c:if test="${p.id == 'sp10'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp9'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
-            </c:if>
-
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-
-                <c:if test="${p.id == 'sp11'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
-            </c:if>
+                    </div>
+                </c:if>
 
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-
-                <c:if test="${p.id == 'sp12'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <!-- San Pham Bam nut chuyen -->
+                <!-- San Pham Bam nut chuyen -->
+                <c:if test="${p.id == 'sp10'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
-            </c:if>
-
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-
-            <c:if test="${p.id == 'sp13'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
-            </c:if>
+                    </div>
+                </c:if>
+
+                <!-- San Pham Bam nut chuyen -->
+                <!-- San Pham Bam nut chuyen -->
+
+                <c:if test="${p.id == 'sp11'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
+                        </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </c:if>
+
+                <!-- San Pham Bam nut chuyen -->
+                <!-- San Pham Bam nut chuyen -->
+
+                <c:if test="${p.id == 'sp12'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
+                        </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </c:if>
+
+                <!-- San Pham Bam nut chuyen -->
+                <!-- San Pham Bam nut chuyen -->
+
+                <c:if test="${p.id == 'sp13'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
+                        </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </c:if>
             </c:forEach>
             <!-- San Pham Bam nut chuyen -->
 
@@ -585,141 +633,149 @@
         <div class="DoDungVanPhong">
             <jsp:useBean id="productDetailsSanPhamHotDoDungVanPhong" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsSanPhamHotDoDungVanPhong}">
-            <c:if test="${p.id == 'sp14'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp14'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </c:if>
-            <!-- San pham -->
-            <c:if test="${p.id == 'sp15'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </c:if>
-            <!-- San pham -->
+                </c:if>
+                <!-- San pham -->
+                <c:if test="${p.id == 'sp15'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+                <!-- San pham -->
 
-            <!-- San pham -->
-            <c:if test="${p.id == 'sp16'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <!-- San pham -->
+                <c:if test="${p.id == 'sp16'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                        </a>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </c:if>
-            <!-- San pham -->
+                </c:if>
+                <!-- San pham -->
 
-            <!-- San pham -->
-            <c:if test="${p.id == 'sp17'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <!-- San pham -->
+                <c:if test="${p.id == 'sp17'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                        </a>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </c:if>
+                </c:if>
             </c:forEach>
             <!-- San pham -->
         </div>
@@ -731,141 +787,149 @@
         <div class="NoiThatGo">
             <jsp:useBean id="productDetailsSanPhamHotNoiThatGo" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsSanPhamHotNoiThatGo}">
-            <c:if test="${p.id == 'sp18'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp18'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </c:if>
-            <!-- San pham -->
-            <c:if test="${p.id == 'sp19'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </c:if>
-            <!-- San pham -->
+                </c:if>
+                <!-- San pham -->
+                <c:if test="${p.id == 'sp19'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:if>
+                <!-- San pham -->
 
-            <!-- San pham -->
-            <c:if test="${p.id == 'sp20'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <!-- San pham -->
+                <c:if test="${p.id == 'sp20'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                        </a>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </c:if>
-            <!-- San pham -->
+                </c:if>
+                <!-- San pham -->
 
-            <!-- San pham -->
-            <c:if test="${p.id == 'sp21'}" >
-            <div class="gheGoBapBenhIconic">
-                <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
-                    <a href="ProductDetails">
-                        <input style="display: none" type="text" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button  type="submit" style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
-                            <img  class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px " src="${p.linkImage}" />
-                        </button>
-                    </a>
-                </form>
-                <div class="iconic">
-                        <h2 class="ten">${p.name}</h2>
-                    <div class="sao4">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="giaIconic">${p.priceNew}đ</h3>
-                    <div class="gioHang4">
-                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                            <div>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <!-- San pham -->
+                <c:if test="${p.id == 'sp21'}">
+                    <div class="gheGoBapBenhIconic">
+                        <form action="ProductDetails" method="POST" style="height: 63% ; margin-bottom: -100px">
+                            <a href="ProductDetails">
+                                <input style="display: none" type="text" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button type="submit"
+                                        style="background: white;border: 1px solid white ; width: 98% ; height: 100%  ; margin-left: 0px">
+                                    <img class="anh_gheGoBapBenhIconic" style="margin-left: 15px ; margin-top: 2px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="iconic">
+                            <h2 class="ten">${p.name}</h2>
+                            <div class="sao4">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
-                        </a>
+                            <h3 class="giaIconic">${p.priceNew}đ</h3>
+                            <div class="gioHang4">
+                                <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                    <div>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </c:if>
+                </c:if>
             </c:forEach>
             <!-- San pham -->
         </div>
@@ -873,134 +937,142 @@
     </div>
     <jsp:useBean id="productDetailsSanPhamHotBanGheThuGian" scope="request" type="java.util.List"/>
     <c:forEach var="p" items="${productDetailsSanPhamHotBanGheThuGian}">
-    <c:if test="${p.id == 'sp22'}" >
-    <div id="gheGoBapBenhIconic">
-        <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -95px">
-            <a href="ProductDetails">
-                <input style="display: none" type="text" name="id" value="${p.id}">
-                <input style="display: none" type="text" name="name" value="${p.name}">
-                <button  type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
-                    <img class="anh_gheGoBapBenhIconic" style=" height: 95% ; width: 90%; margin-top: 0px ; margin-left: -5px" src="${p.linkImage}" />
-                </button>
-            </a>
-        </form>
-        <div id="iconic">
-                <h2 class="ten">${p.name}</h2>
-            <div class="sao4">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <h3 id="giaIconic">${p.priceNew}đ</h3>
-            <div class="gioHang4">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+        <c:if test="${p.id == 'sp22'}">
+            <div id="gheGoBapBenhIconic">
+                <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -95px">
+                    <a href="ProductDetails">
+                        <input style="display: none" type="text" name="id" value="${p.id}">
+                        <input style="display: none" type="text" name="name" value="${p.name}">
+                        <button type="submit"
+                                style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
+                            <img class="anh_gheGoBapBenhIconic"
+                                 style=" height: 95% ; width: 90%; margin-top: 0px ; margin-left: -5px"
+                                 src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <div id="iconic">
+                    <h2 class="ten">${p.name}</h2>
+                    <div class="sao4">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    </c:if>
-    <c:if test="${p.id == 'sp23'}" >
-    <div id="ghePhongKhachArctander">
-        <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -15px">
-            <a href="ProductDetails">
-                <input style="display: none" type="text" name="id" value="${p.id}">
-                <input style="display: none" type="text" name="name" value="${p.name}">
-                <button  type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
-                    <img id="anh_ghePhongKhachArctander" style="margin-top: 0px   ; margin-left: 18px" src="${p.linkImage}" />
-                </button>
-            </a>
-        </form>
-        <div id="Arctander">
-                <h2 class="ten">${p.name}</h2>
-                <div class="sao4">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <h3 id="giaIconic">${p.priceNew}đ</h3>
+                    <div class="gioHang4">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            <h3 id="giaArctander">${p.priceNew}đ</h3>
-            <div class="gioHang4">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp23'}">
+            <div id="ghePhongKhachArctander">
+                <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -15px">
+                    <a href="ProductDetails">
+                        <input style="display: none" type="text" name="id" value="${p.id}">
+                        <input style="display: none" type="text" name="name" value="${p.name}">
+                        <button type="submit"
+                                style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
+                            <img id="anh_ghePhongKhachArctander" style="margin-top: 0px   ; margin-left: 18px"
+                                 src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <div id="Arctander">
+                    <h2 class="ten">${p.name}</h2>
+                    <div class="sao4">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    </c:if>
-    <c:if test="${p.id == 'sp24'}" >
-    <div id="BanAillen03">
-        <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -15px">
-            <a href="ProductDetails">
-                <input style="display: none" type="text" name="id" value="${p.id}">
-                <input style="display: none" type="text" name="name" value="${p.name}">
-                <button  type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
-                    <img id="anh_BanAillen03" style="margin-top: 0px  ; margin-left: 18px" src="${p.linkImage}" />
-                </button>
-            </a>
-        </form>
-        <div id="Aillen03">
-                <h2 class="ten">${p.name}</h2>
-            <div class="sao4">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <h3 id="giaAillen03">${p.priceNew}đ</h3>
-            <div class="gioHang4">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    <h3 id="giaArctander">${p.priceNew}đ</h3>
+                    <div class="gioHang4">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
-        </div>
-    </div>
-    </c:if>
-    <c:if test="${p.id == 'sp25'}" >
-    <div id="banBinas">
-        <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -15px">
-            <a href="ProductDetails">
-                <input style="display: none" type="text" name="id" value="${p.id}">
-                <input style="display: none" type="text" name="name" value="${p.name}">
-                <button  type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
-                    <img id="anh_banBinas" style="margin-top: 0px  ; margin-left: 18px" src="${p.linkImage}" />
-                </button>
-            </a>
-        </form>
-        <div id="binas">
-                <h2 class="ten">${p.name}</h2>
-            <div class="sao4">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <h3 id="giaBinas">${p.priceNew}đ</h3>
-            <div class="gioHang4">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+        </c:if>
+        <c:if test="${p.id == 'sp24'}">
+            <div id="BanAillen03">
+                <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -15px">
+                    <a href="ProductDetails">
+                        <input style="display: none" type="text" name="id" value="${p.id}">
+                        <input style="display: none" type="text" name="name" value="${p.name}">
+                        <button type="submit"
+                                style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
+                            <img id="anh_BanAillen03" style="margin-top: 0px  ; margin-left: 18px"
+                                 src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <div id="Aillen03">
+                    <h2 class="ten">${p.name}</h2>
+                    <div class="sao4">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                </a>
+                    <h3 id="giaAillen03">${p.priceNew}đ</h3>
+                    <div class="gioHang4">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    </c:if>
+        </c:if>
+        <c:if test="${p.id == 'sp25'}">
+            <div id="banBinas">
+                <form action="ProductDetails" method="POST" style="height: 60% ; margin-bottom: -15px">
+                    <a href="ProductDetails">
+                        <input style="display: none" type="text" name="id" value="${p.id}">
+                        <input style="display: none" type="text" name="name" value="${p.name}">
+                        <button type="submit"
+                                style="background: white;border: 1px solid white ; width: 100% ; height: 100%  ; margin-left: 0px">
+                            <img id="anh_banBinas" style="margin-top: 0px  ; margin-left: 18px" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <div id="binas">
+                    <h2 class="ten">${p.name}</h2>
+                    <div class="sao4">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h3 id="giaBinas">${p.priceNew}đ</h3>
+                    <div class="gioHang4">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </c:if>
     </c:forEach>
     <div id="sangTraiPhaiSPH">
         <img id="left_SPH" src="Image/sangTrai.PNG" onclick="left(this)" alt="left"/>
@@ -1011,36 +1083,37 @@
     <div id="Kozoka_trysil">
         <jsp:useBean id="productDetailsSanPhamMoiMiNi" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsSanPhamMoiMiNi}">
-        <c:if test="${p.id == 'sp26'}" >
-            <form action="ProductDetails" method="POST" style="height: 65%">
-                <a href="ProductDetails">
-                    <input style="display: none" type="text" name="id" value="${p.id}">
-                    <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button  type="submit" style="background: white;border: 1px solid white ; width: 100% ; height: 100% ">
-                        <img id="anh_Kozoka_trysil" style="margin-left: 0px" src="${p.linkImage}" />
-                    </button>
-                </a>
-            </form>
-        <div id="Kozoka">
-                <h2 class="ten">${p.name}</h2>
-            <div class="sao3">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <h3 id="giaKozoka">${p.priceNew}đ</h3>
-            <div class="gioHang">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp26'}">
+                <form action="ProductDetails" method="POST" style="height: 65%">
+                    <a href="ProductDetails">
+                        <input style="display: none" type="text" name="id" value="${p.id}">
+                        <input style="display: none" type="text" name="name" value="${p.name}">
+                        <button type="submit"
+                                style="background: white;border: 1px solid white ; width: 100% ; height: 100% ">
+                            <img id="anh_Kozoka_trysil" style="margin-left: 0px" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <div id="Kozoka">
+                    <h2 class="ten">${p.name}</h2>
+                    <div class="sao3">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                    <h3 id="giaKozoka">${p.priceNew}đ</h3>
+                    <div class="gioHang">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
         </c:forEach>
     </div>
 
@@ -1054,321 +1127,357 @@
     <div id="tenCacSanPhamMoi">
         <jsp:useBean id="productDetailsSanPhamMoi1" scope="request" type="java.util.List"/>
         <c:forEach var="p" items="${productDetailsSanPhamMoi1}">
-        <c:if test="${p.id == 'sp27'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <c:if test="${p.id == 'sp27'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
-        <c:if test="${p.id == 'sp28'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
-        <c:if test="${p.id == 'sp29'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp28'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
-        <c:if test="${p.id == 'sp30'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
-        <c:if test="${p.id == 'sp31'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp29'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
-        <c:if test="${p.id == 'sp32'}" >
-        <div class="tensanpham">
-            <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                        <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-            <div class="sanpham">
-                    <h2 class="ten">${p.name}</h2>
-                <h3 class="giasanpham">${p.priceNew}đ</h3>
-            </div>
-            <div class="gioHang5">
-                <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                    <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-        </c:if>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp30'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
+                    </div>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp31'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
+                    </div>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
+            <c:if test="${p.id == 'sp32'}">
+                <div class="tensanpham">
+                    <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                        <a href="ProductDetails">
+                            <input type="text" style="display: none" name="id" value="${p.id}">
+                            <input style="display: none" type="text" name="name" value="${p.name}">
+                            <button class="anhSanPham" type="submit"
+                                    style="background: white;border: 1px solid white ; height: 95% ">
+                                <img class="anhSanPham"
+                                     style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                     src="${p.linkImage}"/>
+                            </button>
+                        </a>
+                    </form>
+                    <div class="sanpham">
+                        <h2 class="ten">${p.name}</h2>
+                        <h3 class="giasanpham">${p.priceNew}đ</h3>
+                    </div>
+                    <div class="gioHang5">
+                        <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                            <div>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </c:if>
         </c:forEach>
 
         <div class="tenCacSanPhamMoi3">
             <!-- San Pham Bam nut chuyen -->
             <jsp:useBean id="productDetailsSanPhamMoi2" scope="request" type="java.util.List"/>
             <c:forEach var="p" items="${productDetailsSanPhamMoi2}">
-                <c:if test="${p.id == 'sp33'}" >
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp33'}">
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </c:if>
-                <c:if test="${p.id == 'sp34'}" >
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp34'}">
+                    <!-- San Pham Bam nut chuyen -->
+                    <!-- San Pham Bam nut chuyen -->
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </c:if>
-                <c:if test="${p.id == 'sp35'}" >
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}"> 
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp35'}">
+                    <!-- San Pham Bam nut chuyen -->
+                    <!-- San Pham Bam nut chuyen -->
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </c:if>
-                <c:if test="${p.id == 'sp36'}" >
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp36'}">
+                    <!-- San Pham Bam nut chuyen -->
+                    <!-- San Pham Bam nut chuyen -->
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </c:if>
-                <c:if test="${p.id == 'sp37'}" >
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp37'}">
+                    <!-- San Pham Bam nut chuyen -->
+                    <!-- San Pham Bam nut chuyen -->
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </c:if>
-                <c:if test="${p.id == 'sp38'}" >
-            <!-- San Pham Bam nut chuyen -->
-            <!-- San Pham Bam nut chuyen -->
-            <div class="tensanpham1">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anhSanPham" type="submit" style="background: white;border: 1px solid white ; height: 95% ">
-                            <img class="anhSanPham" style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px " src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="sanpham">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="giasanpham">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang5">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                <c:if test="${p.id == 'sp38'}">
+                    <!-- San Pham Bam nut chuyen -->
+                    <!-- San Pham Bam nut chuyen -->
+                    <div class="tensanpham1">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: 3px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anhSanPham" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 95% ">
+                                    <img class="anhSanPham"
+                                         style="height: 100% ; width: 105% ; margin: auto ; margin-left: -5px "
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="sanpham">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="giasanpham">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-            </div>
+                        <div class="gioHang5">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </c:if>
             </c:forEach>
             <!-- San Pham Bam nut chuyen -->
@@ -1449,288 +1558,304 @@
             </div>
         </div>
         <div class="tenCacSanPham">
-                <jsp:useBean id="productDetailsBoSuuTap1" scope="request" type="java.util.List"/>
-                <c:forEach var="p" items="${productDetailsBoSuuTap1}">
-                    <c:if test="${p.id == 'sp39'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                </div>
+            <jsp:useBean id="productDetailsBoSuuTap1" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsBoSuuTap1}">
+                <c:if test="${p.id == 'sp39'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
+                        </div>
 
-                <div class="gioHang">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-                    </c:if>
-                    <c:if test="${p.id == 'sp40'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                    <p><strike CLASS="giaCu" style="margin-left: -88px">${p.priceOld}đ</strike></p>
-                </div>
-                <div class="gioHang2">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -80px"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-                    </c:if>
-                    <c:if test="${p.id == 'sp41'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp40'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
+                            <p><strike CLASS="giaCu" style="margin-left: -88px">${p.priceOld}đ</strike></p>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-                    </c:if>
-                    <c:if test="${p.id == 'sp42'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                    <p><strike class="giaCu" style="margin-left: -78px">${p.priceOld}đ</strike></p>
-                </div>
-                <div class="gioHang1">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -70px"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang2">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -80px"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-                    </c:if>
-                </c:forEach>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp41'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
+                        </div>
+                        <div class="gioHang">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp42'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
+                            <p><strike class="giaCu" style="margin-left: -78px">${p.priceOld}đ</strike></p>
+                        </div>
+                        <div class="gioHang1">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true" style="margin-left: -70px"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
         </div>
 
         <!-- SanPham Khi Nhan Nut -->
         <div class="tenCacSanPham2">
 
-<jsp:useBean id="productDetailsBoSuuTap2" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${productDetailsBoSuuTap2}">
-    <c:if test="${p.id == 'sp43'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <jsp:useBean id="productDetailsBoSuuTap2" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsBoSuuTap2}">
+                <c:if test="${p.id == 'sp43'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp44'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                <a href="ProductDetails">
-                    <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                    <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                        <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                    </button>
-                </a>
-            </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp45'}" >
-            <!-- SAN PHAM NHO -->
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia" style="margin-top: 100px ; margin-left: -190px">${p.priceNew}đ</h3>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                    </a>
-                </div>
-
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp46'}" >
-            <!-- SAN PHAM NHO -->
-            <!-- SAN PHAM NHO -->
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp44'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-</c:forEach>
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp45'}">
+                    <!-- SAN PHAM NHO -->
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia" style="margin-top: 100px ; margin-left: -190px">${p.priceNew}đ</h3>
+                        </div>
+
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp46'}">
+                    <!-- SAN PHAM NHO -->
+                    <!-- SAN PHAM NHO -->
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
+                        </div>
+
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
             <!-- SAN PHAM NHO -->
         </div>
     </div>
@@ -1749,288 +1874,304 @@
             </div>
         </div>
         <div class="tenCacSanPham">
-<jsp:useBean id="productDetailsSanPhamKhuyenMai1" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${productDetailsSanPhamKhuyenMai1}">
-    <c:if test="${p.id == 'sp47'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <jsp:useBean id="productDetailsSanPhamKhuyenMai1" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamKhuyenMai1}">
+                <c:if test="${p.id == 'sp47'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp48'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia">${p.priceNew}đ</h3>
-                    <p><strike CLASS="giaCu">${p.priceOld}đ</strike></p>
-                </div>
-                <div class="gioHang">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp49'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia1">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp50'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia" style="margin-left: -190px ">${p.priceNew}đ</h3>
-                </div>
-                <div class="gioHang">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp48'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia">${p.priceNew}đ</h3>
+                            <p><strike CLASS="giaCu">${p.priceOld}đ</strike></p>
                         </div>
-                    </a>
-                </div>
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-</c:forEach>
+                        <div class="gioHang">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp49'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia1">${p.priceNew}đ</h3>
+                        </div>
+                        <div class="gioHang">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp50'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia" style="margin-left: -190px ">${p.priceNew}đ</h3>
+                        </div>
+                        <div class="gioHang">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
         </div>
 
         <!-- SanPham Khi Nhan Nut -->
         <div class="tenCacSanPham4">
-<jsp:useBean id="productDetailsSanPhamKhuyenMai2" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${productDetailsSanPhamKhuyenMai2}">
-    <c:if test="${p.id == 'sp51'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia" style="margin-left: -175px ; margin-top: 100px">${p.priceNew}đ</h3>
-                    <p><strike style="margin-left: -175px " CLASS="giaCu">${p.priceOld}đ</strike></p>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+            <jsp:useBean id="productDetailsSanPhamKhuyenMai2" scope="request" type="java.util.List"/>
+            <c:forEach var="p" items="${productDetailsSanPhamKhuyenMai2}">
+                <c:if test="${p.id == 'sp51'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia" style="margin-left: -175px ; margin-top: 100px">${p.priceNew}đ</h3>
+                            <p><strike style="margin-left: -175px " CLASS="giaCu">${p.priceOld}đ</strike></p>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp52'}" >
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia" style="margin-left: -200px ; margin-top: 100px">${p.priceNew}đ</h3>
-                    <p><strike style="margin-left: -200px  " CLASS="giaCu">${p.priceOld}đ</strike></p>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp53'}" >
-            <!-- SAN PHAM NHO -->
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia" style="margin-left: -190px ; margin-top: 100px">${p.priceNew}đ</h3>
-                    <p><strike style="margin-left: -190px " CLASS="giaCu">${p.priceOld}đ</strike></p>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                    </a>
-                </div>
-
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-    <c:if test="${p.id == 'sp54'}" >
-            <!-- SAN PHAM NHO -->
-            <!-- SAN PHAM NHO -->
-            <div class="cacSanPham">
-                <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
-                    <a href="ProductDetails">
-                        <input type="text" style="display: none" name="id" value="${p.id}">
-                        <input style="display: none" type="text" name="name" value="${p.name}">
-                        <button class="anh5" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                            <img class="anh5" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                        </button>
-                    </a>
-                </form>
-                <div class="moTa">
-                        <h2 class="ten">${p.name}</h2>
-                    <h3 class="gia" style="margin-left: -205px ; margin-top: 100px">${p.priceNew}đ</h3>
-                    <p><strike style="margin-left: -205px " CLASS="giaCu">${p.priceOld}đ</strike></p>
-                </div>
-
-                <div class="gioHang6">
-                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                        <div>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp52'}">
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia" style="margin-left: -200px ; margin-top: 100px">${p.priceNew}đ</h3>
+                            <p><strike style="margin-left: -200px  " CLASS="giaCu">${p.priceOld}đ</strike></p>
                         </div>
-                    </a>
-                </div>
 
-                <div class="sao">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-            </div>
-    </c:if>
-</c:forEach>
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp53'}">
+                    <!-- SAN PHAM NHO -->
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia" style="margin-left: -190px ; margin-top: 100px">${p.priceNew}đ</h3>
+                            <p><strike style="margin-left: -190px " CLASS="giaCu">${p.priceOld}đ</strike></p>
+                        </div>
+
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${p.id == 'sp54'}">
+                    <!-- SAN PHAM NHO -->
+                    <!-- SAN PHAM NHO -->
+                    <div class="cacSanPham">
+                        <form action="ProductDetails" method="POST" style="height: 70% ; margin-bottom: -150px">
+                            <a href="ProductDetails">
+                                <input type="text" style="display: none" name="id" value="${p.id}">
+                                <input style="display: none" type="text" name="name" value="${p.name}">
+                                <button class="anh5" type="submit"
+                                        style="background: white;border: 1px solid white ; height: 100% ">
+                                    <img class="anh5" style="height: 100% ; width: 100% ; margin: auto"
+                                         src="${p.linkImage}"/>
+                                </button>
+                            </a>
+                        </form>
+                        <div class="moTa">
+                            <h2 class="ten">${p.name}</h2>
+                            <h3 class="gia" style="margin-left: -205px ; margin-top: 100px">${p.priceNew}đ</h3>
+                            <p><strike style="margin-left: -205px " CLASS="giaCu">${p.priceOld}đ</strike></p>
+                        </div>
+
+                        <div class="gioHang6">
+                            <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                                <div>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="sao">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </c:if>
+            </c:forEach>
             <!-- SAN PHAM NHO -->
         </div>
     </div>
@@ -2040,135 +2181,139 @@
 
 <div class="DiemDen" style="display: block">
     <h1 class="chuDiemDenMoi"> Sản Phẩm Đặc Trưng </h1>
-<jsp:useBean id="productDetailsDacTrung" scope="request" type="java.util.List"/>
-<c:forEach var="p" items="${productDetailsDacTrung}">
+    <jsp:useBean id="productDetailsDacTrung" scope="request" type="java.util.List"/>
+    <c:forEach var="p" items="${productDetailsDacTrung}">
 
-    <c:if test="${p.id == 'sp55'}" >
-    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
-        <form action="ProductDetails" method="post" style="height: 57% ; margin-bottom: 50px">
-            <a href="ProductDetails">
-                <input type="text" style="display: none" name="id" value="${p.id}">
+        <c:if test="${p.id == 'sp55'}">
+            <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
+                <form action="ProductDetails" method="post" style="height: 57% ; margin-bottom: 50px">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                <button class="anh" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                    <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                </button>
-            </a>
-        </form>
-        <h2 class="ten">${p.name}</h2>
-        <div class="sao1">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-        </div>
-        <h3 class="gia">${p.priceNew}đ </h3>
-        <div class="gioHang3"   >
-            <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                <div>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <button class="anh" type="submit"
+                                style="background: white;border: 1px solid white ; height: 100% ">
+                            <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <h2 class="ten">${p.name}</h2>
+                <div class="sao1">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-            </a>
-        </div>
-    </div>
-    </c:if>
-    <c:if test="${p.id == 'sp56'}" >
+                <h3 class="gia">${p.priceNew}đ </h3>
+                <div class="gioHang3">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                        <div>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp56'}">
 
-    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
-        <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
-            <a href="ProductDetails">
-                <input type="text" style="display: none" name="id" value="${p.id}">
+            <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
+                <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                <button class="anh" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                    <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                </button>
-            </a>
-        </form>
-        <h2 class="ten">${p.name}</h2>
-        <div class="sao1">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-        </div>
-        <h3 class="gia">${p.priceNew} đ </h3>
-        <div class="gioHang3">
-            <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                <div>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <button class="anh" type="submit"
+                                style="background: white;border: 1px solid white ; height: 100% ">
+                            <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <h2 class="ten">${p.name}</h2>
+                <div class="sao1">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-            </a>
-        </div>
-    </div>
-    </c:if>
-    <c:if test="${p.id == 'sp57'}" >
-    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
-        <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
-            <a href="ProductDetails">
-                <input type="text" style="display: none" name="id" value="${p.id}">
+                <h3 class="gia">${p.priceNew} đ </h3>
+                <div class="gioHang3">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                        <div>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp57'}">
+            <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
+                <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                <button class="anh" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                    <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                </button>
-            </a>
-        </form>
-        <h2 class="ten">${p.name}</h2>
-        <div class="sao1">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-        </div>
-        <h3 class="gia"> ${p.priceNew}đ </h3>
-        <div class="gioHang3">
-            <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                <div>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <button class="anh" type="submit"
+                                style="background: white;border: 1px solid white ; height: 100% ">
+                            <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <h2 class="ten">${p.name}</h2>
+                <div class="sao1">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-            </a>
-        </div>
-    </div>
-    </c:if>
-    <c:if test="${p.id == 'sp58'}" >
+                <h3 class="gia"> ${p.priceNew}đ </h3>
+                <div class="gioHang3">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                        <div>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="${p.id == 'sp58'}">
 
-    <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
-        <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
-            <a href="ProductDetails">
-                <input type="text" style="display: none" name="id" value="${p.id}">
+            <div class="SanPhamDiemDenMoi" style="border: 1px solid #0099aa">
+                <form action="ProductDetails" method="POST" style="height: 57% ; margin-bottom: 50px">
+                    <a href="ProductDetails">
+                        <input type="text" style="display: none" name="id" value="${p.id}">
                         <input style="display: none" type="text" name="name" value="${p.name}">
-                <button class="anh" type="submit" style="background: white;border: 1px solid white ; height: 100% ">
-                    <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
-                </button>
-            </a>
-        </form>
-        <h2 class="ten">${p.name}</h2>
-        <div class="sao1">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-        </div>
-        <h3 class="gia">${p.priceNew}đ </h3>
-        <div class="gioHang3">
-            <a href="cart-add?id=${p.id}&quantitySold=${1}">
-                <div>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        <button class="anh" type="submit"
+                                style="background: white;border: 1px solid white ; height: 100% ">
+                            <img class="anh" style="height: 100% ; width: 100% ; margin: auto" src="${p.linkImage}"/>
+                        </button>
+                    </a>
+                </form>
+                <h2 class="ten">${p.name}</h2>
+                <div class="sao1">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-            </a>
-        </div>
-    </div>
-    </c:if>
-</c:forEach>
+                <h3 class="gia">${p.priceNew}đ </h3>
+                <div class="gioHang3">
+                    <a href="cart-add?id=${p.id}&quantitySold=${1}">
+                        <div>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <h3 class="chu_giohang">Thêm vào giỏ hàng</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </c:if>
+    </c:forEach>
 </div>
 
-<div id="layout6"  >
+<div id="layout6">
 
     <div class="TieuDe">
         <h2 class="ten"> Mẹo vặt hay</h2>
@@ -2217,7 +2362,7 @@
 
 </div>
 
-<div id="layout7" >
+<div id="layout7">
     <div class="thanhDuoi">
         <div class="tenWeb">
             <h1 class="ten">WEB FURNITURE</h1>
@@ -2312,189 +2457,200 @@
                 </div>
 
                 <form action="MailController" method="post">
-                <div class="lienLac_right">
-                    <h2 class="nhanTin">Đăng kí nhận tin</h2>
-                    <div class="from">
-<%--                        <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
-                        <input onchange="checkValidate()" type="email" required name="email"  class="email" placeholder="Nhập email của bạn ..."> </input>
-                        <button type="submit" class="fromDangKi" onclick="clickValidate()">
-                            <h6 class="dangKi">Đăng kí</h6>
-                        </button>
+                    <div class="lienLac_right">
+                        <h2 class="nhanTin">Đăng kí nhận tin</h2>
+                        <div class="from">
+                            <%--                        <jsp:useBean id="email" scope="request" type="java.lang.String"/>--%>
+                            <input onchange="checkValidate()" type="email" required name="email" class="email"
+                                   placeholder="Nhập email của bạn ..."> </input>
+                            <button type="submit" class="fromDangKi" onclick="clickValidate()">
+                                <h6 class="dangKi">Đăng kí</h6>
+                            </button>
+                        </div>
                     </div>
-                </div>
                 </form>
-
-<%--                <h3 style="color: red ; font-weight: bold ; margin-left: -450px ; margin-top: 500px "></h3>--%>
+                <%--                <h3 style="color: red ; font-weight: bold ; margin-left: -450px ; margin-top: 500px "></h3>--%>
             </div>
         </div>
     </div>
+<%--    <% if (checkMail != null) { %>--%>
+<%--    <p style="color: white ; font-weight: bold; margin-bottom: -2%"><%= checkMail %> </p>--%>
+<%--    <%} %>--%>
 </div>
 
 <script>
-function clickValidate() {
-    let isValid = checkValidate();
-    if (isValid) {
-        alert('Gửi đăng ký thành công');
-    }else {
-        alert('Qúy khách đăng kí nhận tin không thành công');
+
+
+    function clickValidate() {
+        let isValid = checkValidate();
+        <%--if (isValid) {--%>
+        <%--    alert('Gửi đăng ký thành công' +  <% if (checkMail != null) { %>--%>
+        <%--        <%= checkMail%>--%>
+        <%--        <%} %>);--%>
+        <%--} else {--%>
+        <%--    alert('Qúy khách đăng kí nhận tin không thành công');--%>
+        <%--}--%>
     }
-}
-const email = document.querySelector('.email');
-function checkValidate() {
-    let emailValue = email.value;
-    let isCheck = true;
-    if (emailValue == '') {
-        alert('Email không được để trống');
-        isCheck = false;
-    }else {
-        isCheck = true;
+
+    const email = document.querySelector('.email');
+
+    function checkValidate() {
+        let emailValue = email.value;
+        let isCheck = true;
+        if (emailValue == '') {
+            alert('Email không được để trống');
+            isCheck = false;
+        } else {
+            isCheck = true;
+        }
+        return isCheck;
     }
-    return isCheck;
-}
 
-  var i = 1 ;
-setInterval(function zoomountRight(image) {
-    document.getElementById('trangKhung').src = "Capture1.PNG";
-}, 5000);
-setInterval(function zoomountLeft(image) {
-    document.getElementById('trangKhung').src = "Image/Capture.PNG";
-}, 10000);
+    var i = 1;
+    setInterval(function zoomountRight(image) {
+        document.getElementById('trangKhung').src = "Capture1.PNG";
+    }, 5000);
+    setInterval(function zoomountLeft(image) {
+        document.getElementById('trangKhung').src = "Image/Capture.PNG";
+    }, 10000);
 
-// SanPhamNoiBat SanPhamHot SanPhamMoi layout4 layout5 DiemDen
-const SanPhamNoiBat = document.getElementById('SanPhamNoiBat') ;
-const SanPhamHot = document.getElementById('SanPhamHot') ;
-const SanPhamMoi = document.getElementById('SanPhamMoi') ;
-const layout4 = document.getElementById('layout4') ;
-const layout5 = document.getElementById('layout5') ;
-const DiemDen = document.querySelector('.DiemDen') ;
-// inputSearch fa-search
-const inputSearch = document.querySelector('.inputSearch') ;
+    // SanPhamNoiBat SanPhamHot SanPhamMoi layout4 layout5 DiemDen
+    const SanPhamNoiBat = document.getElementById('SanPhamNoiBat');
+    const SanPhamHot = document.getElementById('SanPhamHot');
+    const SanPhamMoi = document.getElementById('SanPhamMoi');
+    const layout4 = document.getElementById('layout4');
+    const layout5 = document.getElementById('layout5');
+    const DiemDen = document.querySelector('.DiemDen');
+    // inputSearch fa-search
+    const inputSearch = document.querySelector('.inputSearch');
 
-function searchProduct () {
-    // alert(inputSearch.value.toUpperCase());
-    var noibat = "NỔI BẬT";
-    var hot = "HOT";
-    var moi = "MỚI";
-    var bosuutap = "BỘ SƯU TẬP";
-    var khuyenmai = "KHUYẾN MÃI";
+    function searchProduct() {
+        // alert(inputSearch.value.toUpperCase());
+        var noibat = "NỔI BẬT";
+        var hot = "HOT";
+        var moi = "MỚI";
+        var bosuutap = "BỘ SƯU TẬP";
+        var khuyenmai = "KHUYẾN MÃI";
 
-    if (inputSearch.value.toUpperCase().endsWith(noibat)) {
-        SanPhamNoiBat.style.display = "block";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout5.style.display = "none";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
+        if (inputSearch.value.toUpperCase().endsWith(noibat)) {
+            SanPhamNoiBat.style.display = "block";
+            SanPhamHot.style.display = "none";
+            SanPhamMoi.style.display = "none";
+            layout4.style.display = "block";
+            layout5.style.display = "none";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
 
-    } else if (inputSearch.value.toUpperCase().endsWith(hot)) {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "block";
-        SanPhamHot.style.marginTop = "50px";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "50px";
-        layout5.style.display = "none";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
-    } else if (inputSearch.value.toUpperCase().endsWith(moi)) {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "block";
-        SanPhamMoi.style.marginTop = "50px";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "750px";
-        layout5.style.display = "none";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
-    } else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)) {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "50px";
-        layout5.style.display = "block";
-        layout5.style.marginTop = "200px";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "50px";
-    } else {
-        SanPhamNoiBat.style.display = "block";
-        SanPhamHot.style.display = "block";
-        SanPhamMoi.style.display = "block";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "800px";
-        layout5.style.display = "block";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
+        } else if (inputSearch.value.toUpperCase().endsWith(hot)) {
+            SanPhamNoiBat.style.display = "none";
+            SanPhamHot.style.display = "block";
+            SanPhamHot.style.marginTop = "50px";
+            SanPhamMoi.style.display = "none";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "50px";
+            layout5.style.display = "none";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+        } else if (inputSearch.value.toUpperCase().endsWith(moi)) {
+            SanPhamNoiBat.style.display = "none";
+            SanPhamHot.style.display = "none";
+            SanPhamMoi.style.display = "block";
+            SanPhamMoi.style.marginTop = "50px";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "750px";
+            layout5.style.display = "none";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+        } else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)) {
+            SanPhamNoiBat.style.display = "none";
+            SanPhamHot.style.display = "none";
+            SanPhamMoi.style.display = "none";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "50px";
+            layout5.style.display = "block";
+            layout5.style.marginTop = "200px";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "50px";
+        } else {
+            SanPhamNoiBat.style.display = "block";
+            SanPhamHot.style.display = "block";
+            SanPhamMoi.style.display = "block";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "800px";
+            layout5.style.display = "block";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+        }
     }
-}
-function searchProductChange () {
 
-    // alert(inputSearch.value.toUpperCase());
-    var noibat = "NỔI BẬT";
-    var hot = "HOT";
-    var moi = "MỚI";
-    var bosuutap = "BỘ SƯU TẬP";
-    var khuyenmai = "KHUYẾN MÃI";
+    function searchProductChange() {
 
-    if (inputSearch.value.toUpperCase().endsWith(noibat)) {
-        SanPhamNoiBat.style.display = "block";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout5.style.display = "none";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
+        // alert(inputSearch.value.toUpperCase());
+        var noibat = "NỔI BẬT";
+        var hot = "HOT";
+        var moi = "MỚI";
+        var bosuutap = "BỘ SƯU TẬP";
+        var khuyenmai = "KHUYẾN MÃI";
 
-    } else if (inputSearch.value.toUpperCase().endsWith(hot)) {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "block";
-        SanPhamHot.style.marginTop = "50px";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "50px";
-        layout5.style.display = "none";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
-    } else if (inputSearch.value.toUpperCase().endsWith(moi)) {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "block";
-        SanPhamMoi.style.marginTop = "50px";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "750px";
-        layout5.style.display = "none";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
-    } else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)) {
-        SanPhamNoiBat.style.display = "none";
-        SanPhamHot.style.display = "none";
-        SanPhamMoi.style.display = "none";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "50px";
-        layout5.style.display = "block";
-        layout5.style.marginTop = "200px";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "50px";
-    } else {
-        SanPhamNoiBat.style.display = "block";
-        SanPhamHot.style.display = "block";
-        SanPhamMoi.style.display = "block";
-        layout4.style.display = "block";
-        layout4.style.marginTop = "800px";
-        layout5.style.display = "block";
-        DiemDen.style.display = "block";
-        DiemDen.style.marginTop = "150px";
+        if (inputSearch.value.toUpperCase().endsWith(noibat)) {
+            SanPhamNoiBat.style.display = "block";
+            SanPhamHot.style.display = "none";
+            SanPhamMoi.style.display = "none";
+            layout4.style.display = "block";
+            layout5.style.display = "none";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+
+        } else if (inputSearch.value.toUpperCase().endsWith(hot)) {
+            SanPhamNoiBat.style.display = "none";
+            SanPhamHot.style.display = "block";
+            SanPhamHot.style.marginTop = "50px";
+            SanPhamMoi.style.display = "none";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "50px";
+            layout5.style.display = "none";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+        } else if (inputSearch.value.toUpperCase().endsWith(moi)) {
+            SanPhamNoiBat.style.display = "none";
+            SanPhamHot.style.display = "none";
+            SanPhamMoi.style.display = "block";
+            SanPhamMoi.style.marginTop = "50px";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "750px";
+            layout5.style.display = "none";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+        } else if (inputSearch.value.toUpperCase().endsWith(bosuutap) || inputSearch.value.toUpperCase().endsWith(khuyenmai)) {
+            SanPhamNoiBat.style.display = "none";
+            SanPhamHot.style.display = "none";
+            SanPhamMoi.style.display = "none";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "50px";
+            layout5.style.display = "block";
+            layout5.style.marginTop = "200px";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "50px";
+        } else {
+            SanPhamNoiBat.style.display = "block";
+            SanPhamHot.style.display = "block";
+            SanPhamMoi.style.display = "block";
+            layout4.style.display = "block";
+            layout4.style.marginTop = "800px";
+            layout5.style.display = "block";
+            DiemDen.style.display = "block";
+            DiemDen.style.marginTop = "150px";
+        }
     }
-}
-function zoom(e) {
-    var zoomer = e.currentTarget;
-    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-    x = (offsetX / zoomer.offsetWidth) * 100
-    y = (offsetY / zoomer.offsetHeight) * 100
-    zoomer.style.backgroundPosition = x + "% " + y + "%";
-}
+
+    function zoom(e) {
+        var zoomer = e.currentTarget;
+        e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+        e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+        x = (offsetX / zoomer.offsetWidth) * 100
+        y = (offsetY / zoomer.offsetHeight) * 100
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+    }
 </script>
 
 </body>

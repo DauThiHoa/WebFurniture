@@ -1,3 +1,5 @@
+package vn.edu.hcmuaf.fit.webfurniture;
+
 import vn.edu.hcmuaf.fit.webfurniture.service.ProductDetailsService;
 import vn.edu.hcmuaf.fit.webfurniture.services.UserServices;
 
@@ -8,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Register", value = "/controllerRegister")
-public class Register extends HttpServlet {
+@WebServlet(name = "RegisterWeb", value = "/controllerRegister")
+public class RegisterWeb extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -24,7 +26,16 @@ public class Register extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
 
-        request.getRequestDispatcher("Register.jsp").forward(request, response);
+        //        Số sản phẩm trong giỏ hàng
+        int sumListCart = ProductDetailsService.getInstance().getSumCart();
+        request.setAttribute("sizeListCart" , sumListCart);
+
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
 if ( name != null && password != null && email != null ) {
     System.out.println(name +"REGISTER");
@@ -45,10 +56,7 @@ if ( name != null && password != null && email != null ) {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        //        Số sản phẩm trong giỏ hàng
-        int sumListCart = ProductDetailsService.getInstance().getSumCart();
-        request.setAttribute("sizeListCart" , sumListCart);
 
-        request.getRequestDispatcher("Register.jsp").forward(request,response);
+        request.getRequestDispatcher("register.jsp").forward(request,response);
     }
 }

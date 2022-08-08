@@ -260,7 +260,8 @@
 
     <div class="noiDungBinhLuan">
         <jsp:useBean id="content" scope="request" class="java.lang.String"/>
-        <input class="thongTinNoiDung"  required  onchange="inputInformation()" placeholder="Nội dung : " name="content" value="${content}"> </input>
+        <input style="height: 80px" class="thongTinNoiDung"  required  onchange="inputInformation()" placeholder="Nội dung : "
+               name="content" value="${content}"> </input>
     </div>
     <button class="guiBinhLuan" type="submit" onclick="clickNewComment()">
         <h4 class="gui"> Gửi bình luận </h4>
@@ -419,7 +420,7 @@
                     <div class="lienLac_right">
                         <h2 class="nhanTin">Đăng kí nhận tin</h2>
                         <div class="from">
-                            <input onchange="checkValidate()" type="email" name="email" class="email lienheMail" placeholder="Nhập email của bạn ..."> </input>
+                            <input onchange="checkValidate()" required type="email" name="email" class="email lienheMail" placeholder="Nhập email của bạn ..."> </input>
                             <button type="submit" class="fromDangKi" onclick="clickValidate()">
                                 <h6 class="dangKi">Đăng kí</h6>
                             </button>
@@ -435,9 +436,9 @@
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
-            alert('Gửi đăng ký thành công');
+            // alert('Gửi đăng ký thành công');
         }else {
-            alert('Qúy khách đăng kí nhận tin không thành công');
+            // alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
 
