@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="img.png" type="image/png" class="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> NHOM 7 WEB FURNITURE - DANH MỤC SẢN PHẨM </title>
+    <title> NHÓM 7 - WEB FURNITURE - DANH MỤC SẢN PHẨM </title>
     <link rel="stylesheet" href="AllProduct2.css">
     <style>
         figure.zoom {
@@ -1316,7 +1316,7 @@
     function ClickGetColor() {
         themTrangMoi.style.display = "none";
         getColor.style.display = "block";
-        layout7.style.marginTop = "1000px";
+        layout7.style.marginTop = "-1000px";
         az.style.display = "none";
         za.style.display = "none";
         priceaz.style.display = "none";
@@ -1337,9 +1337,9 @@
         let isValid = checkValidate();
         if (isValid) {
 
-            alert('Gửi đăng ký thành công');
+            // alert('Gửi đăng ký thành công');
         }else {
-            alert('Qúy khách đăng kí nhận tin không thành công');
+            // alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
     const email = document.querySelector('.email');

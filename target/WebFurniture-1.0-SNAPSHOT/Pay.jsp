@@ -24,7 +24,7 @@
 <h1 class="tieuDe" style="text-align: center;">WEB FURNITURE</h1>
 <p class="duongDan from" style="text-align: left; margin-left: 160px; font-family: Tahoma">
     <a href="cart" style="text-decoration: none ; color: black">
-        Giỏ hàng </a> > Thanh toán</p>
+        Giỏ hàng </a> / Thanh toán</p>
 <div class="Fields">
     <div>
         <div class="formContainer">
@@ -231,9 +231,10 @@
         let isValid = checkValidate();
         if (isValid) {
             alert('Qúy khách đã đặt hàng thành công !');
-        }else {
-            alert('Qúy khách vui lòng điền đầy đủ thông tin !');
         }
+        // else {
+        //     alert('Qúy khách vui lòng điền đầy đủ thông tin !');
+        // }
     }
 
     function zoom(e) {

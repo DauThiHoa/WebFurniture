@@ -318,20 +318,20 @@
 
         <form action="paymentAddProductDetails?id=${productDetails.id}&&priceNew=${productDetails.priceNew}"
               method="post" class="soLuongSanPham" style="margin-top: -198px ; margin-left: 7%" >
-            <input style="display: none ; margin-top: 100px" class="quantityPayment" name="quantitySold" type="number" value="1" >
+            <input style="display: none ; margin-top: 100px" id="quantityPayment" name="quantitySold" type="number" >
             <c:if test="${productDetails.id == 'sp2'}">
                 <button class="muaNgay" style="margin-left: 73%; margin-top: 2%; width: 28%" type="submit">
-                    <h3 class="mua"> Đặt mua ngay </h3>
+                    <h3 class="mua" onclick="clickQuantitySold()"> Đặt mua ngay </h3>
                 </button>
             </c:if>
             <c:if test="${productDetails.id != 'sp24' && productDetails.id != 'sp2'}">
                 <button class="muaNgay" style="margin-left: 73%; margin-top: -8%; width: 28%" type="submit">
-                    <h3 class="mua"> Đặt mua ngay </h3>
+                    <h3 class="mua" onclick="clickQuantitySold()"> Đặt mua ngay </h3>
                 </button>
             </c:if>
             <c:if test="${productDetails.id == 'sp24'}">
                 <button class="muaNgay" style="margin-left: 73%; margin-top: -8%; width: 28%"  type="submit">
-                    <h3 class="mua"> Đặt mua ngay</h3 >
+                    <h3 class="mua" onclick="clickQuantitySold()"> Đặt mua ngay</h3 >
                 </button>
             </c:if>
 
@@ -651,12 +651,13 @@
 
 <script src="ProductDetails.js"></script>
 <script>
-    var soLuongDat = document.querySelector('.quantity');
-    var quantityPayment = document.querySelector('.quantityPayment');
+    const soLuongDat = document.querySelector('.quantity');
+    const quantityPayment = document.getElementById('quantityPayment');
 
     function clickQuantitySold () {
         quantityPayment.value = Number( soLuongDat.value ) ;
         soLuongDat.value = quantityPayment.value;
+
     }
 
     function send () {
@@ -722,9 +723,9 @@
     function clickValidate() {
         let isValid = checkValidate();
         if (isValid) {
-            alert('Gửi đăng ký thành công');
+            // alert('Gửi đăng ký thành công');
         }else {
-            alert('Qúy khách đăng kí nhận tin không thành công');
+            // alert('Qúy khách đăng kí nhận tin không thành công');
         }
     }
     const email = document.querySelector('.email');

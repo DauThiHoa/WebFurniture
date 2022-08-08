@@ -1247,11 +1247,11 @@
 
     function clickValidate() {
 let isValid = checkValidate();
-if (isValid) {
-    alert('Gửi đăng ký thành công');
-}else {
-    alert('Qúy khách đăng kí nhận tin không thành công');
-}
+        if (isValid) {
+            // alert('Gửi đăng ký thành công');
+        }else {
+            // alert('Qúy khách đăng kí nhận tin không thành công');
+        }
 }
 const email = document.querySelector('.email');
 function checkValidate() {

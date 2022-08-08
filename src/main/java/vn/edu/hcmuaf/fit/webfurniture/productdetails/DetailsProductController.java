@@ -55,6 +55,8 @@ public class DetailsProductController extends HttpServlet {
         String quantitySold = request.getParameter("quantitySold");
         String priceNew = request.getParameter("priceNew");
 
+        System.out.println("ID : " + id + "QUANTITY SOLD : " + quantitySold + " PRICE : " + priceNew);
+
         ProductDetails productDetails = ProductDetailsService.getInstance().getById(id);
         if (productDetails != null) {
             HttpSession session = request.getSession();
@@ -77,8 +79,16 @@ public class DetailsProductController extends HttpServlet {
             request.setAttribute("sumDiscount", (int) sumDiscount);
 
             int totalMoney = productDetails.getPriceNew() * cart.getQuantitySold() ;
+            int money = quantity * price;
+
+//            int sumList = ProductDetailsService.getInstance().sumListCart(productDetails.getLinkImage(), productDetails.getId() ,
+//                    productDetails.getName(), productDetails.getPriceNew(), cart.getQuantitySold(), totalMoney);
+
             int sumList = ProductDetailsService.getInstance().sumListCart(productDetails.getLinkImage(), productDetails.getId() ,
-                    productDetails.getName(), productDetails.getPriceNew(), cart.getQuantitySold(), totalMoney);
+                    productDetails.getName(), productDetails.getPriceNew(), quantity, money);
+
+            ProductDetailsService.getInstance().updateQuantitySoldOneProduct(id, quantity);
+            ProductDetailsService.getInstance().setMoneyOneProduct(id , quantity);
 
             ProductDetailsService.getInstance().setSumCart(sumList);
 

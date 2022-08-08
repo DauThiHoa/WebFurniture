@@ -11,28 +11,50 @@
   <component name="ChangeListManager">
     <list default="true" id="d992091a-f5c2-4c21-904b-3b663c013026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/AddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/CheckOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/DelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/DelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/cart/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProduct2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AllProducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Bedroom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Bedroom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Bedroom_bed.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Bedroom_bed.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Bedroom_lamp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Bedroom_lamp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Bedroom_makeupTable.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Bedroom_makeupTable.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Bedroom_pillow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Bedroom_pillow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Bedroom_wardrobe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Bedroom_wardrobe.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/News.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/News.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/News.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/News.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_carpet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_carpet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_curtains.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_curtains.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_flowerVase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_flowerVase.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_lamp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_lamp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_sofaPillow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/InteriorDecorations_sofaPillow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LivingRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LivingRoom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LivingRoom_curtains.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LivingRoom_curtains.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LivingRoom_sofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LivingRoom_sofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LivingRoom_sofaPillow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LivingRoom_sofaPillow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LivingRoom_teaTable.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LivingRoom_teaTable.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/LivingRoom_tvShelf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/LivingRoom_tvShelf.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Office.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Office.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Office_chair.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Office_chair.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Office_decorate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Office_decorate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Office_desk.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Office_desk.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Office_sofa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Office_sofa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Office_workLights.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Office_workLights.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Pay.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pay.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ProductDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProductDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ShopSystem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ShopSystem.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/furnitureCleaning.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/furnitureCleaning.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/humidity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/humidity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/kitchen.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/kitchen.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/kitchen_artificialFlowers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/kitchen_artificialFlowers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/kitchen_dinnerTable.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/kitchen_dinnerTable.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/kitchen_kitchenCabinets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/kitchen_kitchenCabinets.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/kitchen_kitchenChair.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/kitchen_kitchenChair.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/kitchen_tablecloths.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/kitchen_tablecloths.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/tips.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/tips.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/Cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/HomePage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/ProductDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/ProductDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/cart/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/cart/UpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebFurniture-1.0-SNAPSHOT/WEB-INF/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/cart/UpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/productdetails/Send.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/webfurniture/service/ProductDetailsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -588,6 +610,7 @@
       <workItem from="1659879370663" duration="1991000" />
       <workItem from="1659908097548" duration="4132000" />
       <workItem from="1659914088085" duration="5044000" />
+      <workItem from="1659927666768" duration="6411000" />
     </task>
     <servers />
   </component>
@@ -1339,6 +1362,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/ShowProductDetailsListController.java</url>
           <line>27</line>
           <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="329" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/productdetails/DetailsProductController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="330" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webfurniture/payment/OrderDetailsService.java</url>
