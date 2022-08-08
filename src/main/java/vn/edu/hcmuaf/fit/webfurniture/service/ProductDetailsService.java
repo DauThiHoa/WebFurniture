@@ -311,7 +311,7 @@ public class ProductDetailsService implements Serializable {
                     .mapToBean(ProductDetails.class).stream().collect(Collectors.toList());
         });
     }
-    public static List<ProductDetails> searchName ( String name ){
+    public List<ProductDetails> searchName ( String name ){
         String name_result = "%" + name + "%";
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT * FROM webfurniture.productdetails WHERE webfurniture.productdetails.`name` LIKE ? ")

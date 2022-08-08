@@ -15,7 +15,7 @@ public class ColorAllProducts extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-//        response.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
         request.setAttribute("productDetailsAllProduct", ProductDetailsService.getInstance().getAll());
 
@@ -37,6 +37,8 @@ public class ColorAllProducts extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
+        System.out.println("COLOR: " + color);
+
         request.setAttribute("getColor", ProductDetailsService.getInstance().getColor(color));
 
         String block = "none";
@@ -49,6 +51,12 @@ public class ColorAllProducts extends HttpServlet {
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
         request.getRequestDispatcher("AllProducts.jsp").forward(request, response);

@@ -154,7 +154,6 @@
     </a>
 </div>
 
-
 <div class="khungtrang">
     <i class="fa fa-chevron-circle-left" aria-hidden="true" onclick="zoomountLeft(this)" alt="image"></i>
     <img id="trangKhung" src="Image/Capture.PNG"/>

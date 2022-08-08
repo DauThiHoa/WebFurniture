@@ -28,6 +28,13 @@ public class HandlingSignUp extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);

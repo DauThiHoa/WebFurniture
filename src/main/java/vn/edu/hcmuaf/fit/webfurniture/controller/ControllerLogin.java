@@ -22,6 +22,13 @@ public class ControllerLogin extends HttpServlet {
         request.setAttribute("email", email);
         request.setAttribute("password", password);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);

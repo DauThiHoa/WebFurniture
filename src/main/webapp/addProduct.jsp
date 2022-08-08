@@ -97,7 +97,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
-                            <span class="nav-link-text">Register</span>
+                            <span class="nav-link-text"> Register</span>
                         </a>
                     </li>
 

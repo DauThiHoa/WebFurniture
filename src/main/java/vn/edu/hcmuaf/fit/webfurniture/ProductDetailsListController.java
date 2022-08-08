@@ -56,6 +56,7 @@ public class ProductDetailsListController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+
         request.getRequestDispatcher("HomePage.jsp").forward(request , response);
 
     }

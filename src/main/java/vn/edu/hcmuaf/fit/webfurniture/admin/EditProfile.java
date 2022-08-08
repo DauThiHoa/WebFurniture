@@ -51,6 +51,13 @@ public class EditProfile extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         if ( !(friends.equals("")) && !(photos.equals(""))  &&  !(comments.equals("")) && !(age.equals("")) && !(username.equals(""))  &&  !(email.equals(""))
           && !(firstname.equals("")) && !(lastname.equals(""))  &&  !(address.equals("")) && !(city.equals("")) && !(country.equals(""))  &&  !(postalcode.equals(""))
         && !(aboutme.equals("")) ) {

@@ -30,6 +30,13 @@ public class CheckOutController extends HttpServlet {
         request.setAttribute("sizeListCart" , sumListCart);
 //        request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         String block = "block";
         String none = "none";
         String display = "none";

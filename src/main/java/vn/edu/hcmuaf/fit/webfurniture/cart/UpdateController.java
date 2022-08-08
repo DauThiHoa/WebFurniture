@@ -30,6 +30,13 @@ public class UpdateController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         Cart cart = ( Cart) session.getAttribute("cart");
         if ( cart.get(id) == null ){
             response.setStatus(404);

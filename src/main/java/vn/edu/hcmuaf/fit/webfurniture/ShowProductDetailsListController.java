@@ -32,8 +32,14 @@ public class ShowProductDetailsListController extends HttpServlet {
         String id = request.getParameter("id" );
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
-           request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
+        request.setAttribute("productDetails" , ProductDetailsService.getInstance().getById(id));
            request.setAttribute("ProductDetailsReview" , ReviewProductDetailsService.getInstance().getAll());
            request.setAttribute("maxQuantity" , ProductDetailsService.getInstance().maxQuantity(id));
 

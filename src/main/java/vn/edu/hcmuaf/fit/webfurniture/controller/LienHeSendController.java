@@ -27,6 +27,13 @@ public class LienHeSendController extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         if ( name != "" && email != "" && content != ""){
         boolean result = ContactService.getInstance().addContact(name,email,content);
             System.out.println(result);

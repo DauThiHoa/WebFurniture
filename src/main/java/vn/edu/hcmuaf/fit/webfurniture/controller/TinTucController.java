@@ -19,6 +19,13 @@ public class TinTucController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         List<NewComment> list = NewCommentService.getInstance().getAll();
         request.setAttribute("NewCommentList" , list);
 //        System.out.println(list);

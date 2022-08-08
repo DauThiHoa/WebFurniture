@@ -302,7 +302,7 @@
                 </button>
             </c:if>
             <c:if test="${productDetails.id == 'sp32'}">
-                <button type="submit" class="gioHang" style="margin-left: 15%; margin-top: 3% ; width: 43%">
+                <button type="submit" class="gioHang" style="margin-left: 7%; margin-top: 3% ; width: 43%">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <h3 class="them">Thêm vào giỏ hàng</h3>
                 </button>

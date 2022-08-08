@@ -28,6 +28,13 @@ public class MailController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         String subject = "SIGN UP FOR NEWS";
 //        String content = "<img style=\"height: 50px ; width: 50px\" src=\"data:img.png\">";
         String content = "<h2 style=\"text-align: center; color: #00dea2; font-weight: bold\">Sign up successfully</h2> \n";

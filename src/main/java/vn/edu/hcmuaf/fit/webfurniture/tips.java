@@ -17,6 +17,12 @@ public class tips extends HttpServlet {
 //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         request.getRequestDispatcher("tips.jsp").forward(request , response);
 

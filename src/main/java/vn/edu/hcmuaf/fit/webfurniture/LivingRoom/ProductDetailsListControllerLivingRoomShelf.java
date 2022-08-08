@@ -33,7 +33,12 @@ public class ProductDetailsListControllerLivingRoomShelf extends HttpServlet {
         String search = request.getParameter("search");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
         List<ProductDetails> re = ProductDetailsService.getInstance().searchName(search);
         request.setAttribute("searchName", ProductDetailsService.getInstance().searchName(search));
 

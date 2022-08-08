@@ -33,6 +33,13 @@ public class Edit_DirectoryManagement extends HttpServlet {
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
+
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);

@@ -1,3 +1,5 @@
+package vn.edu.hcmuaf.fit.webfurniture;
+
 import java.util.ArrayList;
 
 public class DanhSach {

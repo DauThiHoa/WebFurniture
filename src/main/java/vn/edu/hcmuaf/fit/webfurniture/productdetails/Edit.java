@@ -56,6 +56,12 @@ public class Edit extends HttpServlet {
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
         request.setAttribute("sizeListCart" , sumListCart);
 
+        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
 
         int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status, color,size,weight,material,design);
 

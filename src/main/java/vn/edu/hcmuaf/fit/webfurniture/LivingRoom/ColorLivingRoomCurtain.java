@@ -32,7 +32,12 @@ public class ColorLivingRoomCurtain extends HttpServlet {
         request.setAttribute("getList2501000", ProductDetailsService.getInstance().getList2501000());
 
         String search = request.getParameter("search");
-
+//        String search = request.getParameter("search");
+        if ( search != null) {
+            request.setAttribute("search", search);
+        }else {
+            request.setAttribute("search", "");
+        }
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String color = request.getParameter("color");
