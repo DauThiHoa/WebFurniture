@@ -20,6 +20,9 @@
     <title>NHOM 7 WEB FURNITURE</title>
     <style>
 
+        html {
+            width: 100%;
+        }
     </style>
 
 </head>

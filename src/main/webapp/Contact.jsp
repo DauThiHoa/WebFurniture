@@ -20,7 +20,9 @@
 
     <title>NHÓM 7 - WEBFURNITURE</title>
     <style>
-
+        body{
+            width: 100%;
+        }
     </style>
 
 </head>
