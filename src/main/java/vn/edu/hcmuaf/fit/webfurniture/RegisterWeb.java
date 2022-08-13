@@ -38,15 +38,14 @@ public class RegisterWeb extends HttpServlet {
         }
 
 if ( name != null && password != null && email != null ) {
-    System.out.println(name +"REGISTER");
-    System.out.println(password +"REGISTER");
-    System.out.println(email +"REGISTER");
 
     if (UserServices.getInstance().register(name, password, email)) {
-        response.sendRedirect("../WebFurniture_war_exploded/login");
+        response.sendRedirect("login");
+
     } else {
         request.setAttribute("error", "Username exits");
-        request.getRequestDispatcher("../WebFurniture_war_exploded/controllerRegister").forward(request, response);
+        request.getRequestDispatcher("controllerRegister").forward(request, response);
+
     }
 }
         String block = "block";
@@ -55,7 +54,6 @@ if ( name != null && password != null && email != null ) {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
-
 
         request.getRequestDispatcher("register.jsp").forward(request,response);
     }

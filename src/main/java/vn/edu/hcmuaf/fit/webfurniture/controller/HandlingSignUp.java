@@ -42,12 +42,14 @@ public class HandlingSignUp extends HttpServlet {
         boolean registerSuccess = false;
         if (name != "" && email != "" && password != "") {
              registerSuccess = UserServices.getInstance().register(name, password, email);
+
         }else {
             request.setAttribute("name", name);
             request.setAttribute("email", email);
             request.setAttribute("password", password);
 
             request.getRequestDispatcher("controllerRegister").forward(request, response);
+
         }
         String subject = "SIGN UP FOR AN ACCOUNT";
         String content = "<i style=\"text-align: center ; color: #1fb5d4; font-size: 300% \" class=\"fa fa-check-circle\" aria-hidden=\"true\"></i>";
@@ -59,8 +61,9 @@ public class HandlingSignUp extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         if(registerSuccess){
             boolean result = sendMail(email, subject, content);
-            response.sendRedirect("login");
-//            request.getRequestDispatcher("login").forward(request, response);
+//            response.sendRedirect("login");
+            request.getRequestDispatcher("login").forward(request, response);
+
         }else {
             request.setAttribute("name", name);
             request.setAttribute("email", email);
