@@ -107,7 +107,7 @@ public class ProductDetailsService implements Serializable {
     }
 
     public static boolean addProductDetails(String id, String name, String description, String trademark, String production,
-                                            String priceOld, String linkImage, String quantity, String priceNew, String status,
+                                            String priceOld, String linkImage, String quantity, String priceNew,
                                             String produtGroups, String category, String color, String size, String weight,
                                             String material, String design) {
         int changePriceOld = Integer.parseInt(priceOld);
@@ -125,9 +125,9 @@ public class ProductDetailsService implements Serializable {
         int total = JDBIConnector.get().withHandle(h -> {
             int sum = 0;
             sum += h.createUpdate("INSERT INTO productdetails ( id , `name` , description , trademark , production ," +
-                            " priceOld , linkImage , quantity , priceNew , `status` , idProductGroups , idCategory " +
+                            " priceOld , linkImage , quantity , priceNew, idProductGroups , idCategory " +
                             " , color , size , weight , material , design) " +
-                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
                     .bind(0, id)
                     .bind(1, name)
                     .bind(2, description)
@@ -137,14 +137,13 @@ public class ProductDetailsService implements Serializable {
                     .bind(6, linkImage)
                     .bind(7, changeQuantity)
                     .bind(8, changePriceNew)
-                    .bind(9, status)
-                    .bind(10, produtGroups)
-                    .bind(11, category)
-                    .bind(12, color)
-                    .bind(13, size)
-                    .bind(14, weight)
-                    .bind(15, material)
-                    .bind(16, design)
+                    .bind(9, produtGroups)
+                    .bind(10, category)
+                    .bind(11, color)
+                    .bind(12, size)
+                    .bind(13, weight)
+                    .bind(14, material)
+                    .bind(15, design)
                     .execute();
             // Số dòng được chèn vào
             return sum;

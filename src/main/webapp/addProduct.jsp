@@ -52,34 +52,55 @@
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <!-- Nav items -->
                 <ul class="navbar-nav">
+
+                    <!-- lINK VE TRANG CHU-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="<%= Asset.url("ProductDetailsList")%>">
+                            <img src="<%= Asset.url("img.png")%>" style="height: 15px ; width: 15px ; margin-right: 18px">
+                            <span class="nav-link-text">HomePage</span>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="Dashboard">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link active" href="DirectoryManagement">--%>
+<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Directory Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link active" href="DirectoryManagement">--%>
+<%--                            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Page</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
                     <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="DirectoryManagement">
-                            <i class="fa fa-book" style="color: #1fb5d4" aria-hidden="true"></i>
-                            <span class="nav-link-text">Page</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/WebFurniture_war_exploded/Product">
+                        <a class="nav-link active" href="Product">
                             <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
                             <span class="nav-link-text">Product </span>
                         </a>
                     </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link " href="Information">--%>
+<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Interface Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
                     <li class="nav-item">
-                        <a class="nav-link " href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
+                        <a class="nav-link" href="Information">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_24.png")%>"/>
+                            <span class="nav-link-text">Information</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_25.png")%>"/>
+                            <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -235,29 +256,29 @@
             <jsp:useBean id="quantity" scope="request" class="java.lang.String"/>
             <input required  class="type3"  style="margin-left: 63px" type="text" name="quantity" value="${quantity}"><br>
         </div>
-        <div class="information5">
-            <h2 class="Modules"> Status </h2>
-            <div class="">
-                <input  required class="checkin" type="checkbox" name="still" value="Còn hàng">
-                <h3 class="ten">Stocking</h3>
-            </div>
-            <div class="">
-                <input required class="checkin" type="checkbox" name="over" value="Hết hàng">
-                <h3 class="ten">Out of stock</h3>
-            </div>
-<%--            <div class="From">--%>
-<%--                <input class="checkin" type="checkbox" name="sport" value="check">--%>
-<%--                <h3 class="ten">Featured</h3>--%>
+<%--        <div class="information5">--%>
+<%--            <h2 class="Modules"> Status </h2>--%>
+<%--            <div class="">--%>
+<%--                <input  required class="checkin" type="checkbox" name="still" value="Còn hàng">--%>
+<%--                <h3 class="ten">Stocking</h3>--%>
 <%--            </div>--%>
-<%--            <div class="From">--%>
-<%--                <input class="checkin" type="checkbox" name="sport" value="check">--%>
-<%--                <h3 class="ten">Hot</h3>--%>
+<%--            <div class="">--%>
+<%--                <input required class="checkin" type="checkbox" name="over" value="Hết hàng">--%>
+<%--                <h3 class="ten">Out of stock</h3>--%>
 <%--            </div>--%>
-<%--            <div class="From">--%>
-<%--                <input class="checkin" type="checkbox" name="sport" value="check">--%>
-<%--                <h3 class="ten">Display</h3>--%>
-<%--            </div>--%>
-        </div>
+<%--&lt;%&ndash;            <div class="From">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <input class="checkin" type="checkbox" name="sport" value="check">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <h3 class="ten">Featured</h3>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            <div class="From">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <input class="checkin" type="checkbox" name="sport" value="check">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <h3 class="ten">Hot</h3>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            <div class="From">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <input class="checkin" type="checkbox" name="sport" value="check">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <h3 class="ten">Display</h3>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
+<%--        </div>--%>
         <div class="information6">
                 <button class="Select" type="submit" style="margin-bottom: 25px" onclick="save()">
                     <img class="fa fa-floppy-o" src="QuanTri/Admin/assets/img/Admin/img_16.png"/>
@@ -301,14 +322,14 @@
     var type3 = document.querySelector('.type3').value;
     function save() {
         if ( type == "" || type1 == "" || type2 == "" || type3 == "" || type3a == "" || type3b == "" ){
-            alert("Vui lòng điền đầy đủ thông tin ! ");
+            alert("Please complete all information ! ");
         }else {
-            alert("Bạn đã thêm sản phẩm thành công ! ");
+            alert("You have successfully added a product ! ");
         }
 
     }
     function exit() {
-        alert("Thoát và không tiếp tục thêm sản phẩm !");
+        alert("Exit and do not continue to add products !");
     }
 
     const file = document.querySelector('.file') ;

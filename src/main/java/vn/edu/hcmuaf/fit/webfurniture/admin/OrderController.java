@@ -71,7 +71,6 @@ public class OrderController extends HttpServlet {
 
         request.getRequestDispatcher("Order.jsp").forward(request, response);
 
-
     }
 
     @Override

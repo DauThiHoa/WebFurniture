@@ -59,16 +59,34 @@
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link" href="DirectoryManagement.jsp">--%>
+<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Directory Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
                     <li class="nav-item">
-                        <a class="nav-link" href="DirectoryManagement.jsp">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
+                        <a class="nav-link active" href="Product">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
+                        </a>
+                    </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link" href="Information">--%>
+<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Interface Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Information">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_24.png")%>"/>
+                            <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
+                        <a class="nav-link" href="Order">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_25.png")%>"/>
+                            <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -321,10 +339,10 @@
 </body>
 <script>
     function add () {
-        alert("Bạn đã thêm thông tin thành công !")
+        alert("You have successfully added information !")
     }
     function edit() {
-        alert("Bạn đã sửa thông tin thành công !")
+        alert("You have successfully edited the information !")
     }
     function zoom(e) {
         var zoomer = e.currentTarget;
