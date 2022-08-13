@@ -38,9 +38,11 @@ public class InformationController extends HttpServlet {
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
              Information information = InformationService.getInstance().getAll();
-            request.setAttribute("information" , information);
-            request.getRequestDispatcher("Information.jsp").forward(request, response);
+             request.setAttribute("information" , information);
+
+             request.getRequestDispatcher("Information.jsp").forward(request, response);
 
     }
 

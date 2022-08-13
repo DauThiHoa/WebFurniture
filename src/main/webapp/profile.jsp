@@ -14,8 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+
     <title> ADMIN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
@@ -48,7 +47,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<%= Asset.url("ProductDetailsList")%>">
+                        <a class="nav-link" href="<%= Asset.url("ProductDetailsList")%>">
                             <img src="<%= Asset.url("img.png")%>" style="height: 15px ; width: 15px ; margin-right: 18px">
                             <span class="nav-link-text">HomePage</span>
                         </a>
@@ -60,15 +59,21 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="DirectoryManagement">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
+                        <a class="nav-link" href="<%= Asset.url("Product")%>">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_24.png")%>"/>
+                            <span class="nav-link-text">Information</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_25.png")%>"/>
+                            <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -78,13 +83,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
+                        <a class="nav-link" href="login">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
+                        <a class="nav-link" href="controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text"> Register</span>
                         </a>
@@ -285,7 +290,7 @@
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-country">Postal code</label>
                                             <input  required style="font-weight: bold" type="number" min="1" id="input-postal-code" class="form-control" name="postalcode"
-                                                   value="${profile.postalcode}">
+                                                    value="${profile.postalcode}">
                                         </div>
                                     </div>
                                 </div>
@@ -300,6 +305,7 @@
                                     <textarea style="font-weight: bold" rows="4" class="form-control" name="aboutme">${profile.aboutme}</textarea>
                                 </div>
                             </div>
+
                         </form>
                     </div>
                 </div>
@@ -326,10 +332,10 @@
 </body>
 <script>
     function add () {
-        alert("Bạn đã thêm thông tin thành công !")
+        alert("You have successfully added information !")
     }
     function edit() {
-        alert("Bạn đã sửa thông tin thành công !")
+        alert("You have successfully edited the information!")
     }
 </script>
 

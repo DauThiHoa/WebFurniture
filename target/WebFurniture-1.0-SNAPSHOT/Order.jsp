@@ -12,8 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+
     <title> ADMIN - INTERFACE MANAGEMENT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
@@ -22,10 +21,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Page plugins -->
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+<%--    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">--%>
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.min.css" type="text/css">
     <link rel="stylesheet" href="DirectoryManagement.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <jsp:include page="manage/layout/css.jsp"></jsp:include>
+
     <link rel="stylesheet" href="QuanTri/Admin/examples/Product.css">
     <link rel="stylesheet" href="QuanTri/Admin/examples/InterfaceManagement.css">
     <link rel="stylesheet" href="Order.css">
@@ -33,6 +35,9 @@
 
 </head>
 <style>
+    body{
+        background: white;
+    }
     .btn5-hover {
         width: 100px;
         font-size: 13px;
@@ -103,20 +108,15 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="DirectoryManagement">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
+                        <a class="nav-link" href="Product">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
                         </a>
                     </li>
 
+
                     <li class="nav-item">
-                        <a class="nav-link active" href="Information">
+                        <a class="nav-link " href="Information">
                             <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
@@ -153,7 +153,7 @@
     </div>
 </nav>
 <!-- Main content -->
-<div class="main-content" id="panel">
+<div class="main-content" id="panel" style="width: 83%; margin-left: 14%">
     <!-- Topnav -->
 
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
@@ -190,8 +190,8 @@
 
     <div class="tab">
 
-        <table class="table table-hover table-responsive table-bordered" style="table-layout: fixed ; width: 100%"  >
-            <tr style="width: 100%">
+        <table class="table table-hover table-responsive table-bordered" style="table-layout: fixed ; width: 99%; margin-left: 1%"  >
+            <tr style="width: 99%">
                 <th class="TieuDe">Code orders</th>
                 <th class="TieuDe">Customer name</th>
                 <th class="TieuDe">Booking date</th>
@@ -254,12 +254,20 @@
     </footer>
 </div>
 </body>
+<script type="text/javascript" src="<%= Asset.url("../layout/script.jsp")%>"></script>
+
+<%--</script>--%>
+<script type="text/javascript" src="<%= Asset.url("vendor/dt/datatables.min.js")%>"></script>
+<script type="text/javascript" href="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" href="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 <script>
     function trash () {
-        alert("Bạn đã xóa đơn hàng thành công !")
+        alert("You have successfully deleted your order !")
     }
     function edit () {
-        alert("Bạn đã sửa đơn hàng thành công !")
+        alert("You have successfully edited your order !")
     }
     function zoom(e) {
         var zoomer = e.currentTarget;

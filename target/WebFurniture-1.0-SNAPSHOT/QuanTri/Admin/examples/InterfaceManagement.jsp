@@ -53,57 +53,57 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<%= Asset.url("ProductDetailsList")%>">
+                        <a class="nav-link" href="<%= Asset.url("ProductDetailsList")%>">
                             <img src="<%= Asset.url("img.png")%>" style="height: 15px ; width: 15px ; margin-right: 18px">
                             <span class="nav-link-text">HomePage</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="manage/dashboard.jsp">
+                        <a class="nav-link active" href="<%= Asset.url("dashboard")%> ">
                             <i class="fa fa-home" style="color: #e4606d" aria-hidden="true"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/WebFurniture_war_exploded/DirectoryManagement">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
-                        </a>
-                    </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link " href="<%= Asset.url("DirectoryManagement")%>">--%>
+<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Directory Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link " href="<%= Asset.url("Information")%>">--%>
+<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Interface Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
 
                     <li class="nav-item">
-                        <a class="nav-link active " href="Information">
-                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
+                        <a class="nav-link " href="<%= Asset.url("Information")%>">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_24.png")%>"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Order">
-                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
+                        <a class="nav-link " href=<%= Asset.url("Order")%>"">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_25.png")%>"/>
                             <span class="nav-link-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Profile">
+                        <a class="nav-link" href="<%= Asset.url("Profile")%>">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
                             <span class="nav-link-text">Profile</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
+                        <a class="nav-link" href="<%= Asset.url("login")%>">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
+                        <a class="nav-link" href="<%= Asset.url("controllerRegister")%>">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text"> Register</span>
                         </a>

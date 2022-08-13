@@ -56,14 +56,14 @@ public class AddProductServlet extends HttpServlet {
         String design = request.getParameter ("design");
 
         // status
-        String still = request.getParameter ("still"); // mã nhóm sản phẩm
-        String over = request.getParameter ("over");
-        String status ;
-        if (still != null ){
-            status = still;
-        }else {
-            status = over;
-        }
+//        String still = request.getParameter ("still"); // mã nhóm sản phẩm
+//        String over = request.getParameter ("over");
+//        String status ;
+//        if (still != null ){
+//            status = still;
+//        }else {
+//            status = over;
+//        }
 
 
         //        Số sản phẩm trong giỏ hàng
@@ -84,11 +84,11 @@ public class AddProductServlet extends HttpServlet {
         request.setAttribute("display", display);
 
         if ( !(id.equals("")) &&  !(name.equals("")) && !(description.equals("")) && !(trademark.equals("")) && !(production.equals("")) &&
-                !(priceOld.equals("")) && !(linkImage.equals("")) && !(quantity.equals("")) &&  !(priceNew.equals("")) && !(status.equals(""))
+                !(priceOld.equals("")) && !(linkImage.equals("")) && !(quantity.equals("")) &&  !(priceNew.equals(""))
         && produtGroups != null && category != null && !(color.equals("")) && !(size.equals("")) && !(weight.equals("")) &&  !(material.equals("")) && !(design.equals(""))) {
 
             boolean result = ProductDetailsService.getInstance().addProductDetails(id, name, description, trademark, production,
-                    priceOld, linkImage, quantity, priceNew, status, produtGroups, category , color , size , weight , material , design);
+                    priceOld, linkImage, quantity, priceNew , produtGroups, category , color , size , weight , material , design);
             if (result) {
                 request.getRequestDispatcher("addProduct.jsp").forward(request, response);
             } else {

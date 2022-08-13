@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+
     <title> ADMIN - INFORMATION CUSTOMER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Favicon -->
@@ -21,9 +21,15 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Page plugins -->
-    <!-- Argon CSS -->
+
     <link rel="stylesheet" href="QuanTri/Admin/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/bootstrap/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/bootstrap/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="QuanTri/Admin/assets/css/bootstrap/bootstrap-reboot.min.css" type="text/css">
     <link rel="stylesheet" href="DirectoryManagement.css">
+
+    <!-- Page plugins -->
+    <jsp:include page="manage/layout/css.jsp"></jsp:include>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="QuanTri/Admin/examples/Product.css">
@@ -33,6 +39,9 @@
 
 </head>
 <style>
+    body{
+        background: white;
+    }
     .btn5-hover {
         width: 100px;
         font-size: 13px;
@@ -91,7 +100,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<%= Asset.url("ProductDetailsList")%>">
+                        <a class="nav-link" href="<%= Asset.url("ProductDetailsList")%>">
                             <img src="<%= Asset.url("img.png")%>" style="height: 15px ; width: 15px ; margin-right: 18px">
                             <span class="nav-link-text">HomePage</span>
                         </a>
@@ -102,31 +111,37 @@
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link " href="DirectoryManagement">--%>
+<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Directory Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
                     <li class="nav-item">
-                        <a class="nav-link " href="DirectoryManagement">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
+                        <a class="nav-link" href="Product">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
                         </a>
                     </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link active" href="Information">--%>
+<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Interface Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Information">
-                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
+                        <a class="nav-link " href="Information">
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_24.png")%>"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="Order">
-                            <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
+                            <img class="fa fa-picture-o" src="<%= Asset.url("QuanTri/Admin/assets/img/Admin/img_25.png")%>"/>
                             <span class="nav-link-text">Order</span>
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="Profile">
                             <i class="fa fa-user-circle" style="color: lightsalmon" aria-hidden="true"></i>
@@ -153,7 +168,7 @@
     </div>
 </nav>
 <!-- Main content -->
-<div class="main-content" id="panel">
+<div class="main-content" id="panel" style="width: 83%; margin-left: 14%">
     <!-- Topnav -->
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
         <div class="media align-items-center" style="margin-left: 90%">
@@ -278,10 +293,10 @@
 </body>
 <script>
     function edit () {
-        alert("Bạn đã sửa thông tin khách hàng thành công !")
+        alert("You have successfully edited customer information !")
     }
     function exit () {
-        alert("Thoát và không tiếp tục chỉnh sửa thông tin khách hàng !")
+        alert("Exit and do not continue to edit customer information !")
     }
     function zoom(e) {
         var zoomer = e.currentTarget;

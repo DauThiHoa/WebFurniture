@@ -53,7 +53,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<%= Asset.url("ProductDetailsList")%>">
+                        <a class="nav-link" href="<%= Asset.url("ProductDetailsList")%>">
                             <img src="<%= Asset.url("img.png")%>" style="height: 15px ; width: 15px ; margin-right: 18px">
                             <span class="nav-link-text">HomePage</span>
                         </a>
@@ -64,27 +64,33 @@
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link " href="/WebFurniture_war_exploded/DirectoryManagement">--%>
+<%--                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Directory Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
                     <li class="nav-item">
-                        <a class="nav-link " href="/WebFurniture_war_exploded/DirectoryManagement">
-                            <i class="fa fa-server" style="color: darkorange" aria-hidden="true"></i>
-                            <span class="nav-link-text">Directory Management</span>
+                        <a class="nav-link" href="Product">
+                            <i class="fa fa-shopping-cart" style="color: lightpink" aria-hidden="true"></i>
+                            <span class="nav-link-text">Product </span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="Information">
-                            <i class="fa fa-list-alt" aria-hidden="true"></i>
-                            <span class="nav-link-text">Interface Management</span>
-                        </a>
-                    </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link active " href="Information">--%>
+<%--                            <i class="fa fa-list-alt" aria-hidden="true"></i>--%>
+<%--                            <span class="nav-link-text">Interface Management</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
 
                     <li class="nav-item">
-                        <a class="nav-link active " href="Information">
+                        <a class="nav-link active" href="Information">
                             <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_24.png"/>
                             <span class="nav-link-text">Information</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Order">
+                        <a class="nav-link" href="Order">
                             <img class="fa fa-picture-o" src="QuanTri/Admin/assets/img/Admin/img_25.png"/>
                             <span class="nav-link-text">Order</span>
                         </a>
@@ -97,13 +103,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/login">
+                        <a class="nav-link" href="login">
                             <i class="fa fa-key" style="color: lightcoral" aria-hidden="true"></i>
                             <span class="nav-link-text">Login</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/WebFurniture_war_exploded/controllerRegister">
+                        <a class="nav-link" href="controllerRegister">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text"> Register</span>
                         </a>
@@ -249,10 +255,10 @@
 </body>
 <script>
     function save() {
-            alert("Bạn đã cập nhật thành công thông tin ! ");
+            alert("You have successfully updated your information ! ");
     }
     function exit() {
-        alert("Bạn muốn thoát khỏi trang !");
+        alert("You want to exit the page !");
     }
     const shareicon = document.querySelector('.shareicon') ;
     const imgshareicon = document.querySelector('.imgshareicon');
