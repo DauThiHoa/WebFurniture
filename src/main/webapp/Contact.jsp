@@ -62,7 +62,7 @@
                     href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="controllerRegister">
+                href="register">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>

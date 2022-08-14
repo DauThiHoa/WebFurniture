@@ -57,10 +57,10 @@
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="controllerRegister">Đăng
+                    href="register">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="controllerRegister">
+                href="register">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
@@ -236,7 +236,7 @@
                   <input onchange="checkValidate()" class="btn1" style="width: 500px; height: 58px; color: #555555"
                          type="email" required name="email" class="email" placeholder="Nhập email của bạn ..."> </input>
                   <button type="submit" class="fromDangKi" onclick="clickValidate()" class="btn2"
-                          style="width: 110px; height: 58px; color: white ; font-size: 200%; background: #1fb5d4 ; margin-bottom: -10px" >Gửi</button>
+                          style="width: 110px; height: 58px; color: white ; font-size: 200%; background: #1fb5d4" >Gửi</button>
             </form>
 <%--            <form action="MailController" method="post">--%>
 <%--                <div class="lienLac_right">--%>

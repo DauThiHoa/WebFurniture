@@ -25,6 +25,7 @@ public class ControllerSignUp extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+//        request.setAttribute("error", "Email account already exists");
 
         String search = request.getParameter("search");
         if ( search != null) {
@@ -48,8 +49,8 @@ public class ControllerSignUp extends HttpServlet {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-//        response.sendRedirect("register.jsp");
-
+//        request.getRequestDispatcher("controllerRegister").forward(request, response);
+        request.getRequestDispatcher("register.jsp").forward(request, response);
     }
 
 }

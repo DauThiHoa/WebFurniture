@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
 
-@WebServlet(name = "handling-signup", value = "/handling-signup")
+@WebServlet(name = "HandlingSignUp", value = "/handling-signup")
 public class HandlingSignUp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,12 +21,15 @@ public class HandlingSignUp extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+
+        request.setAttribute("error", "");
 
         String search = request.getParameter("search");
         if ( search != null) {
@@ -47,8 +50,9 @@ public class HandlingSignUp extends HttpServlet {
             request.setAttribute("name", name);
             request.setAttribute("email", email);
             request.setAttribute("password", password);
+            request.setAttribute("error", "Email account already exists");
 
-            request.getRequestDispatcher("controllerRegister").forward(request, response);
+            request.getRequestDispatcher("register").forward(request, response);
 
         }
         String subject = "SIGN UP FOR AN ACCOUNT";
@@ -59,24 +63,27 @@ public class HandlingSignUp extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
         if(registerSuccess){
             boolean result = sendMail(email, subject, content);
-//            response.sendRedirect("login");
             request.getRequestDispatcher("login").forward(request, response);
 
         }else {
             request.setAttribute("name", name);
             request.setAttribute("email", email);
             request.setAttribute("password", password);
+            request.setAttribute("error", "Email account already exists");
 
-            request.getRequestDispatcher("controllerRegister").forward(request, response);
+            request.getRequestDispatcher("register").forward(request, response);
         }
+
         String block = "block";
         String none = "none";
         String display = "none";
         request.setAttribute("block", block);
         request.setAttribute("none", none);
         request.setAttribute("display", display);
+
     }
 
 }

@@ -11,7 +11,7 @@
  Target Server Version : 100424
  File Encoding         : 65001
 
- Date: 14/08/2022 08:04:27
+ Date: 15/08/2022 05:32:46
 */
 
 SET NAMES utf8mb4;
@@ -24,13 +24,15 @@ DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart`  (
   `stt` int NOT NULL AUTO_INCREMENT,
   `linkImage` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
-  `idProduct` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `idProduct` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nameProduct` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `price` int NOT NULL,
   `quantitySold` int NOT NULL,
   `money` int NOT NULL,
-  PRIMARY KEY (`stt`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 115 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
+  PRIMARY KEY (`stt`) USING BTREE,
+  INDEX `idProduct`(`idProduct`) USING BTREE,
+  CONSTRAINT `foreign_Key_Cart_Product` FOREIGN KEY (`idProduct`) REFERENCES `productdetails` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 123 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of cart
@@ -46,13 +48,12 @@ CREATE TABLE `contact`  (
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
   PRIMARY KEY (`idContact`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of contact
 -- ----------------------------
 INSERT INTO `contact` VALUES (1, 'Đậu Hoa', '19130075@st.hcmuaf.edu.vn', 'Nội dung đặc sắc , phong phú');
-INSERT INTO `contact` VALUES (2, 'Đậu Hoa', '19130075@st.hcmuaf.edu.vn', 'Nội dung đặc sắc , phong phú');
 
 -- ----------------------------
 -- Table structure for customer
@@ -73,13 +74,15 @@ CREATE TABLE `customer`  (
   `discount` int NULL DEFAULT NULL,
   `ship` int NOT NULL,
   `totalMoney` int NOT NULL,
-  PRIMARY KEY (`idCustomer`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
+  PRIMARY KEY (`idCustomer`) USING BTREE,
+  INDEX `idOrder_Customer`(`idOrder`) USING BTREE,
+  CONSTRAINT `idOrder_Customer` FOREIGN KEY (`idOrder`) REFERENCES `orders` (`idOrder`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of customer
 -- ----------------------------
-INSERT INTO `customer` VALUES (1, 62, 'Đậu Thị Hoa', '2022-08-13', 'Nữ', 'Thôn Phúc Tân - xã Phúc Thọ - huyện Lâm Hà - tỉnh Lâm Đồng', '0397080549', '19130075@st.hcmuaf.edu.vn', 'Agribank', '123456789', 'Giao Hàng', 100, 9000, 900000);
+INSERT INTO `customer` VALUES (35, 69, 'Đậu Thị Hoa', '2022-08-23', 'Nữ', 'Thôn Phúc Tân - xã Phúc Thọ - huyện Lâm Hà - tỉnh Lâm Đồng', '0397080549', '19130075@st.hcmuaf.edu.vn', 'BIDV', '123456789', 'Giao Hàng', 500, 10000, 1000000);
 
 -- ----------------------------
 -- Table structure for detailedproductreview
@@ -94,8 +97,10 @@ CREATE TABLE `detailedproductreview`  (
   `dateSubmitted` datetime(0) NOT NULL DEFAULT current_timestamp(0),
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `linkImage` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
-  `idProductDetails` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`idDetailedProductReview`) USING BTREE
+  `idProductDetails` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`idDetailedProductReview`) USING BTREE,
+  INDEX `foreignKey_ReviewProduct`(`idProductDetails`) USING BTREE,
+  CONSTRAINT `foreignKey_ReviewProduct` FOREIGN KEY (`idProductDetails`) REFERENCES `productdetails` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
@@ -152,21 +157,23 @@ INSERT INTO `newcomment` VALUES (2, 'Đậu Hoa', 'daudiep2003@gmail.com', '2022
 DROP TABLE IF EXISTS `orderdetails`;
 CREATE TABLE `orderdetails`  (
   `idOrderDetails` int NOT NULL AUTO_INCREMENT,
-  `idOrder` varchar(255) CHARACTER SET utf8 COLLATE utf8_croatian_ci NOT NULL,
-  `idProductDetails` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `idOrder` int NOT NULL,
+  `idProductDetails` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `quantitySold` int NOT NULL,
   `price` double(50, 0) NOT NULL,
   `discount` double(50, 0) NULL DEFAULT NULL,
   `totalMoney` double(50, 0) NOT NULL,
-  PRIMARY KEY (`idOrderDetails`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 80 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
+  PRIMARY KEY (`idOrderDetails`) USING BTREE,
+  INDEX `foreignKey_DetailsProduct`(`idProductDetails`) USING BTREE,
+  INDEX `foreignKey_DetailsOrders`(`idOrder`) USING BTREE,
+  CONSTRAINT `foreignKey_DetailsOrders` FOREIGN KEY (`idOrder`) REFERENCES `orders` (`idOrder`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `foreignKey_DetailsProduct` FOREIGN KEY (`idProductDetails`) REFERENCES `productdetails` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 88 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of orderdetails
 -- ----------------------------
-INSERT INTO `orderdetails` VALUES (77, '62', 'sp6', 5, 900000, 45000, 4500000);
-INSERT INTO `orderdetails` VALUES (78, '63', 'sp2', 5, 500000, 25000, 2500000);
-INSERT INTO `orderdetails` VALUES (79, '63', 'sp6', 5, 900000, 45000, 4500000);
+INSERT INTO `orderdetails` VALUES (87, 69, 'sp7', 5, 200000, 10000, 1000000);
 
 -- ----------------------------
 -- Table structure for orders
@@ -180,45 +187,12 @@ CREATE TABLE `orders`  (
   `dateReceipt` datetime(0) NOT NULL DEFAULT current_timestamp(0),
   `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
   PRIMARY KEY (`idOrder`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 64 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 70 CHARACTER SET = utf8 COLLATE = utf8_croatian_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
-INSERT INTO `orders` VALUES (62, '1', 4500000, '2022-08-13 23:10:22', '2022-08-13 23:10:22', 'Đã đặt hàng');
-INSERT INTO `orders` VALUES (63, '1', 7000000, '2022-08-13 23:11:11', '2022-08-13 23:11:11', 'Đã đặt hàng');
-
--- ----------------------------
--- Table structure for pageweb
--- ----------------------------
-DROP TABLE IF EXISTS `pageweb`;
-CREATE TABLE `pageweb`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nameCategory` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
-  `linkImage` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
-  `modules` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
-  `display` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_vietnamese_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of pageweb
--- ----------------------------
-INSERT INTO `pageweb` VALUES (1, 'Home page', 'QuanTri/Admin/assets/img/Admin/img.png', 'Posts', 'block');
-INSERT INTO `pageweb` VALUES (2, 'Sign up', 'QuanTri/Admin/assets/img/Admin/img_1.png', 'Sign up', 'block');
-INSERT INTO `pageweb` VALUES (3, 'Log in', 'QuanTri/Admin/assets/img/Admin/img_2.png', 'Log in', 'block');
-INSERT INTO `pageweb` VALUES (4, 'Shop system', 'QuanTri/Admin/assets/img/Admin/img_3.png', 'Posts', 'block');
-INSERT INTO `pageweb` VALUES (5, 'Contact', 'QuanTri/Admin/assets/img/Admin/img_4.png', 'Posts', 'block');
-INSERT INTO `pageweb` VALUES (6, 'Cart', 'QuanTri/Admin/assets/img/Admin/img_5.png', 'Cart', 'block');
-INSERT INTO `pageweb` VALUES (7, 'Product details', 'QuanTri/Admin/assets/img/Admin/img_6.png', 'Product', 'block');
-INSERT INTO `pageweb` VALUES (8, 'The living room\'s furniture', 'QuanTri/Admin/assets/img/Admin/img_7.png', 'Product', 'block');
-INSERT INTO `pageweb` VALUES (9, 'Kitchen furniture', 'QuanTri/Admin/assets/img/Admin/img_8.png', 'Product', 'block');
-INSERT INTO `pageweb` VALUES (10, 'Bedroom furniture', 'QuanTri/Admin/assets/img/Admin/img_10.png', 'Product', 'block');
-INSERT INTO `pageweb` VALUES (11, 'Office furniture', 'QuanTri/Admin/assets/img/Admin/img_9.png', 'Product', 'block');
-INSERT INTO `pageweb` VALUES (12, 'Decorations', 'QuanTri/Admin/assets/img/Admin/img_11.png', 'Product', 'block');
-INSERT INTO `pageweb` VALUES (13, 'Tips', 'QuanTri/Admin/assets/img/Admin/img_12.png', 'Posts', 'block');
-INSERT INTO `pageweb` VALUES (14, 'News', 'QuanTri/Admin/assets/img/Admin/img_13.png', 'Posts', 'block');
-INSERT INTO `pageweb` VALUES (15, 'Posts', 'QuanTri/Admin/assets/img/Admin/img_14.png', 'Posts', 'block');
+INSERT INTO `orders` VALUES (69, '3', 1000000, '2022-08-14 19:53:53', '2022-08-15 19:53:53', 'Đã nhận hàng');
 
 -- ----------------------------
 -- Table structure for productdetails
@@ -659,8 +633,8 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'Đậu Hoa', 'dd94dd472d3e8f68b3eede39a1fa7556', '19130075@st.hcmuaf.edu.vn');
+INSERT INTO `user` VALUES (1, 'Đậu Hoa', 'fd0573a1dfa2e5e04cd2ee0a4f44950a', '19130075@st.hcmuaf.edu.vn');
 INSERT INTO `user` VALUES (2, 'Đậu Hoa', '827ccb0eea8a706c4c34a16891f84e7b', 'daudiep2003@gmail.com');
-INSERT INTO `user` VALUES (3, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Admin123@gmail.com');
+INSERT INTO `user` VALUES (3, 'admin', '99c5e07b4d5de9d18c350cdf64c5aa3d', 'Admin123@gmail.com');
 
 SET FOREIGN_KEY_CHECKS = 1;

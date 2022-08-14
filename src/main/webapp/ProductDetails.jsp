@@ -83,7 +83,7 @@
                     href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="controllerRegister"><p
+                href="register"><p
                 class="dangKi">Đăng ký</p></a>  </p>
         </div>
 
@@ -225,16 +225,18 @@
         <hr class="thanh"></hr>
         <div class="gia">
             <h2 class="giaBLV">${productDetails.priceNew}đ</h2>
+
 <%--            <div class="TinhTrang">--%>
 <%--                <h4 class="tieuDe"> Tình Trạng : </h4>--%>
 <%--                <p class="hang">${productDetails.status}</p>--%>
 <%--            </div>--%>
+
         </div>
 <%--        <div class="thongTinChiTiet">--%>
 <%--            <p class="thongTinct">${productDetails.description}</p>--%>
 <%--        </div>--%>
-        <div class="mauSac" >
-            <div class="top" style=" margin-left: 14%;">
+        <div class="mauSac" style="margin-left: 18%">
+            <div class="top">
                 <h3 class="tieuDe" style="margin-left: -16%"> Màu sắc : </h3>
                 <p class="soMau">${productDetails.color}</p>
             </div>
