@@ -7,6 +7,10 @@
 <%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
 <%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%
+    String error = (String) request.getAttribute("error");
+%>
+
 <!DOCTYPE html>
 <html>
 
@@ -218,8 +222,7 @@
         <jsp:useBean id="description" scope="request" class="java.lang.String"/>
         <div class="information3">
             <h2 class="Modules"> Description </h2>
-            <textarea class="type3b" width="150px" type="text" name="description"
-                      value="${description}"></textarea><br>
+            <textarea class="type3b" width="150px" type="text" name="description" value="${description}"></textarea><br>
         </div>
         <div class="information3">
             <h2 class="Modules"> ProductGroups </h2>
@@ -256,36 +259,18 @@
             <jsp:useBean id="quantity" scope="request" class="java.lang.String"/>
             <input required  class="type3"  style="margin-left: 63px" type="text" name="quantity" value="${quantity}"><br>
         </div>
-<%--        <div class="information5">--%>
-<%--            <h2 class="Modules"> Status </h2>--%>
-<%--            <div class="">--%>
-<%--                <input  required class="checkin" type="checkbox" name="still" value="Còn hàng">--%>
-<%--                <h3 class="ten">Stocking</h3>--%>
-<%--            </div>--%>
-<%--            <div class="">--%>
-<%--                <input required class="checkin" type="checkbox" name="over" value="Hết hàng">--%>
-<%--                <h3 class="ten">Out of stock</h3>--%>
-<%--            </div>--%>
-<%--&lt;%&ndash;            <div class="From">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <input class="checkin" type="checkbox" name="sport" value="check">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <h3 class="ten">Featured</h3>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <div class="From">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <input class="checkin" type="checkbox" name="sport" value="check">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <h3 class="ten">Hot</h3>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <div class="From">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <input class="checkin" type="checkbox" name="sport" value="check">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <h3 class="ten">Display</h3>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
-<%--        </div>--%>
+
         <div class="information6">
                 <button class="Select" type="submit" style="margin-bottom: 25px" onclick="save()">
                     <img class="fa fa-floppy-o" src="QuanTri/Admin/assets/img/Admin/img_16.png"/>
                     Save
                 </button>
         </div>
+        <% if (error != null) { %>
+           <p style="color: red ; font-weight: bold; text-align: center"><%= error%> </p>
+        <%} %>
     </div>
+
     </form>
          <div class="information6">
             <a class="nav-link active" href="../WebFurniture_war_exploded/Product">
@@ -322,7 +307,7 @@
     var type3 = document.querySelector('.type3').value;
     function save() {
         if ( type == "" || type1 == "" || type2 == "" || type3 == "" || type3a == "" || type3b == "" ){
-            alert("Please complete all information ! ");
+            // alert("Please complete all information ! ");
         }else {
             alert("You have successfully added a product ! ");
         }

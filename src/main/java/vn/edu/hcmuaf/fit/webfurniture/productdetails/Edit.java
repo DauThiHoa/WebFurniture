@@ -28,16 +28,15 @@ public class Edit extends HttpServlet {
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
+        request.setAttribute("error", "");
 
         String id = request.getParameter("id");
         String name = request.getParameter("name");
-        System.out.println("NAME" + name );
 
         String description = request.getParameter("description");
         String priceNew = request.getParameter("priceNew");
         String priceOld = request.getParameter("priceOld");
         String quantity = request.getParameter("quantity");
-        String status = request.getParameter("status");
 
         String color = request.getParameter("color");
         String size = request.getParameter("size");
@@ -63,7 +62,7 @@ public class Edit extends HttpServlet {
             request.setAttribute("search", "");
         }
 
-        int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity,status, color,size,weight,material,design);
+        int update = ProductDetailsService.getInstance().update(id,name,description,priceNew,priceOld,quantity, color,size,weight,material,design);
 
      if ( update == 1 ) {
          request.getRequestDispatcher("/Product").forward(request, response);

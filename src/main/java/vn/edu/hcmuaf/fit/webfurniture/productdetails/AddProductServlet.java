@@ -18,6 +18,7 @@ public class AddProductServlet extends HttpServlet {
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
+        request.setAttribute("error", "");
 
         request.setAttribute("linkImage" ,"" );
         request.setAttribute("category" ,"" );
@@ -55,16 +56,6 @@ public class AddProductServlet extends HttpServlet {
         String material = request.getParameter ("material"); // mã nhóm sản phẩm
         String design = request.getParameter ("design");
 
-        // status
-//        String still = request.getParameter ("still"); // mã nhóm sản phẩm
-//        String over = request.getParameter ("over");
-//        String status ;
-//        if (still != null ){
-//            status = still;
-//        }else {
-//            status = over;
-//        }
-
 
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
@@ -92,7 +83,26 @@ public class AddProductServlet extends HttpServlet {
             if (result) {
                 request.getRequestDispatcher("addProduct.jsp").forward(request, response);
             } else {
-                request.getRequestDispatcher("fail.jsp").forward(request, response);
+                request.setAttribute("linkImage" ,linkImage );
+                request.setAttribute("category" ,category );
+                request.setAttribute("id" ,id );
+                request.setAttribute("priceNew" ,priceNew );
+                request.setAttribute("priceOld" ,priceOld );
+                request.setAttribute("name" ,name );
+                request.setAttribute("trademark" ,trademark );
+                request.setAttribute("production" ,production );
+                request.setAttribute("description" ,description );
+                request.setAttribute("produtGroups" ,produtGroups );
+                request.setAttribute("quantity" ,quantity );
+
+                request.setAttribute("color" ,color );
+                request.setAttribute("size" ,size );
+                request.setAttribute("weight" ,weight );
+                request.setAttribute("material" ,material );
+                request.setAttribute("design" ,design );
+
+                request.setAttribute("error", "Product code already exists");
+                request.getRequestDispatcher("addProduct.jsp").forward(request, response);
             }
         }else {
             request.setAttribute("linkImage" ,linkImage );

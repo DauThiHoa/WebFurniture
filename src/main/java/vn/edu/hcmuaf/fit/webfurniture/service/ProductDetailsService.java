@@ -96,9 +96,9 @@ public class ProductDetailsService implements Serializable {
         return ProductDetailsDao.getInstance().delete(id);
     }
 
-    public int update(String id, String name, String description, String priceNew, String priceOld, String quantity, String status
+    public int update(String id, String name, String description, String priceNew, String priceOld, String quantity
             , String color, String size, String weight, String material, String design) {
-        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, status, color, size, weight, material, design);
+        return ProductDetailsDao.getInstance().update(id, name, description, priceNew, priceOld, quantity, color, size, weight, material, design);
     }
 
     public List<ProductDetails> getAllName(String name) {
@@ -106,7 +106,7 @@ public class ProductDetailsService implements Serializable {
         return ProductDetailsDao.getInstance().getAllName(name);
     }
 
-    public static boolean addProductDetails(String id, String name, String description, String trademark, String production,
+    public boolean addProductDetails(String id, String name, String description, String trademark, String production,
                                             String priceOld, String linkImage, String quantity, String priceNew,
                                             String produtGroups, String category, String color, String size, String weight,
                                             String material, String design) {

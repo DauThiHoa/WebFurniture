@@ -7,6 +7,10 @@
 <%--<% List<ProductDetails> list =(List<ProductDetails> ) request.getParameter("list"); %>--%>
 <%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%
+    String error = (String) request.getAttribute("error");
+%>
+
 <!DOCTYPE html>
 <html>
 
@@ -156,42 +160,17 @@
 
     <form action = "<%=Asset.url("Edit_Information")%>"  method = "POST" >
         <jsp:useBean id="information" scope="request" type="vn.edu.hcmuaf.fit.webfurniture.beans.Information"/>
-<%--        <c:forEach items="${information}" var="p" >--%>
-    <div class="infor3">
-        <h1 class="information"> DISPLAY </h1>
+
+    <div class="infor4" style="height: 300%">
+        <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information2">
-            <h2 class="Category"> Company name </h2>
-            <input  required style="border: 1px solid white" class="type1" required type="text" name="Company" value="${information.companyName}"><br>
+            <h2 class="Category"> Name </h2>
+            <input  required style="border: 1px solid white; margin-left: 3%" class="type" required type="text" name="Company" value="${information.companyName}"><br>
         </div>
         <div class="information3">
-            <h2 class="Modules"> Address </h2>
-            <input  required style="border: 1px solid white" class="Address" required type="text" name="Address" value="${information.address}"><br>
+            <h2 class="Image"> Address </h2>
+            <input  required style="border: 1px solid white; margin-left: -1%" class="type" required type="text" name="Address" value="${information.address}"><br>
         </div>
-
-        <div class="information4">
-            <h2 class="Category" style="margin-right: 60px"> Share icon </h2>
-            <br>
-            <input  required type="file" style="border : 1px solid white ; background: white ; color: black ; width: 750px ;
-            margin-left: 15px" class="shareicon" value="Select file" accept=".jpg , .png" onchange="clickshareicon()">
-            <input  required type="image" name="shareicon" style="float: left; clear: right ; width: 50px ; height: 50px "
-                   class="imgshareicon" src="${information.shareIcon}" >
-            <input  required style="display : none ;width: 300px ; height: 25px" type="text" value="" class="share" name="share">
-        </div>
-        <div class="information5">
-            <h2 class="Modules"> Browser Icons </h2>
-            <br>
-            <input  required type="file" style="border : 1px solid white ; background: white ; color: black  ; width: 750px ;
-            margin-left: 15px"  class="browsericon" value="Select file" accept=".jpg , .png"
-                   onchange="clickbrowsericon()">
-            <input  required type="image" required name="browsericon" style="float: left; clear:right ;width: 50px ; height: 50px"
-                   class="imgbrowsericon" src="${information.browserIcon}">
-            <input required style="display : none ;width: 300px ; height: 25px" type="text" value="" class="browser" name="browser">
-        </div>
-
-    </div>
-
-    <div class="infor4">
-        <h1 class="information"> GENERAL INFORMATION</h1>
         <div class="information1">
             <h2 class="Image"> Hotline </h2>
             <input  required style="border: 1px solid white" required class="type" type="text" name="Hotline" value="${information.hotline}"><br>
@@ -228,6 +207,9 @@
                     Save
                 </button>
         </div>
+        <% if (error != null) { %>
+            <p style="color: red ; font-weight: bold; margin-bottom: -2%"><%= error%> </p>
+        <%} %>
     </div>
 <%--        </c:forEach>--%>
     </form>
