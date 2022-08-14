@@ -225,16 +225,16 @@
         <hr class="thanh"></hr>
         <div class="gia">
             <h2 class="giaBLV">${productDetails.priceNew}đ</h2>
-            <div class="TinhTrang">
-                <h4 class="tieuDe"> Tình Trạng : </h4>
-                <p class="hang">${productDetails.status}</p>
-            </div>
+<%--            <div class="TinhTrang">--%>
+<%--                <h4 class="tieuDe"> Tình Trạng : </h4>--%>
+<%--                <p class="hang">${productDetails.status}</p>--%>
+<%--            </div>--%>
         </div>
 <%--        <div class="thongTinChiTiet">--%>
 <%--            <p class="thongTinct">${productDetails.description}</p>--%>
 <%--        </div>--%>
-        <div class="mauSac">
-            <div class="top">
+        <div class="mauSac" >
+            <div class="top" style=" margin-left: 14%;">
                 <h3 class="tieuDe" style="margin-left: -16%"> Màu sắc : </h3>
                 <p class="soMau">${productDetails.color}</p>
             </div>
