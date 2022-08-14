@@ -65,11 +65,27 @@ public class OrderDetailsService {
     }
 
     public boolean insert(String name,String birthDay,String gender, String email, String phone, String address, String bank, String cardNumber , String method , String discountCode ,String sumDiscount ,String sumTotalMoney) {
+
         int idOrder = JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT idOrder FROM orders  WHERE idOrder = ( SELECT MAX(idOrder + 0) FROM orders )")
                     .mapTo(Integer.class).findFirst().get() ;
         });
 
+//        int idUser = JDBIConnector.get().withHandle(handle -> {
+//            return handle.createQuery("select id from `user` where email like ? ")
+//                    .bind(0, email)
+//                    .mapTo(Integer.class).findFirst().get() ;
+//        });
+//
+//        int update = JDBIConnector.get().withHandle(h -> {
+//            int sum = 0 ;
+//            sum += h.createUpdate("update customer set idUser = ? where email like ?")
+//                    .bind(0 , idUser )
+//                    .bind(1 , email )
+//                    .execute();
+//            // Số dòng được chèn vào
+//            return sum ;
+//        });
 //        int ship = sumDiscount();
 //        int totalMoney = sumTotalMoney();
         int total = JDBIConnector.get().withHandle(h -> {

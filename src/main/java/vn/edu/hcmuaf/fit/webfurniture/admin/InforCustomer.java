@@ -18,8 +18,7 @@ public class InforCustomer extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-//             Order order = OrderService.getInstance().getAll();
-
+//      Order order = OrderService.getInstance().getAll();
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile", profile);
 

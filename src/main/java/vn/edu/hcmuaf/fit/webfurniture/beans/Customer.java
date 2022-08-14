@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L ;
     private int idCustomer ;
+    private int idUser ;
     private int idOrder ;
     private String name ;
     private String birthDay ;
@@ -22,8 +23,9 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
-    public Customer(int idCustomer, int idOrder, String name, String birthDay, String gender, String address, String phone, String email, String bank, String cardNumber, String deliveryMethod, int discount, int ship, int totalMoney) {
+    public Customer(int idCustomer, int idUser, int idOrder, String name, String birthDay, String gender, String address, String phone, String email, String bank, String cardNumber, String deliveryMethod, int discount, int ship, int totalMoney) {
         this.idCustomer = idCustomer;
+        this.idUser = idUser;
         this.idOrder = idOrder;
         this.name = name;
         this.birthDay = birthDay;
@@ -37,6 +39,14 @@ public class Customer implements Serializable {
         this.discount = discount;
         this.ship = ship;
         this.totalMoney = totalMoney;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
     public int getIdCustomer() {

@@ -25,17 +25,24 @@ public class OrderService  implements Serializable {
     public int delete_Customer (String id) {
         int id_int = Integer.parseInt(id);
         return JDBIConnector.get().withHandle(h ->
-                h.createUpdate("delete from customer where idOrder = ? ")
+                h.createUpdate("delete from customer where idOrder = ?")
                         .bind(0 , id_int ).execute());
     }
     public int delete_Order (String id) {
         int id_int = Integer.parseInt(id);
         return JDBIConnector.get().withHandle(h ->
-                h.createUpdate("delete from orders where idOrder = ? ")
+                h.createUpdate("delete from orders where idOrder = ?")
+                        .bind(0 , id_int ).execute());
+    }
+    public int delete_OrderDetails (String id) {
+        int id_int = Integer.parseInt(id);
+        return JDBIConnector.get().withHandle(h ->
+                h.createUpdate("delete from orderdetails where idOrder = ?")
                         .bind(0 , id_int ).execute());
     }
 
     public Customer getCustomer (int id) {
+        System.out.println(id);
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("select * from customer where idCustomer = ? ")
                     .bind(0 , id)

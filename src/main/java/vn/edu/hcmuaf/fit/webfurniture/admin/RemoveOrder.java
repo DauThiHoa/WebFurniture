@@ -14,9 +14,14 @@ import java.io.IOException;
 public class RemoveOrder extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-             String id = request.getParameter("id");
+
+        String id = request.getParameter("idOrder");
+
+        int orderDetails = OrderService.getInstance().delete_OrderDetails(id);
         int customer =  OrderService.getInstance().delete_Customer(id);
         int orders = OrderService.getInstance().delete_Order(id);
+
+        request.setAttribute("error", "");
 
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
@@ -40,10 +45,15 @@ public class RemoveOrder extends HttpServlet {
         request.setAttribute("profile" , profile);
 
 //        request.getRequestDispatcher("/WebFurniture_war_exploded/success.jsp").forward(request, response);
-        if ( customer == 1  && orders == 1 ) {
+        if ( customer == 1  && orders == 1 && orderDetails == 1 ) {
+
             request.getRequestDispatcher("/Order").forward(request, response);
         }else{
-            request.getRequestDispatcher("fail.jsp").forward(request, response);
+
+            request.setAttribute("error", "Delete failed order");
+            request.getRequestDispatcher("/Order").forward(request, response);
+//          request.getRequestDispatcher("fail.jsp").forward(request, response);
+
         }
     }
 
