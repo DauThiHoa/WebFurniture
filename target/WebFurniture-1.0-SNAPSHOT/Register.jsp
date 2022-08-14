@@ -1,5 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+    String error = (String) request.getAttribute("error");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +20,7 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <link href="HomePage.css" rel="stylesheet" type="text/css" media="screen,print"/>
     <script src="Home.js"></script>
+
 
 </head>
 <body>
@@ -49,10 +55,9 @@
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="login">Đăng
-                nhập </a>
+                    href="login">Đăng nhập </a>
             <p class="cheo">/</p> <a
-                href="controllerRegister">
+                href="register">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
@@ -171,10 +176,14 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" required name="password" id="password" value="${password}" placeholder="Password" onchange="checkValidate()">
             </div>
-            <div class="checkBox">
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <span class="text">I Agree with Term & Conditions.</span>
-            </div>
+<%--            <div class="checkBox">--%>
+<%--                <input type="checkbox" name="checkbox" id="checkbox">--%>
+<%--                <span class="text">I Agree with Term & Conditions.</span>--%>
+<%--            </div>--%>
+                <% if (error != null) { %>
+                <p style="color: red ; font-weight: bold; margin-top: 2%; margin-bottom: -2%"><%= error%>
+                </p>
+                <%} %>
             <a href="register">
                 <button onclick="clickValidate()" class="btn">SIGN UP</button>
             </a>

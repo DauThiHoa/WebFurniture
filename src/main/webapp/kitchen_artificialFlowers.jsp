@@ -46,22 +46,22 @@
         </a>
     </div>
     <div id="TaiKhoan">
-        <a href="../DangNhap/DangNhap.html?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+        <a href="login">
             <div>
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </div>
         </a>
         <div id="dangNhap_dangKy">
             <p class="danhNhap"><a
-                    href="../DangNhap/DangNhap.html?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">Đăng
+                    href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="../DangKy/DangKy.html?_ijt=q7ugr2f97p7gue49hcbn19guvn&_ij_reload=RELOAD_ON_SAVE">
+                href="register">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
     <div class="taiKhoanCuaToi">
-        <a href="../Quản%20trị/Admin/examples/dashboard.html">
+        <a href="Dashboard">
             <br>Tài khoản của tôi <i class="fa fa-chevron-down" aria-hidden="true"></i> </br>
         </a>
     </div>

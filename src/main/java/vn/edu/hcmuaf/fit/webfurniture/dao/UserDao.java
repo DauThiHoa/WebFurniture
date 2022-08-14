@@ -134,24 +134,6 @@ public class UserDao {
         String sql = "INSERT INTO user(username, password, email) VALUES(?,?,?)";
         int size = getSize();
 
-//        String next_number_id = "00000" + (size + 1);
-//        while (next_number_id.length() > 6) {
-//            next_number_id = next_number_id.substring(1);
-//        }
-//        String next_id = "USER" + next_number_id;
-//        //CHECK ID is EXISTS
-//        boolean userIsExit = getUserByID(next_id);
-//        while (userIsExit) {
-//            size++;
-//            next_number_id = "00000" + (size + 1);
-//            while (next_number_id.length() > 6) {
-//                next_number_id = next_number_id.substring(1);
-//            }
-//            next_id = "USER" + next_number_id;
-//        }
-
-//        System.out.println(next_id);
-
         int test = JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT COUNT(*) FROM `user` WHERE email like ?")
                     .bind(0,email)

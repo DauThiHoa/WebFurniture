@@ -6,6 +6,10 @@
     String error = (String) request.getAttribute("error");
 %>
 
+<%
+    String notification = (String) request.getAttribute("notification");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -240,7 +244,7 @@
                     href="login">Đăng
                 nhập </a>
             <p class="cheo">/</p> <a
-                href="controllerRegister">
+                href="register">
             <p class="dangKi">Đăng ký</p></a>  </p>
         </div>
     </div>
@@ -358,12 +362,17 @@
                     <input type="password" name="password" id="password" value="${password}"
                            placeholder="Password" onchange="checkValidate()">
                 </div>
-                <div class="checkBox">
-                    <input type="checkbox" name="checkboxlogin" id="checkbox">
-                    <span class="text">I Agree with Term & Conditions.</span>
-                </div>
+<%--                <div class="checkBox">--%>
+<%--                    <input type="checkbox" name="checkboxlogin" id="checkbox">--%>
+<%--                    <span class="text">I Agree with Term & Conditions.</span>--%>
+<%--                </div>--%>
                 <% if (error != null) { %>
-                <p style="color: red ; font-weight: bold; margin-bottom: -2%"><%= error%>
+                <p style="color: red ; font-weight: bold;margin-top: 5%"><%= error%>
+                </p>
+                <%} %>
+
+                <% if (notification != null) { %>
+                <p style="color: #03acca ; font-weight: bold; margin-bottom: 3%"><%= notification%>
                 </p>
                 <%} %>
 
@@ -386,7 +395,7 @@
         <div class="welcomeDiv">
             <h2>Welcome Back!</h2>
             <p class="text">Get in touch with us for our news letter and more updates.</p>
-            <a href="controllerRegister">
+            <a href="register">
                 <button class="btn2">SIGN UP</button>
             </a>
         </div>
@@ -536,7 +545,7 @@
     }
 
     function forgotPassword() {
-        alert('Mật Khẩu mới đã được gửi về mail của bạn vui lòng kiểm tra mail');
+        // alert('Mật Khẩu mới đã được gửi về mail của bạn vui lòng kiểm tra mail');
         check.value = 2;
         text.value = makeid();
     }

@@ -46,7 +46,7 @@
         </a>
         <div id="dangNhap_dangKy" >
             <p class="danhNhap">  <a href="login">Đăng nhập </a> <p class="cheo">/</p>
-            <a href="controllerRegister"><p class="dangKi">Đăng ký</p> </a>  </p>
+            <a href="register"><p class="dangKi">Đăng ký</p> </a>  </p>
         </div>
 
     </div>

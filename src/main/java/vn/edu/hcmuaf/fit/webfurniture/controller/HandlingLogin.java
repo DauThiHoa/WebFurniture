@@ -13,7 +13,7 @@ import java.io.IOException;
 
 import static vn.edu.hcmuaf.fit.webfurniture.mail.Mail.sendMail;
 
-@WebServlet(name = "handling-login", value = "/handling-login")
+@WebServlet(name = "HandlingLogin", value = "/handling-login")
 public class HandlingLogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,6 +32,7 @@ public class HandlingLogin extends HttpServlet {
         request.setAttribute("email", email);
         request.setAttribute("password", password);
         request.setAttribute("error", "");
+        request.setAttribute("notification", "");
 
         String search = request.getParameter("search");
         if( search != null) {
@@ -81,6 +82,8 @@ public class HandlingLogin extends HttpServlet {
 
                     request.setAttribute("email", email);
                     request.setAttribute("password", "");
+                    request.setAttribute("notification", "New Password has been sent to your email, please check your email");
+
                     request.getRequestDispatcher("login").forward(request,response);
 
                 }

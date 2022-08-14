@@ -19,35 +19,41 @@ public class RegisterWeb extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
+//        request.setAttribute("error", "");
 
-        //        Số sản phẩm trong giỏ hàng
+        // Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();
-        request.setAttribute("sizeListCart" , sumListCart);
+        request.setAttribute("sizeListCart", sumListCart);
 
         String search = request.getParameter("search");
-        if ( search != null) {
+        if (search != null) {
             request.setAttribute("search", search);
-        }else {
+        } else {
             request.setAttribute("search", "");
         }
 
-if ( name != null && password != null && email != null ) {
+        if (name != null && password != null && email != null) {
 
-    if (UserServices.getInstance().register(name, password, email)) {
-        response.sendRedirect("login");
+            System.out.println(name + " / " + password  + " / " + email);
 
-    } else {
-        request.setAttribute("error", "Username exits");
-        request.getRequestDispatcher("controllerRegister").forward(request, response);
+            if (UserServices.getInstance().register(name, password, email)) {
+                response.sendRedirect("login");
+            } else {
 
-    }
-}
+                request.setAttribute("error", "Email account already exists");
+                // Số sản phẩm trong giỏ hàng
+
+                request.getRequestDispatcher("register").forward(request, response);
+            }
+        }
+
         String block = "block";
         String none = "none";
         String display = "none";
@@ -55,6 +61,6 @@ if ( name != null && password != null && email != null ) {
         request.setAttribute("none", none);
         request.setAttribute("display", display);
 
-        request.getRequestDispatcher("register.jsp").forward(request,response);
+//      request.getRequestDispatcher("register.jsp").forward(request, response);
     }
 }

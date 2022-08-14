@@ -89,7 +89,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="controllerRegister">
+                        <a class="nav-link" href="register">
                             <i class="fa fa-id-card" style="color: springgreen" aria-hidden="true"></i>
                             <span class="nav-link-text"> Register</span>
                         </a>
