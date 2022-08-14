@@ -106,7 +106,7 @@ public class DetailsProductController extends HttpServlet {
 
             if (result) {
                     request.getRequestDispatcher("payment").forward(request, response);
-               } else {
+            } else {
                     request.getRequestDispatcher("ProductDetails").forward(request, response);
             }
         }

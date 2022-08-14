@@ -6,6 +6,10 @@
            uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="comment" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%
+    String error = (String) request.getAttribute("error");
+%>
+
 <!DOCTYPE html>
 <html>
 
@@ -187,6 +191,9 @@
         </div>
     </div>
 
+    <% if (error != null) { %>
+    <p style="color: red ; font-weight: bold; text-align: center"><%= error%> </p>
+    <%} %>
 
     <div class="tab">
 
@@ -222,7 +229,7 @@
                 </form>
                 <td>
                     <form action = "<%=Asset.url("RemoveOrder")%>"  method = "POST" >
-                        <input  required type="hidden" name ="id" value="${list.idOrder}">
+                        <input  required type="hidden" name ="idOrder" value="${list.idOrder}">
                         <button style="border: 1px solid white ; background: #f8f9fe " type="submit" href=""
                                 class="fa fa-trash text-danger" onclick="trash()"
                                 aria-hidden="true" ></button>
