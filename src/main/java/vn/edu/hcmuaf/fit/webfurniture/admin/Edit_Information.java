@@ -36,9 +36,6 @@ public class Edit_Information extends HttpServlet {
         String id = request.getParameter("id");
         String Company = request.getParameter("Company");
         String Address = request.getParameter("Address");
-        String shareicon = request.getParameter("share");
-        System.out.println(shareicon);
-        String browsericon = request.getParameter("browser");
 
         String Hotline = request.getParameter("Hotline");
         String Email = request.getParameter("Email");
@@ -58,20 +55,22 @@ public class Edit_Information extends HttpServlet {
         }else {
             request.setAttribute("search", "");
         }
+        request.setAttribute("error", "");
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
 
-     int update = InformationService.getInstance().update(id,Company,Address,shareicon,browsericon,Hotline,Email,Copyright,Facebook,Twitter,Youtube,Instagram);
+     int update = InformationService.getInstance().update(id,Company,Address ,Hotline,Email,Copyright,Facebook,Twitter,Youtube,Instagram);
 
      if ( update == 1 ) {
          Information information = InformationService.getInstance().getAll();
          request.setAttribute("information" , information);
          request.getRequestDispatcher("/Information").forward(request, response);
      }else{
-         request.getRequestDispatcher("fail.jsp").forward(request, response);
+         request.setAttribute("error", "Error correcting information");
+         request.getRequestDispatcher("/Information").forward(request, response);
+//         request.getRequestDispatcher("fail.jsp").forward(request, response);
      }
-
 
     }
 

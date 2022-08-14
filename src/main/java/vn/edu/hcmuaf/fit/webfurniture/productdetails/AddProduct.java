@@ -20,6 +20,7 @@ public class AddProduct extends HttpServlet {
 
         Profile profile = ProfileService.getInstance().getProfile();
         request.setAttribute("profile" , profile);
+        request.setAttribute("error", "");
 
         //        Số sản phẩm trong giỏ hàng
         int sumListCart = ProductDetailsService.getInstance().getSumCart();

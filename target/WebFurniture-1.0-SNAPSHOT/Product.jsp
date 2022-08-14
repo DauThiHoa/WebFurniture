@@ -106,7 +106,6 @@
             <tr>
                 <!-- San pham khong ban bi ly do gi -->
                 <th class="TieuDe">Numerical order</th>
-                <th  style="text-align: center" class="TieuDe">Category</th>
                 <th  style="text-align: center" class="TieuDe">Image</th>
                 <th  style="text-align: center" class="TieuDe">Title</th>
                 <th  style=" text-align: center ; overflow: hidden " class="TieuDe">Description</th>
@@ -130,20 +129,17 @@
             <tr>
                 <form action = "<%=Asset.url("edit")%>"  method = "POST" >
                 <td style="text-align: center"><%= i++ %></td>
-                <td ><input   required style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text"
-                             name ="type" value="HomePage"></td>
                 <td ><img src="${item.linkImage}" class="image" style="width: 65px ; height: 65px;"/></td>
                 <td ><input   required style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="name" value="${item.name}"></td>
                 <td style=" height: 100px; overflow : hidden "><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="description"  rows="50" cols="50">${item.description}</textarea></td>
                 <td ><input  required type="text" name ="priceNew" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.priceNew}"></td>
                 <td ><input  required type="text" name ="priceOld" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.priceOld}"></td>
                 <td style="text-align: center"><input type="text" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.quantity}"></td>
-                <td ><input  required type="text" name ="status" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.status}"></td>
 
                     <td ><input  required type="text" name ="color" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" value="${item.color}"></td>
                     <td ><input  required type="text" name ="size" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.size}"></td>
                     <td style="text-align: center">
-                        <input  required type="weight" name ="quantity" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}">
+                        <input  required type="weight" name ="weight" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.weight}">
                     </td>
                     <td ><input  required type="text" name ="material" style="text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe"  value="${item.material}"></td>
                     <td ><textarea style=" height: 100px ; text-align: center ; border: 1px solid #f8f9fe ; background: #f8f9fe" type="text" name ="design"  rows="50" cols="50">${item.design}</textarea></td>

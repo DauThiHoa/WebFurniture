@@ -41,26 +41,24 @@ public class ProductDetailsDao {
     }
 
 
-    public int update (String id , String name , String description , String priceNew , String priceOld , String quantity , String status
+    public int update (String id , String name , String description , String priceNew , String priceOld , String quantity
             , String color, String size, String weight, String material, String design) {
         System.out.println("PRODUCT DETAILS DAO " + name );
-        System.out.println(description +"/ "+ priceNew + "/ " + priceOld +"/ "+ quantity +"/ "+ status +"/ "+ color +"/ "+
-                size +"/ "+ weight +"/ "+ material +"/ "+ design);
+
         return JDBIConnector.get().withHandle(h ->
                 h.createUpdate("update productdetails set `name` = ? , description = ? , priceNew = ? , priceOld = ? , " +
-                                "quantity = ? , `status`= ? , color = ? , size = ? , weight = ? , material = ? , design = ? where id = ? ")
+                                "quantity = ? , color = ? , size = ? , weight = ? , material = ? , design = ? where id = ? ")
                         .bind(0 , name )
                         .bind(1 , description )
                         .bind(2 , Integer.parseInt(priceNew) )
                         .bind(3 , Integer.parseInt(priceOld) )
                         .bind(4 , Integer.parseInt(quantity) )
-                        .bind(5 , status )
-                        .bind(6 , color )
-                        .bind(7 , size )
-                        .bind(8 , weight )
-                        .bind(9 , material )
-                        .bind(10 , design )
-                        .bind(11 , id )
+                        .bind(5 , color )
+                        .bind(6 , size )
+                        .bind(7 , weight )
+                        .bind(8 , material )
+                        .bind(9 , design )
+                        .bind(10 , id )
                         .execute());
     }
     public static String changeName (String nameOld ){
